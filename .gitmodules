@@ -1,0 +1,12 @@
+[submodule "src/RaySession"]
+	path = src/RaySession
+	url = https://github.com/Houston4444/RaySession
+[submodule "src/loop192"]
+	path = src/loop192
+	url = https://github.com/jean-emmanuel/loop192
+[submodule "src/seq192"]
+	path = src/seq192
+	url = https://github.com/jean-emmanuel/seq192
+[submodule "src/non"]
+	path = src/non
+	url = https://github.com/falkTX/non
