@@ -1,0 +1,2344 @@
+{
+  "group_positions": [
+    {
+      "port_types_view": 3,
+      "group_name": "Non-Mixer/Unnamed",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        29,
+        -354
+      ],
+      "in_xy": [
+        400,
+        504
+      ],
+      "out_xy": [
+        0,
+        504
+      ],
+      "flags": 0
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Non-Mixer (Main)",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        149,
+        -354
+      ],
+      "in_xy": [
+        400,
+        504
+      ],
+      "out_xy": [
+        0,
+        504
+      ],
+      "flags": 0
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Tapeutape",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        -19,
+        -150
+      ],
+      "in_xy": [
+        400,
+        504
+      ],
+      "out_xy": [
+        0,
+        504
+      ],
+      "flags": 0
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "system",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        200,
+        0
+      ],
+      "in_xy": [
+        946,
+        1155
+      ],
+      "out_xy": [
+        -409,
+        -141
+      ],
+      "flags": 68
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Non-Mixer (MonitorsNano)",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        370,
+        -102
+      ],
+      "in_xy": [
+        603,
+        -165
+      ],
+      "out_xy": [
+        337,
+        -266
+      ],
+      "flags": 68
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Non-Mixer (MonitorsKesch)",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        -50,
+        -85
+      ],
+      "in_xy": [
+        151,
+        -92
+      ],
+      "out_xy": [
+        -73,
+        -79
+      ],
+      "flags": 68
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Non-Mixer (Bass)",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        -25,
+        444
+      ],
+      "in_xy": [
+        400,
+        504
+      ],
+      "out_xy": [
+        0,
+        504
+      ],
+      "flags": 0
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Non-Mixer (BassSynth)",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        -24,
+        86
+      ],
+      "in_xy": [
+        400,
+        504
+      ],
+      "out_xy": [
+        0,
+        504
+      ],
+      "flags": 0
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Non-Mixer (Synths)",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        -25,
+        562
+      ],
+      "in_xy": [
+        400,
+        504
+      ],
+      "out_xy": [
+        0,
+        504
+      ],
+      "flags": 0
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Non-Mixer (BassSynths)",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        -25,
+        503
+      ],
+      "in_xy": [
+        400,
+        504
+      ],
+      "out_xy": [
+        0,
+        504
+      ],
+      "flags": 0
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Non-Mixer (Samples)",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        -25,
+        621
+      ],
+      "in_xy": [
+        400,
+        504
+      ],
+      "out_xy": [
+        0,
+        504
+      ],
+      "flags": 0
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Non-Mixer (VocalsNano)",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        -25,
+        680
+      ],
+      "in_xy": [
+        400,
+        504
+      ],
+      "out_xy": [
+        0,
+        504
+      ],
+      "flags": 0
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Non-Mixer (VocalsKesch)",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        -25,
+        739
+      ],
+      "in_xy": [
+        400,
+        504
+      ],
+      "out_xy": [
+        0,
+        504
+      ],
+      "flags": 0
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Non-Mixer/Unnamed.1",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        29,
+        494
+      ],
+      "in_xy": [
+        400,
+        504
+      ],
+      "out_xy": [
+        0,
+        504
+      ],
+      "flags": 0
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Non-Mixer/Unnamed.2",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        29,
+        559
+      ],
+      "in_xy": [
+        400,
+        569
+      ],
+      "out_xy": [
+        0,
+        569
+      ],
+      "flags": 0
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Non-Mixer/Unnamed.3",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        29,
+        624
+      ],
+      "in_xy": [
+        400,
+        634
+      ],
+      "out_xy": [
+        0,
+        634
+      ],
+      "flags": 0
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Non-Mixer/Unnamed.4",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        29,
+        689
+      ],
+      "in_xy": [
+        400,
+        699
+      ],
+      "out_xy": [
+        0,
+        699
+      ],
+      "flags": 0
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Non-Mixer/Unnamed.5",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        238,
+        -172
+      ],
+      "in_xy": [
+        400,
+        764
+      ],
+      "out_xy": [
+        0,
+        764
+      ],
+      "flags": 0
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Non-Mixer/Unnamed.6",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        238,
+        -107
+      ],
+      "in_xy": [
+        400,
+        764
+      ],
+      "out_xy": [
+        0,
+        764
+      ],
+      "flags": 0
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Non-Mixer/Unnamed.7",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        238,
+        -42
+      ],
+      "in_xy": [
+        400,
+        764
+      ],
+      "out_xy": [
+        0,
+        764
+      ],
+      "flags": 0
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Non-Mixer/Unnamed.8",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        238,
+        23
+      ],
+      "in_xy": [
+        400,
+        764
+      ],
+      "out_xy": [
+        0,
+        764
+      ],
+      "flags": 0
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Non-Mixer/Unnamed.9",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        238,
+        88
+      ],
+      "in_xy": [
+        400,
+        764
+      ],
+      "out_xy": [
+        0,
+        764
+      ],
+      "flags": 0
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Non-Mixer/Unnamed.10",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        238,
+        153
+      ],
+      "in_xy": [
+        400,
+        764
+      ],
+      "out_xy": [
+        0,
+        764
+      ],
+      "flags": 0
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Non-Mixer.MonitorsNano (MonitorsNano)",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        -62,
+        -150
+      ],
+      "in_xy": [
+        802,
+        229
+      ],
+      "out_xy": [
+        424,
+        667
+      ],
+      "flags": 100
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Non-Mixer.MonitorsKesch (MonitorsKesch)",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        -27,
+        -295
+      ],
+      "in_xy": [
+        711,
+        484
+      ],
+      "out_xy": [
+        464,
+        724
+      ],
+      "flags": 100
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Non-Mixer.Main (Main)",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        599,
+        -330
+      ],
+      "in_xy": [
+        733,
+        203
+      ],
+      "out_xy": [
+        500,
+        -221
+      ],
+      "flags": 84
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Non-Mixer.Bass/Unnamed",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        302,
+        -344
+      ],
+      "in_xy": [
+        400,
+        777
+      ],
+      "out_xy": [
+        0,
+        777
+      ],
+      "flags": 0
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Non-Mixer.BassSynths (BassSynths)",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        -247,
+        398
+      ],
+      "in_xy": [
+        -338,
+        378
+      ],
+      "out_xy": [
+        -372,
+        633
+      ],
+      "flags": 68
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Non-Mixer.Synths (Synths)",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        163,
+        187
+      ],
+      "in_xy": [
+        15,
+        -54
+      ],
+      "out_xy": [
+        196,
+        179
+      ],
+      "flags": 100
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Non-Mixer.Samples (Samples)",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        85,
+        527
+      ],
+      "in_xy": [
+        -223,
+        502
+      ],
+      "out_xy": [
+        152,
+        597
+      ],
+      "flags": 68
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Non-Mixer.VocalsNano (VocalsNano)",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        324,
+        1600
+      ],
+      "in_xy": [
+        400,
+        540
+      ],
+      "out_xy": [
+        0,
+        540
+      ],
+      "flags": 0
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Non-Mixer.VocalsKesch (VocalsKesch)",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        92,
+        866
+      ],
+      "in_xy": [
+        400,
+        605
+      ],
+      "out_xy": [
+        0,
+        605
+      ],
+      "flags": 0
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Non-Mixer.Bass/BassScapePre",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        302,
+        -344
+      ],
+      "in_xy": [
+        400,
+        813
+      ],
+      "out_xy": [
+        0,
+        813
+      ],
+      "flags": 0
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Non-Mixer.Bass (BassProcesses)",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        164,
+        130
+      ],
+      "in_xy": [
+        400,
+        813
+      ],
+      "out_xy": [
+        0,
+        813
+      ],
+      "flags": 0
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Non-Mixer.Bass (Bass)",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        55,
+        156
+      ],
+      "in_xy": [
+        -139,
+        359
+      ],
+      "out_xy": [
+        -204,
+        -82
+      ],
+      "flags": 68
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Non-Mixer.Bass (BassProcSends)",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        134,
+        11
+      ],
+      "in_xy": [
+        46,
+        768
+      ],
+      "out_xy": [
+        -207,
+        52
+      ],
+      "flags": 116
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Non-Mixer.Bass/BassScapePost",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        302,
+        -214
+      ],
+      "in_xy": [
+        400,
+        813
+      ],
+      "out_xy": [
+        0,
+        813
+      ],
+      "flags": 0
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Non-Mixer.Bass (BassProcRet)",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        156,
+        158
+      ],
+      "in_xy": [
+        -24,
+        -111
+      ],
+      "out_xy": [
+        -204,
+        -5
+      ],
+      "flags": 116
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Non-Mixer.Bass/Unnamed.1",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        316,
+        -35
+      ],
+      "in_xy": [
+        400,
+        813
+      ],
+      "out_xy": [
+        0,
+        813
+      ],
+      "flags": 0
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Non-Mixer.Bass/Unnamed.2",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        316,
+        30
+      ],
+      "in_xy": [
+        400,
+        813
+      ],
+      "out_xy": [
+        0,
+        813
+      ],
+      "flags": 0
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Non-Mixer.Bass/Unnamed.3",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        316,
+        95
+      ],
+      "in_xy": [
+        400,
+        813
+      ],
+      "out_xy": [
+        0,
+        813
+      ],
+      "flags": 0
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Non-Mixer.Bass/Unnamed.4",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        316,
+        160
+      ],
+      "in_xy": [
+        400,
+        813
+      ],
+      "out_xy": [
+        0,
+        813
+      ],
+      "flags": 0
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Non-Mixer.Bass/Unnamed.5",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        316,
+        225
+      ],
+      "in_xy": [
+        400,
+        813
+      ],
+      "out_xy": [
+        0,
+        813
+      ],
+      "flags": 0
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Non-Mixer.Bass/BassDegradePre",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        302,
+        -344
+      ],
+      "in_xy": [
+        400,
+        813
+      ],
+      "out_xy": [
+        0,
+        813
+      ],
+      "flags": 0
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Non-Mixer.Bass/BassWobblePost",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        302,
+        -344
+      ],
+      "in_xy": [
+        400,
+        813
+      ],
+      "out_xy": [
+        0,
+        813
+      ],
+      "flags": 0
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Non-Mixer.Bass/BassDistoH",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        302,
+        -344
+      ],
+      "in_xy": [
+        400,
+        813
+      ],
+      "out_xy": [
+        0,
+        813
+      ],
+      "flags": 0
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Non-Mixer.Bass/BassDistoHiPost",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        302,
+        -344
+      ],
+      "in_xy": [
+        400,
+        813
+      ],
+      "out_xy": [
+        0,
+        813
+      ],
+      "flags": 0
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Non-Mixer.Bass/BassZynWahPre",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        302,
+        -344
+      ],
+      "in_xy": [
+        400,
+        813
+      ],
+      "out_xy": [
+        0,
+        813
+      ],
+      "flags": 0
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Non-Mixer.Bass/BassZynWahPost",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        302,
+        -344
+      ],
+      "in_xy": [
+        400,
+        813
+      ],
+      "out_xy": [
+        0,
+        813
+      ],
+      "flags": 0
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Non-Mixer.Inputs/Unnamed",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        280,
+        -58
+      ],
+      "in_xy": [
+        400,
+        813
+      ],
+      "out_xy": [
+        0,
+        813
+      ],
+      "flags": 0
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Non-Mixer.Inputs (Inputs)",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        -225,
+        -302
+      ],
+      "in_xy": [
+        -307,
+        -302
+      ],
+      "out_xy": [
+        5,
+        -319
+      ],
+      "flags": 68
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Non-Mixer.Outputs (Outputs)",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        478,
+        -299
+      ],
+      "in_xy": [
+        773,
+        -383
+      ],
+      "out_xy": [
+        334,
+        -356
+      ],
+      "flags": 100
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Non-Mixer.Inputs/Unnamed.1",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        280,
+        7
+      ],
+      "in_xy": [
+        400,
+        813
+      ],
+      "out_xy": [
+        0,
+        813
+      ],
+      "flags": 0
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Non-Mixer.Inputs/Unnamed.2",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        280,
+        72
+      ],
+      "in_xy": [
+        400,
+        813
+      ],
+      "out_xy": [
+        0,
+        813
+      ],
+      "flags": 0
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Non-Mixer.Inputs/Unnamed.3",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        280,
+        137
+      ],
+      "in_xy": [
+        400,
+        813
+      ],
+      "out_xy": [
+        0,
+        813
+      ],
+      "flags": 0
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Non-Mixer.Inputs/Unnamed.4",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        289,
+        803
+      ],
+      "in_xy": [
+        400,
+        813
+      ],
+      "out_xy": [
+        0,
+        813
+      ],
+      "flags": 0
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Non-Mixer.Inputs/OH",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        289,
+        868
+      ],
+      "in_xy": [
+        400,
+        878
+      ],
+      "out_xy": [
+        0,
+        878
+      ],
+      "flags": 0
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "sooperlooper",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        238,
+        -76
+      ],
+      "in_xy": [
+        659,
+        197
+      ],
+      "out_xy": [
+        -284,
+        128
+      ],
+      "flags": 68
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Non-Mixer.Bass/BassIn",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        316,
+        30
+      ],
+      "in_xy": [
+        400,
+        835
+      ],
+      "out_xy": [
+        0,
+        835
+      ],
+      "flags": 0
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Non-Mixer.Bass/BassOut",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        316,
+        95
+      ],
+      "in_xy": [
+        400,
+        835
+      ],
+      "out_xy": [
+        0,
+        835
+      ],
+      "flags": 0
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Non-Mixer.Bass (BassIn)",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        -83,
+        293
+      ],
+      "in_xy": [
+        -141,
+        128
+      ],
+      "out_xy": [
+        -63,
+        593
+      ],
+      "flags": 68
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Non-Mixer.Bass (BassOut)",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        30,
+        15
+      ],
+      "in_xy": [
+        -24,
+        -170
+      ],
+      "out_xy": [
+        38,
+        -496
+      ],
+      "flags": 68
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Non-Mixer.BassSynths/Unnamed",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        289,
+        814
+      ],
+      "in_xy": [
+        400,
+        824
+      ],
+      "out_xy": [
+        0,
+        824
+      ],
+      "flags": 0
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Non-Mixer.BassSynths/Unnamed.1",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        289,
+        879
+      ],
+      "in_xy": [
+        400,
+        889
+      ],
+      "out_xy": [
+        0,
+        889
+      ],
+      "flags": 0
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Non-Mixer.BassSynths (BassSynthsOut)",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        195,
+        80
+      ],
+      "in_xy": [
+        -164,
+        674
+      ],
+      "out_xy": [
+        -27,
+        -378
+      ],
+      "flags": 68
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Non-Mixer.Synths/Unnamed.1",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        387,
+        -8
+      ],
+      "in_xy": [
+        400,
+        824
+      ],
+      "out_xy": [
+        0,
+        824
+      ],
+      "flags": 0
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Non-Mixer.Synths/Unnamed.2",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        387,
+        57
+      ],
+      "in_xy": [
+        400,
+        824
+      ],
+      "out_xy": [
+        0,
+        824
+      ],
+      "flags": 0
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Non-Mixer.Synths/Unnamed.3",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        281,
+        814
+      ],
+      "in_xy": [
+        400,
+        824
+      ],
+      "out_xy": [
+        0,
+        824
+      ],
+      "flags": 0
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Non-Mixer.Synths/Unnamed.4",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        281,
+        879
+      ],
+      "in_xy": [
+        400,
+        889
+      ],
+      "out_xy": [
+        0,
+        889
+      ],
+      "flags": 0
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Non-Mixer.Synths/Unnamed.5",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        281,
+        944
+      ],
+      "in_xy": [
+        400,
+        954
+      ],
+      "out_xy": [
+        0,
+        954
+      ],
+      "flags": 0
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Non-Mixer.Synths/Unnamed.6",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        281,
+        1009
+      ],
+      "in_xy": [
+        400,
+        1019
+      ],
+      "out_xy": [
+        0,
+        1019
+      ],
+      "flags": 0
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Non-Mixer.Synths/Unnamed.7",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        281,
+        1074
+      ],
+      "in_xy": [
+        400,
+        1084
+      ],
+      "out_xy": [
+        0,
+        1084
+      ],
+      "flags": 0
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Non-Mixer.Synths/Unnamed.8",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        281,
+        1139
+      ],
+      "in_xy": [
+        400,
+        1149
+      ],
+      "out_xy": [
+        0,
+        1149
+      ],
+      "flags": 0
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Non-Mixer.Synths/Unnamed.9",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        281,
+        1204
+      ],
+      "in_xy": [
+        400,
+        1214
+      ],
+      "out_xy": [
+        0,
+        1214
+      ],
+      "flags": 0
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Non-Mixer.Synths/Unnamed.10",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        281,
+        1269
+      ],
+      "in_xy": [
+        400,
+        1279
+      ],
+      "out_xy": [
+        0,
+        1279
+      ],
+      "flags": 0
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Non-Mixer.Synths (SynthsOut)",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        436,
+        134
+      ],
+      "in_xy": [
+        489,
+        250
+      ],
+      "out_xy": [
+        2,
+        -437
+      ],
+      "flags": 68
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Non-Mixer.Synths/Unnamed",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        387,
+        57
+      ],
+      "in_xy": [
+        400,
+        838
+      ],
+      "out_xy": [
+        0,
+        838
+      ],
+      "flags": 0
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Non-Mixer.Samples/Unnamed.1",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        281,
+        -468
+      ],
+      "in_xy": [
+        400,
+        856
+      ],
+      "out_xy": [
+        0,
+        856
+      ],
+      "flags": 0
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Non-Mixer.Samples/Unnamed.2",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        281,
+        -350
+      ],
+      "in_xy": [
+        400,
+        856
+      ],
+      "out_xy": [
+        0,
+        856
+      ],
+      "flags": 0
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Non-Mixer.Samples/Unnamed.3",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        281,
+        -285
+      ],
+      "in_xy": [
+        400,
+        856
+      ],
+      "out_xy": [
+        0,
+        856
+      ],
+      "flags": 0
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Non-Mixer.Samples/Unnamed.4",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        281,
+        -220
+      ],
+      "in_xy": [
+        400,
+        856
+      ],
+      "out_xy": [
+        0,
+        856
+      ],
+      "flags": 0
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Non-Mixer.Samples/Unnamed",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        281,
+        -409
+      ],
+      "in_xy": [
+        400,
+        912
+      ],
+      "out_xy": [
+        0,
+        912
+      ],
+      "flags": 0
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Non-Mixer.Samples/Unnamed.5",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        281,
+        -155
+      ],
+      "in_xy": [
+        400,
+        912
+      ],
+      "out_xy": [
+        0,
+        912
+      ],
+      "flags": 0
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Non-Mixer.Samples (SamplesProcSends)",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        420,
+        329
+      ],
+      "in_xy": [
+        400,
+        912
+      ],
+      "out_xy": [
+        0,
+        912
+      ],
+      "flags": 0
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Non-Mixer.Samples (Samples1ProcSends)",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        368,
+        0
+      ],
+      "in_xy": [
+        421,
+        416
+      ],
+      "out_xy": [
+        -293,
+        893
+      ],
+      "flags": 68
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Non-Mixer.Samples/Samples1_FXWorks",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        281,
+        -415
+      ],
+      "in_xy": [
+        400,
+        912
+      ],
+      "out_xy": [
+        0,
+        912
+      ],
+      "flags": 0
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Non-Mixer.Samples (SamplesOut)",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        449,
+        623
+      ],
+      "in_xy": [
+        523,
+        428
+      ],
+      "out_xy": [
+        542,
+        85
+      ],
+      "flags": 68
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Non-Mixer.SamplesFX1Delays/Unnamed",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        334,
+        -293
+      ],
+      "in_xy": [
+        400,
+        1062
+      ],
+      "out_xy": [
+        0,
+        1062
+      ],
+      "flags": 0
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Non-Mixer.SamplesFX1Delays (SamplesFX1DelayPre)",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        334,
+        -234
+      ],
+      "in_xy": [
+        400,
+        1062
+      ],
+      "out_xy": [
+        0,
+        1062
+      ],
+      "flags": 0
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Non-Mixer.SamplesFX1Delays/Unnamed.1",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        334,
+        -151
+      ],
+      "in_xy": [
+        400,
+        1062
+      ],
+      "out_xy": [
+        0,
+        1062
+      ],
+      "flags": 0
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Non-Mixer.SamplesFX1Delays/Unnamed.2",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        281,
+        1052
+      ],
+      "in_xy": [
+        400,
+        1062
+      ],
+      "out_xy": [
+        0,
+        1062
+      ],
+      "flags": 0
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Non-Mixer.SamplesFX1Delays/Unnamed.3",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        281,
+        1117
+      ],
+      "in_xy": [
+        400,
+        1127
+      ],
+      "out_xy": [
+        0,
+        1127
+      ],
+      "flags": 0
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Non-Mixer.SamplesFX1Delays/Unnamed.4",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        281,
+        1182
+      ],
+      "in_xy": [
+        400,
+        1192
+      ],
+      "out_xy": [
+        0,
+        1192
+      ],
+      "flags": 0
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Non-Mixer.SamplesFX1Delays/Unnamed.5",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        281,
+        1247
+      ],
+      "in_xy": [
+        400,
+        1257
+      ],
+      "out_xy": [
+        0,
+        1257
+      ],
+      "flags": 0
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Non-Mixer.SamplesFX1Delays/Unnamed.6",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        281,
+        1312
+      ],
+      "in_xy": [
+        400,
+        1322
+      ],
+      "out_xy": [
+        0,
+        1322
+      ],
+      "flags": 0
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Non-Mixer.SamplesFX1Delays/Unnamed.7",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        281,
+        1377
+      ],
+      "in_xy": [
+        400,
+        1387
+      ],
+      "out_xy": [
+        0,
+        1387
+      ],
+      "flags": 0
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Non-Mixer.SamplesFX1Delays/Unnamed.8",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        281,
+        1442
+      ],
+      "in_xy": [
+        400,
+        1452
+      ],
+      "out_xy": [
+        0,
+        1452
+      ],
+      "flags": 0
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Non-Mixer.SamplesFX1Delays/Unnamed.9",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        281,
+        1507
+      ],
+      "in_xy": [
+        400,
+        1517
+      ],
+      "out_xy": [
+        0,
+        1517
+      ],
+      "flags": 0
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Non-Mixer.SamplesFX1Delay/Unnamed",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        334,
+        -293
+      ],
+      "in_xy": [
+        400,
+        1062
+      ],
+      "out_xy": [
+        0,
+        1062
+      ],
+      "flags": 0
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Non-Mixer.SamplesFX2Delay/Unnamed",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        334,
+        -228
+      ],
+      "in_xy": [
+        400,
+        1062
+      ],
+      "out_xy": [
+        0,
+        1062
+      ],
+      "flags": 0
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Non-Mixer.SamplesFX3Reverb/Unnamed",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        334,
+        -163
+      ],
+      "in_xy": [
+        400,
+        1062
+      ],
+      "out_xy": [
+        0,
+        1062
+      ],
+      "flags": 0
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Non-Mixer.SamplesFX4Autofilter/Unnamed",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        281,
+        1052
+      ],
+      "in_xy": [
+        400,
+        1062
+      ],
+      "out_xy": [
+        0,
+        1062
+      ],
+      "flags": 0
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Non-Mixer.SamplesFX1Delay (SamplesFX1DelayPre)",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        -196,
+        882
+      ],
+      "in_xy": [
+        445,
+        781
+      ],
+      "out_xy": [
+        -216,
+        898
+      ],
+      "flags": 68
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Non-Mixer.SamplesFX1Delay/Unnamed.1",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        281,
+        1194
+      ],
+      "in_xy": [
+        400,
+        1192
+      ],
+      "out_xy": [
+        0,
+        1192
+      ],
+      "flags": 0
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Non-Mixer.SamplesFX1Delay/Unnamed.2",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        281,
+        1253
+      ],
+      "in_xy": [
+        400,
+        1257
+      ],
+      "out_xy": [
+        0,
+        1257
+      ],
+      "flags": 0
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Non-Mixer.SamplesFX1Delay/Unnamed.3",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        281,
+        1312
+      ],
+      "in_xy": [
+        400,
+        1322
+      ],
+      "out_xy": [
+        0,
+        1322
+      ],
+      "flags": 0
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Non-Mixer.SamplesFX1Delay/Unnamed.4",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        281,
+        1377
+      ],
+      "in_xy": [
+        400,
+        1387
+      ],
+      "out_xy": [
+        0,
+        1387
+      ],
+      "flags": 0
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Non-Mixer.SamplesFX1Delay/Samples2",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        281,
+        1442
+      ],
+      "in_xy": [
+        400,
+        1452
+      ],
+      "out_xy": [
+        0,
+        1452
+      ],
+      "flags": 0
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Non-Mixer.SamplesFX1Delay (SamplesFX1DelayPost)",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        24,
+        911
+      ],
+      "in_xy": [
+        60,
+        968
+      ],
+      "out_xy": [
+        128,
+        285
+      ],
+      "flags": 68
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Non-Mixer.SamplesFX2Delay (SamplesFX2DelayPre)",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        -216,
+        1070
+      ],
+      "in_xy": [
+        445,
+        912
+      ],
+      "out_xy": [
+        -216,
+        1120
+      ],
+      "flags": 68
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Non-Mixer.SamplesFX2Delay (SamplesFX2DelayPost)",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        301,
+        379
+      ],
+      "in_xy": [
+        84,
+        1070
+      ],
+      "out_xy": [
+        128,
+        344
+      ],
+      "flags": 68
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Non-Mixer.SamplesFX3Reverb (SamplesFX3ReverbPre)",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        -142,
+        1291
+      ],
+      "in_xy": [
+        416,
+        1058
+      ],
+      "out_xy": [
+        -196,
+        1251
+      ],
+      "flags": 68
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Non-Mixer.SamplesFX4Autofilter (SamplesFX4AutofilterPre)",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        -158,
+        1423
+      ],
+      "in_xy": [
+        464,
+        1189
+      ],
+      "out_xy": [
+        -212,
+        1382
+      ],
+      "flags": 68
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Non-Mixer.SamplesWork (SamplesWorkPre)",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        -181,
+        1554
+      ],
+      "in_xy": [
+        426,
+        1320
+      ],
+      "out_xy": [
+        -168,
+        1528
+      ],
+      "flags": 68
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Non-Mixer.SamplesFX3Reverb (SamplesFX3ReverbPost)",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        281,
+        1240
+      ],
+      "in_xy": [
+        162,
+        1258
+      ],
+      "out_xy": [
+        128,
+        403
+      ],
+      "flags": 68
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Non-Mixer.SamplesFX4Autofilter (SamplesFX4AutofilterPost)",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        281,
+        1299
+      ],
+      "in_xy": [
+        154,
+        1405
+      ],
+      "out_xy": [
+        128,
+        462
+      ],
+      "flags": 68
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Non-Mixer.SamplesWork (SamplesWorkPost)",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        87,
+        1181
+      ],
+      "in_xy": [
+        208,
+        1533
+      ],
+      "out_xy": [
+        155,
+        521
+      ],
+      "flags": 68
+    }
+  ]
+}

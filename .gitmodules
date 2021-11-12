@@ -3,10 +3,34 @@
 	url = https://github.com/Houston4444/RaySession
 [submodule "src/loop192"]
 	path = src/loop192
-	url = https://github.com/jean-emmanuel/loop192
+	url = git@github.com:jean-emmanuel/loop192
+[submodule "src/mentat"]
+	path = src/loop192
+	url = git@github.com:jean-emmanuel/mentat
 [submodule "src/seq192"]
 	path = src/seq192
-	url = https://github.com/jean-emmanuel/seq192
+	url = git@github.com:jean-emmanuel/seq192
 [submodule "src/non"]
 	path = src/non
 	url = https://github.com/falkTX/non
+[submodule "src/tapeutape"]
+	path = src/tapeutape
+	url = git@github.com:PlagiatBros/tapeutape
+[submodule "src/Poly_PedalBoard"]
+	path = src/Poly_PedalBoard
+	url = git@github.com:AMMD/Poly_PedalBoard
+[submodule "src/alsa-python"]
+	path = src/alsa-python
+	url = https://github.com/alsa-project/alsa-python
+[submodule "src/zyn-fusion"]
+	path = src/zyn-fusion
+	url = https://github.com/zynaddsubfx/zyn-fusion-build
+[submodule "src/pyliblo"]
+	path = src/pyliblo
+	url = https://github.com/dsacre/pyliblo
+[submodule "src/bitrot"]
+	path = src/bitrot
+	url = git://github.com/grejppi/bitrot.git
+[submodule "src/fat1.lv2"]
+	path = src/fat1.lv2
+	url = git://github.com/PlagiatBros/fat1.lv2.git

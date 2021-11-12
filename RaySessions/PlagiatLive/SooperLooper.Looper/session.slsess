@@ -1,0 +1,254 @@
+<?xml version='1.0'?>
+<SLSession version="1.7.8">
+ <Globals use_midi_stop="0" auto_disable_latency="1" output_midi_clock="0" input_gain="1" send_midi_start_on_trigger="0" smart_eighths="1" common_dry="0" use_midi_start="0" sync_source="1" jack_timebase_master="0" common_wet="1" tempo="0" eighth_per_cycle="16"/>
+ <Loopers>
+  <Looper pitch_shift="0" use_common_ins="yes" channels="1" relative_sync="no" use_common_outs="yes" tempo_stretch="no" loop_secs="40" discrete_prefader="yes" index="0" auto_latency="yes" discrete_io="yes" stretch_ratio="1">
+   <Panner bypassed="no" linked="no" link_direction="0">
+    <StreamPanner muted="no" type="Equal Power Stereo" x="0.500000"/>
+    <Output y="0.000000" x="0.000000"/>
+    <Output y="0.000000" x="1.000000"/>
+   </Panner>
+   <Controls>
+    <Control name="rec_thresh" value="0"/>
+    <Control name="dry" value="1"/>
+    <Control name="wet" value="1"/>
+    <Control name="feedback" value="1"/>
+    <Control name="rate" value="1"/>
+    <Control name="scratch_pos" value="0"/>
+    <Control name="delay_trigger" value="0"/>
+    <Control name="use_feedback_play" value="0"/>
+    <Control name="quantize" value="0"/>
+    <Control name="round" value="0"/>
+    <Control name="redo_is_tap" value="0"/>
+    <Control name="sync" value="0"/>
+    <Control name="use_rate" value="0"/>
+    <Control name="fade_samples" value="64"/>
+    <Control name="playback_sync" value="0"/>
+    <Control name="use_safety_feedback" value="1"/>
+    <Control name="input_latency" value="0"/>
+    <Control name="output_latency" value="0"/>
+    <Control name="trigger_latency" value="128"/>
+    <Control name="mute_quantized" value="0"/>
+    <Control name="overdub_quantized" value="0"/>
+    <Control name="round_integer_tempo" value="0"/>
+   </Controls>
+  </Looper>
+  <Looper pitch_shift="0" use_common_ins="yes" channels="1" relative_sync="no" use_common_outs="yes" tempo_stretch="no" loop_secs="40" discrete_prefader="yes" index="1" auto_latency="yes" discrete_io="yes" stretch_ratio="1">
+   <Panner bypassed="no" linked="no" link_direction="0">
+    <StreamPanner muted="no" type="Equal Power Stereo" x="0.500000"/>
+    <Output y="0.000000" x="0.000000"/>
+    <Output y="0.000000" x="1.000000"/>
+   </Panner>
+   <Controls>
+    <Control name="rec_thresh" value="0"/>
+    <Control name="dry" value="1"/>
+    <Control name="wet" value="1"/>
+    <Control name="feedback" value="1"/>
+    <Control name="rate" value="1"/>
+    <Control name="scratch_pos" value="0"/>
+    <Control name="delay_trigger" value="0"/>
+    <Control name="use_feedback_play" value="0"/>
+    <Control name="quantize" value="0"/>
+    <Control name="round" value="0"/>
+    <Control name="redo_is_tap" value="0"/>
+    <Control name="sync" value="0"/>
+    <Control name="use_rate" value="0"/>
+    <Control name="fade_samples" value="64"/>
+    <Control name="playback_sync" value="0"/>
+    <Control name="use_safety_feedback" value="1"/>
+    <Control name="input_latency" value="0"/>
+    <Control name="output_latency" value="0"/>
+    <Control name="trigger_latency" value="128"/>
+    <Control name="mute_quantized" value="0"/>
+    <Control name="overdub_quantized" value="0"/>
+    <Control name="round_integer_tempo" value="0"/>
+   </Controls>
+  </Looper>
+  <Looper pitch_shift="0" use_common_ins="yes" channels="1" relative_sync="no" use_common_outs="yes" tempo_stretch="no" loop_secs="40" discrete_prefader="yes" index="2" auto_latency="yes" discrete_io="yes" stretch_ratio="1">
+   <Panner bypassed="no" linked="no" link_direction="0">
+    <StreamPanner muted="no" type="Equal Power Stereo" x="0.500000"/>
+    <Output y="0.000000" x="0.000000"/>
+    <Output y="0.000000" x="1.000000"/>
+   </Panner>
+   <Controls>
+    <Control name="rec_thresh" value="0"/>
+    <Control name="dry" value="0"/>
+    <Control name="wet" value="1"/>
+    <Control name="feedback" value="1"/>
+    <Control name="rate" value="1"/>
+    <Control name="scratch_pos" value="0"/>
+    <Control name="delay_trigger" value="0"/>
+    <Control name="use_feedback_play" value="0"/>
+    <Control name="quantize" value="0"/>
+    <Control name="round" value="0"/>
+    <Control name="redo_is_tap" value="0"/>
+    <Control name="sync" value="0"/>
+    <Control name="use_rate" value="0"/>
+    <Control name="fade_samples" value="64"/>
+    <Control name="playback_sync" value="0"/>
+    <Control name="use_safety_feedback" value="1"/>
+    <Control name="input_latency" value="0"/>
+    <Control name="output_latency" value="0"/>
+    <Control name="trigger_latency" value="128"/>
+    <Control name="mute_quantized" value="0"/>
+    <Control name="overdub_quantized" value="0"/>
+    <Control name="round_integer_tempo" value="0"/>
+   </Controls>
+  </Looper>
+  <Looper pitch_shift="0" use_common_ins="yes" channels="1" relative_sync="no" use_common_outs="yes" tempo_stretch="no" loop_secs="40" discrete_prefader="yes" index="3" auto_latency="yes" discrete_io="yes" stretch_ratio="1">
+   <Panner bypassed="no" linked="no" link_direction="0">
+    <StreamPanner muted="no" type="Equal Power Stereo" x="0.500000"/>
+    <Output y="0.000000" x="0.000000"/>
+    <Output y="0.000000" x="1.000000"/>
+   </Panner>
+   <Controls>
+    <Control name="rec_thresh" value="0"/>
+    <Control name="dry" value="1"/>
+    <Control name="wet" value="1"/>
+    <Control name="feedback" value="1"/>
+    <Control name="rate" value="1"/>
+    <Control name="scratch_pos" value="0"/>
+    <Control name="delay_trigger" value="0"/>
+    <Control name="use_feedback_play" value="0"/>
+    <Control name="quantize" value="0"/>
+    <Control name="round" value="0"/>
+    <Control name="redo_is_tap" value="0"/>
+    <Control name="sync" value="0"/>
+    <Control name="use_rate" value="0"/>
+    <Control name="fade_samples" value="64"/>
+    <Control name="playback_sync" value="0"/>
+    <Control name="use_safety_feedback" value="1"/>
+    <Control name="input_latency" value="0"/>
+    <Control name="output_latency" value="0"/>
+    <Control name="trigger_latency" value="128"/>
+    <Control name="mute_quantized" value="0"/>
+    <Control name="overdub_quantized" value="0"/>
+    <Control name="round_integer_tempo" value="0"/>
+   </Controls>
+  </Looper>
+  <Looper pitch_shift="0" use_common_ins="yes" channels="1" relative_sync="no" use_common_outs="yes" tempo_stretch="no" loop_secs="40" discrete_prefader="yes" index="4" auto_latency="yes" discrete_io="yes" stretch_ratio="1">
+   <Panner bypassed="no" linked="no" link_direction="0">
+    <StreamPanner muted="no" type="Equal Power Stereo" x="0.500000"/>
+    <Output y="0.000000" x="0.000000"/>
+    <Output y="0.000000" x="1.000000"/>
+   </Panner>
+   <Controls>
+    <Control name="rec_thresh" value="0"/>
+    <Control name="dry" value="1"/>
+    <Control name="wet" value="1"/>
+    <Control name="feedback" value="1"/>
+    <Control name="rate" value="1"/>
+    <Control name="scratch_pos" value="0"/>
+    <Control name="delay_trigger" value="0"/>
+    <Control name="use_feedback_play" value="0"/>
+    <Control name="quantize" value="0"/>
+    <Control name="round" value="0"/>
+    <Control name="redo_is_tap" value="0"/>
+    <Control name="sync" value="0"/>
+    <Control name="use_rate" value="0"/>
+    <Control name="fade_samples" value="64"/>
+    <Control name="playback_sync" value="0"/>
+    <Control name="use_safety_feedback" value="1"/>
+    <Control name="input_latency" value="0"/>
+    <Control name="output_latency" value="0"/>
+    <Control name="trigger_latency" value="128"/>
+    <Control name="mute_quantized" value="0"/>
+    <Control name="overdub_quantized" value="0"/>
+    <Control name="round_integer_tempo" value="0"/>
+   </Controls>
+  </Looper>
+  <Looper pitch_shift="0" use_common_ins="yes" channels="1" relative_sync="no" use_common_outs="yes" tempo_stretch="no" loop_secs="40" discrete_prefader="yes" index="5" auto_latency="yes" discrete_io="yes" stretch_ratio="1">
+   <Panner bypassed="no" linked="no" link_direction="0">
+    <StreamPanner muted="no" type="Equal Power Stereo" x="0.500000"/>
+    <Output y="0.000000" x="0.000000"/>
+    <Output y="0.000000" x="1.000000"/>
+   </Panner>
+   <Controls>
+    <Control name="rec_thresh" value="0"/>
+    <Control name="dry" value="1"/>
+    <Control name="wet" value="1"/>
+    <Control name="feedback" value="1"/>
+    <Control name="rate" value="1"/>
+    <Control name="scratch_pos" value="0"/>
+    <Control name="delay_trigger" value="0"/>
+    <Control name="use_feedback_play" value="0"/>
+    <Control name="quantize" value="0"/>
+    <Control name="round" value="0"/>
+    <Control name="redo_is_tap" value="0"/>
+    <Control name="sync" value="0"/>
+    <Control name="use_rate" value="0"/>
+    <Control name="fade_samples" value="64"/>
+    <Control name="playback_sync" value="0"/>
+    <Control name="use_safety_feedback" value="1"/>
+    <Control name="input_latency" value="0"/>
+    <Control name="output_latency" value="0"/>
+    <Control name="trigger_latency" value="128"/>
+    <Control name="mute_quantized" value="0"/>
+    <Control name="overdub_quantized" value="0"/>
+    <Control name="round_integer_tempo" value="0"/>
+   </Controls>
+  </Looper>
+  <Looper pitch_shift="0" use_common_ins="yes" channels="1" relative_sync="no" use_common_outs="yes" tempo_stretch="no" loop_secs="40" discrete_prefader="yes" index="6" auto_latency="yes" discrete_io="yes" stretch_ratio="1">
+   <Panner bypassed="no" linked="no" link_direction="0">
+    <StreamPanner muted="no" type="Equal Power Stereo" x="0.500000"/>
+    <Output y="0.000000" x="0.000000"/>
+    <Output y="0.000000" x="1.000000"/>
+   </Panner>
+   <Controls>
+    <Control name="rec_thresh" value="0"/>
+    <Control name="dry" value="1"/>
+    <Control name="wet" value="1"/>
+    <Control name="feedback" value="1"/>
+    <Control name="rate" value="1"/>
+    <Control name="scratch_pos" value="0"/>
+    <Control name="delay_trigger" value="0"/>
+    <Control name="use_feedback_play" value="0"/>
+    <Control name="quantize" value="0"/>
+    <Control name="round" value="0"/>
+    <Control name="redo_is_tap" value="0"/>
+    <Control name="sync" value="0"/>
+    <Control name="use_rate" value="0"/>
+    <Control name="fade_samples" value="64"/>
+    <Control name="playback_sync" value="0"/>
+    <Control name="use_safety_feedback" value="1"/>
+    <Control name="input_latency" value="0"/>
+    <Control name="output_latency" value="0"/>
+    <Control name="trigger_latency" value="128"/>
+    <Control name="mute_quantized" value="0"/>
+    <Control name="overdub_quantized" value="0"/>
+    <Control name="round_integer_tempo" value="0"/>
+   </Controls>
+  </Looper>
+  <Looper pitch_shift="0" use_common_ins="yes" channels="1" relative_sync="no" use_common_outs="yes" tempo_stretch="no" loop_secs="40" discrete_prefader="yes" index="7" auto_latency="yes" discrete_io="yes" stretch_ratio="1">
+   <Panner bypassed="no" linked="no" link_direction="0">
+    <StreamPanner muted="no" type="Equal Power Stereo" x="0.500000"/>
+    <Output y="0.000000" x="0.000000"/>
+    <Output y="0.000000" x="1.000000"/>
+   </Panner>
+   <Controls>
+    <Control name="rec_thresh" value="0"/>
+    <Control name="dry" value="1"/>
+    <Control name="wet" value="1"/>
+    <Control name="feedback" value="1"/>
+    <Control name="rate" value="1"/>
+    <Control name="scratch_pos" value="0"/>
+    <Control name="delay_trigger" value="0"/>
+    <Control name="use_feedback_play" value="0"/>
+    <Control name="quantize" value="0"/>
+    <Control name="round" value="0"/>
+    <Control name="redo_is_tap" value="0"/>
+    <Control name="sync" value="0"/>
+    <Control name="use_rate" value="0"/>
+    <Control name="fade_samples" value="64"/>
+    <Control name="playback_sync" value="0"/>
+    <Control name="use_safety_feedback" value="1"/>
+    <Control name="input_latency" value="0"/>
+    <Control name="output_latency" value="0"/>
+    <Control name="trigger_latency" value="128"/>
+    <Control name="mute_quantized" value="0"/>
+    <Control name="overdub_quantized" value="0"/>
+    <Control name="round_integer_tempo" value="0"/>
+   </Controls>
+  </Looper>
+ </Loopers>
+</SLSession>
