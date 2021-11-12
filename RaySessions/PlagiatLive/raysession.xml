@@ -1,27 +1,32 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <!DOCTYPE RAYSESSION>
-<RAYSESSION VERSION="0.12.0" name="PlagiatLive">
+<RAYSESSION name="PlagiatLive" VERSION="0.12.0">
  <Clients>
-  <client template_origin="JACK Connections" launched="1" name="JACK Connections" executable="ray-jackpatch" id="patch"/>
-  <client gui_visible="0" prefix_mode="1" launched="1" name="Non-Mixer" desktop_file="//not_found" icon="non-mixer" arguments="--osc-port 10000" executable="non-mixer" from_nsm_file="1" id="Inputs" label="Inputs [NM] 10000"/>
-  <client gui_visible="0" prefix_mode="1" launched="1" name="Non-Mixer" desktop_file="//not_found" icon="non-mixer" arguments="--osc-port 10001" executable="non-mixer" from_nsm_file="1" id="Outputs" label="Outputs [NM] 10001"/>
-  <client gui_visible="0" prefix_mode="1" launched="1" name="Non-Mixer" desktop_file="//not_found" icon="non-mixer" arguments="--osc-port 10002" executable="non-mixer" from_nsm_file="1" id="MonitorsNano" label="Monitors Nano [NM] 10002"/>
-  <client gui_visible="0" prefix_mode="1" launched="1" name="Non-Mixer" desktop_file="//not_found" icon="non-mixer" arguments="--osc-port 10003" executable="non-mixer" from_nsm_file="1" id="MonitorsKesch" label="Monitors Kesch [NM] 10003"/>
-  <client gui_visible="0" prefix_mode="1" launched="1" name="Non-Mixer" desktop_file="//not_found" icon="non-mixer" arguments="--osc-port 10010" executable="non-mixer" from_nsm_file="1" id="Bass" label="Bass [NM] 10010"/>
-  <client gui_visible="0" prefix_mode="1" launched="1" name="Non-Mixer" desktop_file="//not_found" icon="non-mixer" arguments="--osc-port 10020" executable="non-mixer" from_nsm_file="1" id="BassSynths" label="Bass Synths [NM] 10020"/>
-  <client gui_visible="0" prefix_mode="1" launched="1" name="Non-Mixer" desktop_file="//not_found" icon="non-mixer" arguments="--osc-port 10030" executable="non-mixer" from_nsm_file="1" id="Synths" label="Synths [NM] 10030"/>
-  <client gui_visible="0" prefix_mode="1" launched="1" name="Non-Mixer" desktop_file="//not_found" icon="non-mixer" arguments="--osc-port 10040" executable="non-mixer" from_nsm_file="1" id="Samples" label="Samples [NM] 10040"/>
-  <client gui_visible="0" prefix_mode="1" launched="1" name="Non-Mixer" desktop_file="//not_found" icon="non-mixer" arguments="--osc-port 10041" executable="non-mixer" from_nsm_file="1" id="SamplesFX1Delay" label="Samples FX1 Delay [NM] 10041"/>
-  <client gui_visible="0" prefix_mode="1" launched="1" name="Non-Mixer" desktop_file="//not_found" icon="non-mixer" arguments="--osc-port 10042" executable="non-mixer" from_nsm_file="1" id="SamplesFX2Delay" label="Samples FX2 Delay [NM] 10042"/>
-  <client gui_visible="0" prefix_mode="1" launched="1" name="Non-Mixer" desktop_file="//not_found" icon="non-mixer" arguments="--osc-port 10043" executable="non-mixer" from_nsm_file="1" id="SamplesFX3Reverb" label="Samples FX Reverb [NM] 10043"/>
-  <client gui_visible="0" prefix_mode="1" launched="1" name="Non-Mixer" desktop_file="//not_found" icon="non-mixer" arguments="--osc-port 10044" executable="non-mixer" from_nsm_file="1" id="SamplesFX4Autofilter" label="Samples FX4 Autofilter [NM] 10044"/>
-  <client gui_visible="0" prefix_mode="1" launched="1" name="Non-Mixer" desktop_file="//not_found" icon="non-mixer" arguments="--osc-port 10049" executable="non-mixer" from_nsm_file="1" id="SamplesWork" label="Samples Work [NM] 10049"/>
-  <client gui_visible="0" prefix_mode="1" launched="1" name="Non-Mixer" desktop_file="//not_found" icon="non-mixer" arguments="--osc-port 10050" executable="non-mixer" from_nsm_file="1" id="VocalsNano" label="Vocals Nano [NM] 10050"/>
-  <client gui_visible="0" prefix_mode="1" launched="1" name="Non-Mixer" desktop_file="//not_found" icon="non-mixer" arguments="--osc-port 10060" executable="non-mixer" from_nsm_file="1" id="VocalsKesch" label="Vocals Kesch [NM] 10060"/>
-  <client unignored_extensions=" .wav" gui_visible="0" prefix_mode="1" launched="1" name="SooperLooper" desktop_file="//not_found" icon="sooperlooper" arguments=" -p 9900" executable="sooperlooper_nsm" from_nsm_file="1" id="Looper" label="SooperLooper 9900"/>
+  <client template_origin="JACK Connections" name="JACK Connections" id="patch" launched="1" executable="ray-jackpatch"/>
+  <client icon="non-mixer" from_nsm_file="1" name="Non-Mixer" id="Inputs" desktop_file="//not_found" launched="1" prefix_mode="1" label="Inputs [NM] 10000" executable="non-mixer" gui_visible="0" arguments="--osc-port 10000"/>
+  <client icon="non-mixer" from_nsm_file="1" name="Non-Mixer" id="Outputs" desktop_file="//not_found" launched="1" prefix_mode="1" label="Outputs [NM] 10001" executable="non-mixer" gui_visible="0" arguments="--osc-port 10001"/>
+  <client icon="non-mixer" from_nsm_file="1" name="Non-Mixer" id="MonitorsNano" desktop_file="//not_found" launched="1" prefix_mode="1" label="Monitors Nano [NM] 10002" executable="non-mixer" gui_visible="0" arguments="--osc-port 10002"/>
+  <client icon="non-mixer" from_nsm_file="1" name="Non-Mixer" id="MonitorsKesch" desktop_file="//not_found" launched="1" prefix_mode="1" label="Monitors Kesch [NM] 10003" executable="non-mixer" gui_visible="0" arguments="--osc-port 10003"/>
+  <client icon="non-mixer" from_nsm_file="1" name="Non-Mixer" id="Bass" desktop_file="//not_found" launched="1" prefix_mode="1" label="Bass [NM] 10010" executable="non-mixer" gui_visible="0" arguments="--osc-port 10010"/>
+  <client icon="non-mixer" from_nsm_file="1" name="Non-Mixer" id="BassSynths" desktop_file="//not_found" launched="1" prefix_mode="1" label="Bass Synths [NM] 10020" executable="non-mixer" gui_visible="0" arguments="--osc-port 10020"/>
+  <client icon="non-mixer" from_nsm_file="1" name="Non-Mixer" id="Synths" desktop_file="//not_found" launched="1" prefix_mode="1" label="Synths [NM] 10030" executable="non-mixer" gui_visible="0" arguments="--osc-port 10030"/>
+  <client icon="non-mixer" from_nsm_file="1" name="Non-Mixer" id="Samples" desktop_file="//not_found" launched="1" prefix_mode="1" label="Samples [NM] 10040" executable="non-mixer" gui_visible="0" arguments="--osc-port 10040"/>
+  <client icon="non-mixer" from_nsm_file="1" name="Non-Mixer" id="SamplesFX1Delay" desktop_file="//not_found" launched="1" prefix_mode="1" label="Samples FX1 Delay [NM] 10041" executable="non-mixer" gui_visible="0" arguments="--osc-port 10041"/>
+  <client icon="non-mixer" from_nsm_file="1" name="Non-Mixer" id="SamplesFX2Delay" desktop_file="//not_found" launched="1" prefix_mode="1" label="Samples FX2 Delay [NM] 10042" executable="non-mixer" gui_visible="0" arguments="--osc-port 10042"/>
+  <client icon="non-mixer" from_nsm_file="1" name="Non-Mixer" id="SamplesFX3Reverb" desktop_file="//not_found" launched="1" prefix_mode="1" label="Samples FX Reverb [NM] 10043" executable="non-mixer" gui_visible="0" arguments="--osc-port 10043"/>
+  <client icon="non-mixer" from_nsm_file="1" name="Non-Mixer" id="SamplesFX4Autofilter" desktop_file="//not_found" launched="1" prefix_mode="1" label="Samples FX4 Autofilter [NM] 10044" executable="non-mixer" gui_visible="0" arguments="--osc-port 10044"/>
+  <client icon="non-mixer" from_nsm_file="1" name="Non-Mixer" id="SamplesWork" desktop_file="//not_found" launched="1" prefix_mode="1" label="Samples Work [NM] 10049" executable="non-mixer" gui_visible="0" arguments="--osc-port 10049"/>
+  <client icon="non-mixer" from_nsm_file="1" name="Non-Mixer" id="VocalsNano" desktop_file="//not_found" launched="1" prefix_mode="1" label="Vocals Nano [NM] 10050" executable="non-mixer" gui_visible="1" arguments="--osc-port 10050"/>
+  <client icon="non-mixer" from_nsm_file="1" name="Non-Mixer" id="VocalsNanoFX1Delay" desktop_file="//not_found" launched="1" prefix_mode="1" label="Vocals Nano FX1 Delay [NM] 10051" executable="non-mixer" gui_visible="0" arguments="--osc-port 10051"/>
+  <client icon="non-mixer" from_nsm_file="1" name="Non-Mixer" id="VocalsNanoFX2Delay" desktop_file="//not_found" launched="1" prefix_mode="1" label="VocalsNano FX2 Delay [NM] 10052" executable="non-mixer" gui_visible="0" arguments="--osc-port 10052"/>
+  <client icon="non-mixer" from_nsm_file="1" name="Non-Mixer" id="VocalsNanoFX3TrapVerb" desktop_file="//not_found" launched="1" prefix_mode="1" label="Vocals Nano FX3 TrapVerb [NM] 10053" executable="non-mixer" gui_visible="0" arguments="--osc-port 10053"/>
+  <client icon="non-mixer" from_nsm_file="1" name="Non-Mixer" id="VocalsNanoFX4Disint" desktop_file="//not_found" launched="1" prefix_mode="1" label="VocalsNano FX4 Disint [NM] 10054" executable="non-mixer" gui_visible="0" arguments="--osc-port 10054"/>
+  <client icon="non-mixer" from_nsm_file="1" name="Non-Mixer" id="VocalsNanoFX5RingMod" desktop_file="//not_found" launched="1" prefix_mode="1" label="Vocals Nano FX5 Ring Mod [NM] 10055" executable="non-mixer" gui_visible="0" arguments="--osc-port 10055"/>
+  <client icon="non-mixer" from_nsm_file="1" name="Non-Mixer" id="VocalsNanoFX6Granular" desktop_file="//not_found" launched="1" prefix_mode="1" label="VocalsNano FX6 Granular [NM] 10056" executable="non-mixer" gui_visible="0" arguments="--osc-port 10056"/>
+  <client icon="non-mixer" from_nsm_file="1" name="Non-Mixer" id="VocalsNanoFX7Slice" desktop_file="//not_found" launched="1" prefix_mode="1" label="Vocals Nano FX7 Slice [NM] 10057" executable="non-mixer" gui_visible="0" arguments="--osc-port 10057"/>
+  <client icon="non-mixer" from_nsm_file="1" name="Non-Mixer" id="VocalsKesch" desktop_file="//not_found" launched="1" prefix_mode="1" label="Vocals Kesch [NM] 10060" executable="non-mixer" gui_visible="0" arguments="--osc-port 10060"/>
+  <client icon="sooperlooper" from_nsm_file="1" name="SooperLooper" id="Looper" desktop_file="//not_found" launched="1" prefix_mode="1" unignored_extensions=" .wav" label="SooperLooper 9900" executable="sooperlooper_nsm" gui_visible="0" arguments=" -p 9900"/>
  </Clients>
- <RemovedClients>
-  <client prefix_mode="1" name="Non-Mixer" desktop_file="//not_found" icon="non-mixer" arguments="-osc-port 10031" executable="non-mixer" from_nsm_file="1" id="SamplesFX1Delays" label="Samples FX1 Delays [NM]"/>
- </RemovedClients>
+ <RemovedClients/>
  <Windows/>
 </RAYSESSION>

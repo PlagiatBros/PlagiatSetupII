@@ -71,8 +71,8 @@
         0
       ],
       "in_xy": [
-        946,
-        1155
+        1457,
+        1129
       ],
       "out_xy": [
         -409,
@@ -471,12 +471,12 @@
         -150
       ],
       "in_xy": [
-        802,
-        229
+        767,
+        226
       ],
       "out_xy": [
         424,
-        667
+        630
       ],
       "flags": 100
     },
@@ -496,7 +496,7 @@
       ],
       "out_xy": [
         464,
-        724
+        687
       ],
       "flags": 100
     },
@@ -571,12 +571,12 @@
         187
       ],
       "in_xy": [
-        15,
-        -54
+        18,
+        -44
       ],
       "out_xy": [
         196,
-        179
+        193
       ],
       "flags": 100
     },
@@ -607,18 +607,18 @@
       "in_zone": "",
       "out_zone": "",
       "null_xy": [
-        324,
-        1600
+        429,
+        1512
       ],
       "in_xy": [
-        400,
-        540
+        440,
+        1693
       ],
       "out_xy": [
-        0,
-        540
+        610,
+        1512
       ],
-      "flags": 0
+      "flags": 68
     },
     {
       "port_types_view": 3,
@@ -628,7 +628,7 @@
       "out_zone": "",
       "null_xy": [
         92,
-        866
+        872
       ],
       "in_xy": [
         400,
@@ -751,8 +751,8 @@
         158
       ],
       "in_xy": [
-        -24,
-        -111
+        34,
+        -107
       ],
       "out_xy": [
         -204,
@@ -1015,8 +1015,8 @@
         -302
       ],
       "out_xy": [
-        5,
-        -319
+        6,
+        -318
       ],
       "flags": 68
     },
@@ -1035,8 +1035,8 @@
         -383
       ],
       "out_xy": [
-        334,
-        -356
+        590,
+        -22
       ],
       "flags": 100
     },
@@ -1151,8 +1151,8 @@
         -76
       ],
       "in_xy": [
-        659,
-        197
+        610,
+        -502
       ],
       "out_xy": [
         -284,
@@ -1231,12 +1231,12 @@
         15
       ],
       "in_xy": [
-        -24,
-        -170
+        18,
+        -166
       ],
       "out_xy": [
-        38,
-        -496
+        17,
+        -495
       ],
       "flags": 68
     },
@@ -1295,8 +1295,8 @@
         674
       ],
       "out_xy": [
-        -27,
-        -378
+        -26,
+        -377
       ],
       "flags": 68
     },
@@ -1511,12 +1511,12 @@
         134
       ],
       "in_xy": [
-        489,
-        250
+        456,
+        179
       ],
       "out_xy": [
-        2,
-        -437
+        3,
+        -436
       ],
       "flags": 68
     },
@@ -1731,12 +1731,12 @@
         623
       ],
       "in_xy": [
-        523,
-        428
+        515,
+        467
       ],
       "out_xy": [
-        542,
-        85
+        510,
+        59
       ],
       "flags": 68
     },
@@ -2052,7 +2052,7 @@
       ],
       "in_xy": [
         445,
-        781
+        744
       ],
       "out_xy": [
         -216,
@@ -2191,8 +2191,8 @@
         1070
       ],
       "in_xy": [
-        445,
-        912
+        425,
+        875
       ],
       "out_xy": [
         -216,
@@ -2232,7 +2232,7 @@
       ],
       "in_xy": [
         416,
-        1058
+        1006
       ],
       "out_xy": [
         -196,
@@ -2251,8 +2251,8 @@
         1423
       ],
       "in_xy": [
-        464,
-        1189
+        455,
+        1137
       ],
       "out_xy": [
         -212,
@@ -2271,8 +2271,8 @@
         1554
       ],
       "in_xy": [
-        426,
-        1320
+        421,
+        1268
       ],
       "out_xy": [
         -168,
@@ -2331,14 +2331,874 @@
         1181
       ],
       "in_xy": [
-        208,
-        1533
+        102,
+        1506
       ],
       "out_xy": [
         155,
         521
       ],
       "flags": 68
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Non-Mixer.VocalsNano (VocalNanoIn)",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        723,
+        1320
+      ],
+      "in_xy": [
+        -112,
+        226
+      ],
+      "out_xy": [
+        346,
+        1486
+      ],
+      "flags": 68
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Non-Mixer.VocalsNano/Unnamed",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        260,
+        -469
+      ],
+      "in_xy": [
+        400,
+        1675
+      ],
+      "out_xy": [
+        0,
+        1675
+      ],
+      "flags": 0
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Non-Mixer.VocalsNano (VocalsNanoOut)",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        723,
+        1438
+      ],
+      "in_xy": [
+        830,
+        1557
+      ],
+      "out_xy": [
+        260,
+        -528
+      ],
+      "flags": 68
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Non-Mixer.VocalsNano/Unnamed.1",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        260,
+        -351
+      ],
+      "in_xy": [
+        400,
+        1675
+      ],
+      "out_xy": [
+        0,
+        1675
+      ],
+      "flags": 0
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Non-Mixer.VocalsNano/Unnamed.2",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        260,
+        -286
+      ],
+      "in_xy": [
+        400,
+        1675
+      ],
+      "out_xy": [
+        0,
+        1675
+      ],
+      "flags": 0
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Non-Mixer.VocalsNanoMeuf/Unnamed",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        271,
+        -433
+      ],
+      "in_xy": [
+        400,
+        1679
+      ],
+      "out_xy": [
+        0,
+        1679
+      ],
+      "flags": 0
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Non-Mixer.VocalsNanoMeuf (VocalsNanoMeufIn)",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        271,
+        -374
+      ],
+      "in_xy": [
+        400,
+        1679
+      ],
+      "out_xy": [
+        0,
+        1679
+      ],
+      "flags": 0
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Non-Mixer.VocalsNanoMeuf (VocalsNanoMeufOut)",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        271,
+        -309
+      ],
+      "in_xy": [
+        400,
+        1679
+      ],
+      "out_xy": [
+        0,
+        1679
+      ],
+      "flags": 0
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Non-Mixer.VocalsNanoMeuf (VocalsNanoMeuf)",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        157,
+        1653
+      ],
+      "in_xy": [
+        701,
+        1475
+      ],
+      "out_xy": [
+        312,
+        1585
+      ],
+      "flags": 68
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Non-Mixer.VocalsNanoMeuf/VocalsNanoArtificialBackingNormo",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        271,
+        -433
+      ],
+      "in_xy": [
+        400,
+        1781
+      ],
+      "out_xy": [
+        0,
+        1781
+      ],
+      "flags": 0
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Non-Mixer.VocalsNanoMeuf/VocalsNanoArtificialBacking",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        271,
+        -433
+      ],
+      "in_xy": [
+        400,
+        1781
+      ],
+      "out_xy": [
+        0,
+        1781
+      ],
+      "flags": 0
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Non-Mixer.VocalsNanoMeuf/ArtificialBackingGars",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        271,
+        -433
+      ],
+      "in_xy": [
+        400,
+        1781
+      ],
+      "out_xy": [
+        0,
+        1781
+      ],
+      "flags": 0
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Non-Mixer.VocalsNano/ArtificialBackingMeuf",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        300,
+        -463
+      ],
+      "in_xy": [
+        400,
+        1772
+      ],
+      "out_xy": [
+        0,
+        1772
+      ],
+      "flags": 0
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Non-Mixer.VocalsNano/ArtificialBackingNormo",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        300,
+        -463
+      ],
+      "in_xy": [
+        400,
+        1792
+      ],
+      "out_xy": [
+        0,
+        1792
+      ],
+      "flags": 0
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Non-Mixer.VocalsNano/ArtificialBackingGars",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        300,
+        -463
+      ],
+      "in_xy": [
+        400,
+        1828
+      ],
+      "out_xy": [
+        0,
+        1828
+      ],
+      "flags": 0
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Non-Mixer.VocalsNano (VocalsNanoArtificialBackings)",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        639,
+        1765
+      ],
+      "in_xy": [
+        400,
+        1844
+      ],
+      "out_xy": [
+        0,
+        1844
+      ],
+      "flags": 0
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Non-Mixer.VocalsNano (ArtificialBackings)",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        353,
+        1696
+      ],
+      "in_xy": [
+        1205,
+        2013
+      ],
+      "out_xy": [
+        745,
+        2027
+      ],
+      "flags": 68
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Non-Mixer.VocalsNano (In)",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        726,
+        1432
+      ],
+      "in_xy": [
+        -105,
+        214
+      ],
+      "out_xy": [
+        274,
+        2080
+      ],
+      "flags": 68
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Non-Mixer.VocalsNano (Out)",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        750,
+        1532
+      ],
+      "in_xy": [
+        1205,
+        1918
+      ],
+      "out_xy": [
+        360,
+        -236
+      ],
+      "flags": 68
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Non-Mixer.VocalsNano (Meuf)",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        693,
+        1667
+      ],
+      "in_xy": [
+        512,
+        2055
+      ],
+      "out_xy": [
+        741,
+        2130
+      ],
+      "flags": 68
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Non-Mixer.VocalsNano (Normo)",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        678,
+        1791
+      ],
+      "in_xy": [
+        514,
+        2117
+      ],
+      "out_xy": [
+        741,
+        2261
+      ],
+      "flags": 68
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Non-Mixer.VocalsNano (Gars)",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        -28,
+        1787
+      ],
+      "in_xy": [
+        511,
+        2188
+      ],
+      "out_xy": [
+        741,
+        2397
+      ],
+      "flags": 68
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Non-Mixer.VocalsNanoFX1Delay/Unnamed",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        313,
+        -492
+      ],
+      "in_xy": [
+        400,
+        2007
+      ],
+      "out_xy": [
+        0,
+        2007
+      ],
+      "flags": 0
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Non-Mixer.VocalsNanoFX1Delay/Unnamed.1",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        313,
+        -427
+      ],
+      "in_xy": [
+        400,
+        2007
+      ],
+      "out_xy": [
+        0,
+        2007
+      ],
+      "flags": 0
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Non-Mixer.VocalsNanoFX1Delay/Unnamed.2",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        313,
+        -362
+      ],
+      "in_xy": [
+        400,
+        2007
+      ],
+      "out_xy": [
+        0,
+        2007
+      ],
+      "flags": 0
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Non-Mixer.VocalsNanoFX1Delay/NanoMeufIn",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        313,
+        -297
+      ],
+      "in_xy": [
+        400,
+        2007
+      ],
+      "out_xy": [
+        0,
+        2007
+      ],
+      "flags": 0
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Non-Mixer.VocalsNanoFX1Delay/NanoNormoIn",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        313,
+        -232
+      ],
+      "in_xy": [
+        400,
+        2007
+      ],
+      "out_xy": [
+        0,
+        2007
+      ],
+      "flags": 0
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Non-Mixer.VocalsNanoFX1Delay/NanoGars",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        313,
+        -492
+      ],
+      "in_xy": [
+        400,
+        2007
+      ],
+      "out_xy": [
+        0,
+        2007
+      ],
+      "flags": 0
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Non-Mixer.VocalsNanoFX1Delay (In)",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        1205,
+        2108
+      ],
+      "in_xy": [
+        783,
+        1959
+      ],
+      "out_xy": [
+        783,
+        1864
+      ],
+      "flags": 64
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Non-Mixer.VocalsNanoFX1Delay/NanoFX1Delay",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        313,
+        -492
+      ],
+      "in_xy": [
+        400,
+        2099
+      ],
+      "out_xy": [
+        0,
+        2099
+      ],
+      "flags": 0
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Non-Mixer.VocalsNanoFX1Delay (Process)",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        665,
+        1984
+      ],
+      "in_xy": [
+        1562,
+        2125
+      ],
+      "out_xy": [
+        767,
+        1569
+      ],
+      "flags": 68
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Non-Mixer.VocalsNanoFX6Granular (In)",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        1184,
+        2591
+      ],
+      "in_xy": [
+        102,
+        2409
+      ],
+      "out_xy": [
+        102,
+        2314
+      ],
+      "flags": 64
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Non-Mixer.VocalsNanoFX3TrapVerb (Process)",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        361,
+        1895
+      ],
+      "in_xy": [
+        1560,
+        2317
+      ],
+      "out_xy": [
+        746,
+        1687
+      ],
+      "flags": 68
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Non-Mixer.VocalsNanoFX5RingMod (In)",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        1185,
+        2488
+      ],
+      "in_xy": [
+        234,
+        2703
+      ],
+      "out_xy": [
+        234,
+        2608
+      ],
+      "flags": 64
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Non-Mixer.VocalsNanoFX4Disint (In)",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        1203,
+        2393
+      ],
+      "in_xy": [
+        332,
+        2103
+      ],
+      "out_xy": [
+        332,
+        2008
+      ],
+      "flags": 64
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Non-Mixer.VocalsNanoFX2Delay (Process)",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        427,
+        1576
+      ],
+      "in_xy": [
+        1565,
+        2203
+      ],
+      "out_xy": [
+        767,
+        1628
+      ],
+      "flags": 68
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Non-Mixer.VocalsNanoFX4Disint (Process)",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        411,
+        1843
+      ],
+      "in_xy": [
+        1567,
+        2418
+      ],
+      "out_xy": [
+        765,
+        1746
+      ],
+      "flags": 68
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Non-Mixer.VocalsNanoFX7Slice (In)",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        1194,
+        2692
+      ],
+      "in_xy": [
+        332,
+        2219
+      ],
+      "out_xy": [
+        332,
+        2124
+      ],
+      "flags": 64
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Non-Mixer.VocalsNanoFX5RingMod (Process)",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        380,
+        1903
+      ],
+      "in_xy": [
+        1571,
+        2504
+      ],
+      "out_xy": [
+        747,
+        1805
+      ],
+      "flags": 68
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Non-Mixer.VocalsNanoFX7Slice (Process)",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        455,
+        2074
+      ],
+      "in_xy": [
+        1582,
+        2712
+      ],
+      "out_xy": [
+        770,
+        1937
+      ],
+      "flags": 68
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Non-Mixer.VocalsNanoFX6Granular (Process)",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        1238,
+        1585
+      ],
+      "in_xy": [
+        1577,
+        2616
+      ],
+      "out_xy": [
+        753,
+        1876
+      ],
+      "flags": 68
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Non-Mixer.VocalsNanoFX2Delay (In)",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        1205,
+        2203
+      ],
+      "in_xy": [
+        276,
+        2543
+      ],
+      "out_xy": [
+        276,
+        2448
+      ],
+      "flags": 64
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Non-Mixer.VocalsNanoFX3TrapVerb (In)",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        1184,
+        2298
+      ],
+      "in_xy": [
+        278,
+        2381
+      ],
+      "out_xy": [
+        278,
+        2286
+      ],
+      "flags": 64
     }
   ]
 }
