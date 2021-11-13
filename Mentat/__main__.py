@@ -15,7 +15,7 @@ import modules
 for name, mod in getmembers(modules):
     if name[0] != '_' and name != 'raysession' and isinstance(mod, Module):
         engine.add_module(mod)
-engine.add_module(mod.raysession)
+engine.add_module(modules.raysession)
 
 
 # add routes
