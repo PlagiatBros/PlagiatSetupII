@@ -13,8 +13,10 @@ from mentat.module import Module
 from modules import engine
 import modules
 for name, mod in getmembers(modules):
-    if name[0] != '_' and isinstance(mod, Module):
+    if name[0] != '_' and name != 'raysession' and isinstance(mod, Module):
         engine.add_module(mod)
+engine.add_module(mod.raysession)
+
 
 # add routes
 from routes import *

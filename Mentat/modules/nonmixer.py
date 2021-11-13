@@ -44,8 +44,7 @@ class NonMixer(Module):
                         self.submodules[strip_name].add_parameter(parameter_name, parameter_address, 'f', default=args[5])
             else:
 
-                # we're done ! (last messagage: only 1 arg)
+                # only 1 arg: list end
                 self.info('strip list retreived')
-                self.info(self.get_state())
 
             return False

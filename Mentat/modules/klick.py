@@ -6,8 +6,8 @@ class Klick(Module):
 
         Module.__init__(self, *args, **kwargs)
 
-        self.add_parameter('pattern', '/klick/simple/set_pattern', 's')
-        self.add_parameter('tempo', '/klick/simple/set_tempo', 'f')
+        self.add_parameter('pattern', '/klick/simple/set_pattern', 's', default='Xxxx')
+        self.add_parameter('tempo', '/klick/simple/set_tempo', 'f', default=120)
 
     def start(self):
         self.send('/klick/metro/start')

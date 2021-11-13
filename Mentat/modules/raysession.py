@@ -35,14 +35,20 @@ class RaySession(Module):
 
             if self.statuses[name] != status:
                 self.info('%s is %s' % (name, "running" if status else "stopped"))
-                self.statuses[name] = status
                 if not status:
                     # stopped normally
                     pass
                 elif name in self.engine.modules:
                     # started normally
                     module = self.engine.modules[name]
-                    module.load('default')
+                    if self.statuses[name] == -1:
+                        # first start: load default state if any
+                        module.load('default')
+                    else:
+                        # restart: send state
+                        module.send_state()
+                self.statuses[name] = status
+
 
         if address == '/ray/gui/server/message':
             if 'terminated itself' in args[0] or 'terminé de lui-même' in args[0]:

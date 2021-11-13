@@ -6,15 +6,18 @@ class Tapeutape(Module):
 
         super().__init__(*args, **kwargs)
 
-        self.kits = {
+        self.kit_aliases = {
             'trackA': 1
         }
 
+        self.add_parameter('kit', '/control', 'iii', static_args=[1, 0], default=8)
+
+
     def set_kit(self, name):
 
-        if name in self.kits:
+        if name in self.kit_aliases:
 
-            self.send('/control', 1, 0, self.kits[name])
+            self.set('kit', self.kit_aliases[name])
 
         else:
 
