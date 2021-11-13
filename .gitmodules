@@ -5,8 +5,8 @@
 	path = src/loop192
 	url = git@github.com:jean-emmanuel/loop192
 [submodule "src/mentat"]
-	path = src/loop192
-	url = git@github.com:jean-emmanuel/mentat
+	path = src/mentat
+	url = git@github.com:jean-emmanuel/mentat.git
 [submodule "src/seq192"]
 	path = src/seq192
 	url = git@github.com:jean-emmanuel/seq192
