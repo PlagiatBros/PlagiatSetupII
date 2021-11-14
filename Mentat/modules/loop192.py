@@ -1,6 +1,6 @@
 from mentat.module import Module
 
-class SooperLooper(Module):
+class Loop192(Module):
 
     def __init__(self, *args, **kwargs):
 
@@ -10,7 +10,7 @@ class SooperLooper(Module):
         self.add_parameter('tempo', '/set', 'sf', static_args=['tempo'], default=120)
 
     def start(self):
-        pass
+        self.send('/play')
 
     def stop(self):
-        pass
+        self.send('/stop')
