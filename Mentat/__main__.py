@@ -6,7 +6,7 @@ path.insert(0, dirname(__file__) + '/../src/mentat')
 
 # add all modules
 from inspect import getmembers
-from mentat.module import Module
+from mentat import Module
 from modules import engine
 import modules
 for name, mod in getmembers(modules):

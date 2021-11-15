@@ -1,4 +1,4 @@
-from mentat.module import Module
+from mentat import Module
 
 import os
 
@@ -10,51 +10,63 @@ class RaySession(Module):
 
         self.ray_version = "0.12.0"
 
-        self.statuses = {}
+        self.client_statuses = {}
+        self.client_init = []
 
     def initialize(self, *args, **kwargs):
 
         super().initialize(*args, **kwargs)
 
-        self.send('/ray/server/gui_disannounce')
-        self.send('/ray/server/gui_announce', self.ray_version, 0, "", os.getpid(), 0)
-
+        if not self.engine.restarted:
+            self.send('/nsm/server/announce', 'RaySessionMonitor', ':monitor:', '', 1, 1,  os.getpid())
+        else:
+            self.send('/nsm/server/monitor_reset')
 
     def route(self, address, args):
 
-        if address == '/ray/gui/client/status' and len(args) == 2:
-            """
-            name: client_id
-            status: 0 or 1
-            """
-            name = args[0]#.lower()
+        self.info([address, args])
+
+        if address == '/nsm/client/open':
+            self.send('/reply', '/nsm/client/open', '')
+
+        elif address == '/nsm/client/monitor/client_state':
+            name = args[0]
             status = args[1]
+            if status:
+                self.client_started(name)
+            else:
+                self.client_stopped(name)
 
-            if name not in self.statuses:
-                self.statuses[name] = -1
-
-            if self.statuses[name] != status:
-                self.info('%s is %s' % (name, "running" if status else "stopped"))
-                if not status:
-                    # stopped normally
-                    pass
-                elif name in self.engine.modules:
-                    # started normally
-                    module = self.engine.modules[name]
-                    if self.statuses[name] == -1:
-                        # first start: load default state if any
-                        module.load('default')
-                    else:
-                        # restart: send state
-                        module.send_state()
-                self.statuses[name] = status
-
-
-        if address == '/ray/gui/server/message':
-            if 'terminated itself' in args[0] or 'terminé de lui-même' in args[0]:
-                name = args[0].split(':')[0]
+        elif address == '/nsm/client/monitor/client_event':
+            name = args[0]
+            event = args[1]
+            if event == 'client_ready':
+                if name not in self.client_statuses or self.client_statuses[name] == 0:
+                    self.client_started(name)
+            elif event == 'client_stopped_by_server':
+                self.client_stopped(name)
+            elif event == 'client_stopped_by_itself':
+                self.client_stopped(name)
                 self.info('module %s crashed')
                 os.popen('dunstify -u critical -a Mentat -t 0 "%s" "a crashé"' % name)
 
-
         return False
+
+
+    def client_started(self, name):
+
+        self.client_statuses[name] = 1
+
+        if name in self.engine.modules:
+            module = self.engine.modules[name]
+            if name not in self.client_init:
+                # first start: load default state if any
+                module.load('default')
+                self.client_init.append(name)
+            else:
+                # restart: send state
+                module.send_state()
+
+    def client_stopped(self, name):
+
+        self.client_statuses[name] = 0

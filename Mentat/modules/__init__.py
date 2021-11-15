@@ -1,4 +1,4 @@
-from mentat.engine import Engine
+from mentat import Engine
 
 from .raysession import RaySession
 from .transport import Transport
@@ -10,7 +10,7 @@ from .nonmixer import NonMixer
 
 engine = Engine('Mentat', 2001, '/home/plagiat/PlagiatSetup/Mentat')
 
-raysession = RaySession('raysession', 'osc', 2000)
+raysession = RaySession('raysession', 'osc', 16189)
 
 transport = Transport('Transport')
 klick = Klick('Klick', 'osc', 9800)

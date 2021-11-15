@@ -1,5 +1,5 @@
 # import Route base class
-from mentat.route import Route
+from mentat import Route
 
 # import engine & modules objects
 # so that they can be used in the routing

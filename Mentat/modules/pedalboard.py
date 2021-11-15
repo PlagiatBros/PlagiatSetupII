@@ -1,4 +1,4 @@
-from mentat.module import Module
+from mentat import Module
 
 class Pedalboard(Module):
     pass
