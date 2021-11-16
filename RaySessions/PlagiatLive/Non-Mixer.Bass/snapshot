@@ -1,7 +1,7 @@
 {
-	Group 0x7 create :name "Bass"
-	Group 0x23 create :name "BassProcSends"
-	Group 0x24 create :name "BassProcRet"
+	Group 0x7 create :name "Main"
+	Group 0x23 create :name "ProcSends"
+	Group 0x24 create :name "ProcRet"
 	Group 0x79 create :name "In"
 	Group 0x7A create :name "Out"
 	Mixer_Strip 0x1 create :name "BassDry" :width "narrow" :tab "signal" :color 1792906215 :gain_mode 0 :mute_mode 0 :group 0x7 :auto_input "" :manual_connection 0

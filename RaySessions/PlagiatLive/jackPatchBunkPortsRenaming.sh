@@ -5,3 +5,4 @@
 # $3 = nouveau port
 
 sed -i -e "s/$1 ($2)/$1 ($3)/g"  PlagiatLive.patch.xml
+sed -i -e "s/$1 ($2)/$1 ($3)/g"  .ray_canvas.json
