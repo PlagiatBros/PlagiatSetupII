@@ -21,4 +21,4 @@ class Tapeutape(Module):
 
         else:
 
-            self.error('Unknown kit %s' % name)
+            self.logger.error('Unknown kit %s' % name)
