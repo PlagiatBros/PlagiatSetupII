@@ -14,10 +14,6 @@ class NonMixer(Module):
 
         self.signals = {}
 
-    def initialize(self, *args, **kwargs):
-
-        Module.initialize(self, *args, **kwargs)
-
         self.send('/non/hello', self.engine.osc_server.get_url(), '', '', self.engine.name)
         self.send('/signal/list')
 

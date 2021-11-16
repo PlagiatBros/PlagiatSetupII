@@ -6,26 +6,14 @@ class OpenStageControl(Module):
 
         super().__init__(*args, **kwargs)
 
-        self.watch_module('zyntest', '*')
+        self.add_event_callback('parameter_changed', self.parameter_changed)
 
-    def initialize(self, *args, **kwargs):
-
-        super().initialize(*args, **kwargs)
-
-        self.start_scene('init', self.delayed_init, *args, **kwargs)
-
-    def delayed_init(self, *args, **kwargs):
-        # re initialze because watched modules may have new parameters
-        # defined during their init routine
-        self.wait(1, 's')
-        Module.initialize(self, *args, **kwargs)
-
-    def watched_module_changed(self, module_path, name, args):
+    def parameter_changed(self, module_path, name, values):
 
         # send state changes to OSC
         # /module_name param_name value
         address = '/' + '/'.join(module_path)
-        self.send(address, name, *args)
+        self.send(address, name, *values)
 
     def route(self, address, args):
 

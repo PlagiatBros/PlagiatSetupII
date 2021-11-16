@@ -98,11 +98,6 @@ class Zynaddsubfx(Module):
         self.parts = parts
         self.feedback_addresses = {}
 
-
-    def initialize(self, *args, **kwargs):
-
-        super().initialize(*args, **kwargs)
-
         for part in self.parts:
             for param in zyn_parameters:
                 address = '/part%i%s' % (part, param)
