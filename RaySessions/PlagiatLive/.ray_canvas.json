@@ -542,7 +542,7 @@
     },
     {
       "port_types_view": 3,
-      "group_name": "Non-Mixer.BassSynths (BassSynths)",
+      "group_name": "Non-Mixer.BassSynths (Main)",
       "null_zone": "",
       "in_zone": "",
       "out_zone": "",
@@ -551,8 +551,8 @@
         398
       ],
       "in_xy": [
-        -338,
-        378
+        -288,
+        384
       ],
       "out_xy": [
         -372,
@@ -1282,7 +1282,7 @@
     },
     {
       "port_types_view": 3,
-      "group_name": "Non-Mixer.BassSynths (BassSynthsOut)",
+      "group_name": "Non-Mixer.BassSynths (Out)",
       "null_zone": "",
       "in_zone": "",
       "out_zone": "",

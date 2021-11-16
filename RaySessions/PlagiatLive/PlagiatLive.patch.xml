@@ -120,10 +120,10 @@
  <connection to="Non-Mixer.Outputs (Outputs):BassSynths/in-1" from="sooperlooper:loop2_out_1"/>
  <connection to="Non-Mixer.MonitorsNano (MonitorsNano):BassSynths/in-1" from="sooperlooper:loop2_out_1"/>
  <connection to="Non-Mixer.MonitorsKesch (MonitorsKesch):BassSynths/in-1" from="sooperlooper:loop2_out_1"/>
- <connection to="sooperlooper:loop2_in_1" from="Non-Mixer.BassSynths (BassSynthsOut):BassSynthsOut/out-1"/>
- <connection to="Non-Mixer.BassSynths (BassSynthsOut):BassSynthsOut/in-1" from="Non-Mixer.BassSynths (BassSynths):BassTrapSynth/out-1"/>
- <connection to="Non-Mixer.BassSynths (BassSynthsOut):BassSynthsOut/in-1" from="Non-Mixer.BassSynths (BassSynths):BassBarkline/out-1"/>
- <connection to="Non-Mixer.BassSynths (BassSynthsOut):BassSynthsOut/in-1" from="Non-Mixer.BassSynths (BassSynths):BassDubstep/out-1"/>
+ <connection to="sooperlooper:loop2_in_1" from="Non-Mixer.BassSynths (Out):BassSynthsOut/out-1"/>
+ <connection to="Non-Mixer.BassSynths (Out):BassSynthsOut/in-1" from="Non-Mixer.BassSynths (Main):BassTrapSynth/out-1"/>
+ <connection to="Non-Mixer.BassSynths (Out):BassSynthsOut/in-1" from="Non-Mixer.BassSynths (Main):BassBarkline/out-1"/>
+ <connection to="Non-Mixer.BassSynths (Out):BassSynthsOut/in-1" from="Non-Mixer.BassSynths (Main):BassDubstep/out-1"/>
  <connection to="Non-Mixer.Synths (SynthsOut):SynthsOut/in-1" from="Non-Mixer.Synths (Synths):Dre/out-1"/>
  <connection to="Non-Mixer.Synths (SynthsOut):SynthsOut/in-1" from="Non-Mixer.Synths (Synths):Trap/out-1"/>
  <connection to="Non-Mixer.Synths (SynthsOut):SynthsOut/in-1" from="Non-Mixer.Synths (Synths):Stambul/out-1"/>
