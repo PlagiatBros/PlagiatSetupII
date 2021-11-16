@@ -2042,7 +2042,7 @@
     },
     {
       "port_types_view": 3,
-      "group_name": "Non-Mixer.SamplesFX1Delay (SamplesFX1DelayPre)",
+      "group_name": "Non-Mixer.SamplesFX1Delay (In)",
       "null_zone": "",
       "in_zone": "",
       "out_zone": "",
@@ -2162,7 +2162,7 @@
     },
     {
       "port_types_view": 3,
-      "group_name": "Non-Mixer.SamplesFX1Delay (SamplesFX1DelayPost)",
+      "group_name": "Non-Mixer.SamplesFX1Delay (Process)",
       "null_zone": "",
       "in_zone": "",
       "out_zone": "",
@@ -2182,7 +2182,7 @@
     },
     {
       "port_types_view": 3,
-      "group_name": "Non-Mixer.SamplesFX2Delay (SamplesFX2DelayPre)",
+      "group_name": "Non-Mixer.SamplesFX2Delay (In)",
       "null_zone": "",
       "in_zone": "",
       "out_zone": "",
@@ -2202,7 +2202,7 @@
     },
     {
       "port_types_view": 3,
-      "group_name": "Non-Mixer.SamplesFX2Delay (SamplesFX2DelayPost)",
+      "group_name": "Non-Mixer.SamplesFX2Delay (Out)",
       "null_zone": "",
       "in_zone": "",
       "out_zone": "",
