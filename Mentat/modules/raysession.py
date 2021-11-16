@@ -13,10 +13,6 @@ class RaySession(Module):
         self.client_statuses = {}
         self.client_init = []
 
-    def initialize(self, *args, **kwargs):
-
-        super().initialize(*args, **kwargs)
-
         if not self.engine.restarted:
             self.send('/nsm/server/announce', 'RaySessionMonitor', ':monitor:', '', 1, 1,  os.getpid())
         else:
