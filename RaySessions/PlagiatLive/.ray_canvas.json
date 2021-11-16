@@ -2202,7 +2202,7 @@
     },
     {
       "port_types_view": 3,
-      "group_name": "Non-Mixer.SamplesFX2Delay (Out)",
+      "group_name": "Non-Mixer.SamplesFX2Delay (Process)",
       "null_zone": "",
       "in_zone": "",
       "out_zone": "",
@@ -2222,7 +2222,7 @@
     },
     {
       "port_types_view": 3,
-      "group_name": "Non-Mixer.SamplesFX3Reverb (SamplesFX3ReverbPre)",
+      "group_name": "Non-Mixer.SamplesFX3Reverb (In)",
       "null_zone": "",
       "in_zone": "",
       "out_zone": "",
@@ -2282,7 +2282,7 @@
     },
     {
       "port_types_view": 3,
-      "group_name": "Non-Mixer.SamplesFX3Reverb (SamplesFX3ReverbPost)",
+      "group_name": "Non-Mixer.SamplesFX3Reverb (Process)",
       "null_zone": "",
       "in_zone": "",
       "out_zone": "",
