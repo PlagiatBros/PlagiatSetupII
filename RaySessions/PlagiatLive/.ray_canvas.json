@@ -472,7 +472,7 @@
       ],
       "in_xy": [
         955,
-        178
+        180
       ],
       "out_xy": [
         424,
@@ -551,8 +551,8 @@
         398
       ],
       "in_xy": [
-        -263,
-        384
+        -556,
+        883
       ],
       "out_xy": [
         -372,
@@ -571,8 +571,8 @@
         187
       ],
       "in_xy": [
-        -456,
-        146
+        -839,
+        258
       ],
       "out_xy": [
         120,
@@ -1035,7 +1035,7 @@
         -246
       ],
       "out_xy": [
-        610,
+        658,
         62
       ],
       "flags": 100
@@ -1511,8 +1511,8 @@
         134
       ],
       "in_xy": [
-        456,
-        459
+        470,
+        448
       ],
       "out_xy": [
         3,
@@ -1736,7 +1736,7 @@
       ],
       "out_xy": [
         290,
-        392
+        448
       ],
       "flags": 68
     },
@@ -3367,8 +3367,8 @@
       "in_zone": "",
       "out_zone": "",
       "null_xy": [
-        -674,
-        67
+        -1062,
+        60
       ],
       "in_xy": [
         400,
@@ -3382,7 +3382,7 @@
     },
     {
       "port_types_view": 3,
-      "group_name": "ZynAddSubFX.HiSynths",
+      "group_name": "ZynAddSubFX.ZHiSynths",
       "null_zone": "",
       "in_zone": "",
       "out_zone": "",
@@ -3407,8 +3407,88 @@
       "in_zone": "",
       "out_zone": "",
       "null_xy": [
-        787,
-        83
+        -653,
+        609
+      ],
+      "in_xy": [
+        400,
+        2803
+      ],
+      "out_xy": [
+        0,
+        2803
+      ],
+      "flags": 0
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "zynaddsubfx-01",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        -857,
+        503
+      ],
+      "in_xy": [
+        400,
+        2803
+      ],
+      "out_xy": [
+        0,
+        2803
+      ],
+      "flags": 0
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "ZynAddSubFX.ZLowSynths",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        523,
+        -162
+      ],
+      "in_xy": [
+        400,
+        2803
+      ],
+      "out_xy": [
+        0,
+        2803
+      ],
+      "flags": 0
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "zynaddsubfx-02",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        270,
+        -221
+      ],
+      "in_xy": [
+        400,
+        2803
+      ],
+      "out_xy": [
+        0,
+        2803
+      ],
+      "flags": 0
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "ZynAddSubFX",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        270,
+        -221
       ],
       "in_xy": [
         400,

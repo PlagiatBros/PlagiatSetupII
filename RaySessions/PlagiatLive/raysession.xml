@@ -28,7 +28,8 @@
   <client desktop_file="//not_found" launched="1" name="Non-Mixer" label="Vocals Nano FX7 Slice [NM] 10057" prefix_mode="1" icon="non-mixer" id="VocalsNanoFX7Slice" from_nsm_file="1" executable="non-mixer" arguments="--osc-port 10057" gui_visible="0"/>
   <client desktop_file="//not_found" launched="1" name="Non-Mixer" label="Vocals Kesch [NM] 10060" prefix_mode="1" icon="non-mixer" id="VocalsKesch" from_nsm_file="1" executable="non-mixer" arguments="--osc-port 10060" gui_visible="0"/>
   <client desktop_file="//not_found" launched="1" name="SooperLooper" label="AudioLooper [SL] 9900" prefix_mode="1" unignored_extensions=" .wav" icon="sooperlooper" id="AudioLooper" from_nsm_file="1" executable="sooperlooper_nsm" arguments=" -p 9900" gui_visible="0"/>
-  <client desktop_file="//not_found" launched="1" name="ZynAddSubFX" label="Hi Synths [NM] 9830" prefix_mode="1" icon="zynaddsubfx" id="HiSynths" from_nsm_file="1" executable="zynaddsubfx" arguments=" -b 128 -O JACK-MULTI -P 9830"/>
+  <client desktop_file="//not_found" launched="1" name="ZynAddSubFX" label="Hi Synths [NM] 9830" prefix_mode="1" icon="zynaddsubfx" id="ZHiSynths" from_nsm_file="1" executable="zynaddsubfx" arguments=" -b 128 -O JACK-MULTI -P 9830"/>
+  <client desktop_file="//not_found" launched="1" name="ZynAddSubFX" label="Low Synths [Zyn] 9820" prefix_mode="1" icon="zynaddsubfx" id="ZLowSynths" from_nsm_file="1" executable="zynaddsubfx" arguments="-b 128 -O JACK-MULTI -P 9820"/>
  </Clients>
  <RemovedClients/>
  <Windows/>
