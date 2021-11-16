@@ -321,4 +321,17 @@
  <connection from="Non-Mixer.Drums (Main):OH/out-1" to="Non-Mixer.MonitorsNano (MonitorsNano):OH/in-1"/>
  <connection from="Non-Mixer.Drums (Main):Kick/out-1" to="Non-Mixer.MonitorsKesch (MonitorsKesch):Kick/in-1"/>
  <connection from="Non-Mixer.Drums (Main):OH/out-1" to="Non-Mixer.MonitorsKesch (MonitorsKesch):OH/in-1"/>
+ <connection from="zynaddsubfx:part0/out-L" to="Non-Mixer.Synths (Main):Dupieux/in-1"/>
+ <connection from="zynaddsubfx:part1/out-L" to="Non-Mixer.Synths (Main):NotSoRhodes/in-1"/>
+ <connection from="zynaddsubfx:part3/out-L" to="Non-Mixer.Synths (Main):Organ/in-1"/>
+ <connection from="zynaddsubfx:part4/out-L" to="Non-Mixer.Synths (Main):Organ/in-1"/>
+ <connection from="zynaddsubfx:part5/out-L" to="Non-Mixer.Synths (Main):Dupieux/in-1"/>
+ <connection from="zynaddsubfx:part6/out-L" to="Non-Mixer.Synths (Main):Bombarde/in-1"/>
+ <connection from="zynaddsubfx:part7/out-L" to="Non-Mixer.Synths (Main):Trumpets/in-1"/>
+ <connection from="zynaddsubfx:part8/out-L" to="Non-Mixer.Synths (Main):Trumpets/in-1"/>
+ <connection from="zynaddsubfx:part9/out-L" to="Non-Mixer.Synths (Main):Trumpets/in-1"/>
+ <connection from="zynaddsubfx:part10/out-L" to="Non-Mixer.Synths (Main):Stambul/in-1"/>
+ <connection from="zynaddsubfx:part11/out-L" to="Non-Mixer.Synths (Main):Dre/in-1"/>
+ <connection from="zynaddsubfx-01:part4/out-L" to="netjack:playback_1"/>
+ <connection from="zynaddsubfx-01:part4/out-R" to="netjack:playback_2"/>
 </RAY-JACKPATCH>
