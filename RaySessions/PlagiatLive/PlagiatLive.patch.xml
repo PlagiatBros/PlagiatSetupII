@@ -89,26 +89,26 @@
  <connection from="Non-Mixer.Outputs (Outputs):VocalsNano/out-2" to="Non-Mixer.Outputs (Outputs):FOH/in-2"/>
  <connection from="Non-Mixer.Outputs (Outputs):VocalsKesch/out-1" to="Non-Mixer.Outputs (Outputs):FOH/in-1"/>
  <connection from="Non-Mixer.Outputs (Outputs):VocalsKesch/out-2" to="Non-Mixer.Outputs (Outputs):FOH/in-2"/>
- <connection from="Non-Mixer.Bass (ProcSends):BassScapePre/out-1" to="Non-Mixer.Bass (ProcRet):BassScapePost/in-1"/>
- <connection from="Non-Mixer.Bass (ProcSends):BassDegradePre/out-1" to="Non-Mixer.Bass (ProcRet):BassDegradePost/in-1"/>
- <connection from="Non-Mixer.Bass (ProcSends):BassWobblePre/out-1" to="Non-Mixer.Bass (ProcRet):BassWobblePost/in-1"/>
- <connection from="Non-Mixer.Bass (ProcSends):BassDistoHiPre/out-1" to="Non-Mixer.Bass (ProcRet):BassDistoHiPost/in-1"/>
- <connection from="Non-Mixer.Bass (ProcSends):BassZynWahPre/out-1" to="Non-Mixer.Bass (ProcRet):BassZynWahPost/in-1"/>
+ <connection from="Non-Mixer.BassFX (In):BassScapeIn/out-1" to="Non-Mixer.BassFX (Process):BassScape/in-1"/>
+ <connection from="Non-Mixer.BassFX (In):BassDegradeIn/out-1" to="Non-Mixer.BassFX (Process):BassDegrade/in-1"/>
+ <connection from="Non-Mixer.BassFX (In):BassWobbleIn/out-1" to="Non-Mixer.BassFX (Process):BassWobble/in-1"/>
+ <connection from="Non-Mixer.BassFX (In):BassDistoHiIn/out-1" to="Non-Mixer.BassFX (Process):BassDistoHi/in-1"/>
+ <connection from="Non-Mixer.BassFX (In):BassZynWahIn/out-1" to="Non-Mixer.BassFX (Process):BassZynWah/in-1"/>
  <connection from="Non-Mixer.Inputs (Inputs):Bass/out-1" to="sooperlooper:loop0_in_1"/>
  <connection from="Non-Mixer.Bass (In):BassIn/out-1" to="Non-Mixer.Bass (Main):BassDry/in-1"/>
  <connection from="Non-Mixer.Bass (In):BassIn/out-1" to="Non-Mixer.Bass (Main):BassSub/in-1"/>
- <connection from="Non-Mixer.Bass (In):BassIn/out-1" to="Non-Mixer.Bass (ProcSends):BassScapePre/in-1"/>
- <connection from="Non-Mixer.Bass (In):BassIn/out-1" to="Non-Mixer.Bass (ProcSends):BassDegradePre/in-1"/>
- <connection from="Non-Mixer.Bass (In):BassIn/out-1" to="Non-Mixer.Bass (ProcSends):BassWobblePre/in-1"/>
- <connection from="Non-Mixer.Bass (In):BassIn/out-1" to="Non-Mixer.Bass (ProcSends):BassDistoHiPre/in-1"/>
- <connection from="Non-Mixer.Bass (In):BassIn/out-1" to="Non-Mixer.Bass (ProcSends):BassZynWahPre/in-1"/>
+ <connection from="Non-Mixer.Bass (In):BassIn/out-1" to="Non-Mixer.BassFX (In):BassScapeIn/in-1"/>
+ <connection from="Non-Mixer.Bass (In):BassIn/out-1" to="Non-Mixer.BassFX (In):BassDegradeIn/in-1"/>
+ <connection from="Non-Mixer.Bass (In):BassIn/out-1" to="Non-Mixer.BassFX (In):BassWobbleIn/in-1"/>
+ <connection from="Non-Mixer.Bass (In):BassIn/out-1" to="Non-Mixer.BassFX (In):BassDistoHiIn/in-1"/>
+ <connection from="Non-Mixer.Bass (In):BassIn/out-1" to="Non-Mixer.BassFX (In):BassZynWahIn/in-1"/>
  <connection from="Non-Mixer.Bass (Main):BassDry/out-1" to="Non-Mixer.Bass (Out):BassOut/in-1"/>
  <connection from="Non-Mixer.Bass (Main):BassSub/out-1" to="Non-Mixer.Bass (Out):BassOut/in-1"/>
- <connection from="Non-Mixer.Bass (ProcRet):BassScapePost/out-1" to="Non-Mixer.Bass (Out):BassOut/in-1"/>
- <connection from="Non-Mixer.Bass (ProcRet):BassDegradePost/out-1" to="Non-Mixer.Bass (Out):BassOut/in-1"/>
- <connection from="Non-Mixer.Bass (ProcRet):BassWobblePost/out-1" to="Non-Mixer.Bass (Out):BassOut/in-1"/>
- <connection from="Non-Mixer.Bass (ProcRet):BassDistoHiPost/out-1" to="Non-Mixer.Bass (Out):BassOut/in-1"/>
- <connection from="Non-Mixer.Bass (ProcRet):BassZynWahPost/out-1" to="Non-Mixer.Bass (Out):BassOut/in-1"/>
+ <connection from="Non-Mixer.BassFX (Process):BassScape/out-1" to="Non-Mixer.Bass (Out):BassOut/in-1"/>
+ <connection from="Non-Mixer.BassFX (Process):BassDegrade/out-1" to="Non-Mixer.Bass (Out):BassOut/in-1"/>
+ <connection from="Non-Mixer.BassFX (Process):BassWobble/out-1" to="Non-Mixer.Bass (Out):BassOut/in-1"/>
+ <connection from="Non-Mixer.BassFX (Process):BassDistoHi/out-1" to="Non-Mixer.Bass (Out):BassOut/in-1"/>
+ <connection from="Non-Mixer.BassFX (Process):BassZynWah/out-1" to="Non-Mixer.Bass (Out):BassOut/in-1"/>
  <connection from="Non-Mixer.Bass (Out):BassOut/out-1" to="sooperlooper:loop1_in_1"/>
  <connection from="sooperlooper:loop1_out_1" to="Non-Mixer.Outputs (Outputs):Bass/in-1"/>
  <connection from="Non-Mixer.Inputs (Inputs):VocalsNano/out-1" to="sooperlooper:loop4_in_1"/>
