@@ -471,8 +471,8 @@
         -150
       ],
       "in_xy": [
-        767,
-        226
+        906,
+        158
       ],
       "out_xy": [
         424,
@@ -491,8 +491,8 @@
         -295
       ],
       "in_xy": [
-        711,
-        484
+        779,
+        459
       ],
       "out_xy": [
         464,
@@ -1031,8 +1031,8 @@
         -299
       ],
       "in_xy": [
-        773,
-        -383
+        950,
+        -246
       ],
       "out_xy": [
         590,
@@ -2716,7 +2716,7 @@
       ],
       "out_xy": [
         270,
-        -209
+        -188
       ],
       "flags": 68
     },
@@ -3297,6 +3297,66 @@
       "out_xy": [
         -297,
         -51
+      ],
+      "flags": 68
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Non-Mixer.Drums/Unnamed",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        610,
+        -277
+      ],
+      "in_xy": [
+        400,
+        2803
+      ],
+      "out_xy": [
+        0,
+        2803
+      ],
+      "flags": 0
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Non-Mixer.Drums/Unnamed.1",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        610,
+        -212
+      ],
+      "in_xy": [
+        400,
+        2803
+      ],
+      "out_xy": [
+        0,
+        2803
+      ],
+      "flags": 0
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Non-Mixer.Drums (Main)",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        344,
+        -307
+      ],
+      "in_xy": [
+        307,
+        -342
+      ],
+      "out_xy": [
+        523,
+        -245
       ],
       "flags": 68
     }

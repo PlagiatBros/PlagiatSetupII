@@ -314,4 +314,11 @@
  <connection from="Non-Mixer.VocalsNano (Normo):NanoNormo/aux-D/out-1" to="Non-Mixer.VocalsNanoFX7Slice (In):NanoNormo/in-1"/>
  <connection from="Non-Mixer.VocalsNano (Gars):NanoGars/aux-C/out-1" to="Non-Mixer.VocalsNanoFX7Slice (In):NanoGars/in-1"/>
  <connection from="Non-Mixer.VocalsNano (Gars):NanoGars/aux-D/out-1" to="Non-Mixer.VocalsNanoFX7Slice (In):NanoGars/in-1"/>
+ <connection from="Non-Mixer.Drums (Main):Kick/out-1" to="Non-Mixer.Outputs (Outputs):Kick/in-1"/>
+ <connection from="Non-Mixer.Inputs (Inputs):Kick/out-1" to="Non-Mixer.Drums (Main):Kick/in-1"/>
+ <connection from="Non-Mixer.Inputs (Inputs):OH/out-1" to="Non-Mixer.Drums (Main):OH/in-1"/>
+ <connection from="Non-Mixer.Drums (Main):Kick/out-1" to="Non-Mixer.MonitorsNano (MonitorsNano):Kick/in-1"/>
+ <connection from="Non-Mixer.Drums (Main):OH/out-1" to="Non-Mixer.MonitorsNano (MonitorsNano):OH/in-1"/>
+ <connection from="Non-Mixer.Drums (Main):Kick/out-1" to="Non-Mixer.MonitorsKesch (MonitorsKesch):Kick/in-1"/>
+ <connection from="Non-Mixer.Drums (Main):OH/out-1" to="Non-Mixer.MonitorsKesch (MonitorsKesch):OH/in-1"/>
 </RAY-JACKPATCH>
