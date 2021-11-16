@@ -2242,7 +2242,7 @@
     },
     {
       "port_types_view": 3,
-      "group_name": "Non-Mixer.SamplesFX4Autofilter (SamplesFX4AutofilterPre)",
+      "group_name": "Non-Mixer.SamplesFX4Autofilter (In)",
       "null_zone": "",
       "in_zone": "",
       "out_zone": "",
@@ -2262,7 +2262,7 @@
     },
     {
       "port_types_view": 3,
-      "group_name": "Non-Mixer.SamplesWork (SamplesWorkPre)",
+      "group_name": "Non-Mixer.SamplesWork (In)",
       "null_zone": "",
       "in_zone": "",
       "out_zone": "",
@@ -2302,7 +2302,7 @@
     },
     {
       "port_types_view": 3,
-      "group_name": "Non-Mixer.SamplesFX4Autofilter (SamplesFX4AutofilterPost)",
+      "group_name": "Non-Mixer.SamplesFX4Autofilter (Process)",
       "null_zone": "",
       "in_zone": "",
       "out_zone": "",
@@ -2322,7 +2322,7 @@
     },
     {
       "port_types_view": 3,
-      "group_name": "Non-Mixer.SamplesWork (SamplesWorkPost)",
+      "group_name": "Non-Mixer.SamplesWork (Process)",
       "null_zone": "",
       "in_zone": "",
       "out_zone": "",
