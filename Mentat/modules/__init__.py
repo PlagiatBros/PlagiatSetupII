@@ -1,16 +1,20 @@
 from mentat import Engine
 
 from .raysession import RaySession
+from .openstagecontrol import OpenStageControl
 from .transport import Transport
 from .klick import Klick
 from .sooperlooper import SooperLooper
 from .loop192 import Loop192
 from .seq192 import Seq192
 from .nonmixer import NonMixer
+from .zynaddsubfx import Zynaddsubfx
 
 engine = Engine('Mentat', 2001, '/home/plagiat/PlagiatSetup/Mentat')
 
-raysession = RaySession('raysession', 'osc', 16189)
+raysession = RaySession('raysession', 'osc', 2000)
+
+openstagecontrol = OpenStageControl('OpenStageControl', 'osc', 3000)
 
 transport = Transport('Transport')
 klick = Klick('Klick', 'osc', 9800)
@@ -35,3 +39,6 @@ samplesFX3Reverb = NonMixer('SamplesFX3Reverb', 'osc', 10043)
 samplesFX4Autofilter = NonMixer('SamplesFX4Autofilter', 'osc', 10044)
 vocalsNano = NonMixer('VocalsNano', 'osc', 10050)
 vocalsKesch = NonMixer('VocalsKesch', 'osc', 10060)
+
+
+zynadd = Zynaddsubfx('zyntest', 'osc', 12001, parts=[0])
