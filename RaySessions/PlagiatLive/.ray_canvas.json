@@ -582,7 +582,7 @@
     },
     {
       "port_types_view": 3,
-      "group_name": "Non-Mixer.Samples (Samples)",
+      "group_name": "Non-Mixer.Samples (Main)",
       "null_zone": "",
       "in_zone": "",
       "out_zone": "",
@@ -1722,7 +1722,7 @@
     },
     {
       "port_types_view": 3,
-      "group_name": "Non-Mixer.Samples (SamplesOut)",
+      "group_name": "Non-Mixer.Samples (Out)",
       "null_zone": "",
       "in_zone": "",
       "out_zone": "",

@@ -138,29 +138,29 @@
  <connection to="Non-Mixer.Outputs (Outputs):Synths/in-1" from="sooperlooper:loop3_out_1"/>
  <connection to="Non-Mixer.MonitorsNano (MonitorsNano):Synths/in-1" from="sooperlooper:loop3_out_1"/>
  <connection to="Non-Mixer.MonitorsKesch (MonitorsKesch):Synths/in-1" from="sooperlooper:loop3_out_1"/>
- <connection to="Non-Mixer.Samples (SamplesOut):SamplesOut/in-1" from="Non-Mixer.Samples (Samples):Samples1/out-1"/>
- <connection to="Non-Mixer.Samples (SamplesOut):SamplesOut/in-1" from="Non-Mixer.Samples (Samples):Samples2/out-1"/>
- <connection to="Non-Mixer.Samples (SamplesOut):SamplesOut/in-1" from="Non-Mixer.Samples (Samples):Samples3/out-1"/>
- <connection to="Non-Mixer.Samples (SamplesOut):SamplesOut/in-1" from="Non-Mixer.Samples (Samples):Samples4/out-1"/>
- <connection to="Non-Mixer.Samples (SamplesOut):SamplesOut/in-1" from="Non-Mixer.Samples (Samples):Samples5/out-1"/>
- <connection to="Non-Mixer.MonitorsNano (MonitorsNano):Samples/in-1" from="Non-Mixer.Samples (SamplesOut):SamplesOut/out-1"/>
- <connection to="Non-Mixer.MonitorsKesch (MonitorsKesch):Samples/in-1" from="Non-Mixer.Samples (SamplesOut):SamplesOut/out-1"/>
- <connection to="Non-Mixer.Outputs (Outputs):Samples/in-1" from="Non-Mixer.Samples (SamplesOut):SamplesOut/out-1"/>
+ <connection to="Non-Mixer.Samples (Out):SamplesOut/in-1" from="Non-Mixer.Samples (Main):Samples1/out-1"/>
+ <connection to="Non-Mixer.Samples (Out):SamplesOut/in-1" from="Non-Mixer.Samples (Main):Samples2/out-1"/>
+ <connection to="Non-Mixer.Samples (Out):SamplesOut/in-1" from="Non-Mixer.Samples (Main):Samples3/out-1"/>
+ <connection to="Non-Mixer.Samples (Out):SamplesOut/in-1" from="Non-Mixer.Samples (Main):Samples4/out-1"/>
+ <connection to="Non-Mixer.Samples (Out):SamplesOut/in-1" from="Non-Mixer.Samples (Main):Samples5/out-1"/>
+ <connection to="Non-Mixer.MonitorsNano (MonitorsNano):Samples/in-1" from="Non-Mixer.Samples (Out):SamplesOut/out-1"/>
+ <connection to="Non-Mixer.MonitorsKesch (MonitorsKesch):Samples/in-1" from="Non-Mixer.Samples (Out):SamplesOut/out-1"/>
+ <connection to="Non-Mixer.Outputs (Outputs):Samples/in-1" from="Non-Mixer.Samples (Out):SamplesOut/out-1"/>
  <connection to="Non-Mixer.SamplesFX1Delay (SamplesFX1DelayPost):SamplesFX1Delay/in-1" from="Non-Mixer.SamplesFX1Delay (SamplesFX1DelayPre):Samples1/out-1"/>
  <connection to="Non-Mixer.SamplesFX1Delay (SamplesFX1DelayPost):SamplesFX1Delay/in-1" from="Non-Mixer.SamplesFX1Delay (SamplesFX1DelayPre):Samples2/out-1"/>
  <connection to="Non-Mixer.SamplesFX1Delay (SamplesFX1DelayPost):SamplesFX1Delay/in-1" from="Non-Mixer.SamplesFX1Delay (SamplesFX1DelayPre):Samples3/out-1"/>
  <connection to="Non-Mixer.SamplesFX1Delay (SamplesFX1DelayPost):SamplesFX1Delay/in-1" from="Non-Mixer.SamplesFX1Delay (SamplesFX1DelayPre):Samples4/out-1"/>
  <connection to="Non-Mixer.SamplesFX1Delay (SamplesFX1DelayPost):SamplesFX1Delay/in-1" from="Non-Mixer.SamplesFX1Delay (SamplesFX1DelayPre):Samples5/out-1"/>
- <connection to="Non-Mixer.SamplesFX1Delay (SamplesFX1DelayPre):Samples1/in-1" from="Non-Mixer.Samples (Samples):Samples1/out-1"/>
- <connection to="Non-Mixer.SamplesFX1Delay (SamplesFX1DelayPre):Samples2/in-1" from="Non-Mixer.Samples (Samples):Samples2/out-1"/>
- <connection to="Non-Mixer.SamplesFX1Delay (SamplesFX1DelayPre):Samples3/in-1" from="Non-Mixer.Samples (Samples):Samples3/out-1"/>
- <connection to="Non-Mixer.SamplesFX1Delay (SamplesFX1DelayPre):Samples4/in-1" from="Non-Mixer.Samples (Samples):Samples4/out-1"/>
- <connection to="Non-Mixer.SamplesFX1Delay (SamplesFX1DelayPre):Samples5/in-1" from="Non-Mixer.Samples (Samples):Samples5/out-1"/>
- <connection to="Non-Mixer.Samples (SamplesOut):SamplesOut/in-1" from="Non-Mixer.SamplesFX1Delay (SamplesFX1DelayPost):SamplesFX1Delay/out-1"/>
- <connection to="Non-Mixer.Samples (SamplesOut):SamplesOut/in-1" from="Non-Mixer.SamplesFX2Delay (SamplesFX2DelayPost):SamplesFX2Delay/out-1"/>
- <connection to="Non-Mixer.Samples (SamplesOut):SamplesOut/in-1" from="Non-Mixer.SamplesFX3Reverb (SamplesFX3ReverbPost):SamplesFX3Reverb/out-1"/>
- <connection to="Non-Mixer.Samples (SamplesOut):SamplesOut/in-1" from="Non-Mixer.SamplesFX4Autofilter (SamplesFX4AutofilterPost):SamplesFX4Autofilter/out-1"/>
- <connection to="Non-Mixer.Samples (SamplesOut):SamplesOut/in-1" from="Non-Mixer.SamplesWork (SamplesWorkPost):SamplesWork/out-1"/>
+ <connection to="Non-Mixer.SamplesFX1Delay (SamplesFX1DelayPre):Samples1/in-1" from="Non-Mixer.Samples (Main):Samples1/out-1"/>
+ <connection to="Non-Mixer.SamplesFX1Delay (SamplesFX1DelayPre):Samples2/in-1" from="Non-Mixer.Samples (Main):Samples2/out-1"/>
+ <connection to="Non-Mixer.SamplesFX1Delay (SamplesFX1DelayPre):Samples3/in-1" from="Non-Mixer.Samples (Main):Samples3/out-1"/>
+ <connection to="Non-Mixer.SamplesFX1Delay (SamplesFX1DelayPre):Samples4/in-1" from="Non-Mixer.Samples (Main):Samples4/out-1"/>
+ <connection to="Non-Mixer.SamplesFX1Delay (SamplesFX1DelayPre):Samples5/in-1" from="Non-Mixer.Samples (Main):Samples5/out-1"/>
+ <connection to="Non-Mixer.Samples (Out):SamplesOut/in-1" from="Non-Mixer.SamplesFX1Delay (SamplesFX1DelayPost):SamplesFX1Delay/out-1"/>
+ <connection to="Non-Mixer.Samples (Out):SamplesOut/in-1" from="Non-Mixer.SamplesFX2Delay (SamplesFX2DelayPost):SamplesFX2Delay/out-1"/>
+ <connection to="Non-Mixer.Samples (Out):SamplesOut/in-1" from="Non-Mixer.SamplesFX3Reverb (SamplesFX3ReverbPost):SamplesFX3Reverb/out-1"/>
+ <connection to="Non-Mixer.Samples (Out):SamplesOut/in-1" from="Non-Mixer.SamplesFX4Autofilter (SamplesFX4AutofilterPost):SamplesFX4Autofilter/out-1"/>
+ <connection to="Non-Mixer.Samples (Out):SamplesOut/in-1" from="Non-Mixer.SamplesWork (SamplesWorkPost):SamplesWork/out-1"/>
  <connection to="Non-Mixer.SamplesWork (SamplesWorkPost):SamplesWork/in-1" from="Non-Mixer.SamplesWork (SamplesWorkPre):Samples1/out-1"/>
  <connection to="Non-Mixer.SamplesWork (SamplesWorkPost):SamplesWork/in-1" from="Non-Mixer.SamplesWork (SamplesWorkPre):Samples2/out-1"/>
  <connection to="Non-Mixer.SamplesWork (SamplesWorkPost):SamplesWork/in-1" from="Non-Mixer.SamplesWork (SamplesWorkPre):Samples5/out-1"/>
@@ -181,25 +181,25 @@
  <connection to="Non-Mixer.SamplesFX2Delay (SamplesFX2DelayPost):SamplesFX2Delay/in-1" from="Non-Mixer.SamplesFX2Delay (SamplesFX2DelayPre):Samples3/out-1"/>
  <connection to="Non-Mixer.SamplesFX2Delay (SamplesFX2DelayPost):SamplesFX2Delay/in-1" from="Non-Mixer.SamplesFX2Delay (SamplesFX2DelayPre):Samples4/out-1"/>
  <connection to="Non-Mixer.SamplesFX2Delay (SamplesFX2DelayPost):SamplesFX2Delay/in-1" from="Non-Mixer.SamplesFX2Delay (SamplesFX2DelayPre):Samples5/out-1"/>
- <connection to="Non-Mixer.SamplesFX2Delay (SamplesFX2DelayPre):Samples1/in-1" from="Non-Mixer.Samples (Samples):Samples1/out-1"/>
- <connection to="Non-Mixer.SamplesFX2Delay (SamplesFX2DelayPre):Samples2/in-1" from="Non-Mixer.Samples (Samples):Samples2/out-1"/>
- <connection to="Non-Mixer.SamplesFX2Delay (SamplesFX2DelayPre):Samples3/in-1" from="Non-Mixer.Samples (Samples):Samples3/out-1"/>
- <connection to="Non-Mixer.SamplesFX2Delay (SamplesFX2DelayPre):Samples4/in-1" from="Non-Mixer.Samples (Samples):Samples4/out-1"/>
- <connection to="Non-Mixer.SamplesFX2Delay (SamplesFX2DelayPre):Samples5/in-1" from="Non-Mixer.Samples (Samples):Samples5/out-1"/>
- <connection to="Non-Mixer.SamplesFX3Reverb (SamplesFX3ReverbPre):Samples1/in-1" from="Non-Mixer.Samples (Samples):Samples1/out-1"/>
- <connection to="Non-Mixer.SamplesFX3Reverb (SamplesFX3ReverbPre):Samples2/in-1" from="Non-Mixer.Samples (Samples):Samples2/out-1"/>
- <connection to="Non-Mixer.SamplesFX3Reverb (SamplesFX3ReverbPre):Samples3/in-1" from="Non-Mixer.Samples (Samples):Samples3/out-1"/>
- <connection to="Non-Mixer.SamplesFX3Reverb (SamplesFX3ReverbPre):Samples4/in-1" from="Non-Mixer.Samples (Samples):Samples4/out-1"/>
- <connection to="Non-Mixer.SamplesFX3Reverb (SamplesFX3ReverbPre):Samples5/in-1" from="Non-Mixer.Samples (Samples):Samples5/out-1"/>
- <connection to="Non-Mixer.SamplesFX4Autofilter (SamplesFX4AutofilterPre):Samples1/in-1" from="Non-Mixer.Samples (Samples):Samples1/out-1"/>
- <connection to="Non-Mixer.SamplesFX4Autofilter (SamplesFX4AutofilterPre):Samples2/in-1" from="Non-Mixer.Samples (Samples):Samples2/out-1"/>
- <connection to="Non-Mixer.SamplesFX4Autofilter (SamplesFX4AutofilterPre):Samples3/in-1" from="Non-Mixer.Samples (Samples):Samples3/out-1"/>
- <connection to="Non-Mixer.SamplesFX4Autofilter (SamplesFX4AutofilterPre):Samples4/in-1" from="Non-Mixer.Samples (Samples):Samples4/out-1"/>
- <connection to="Non-Mixer.SamplesFX4Autofilter (SamplesFX4AutofilterPre):Samples5/in-1" from="Non-Mixer.Samples (Samples):Samples5/out-1"/>
- <connection to="Non-Mixer.SamplesWork (SamplesWorkPre):Samples1/in-1" from="Non-Mixer.Samples (Samples):Samples1/out-1"/>
- <connection to="Non-Mixer.SamplesWork (SamplesWorkPre):Samples2/in-1" from="Non-Mixer.Samples (Samples):Samples2/out-1"/>
- <connection to="Non-Mixer.SamplesWork (SamplesWorkPre):Samples3/in-1" from="Non-Mixer.Samples (Samples):Samples3/out-1"/>
- <connection to="Non-Mixer.SamplesWork (SamplesWorkPre):Samples5/in-1" from="Non-Mixer.Samples (Samples):Samples5/out-1"/>
+ <connection to="Non-Mixer.SamplesFX2Delay (SamplesFX2DelayPre):Samples1/in-1" from="Non-Mixer.Samples (Main):Samples1/out-1"/>
+ <connection to="Non-Mixer.SamplesFX2Delay (SamplesFX2DelayPre):Samples2/in-1" from="Non-Mixer.Samples (Main):Samples2/out-1"/>
+ <connection to="Non-Mixer.SamplesFX2Delay (SamplesFX2DelayPre):Samples3/in-1" from="Non-Mixer.Samples (Main):Samples3/out-1"/>
+ <connection to="Non-Mixer.SamplesFX2Delay (SamplesFX2DelayPre):Samples4/in-1" from="Non-Mixer.Samples (Main):Samples4/out-1"/>
+ <connection to="Non-Mixer.SamplesFX2Delay (SamplesFX2DelayPre):Samples5/in-1" from="Non-Mixer.Samples (Main):Samples5/out-1"/>
+ <connection to="Non-Mixer.SamplesFX3Reverb (SamplesFX3ReverbPre):Samples1/in-1" from="Non-Mixer.Samples (Main):Samples1/out-1"/>
+ <connection to="Non-Mixer.SamplesFX3Reverb (SamplesFX3ReverbPre):Samples2/in-1" from="Non-Mixer.Samples (Main):Samples2/out-1"/>
+ <connection to="Non-Mixer.SamplesFX3Reverb (SamplesFX3ReverbPre):Samples3/in-1" from="Non-Mixer.Samples (Main):Samples3/out-1"/>
+ <connection to="Non-Mixer.SamplesFX3Reverb (SamplesFX3ReverbPre):Samples4/in-1" from="Non-Mixer.Samples (Main):Samples4/out-1"/>
+ <connection to="Non-Mixer.SamplesFX3Reverb (SamplesFX3ReverbPre):Samples5/in-1" from="Non-Mixer.Samples (Main):Samples5/out-1"/>
+ <connection to="Non-Mixer.SamplesFX4Autofilter (SamplesFX4AutofilterPre):Samples1/in-1" from="Non-Mixer.Samples (Main):Samples1/out-1"/>
+ <connection to="Non-Mixer.SamplesFX4Autofilter (SamplesFX4AutofilterPre):Samples2/in-1" from="Non-Mixer.Samples (Main):Samples2/out-1"/>
+ <connection to="Non-Mixer.SamplesFX4Autofilter (SamplesFX4AutofilterPre):Samples3/in-1" from="Non-Mixer.Samples (Main):Samples3/out-1"/>
+ <connection to="Non-Mixer.SamplesFX4Autofilter (SamplesFX4AutofilterPre):Samples4/in-1" from="Non-Mixer.Samples (Main):Samples4/out-1"/>
+ <connection to="Non-Mixer.SamplesFX4Autofilter (SamplesFX4AutofilterPre):Samples5/in-1" from="Non-Mixer.Samples (Main):Samples5/out-1"/>
+ <connection to="Non-Mixer.SamplesWork (SamplesWorkPre):Samples1/in-1" from="Non-Mixer.Samples (Main):Samples1/out-1"/>
+ <connection to="Non-Mixer.SamplesWork (SamplesWorkPre):Samples2/in-1" from="Non-Mixer.Samples (Main):Samples2/out-1"/>
+ <connection to="Non-Mixer.SamplesWork (SamplesWorkPre):Samples3/in-1" from="Non-Mixer.Samples (Main):Samples3/out-1"/>
+ <connection to="Non-Mixer.SamplesWork (SamplesWorkPre):Samples5/in-1" from="Non-Mixer.Samples (Main):Samples5/out-1"/>
  <connection to="Non-Mixer.Outputs (Outputs):VocalsNano/in-1" from="sooperlooper:loop5_out_1"/>
  <connection to="Non-Mixer.Outputs (Outputs):VocalsKesch/in-1" from="sooperlooper:loop7_out_1"/>
  <connection to="Non-Mixer.Bass (In):BassIn/in-1" from="sooperlooper:loop0_out_1"/>
