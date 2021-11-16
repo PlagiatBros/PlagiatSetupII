@@ -6,4 +6,4 @@
 
 
 ./groupsRenaming.sh $1 $2 $3
-./jackPatchBunkPortsRenaming.sh $2 $3
+./jackPatchBunkPortsRenaming.sh $1 $2 $3

@@ -4,5 +4,4 @@
 # $2 = ancien port
 # $3 = nouveau port
 
-sed -e "s/$1 ($2)/$1 ($3)/g"  PlagiatLive.patch.xml > test.jackpatch
-echo "sed -e \"s/$1 ($2)/$1 ($3)/g\""
+sed -i -e "s/$1 ($2)/$1 ($3)/g"  PlagiatLive.patch.xml
