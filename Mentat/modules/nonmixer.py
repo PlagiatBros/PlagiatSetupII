@@ -41,6 +41,6 @@ class NonMixer(Module):
             else:
 
                 # only 1 arg: list end
-                self.info('strip list retreived')
+                self.logger.info('strip list retreived')
 
             return False

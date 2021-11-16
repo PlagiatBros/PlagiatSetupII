@@ -20,7 +20,7 @@ class RaySession(Module):
 
     def route(self, address, args):
 
-        self.info([address, args])
+        self.logger.info([address, args])
 
         if address == '/nsm/client/open':
             self.send('/reply', '/nsm/client/open', '')
