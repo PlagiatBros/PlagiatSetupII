@@ -9,8 +9,9 @@ from inspect import getmembers
 from mentat import Module
 from modules import engine
 import modules
+engine.add_module(modules.openstagecontrol)
 for name, mod in getmembers(modules):
-    if name[0] != '_' and name != 'raysession' and isinstance(mod, Module):
+    if name[0] != '_' and isinstance(mod, Module) and name not in ['raysession', 'openstagecontrol']:
         engine.add_module(mod)
 engine.add_module(modules.raysession)
 
