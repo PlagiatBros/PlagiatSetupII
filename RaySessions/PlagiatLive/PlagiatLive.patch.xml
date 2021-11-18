@@ -375,4 +375,6 @@
  <connection to="netjack:playback_2" from="ZynAddSubFX.ZLowSynths:part2/out-R"/>
  <connection to="netjack:playback_1" from="ZynAddSubFX.ZLowSynths:part1/out-L"/>
  <connection to="netjack:playback_2" from="ZynAddSubFX.ZLowSynths:part1/out-R"/>
+ <connection to="netjack:playback_1" from="ZynAddSubFX.ZLowSynths:part0/out-L"/>
+ <connection to="netjack:playback_2" from="ZynAddSubFX.ZLowSynths:part0/out-R"/>
 </RAY-JACKPATCH>
