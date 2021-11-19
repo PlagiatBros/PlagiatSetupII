@@ -551,12 +551,12 @@
         398
       ],
       "in_xy": [
-        -580,
-        589
+        -478,
+        620
       ],
       "out_xy": [
-        -577,
-        789
+        -511,
+        933
       ],
       "flags": 68
     },
@@ -591,12 +591,12 @@
         527
       ],
       "in_xy": [
-        -242,
-        462
+        -202,
+        461
       ],
       "out_xy": [
         110,
-        1032
+        1056
       ],
       "flags": 68
     },
@@ -627,8 +627,8 @@
       "in_zone": "",
       "out_zone": "",
       "null_xy": [
-        85,
-        1312
+        81,
+        1336
       ],
       "in_xy": [
         400,
@@ -2172,7 +2172,7 @@
       ],
       "in_xy": [
         51,
-        1371
+        1395
       ],
       "out_xy": [
         52,
@@ -2212,7 +2212,7 @@
       ],
       "in_xy": [
         85,
-        1430
+        1454
       ],
       "out_xy": [
         52,
@@ -2312,11 +2312,11 @@
       ],
       "in_xy": [
         154,
-        1489
+        1513
       ],
       "out_xy": [
         148,
-        914
+        938
       ],
       "flags": 68
     },
@@ -2332,11 +2332,11 @@
       ],
       "in_xy": [
         102,
-        1548
+        1572
       ],
       "out_xy": [
         148,
-        973
+        997
       ],
       "flags": 68
     },
@@ -3271,8 +3271,8 @@
         -147
       ],
       "in_xy": [
-        85,
-        1163
+        81,
+        1187
       ],
       "out_xy": [
         -402,
@@ -3387,8 +3387,8 @@
       "in_zone": "",
       "out_zone": "",
       "null_xy": [
-        -824,
-        -94
+        -834,
+        -110
       ],
       "in_xy": [
         400,
@@ -3447,8 +3447,8 @@
       "in_zone": "",
       "out_zone": "",
       "null_xy": [
-        -818,
-        588
+        -832,
+        973
       ],
       "in_xy": [
         400,
@@ -3619,6 +3619,166 @@
         2803
       ],
       "flags": 0
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Calf Monosynth",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        408,
+        -673
+      ],
+      "in_xy": [
+        400,
+        2803
+      ],
+      "out_xy": [
+        0,
+        2803
+      ],
+      "flags": 0
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "TrapSynth",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        409,
+        -587
+      ],
+      "in_xy": [
+        400,
+        2803
+      ],
+      "out_xy": [
+        0,
+        2803
+      ],
+      "flags": 0
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Barkline",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        410,
+        -450
+      ],
+      "in_xy": [
+        400,
+        2803
+      ],
+      "out_xy": [
+        0,
+        2803
+      ],
+      "flags": 0
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Carla.LowCSynths/Calf Monosynth",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        408,
+        -673
+      ],
+      "in_xy": [
+        400,
+        2803
+      ],
+      "out_xy": [
+        0,
+        2803
+      ],
+      "flags": 0
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Carla.LowCSynths/Trap1",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        -449,
+        503
+      ],
+      "in_xy": [
+        -984,
+        473
+      ],
+      "out_xy": [
+        -812,
+        533
+      ],
+      "flags": 68
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Carla.LowCSynths/Trap2",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        -679,
+        604
+      ],
+      "in_xy": [
+        -1008,
+        546
+      ],
+      "out_xy": [
+        -812,
+        628
+      ],
+      "flags": 68
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Carla.LowCSynths/Barkline",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        -796,
+        557
+      ],
+      "in_xy": [
+        -971,
+        403
+      ],
+      "out_xy": [
+        -812,
+        723
+      ],
+      "flags": 68
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Carla.LowCSynths/Boom",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        -843,
+        828
+      ],
+      "in_xy": [
+        -978,
+        638
+      ],
+      "out_xy": [
+        -826,
+        819
+      ],
+      "flags": 68
     }
   ]
 }

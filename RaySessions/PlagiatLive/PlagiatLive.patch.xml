@@ -382,4 +382,9 @@
  <connection from="ZynAddSubFX.ZLowSynths:part2/out-L" to="Non-Mixer.BassSynths (Main):BassZRagstep/in-1"/>
  <connection from="ZynAddSubFX.ZLowSynths:part3/out-L" to="Non-Mixer.BassSynths (Main):BassZDupieux/in-1"/>
  <connection from="ZynAddSubFX.ZLowSynths:part4/out-L" to="Non-Mixer.BassSynths (Main):BassZPhrampton/in-1"/>
+ <connection from="Carla.LowCSynths/Barkline:Out L" to="Non-Mixer.BassSynths (Main):BassBarkline/in-1"/>
+ <connection from="Carla.LowCSynths/Trap1:Out L" to="Non-Mixer.BassSynths (Main):BassTrapSynth/in-1"/>
+ <connection from="Carla.LowCSynths/Trap1:Out L" to="Non-Mixer.BassSynths (Main):BassTrap1/in-1"/>
+ <connection from="Carla.LowCSynths/Trap2:Out L" to="Non-Mixer.BassSynths (Main):BassTrap2/in-1"/>
+ <connection from="Carla.LowCSynths/Boom:Out L" to="Non-Mixer.BassSynths (Main):BassBoom/in-1"/>
 </RAY-JACKPATCH>
