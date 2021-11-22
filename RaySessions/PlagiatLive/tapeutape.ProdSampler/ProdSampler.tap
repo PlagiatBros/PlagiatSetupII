@@ -246,7 +246,7 @@
           <variation minveloc="115" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2020/MCOB/PrinceGtr-2.8.wav" sampleRelative="../../../Samples/So2020/MCOB/PrinceGtr-2.8.wav"/>
         </instrument>
       </kit>
-      <kit name="GetUrFreakOn" volume="1.000000">
+      <kit name="ViktorHuguau" volume="1.000000">
         <instrument name="Sax" minnote="84" maxnote="84" rootnote="84" rootnotefine="0.000000" channel="3" cut="-1" polyphony="0" output="Samples1" volume="1.000000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
           <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2020/ViktorHuguau/trompette.flac" sampleRelative="../../../Samples/So2020/ViktorHuguau/trompette.flac"/>
         </instrument>
@@ -256,43 +256,43 @@
       </kit>
       <kit name="RamenerMooncup" volume="1.000000">
         <instrument name="Keziah1" minnote="60" maxnote="60" rootnote="60" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples1" volume="0.240000" pan="-0.560000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
-          <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/HorrorCore/Horrocore_Keziah1.flac" sampleRelative="../../../Samples/HorrorCore/Horrocore_Keziah1.flac"/>
+          <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2020/RamenerMooncup/Horrocore_Keziah1.flac" sampleRelative="../../../Samples/So2020/RamenerMooncup/Horrocore_Keziah1.flac"/>
         </instrument>
         <instrument name="Keziah2" minnote="62" maxnote="62" rootnote="62" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples1" volume="0.310000" pan="0.610000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
-          <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/HorrorCore/Horrocore_Keziah2.flac" sampleRelative="../../../Samples/HorrorCore/Horrocore_Keziah2.flac"/>
+          <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2020/RamenerMooncup/Horrocore_Keziah2.flac" sampleRelative="../../../Samples/So2020/RamenerMooncup/Horrocore_Keziah2.flac"/>
         </instrument>
         <instrument name="Keziah3" minnote="64" maxnote="64" rootnote="64" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples1" volume="0.200000" pan="0.220000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
-          <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/HorrorCore/Horrocore_Keziah3.flac" sampleRelative="../../../Samples/HorrorCore/Horrocore_Keziah3.flac"/>
+          <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2020/RamenerMooncup/Horrocore_Keziah3.flac" sampleRelative="../../../Samples/So2020/RamenerMooncup/Horrocore_Keziah3.flac"/>
         </instrument>
         <instrument name="Keziah4" minnote="65" maxnote="65" rootnote="65" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples4" volume="0.230000" pan="-0.270000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
-          <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/HorrorCore/Horrocore_Keziah4.flac" sampleRelative="../../../Samples/HorrorCore/Horrocore_Keziah4.flac"/>
+          <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2020/RamenerMooncup/Horrocore_Keziah4.flac" sampleRelative="../../../Samples/So2020/RamenerMooncup/Horrocore_Keziah4.flac"/>
         </instrument>
         <instrument name="Keziah5" minnote="67" maxnote="67" rootnote="67" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples4" volume="0.280000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
-          <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/HorrorCore/Horrocore_Keziah5.flac" sampleRelative="../../../Samples/HorrorCore/Horrocore_Keziah5.flac"/>
+          <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2020/RamenerMooncup/Horrocore_Keziah5.flac" sampleRelative="../../../Samples/So2020/RamenerMooncup/Horrocore_Keziah5.flac"/>
         </instrument>
         <instrument name="KeziahD1" minnote="48" maxnote="48" rootnote="48" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples2" volume="0.100000" pan="-0.710000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
-          <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/HorrorCore/Horrocore_KezD1.flac" sampleRelative="../../../Samples/HorrorCore/Horrocore_KezD1.flac"/>
+          <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2020/RamenerMooncup/Horrocore_KezD1.flac" sampleRelative="../../../Samples/So2020/RamenerMooncup/Horrocore_KezD1.flac"/>
         </instrument>
         <instrument name="KeziahD2" minnote="50" maxnote="50" rootnote="50" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples2" volume="0.100000" pan="0.830000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
-          <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/HorrorCore/Horrocore_KezD2.flac" sampleRelative="../../../Samples/HorrorCore/Horrocore_KezD2.flac"/>
+          <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2020/RamenerMooncup/Horrocore_KezD2.flac" sampleRelative="../../../Samples/So2020/RamenerMooncup/Horrocore_KezD2.flac"/>
         </instrument>
         <instrument name="Ambre" minnote="72" maxnote="72" rootnote="72" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples3" volume="0.160000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
-          <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/HorrorCore/Horrocore_Ambre.flac" sampleRelative="../../../Samples/HorrorCore/Horrocore_Ambre.flac"/>
+          <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2020/RamenerMooncup/Horrocore_Ambre.flac" sampleRelative="../../../Samples/So2020/RamenerMooncup/Horrocore_Ambre.flac"/>
         </instrument>
         <instrument name="Cri1" minnote="35" maxnote="36" rootnote="36" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples1" volume="0.600000" pan="0.670000" pitch_over_range="false" play_mode="normal" play_loop="no" play_reverse="no">
-          <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/HorrorCore/Horrocore_Cri1.flac" sampleRelative="../../../Samples/HorrorCore/Horrocore_Cri1.flac"/>
+          <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2020/RamenerMooncup/Horrocore_Cri1.flac" sampleRelative="../../../Samples/So2020/RamenerMooncup/Horrocore_Cri1.flac"/>
         </instrument>
         <instrument name="Cri2" minnote="38" maxnote="38" rootnote="38" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples1" volume="0.600000" pan="0.710000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
-          <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/HorrorCore/Horrocore_Cri2.flac" sampleRelative="../../../Samples/HorrorCore/Horrocore_Cri2.flac"/>
+          <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2020/RamenerMooncup/Horrocore_Cri2.flac" sampleRelative="../../../Samples/So2020/RamenerMooncup/Horrocore_Cri2.flac"/>
         </instrument>
         <instrument name="Shamisen" minnote="39" maxnote="39" rootnote="39" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples1" volume="1.000000" pan="0.320000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
-          <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/HorrorCore/Horrocore_Final_Shamisen.flac" sampleRelative="../../../Samples/HorrorCore/Horrocore_Final_Shamisen.flac"/>
+          <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2020/RamenerMooncup/Horrocore_Final_Shamisen.flac" sampleRelative="../../../Samples/So2020/RamenerMooncup/Horrocore_Final_Shamisen.flac"/>
         </instrument>
         <instrument name="Shakuhashi" minnote="40" maxnote="40" rootnote="40" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples1" volume="1.000000" pan="-0.360000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
-          <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/HorrorCore/Horrocore_Final_Shakuhashi.flac" sampleRelative="../../../Samples/HorrorCore/Horrocore_Final_Shakuhashi.flac"/>
+          <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2020/RamenerMooncup/Horrocore_Final_Shakuhashi.flac" sampleRelative="../../../Samples/So2020/RamenerMooncup/Horrocore_Final_Shakuhashi.flac"/>
         </instrument>
         <instrument name="ShakuhashiGrave" minnote="41" maxnote="41" rootnote="41" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples1" volume="1.000000" pan="0.290000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
-          <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/HorrorCore/Horrocore_Final_ShakuhashiGrave.flac" sampleRelative="../../../Samples/HorrorCore/Horrocore_Final_ShakuhashiGrave.flac"/>
+          <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2020/RamenerMooncup/Horrocore_Final_ShakuhashiGrave.flac" sampleRelative="../../../Samples/So2020/RamenerMooncup/Horrocore_Final_ShakuhashiGrave.flac"/>
         </instrument>
       </kit>
       <kit name="TrapOne" volume="1.000000">
