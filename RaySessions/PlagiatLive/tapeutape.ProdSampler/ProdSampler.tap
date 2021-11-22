@@ -189,61 +189,61 @@
       </kit>
       <kit name="MCOB" volume="1.000000">
         <instrument name="BAM" minnote="60" maxnote="60" rootnote="60" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples1" volume="0.250000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
-          <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/DaFirst/48k_BAM_8.2.flac" sampleRelative="../../../Samples/DaFirst/48k_BAM_8.2.flac"/>
+          <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2020/MCOB/48k_BAM_8.2.flac" sampleRelative="../../../Samples/So2020/MCOB/48k_BAM_8.2.flac"/>
         </instrument>
         <instrument name="BAM2" minnote="62" maxnote="62" rootnote="62" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples1" volume="0.250000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
-          <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/DaFirst/48k_BAM_8.4.flac" sampleRelative="../../../Samples/DaFirst/48k_BAM_8.4.flac"/>
+          <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2020/MCOB/48k_BAM_8.4.flac" sampleRelative="../../../Samples/So2020/MCOB/48k_BAM_8.4.flac"/>
         </instrument>
         <instrument name="BAM3" minnote="64" maxnote="64" rootnote="64" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples1" volume="0.250000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
-          <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/DaFirst/48k_BAM_8.6.flac" sampleRelative="../../../Samples/DaFirst/48k_BAM_8.6.flac"/>
+          <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2020/MCOB/48k_BAM_8.6.flac" sampleRelative="../../../Samples/So2020/MCOB/48k_BAM_8.6.flac"/>
         </instrument>
         <instrument name="ufo" minnote="48" maxnote="48" rootnote="48" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples2" volume="1.000000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
-          <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/DaFirst/48k_ufo.42.wav" sampleRelative="../../../Samples/DaFirst/48k_ufo.42.wav"/>
+          <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2020/MCOB/48k_ufo.42.wav" sampleRelative="../../../Samples/So2020/MCOB/48k_ufo.42.wav"/>
         </instrument>
         <instrument name="ufo2" minnote="50" maxnote="50" rootnote="50" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples2" volume="0.570000" pan="0.000000" pitch_over_range="true" play_mode="trigger" play_loop="no" play_reverse="no">
-          <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/DaFirst/48k_ufo.41.wav" sampleRelative="../../../Samples/DaFirst/48k_ufo.41.wav"/>
+          <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2020/MCOB/48k_ufo.41.wav" sampleRelative="../../../Samples/So2020/MCOB/48k_ufo.41.wav"/>
         </instrument>
         <instrument name="psychose" minnote="72" maxnote="72" rootnote="72" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples3" volume="0.500000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
           <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2020/ConnassesSACEM/trapdefeignants.flac.flac" sampleRelative="../../../Samples/So2020/ConnassesSACEM/trapdefeignants.flac.flac"/>
         </instrument>
         <instrument name="psychose2" minnote="74" maxnote="74" rootnote="74" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples3" volume="0.490000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
-          <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/DaFirst/48k_psychose.5@112.wav" sampleRelative="../../../Samples/DaFirst/48k_psychose.5@112.wav"/>
+          <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2020/MCOB/48k_psychose.5@112.wav" sampleRelative="../../../Samples/So2020/MCOB/48k_psychose.5@112.wav"/>
         </instrument>
         <instrument name="psychosereverse" minnote="76" maxnote="76" rootnote="76" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples3" volume="0.490000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
-          <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/DaFirst/48k_reverse_psychose.185@112.wav" sampleRelative="../../../Samples/DaFirst/48k_reverse_psychose.185@112.wav"/>
+          <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2020/MCOB/48k_reverse_psychose.185@112.wav" sampleRelative="../../../Samples/So2020/MCOB/48k_reverse_psychose.185@112.wav"/>
         </instrument>
         <instrument name="psychoseinstru" minnote="84" maxnote="100" rootnote="79" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples2" volume="0.270000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
-          <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/DaFirst/48k_psychose.5@112.wav" sampleRelative="../../../Samples/DaFirst/48k_psychose.5@112.wav"/>
+          <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2020/MCOB/48k_psychose.5@112.wav" sampleRelative="../../../Samples/So2020/MCOB/48k_psychose.5@112.wav"/>
         </instrument>
         <instrument name="derbouka" minnote="36" maxnote="36" rootnote="36" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples5" volume="0.500000" pan="0.000000" pitch_over_range="true" play_mode="trigger" play_loop="no" play_reverse="no">
-          <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/DaFirst/48k_derbouka.2@133.wav" sampleRelative="../../../Samples/DaFirst/48k_derbouka.2@133.wav"/>
+          <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2020/MCOB/48k_derbouka.2@133.wav" sampleRelative="../../../Samples/So2020/MCOB/48k_derbouka.2@133.wav"/>
         </instrument>
         <instrument name="haendel" minnote="24" maxnote="24" rootnote="24" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples4" volume="0.500000" pan="0.000000" pitch_over_range="true" play_mode="trigger" play_loop="no" play_reverse="no">
-          <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/DaFirst/48k_haendelOperture.16@62.wav" sampleRelative="../../../Samples/DaFirst/48k_haendelOperture.16@62.wav"/>
+          <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2020/MCOB/48k_haendelOperture.16@62.wav" sampleRelative="../../../Samples/So2020/MCOB/48k_haendelOperture.16@62.wav"/>
         </instrument>
         <instrument name="ufo3" minnote="52" maxnote="52" rootnote="52" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples2" volume="0.570000" pan="0.000000" pitch_over_range="true" play_mode="trigger" play_loop="no" play_reverse="no">
-          <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/DaFirst/48k_ufo.37@178.wav" sampleRelative="../../../Samples/DaFirst/48k_ufo.37@178.wav"/>
+          <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2020/MCOB/48k_ufo.37@178.wav" sampleRelative="../../../Samples/So2020/MCOB/48k_ufo.37@178.wav"/>
         </instrument>
         <instrument name="lead1" minnote="108" maxnote="108" rootnote="108" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples1" volume="0.230000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
-          <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/DaFirst/48k_Processed_Lead8.26.wav" sampleRelative="../../../Samples/DaFirst/48k_Processed_Lead8.26.wav"/>
+          <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2020/MCOB/48k_Processed_Lead8.26.wav" sampleRelative="../../../Samples/So2020/MCOB/48k_Processed_Lead8.26.wav"/>
         </instrument>
         <instrument name="lead2" minnote="110" maxnote="110" rootnote="110" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples1" volume="0.230000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
-          <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/DaFirst/48k_Processed_Lead8.27.wav" sampleRelative="../../../Samples/DaFirst/48k_Processed_Lead8.27.wav"/>
+          <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2020/MCOB/48k_Processed_Lead8.27.wav" sampleRelative="../../../Samples/So2020/MCOB/48k_Processed_Lead8.27.wav"/>
         </instrument>
         <instrument name="lead3" minnote="112" maxnote="112" rootnote="112" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples1" volume="0.230000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
-          <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/DaFirst/48k_Processed_Lead8.28.wav" sampleRelative="../../../Samples/DaFirst/48k_Processed_Lead8.28.wav"/>
+          <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2020/MCOB/48k_Processed_Lead8.28.wav" sampleRelative="../../../Samples/So2020/MCOB/48k_Processed_Lead8.28.wav"/>
         </instrument>
         <instrument name="Muezzin" minnote="114" maxnote="114" rootnote="114" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples1" volume="0.500000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
-          <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/DaFirst/muezzin.wav" sampleRelative="../../../Samples/DaFirst/muezzin.wav"/>
+          <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2020/MCOB/muezzin.wav" sampleRelative="../../../Samples/So2020/MCOB/muezzin.wav"/>
         </instrument>
         <instrument name="GtrPrince" minnote="117" maxnote="117" rootnote="117" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples1" volume="1.600000" pan="-0.230000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
-          <variation minveloc="0" maxveloc="19" sample="/home/plagiat/PlagiatSetup/Samples/DaFirst/PrinceGtr-2.10.wav" sampleRelative="../../../Samples/DaFirst/PrinceGtr-2.10.wav"/>
-          <variation minveloc="20" maxveloc="38" sample="/home/plagiat/PlagiatSetup/Samples/DaFirst/PrinceGtr-2.12.wav" sampleRelative="../../../Samples/DaFirst/PrinceGtr-2.12.wav"/>
-          <variation minveloc="39" maxveloc="57" sample="/home/plagiat/PlagiatSetup/Samples/DaFirst/PrinceGtr-2.14.wav" sampleRelative="../../../Samples/DaFirst/PrinceGtr-2.14.wav"/>
-          <variation minveloc="58" maxveloc="76" sample="/home/plagiat/PlagiatSetup/Samples/DaFirst/PrinceGtr-2.16.wav" sampleRelative="../../../Samples/DaFirst/PrinceGtr-2.16.wav"/>
-          <variation minveloc="77" maxveloc="95" sample="/home/plagiat/PlagiatSetup/Samples/DaFirst/PrinceGtr-2.18.wav" sampleRelative="../../../Samples/DaFirst/PrinceGtr-2.18.wav"/>
-          <variation minveloc="96" maxveloc="114" sample="/home/plagiat/PlagiatSetup/Samples/DaFirst/PrinceGtr-2.6.wav" sampleRelative="../../../Samples/DaFirst/PrinceGtr-2.6.wav"/>
-          <variation minveloc="115" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/DaFirst/PrinceGtr-2.8.wav" sampleRelative="../../../Samples/DaFirst/PrinceGtr-2.8.wav"/>
+          <variation minveloc="0" maxveloc="19" sample="/home/plagiat/PlagiatSetup/Samples/So2020/MCOB/PrinceGtr-2.10.wav" sampleRelative="../../../Samples/So2020/MCOB/PrinceGtr-2.10.wav"/>
+          <variation minveloc="20" maxveloc="38" sample="/home/plagiat/PlagiatSetup/Samples/So2020/MCOB/PrinceGtr-2.12.wav" sampleRelative="../../../Samples/So2020/MCOB/PrinceGtr-2.12.wav"/>
+          <variation minveloc="39" maxveloc="57" sample="/home/plagiat/PlagiatSetup/Samples/So2020/MCOB/PrinceGtr-2.14.wav" sampleRelative="../../../Samples/So2020/MCOB/PrinceGtr-2.14.wav"/>
+          <variation minveloc="58" maxveloc="76" sample="/home/plagiat/PlagiatSetup/Samples/So2020/MCOB/PrinceGtr-2.16.wav" sampleRelative="../../../Samples/So2020/MCOB/PrinceGtr-2.16.wav"/>
+          <variation minveloc="77" maxveloc="95" sample="/home/plagiat/PlagiatSetup/Samples/So2020/MCOB/PrinceGtr-2.18.wav" sampleRelative="../../../Samples/So2020/MCOB/PrinceGtr-2.18.wav"/>
+          <variation minveloc="96" maxveloc="114" sample="/home/plagiat/PlagiatSetup/Samples/So2020/MCOB/PrinceGtr-2.6.wav" sampleRelative="../../../Samples/So2020/MCOB/PrinceGtr-2.6.wav"/>
+          <variation minveloc="115" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2020/MCOB/PrinceGtr-2.8.wav" sampleRelative="../../../Samples/So2020/MCOB/PrinceGtr-2.8.wav"/>
         </instrument>
       </kit>
       <kit name="GetUrFreakOn" volume="1.000000">
