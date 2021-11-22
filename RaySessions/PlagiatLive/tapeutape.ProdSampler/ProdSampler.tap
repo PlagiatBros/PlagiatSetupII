@@ -99,27 +99,27 @@
           <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2020/Stagiaire/FiftyPerc0dB.wav" sampleRelative="../../../Samples/So2020/Stagiaire/FiftyPerc0dB.wav"/>
         </instrument>
       </kit>
-      <kit name="Respek" volume="0.310000">
+      <kit name="RespekLaPuissance" volume="0.310000">
         <instrument name="Tigrou" minnote="60" maxnote="60" rootnote="60" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples1" volume="0.960000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
-          <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/Le5/48k_Processed_03_Kars_1.5@89.wav" sampleRelative="../../../Samples/Le5/48k_Processed_03_Kars_1.5@89.wav"/>
+          <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2020/RespekLaPuissance/48k_Processed_03_Kars_1.5@89.wav" sampleRelative="../../../Samples/So2020/RespekLaPuissance/48k_Processed_03_Kars_1.5@89.wav"/>
         </instrument>
         <instrument name="Tigrou2" minnote="62" maxnote="62" rootnote="62" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples1" volume="0.950000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
-          <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/Le5/48k_Processed_03_Kars_1@200.wav" sampleRelative="../../../Samples/Le5/48k_Processed_03_Kars_1@200.wav"/>
+          <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2020/RespekLaPuissance/48k_Processed_03_Kars_1@200.wav" sampleRelative="../../../Samples/So2020/RespekLaPuissance/48k_Processed_03_Kars_1@200.wav"/>
         </instrument>
         <instrument name="Tigrou3Short" minnote="64" maxnote="64" rootnote="64" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples1" volume="1.370000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
-          <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/Le5/48k_Processed_03_Kars_1.37@87_Short.wav" sampleRelative="../../../Samples/Le5/48k_Processed_03_Kars_1.37@87_Short.wav"/>
+          <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2020/RespekLaPuissance/48k_Processed_03_Kars_1.37@87_Short.wav" sampleRelative="../../../Samples/So2020/RespekLaPuissance/48k_Processed_03_Kars_1.37@87_Short.wav"/>
         </instrument>
         <instrument name="Tigrou3Long" minnote="65" maxnote="65" rootnote="65" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples1" volume="1.370000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
-          <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/Le5/48k_Processed_03_Kars_1.37@87_Long.wav" sampleRelative="../../../Samples/Le5/48k_Processed_03_Kars_1.37@87_Long.wav"/>
+          <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2020/RespekLaPuissance/48k_Processed_03_Kars_1.37@87_Long.wav" sampleRelative="../../../Samples/So2020/RespekLaPuissance/48k_Processed_03_Kars_1.37@87_Long.wav"/>
         </instrument>
         <instrument name="yamanyar" minnote="48" maxnote="48" rootnote="48" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples2" volume="1.750000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
-          <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/Le5/48k__yamanyar_stretched_yamanyar4.5@200.wav" sampleRelative="../../../Samples/Le5/48k__yamanyar_stretched_yamanyar4.5@200.wav"/>
+          <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2020/RespekLaPuissance/48k__yamanyar_stretched_yamanyar4.5@200.wav" sampleRelative="../../../Samples/So2020/RespekLaPuissance/48k__yamanyar_stretched_yamanyar4.5@200.wav"/>
         </instrument>
         <instrument name="yamanyar2" minnote="50" maxnote="50" rootnote="50" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples2" volume="1.760000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
-          <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/Le5/48k_yamanyar_stretched_yamanyar4.9@78.wav" sampleRelative="../../../Samples/Le5/48k_yamanyar_stretched_yamanyar4.9@78.wav"/>
+          <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2020/RespekLaPuissance/48k_yamanyar_stretched_yamanyar4.9@78.wav" sampleRelative="../../../Samples/So2020/RespekLaPuissance/48k_yamanyar_stretched_yamanyar4.9@78.wav"/>
         </instrument>
         <instrument name="SC_Le5" minnote="36" maxnote="36" rootnote="36" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples1" volume="1.000000" pan="0.000000" pitch_over_range="true" play_mode="trigger" play_loop="no" play_reverse="no">
-          <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/Le5/Le5_5.flac" sampleRelative="../../../Samples/Le5/Le5_5.flac"/>
+          <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2020/RespekLaPuissance/Le5_5.flac" sampleRelative="../../../Samples/So2020/RespekLaPuissance/Le5_5.flac"/>
         </instrument>
       </kit>
       <kit name="SW" volume="1.000000">
