@@ -390,4 +390,9 @@
  <connection to="Non-Mixer.Synths (Main):DubstepHorn/in-1" from="Carla.HiCSynths/DubstepHorn:Out L"/>
  <connection to="Non-Mixer.Synths (Main):Trap/in-1" from="Carla.HiCSynths/Trap:Out L"/>
  <connection to="Non-Mixer.Synths (Main):EasyClassical/in-1" from="Carla.HiCSynths/EasyClassical:Out L"/>
+ <connection to="Non-Mixer.BassSynths (Out):BassSynthsOut/in-1" from="Non-Mixer.BassSynths (Main):BassTrap1/out-1"/>
+ <connection to="Non-Mixer.BassSynths (Out):BassSynthsOut/in-1" from="Non-Mixer.BassSynths (Main):BassTrap2/out-1"/>
+ <connection to="Non-Mixer.BassSynths (Out):BassSynthsOut/in-1" from="Non-Mixer.BassSynths (Main):BassBoom/out-1"/>
+ <connection to="Non-Mixer.BassSynths (Out):BassSynthsOut/in-1" from="Non-Mixer.BassSynths (Main):BassZDubstep/out-1"/>
+ <connection to="Non-Mixer.Synths (Out):SynthsOut/in-1" from="Non-Mixer.Synths (Main):EasyClassical/out-1"/>
 </RAY-JACKPATCH>

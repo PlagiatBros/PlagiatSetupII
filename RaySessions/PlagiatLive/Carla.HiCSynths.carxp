@@ -2509,7 +2509,23 @@
    <Target>Non-Mixer.Bass (Out):BassOut/in-1</Target>
   </Connection>
   <Connection>
+   <Source>Non-Mixer.BassSynths (Main):BassTrap1/out-1</Source>
+   <Target>Non-Mixer.BassSynths (Out):BassSynthsOut/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.BassSynths (Main):BassTrap2/out-1</Source>
+   <Target>Non-Mixer.BassSynths (Out):BassSynthsOut/in-1</Target>
+  </Connection>
+  <Connection>
    <Source>Non-Mixer.BassSynths (Main):BassBarkline/out-1</Source>
+   <Target>Non-Mixer.BassSynths (Out):BassSynthsOut/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.BassSynths (Main):BassBoom/out-1</Source>
+   <Target>Non-Mixer.BassSynths (Out):BassSynthsOut/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.BassSynths (Main):BassZDubstep/out-1</Source>
    <Target>Non-Mixer.BassSynths (Out):BassSynthsOut/in-1</Target>
   </Connection>
   <Connection>
@@ -3339,6 +3355,10 @@
   <Connection>
    <Source>Carla.HiCSynths/EasyClassical:Out L</Source>
    <Target>Non-Mixer.Synths (Main):EasyClassical/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.Synths (Main):EasyClassical/out-1</Source>
+   <Target>Non-Mixer.Synths (Out):SynthsOut/in-1</Target>
   </Connection>
  </ExternalPatchbay>
 </CARLA-PROJECT>
