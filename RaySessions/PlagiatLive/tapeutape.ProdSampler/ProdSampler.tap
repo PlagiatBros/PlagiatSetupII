@@ -81,22 +81,22 @@
       </kit>
       <kit name="Stagiaire" volume="1.000000">
         <instrument name="LoveBuzz" minnote="60" maxnote="60" rootnote="60" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples1" volume="1.000000" pan="-0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
-          <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/Fifty/48k_loveBuzz.4.wav" sampleRelative="../../../Samples/Fifty/48k_loveBuzz.4.wav"/>
+          <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2020/Stagiaire/48k_loveBuzz.4.wav" sampleRelative="../../../Samples/So2020/Stagiaire/48k_loveBuzz.4.wav"/>
         </instrument>
         <instrument name="LoveBuzz2" minnote="61" maxnote="61" rootnote="61" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples1" volume="1.000000" pan="0.000000" pitch_over_range="true" play_mode="trigger" play_loop="no" play_reverse="no">
-          <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/Fifty/48k_loveBuzz.9.wav" sampleRelative="../../../Samples/Fifty/48k_loveBuzz.9.wav"/>
+          <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2020/Stagiaire/48k_loveBuzz.9.wav" sampleRelative="../../../Samples/So2020/Stagiaire/48k_loveBuzz.9.wav"/>
         </instrument>
         <instrument name="Christina" minnote="62" maxnote="62" rootnote="62" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples2" volume="1.000000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
-          <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/Fifty/48k_Processed_aguilera%L%L-2%L.1@107.wav" sampleRelative="../../../Samples/Fifty/48k_Processed_aguilera%L%L-2%L.1@107.wav"/>
+          <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2020/Stagiaire/48k_Processed_aguilera%L%L-2%L.1@107.wav" sampleRelative="../../../Samples/So2020/Stagiaire/48k_Processed_aguilera%L%L-2%L.1@107.wav"/>
         </instrument>
         <instrument name="Christina2" minnote="63" maxnote="63" rootnote="63" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples2" volume="1.000000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
-          <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/Fifty/48k_aguilera%L%L-2%L.@107.wav" sampleRelative="../../../Samples/Fifty/48k_aguilera%L%L-2%L.@107.wav"/>
+          <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2020/Stagiaire/48k_aguilera%L%L-2%L.@107.wav" sampleRelative="../../../Samples/So2020/Stagiaire/48k_aguilera%L%L-2%L.@107.wav"/>
         </instrument>
         <instrument name="Basse" minnote="48" maxnote="49" rootnote="48" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples4" volume="1.000000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
-          <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/Fifty/FiftyBass0dB.wav" sampleRelative="../../../Samples/Fifty/FiftyBass0dB.wav"/>
+          <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2020/Stagiaire/FiftyBass0dB.wav" sampleRelative="../../../Samples/So2020/Stagiaire/FiftyBass0dB.wav"/>
         </instrument>
         <instrument name="Karkabou" minnote="50" maxnote="50" rootnote="50" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples5" volume="0.590000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
-          <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/Fifty/FiftyPerc0dB.wav" sampleRelative="../../../Samples/Fifty/FiftyPerc0dB.wav"/>
+          <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2020/Stagiaire/FiftyPerc0dB.wav" sampleRelative="../../../Samples/So2020/Stagiaire/FiftyPerc0dB.wav"/>
         </instrument>
       </kit>
       <kit name="Respek" volume="0.310000">
