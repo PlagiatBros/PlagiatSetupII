@@ -321,17 +321,80 @@
  <connection from="Non-Mixer.Drums (Main):OH/out-1" to="Non-Mixer.MonitorsNano (MonitorsNano):OH/in-1"/>
  <connection from="Non-Mixer.Drums (Main):Kick/out-1" to="Non-Mixer.MonitorsKesch (MonitorsKesch):Kick/in-1"/>
  <connection from="Non-Mixer.Drums (Main):OH/out-1" to="Non-Mixer.MonitorsKesch (MonitorsKesch):OH/in-1"/>
- <connection from="zynaddsubfx:part0/out-L" to="Non-Mixer.Synths (Main):Dupieux/in-1"/>
- <connection from="zynaddsubfx:part1/out-L" to="Non-Mixer.Synths (Main):NotSoRhodes/in-1"/>
- <connection from="zynaddsubfx:part3/out-L" to="Non-Mixer.Synths (Main):Organ/in-1"/>
- <connection from="zynaddsubfx:part4/out-L" to="Non-Mixer.Synths (Main):Organ/in-1"/>
- <connection from="zynaddsubfx:part5/out-L" to="Non-Mixer.Synths (Main):Dupieux/in-1"/>
- <connection from="zynaddsubfx:part6/out-L" to="Non-Mixer.Synths (Main):Bombarde/in-1"/>
- <connection from="zynaddsubfx:part7/out-L" to="Non-Mixer.Synths (Main):Trumpets/in-1"/>
- <connection from="zynaddsubfx:part8/out-L" to="Non-Mixer.Synths (Main):Trumpets/in-1"/>
- <connection from="zynaddsubfx:part9/out-L" to="Non-Mixer.Synths (Main):Trumpets/in-1"/>
- <connection from="zynaddsubfx:part10/out-L" to="Non-Mixer.Synths (Main):Stambul/in-1"/>
- <connection from="zynaddsubfx:part11/out-L" to="Non-Mixer.Synths (Main):Dre/in-1"/>
- <connection from="zynaddsubfx-01:part4/out-L" to="netjack:playback_1"/>
- <connection from="zynaddsubfx-01:part4/out-R" to="netjack:playback_2"/>
+ <connection from="Non-Mixer.BassSynths (Main):BassZDancestep/out-1" to="Non-Mixer.BassSynths (Out):BassSynthsOut/in-1"/>
+ <connection from="Non-Mixer.BassSynths (Main):BassZRagstep/out-1" to="Non-Mixer.BassSynths (Out):BassSynthsOut/in-1"/>
+ <connection from="Non-Mixer.BassSynths (Main):BassZDupieux/out-1" to="Non-Mixer.BassSynths (Out):BassSynthsOut/in-1"/>
+ <connection from="Non-Mixer.BassSynths (Main):BassZPhrampton/out-1" to="Non-Mixer.BassSynths (Out):BassSynthsOut/in-1"/>
+ <connection from="ZynAddSubFX.ZHiSynths:part0/out-L" to="Non-Mixer.Synths (Main):Dupieux/in-1"/>
+ <connection from="ZynAddSubFX.ZHiSynths:part1/out-L" to="Non-Mixer.Synths (Main):NotSoRhodes/in-1"/>
+ <connection from="ZynAddSubFX.ZHiSynths:part2/out-L" to="Non-Mixer.Synths (Main):Organ/in-1"/>
+ <connection from="ZynAddSubFX.ZHiSynths:part3/out-L" to="Non-Mixer.Synths (Main):Organ/in-1"/>
+ <connection from="ZynAddSubFX.ZHiSynths:part4/out-L" to="Non-Mixer.Synths (Main):Dupieux/in-1"/>
+ <connection from="ZynAddSubFX.ZHiSynths:part5/out-L" to="Non-Mixer.Synths (Main):Bombarde/in-1"/>
+ <connection from="ZynAddSubFX.ZHiSynths:part6/out-L" to="Non-Mixer.Synths (Main):Trumpets/in-1"/>
+ <connection from="ZynAddSubFX.ZHiSynths:part7/out-L" to="Non-Mixer.Synths (Main):Trumpets/in-1"/>
+ <connection from="ZynAddSubFX.ZHiSynths:part8/out-L" to="Non-Mixer.Synths (Main):Trumpets/in-1"/>
+ <connection from="ZynAddSubFX.ZHiSynths:part9/out-L" to="Non-Mixer.Synths (Main):Stambul/in-1"/>
+ <connection from="ZynAddSubFX.ZHiSynths:part10/out-L" to="Non-Mixer.Synths (Main):Dre/in-1"/>
+ <connection from="ZynAddSubFX.ZHiSynths:part11/out-L" to="Non-Mixer.Synths (Main):DiploLike/in-1"/>
+ <connection from="ZynAddSubFX.ZHiSynths:part12/out-L" to="Non-Mixer.Synths (Main):JestoProunk/in-1"/>
+ <connection from="ZynAddSubFX.ZHiSynths:part13/out-L" to="Non-Mixer.Synths (Main):8bits/in-1"/>
+ <connection from="ZynAddSubFX.ZHiSynths:part14/out-L" to="Non-Mixer.Synths (Main):8bits/in-1"/>
+ <connection from="Non-Mixer.Synths (Main):ZDiploLike/out-1" to="Non-Mixer.Synths (Out):SynthsOut/in-1"/>
+ <connection from="Non-Mixer.Synths (Main):ZJestoProunk/out-1" to="Non-Mixer.Synths (Out):SynthsOut/in-1"/>
+ <connection from="Non-Mixer.Synths (Main):Z8bits/out-1" to="Non-Mixer.Synths (Out):SynthsOut/in-1"/>
+ <connection from="Non-Mixer.Synths (Main):ZDre/out-1" to="Non-Mixer.Synths (Out):SynthsOut/in-1"/>
+ <connection from="Non-Mixer.Synths (Main):ZStambul/out-1" to="Non-Mixer.Synths (Out):SynthsOut/in-1"/>
+ <connection from="Non-Mixer.Synths (Main):ZTrumpets/out-1" to="Non-Mixer.Synths (Out):SynthsOut/in-1"/>
+ <connection from="Non-Mixer.Synths (Main):ZDupieux/out-1" to="Non-Mixer.Synths (Out):SynthsOut/in-1"/>
+ <connection from="Non-Mixer.Synths (Main):ZNotSoRhodes/out-1" to="Non-Mixer.Synths (Out):SynthsOut/in-1"/>
+ <connection from="Non-Mixer.Synths (Main):ZOrgan/out-1" to="Non-Mixer.Synths (Out):SynthsOut/in-1"/>
+ <connection from="Non-Mixer.Synths (Main):ZBombarde/out-1" to="Non-Mixer.Synths (Out):SynthsOut/in-1"/>
+ <connection from="ZynAddSubFX.ZHiSynths:part0/out-L" to="Non-Mixer.Synths (Main):ZDupieux/in-1"/>
+ <connection from="ZynAddSubFX.ZHiSynths:part1/out-L" to="Non-Mixer.Synths (Main):ZNotSoRhodes/in-1"/>
+ <connection from="ZynAddSubFX.ZHiSynths:part2/out-L" to="Non-Mixer.Synths (Main):ZOrgan/in-1"/>
+ <connection from="ZynAddSubFX.ZHiSynths:part3/out-L" to="Non-Mixer.Synths (Main):ZOrgan/in-1"/>
+ <connection from="ZynAddSubFX.ZHiSynths:part6/out-L" to="Non-Mixer.Synths (Main):ZTrumpets/in-1"/>
+ <connection from="ZynAddSubFX.ZHiSynths:part7/out-L" to="Non-Mixer.Synths (Main):ZTrumpets/in-1"/>
+ <connection from="ZynAddSubFX.ZHiSynths:part13/out-L" to="Non-Mixer.Synths (Main):Z8bits/in-1"/>
+ <connection from="ZynAddSubFX.ZHiSynths:part4/out-L" to="Non-Mixer.Synths (Main):ZDupieux/in-1"/>
+ <connection from="ZynAddSubFX.ZHiSynths:part5/out-L" to="Non-Mixer.Synths (Main):ZBombarde/in-1"/>
+ <connection from="ZynAddSubFX.ZHiSynths:part8/out-L" to="Non-Mixer.Synths (Main):ZTrumpets/in-1"/>
+ <connection from="ZynAddSubFX.ZHiSynths:part9/out-L" to="Non-Mixer.Synths (Main):ZStambul/in-1"/>
+ <connection from="ZynAddSubFX.ZHiSynths:part10/out-L" to="Non-Mixer.Synths (Main):ZDre/in-1"/>
+ <connection from="ZynAddSubFX.ZHiSynths:part11/out-L" to="Non-Mixer.Synths (Main):ZDiploLike/in-1"/>
+ <connection from="ZynAddSubFX.ZHiSynths:part12/out-L" to="Non-Mixer.Synths (Main):ZJestoProunk/in-1"/>
+ <connection from="ZynAddSubFX.ZHiSynths:part14/out-L" to="Non-Mixer.Synths (Main):Z8bits/in-1"/>
+ <connection from="Non-Mixer.Synths (Out):SynthsOut/out-1" to="netjack:playback_1"/>
+ <connection from="Non-Mixer.Synths (Out):SynthsOut/out-1" to="netjack:playback_2"/>
+ <connection from="ZynAddSubFX.ZLowSynths:part4/out-L" to="netjack:playback_1"/>
+ <connection from="ZynAddSubFX.ZLowSynths:part4/out-R" to="netjack:playback_2"/>
+ <connection from="ZynAddSubFX.ZLowSynths:part3/out-L" to="netjack:playback_1"/>
+ <connection from="ZynAddSubFX.ZLowSynths:part3/out-R" to="netjack:playback_2"/>
+ <connection from="ZynAddSubFX.ZLowSynths:part2/out-L" to="netjack:playback_1"/>
+ <connection from="ZynAddSubFX.ZLowSynths:part2/out-R" to="netjack:playback_2"/>
+ <connection from="ZynAddSubFX.ZLowSynths:part1/out-L" to="netjack:playback_1"/>
+ <connection from="ZynAddSubFX.ZLowSynths:part1/out-R" to="netjack:playback_2"/>
+ <connection from="ZynAddSubFX.ZLowSynths:part0/out-L" to="netjack:playback_1"/>
+ <connection from="ZynAddSubFX.ZLowSynths:part0/out-R" to="netjack:playback_2"/>
+ <connection from="ZynAddSubFX.ZLowSynths:part0/out-L" to="Non-Mixer.BassSynths (Main):BassZDubstep/in-1"/>
+ <connection from="ZynAddSubFX.ZLowSynths:part1/out-L" to="Non-Mixer.BassSynths (Main):BassZDancestep/in-1"/>
+ <connection from="ZynAddSubFX.ZLowSynths:part2/out-L" to="Non-Mixer.BassSynths (Main):BassZRagstep/in-1"/>
+ <connection from="ZynAddSubFX.ZLowSynths:part3/out-L" to="Non-Mixer.BassSynths (Main):BassZDupieux/in-1"/>
+ <connection from="ZynAddSubFX.ZLowSynths:part4/out-L" to="Non-Mixer.BassSynths (Main):BassZPhrampton/in-1"/>
+ <connection from="Carla.LowCSynths/Barkline:Out L" to="Non-Mixer.BassSynths (Main):BassBarkline/in-1"/>
+ <connection from="Carla.LowCSynths/Trap1:Out L" to="Non-Mixer.BassSynths (Main):BassTrapSynth/in-1"/>
+ <connection from="Carla.LowCSynths/Trap1:Out L" to="Non-Mixer.BassSynths (Main):BassTrap1/in-1"/>
+ <connection from="Carla.LowCSynths/Trap2:Out L" to="Non-Mixer.BassSynths (Main):BassTrap2/in-1"/>
+ <connection from="Carla.LowCSynths/Boom:Out L" to="Non-Mixer.BassSynths (Main):BassBoom/in-1"/>
+ <connection from="Carla.HiCSynths/DubstepHorn:Out L" to="Non-Mixer.Synths (Main):DubstepHorn/in-1"/>
+ <connection from="Carla.HiCSynths/Trap:Out L" to="Non-Mixer.Synths (Main):Trap/in-1"/>
+ <connection from="Carla.HiCSynths/EasyClassical:Out L" to="Non-Mixer.Synths (Main):EasyClassical/in-1"/>
+ <connection from="Non-Mixer.BassSynths (Main):BassTrap1/out-1" to="Non-Mixer.BassSynths (Out):BassSynthsOut/in-1"/>
+ <connection from="Non-Mixer.BassSynths (Main):BassTrap2/out-1" to="Non-Mixer.BassSynths (Out):BassSynthsOut/in-1"/>
+ <connection from="Non-Mixer.BassSynths (Main):BassBoom/out-1" to="Non-Mixer.BassSynths (Out):BassSynthsOut/in-1"/>
+ <connection from="Non-Mixer.BassSynths (Main):BassZDubstep/out-1" to="Non-Mixer.BassSynths (Out):BassSynthsOut/in-1"/>
+ <connection from="Non-Mixer.Synths (Main):EasyClassical/out-1" to="Non-Mixer.Synths (Out):SynthsOut/in-1"/>
+ <connection from="Carla.HiCSynths/Rhodes:Left Output" to="Non-Mixer.Synths (Main):Rhodes/in-1"/>
+ <connection from="Carla.HiCSynths/Rhodes:Right Output" to="Non-Mixer.Synths (Main):Rhodes/in-1"/>
 </RAY-JACKPATCH>
