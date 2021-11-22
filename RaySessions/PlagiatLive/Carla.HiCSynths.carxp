@@ -14,688 +14,109 @@
   <BeatsPerMinute>120</BeatsPerMinute>
  </Transport>
 
- <!-- Calf Monosynth -->
+ <!-- ACE Fluid Synth -->
  <Plugin>
   <Info>
    <Type>LV2</Type>
-   <Name>Trap1</Name>
-   <URI>http://calf.sourceforge.net/plugins/Monosynth</URI>
+   <Name>Rhodes</Name>
+   <URI>urn:ardour:a-fluidsynth</URI>
   </Info>
 
   <Data>
    <Active>Yes</Active>
    <ControlChannel>1</ControlChannel>
-   <Options>0x3f1</Options>
+   <Options>0x3f0</Options>
 
    <Parameter>
     <Index>0</Index>
-    <Name>Osc1 Wave</Name>
-    <Symbol>o1_wave</Symbol>
+    <Name>Output Level</Name>
+    <Symbol>level</Symbol>
     <Value>0</Value>
    </Parameter>
 
    <Parameter>
     <Index>1</Index>
-    <Name>Osc2 Wave</Name>
-    <Symbol>o2_wave</Symbol>
+    <Name>Reverb Enable</Name>
+    <Symbol>rev_enable</Symbol>
     <Value>1</Value>
    </Parameter>
 
    <Parameter>
     <Index>2</Index>
-    <Name>Osc1 PW</Name>
-    <Symbol>o1_pw</Symbol>
-    <Value>0</Value>
+    <Name>Reverb Roomsize</Name>
+    <Symbol>rev_roomsize</Symbol>
+    <Value>0.5</Value>
    </Parameter>
 
    <Parameter>
     <Index>3</Index>
-    <Name>Osc2 PW</Name>
-    <Symbol>o2_pw</Symbol>
-    <Value>0</Value>
+    <Name>Reverb Damping</Name>
+    <Symbol>rev_damp</Symbol>
+    <Value>0.5</Value>
    </Parameter>
 
    <Parameter>
     <Index>4</Index>
-    <Name>O1&lt;&gt;2 Detune</Name>
-    <Symbol>o12_detune</Symbol>
+    <Name>Reverb Width</Name>
+    <Symbol>rev_width</Symbol>
     <Value>10</Value>
    </Parameter>
 
    <Parameter>
     <Index>5</Index>
-    <Name>Osc2 Transpose</Name>
-    <Symbol>o2_xpose</Symbol>
-    <Value>12</Value>
+    <Name>Reverb Dry/Wet</Name>
+    <Symbol>rev_level</Symbol>
+    <Value>0.100000001490116</Value>
    </Parameter>
 
    <Parameter>
     <Index>6</Index>
-    <Name>Phase mode</Name>
-    <Symbol>phase_mode</Symbol>
-    <Value>0</Value>
+    <Name>Chorus Enable</Name>
+    <Symbol>chorus_enable</Symbol>
+    <Value>1</Value>
    </Parameter>
 
    <Parameter>
     <Index>7</Index>
-    <Name>O1&lt;&gt;2 Mix</Name>
-    <Symbol>o12_mix</Symbol>
-    <Value>0.5</Value>
+    <Name>Chorus Voice Count</Name>
+    <Symbol>chorus_nr</Symbol>
+    <Value>1</Value>
    </Parameter>
 
    <Parameter>
     <Index>8</Index>
-    <Name>Filter</Name>
-    <Symbol>filter</Symbol>
+    <Name>Chorus Speed</Name>
+    <Symbol>chorus_speed</Symbol>
     <Value>1</Value>
    </Parameter>
 
    <Parameter>
     <Index>9</Index>
-    <Name>Cutoff</Name>
-    <Symbol>cutoff</Symbol>
-    <Value>33</Value>
+    <Name>Chorus Depth</Name>
+    <Symbol>chorus_depth</Symbol>
+    <Value>0</Value>
    </Parameter>
 
    <Parameter>
     <Index>10</Index>
-    <Name>Resonance</Name>
-    <Symbol>res</Symbol>
-    <Value>3</Value>
+    <Name>Chorus Level</Name>
+    <Symbol>chorus_level</Symbol>
+    <Value>0</Value>
    </Parameter>
 
    <Parameter>
     <Index>11</Index>
-    <Name>Separation</Name>
-    <Symbol>filter_sep</Symbol>
+    <Name>Chorus Type</Name>
+    <Symbol>chorus_type</Symbol>
     <Value>0</Value>
    </Parameter>
 
    <Parameter>
     <Index>12</Index>
-    <Name>Env-&gt;Cutoff</Name>
-    <Symbol>env2cutoff</Symbol>
-    <Value>8000</Value>
-   </Parameter>
-
-   <Parameter>
-    <Index>13</Index>
-    <Name>Env-&gt;Res</Name>
-    <Symbol>env2res</Symbol>
+    <Name>Enable</Name>
+    <Symbol>enable</Symbol>
     <Value>1</Value>
    </Parameter>
-
-   <Parameter>
-    <Index>14</Index>
-    <Name>Env-&gt;Amp</Name>
-    <Symbol>env2amp</Symbol>
-    <Value>0</Value>
-   </Parameter>
-
-   <Parameter>
-    <Index>15</Index>
-    <Name>EG1 Attack</Name>
-    <Symbol>adsr_a</Symbol>
-    <Value>1</Value>
-   </Parameter>
-
-   <Parameter>
-    <Index>16</Index>
-    <Name>EG1 Decay</Name>
-    <Symbol>adsr_d</Symbol>
-    <Value>350</Value>
-   </Parameter>
-
-   <Parameter>
-    <Index>17</Index>
-    <Name>EG1 Sustain</Name>
-    <Symbol>adsr_s</Symbol>
-    <Value>0.5</Value>
-   </Parameter>
-
-   <Parameter>
-    <Index>18</Index>
-    <Name>EG1 Fade</Name>
-    <Symbol>adsr_f</Symbol>
-    <Value>0</Value>
-   </Parameter>
-
-   <Parameter>
-    <Index>19</Index>
-    <Name>EG1 Release</Name>
-    <Symbol>adsr_r</Symbol>
-    <Value>100</Value>
-   </Parameter>
-
-   <Parameter>
-    <Index>20</Index>
-    <Name>Key Follow</Name>
-    <Symbol>key_follow</Symbol>
-    <Value>0</Value>
-   </Parameter>
-
-   <Parameter>
-    <Index>21</Index>
-    <Name>Legato Mode</Name>
-    <Symbol>legato</Symbol>
-    <Value>0</Value>
-   </Parameter>
-
-   <Parameter>
-    <Index>22</Index>
-    <Name>Portamento</Name>
-    <Symbol>portamento</Symbol>
-    <Value>1</Value>
-   </Parameter>
-
-   <Parameter>
-    <Index>23</Index>
-    <Name>Vel-&gt;Filter</Name>
-    <Symbol>vel2filter</Symbol>
-    <Value>0.5</Value>
-   </Parameter>
-
-   <Parameter>
-    <Index>24</Index>
-    <Name>Vel-&gt;Amp</Name>
-    <Symbol>vel2amp</Symbol>
-    <Value>0</Value>
-   </Parameter>
-
-   <Parameter>
-    <Index>25</Index>
-    <Name>Volume</Name>
-    <Symbol>master</Symbol>
-    <Value>0.5</Value>
-   </Parameter>
-
-   <Parameter>
-    <Index>26</Index>
-    <Name>PBend Range</Name>
-    <Symbol>pbend_range</Symbol>
-    <Value>200</Value>
-   </Parameter>
-
-   <Parameter>
-    <Index>27</Index>
-    <Name>LFO1 Rate</Name>
-    <Symbol>lfo_rate</Symbol>
-    <Value>5</Value>
-   </Parameter>
-
-   <Parameter>
-    <Index>28</Index>
-    <Name>LFO1 Delay</Name>
-    <Symbol>lfo_delay</Symbol>
-    <Value>0.5</Value>
-   </Parameter>
-
-   <Parameter>
-    <Index>29</Index>
-    <Name>LFO1-&gt;Filter</Name>
-    <Symbol>lfo2filter</Symbol>
-    <Value>0</Value>
-   </Parameter>
-
-   <Parameter>
-    <Index>30</Index>
-    <Name>LFO1-&gt;Pitch</Name>
-    <Symbol>lfo2pitch</Symbol>
-    <Value>100</Value>
-   </Parameter>
-
-   <Parameter>
-    <Index>31</Index>
-    <Name>LFO1-&gt;PW</Name>
-    <Symbol>lfo2pw</Symbol>
-    <Value>0</Value>
-   </Parameter>
-
-   <Parameter>
-    <Index>32</Index>
-    <Name>ModWheel-&gt;LFO1</Name>
-    <Symbol>mwhl2lfo</Symbol>
-    <Value>1</Value>
-   </Parameter>
-
-   <Parameter>
-    <Index>33</Index>
-    <Name>Scale Detune</Name>
-    <Symbol>scale_detune</Symbol>
-    <Value>1</Value>
-   </Parameter>
-
-   <Parameter>
-    <Index>34</Index>
-    <Name>EG2-&gt;Cutoff</Name>
-    <Symbol>adsr2_cutoff</Symbol>
-    <Value>0</Value>
-   </Parameter>
-
-   <Parameter>
-    <Index>35</Index>
-    <Name>EG2-&gt;Res</Name>
-    <Symbol>adsr2_res</Symbol>
-    <Value>0.300000011920929</Value>
-   </Parameter>
-
-   <Parameter>
-    <Index>36</Index>
-    <Name>EG2-&gt;Amp</Name>
-    <Symbol>adsr2_amp</Symbol>
-    <Value>1</Value>
-   </Parameter>
-
-   <Parameter>
-    <Index>37</Index>
-    <Name>EG2 Attack</Name>
-    <Symbol>adsr2_a</Symbol>
-    <Value>1</Value>
-   </Parameter>
-
-   <Parameter>
-    <Index>38</Index>
-    <Name>EG2 Decay</Name>
-    <Symbol>adsr2_d</Symbol>
-    <Value>100</Value>
-   </Parameter>
-
-   <Parameter>
-    <Index>39</Index>
-    <Name>EG2 Sustain</Name>
-    <Symbol>adsr2_s</Symbol>
-    <Value>0.5</Value>
-   </Parameter>
-
-   <Parameter>
-    <Index>40</Index>
-    <Name>EG2 Fade</Name>
-    <Symbol>adsr2_f</Symbol>
-    <Value>0</Value>
-   </Parameter>
-
-   <Parameter>
-    <Index>41</Index>
-    <Name>Release</Name>
-    <Symbol>adsr2_r</Symbol>
-    <Value>50</Value>
-   </Parameter>
-
-   <Parameter>
-    <Index>42</Index>
-    <Name>Osc1 Stretch</Name>
-    <Symbol>o1_stretch</Symbol>
-    <Value>1</Value>
-   </Parameter>
-
-   <Parameter>
-    <Index>43</Index>
-    <Name>Osc1 Window</Name>
-    <Symbol>o1_window</Symbol>
-    <Value>0</Value>
-   </Parameter>
-
-   <Parameter>
-    <Index>44</Index>
-    <Name>LFO1 Trigger Mode</Name>
-    <Symbol>lfo1_trig</Symbol>
-    <Value>0</Value>
-   </Parameter>
-
-   <Parameter>
-    <Index>45</Index>
-    <Name>LFO2 Trigger Mode</Name>
-    <Symbol>lfo2_trig</Symbol>
-    <Value>0</Value>
-   </Parameter>
-
-   <Parameter>
-    <Index>46</Index>
-    <Name>LFO1 Rate</Name>
-    <Symbol>lfo2_rate</Symbol>
-    <Value>5</Value>
-   </Parameter>
-
-   <Parameter>
-    <Index>47</Index>
-    <Name>LFO1 Delay</Name>
-    <Symbol>lfo2_delay</Symbol>
-    <Value>0.5</Value>
-   </Parameter>
-
-   <Parameter>
-    <Index>48</Index>
-    <Name>Osc2 Unison</Name>
-    <Symbol>o2_unison</Symbol>
-    <Value>0</Value>
-   </Parameter>
-
-   <Parameter>
-    <Index>49</Index>
-    <Name>Osc2 Unison Detune</Name>
-    <Symbol>o2_unisonfrq</Symbol>
-    <Value>2</Value>
-   </Parameter>
-
-   <Parameter>
-    <Index>50</Index>
-    <Name>Osc1 Transpose</Name>
-    <Symbol>o1_xpose</Symbol>
-    <Value>0</Value>
-   </Parameter>
-
-   <Parameter>
-    <Index>51</Index>
-    <Name>MIDI Channel</Name>
-    <Symbol>midi</Symbol>
-    <Value>0</Value>
-   </Parameter>
-
-   <CustomData>
-    <Type>http://kxstudio.sf.net/ns/carla/property</Type>
-    <Key>CarlaSkinIsCompacted</Key>
-    <Value>false</Value>
-   </CustomData>
-
-   <CustomData>
-    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
-    <Key>urn:calf:mod_matrix:0,0</Key>
-    <Value>None</Value>
-   </CustomData>
-
-   <CustomData>
-    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
-    <Key>urn:calf:mod_matrix:0,1</Key>
-    <Value>0..1</Value>
-   </CustomData>
-
-   <CustomData>
-    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
-    <Key>urn:calf:mod_matrix:0,2</Key>
-    <Value>None</Value>
-   </CustomData>
-
-   <CustomData>
-    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
-    <Key>urn:calf:mod_matrix:0,3</Key>
-    <Value>0</Value>
-   </CustomData>
-
-   <CustomData>
-    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
-    <Key>urn:calf:mod_matrix:0,4</Key>
-    <Value>None</Value>
-   </CustomData>
-
-   <CustomData>
-    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
-    <Key>urn:calf:mod_matrix:1,0</Key>
-    <Value>None</Value>
-   </CustomData>
-
-   <CustomData>
-    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
-    <Key>urn:calf:mod_matrix:1,1</Key>
-    <Value>0..1</Value>
-   </CustomData>
-
-   <CustomData>
-    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
-    <Key>urn:calf:mod_matrix:1,2</Key>
-    <Value>None</Value>
-   </CustomData>
-
-   <CustomData>
-    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
-    <Key>urn:calf:mod_matrix:1,3</Key>
-    <Value>0</Value>
-   </CustomData>
-
-   <CustomData>
-    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
-    <Key>urn:calf:mod_matrix:1,4</Key>
-    <Value>None</Value>
-   </CustomData>
-
-   <CustomData>
-    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
-    <Key>urn:calf:mod_matrix:2,0</Key>
-    <Value>None</Value>
-   </CustomData>
-
-   <CustomData>
-    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
-    <Key>urn:calf:mod_matrix:2,1</Key>
-    <Value>0..1</Value>
-   </CustomData>
-
-   <CustomData>
-    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
-    <Key>urn:calf:mod_matrix:2,2</Key>
-    <Value>None</Value>
-   </CustomData>
-
-   <CustomData>
-    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
-    <Key>urn:calf:mod_matrix:2,3</Key>
-    <Value>0</Value>
-   </CustomData>
-
-   <CustomData>
-    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
-    <Key>urn:calf:mod_matrix:2,4</Key>
-    <Value>None</Value>
-   </CustomData>
-
-   <CustomData>
-    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
-    <Key>urn:calf:mod_matrix:3,0</Key>
-    <Value>None</Value>
-   </CustomData>
-
-   <CustomData>
-    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
-    <Key>urn:calf:mod_matrix:3,1</Key>
-    <Value>0..1</Value>
-   </CustomData>
-
-   <CustomData>
-    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
-    <Key>urn:calf:mod_matrix:3,2</Key>
-    <Value>None</Value>
-   </CustomData>
-
-   <CustomData>
-    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
-    <Key>urn:calf:mod_matrix:3,3</Key>
-    <Value>0</Value>
-   </CustomData>
-
-   <CustomData>
-    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
-    <Key>urn:calf:mod_matrix:3,4</Key>
-    <Value>None</Value>
-   </CustomData>
-
-   <CustomData>
-    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
-    <Key>urn:calf:mod_matrix:4,0</Key>
-    <Value>None</Value>
-   </CustomData>
-
-   <CustomData>
-    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
-    <Key>urn:calf:mod_matrix:4,1</Key>
-    <Value>0..1</Value>
-   </CustomData>
-
-   <CustomData>
-    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
-    <Key>urn:calf:mod_matrix:4,2</Key>
-    <Value>None</Value>
-   </CustomData>
-
-   <CustomData>
-    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
-    <Key>urn:calf:mod_matrix:4,3</Key>
-    <Value>0</Value>
-   </CustomData>
-
-   <CustomData>
-    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
-    <Key>urn:calf:mod_matrix:4,4</Key>
-    <Value>None</Value>
-   </CustomData>
-
-   <CustomData>
-    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
-    <Key>urn:calf:mod_matrix:5,0</Key>
-    <Value>None</Value>
-   </CustomData>
-
-   <CustomData>
-    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
-    <Key>urn:calf:mod_matrix:5,1</Key>
-    <Value>0..1</Value>
-   </CustomData>
-
-   <CustomData>
-    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
-    <Key>urn:calf:mod_matrix:5,2</Key>
-    <Value>None</Value>
-   </CustomData>
-
-   <CustomData>
-    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
-    <Key>urn:calf:mod_matrix:5,3</Key>
-    <Value>0</Value>
-   </CustomData>
-
-   <CustomData>
-    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
-    <Key>urn:calf:mod_matrix:5,4</Key>
-    <Value>None</Value>
-   </CustomData>
-
-   <CustomData>
-    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
-    <Key>urn:calf:mod_matrix:6,0</Key>
-    <Value>None</Value>
-   </CustomData>
-
-   <CustomData>
-    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
-    <Key>urn:calf:mod_matrix:6,1</Key>
-    <Value>0..1</Value>
-   </CustomData>
-
-   <CustomData>
-    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
-    <Key>urn:calf:mod_matrix:6,2</Key>
-    <Value>None</Value>
-   </CustomData>
-
-   <CustomData>
-    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
-    <Key>urn:calf:mod_matrix:6,3</Key>
-    <Value>0</Value>
-   </CustomData>
-
-   <CustomData>
-    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
-    <Key>urn:calf:mod_matrix:6,4</Key>
-    <Value>None</Value>
-   </CustomData>
-
-   <CustomData>
-    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
-    <Key>urn:calf:mod_matrix:7,0</Key>
-    <Value>None</Value>
-   </CustomData>
-
-   <CustomData>
-    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
-    <Key>urn:calf:mod_matrix:7,1</Key>
-    <Value>0..1</Value>
-   </CustomData>
-
-   <CustomData>
-    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
-    <Key>urn:calf:mod_matrix:7,2</Key>
-    <Value>None</Value>
-   </CustomData>
-
-   <CustomData>
-    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
-    <Key>urn:calf:mod_matrix:7,3</Key>
-    <Value>0</Value>
-   </CustomData>
-
-   <CustomData>
-    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
-    <Key>urn:calf:mod_matrix:7,4</Key>
-    <Value>None</Value>
-   </CustomData>
-
-   <CustomData>
-    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
-    <Key>urn:calf:mod_matrix:8,0</Key>
-    <Value>None</Value>
-   </CustomData>
-
-   <CustomData>
-    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
-    <Key>urn:calf:mod_matrix:8,1</Key>
-    <Value>0..1</Value>
-   </CustomData>
-
-   <CustomData>
-    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
-    <Key>urn:calf:mod_matrix:8,2</Key>
-    <Value>None</Value>
-   </CustomData>
-
-   <CustomData>
-    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
-    <Key>urn:calf:mod_matrix:8,3</Key>
-    <Value>0</Value>
-   </CustomData>
-
-   <CustomData>
-    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
-    <Key>urn:calf:mod_matrix:8,4</Key>
-    <Value>None</Value>
-   </CustomData>
-
-   <CustomData>
-    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
-    <Key>urn:calf:mod_matrix:9,0</Key>
-    <Value>None</Value>
-   </CustomData>
-
-   <CustomData>
-    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
-    <Key>urn:calf:mod_matrix:9,1</Key>
-    <Value>0..1</Value>
-   </CustomData>
-
-   <CustomData>
-    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
-    <Key>urn:calf:mod_matrix:9,2</Key>
-    <Value>None</Value>
-   </CustomData>
-
-   <CustomData>
-    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
-    <Key>urn:calf:mod_matrix:9,3</Key>
-    <Value>0</Value>
-   </CustomData>
-
-   <CustomData>
-    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
-    <Key>urn:calf:mod_matrix:9,4</Key>
-    <Value>None</Value>
-   </CustomData>
   </Data>
  </Plugin>
 
@@ -703,7 +124,7 @@
  <Plugin>
   <Info>
    <Type>LV2</Type>
-   <Name>Trap2</Name>
+   <Name>DubstepHorn</Name>
    <URI>http://calf.sourceforge.net/plugins/Monosynth</URI>
   </Info>
 
@@ -1382,7 +803,7 @@
  <Plugin>
   <Info>
    <Type>LV2</Type>
-   <Name>Barkline</Name>
+   <Name>Trap</Name>
    <URI>http://calf.sourceforge.net/plugins/Monosynth</URI>
   </Info>
 
@@ -2061,7 +1482,7 @@
  <Plugin>
   <Info>
    <Type>LV2</Type>
-   <Name>Boom</Name>
+   <Name>EasyClassical</Name>
    <URI>http://calf.sourceforge.net/plugins/Monosynth</URI>
   </Info>
 

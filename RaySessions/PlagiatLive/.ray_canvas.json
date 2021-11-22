@@ -571,8 +571,8 @@
         187
       ],
       "in_xy": [
-        -593,
-        20
+        -475,
+        31
       ],
       "out_xy": [
         10,
@@ -3387,7 +3387,7 @@
       "in_zone": "",
       "out_zone": "",
       "null_xy": [
-        -834,
+        -975,
         -110
       ],
       "in_xy": [
@@ -3711,8 +3711,8 @@
         503
       ],
       "in_xy": [
-        -984,
-        473
+        -1013,
+        509
       ],
       "out_xy": [
         -812,
@@ -3731,8 +3731,8 @@
         604
       ],
       "in_xy": [
-        -1008,
-        546
+        -1013,
+        627
       ],
       "out_xy": [
         -812,
@@ -3751,8 +3751,8 @@
         557
       ],
       "in_xy": [
-        -971,
-        403
+        -1013,
+        568
       ],
       "out_xy": [
         -812,
@@ -3772,11 +3772,191 @@
       ],
       "in_xy": [
         -978,
-        638
+        686
       ],
       "out_xy": [
         -826,
         819
+      ],
+      "flags": 68
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Carla.HiCSynths/ACE Fluid Synth",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        317,
+        -673
+      ],
+      "in_xy": [
+        400,
+        2803
+      ],
+      "out_xy": [
+        0,
+        2803
+      ],
+      "flags": 0
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Carla.HiCSynths/Calf Fluidsynth",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        253,
+        -221
+      ],
+      "in_xy": [
+        400,
+        2803
+      ],
+      "out_xy": [
+        0,
+        2803
+      ],
+      "flags": 0
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Carla.HiCSynths/Calf Monosynth",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        253,
+        -221
+      ],
+      "in_xy": [
+        400,
+        2803
+      ],
+      "out_xy": [
+        0,
+        2803
+      ],
+      "flags": 0
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Carla.HiCSynths/Calf Monosynth (2)",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        253,
+        -110
+      ],
+      "in_xy": [
+        400,
+        2803
+      ],
+      "out_xy": [
+        0,
+        2803
+      ],
+      "flags": 0
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Carla.HiCSynths/Calf Monosynth (3)",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        253,
+        1
+      ],
+      "in_xy": [
+        400,
+        2803
+      ],
+      "out_xy": [
+        0,
+        2803
+      ],
+      "flags": 0
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Carla.HiCSynths/Rhodes",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        317,
+        -673
+      ],
+      "in_xy": [
+        400,
+        2803
+      ],
+      "out_xy": [
+        0,
+        2803
+      ],
+      "flags": 0
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Carla.HiCSynths/DubstepHorn",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        -770,
+        -84
+      ],
+      "in_xy": [
+        -1084,
+        350
+      ],
+      "out_xy": [
+        -744,
+        113
+      ],
+      "flags": 68
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Carla.HiCSynths/Trap",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        -725,
+        272
+      ],
+      "in_xy": [
+        -1083,
+        288
+      ],
+      "out_xy": [
+        -744,
+        225
+      ],
+      "flags": 68
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Carla.HiCSynths/EasyClassical",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        -627,
+        385
+      ],
+      "in_xy": [
+        -1085,
+        208
+      ],
+      "out_xy": [
+        -751,
+        362
       ],
       "flags": 68
     }
