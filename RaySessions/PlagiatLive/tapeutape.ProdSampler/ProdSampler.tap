@@ -11,13 +11,13 @@
     <setup name="Plagiat" channel="1" cc="0">
       <kit name="ConnassesSACEM" volume="1.000000">
         <instrument name="ViolinConnasses" minnote="60" maxnote="60" rootnote="60" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples1" volume="1.000000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
-          <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/ConnassesSACEM/48k_conassesSACEM_theme.1.wav" sampleRelative="../../../Samples/ConnassesSACEM/48k_conassesSACEM_theme.1.wav"/>
+          <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2020/ConnassesSACEM/48k_conassesSACEM_theme.1.wav" sampleRelative="../../../Samples/So2020/ConnassesSACEM/48k_conassesSACEM_theme.1.wav"/>
         </instrument>
         <instrument name="RiresConnasses" minnote="62" maxnote="62" rootnote="62" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples4" volume="1.000000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
-          <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/ConnassesSACEM/48k_conassesSACEM_3.9@50.wav" sampleRelative="../../../Samples/ConnassesSACEM/48k_conassesSACEM_3.9@50.wav"/>
+          <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2020/ConnassesSACEM/48k_conassesSACEM_3.9@50.wav" sampleRelative="../../../Samples/So2020/ConnassesSACEM/48k_conassesSACEM_3.9@50.wav"/>
         </instrument>
         <instrument name="FrayedEnds" minnote="64" maxnote="64" rootnote="64" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples3" volume="1.300000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
-          <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/ConnassesSACEM/48k_FrayedEnds.2.wav" sampleRelative="../../../Samples/ConnassesSACEM/48k_FrayedEnds.2.wav"/>
+          <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2020/ConnassesSACEM/48k_FrayedEnds.2.wav" sampleRelative="../../../Samples/So2020/ConnassesSACEM/48k_FrayedEnds.2.wav"/>
         </instrument>
       </kit>
       <kit name="AgneauGastrique" volume="1.000000">
@@ -204,7 +204,7 @@
           <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/DaFirst/48k_ufo.41.wav" sampleRelative="../../../Samples/DaFirst/48k_ufo.41.wav"/>
         </instrument>
         <instrument name="psychose" minnote="72" maxnote="72" rootnote="72" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples3" volume="0.500000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
-          <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/ConnassesSACEM/trapdefeignants.flac.flac" sampleRelative="../../../Samples/ConnassesSACEM/trapdefeignants.flac.flac"/>
+          <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2020/ConnassesSACEM/trapdefeignants.flac.flac" sampleRelative="../../../Samples/So2020/ConnassesSACEM/trapdefeignants.flac.flac"/>
         </instrument>
         <instrument name="psychose2" minnote="74" maxnote="74" rootnote="74" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples3" volume="0.490000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
           <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/DaFirst/48k_psychose.5@112.wav" sampleRelative="../../../Samples/DaFirst/48k_psychose.5@112.wav"/>
