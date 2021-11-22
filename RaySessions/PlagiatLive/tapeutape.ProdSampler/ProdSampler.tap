@@ -248,10 +248,10 @@
       </kit>
       <kit name="GetUrFreakOn" volume="1.000000">
         <instrument name="Sax" minnote="84" maxnote="84" rootnote="84" rootnotefine="0.000000" channel="3" cut="-1" polyphony="0" output="Samples1" volume="1.000000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
-          <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/GetUrFreakOn/trompette.flac" sampleRelative="../../../Samples/GetUrFreakOn/trompette.flac"/>
+          <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2020/ViktorHuguau/trompette.flac" sampleRelative="../../../Samples/So2020/ViktorHuguau/trompette.flac"/>
         </instrument>
         <instrument name="blast" minnote="86" maxnote="86" rootnote="86" rootnotefine="0.000000" channel="3" cut="-1" polyphony="0" output="Samples1" volume="1.000000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
-          <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/GetUrFreakOn/blast.flac" sampleRelative="../../../Samples/GetUrFreakOn/blast.flac"/>
+          <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2020/ViktorHuguau/blast.flac" sampleRelative="../../../Samples/So2020/ViktorHuguau/blast.flac"/>
         </instrument>
       </kit>
       <kit name="RamenerMooncup" volume="1.000000">
