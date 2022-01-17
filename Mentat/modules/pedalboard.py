@@ -1,4 +1,38 @@
 from mentat import Module
 
-class Pedalboard(Module):
-    pass
+class PedalBoard(Module):
+
+    def __init__(self, *args, **kwargs):
+
+        super().__init__(*args, **kwargs)
+
+        self.route_select = False
+
+        self.route_map = {
+            1: 'Snapshat'
+        }
+
+
+    def route(self, address, args):
+
+
+        if args[0] == 12:
+
+            self.route_select = not self.route_select
+
+            if self.route_select:
+                self.logger.info('switched to route selection mode')
+            else:
+                self.logger.info('switched normal')
+
+            return False # bypass further routing
+
+        else:
+
+            if self.route_select:
+                if args[0] in self.route_map:
+                    self.engine.set_route(self.route_map[args[0]])
+                else:
+                    self.logger.info('no route in map for button %i' % args[0])
+
+            return False# bypass further routing
