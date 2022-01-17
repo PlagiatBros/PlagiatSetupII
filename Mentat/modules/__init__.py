@@ -2,6 +2,7 @@ from mentat import Engine
 
 from .raysession import RaySession
 from .openstagecontrol import OpenStageControl
+from .pedalboard import PedalBoard
 from .transport import Transport
 from .klick import Klick
 from .sooperlooper import SooperLooper
@@ -15,6 +16,7 @@ engine = Engine('Mentat', 2001, '/home/plagiat/PlagiatSetup/Mentat')
 raysession = RaySession('raysession', 'osc', 2000)
 
 openstagecontrol = OpenStageControl('OpenStageControl', 'osc', 3000)
+pedalboard = PedalBoard('PedalBoard', 'osc', 3001)
 
 transport = Transport('Transport')
 klick = Klick('Klick', 'osc', 9800)
