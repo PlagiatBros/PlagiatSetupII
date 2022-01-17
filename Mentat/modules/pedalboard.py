@@ -15,15 +15,18 @@ class PedalBoard(Module):
 
     def route(self, address, args):
 
+        if args[0] == 0:
 
-        if args[0] == 12:
+            self.engine.modules['Transport'].stop()
+
+        elif args[0] == 12:
 
             self.route_select = not self.route_select
 
             if self.route_select:
                 self.logger.info('switched to route selection mode')
             else:
-                self.logger.info('switched normal')
+                self.logger.info('switched normal mode')
 
             return False # bypass further routing
 
@@ -35,4 +38,5 @@ class PedalBoard(Module):
                 else:
                     self.logger.info('no route in map for button %i' % args[0])
 
-            return False# bypass further routing
+                self.route_select = False
+                return False # bypass further routing

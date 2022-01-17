@@ -1,4 +1,6 @@
-import jack
+MENTAT_JACK_MASTER = False
+if MENTAT_JACK_MASTER:
+    import jack
 
 from mentat import Module
 
@@ -8,18 +10,19 @@ class Transport(Module):
 
         super().__init__(*args, **kwargs)
 
-        try:
-            self.jack = jack.Client(self.engine.name, no_start_server=True)
-            self.jack.set_timebase_callback(callback=self.jack_callback)
-            self.jack.activate()
-            self.add_event_callback('engine_stopping', lambda: [
-                self.jack.release_timebase(),
-                self.jack.deactivate()
-            ])
+        if MENTAT_JACK_MASTER:
+            try:
+                self.jack = jack.Client(self.engine.name, no_start_server=True)
+                self.jack.set_timebase_callback(callback=self.jack_callback)
+                self.jack.activate()
+                self.add_event_callback('engine_stopping', lambda: [
+                    self.jack.release_timebase(),
+                    self.jack.deactivate()
+                ])
 
-        except jack.JackOpenError:
-            self.logger.error('Jack is not running, jack transport module disabled')
-            self.jack = None
+            except jack.JackOpenError:
+                self.logger.error('Jack is not running, jack transport module disabled')
+                self.jack = None
 
     def jack_callback(self, state, blocksize, pos, new_pos):
 
@@ -32,10 +35,10 @@ class Transport(Module):
     def set_tempo(self, bpm):
 
         self.engine.set_tempo(bpm)
-        self.engine.modules['Klick'].set('tempo', bpm)
-        self.engine.modules['Seq192'].set('tempo', bpm)
-        self.engine.modules['Loop192'].set('tempo', bpm)
         self.engine.modules['Looper'].set('tempo', bpm)
+        self.engine.modules['Klick'].set('tempo', bpm)
+        # self.engine.modules['Seq192'].set('tempo', bpm)
+        # self.engine.modules['Loop192'].set('tempo', bpm)
 
     def set_cycle(self, eighths, pattern=None):
 
@@ -61,27 +64,31 @@ class Transport(Module):
 
         self.engine.start_cycle()
 
-        if self.jack:
+        if MENTAT_JACK_MASTER and self.jack:
+
             if self.jack.transport_state == jack.ROLLING:
                 self.jack.transport_frame = 0
             else:
                 self.jack.transport_start()
 
-        self.engine.modules['Klick'].start()
+        else:
 
-        # or
-        # self.engine.modules['Seq192'].start()
-        # self.engine.modules['Loop192'].start()
-        # self.engine.modules['Looper'].start()
+            self.engine.modules['Looper'].start()
+            # self.engine.modules['Seq192'].start()
+            # self.engine.modules['Loop192'].start()
+
+        self.engine.modules['Klick'].start()
 
     def stop(self):
 
-        if self.jack:
+        if MENTAT_JACK_MASTER and self.jack:
+
             self.jack.transport_stop()
 
-        self.engine.modules['Klick'].stop()
+        else:
 
-        # or
-        # self.engine.modules['Seq192'].stop()
-        # self.engine.modules['Loop192'].stop()
-        # self.engine.modules['Looper'].stop()
+            self.engine.modules['Looper'].stop()
+            # self.engine.modules['Seq192'].stop()
+            # self.engine.modules['Loop192'].stop()
+
+        self.engine.modules['Klick'].stop()

@@ -591,8 +591,8 @@
         527
       ],
       "in_xy": [
-        -202,
-        461
+        -175,
+        410
       ],
       "out_xy": [
         110,
@@ -3212,7 +3212,7 @@
       ],
       "in_xy": [
         -70,
-        122
+        142
       ],
       "out_xy": [
         -191,
@@ -3232,7 +3232,7 @@
       ],
       "in_xy": [
         -19,
-        63
+        83
       ],
       "out_xy": [
         214,
@@ -3959,6 +3959,46 @@
         362
       ],
       "flags": 68
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Tap192.ProdSampler",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        -365,
+        381
+      ],
+      "in_xy": [
+        400,
+        2803
+      ],
+      "out_xy": [
+        0,
+        2803
+      ],
+      "flags": 0
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Tap192.ConstantSampler",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        -552,
+        507
+      ],
+      "in_xy": [
+        400,
+        2803
+      ],
+      "out_xy": [
+        0,
+        2803
+      ],
+      "flags": 0
     }
   ]
 }

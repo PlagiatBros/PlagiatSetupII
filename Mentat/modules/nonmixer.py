@@ -14,8 +14,12 @@ class NonMixer(Module):
 
         self.signals = {}
 
+        # get submodules
         self.send('/non/hello', self.engine.osc_server.get_url(), '', '', self.engine.name)
         self.send('/signal/list')
+
+        self.create_meta_parameters()
+
 
     def route(self, address, args):
 
@@ -31,7 +35,7 @@ class NonMixer(Module):
 
                     if strip_name not in self.submodules:
 
-                        self.add_submodule(Strip(strip_name))
+                        self.add_submodule(Strip(strip_name, parent=self))
 
                     if path[-1] == 'unscaled':
 
@@ -44,3 +48,10 @@ class NonMixer(Module):
                 self.logger.info('strip list retreived')
 
             return False
+
+
+    def create_meta_parameters(self):
+
+        if name == 'VocalsKesch':
+
+            pass

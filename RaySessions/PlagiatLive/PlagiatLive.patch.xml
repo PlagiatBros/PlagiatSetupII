@@ -397,4 +397,9 @@
  <connection to="Non-Mixer.Synths (Out):SynthsOut/in-1" from="Non-Mixer.Synths (Main):EasyClassical/out-1"/>
  <connection to="Non-Mixer.Synths (Main):Rhodes/in-1" from="Carla.HiCSynths/Rhodes:Left Output"/>
  <connection to="Non-Mixer.Synths (Main):Rhodes/in-1" from="Carla.HiCSynths/Rhodes:Right Output"/>
+ <connection to="Non-Mixer.Samples (Main):Samples1/in-1" from="Tap192.ProdSampler:Samples1-L"/>
+ <connection to="Non-Mixer.Samples (Main):Samples2/in-1" from="Tap192.ProdSampler:Samples2-L"/>
+ <connection to="Non-Mixer.Samples (Main):Samples3/in-1" from="Tap192.ProdSampler:Samples3-L"/>
+ <connection to="Non-Mixer.Samples (Main):Samples4/in-1" from="Tap192.ProdSampler:Samples4-L"/>
+ <connection to="Non-Mixer.Samples (Main):Samples5/in-1" from="Tap192.ProdSampler:Samples5-L"/>
 </RAY-JACKPATCH>
