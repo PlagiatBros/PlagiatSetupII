@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<tapeutape version="0.1.3">
+<tap192 version="1.0.0-alpha">
   <options globalvolume="1.000000" max_polyphony="100">
     <jack-output name="Samples1"/>
     <jack-output name="Samples2"/>
@@ -334,4 +334,4 @@
       </kit>
     </setup>
   </creation>
-</tapeutape>
+</tap192>
