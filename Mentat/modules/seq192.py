@@ -13,3 +13,6 @@ class Seq192(Module):
 
     def stop(self):
         self.send('/stop')
+
+    def select(self, *args):
+        self.send('/sequence', *args)
