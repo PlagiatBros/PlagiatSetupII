@@ -3208,6 +3208,10 @@
    <Target>Non-Mixer.SamplesWork (In):Samples1/in-1</Target>
   </Connection>
   <Connection>
+   <Source>Non-Mixer.Samples (Main):Samples1/out-1</Source>
+   <Target>Non-Mixer.SamplesFX1Delay (In):Samples1/in-1</Target>
+  </Connection>
+  <Connection>
    <Source>Non-Mixer.Samples (Main):Samples2/out-1</Source>
    <Target>Non-Mixer.Samples (Out):SamplesOut/in-1</Target>
   </Connection>
@@ -3226,6 +3230,10 @@
   <Connection>
    <Source>Non-Mixer.Samples (Main):Samples2/out-1</Source>
    <Target>Non-Mixer.SamplesWork (In):Samples2/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.Samples (Main):Samples2/out-1</Source>
+   <Target>Non-Mixer.SamplesFX1Delay (In):Samples2/in-1</Target>
   </Connection>
   <Connection>
    <Source>Non-Mixer.Samples (Main):Samples3/out-1</Source>
@@ -3248,6 +3256,10 @@
    <Target>Non-Mixer.SamplesWork (In):Samples3/in-1</Target>
   </Connection>
   <Connection>
+   <Source>Non-Mixer.Samples (Main):Samples3/out-1</Source>
+   <Target>Non-Mixer.SamplesFX1Delay (In):Samples3/in-1</Target>
+  </Connection>
+  <Connection>
    <Source>Non-Mixer.Samples (Main):Samples4/out-1</Source>
    <Target>Non-Mixer.Samples (Out):SamplesOut/in-1</Target>
   </Connection>
@@ -3262,6 +3274,10 @@
   <Connection>
    <Source>Non-Mixer.Samples (Main):Samples4/out-1</Source>
    <Target>Non-Mixer.SamplesFX4Autofilter (In):Samples4/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.Samples (Main):Samples4/out-1</Source>
+   <Target>Non-Mixer.SamplesFX1Delay (In):Samples4/in-1</Target>
   </Connection>
   <Connection>
    <Source>Non-Mixer.Samples (Main):Samples5/out-1</Source>
@@ -3282,6 +3298,10 @@
   <Connection>
    <Source>Non-Mixer.Samples (Main):Samples5/out-1</Source>
    <Target>Non-Mixer.SamplesWork (In):Samples5/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.Samples (Main):Samples5/out-1</Source>
+   <Target>Non-Mixer.SamplesFX1Delay (In):Samples5/in-1</Target>
   </Connection>
   <Connection>
    <Source>Non-Mixer.Samples (Out):SamplesOut/out-1</Source>
@@ -3306,6 +3326,10 @@
   <Connection>
    <Source>Non-Mixer.Samples (Main):ConstantSampler/out-1</Source>
    <Target>Non-Mixer.SamplesFX4Autofilter (In):ConstantSampler/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.Samples (Main):ConstantSampler/out-1</Source>
+   <Target>Non-Mixer.SamplesFX1Delay (In):ConstantSampler/in-1</Target>
   </Connection>
   <Connection>
    <Source>Carla.HiCSynths/Rhodes:Left Output</Source>
@@ -3468,6 +3492,10 @@
    <Target>Non-Mixer.VocalsNanoFX7Slice (In):NanoMeuf/in-1</Target>
   </Connection>
   <Connection>
+   <Source>Non-Mixer.VocalsNano (Meuf):NanoMeuf/aux-C/out-1</Source>
+   <Target>Non-Mixer.VocalsNanoFX1Delay (In):NanoMeuf/in-1</Target>
+  </Connection>
+  <Connection>
    <Source>Non-Mixer.VocalsNano (Meuf):NanoMeuf/aux-D/out-1</Source>
    <Target>Non-Mixer.VocalsNanoFX2Delay (In):NanoMeuf/in-1</Target>
   </Connection>
@@ -3490,6 +3518,10 @@
   <Connection>
    <Source>Non-Mixer.VocalsNano (Meuf):NanoMeuf/aux-D/out-1</Source>
    <Target>Non-Mixer.VocalsNanoFX7Slice (In):NanoMeuf/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.VocalsNano (Meuf):NanoMeuf/aux-D/out-1</Source>
+   <Target>Non-Mixer.VocalsNanoFX1Delay (In):NanoMeuf/in-1</Target>
   </Connection>
   <Connection>
    <Source>Non-Mixer.VocalsNano (Meuf):NanoMeuf/out-1</Source>
@@ -3528,6 +3560,10 @@
    <Target>Non-Mixer.VocalsNanoFX7Slice (In):NanoNormo/in-1</Target>
   </Connection>
   <Connection>
+   <Source>Non-Mixer.VocalsNano (Normo):NanoNormo/aux-C/out-1</Source>
+   <Target>Non-Mixer.VocalsNanoFX1Delay (In):NanoNormo/in-1</Target>
+  </Connection>
+  <Connection>
    <Source>Non-Mixer.VocalsNano (Normo):NanoNormo/aux-D/out-1</Source>
    <Target>Non-Mixer.VocalsNanoFX2Delay (In):NanoNormo/in-1</Target>
   </Connection>
@@ -3550,6 +3586,10 @@
   <Connection>
    <Source>Non-Mixer.VocalsNano (Normo):NanoNormo/aux-D/out-1</Source>
    <Target>Non-Mixer.VocalsNanoFX7Slice (In):NanoNormo/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.VocalsNano (Normo):NanoNormo/aux-D/out-1</Source>
+   <Target>Non-Mixer.VocalsNanoFX1Delay (In):NanoNormo/in-1</Target>
   </Connection>
   <Connection>
    <Source>Non-Mixer.VocalsNano (Normo):NanoNormo/out-1</Source>
@@ -3588,6 +3628,10 @@
    <Target>Non-Mixer.VocalsNanoFX7Slice (In):NanoGars/in-1</Target>
   </Connection>
   <Connection>
+   <Source>Non-Mixer.VocalsNano (Gars):NanoGars/aux-C/out-1</Source>
+   <Target>Non-Mixer.VocalsNanoFX1Delay (In):NanoGars/in-1</Target>
+  </Connection>
+  <Connection>
    <Source>Non-Mixer.VocalsNano (Gars):NanoGars/aux-D/out-1</Source>
    <Target>Non-Mixer.VocalsNanoFX2Delay (In):NanoGars/in-1</Target>
   </Connection>
@@ -3610,6 +3654,10 @@
   <Connection>
    <Source>Non-Mixer.VocalsNano (Gars):NanoGars/aux-D/out-1</Source>
    <Target>Non-Mixer.VocalsNanoFX7Slice (In):NanoGars/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.VocalsNano (Gars):NanoGars/aux-D/out-1</Source>
+   <Target>Non-Mixer.VocalsNanoFX1Delay (In):NanoGars/in-1</Target>
   </Connection>
   <Connection>
    <Source>Non-Mixer.VocalsNano (Gars):NanoGars/out-1</Source>
@@ -3868,8 +3916,72 @@
    <Target>Non-Mixer.Synths (Main):ZOrgan/in-1</Target>
   </Connection>
   <Connection>
+   <Source>a2j:seq192 MainSequencer [132] (capture): seq192 1</Source>
+   <Target>a2j:ZynAddSubFX ZLowSynths [130] (playback): ZynAddSubFX</Target>
+  </Connection>
+  <Connection>
+   <Source>a2j:seq192 MainSequencer [132] (capture): seq192 2</Source>
+   <Target>Carla.LowCSynths/Trap1:events-in</Target>
+  </Connection>
+  <Connection>
+   <Source>a2j:seq192 MainSequencer [132] (capture): seq192 2</Source>
+   <Target>Carla.LowCSynths/Barkline:events-in</Target>
+  </Connection>
+  <Connection>
+   <Source>a2j:seq192 MainSequencer [132] (capture): seq192 2</Source>
+   <Target>Carla.LowCSynths/Trap2:events-in</Target>
+  </Connection>
+  <Connection>
+   <Source>a2j:seq192 MainSequencer [132] (capture): seq192 2</Source>
+   <Target>Carla.LowCSynths/Boom:events-in</Target>
+  </Connection>
+  <Connection>
+   <Source>a2j:seq192 MainSequencer [132] (capture): seq192 3</Source>
+   <Target>a2j:ZynAddSubFX ZHiSynths [131] (playback): ZynAddSubFX</Target>
+  </Connection>
+  <Connection>
+   <Source>a2j:seq192 MainSequencer [132] (capture): seq192 4</Source>
+   <Target>Carla.HiCSynths/Rhodes:events-in</Target>
+  </Connection>
+  <Connection>
+   <Source>a2j:seq192 MainSequencer [132] (capture): seq192 4</Source>
+   <Target>Carla.HiCSynths/EasyClassical:events-in</Target>
+  </Connection>
+  <Connection>
+   <Source>a2j:seq192 MainSequencer [132] (capture): seq192 4</Source>
+   <Target>Carla.HiCSynths/Trap:events-in</Target>
+  </Connection>
+  <Connection>
+   <Source>a2j:seq192 MainSequencer [132] (capture): seq192 4</Source>
+   <Target>Carla.HiCSynths/DubstepHorn:events-in</Target>
+  </Connection>
+  <Connection>
    <Source>ZynAddSubFX.ZHiSynths:part4/out-L</Source>
    <Target>Non-Mixer.Synths (Main):ZCosma/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>a2j:seq192 MainSequencer [132] (capture): seq192 10</Source>
+   <Target>a2j:Tap192 ProdSampler [133] (playback): midi_in</Target>
+  </Connection>
+  <Connection>
+   <Source>a2j:seq192 MainSequencer [132] (capture): seq192 10</Source>
+   <Target>a2j:Tap192 ConstantSampler [135] (playback): midi_in</Target>
+  </Connection>
+  <Connection>
+   <Source>a2j:loop192 MidiLooper [134] (capture): Loop 0</Source>
+   <Target>QMidiArp.ZLowArp:in</Target>
+  </Connection>
+  <Connection>
+   <Source>a2j:loop192 MidiLooper [134] (capture): Loop 1</Source>
+   <Target>QMidiArp.CLowArp:in</Target>
+  </Connection>
+  <Connection>
+   <Source>a2j:loop192 MidiLooper [134] (capture): Loop 2</Source>
+   <Target>QMidiArp.ZHiArp:in</Target>
+  </Connection>
+  <Connection>
+   <Source>a2j:loop192 MidiLooper [134] (capture): Loop 3</Source>
+   <Target>QMidiArp.CHiArp:in</Target>
   </Connection>
   <Connection>
    <Source>ZynAddSubFX.ZHiSynths:part5/out-L</Source>
@@ -3910,6 +4022,90 @@
   <Connection>
    <Source>ZynAddSubFX.ZHiSynths:part14/out-L</Source>
    <Target>Non-Mixer.Synths (Main):Z8bits/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>QMidiArp.ZHiArp:out 1</Source>
+   <Target>a2j:ZynAddSubFX ZHiSynths [131] (playback): ZynAddSubFX</Target>
+  </Connection>
+  <Connection>
+   <Source>QMidiArp.ZLowArp:out 1</Source>
+   <Target>a2j:ZynAddSubFX ZLowSynths [130] (playback): ZynAddSubFX</Target>
+  </Connection>
+  <Connection>
+   <Source>QMidiArp.CHiArp:out 1</Source>
+   <Target>Carla.HiCSynths/Rhodes:events-in</Target>
+  </Connection>
+  <Connection>
+   <Source>QMidiArp.CHiArp:out 1</Source>
+   <Target>Carla.HiCSynths/Trap:events-in</Target>
+  </Connection>
+  <Connection>
+   <Source>QMidiArp.CHiArp:out 1</Source>
+   <Target>Carla.HiCSynths/EasyClassical:events-in</Target>
+  </Connection>
+  <Connection>
+   <Source>QMidiArp.CHiArp:out 1</Source>
+   <Target>Carla.HiCSynths/DubstepHorn:events-in</Target>
+  </Connection>
+  <Connection>
+   <Source>QMidiArp.CLowArp:out 1</Source>
+   <Target>Carla.LowCSynths/Trap1:events-in</Target>
+  </Connection>
+  <Connection>
+   <Source>QMidiArp.CLowArp:out 1</Source>
+   <Target>Carla.LowCSynths/Barkline:events-in</Target>
+  </Connection>
+  <Connection>
+   <Source>QMidiArp.CLowArp:out 1</Source>
+   <Target>Carla.LowCSynths/Trap2:events-in</Target>
+  </Connection>
+  <Connection>
+   <Source>QMidiArp.CLowArp:out 1</Source>
+   <Target>Carla.LowCSynths/Boom:events-in</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.VocalsNanoFX1Delay (In):NanoMeuf/out-1</Source>
+   <Target>Non-Mixer.VocalsNanoFX1Delay (Process):NanoFX1Delay/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.VocalsNanoFX1Delay (In):NanoNormo/out-1</Source>
+   <Target>Non-Mixer.VocalsNanoFX1Delay (Process):NanoFX1Delay/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.VocalsNanoFX1Delay (In):NanoGars/out-1</Source>
+   <Target>Non-Mixer.VocalsNanoFX1Delay (Process):NanoFX1Delay/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.VocalsNanoFX1Delay (Process):NanoFX1Delay/out-1</Source>
+   <Target>Non-Mixer.VocalsNano (Out):NanoOut/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.SamplesFX1Delay (In):Samples1/out-1</Source>
+   <Target>Non-Mixer.SamplesFX1Delay (Process):SamplesFX1Delay/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.SamplesFX1Delay (In):Samples2/out-1</Source>
+   <Target>Non-Mixer.SamplesFX1Delay (Process):SamplesFX1Delay/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.SamplesFX1Delay (In):Samples3/out-1</Source>
+   <Target>Non-Mixer.SamplesFX1Delay (Process):SamplesFX1Delay/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.SamplesFX1Delay (In):Samples4/out-1</Source>
+   <Target>Non-Mixer.SamplesFX1Delay (Process):SamplesFX1Delay/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.SamplesFX1Delay (In):Samples5/out-1</Source>
+   <Target>Non-Mixer.SamplesFX1Delay (Process):SamplesFX1Delay/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.SamplesFX1Delay (Process):SamplesFX1Delay/out-1</Source>
+   <Target>Non-Mixer.Samples (Out):SamplesOut/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.SamplesFX1Delay (In):ConstantSampler/out-1</Source>
+   <Target>Non-Mixer.SamplesFX1Delay (Process):SamplesFX1Delay/in-1</Target>
   </Connection>
  </ExternalPatchbay>
 </CARLA-PROJECT>
