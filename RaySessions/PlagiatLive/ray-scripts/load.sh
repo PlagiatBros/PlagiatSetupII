@@ -31,6 +31,9 @@
 # script here some actions to run before loading the session.
 
 sh "$RAY_SCRIPTS_DIR/jack_start.sh"
+sh "$RAY_SCRIPTS_DIR/a2j_start.sh"
+
+
 
 # set this var true if you want all running clients to stop (see top of this file).
 clear_all_clients=false
@@ -46,5 +49,4 @@ ray_control run_step
 
 
 # script here some actions to run once the session is loaded.
-
-
+bash "$RAY_SCRIPTS_DIR/jackPrettyNames.sh"

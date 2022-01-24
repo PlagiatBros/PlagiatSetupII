@@ -50,5 +50,5 @@ fi
 
 
 # script here some actions to run once the session is closed
+sh "$RAY_SCRIPTS_DIR/a2j_stop.sh"
 sh "$RAY_SCRIPTS_DIR/jack_stop.sh"
-
