@@ -402,4 +402,13 @@
  <connection to="Non-Mixer.Samples (Main):Samples3/in-1" from="Tap192.ProdSampler:Samples3-L"/>
  <connection to="Non-Mixer.Samples (Main):Samples4/in-1" from="Tap192.ProdSampler:Samples4-L"/>
  <connection to="Non-Mixer.Samples (Main):Samples5/in-1" from="Tap192.ProdSampler:Samples5-L"/>
+ <connection to="Non-Mixer.Samples (Main):ConstantSampler/in-1" from="Tap192.ConstantSampler:output-L"/>
+ <connection to="Non-Mixer.SamplesFX1Delay (Process):SamplesFX1Delay/in-1" from="Non-Mixer.SamplesFX1Delay (In):ConstantSampler/out-1"/>
+ <connection to="Non-Mixer.SamplesFX1Delay (In):ConstantSampler/in-1" from="Non-Mixer.Samples (Main):ConstantSampler/out-1"/>
+ <connection to="Non-Mixer.SamplesFX2Delay (In):ConstantSampler/in-1" from="Non-Mixer.Samples (Main):ConstantSampler/out-1"/>
+ <connection to="Non-Mixer.SamplesFX2Delay (Process):SamplesFX2Delay/in-1" from="Non-Mixer.SamplesFX2Delay (In):ConstantSampler/out-1"/>
+ <connection to="Non-Mixer.SamplesFX3Reverb (Process):SamplesFX3Reverb/in-1" from="Non-Mixer.SamplesFX3Reverb (In):ConstantSampler/out-1"/>
+ <connection to="Non-Mixer.SamplesFX3Reverb (In):ConstantSampler/in-1" from="Non-Mixer.Samples (Main):ConstantSampler/out-1"/>
+ <connection to="Non-Mixer.SamplesFX4Autofilter (In):ConstantSampler/in-1" from="Non-Mixer.Samples (Main):ConstantSampler/out-1"/>
+ <connection to="Non-Mixer.SamplesFX4Autofilter (Process):SamplesFX4Autofilter/in-1" from="Non-Mixer.SamplesFX4Autofilter (In):ConstantSampler/out-1"/>
 </RAY-JACKPATCH>
