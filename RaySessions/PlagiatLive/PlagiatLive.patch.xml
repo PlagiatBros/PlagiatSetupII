@@ -451,4 +451,10 @@
  <connection from="a2j:MonoSynthMicroTonal [133] (capture): SynthOut2" to="Carla.HiCSynths/EasyClassical:events-in"/>
  <connection from="a2j:MonoSynthMicroTonal [133] (capture): SynthOut3" to="Carla.HiCSynths/DubstepHorn:events-in"/>
  <connection from="a2j:seq192 MainSequencer [132] (capture): seq192 1" to="a2j:ZynAddSubFX ZLowSynths [134] (playback): ZynAddSubFX"/>
+ <connection from="QMidiArp.ZLowArp:out 1" to="a2j:ZynAddSubFX ZLowSynths [134] (playback): ZynAddSubFX"/>
+ <connection from="a2j:loop192 MidiLooper [131] (capture): Loop 0" to="QMidiArp.ZLowArp:in"/>
+ <connection from="a2j:loop192 MidiLooper [131] (capture): Loop 1" to="QMidiArp.CLowArp:in"/>
+ <connection from="a2j:loop192 MidiLooper [131] (capture): Loop 2" to="QMidiArp.ZHiArp:in"/>
+ <connection from="QMidiArp.ZHiArp:out 1" to="a2j:ZynAddSubFX ZHiSynths [130] (playback): ZynAddSubFX"/>
+ <connection from="a2j:loop192 MidiLooper [131] (capture): Loop 3" to="QMidiArp.CHiArp:in"/>
 </RAY-JACKPATCH>
