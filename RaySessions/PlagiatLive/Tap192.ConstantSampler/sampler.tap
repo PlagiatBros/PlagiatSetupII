@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tap192 version="1.0.0-alpha">
+  <options globalvolume="1.000000" max_polyphony="100">
+    <jack-output name="output"/>
+  </options>
+  <creation/>
+</tap192>
