@@ -1,0 +1,3 @@
+#!/bin/bash
+hdspconf&
+hdspmixer&
