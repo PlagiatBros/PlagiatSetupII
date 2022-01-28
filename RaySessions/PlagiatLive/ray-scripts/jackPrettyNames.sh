@@ -41,12 +41,12 @@ change_mono_port_name "$seq192_c: seq192 10" "Samples"
 
 #Interface In
 change_mono_port_name "system:capture_1" "Bass"
-change_mono_port_name "system:capture_2" "VxKesch"
-change_mono_port_name "system:capture_3" "VxNano"
+change_mono_port_name "system:capture_2" "VocalsKesch"
+change_mono_port_name "system:capture_3" "VocalsNano"
 change_mono_port_name "system:capture_4" "Kick"
 change_mono_port_name "system:capture_5" "OH"
-change_mono_port_name "system:capture_6" "Audience"
-change_mono_port_name "system:capture_7" "LHommesPorcs"
+change_mono_port_name "system:capture_6" "Ambiance"
+change_mono_port_name "system:capture_7" "VocalsLHommesPorcs"
 
 
 #Interface out
@@ -65,11 +65,18 @@ do
 done
 
 change_mono_port_name "system:playback_9" "BassSynths"
-change_mono_port_name "system:playback_10" "VxNano"
-change_mono_port_name "system:playback_11" "VxKesch"
-change_mono_port_name "system:playback_12" "VxLhommesPorcs"
+change_mono_port_name "system:playback_10" "VocalsNano"
+change_mono_port_name "system:playback_11" "VocalsKesch"
+change_mono_port_name "system:playback_12" "VocalsLhommesPorcs"
 
-
+# Sooperlooper
+i=0
+for name in BassPre BassPost BassSynthsOut SynthsOut VocalsNanoPre VocalsNanoPost VocalsKeschPre VocalsKeschPost
+do
+  change_mono_port_name "sooperlooper:loop"$i"_in_1" $name"_in"
+  change_mono_port_name "sooperlooper:loop"$i"_out_1" $name"_out"
+  ((i++))
+done
 
 #Tapeutape
 #TODO : envisager un set de pretty names par morceau

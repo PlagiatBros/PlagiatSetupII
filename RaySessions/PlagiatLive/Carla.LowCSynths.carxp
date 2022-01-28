@@ -2820,6 +2820,10 @@
    <Target>Non-Mixer.Outputs (Outputs):FOH/in-2</Target>
   </Connection>
   <Connection>
+   <Source>Non-Mixer.Outputs (Outputs):BassSynths/aux-A/out-1</Source>
+   <Target>system:playback_9</Target>
+  </Connection>
+  <Connection>
    <Source>Non-Mixer.Outputs (Outputs):BassSynths/out-1</Source>
    <Target>Non-Mixer.Outputs (Outputs):FOH/in-1</Target>
   </Connection>
@@ -2852,12 +2856,20 @@
    <Target>Non-Mixer.Outputs (Outputs):FOH/in-1</Target>
   </Connection>
   <Connection>
+   <Source>Non-Mixer.Outputs (Outputs):VocalsNano/aux-A/out-1</Source>
+   <Target>system:playback_10</Target>
+  </Connection>
+  <Connection>
    <Source>Non-Mixer.Outputs (Outputs):VocalsNano/out-1</Source>
    <Target>Non-Mixer.Outputs (Outputs):FOH/in-1</Target>
   </Connection>
   <Connection>
    <Source>Non-Mixer.Outputs (Outputs):VocalsNano/out-2</Source>
    <Target>Non-Mixer.Outputs (Outputs):FOH/in-2</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.Outputs (Outputs):VocalsKesch/aux-A/out-1</Source>
+   <Target>system:playback_11</Target>
   </Connection>
   <Connection>
    <Source>Non-Mixer.Outputs (Outputs):VocalsKesch/out-1</Source>
@@ -2868,12 +2880,28 @@
    <Target>Non-Mixer.Outputs (Outputs):FOH/in-2</Target>
   </Connection>
   <Connection>
+   <Source>Non-Mixer.Outputs (Outputs):FOH/out-1</Source>
+   <Target>system:playback_13</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.Outputs (Outputs):FOH/out-2</Source>
+   <Target>system:playback_14</Target>
+  </Connection>
+  <Connection>
    <Source>Non-Mixer.MonitorsNano (MonitorsNano):Klick/out-1</Source>
    <Target>Non-Mixer.MonitorsNano (MonitorsNano):MonitorsNano/in-1</Target>
   </Connection>
   <Connection>
    <Source>Non-Mixer.MonitorsNano (MonitorsNano):Klick/out-1</Source>
    <Target>Non-Mixer.MonitorsNano (MonitorsNano):MonitorsNano/in-2</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.MonitorsKesch (MonitorsKesch):Klick/out-1</Source>
+   <Target>Non-Mixer.MonitorsKesch (MonitorsKesch):MonitorsKesch/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.MonitorsKesch (MonitorsKesch):Klick/out-1</Source>
+   <Target>Non-Mixer.MonitorsKesch (MonitorsKesch):MonitorsKesch/in-2</Target>
   </Connection>
   <Connection>
    <Source>Non-Mixer.MonitorsNano (MonitorsNano):Kick/out-1</Source>
@@ -2884,12 +2912,28 @@
    <Target>Non-Mixer.MonitorsNano (MonitorsNano):MonitorsNano/in-2</Target>
   </Connection>
   <Connection>
+   <Source>Non-Mixer.MonitorsKesch (MonitorsKesch):Kick/out-1</Source>
+   <Target>Non-Mixer.MonitorsKesch (MonitorsKesch):MonitorsKesch/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.MonitorsKesch (MonitorsKesch):Kick/out-1</Source>
+   <Target>Non-Mixer.MonitorsKesch (MonitorsKesch):MonitorsKesch/in-2</Target>
+  </Connection>
+  <Connection>
    <Source>Non-Mixer.MonitorsNano (MonitorsNano):OH/out-1</Source>
    <Target>Non-Mixer.MonitorsNano (MonitorsNano):MonitorsNano/in-1</Target>
   </Connection>
   <Connection>
    <Source>Non-Mixer.MonitorsNano (MonitorsNano):OH/out-1</Source>
    <Target>Non-Mixer.MonitorsNano (MonitorsNano):MonitorsNano/in-2</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.MonitorsKesch (MonitorsKesch):OH/out-1</Source>
+   <Target>Non-Mixer.MonitorsKesch (MonitorsKesch):MonitorsKesch/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.MonitorsKesch (MonitorsKesch):OH/out-1</Source>
+   <Target>Non-Mixer.MonitorsKesch (MonitorsKesch):MonitorsKesch/in-2</Target>
   </Connection>
   <Connection>
    <Source>Non-Mixer.MonitorsNano (MonitorsNano):Bass/out-1</Source>
@@ -2900,86 +2944,6 @@
    <Target>Non-Mixer.MonitorsNano (MonitorsNano):MonitorsNano/in-2</Target>
   </Connection>
   <Connection>
-   <Source>Non-Mixer.MonitorsNano (MonitorsNano):BassSynths/out-1</Source>
-   <Target>Non-Mixer.MonitorsNano (MonitorsNano):MonitorsNano/in-1</Target>
-  </Connection>
-  <Connection>
-   <Source>Non-Mixer.MonitorsNano (MonitorsNano):BassSynths/out-2</Source>
-   <Target>Non-Mixer.MonitorsNano (MonitorsNano):MonitorsNano/in-2</Target>
-  </Connection>
-  <Connection>
-   <Source>Non-Mixer.MonitorsNano (MonitorsNano):Synths/out-1</Source>
-   <Target>Non-Mixer.MonitorsNano (MonitorsNano):MonitorsNano/in-1</Target>
-  </Connection>
-  <Connection>
-   <Source>Non-Mixer.MonitorsNano (MonitorsNano):Synths/out-2</Source>
-   <Target>Non-Mixer.MonitorsNano (MonitorsNano):MonitorsNano/in-2</Target>
-  </Connection>
-  <Connection>
-   <Source>Non-Mixer.MonitorsNano (MonitorsNano):Samples/out-1</Source>
-   <Target>Non-Mixer.MonitorsNano (MonitorsNano):MonitorsNano/in-1</Target>
-  </Connection>
-  <Connection>
-   <Source>Non-Mixer.MonitorsNano (MonitorsNano):Samples/out-2</Source>
-   <Target>Non-Mixer.MonitorsNano (MonitorsNano):MonitorsNano/in-2</Target>
-  </Connection>
-  <Connection>
-   <Source>Non-Mixer.MonitorsNano (MonitorsNano):VocalsNano/out-1</Source>
-   <Target>Non-Mixer.MonitorsNano (MonitorsNano):MonitorsNano/in-1</Target>
-  </Connection>
-  <Connection>
-   <Source>Non-Mixer.MonitorsNano (MonitorsNano):VocalsNano/out-2</Source>
-   <Target>Non-Mixer.MonitorsNano (MonitorsNano):MonitorsNano/in-2</Target>
-  </Connection>
-  <Connection>
-   <Source>Non-Mixer.MonitorsNano (MonitorsNano):VocalsKesch/out-1</Source>
-   <Target>Non-Mixer.MonitorsNano (MonitorsNano):MonitorsNano/in-1</Target>
-  </Connection>
-  <Connection>
-   <Source>Non-Mixer.MonitorsNano (MonitorsNano):VocalsKesch/out-2</Source>
-   <Target>Non-Mixer.MonitorsNano (MonitorsNano):MonitorsNano/in-2</Target>
-  </Connection>
-  <Connection>
-   <Source>Non-Mixer.MonitorsNano (MonitorsNano):Ambiance/out-1</Source>
-   <Target>Non-Mixer.MonitorsNano (MonitorsNano):MonitorsNano/in-1</Target>
-  </Connection>
-  <Connection>
-   <Source>Non-Mixer.MonitorsNano (MonitorsNano):Ambiance/out-1</Source>
-   <Target>Non-Mixer.MonitorsNano (MonitorsNano):MonitorsNano/in-2</Target>
-  </Connection>
-  <Connection>
-   <Source>Non-Mixer.MonitorsKesch (MonitorsKesch):Klick/out-1</Source>
-   <Target>Non-Mixer.MonitorsKesch (MonitorsKesch):MonitorsKesch/in-1</Target>
-  </Connection>
-  <Connection>
-   <Source>Non-Mixer.MonitorsKesch (MonitorsKesch):Klick/out-1</Source>
-   <Target>Non-Mixer.MonitorsKesch (MonitorsKesch):MonitorsKesch/in-2</Target>
-  </Connection>
-  <Connection>
-   <Source>Non-Mixer.MonitorsNano (MonitorsNano):MonitorsNano/out-1</Source>
-   <Target>system:playback_5</Target>
-  </Connection>
-  <Connection>
-   <Source>Non-Mixer.MonitorsNano (MonitorsNano):MonitorsNano/out-2</Source>
-   <Target>system:playback_6</Target>
-  </Connection>
-  <Connection>
-   <Source>Non-Mixer.MonitorsKesch (MonitorsKesch):Kick/out-1</Source>
-   <Target>Non-Mixer.MonitorsKesch (MonitorsKesch):MonitorsKesch/in-1</Target>
-  </Connection>
-  <Connection>
-   <Source>Non-Mixer.MonitorsKesch (MonitorsKesch):Kick/out-1</Source>
-   <Target>Non-Mixer.MonitorsKesch (MonitorsKesch):MonitorsKesch/in-2</Target>
-  </Connection>
-  <Connection>
-   <Source>Non-Mixer.MonitorsKesch (MonitorsKesch):OH/out-1</Source>
-   <Target>Non-Mixer.MonitorsKesch (MonitorsKesch):MonitorsKesch/in-1</Target>
-  </Connection>
-  <Connection>
-   <Source>Non-Mixer.MonitorsKesch (MonitorsKesch):OH/out-1</Source>
-   <Target>Non-Mixer.MonitorsKesch (MonitorsKesch):MonitorsKesch/in-2</Target>
-  </Connection>
-  <Connection>
    <Source>Non-Mixer.MonitorsKesch (MonitorsKesch):Bass/out-1</Source>
    <Target>Non-Mixer.MonitorsKesch (MonitorsKesch):MonitorsKesch/in-1</Target>
   </Connection>
@@ -2988,60 +2952,20 @@
    <Target>Non-Mixer.MonitorsKesch (MonitorsKesch):MonitorsKesch/in-2</Target>
   </Connection>
   <Connection>
+   <Source>Non-Mixer.MonitorsNano (MonitorsNano):BassSynths/out-1</Source>
+   <Target>Non-Mixer.MonitorsNano (MonitorsNano):MonitorsNano/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.MonitorsNano (MonitorsNano):BassSynths/out-2</Source>
+   <Target>Non-Mixer.MonitorsNano (MonitorsNano):MonitorsNano/in-2</Target>
+  </Connection>
+  <Connection>
    <Source>Non-Mixer.MonitorsKesch (MonitorsKesch):BassSynths/out-1</Source>
    <Target>Non-Mixer.MonitorsKesch (MonitorsKesch):MonitorsKesch/in-1</Target>
   </Connection>
   <Connection>
    <Source>Non-Mixer.MonitorsKesch (MonitorsKesch):BassSynths/out-2</Source>
    <Target>Non-Mixer.MonitorsKesch (MonitorsKesch):MonitorsKesch/in-2</Target>
-  </Connection>
-  <Connection>
-   <Source>Non-Mixer.MonitorsKesch (MonitorsKesch):Synths/out-1</Source>
-   <Target>Non-Mixer.MonitorsKesch (MonitorsKesch):MonitorsKesch/in-1</Target>
-  </Connection>
-  <Connection>
-   <Source>Non-Mixer.MonitorsKesch (MonitorsKesch):Synths/out-2</Source>
-   <Target>Non-Mixer.MonitorsKesch (MonitorsKesch):MonitorsKesch/in-2</Target>
-  </Connection>
-  <Connection>
-   <Source>Non-Mixer.MonitorsKesch (MonitorsKesch):Samples/out-1</Source>
-   <Target>Non-Mixer.MonitorsKesch (MonitorsKesch):MonitorsKesch/in-1</Target>
-  </Connection>
-  <Connection>
-   <Source>Non-Mixer.MonitorsKesch (MonitorsKesch):Samples/out-2</Source>
-   <Target>Non-Mixer.MonitorsKesch (MonitorsKesch):MonitorsKesch/in-2</Target>
-  </Connection>
-  <Connection>
-   <Source>Non-Mixer.MonitorsKesch (MonitorsKesch):VocalsNano/out-1</Source>
-   <Target>Non-Mixer.MonitorsKesch (MonitorsKesch):MonitorsKesch/in-1</Target>
-  </Connection>
-  <Connection>
-   <Source>Non-Mixer.MonitorsKesch (MonitorsKesch):VocalsNano/out-2</Source>
-   <Target>Non-Mixer.MonitorsKesch (MonitorsKesch):MonitorsKesch/in-2</Target>
-  </Connection>
-  <Connection>
-   <Source>Non-Mixer.MonitorsKesch (MonitorsKesch):VocalsKesch/out-1</Source>
-   <Target>Non-Mixer.MonitorsKesch (MonitorsKesch):MonitorsKesch/in-1</Target>
-  </Connection>
-  <Connection>
-   <Source>Non-Mixer.MonitorsKesch (MonitorsKesch):VocalsKesch/out-2</Source>
-   <Target>Non-Mixer.MonitorsKesch (MonitorsKesch):MonitorsKesch/in-2</Target>
-  </Connection>
-  <Connection>
-   <Source>Non-Mixer.MonitorsKesch (MonitorsKesch):Ambiance/out-1</Source>
-   <Target>Non-Mixer.MonitorsKesch (MonitorsKesch):MonitorsKesch/in-1</Target>
-  </Connection>
-  <Connection>
-   <Source>Non-Mixer.MonitorsKesch (MonitorsKesch):Ambiance/out-1</Source>
-   <Target>Non-Mixer.MonitorsKesch (MonitorsKesch):MonitorsKesch/in-2</Target>
-  </Connection>
-  <Connection>
-   <Source>Non-Mixer.MonitorsKesch (MonitorsKesch):MonitorsKesch/out-1</Source>
-   <Target>system:playback_7</Target>
-  </Connection>
-  <Connection>
-   <Source>Non-Mixer.MonitorsKesch (MonitorsKesch):MonitorsKesch/out-2</Source>
-   <Target>system:playback_8</Target>
   </Connection>
   <Connection>
    <Source>Non-Mixer.Drums (Main):Kick/out-1</Source>
@@ -3056,12 +2980,28 @@
    <Target>Non-Mixer.MonitorsKesch (MonitorsKesch):Kick/in-1</Target>
   </Connection>
   <Connection>
+   <Source>Non-Mixer.MonitorsNano (MonitorsNano):Synths/out-1</Source>
+   <Target>Non-Mixer.MonitorsNano (MonitorsNano):MonitorsNano/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.MonitorsNano (MonitorsNano):Synths/out-2</Source>
+   <Target>Non-Mixer.MonitorsNano (MonitorsNano):MonitorsNano/in-2</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.MonitorsKesch (MonitorsKesch):Synths/out-1</Source>
+   <Target>Non-Mixer.MonitorsKesch (MonitorsKesch):MonitorsKesch/in-1</Target>
+  </Connection>
+  <Connection>
    <Source>Non-Mixer.Drums (Main):OH/out-1</Source>
    <Target>Non-Mixer.MonitorsNano (MonitorsNano):OH/in-1</Target>
   </Connection>
   <Connection>
    <Source>Non-Mixer.Drums (Main):OH/out-1</Source>
    <Target>Non-Mixer.MonitorsKesch (MonitorsKesch):OH/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.MonitorsKesch (MonitorsKesch):Synths/out-2</Source>
+   <Target>Non-Mixer.MonitorsKesch (MonitorsKesch):MonitorsKesch/in-2</Target>
   </Connection>
   <Connection>
    <Source>Non-Mixer.Bass (In):BassIn/out-1</Source>
@@ -3092,7 +3032,83 @@
    <Target>Non-Mixer.BassFX (In):BassZynWahIn/in-1</Target>
   </Connection>
   <Connection>
+   <Source>Non-Mixer.MonitorsNano (MonitorsNano):Samples/out-1</Source>
+   <Target>Non-Mixer.MonitorsNano (MonitorsNano):MonitorsNano/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.MonitorsNano (MonitorsNano):Samples/out-2</Source>
+   <Target>Non-Mixer.MonitorsNano (MonitorsNano):MonitorsNano/in-2</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.MonitorsKesch (MonitorsKesch):Samples/out-1</Source>
+   <Target>Non-Mixer.MonitorsKesch (MonitorsKesch):MonitorsKesch/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.BassFX (In):BassScapeIn/out-1</Source>
+   <Target>Non-Mixer.BassFX (Process):BassScape/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.MonitorsNano (MonitorsNano):VocalsNano/out-1</Source>
+   <Target>Non-Mixer.MonitorsNano (MonitorsNano):MonitorsNano/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.MonitorsKesch (MonitorsKesch):Samples/out-2</Source>
+   <Target>Non-Mixer.MonitorsKesch (MonitorsKesch):MonitorsKesch/in-2</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.MonitorsNano (MonitorsNano):VocalsNano/out-2</Source>
+   <Target>Non-Mixer.MonitorsNano (MonitorsNano):MonitorsNano/in-2</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.BassSynths (Main):BassTrap1/out-1</Source>
+   <Target>Non-Mixer.BassSynths (Out):BassSynthsOut/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.MonitorsNano (MonitorsNano):VocalsKesch/out-1</Source>
+   <Target>Non-Mixer.MonitorsNano (MonitorsNano):MonitorsNano/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.MonitorsKesch (MonitorsKesch):VocalsNano/out-1</Source>
+   <Target>Non-Mixer.MonitorsKesch (MonitorsKesch):MonitorsKesch/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.MonitorsNano (MonitorsNano):VocalsKesch/out-2</Source>
+   <Target>Non-Mixer.MonitorsNano (MonitorsNano):MonitorsNano/in-2</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.MonitorsKesch (MonitorsKesch):VocalsNano/out-2</Source>
+   <Target>Non-Mixer.MonitorsKesch (MonitorsKesch):MonitorsKesch/in-2</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.BassSynths (Main):BassTrap2/out-1</Source>
+   <Target>Non-Mixer.BassSynths (Out):BassSynthsOut/in-1</Target>
+  </Connection>
+  <Connection>
    <Source>Non-Mixer.Bass (Main):BassDry/out-1</Source>
+   <Target>Non-Mixer.Bass (Out):BassOut/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.MonitorsNano (MonitorsNano):Ambiance/out-1</Source>
+   <Target>Non-Mixer.MonitorsNano (MonitorsNano):MonitorsNano/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.MonitorsNano (MonitorsNano):Ambiance/out-1</Source>
+   <Target>Non-Mixer.MonitorsNano (MonitorsNano):MonitorsNano/in-2</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.MonitorsKesch (MonitorsKesch):VocalsKesch/out-1</Source>
+   <Target>Non-Mixer.MonitorsKesch (MonitorsKesch):MonitorsKesch/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.BassSynths (Main):BassBarkline/out-1</Source>
+   <Target>Non-Mixer.BassSynths (Out):BassSynthsOut/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.MonitorsKesch (MonitorsKesch):VocalsKesch/out-2</Source>
+   <Target>Non-Mixer.MonitorsKesch (MonitorsKesch):MonitorsKesch/in-2</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.BassFX (Process):BassScape/out-1</Source>
    <Target>Non-Mixer.Bass (Out):BassOut/in-1</Target>
   </Connection>
   <Connection>
@@ -3100,40 +3116,96 @@
    <Target>Non-Mixer.Bass (Out):BassOut/in-1</Target>
   </Connection>
   <Connection>
-   <Source>Non-Mixer.BassFX (In):BassScapeIn/out-1</Source>
-   <Target>Non-Mixer.BassFX (Process):BassScape/in-1</Target>
+   <Source>Non-Mixer.MonitorsNano (MonitorsNano):MonitorsNano/out-1</Source>
+   <Target>system:playback_5</Target>
   </Connection>
   <Connection>
-   <Source>Non-Mixer.Bass (Out):BassOut/out-1</Source>
-   <Target>sooperlooper:loop1_in_1</Target>
+   <Source>Non-Mixer.MonitorsKesch (MonitorsKesch):Ambiance/out-1</Source>
+   <Target>Non-Mixer.MonitorsKesch (MonitorsKesch):MonitorsKesch/in-1</Target>
   </Connection>
   <Connection>
-   <Source>Non-Mixer.BassFX (Process):BassScape/out-1</Source>
-   <Target>Non-Mixer.Bass (Out):BassOut/in-1</Target>
+   <Source>Non-Mixer.MonitorsKesch (MonitorsKesch):Ambiance/out-1</Source>
+   <Target>Non-Mixer.MonitorsKesch (MonitorsKesch):MonitorsKesch/in-2</Target>
   </Connection>
   <Connection>
    <Source>Non-Mixer.BassFX (In):BassDegradeIn/out-1</Source>
    <Target>Non-Mixer.BassFX (Process):BassDegrade/in-1</Target>
   </Connection>
   <Connection>
+   <Source>Non-Mixer.BassSynths (Main):BassBoom/out-1</Source>
+   <Target>Non-Mixer.BassSynths (Out):BassSynthsOut/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.MonitorsNano (MonitorsNano):MonitorsNano/out-2</Source>
+   <Target>system:playback_6</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.Synths (Main):ZDupieux/out-1</Source>
+   <Target>Non-Mixer.Synths (Out):SynthsOut/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.MonitorsKesch (MonitorsKesch):MonitorsKesch/out-1</Source>
+   <Target>system:playback_7</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.BassSynths (Main):BassZDubstep/out-1</Source>
+   <Target>Non-Mixer.BassSynths (Out):BassSynthsOut/in-1</Target>
+  </Connection>
+  <Connection>
    <Source>Non-Mixer.BassFX (Process):BassDegrade/out-1</Source>
    <Target>Non-Mixer.Bass (Out):BassOut/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.MonitorsKesch (MonitorsKesch):MonitorsKesch/out-2</Source>
+   <Target>system:playback_8</Target>
   </Connection>
   <Connection>
    <Source>Non-Mixer.BassFX (In):BassWobbleIn/out-1</Source>
    <Target>Non-Mixer.BassFX (Process):BassWobble/in-1</Target>
   </Connection>
   <Connection>
+   <Source>Non-Mixer.BassSynths (Main):BassZDancestep/out-1</Source>
+   <Target>Non-Mixer.BassSynths (Out):BassSynthsOut/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.Synths (Main):ZNotSoRhodes/out-1</Source>
+   <Target>Non-Mixer.Synths (Out):SynthsOut/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.BassSynths (Main):BassZRagstep/out-1</Source>
+   <Target>Non-Mixer.BassSynths (Out):BassSynthsOut/in-1</Target>
+  </Connection>
+  <Connection>
    <Source>Non-Mixer.BassFX (Process):BassWobble/out-1</Source>
    <Target>Non-Mixer.Bass (Out):BassOut/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.BassSynths (Main):BassZDupieux/out-1</Source>
+   <Target>Non-Mixer.BassSynths (Out):BassSynthsOut/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.Bass (Out):BassOut/out-1</Source>
+   <Target>sooperlooper:loop1_in_1</Target>
   </Connection>
   <Connection>
    <Source>Non-Mixer.BassFX (In):BassDistoHiIn/out-1</Source>
    <Target>Non-Mixer.BassFX (Process):BassDistoHi/in-1</Target>
   </Connection>
   <Connection>
+   <Source>Non-Mixer.Synths (Main):Rhodes/out-1</Source>
+   <Target>Non-Mixer.Synths (Out):SynthsOut/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.BassSynths (Main):BassZPhrampton/out-1</Source>
+   <Target>Non-Mixer.BassSynths (Out):BassSynthsOut/in-1</Target>
+  </Connection>
+  <Connection>
    <Source>Non-Mixer.BassFX (Process):BassDistoHi/out-1</Source>
    <Target>Non-Mixer.Bass (Out):BassOut/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.Synths (Main):ZOrgan/out-1</Source>
+   <Target>Non-Mixer.Synths (Out):SynthsOut/in-1</Target>
   </Connection>
   <Connection>
    <Source>Non-Mixer.BassFX (In):BassZynWahIn/out-1</Source>
@@ -3144,60 +3216,8 @@
    <Target>Non-Mixer.Bass (Out):BassOut/in-1</Target>
   </Connection>
   <Connection>
-   <Source>Non-Mixer.BassSynths (Main):BassTrap1/out-1</Source>
-   <Target>Non-Mixer.BassSynths (Out):BassSynthsOut/in-1</Target>
-  </Connection>
-  <Connection>
-   <Source>Non-Mixer.BassSynths (Main):BassTrap2/out-1</Source>
-   <Target>Non-Mixer.BassSynths (Out):BassSynthsOut/in-1</Target>
-  </Connection>
-  <Connection>
-   <Source>Non-Mixer.BassSynths (Main):BassBarkline/out-1</Source>
-   <Target>Non-Mixer.BassSynths (Out):BassSynthsOut/in-1</Target>
-  </Connection>
-  <Connection>
-   <Source>Non-Mixer.BassSynths (Main):BassBoom/out-1</Source>
-   <Target>Non-Mixer.BassSynths (Out):BassSynthsOut/in-1</Target>
-  </Connection>
-  <Connection>
-   <Source>Non-Mixer.BassSynths (Main):BassZDubstep/out-1</Source>
-   <Target>Non-Mixer.BassSynths (Out):BassSynthsOut/in-1</Target>
-  </Connection>
-  <Connection>
-   <Source>Non-Mixer.BassSynths (Main):BassZDancestep/out-1</Source>
-   <Target>Non-Mixer.BassSynths (Out):BassSynthsOut/in-1</Target>
-  </Connection>
-  <Connection>
-   <Source>Non-Mixer.BassSynths (Main):BassZRagstep/out-1</Source>
-   <Target>Non-Mixer.BassSynths (Out):BassSynthsOut/in-1</Target>
-  </Connection>
-  <Connection>
-   <Source>Non-Mixer.BassSynths (Main):BassZDupieux/out-1</Source>
-   <Target>Non-Mixer.BassSynths (Out):BassSynthsOut/in-1</Target>
-  </Connection>
-  <Connection>
-   <Source>Non-Mixer.BassSynths (Main):BassZPhrampton/out-1</Source>
-   <Target>Non-Mixer.BassSynths (Out):BassSynthsOut/in-1</Target>
-  </Connection>
-  <Connection>
    <Source>Non-Mixer.BassSynths (Out):BassSynthsOut/out-1</Source>
    <Target>sooperlooper:loop2_in_1</Target>
-  </Connection>
-  <Connection>
-   <Source>Non-Mixer.Synths (Main):ZDupieux/out-1</Source>
-   <Target>Non-Mixer.Synths (Out):SynthsOut/in-1</Target>
-  </Connection>
-  <Connection>
-   <Source>Non-Mixer.Synths (Main):ZNotSoRhodes/out-1</Source>
-   <Target>Non-Mixer.Synths (Out):SynthsOut/in-1</Target>
-  </Connection>
-  <Connection>
-   <Source>Non-Mixer.Synths (Main):Rhodes/out-1</Source>
-   <Target>Non-Mixer.Synths (Out):SynthsOut/in-1</Target>
-  </Connection>
-  <Connection>
-   <Source>Non-Mixer.Synths (Main):ZOrgan/out-1</Source>
-   <Target>Non-Mixer.Synths (Out):SynthsOut/in-1</Target>
   </Connection>
   <Connection>
    <Source>Non-Mixer.Synths (Main):ZBombarde/out-1</Source>
@@ -3316,6 +3336,10 @@
    <Target>Non-Mixer.SamplesWork (In):Samples3/in-1</Target>
   </Connection>
   <Connection>
+   <Source>Non-Mixer.SamplesFX1Delay (In):Samples1/out-1</Source>
+   <Target>Non-Mixer.SamplesFX1Delay (Process):SamplesFX1Delay/in-1</Target>
+  </Connection>
+  <Connection>
    <Source>Non-Mixer.Samples (Main):Samples4/out-1</Source>
    <Target>Non-Mixer.Samples (Out):SamplesOut/in-1</Target>
   </Connection>
@@ -3334,6 +3358,10 @@
   <Connection>
    <Source>Non-Mixer.Samples (Main):Samples4/out-1</Source>
    <Target>Non-Mixer.SamplesFX4Autofilter (In):Samples4/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.SamplesFX1Delay (In):Samples2/out-1</Source>
+   <Target>Non-Mixer.SamplesFX1Delay (Process):SamplesFX1Delay/in-1</Target>
   </Connection>
   <Connection>
    <Source>Non-Mixer.Samples (Main):Samples5/out-1</Source>
@@ -3360,6 +3388,70 @@
    <Target>Non-Mixer.SamplesWork (In):Samples5/in-1</Target>
   </Connection>
   <Connection>
+   <Source>Non-Mixer.SamplesFX3Reverb (In):Samples1/out-1</Source>
+   <Target>Non-Mixer.SamplesFX3Reverb (Process):SamplesFX3Reverb/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.SamplesFX2Delay (In):Samples1/out-1</Source>
+   <Target>Non-Mixer.SamplesFX2Delay (Process):SamplesFX2Delay/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.SamplesFX1Delay (In):Samples3/out-1</Source>
+   <Target>Non-Mixer.SamplesFX1Delay (Process):SamplesFX1Delay/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.SamplesFX3Reverb (In):Samples2/out-1</Source>
+   <Target>Non-Mixer.SamplesFX3Reverb (Process):SamplesFX3Reverb/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.SamplesFX2Delay (In):Samples2/out-1</Source>
+   <Target>Non-Mixer.SamplesFX2Delay (Process):SamplesFX2Delay/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.SamplesFX1Delay (In):Samples4/out-1</Source>
+   <Target>Non-Mixer.SamplesFX1Delay (Process):SamplesFX1Delay/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.SamplesWork (In):Samples1/out-1</Source>
+   <Target>Non-Mixer.SamplesWork (Process):SamplesWork/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.SamplesFX3Reverb (In):Samples3/out-1</Source>
+   <Target>Non-Mixer.SamplesFX3Reverb (Process):SamplesFX3Reverb/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.SamplesFX2Delay (In):Samples3/out-1</Source>
+   <Target>Non-Mixer.SamplesFX2Delay (Process):SamplesFX2Delay/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.SamplesFX1Delay (In):Samples5/out-1</Source>
+   <Target>Non-Mixer.SamplesFX1Delay (Process):SamplesFX1Delay/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.SamplesWork (In):Samples2/out-1</Source>
+   <Target>Non-Mixer.SamplesWork (Process):SamplesWork/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.SamplesFX4Autofilter (In):Samples1/out-1</Source>
+   <Target>Non-Mixer.SamplesFX4Autofilter (Process):SamplesFX4Autofilter/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.SamplesFX3Reverb (In):Samples4/out-1</Source>
+   <Target>Non-Mixer.SamplesFX3Reverb (Process):SamplesFX3Reverb/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.SamplesFX2Delay (In):Samples4/out-1</Source>
+   <Target>Non-Mixer.SamplesFX2Delay (Process):SamplesFX2Delay/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.SamplesWork (In):Samples3/out-1</Source>
+   <Target>Non-Mixer.SamplesWork (Process):SamplesWork/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.SamplesFX4Autofilter (In):Samples2/out-1</Source>
+   <Target>Non-Mixer.SamplesFX4Autofilter (Process):SamplesFX4Autofilter/in-1</Target>
+  </Connection>
+  <Connection>
    <Source>Non-Mixer.Samples (Out):SamplesOut/out-1</Source>
    <Target>Non-Mixer.MonitorsNano (MonitorsNano):Samples/in-1</Target>
   </Connection>
@@ -3370,6 +3462,14 @@
   <Connection>
    <Source>Non-Mixer.Samples (Out):SamplesOut/out-1</Source>
    <Target>Non-Mixer.Outputs (Outputs):Samples/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.SamplesFX3Reverb (In):Samples5/out-1</Source>
+   <Target>Non-Mixer.SamplesFX3Reverb (Process):SamplesFX3Reverb/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.SamplesFX2Delay (In):Samples5/out-1</Source>
+   <Target>Non-Mixer.SamplesFX2Delay (Process):SamplesFX2Delay/in-1</Target>
   </Connection>
   <Connection>
    <Source>Non-Mixer.Samples (Main):ConstantSampler/out-1</Source>
@@ -3388,136 +3488,32 @@
    <Target>Non-Mixer.SamplesFX4Autofilter (In):ConstantSampler/in-1</Target>
   </Connection>
   <Connection>
-   <Source>Non-Mixer.SamplesFX1Delay (In):Samples1/out-1</Source>
-   <Target>Non-Mixer.SamplesFX1Delay (Process):SamplesFX1Delay/in-1</Target>
-  </Connection>
-  <Connection>
-   <Source>Non-Mixer.SamplesFX1Delay (In):Samples2/out-1</Source>
-   <Target>Non-Mixer.SamplesFX1Delay (Process):SamplesFX1Delay/in-1</Target>
-  </Connection>
-  <Connection>
-   <Source>Non-Mixer.SamplesFX1Delay (In):Samples3/out-1</Source>
-   <Target>Non-Mixer.SamplesFX1Delay (Process):SamplesFX1Delay/in-1</Target>
-  </Connection>
-  <Connection>
-   <Source>Non-Mixer.SamplesFX1Delay (In):Samples4/out-1</Source>
-   <Target>Non-Mixer.SamplesFX1Delay (Process):SamplesFX1Delay/in-1</Target>
-  </Connection>
-  <Connection>
-   <Source>Non-Mixer.SamplesFX1Delay (In):Samples5/out-1</Source>
-   <Target>Non-Mixer.SamplesFX1Delay (Process):SamplesFX1Delay/in-1</Target>
-  </Connection>
-  <Connection>
-   <Source>Non-Mixer.SamplesFX1Delay (Process):SamplesFX1Delay/out-1</Source>
-   <Target>Non-Mixer.Samples (Out):SamplesOut/in-1</Target>
-  </Connection>
-  <Connection>
-   <Source>Non-Mixer.SamplesFX1Delay (In):ConstantSampler/out-1</Source>
-   <Target>Non-Mixer.SamplesFX1Delay (Process):SamplesFX1Delay/in-1</Target>
-  </Connection>
-  <Connection>
-   <Source>Non-Mixer.SamplesFX2Delay (In):Samples1/out-1</Source>
-   <Target>Non-Mixer.SamplesFX2Delay (Process):SamplesFX2Delay/in-1</Target>
-  </Connection>
-  <Connection>
-   <Source>Non-Mixer.SamplesFX2Delay (In):Samples2/out-1</Source>
-   <Target>Non-Mixer.SamplesFX2Delay (Process):SamplesFX2Delay/in-1</Target>
-  </Connection>
-  <Connection>
-   <Source>Non-Mixer.SamplesFX2Delay (In):Samples3/out-1</Source>
-   <Target>Non-Mixer.SamplesFX2Delay (Process):SamplesFX2Delay/in-1</Target>
-  </Connection>
-  <Connection>
-   <Source>Non-Mixer.SamplesFX2Delay (In):Samples4/out-1</Source>
-   <Target>Non-Mixer.SamplesFX2Delay (Process):SamplesFX2Delay/in-1</Target>
-  </Connection>
-  <Connection>
-   <Source>Non-Mixer.SamplesFX2Delay (In):Samples5/out-1</Source>
-   <Target>Non-Mixer.SamplesFX2Delay (Process):SamplesFX2Delay/in-1</Target>
-  </Connection>
-  <Connection>
-   <Source>Non-Mixer.SamplesFX2Delay (Process):SamplesFX2Delay/out-1</Source>
-   <Target>Non-Mixer.Samples (Out):SamplesOut/in-1</Target>
-  </Connection>
-  <Connection>
-   <Source>Non-Mixer.SamplesFX2Delay (In):ConstantSampler/out-1</Source>
-   <Target>Non-Mixer.SamplesFX2Delay (Process):SamplesFX2Delay/in-1</Target>
-  </Connection>
-  <Connection>
-   <Source>Non-Mixer.SamplesFX3Reverb (In):Samples1/out-1</Source>
-   <Target>Non-Mixer.SamplesFX3Reverb (Process):SamplesFX3Reverb/in-1</Target>
-  </Connection>
-  <Connection>
-   <Source>Non-Mixer.SamplesFX3Reverb (In):Samples2/out-1</Source>
-   <Target>Non-Mixer.SamplesFX3Reverb (Process):SamplesFX3Reverb/in-1</Target>
-  </Connection>
-  <Connection>
-   <Source>Non-Mixer.SamplesFX3Reverb (In):Samples3/out-1</Source>
-   <Target>Non-Mixer.SamplesFX3Reverb (Process):SamplesFX3Reverb/in-1</Target>
-  </Connection>
-  <Connection>
-   <Source>Non-Mixer.SamplesFX3Reverb (In):Samples4/out-1</Source>
-   <Target>Non-Mixer.SamplesFX3Reverb (Process):SamplesFX3Reverb/in-1</Target>
-  </Connection>
-  <Connection>
-   <Source>Non-Mixer.SamplesFX3Reverb (In):Samples5/out-1</Source>
-   <Target>Non-Mixer.SamplesFX3Reverb (Process):SamplesFX3Reverb/in-1</Target>
-  </Connection>
-  <Connection>
-   <Source>Non-Mixer.SamplesFX3Reverb (Process):SamplesFX3Reverb/out-1</Source>
-   <Target>Non-Mixer.Samples (Out):SamplesOut/in-1</Target>
-  </Connection>
-  <Connection>
-   <Source>Non-Mixer.SamplesFX3Reverb (In):ConstantSampler/out-1</Source>
-   <Target>Non-Mixer.SamplesFX3Reverb (Process):SamplesFX3Reverb/in-1</Target>
-  </Connection>
-  <Connection>
-   <Source>Non-Mixer.SamplesFX4Autofilter (In):Samples1/out-1</Source>
-   <Target>Non-Mixer.SamplesFX4Autofilter (Process):SamplesFX4Autofilter/in-1</Target>
-  </Connection>
-  <Connection>
-   <Source>Non-Mixer.SamplesFX4Autofilter (In):Samples2/out-1</Source>
-   <Target>Non-Mixer.SamplesFX4Autofilter (Process):SamplesFX4Autofilter/in-1</Target>
+   <Source>Non-Mixer.SamplesWork (In):Samples4/out-1</Source>
+   <Target>Non-Mixer.SamplesWork (Process):SamplesWork/in-1</Target>
   </Connection>
   <Connection>
    <Source>Non-Mixer.SamplesFX4Autofilter (In):Samples3/out-1</Source>
    <Target>Non-Mixer.SamplesFX4Autofilter (Process):SamplesFX4Autofilter/in-1</Target>
   </Connection>
   <Connection>
-   <Source>Non-Mixer.SamplesFX4Autofilter (In):Samples4/out-1</Source>
-   <Target>Non-Mixer.SamplesFX4Autofilter (Process):SamplesFX4Autofilter/in-1</Target>
-  </Connection>
-  <Connection>
-   <Source>Non-Mixer.SamplesFX4Autofilter (In):Samples5/out-1</Source>
-   <Target>Non-Mixer.SamplesFX4Autofilter (Process):SamplesFX4Autofilter/in-1</Target>
-  </Connection>
-  <Connection>
-   <Source>Non-Mixer.SamplesWork (In):Samples1/out-1</Source>
-   <Target>Non-Mixer.SamplesWork (Process):SamplesWork/in-1</Target>
-  </Connection>
-  <Connection>
-   <Source>Non-Mixer.SamplesWork (In):Samples2/out-1</Source>
-   <Target>Non-Mixer.SamplesWork (Process):SamplesWork/in-1</Target>
-  </Connection>
-  <Connection>
-   <Source>Non-Mixer.SamplesWork (In):Samples3/out-1</Source>
-   <Target>Non-Mixer.SamplesWork (Process):SamplesWork/in-1</Target>
-  </Connection>
-  <Connection>
-   <Source>Non-Mixer.SamplesFX4Autofilter (Process):SamplesFX4Autofilter/out-1</Source>
-   <Target>Non-Mixer.Samples (Out):SamplesOut/in-1</Target>
-  </Connection>
-  <Connection>
-   <Source>Non-Mixer.SamplesWork (In):Samples4/out-1</Source>
-   <Target>Non-Mixer.SamplesWork (Process):SamplesWork/in-1</Target>
-  </Connection>
-  <Connection>
-   <Source>Non-Mixer.SamplesFX4Autofilter (In):ConstantSampler/out-1</Source>
-   <Target>Non-Mixer.SamplesFX4Autofilter (Process):SamplesFX4Autofilter/in-1</Target>
+   <Source>Non-Mixer.VocalsNanoFX1Delay (In):NanoMeuf/out-1</Source>
+   <Target>Non-Mixer.VocalsNanoFX1Delay (Process):NanoFX1Delay/in-1</Target>
   </Connection>
   <Connection>
    <Source>Non-Mixer.SamplesWork (In):Samples5/out-1</Source>
    <Target>Non-Mixer.SamplesWork (Process):SamplesWork/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.SamplesFX4Autofilter (In):Samples4/out-1</Source>
+   <Target>Non-Mixer.SamplesFX4Autofilter (Process):SamplesFX4Autofilter/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.VocalsNanoFX1Delay (In):NanoNormo/out-1</Source>
+   <Target>Non-Mixer.VocalsNanoFX1Delay (Process):NanoFX1Delay/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.SamplesFX4Autofilter (In):Samples5/out-1</Source>
+   <Target>Non-Mixer.SamplesFX4Autofilter (Process):SamplesFX4Autofilter/in-1</Target>
   </Connection>
   <Connection>
    <Source>Non-Mixer.VocalsNano (In):NanoIn/out-1</Source>
@@ -3532,14 +3528,6 @@
    <Target>Non-Mixer.VocalsNano (Gars):NanoGars/in-1</Target>
   </Connection>
   <Connection>
-   <Source>Non-Mixer.VocalsNanoFX1Delay (In):NanoMeuf/out-1</Source>
-   <Target>Non-Mixer.VocalsNanoFX1Delay (Process):NanoFX1Delay/in-1</Target>
-  </Connection>
-  <Connection>
-   <Source>Non-Mixer.VocalsNanoFX1Delay (In):NanoNormo/out-1</Source>
-   <Target>Non-Mixer.VocalsNanoFX1Delay (Process):NanoFX1Delay/in-1</Target>
-  </Connection>
-  <Connection>
    <Source>Non-Mixer.VocalsNanoFX2Delay (In):NanoMeuf/out-1</Source>
    <Target>Non-Mixer.VocalsNanoFX2Delay (Process):NanoFX2Delay/in-1</Target>
   </Connection>
@@ -3550,10 +3538,6 @@
   <Connection>
    <Source>Non-Mixer.VocalsNanoFX2Delay (In):NanoNormo/out-1</Source>
    <Target>Non-Mixer.VocalsNanoFX2Delay (Process):NanoFX2Delay/in-1</Target>
-  </Connection>
-  <Connection>
-   <Source>Non-Mixer.SamplesWork (Process):SamplesWork/out-1</Source>
-   <Target>Non-Mixer.Samples (Out):SamplesOut/in-1</Target>
   </Connection>
   <Connection>
    <Source>Non-Mixer.VocalsNanoFX2Delay (In):NanoGars/out-1</Source>
@@ -3568,6 +3552,10 @@
    <Target>Non-Mixer.VocalsNanoFX4Disint (Process):NanoFX4Disint/in-1</Target>
   </Connection>
   <Connection>
+   <Source>Non-Mixer.SamplesFX1Delay (Process):SamplesFX1Delay/out-1</Source>
+   <Target>Non-Mixer.Samples (Out):SamplesOut/in-1</Target>
+  </Connection>
+  <Connection>
    <Source>Non-Mixer.VocalsNanoFX3TrapVerb (In):NanoNormo/out-1</Source>
    <Target>Non-Mixer.VocalsNanoFX3TrapVerb (Process):NanoFX3TrapVerb/in-1</Target>
   </Connection>
@@ -3576,8 +3564,8 @@
    <Target>Non-Mixer.VocalsNanoFX4Disint (Process):NanoFX4Disint/in-1</Target>
   </Connection>
   <Connection>
-   <Source>Non-Mixer.VocalsNano (Out):NanoOut/out-1</Source>
-   <Target>sooperlooper:loop5_in_1</Target>
+   <Source>Non-Mixer.SamplesFX1Delay (In):ConstantSampler/out-1</Source>
+   <Target>Non-Mixer.SamplesFX1Delay (Process):SamplesFX1Delay/in-1</Target>
   </Connection>
   <Connection>
    <Source>Non-Mixer.VocalsNanoFX3TrapVerb (In):NanoGars/out-1</Source>
@@ -3588,24 +3576,68 @@
    <Target>Non-Mixer.VocalsNanoFX4Disint (Process):NanoFX4Disint/in-1</Target>
   </Connection>
   <Connection>
+   <Source>Non-Mixer.SamplesFX3Reverb (Process):SamplesFX3Reverb/out-1</Source>
+   <Target>Non-Mixer.Samples (Out):SamplesOut/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.SamplesFX3Reverb (In):ConstantSampler/out-1</Source>
+   <Target>Non-Mixer.SamplesFX3Reverb (Process):SamplesFX3Reverb/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.SamplesFX2Delay (Process):SamplesFX2Delay/out-1</Source>
+   <Target>Non-Mixer.Samples (Out):SamplesOut/in-1</Target>
+  </Connection>
+  <Connection>
    <Source>Non-Mixer.VocalsNanoFX5RingMod (In):NanoMeuf/out-1</Source>
    <Target>Non-Mixer.VocalsNanoFX5RingMod (Process):NanoFX5RingMod/in-1</Target>
   </Connection>
   <Connection>
-   <Source>Non-Mixer.VocalsNanoFX1Delay (Process):NanoFX1Delay/out-1</Source>
-   <Target>Non-Mixer.VocalsNano (Out):NanoOut/in-1</Target>
+   <Source>Non-Mixer.SamplesFX2Delay (In):ConstantSampler/out-1</Source>
+   <Target>Non-Mixer.SamplesFX2Delay (Process):SamplesFX2Delay/in-1</Target>
   </Connection>
   <Connection>
    <Source>Non-Mixer.VocalsNanoFX5RingMod (In):NanoNormo/out-1</Source>
    <Target>Non-Mixer.VocalsNanoFX5RingMod (Process):NanoFX5RingMod/in-1</Target>
   </Connection>
   <Connection>
-   <Source>Non-Mixer.VocalsNanoFX2Delay (Process):NanoFX2Delay/out-1</Source>
-   <Target>Non-Mixer.VocalsNano (Out):NanoOut/in-1</Target>
+   <Source>Non-Mixer.SamplesWork (Process):SamplesWork/out-1</Source>
+   <Target>Non-Mixer.Samples (Out):SamplesOut/in-1</Target>
   </Connection>
   <Connection>
    <Source>Non-Mixer.VocalsNanoFX5RingMod (In):NanoGars/out-1</Source>
    <Target>Non-Mixer.VocalsNanoFX5RingMod (Process):NanoFX5RingMod/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.SamplesFX4Autofilter (Process):SamplesFX4Autofilter/out-1</Source>
+   <Target>Non-Mixer.Samples (Out):SamplesOut/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.VocalsNano (Out):NanoOut/out-1</Source>
+   <Target>sooperlooper:loop5_in_1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.SamplesFX4Autofilter (In):ConstantSampler/out-1</Source>
+   <Target>Non-Mixer.SamplesFX4Autofilter (Process):SamplesFX4Autofilter/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.VocalsNanoFX1Delay (Process):NanoFX1Delay/out-1</Source>
+   <Target>Non-Mixer.VocalsNano (Out):NanoOut/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.VocalsNanoFX2Delay (Process):NanoFX2Delay/out-1</Source>
+   <Target>Non-Mixer.VocalsNano (Out):NanoOut/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.VocalsNanoFX3TrapVerb (Process):NanoFX3TrapVerb/out-1</Source>
+   <Target>Non-Mixer.VocalsNano (Out):NanoOut/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.VocalsNanoFX4Disint (Process):NanoFX4Disint/out-1</Source>
+   <Target>Non-Mixer.VocalsNano (Out):NanoOut/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.VocalsNanoFX5RingMod (Process):NanoFX5RingMod/out-1</Source>
+   <Target>Non-Mixer.VocalsNano (Out):NanoOut/in-1</Target>
   </Connection>
   <Connection>
    <Source>Non-Mixer.VocalsNano (Meuf):NanoMeuf/aux-A/out-1</Source>
@@ -3644,10 +3676,6 @@
    <Target>Non-Mixer.VocalsNanoFX7Slice (In):NanoMeuf/in-1</Target>
   </Connection>
   <Connection>
-   <Source>Non-Mixer.VocalsNanoFX3TrapVerb (Process):NanoFX3TrapVerb/out-1</Source>
-   <Target>Non-Mixer.VocalsNano (Out):NanoOut/in-1</Target>
-  </Connection>
-  <Connection>
    <Source>Non-Mixer.VocalsNano (Meuf):NanoMeuf/aux-D/out-1</Source>
    <Target>Non-Mixer.VocalsNanoFX1Delay (In):NanoMeuf/in-1</Target>
   </Connection>
@@ -3677,14 +3705,6 @@
   </Connection>
   <Connection>
    <Source>Non-Mixer.VocalsNano (Meuf):NanoMeuf/out-1</Source>
-   <Target>Non-Mixer.VocalsNano (Out):NanoOut/in-1</Target>
-  </Connection>
-  <Connection>
-   <Source>Non-Mixer.VocalsNanoFX4Disint (Process):NanoFX4Disint/out-1</Source>
-   <Target>Non-Mixer.VocalsNano (Out):NanoOut/in-1</Target>
-  </Connection>
-  <Connection>
-   <Source>Non-Mixer.VocalsNanoFX5RingMod (Process):NanoFX5RingMod/out-1</Source>
    <Target>Non-Mixer.VocalsNano (Out):NanoOut/in-1</Target>
   </Connection>
   <Connection>
@@ -3820,19 +3840,19 @@
    <Target>Non-Mixer.VocalsNanoFX7Slice (In):NanoGars/in-1</Target>
   </Connection>
   <Connection>
-   <Source>Non-Mixer.VocalsNano (Gars):NanoGars/out-1</Source>
-   <Target>Non-Mixer.VocalsNano (Out):NanoOut/in-1</Target>
-  </Connection>
-  <Connection>
-   <Source>Non-Mixer.VocalsNano (ArtificialBackings):NanoABMeuf/out-1</Source>
-   <Target>Non-Mixer.VocalsNano (Out):NanoOut/in-1</Target>
-  </Connection>
-  <Connection>
    <Source>Non-Mixer.VocalsNano (ArtificialBackings):NanoABNormo/out-1</Source>
    <Target>Non-Mixer.VocalsNano (Out):NanoOut/in-1</Target>
   </Connection>
   <Connection>
+   <Source>Non-Mixer.VocalsNano (Gars):NanoGars/out-1</Source>
+   <Target>Non-Mixer.VocalsNano (Out):NanoOut/in-1</Target>
+  </Connection>
+  <Connection>
    <Source>Non-Mixer.VocalsNano (ArtificialBackings):NanoABGars/out-1</Source>
+   <Target>Non-Mixer.VocalsNano (Out):NanoOut/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.VocalsNano (ArtificialBackings):NanoABMeuf/out-1</Source>
    <Target>Non-Mixer.VocalsNano (Out):NanoOut/in-1</Target>
   </Connection>
   <Connection>
@@ -3888,18 +3908,6 @@
    <Target>Non-Mixer.Outputs (Outputs):VocalsKesch/in-1</Target>
   </Connection>
   <Connection>
-   <Source>a2j:seq192 MainSequencer [132] (capture): seq192 10</Source>
-   <Target>a2j:Tap192 ProdSampler [135] (playback): midi_in</Target>
-  </Connection>
-  <Connection>
-   <Source>a2j:seq192 MainSequencer [132] (capture): seq192 10</Source>
-   <Target>a2j:Tap192 ConstantSampler [136] (playback): midi_in</Target>
-  </Connection>
-  <Connection>
-   <Source>a2j:loop192 MidiLooper [130] (capture): Loop 0</Source>
-   <Target>QMidiArp.ZLowArp:in</Target>
-  </Connection>
-  <Connection>
    <Source>a2j:loop192 MidiLooper [130] (capture): Loop 1</Source>
    <Target>QMidiArp.CLowArp:in</Target>
   </Connection>
@@ -3920,12 +3928,36 @@
    <Target>Carla.HiCSynths/Trap:events-in</Target>
   </Connection>
   <Connection>
+   <Source>a2j:MonoSynthMicroTonal [133] (capture): SynthOut2</Source>
+   <Target>Carla.HiCSynths/EasyClassical:events-in</Target>
+  </Connection>
+  <Connection>
    <Source>ZynAddSubFX.ZLowSynths:part1/out-L</Source>
    <Target>Non-Mixer.BassSynths (Main):BassZDancestep/in-1</Target>
   </Connection>
   <Connection>
-   <Source>a2j:MonoSynthMicroTonal [133] (capture): SynthOut2</Source>
-   <Target>Carla.HiCSynths/EasyClassical:events-in</Target>
+   <Source>Non-Mixer.VocalsNanoFX6Granular (In):NanoMeuf/out-1</Source>
+   <Target>Non-Mixer.VocalsNanoFX6Granular (Process):NanoFX6Granular/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.VocalsNanoFX7Slice (Process):NanoFX7Slice/out-1</Source>
+   <Target>Non-Mixer.VocalsNano (Out):NanoOut/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>a2j:loop192 MidiLooper [130] (capture): Loop 0</Source>
+   <Target>QMidiArp.ZLowArp:in</Target>
+  </Connection>
+  <Connection>
+   <Source>ZynAddSubFX.ZHiSynths:part0/out-L</Source>
+   <Target>Non-Mixer.Synths (Main):ZDupieux/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.VocalsNanoFX6Granular (In):NanoNormo/out-1</Source>
+   <Target>Non-Mixer.VocalsNanoFX6Granular (Process):NanoFX6Granular/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>ZynAddSubFX.ZHiSynths:part1/out-L</Source>
+   <Target>Non-Mixer.Synths (Main):ZNotSoRhodes/in-1</Target>
   </Connection>
   <Connection>
    <Source>a2j:MonoSynthMicroTonal [133] (capture): SynthOut3</Source>
@@ -3936,12 +3968,12 @@
    <Target>Non-Mixer.BassSynths (Main):BassZRagstep/in-1</Target>
   </Connection>
   <Connection>
-   <Source>ZynAddSubFX.ZHiSynths:part0/out-L</Source>
-   <Target>Non-Mixer.Synths (Main):ZDupieux/in-1</Target>
+   <Source>ZynAddSubFX.ZLowSynths:part3/out-L</Source>
+   <Target>Non-Mixer.BassSynths (Main):BassZDupieux/in-1</Target>
   </Connection>
   <Connection>
-   <Source>ZynAddSubFX.ZHiSynths:part1/out-L</Source>
-   <Target>Non-Mixer.Synths (Main):ZNotSoRhodes/in-1</Target>
+   <Source>Non-Mixer.VocalsNanoFX6Granular (In):NanoGars/out-1</Source>
+   <Target>Non-Mixer.VocalsNanoFX6Granular (Process):NanoFX6Granular/in-1</Target>
   </Connection>
   <Connection>
    <Source>ZynAddSubFX.ZHiSynths:part2/out-L</Source>
@@ -3952,24 +3984,16 @@
    <Target>Non-Mixer.Synths (Main):ZOrgan/in-1</Target>
   </Connection>
   <Connection>
-   <Source>Non-Mixer.VocalsNanoFX6Granular (In):NanoMeuf/out-1</Source>
-   <Target>Non-Mixer.VocalsNanoFX6Granular (Process):NanoFX6Granular/in-1</Target>
-  </Connection>
-  <Connection>
    <Source>ZynAddSubFX.ZHiSynths:part4/out-L</Source>
    <Target>Non-Mixer.Synths (Main):ZCosma/in-1</Target>
   </Connection>
   <Connection>
-   <Source>Non-Mixer.VocalsNanoFX6Granular (In):NanoNormo/out-1</Source>
-   <Target>Non-Mixer.VocalsNanoFX6Granular (Process):NanoFX6Granular/in-1</Target>
+   <Source>Non-Mixer.VocalsNanoFX6Granular (Process):NanoFX6Granular/out-1</Source>
+   <Target>Non-Mixer.VocalsNano (Out):NanoOut/in-1</Target>
   </Connection>
   <Connection>
    <Source>ZynAddSubFX.ZHiSynths:part5/out-L</Source>
    <Target>Non-Mixer.Synths (Main):ZBombarde/in-1</Target>
-  </Connection>
-  <Connection>
-   <Source>Non-Mixer.VocalsNanoFX6Granular (In):NanoGars/out-1</Source>
-   <Target>Non-Mixer.VocalsNanoFX6Granular (Process):NanoFX6Granular/in-1</Target>
   </Connection>
   <Connection>
    <Source>ZynAddSubFX.ZHiSynths:part6/out-L</Source>
@@ -3986,10 +4010,6 @@
   <Connection>
    <Source>ZynAddSubFX.ZHiSynths:part9/out-L</Source>
    <Target>Non-Mixer.Synths (Main):ZStambul/in-1</Target>
-  </Connection>
-  <Connection>
-   <Source>Non-Mixer.VocalsNanoFX6Granular (Process):NanoFX6Granular/out-1</Source>
-   <Target>Non-Mixer.VocalsNano (Out):NanoOut/in-1</Target>
   </Connection>
   <Connection>
    <Source>ZynAddSubFX.ZHiSynths:part10/out-L</Source>
@@ -4016,18 +4036,6 @@
    <Target>Non-Mixer.VocalsNanoFX7Slice (Process):NanoFX7Slice/in-1</Target>
   </Connection>
   <Connection>
-   <Source>Non-Mixer.VocalsNanoFX7Slice (In):NanoNormo/out-1</Source>
-   <Target>Non-Mixer.VocalsNanoFX7Slice (Process):NanoFX7Slice/in-1</Target>
-  </Connection>
-  <Connection>
-   <Source>Non-Mixer.VocalsNanoFX7Slice (In):NanoGars/out-1</Source>
-   <Target>Non-Mixer.VocalsNanoFX7Slice (Process):NanoFX7Slice/in-1</Target>
-  </Connection>
-  <Connection>
-   <Source>Non-Mixer.VocalsNanoFX7Slice (Process):NanoFX7Slice/out-1</Source>
-   <Target>Non-Mixer.VocalsNano (Out):NanoOut/in-1</Target>
-  </Connection>
-  <Connection>
    <Source>a2j:seq192 MainSequencer [132] (capture): seq192 1</Source>
    <Target>a2j:ZynAddSubFX ZLowSynths [134] (playback): ZynAddSubFX</Target>
   </Connection>
@@ -4052,6 +4060,10 @@
    <Target>a2j:ZynAddSubFX ZHiSynths [131] (playback): ZynAddSubFX</Target>
   </Connection>
   <Connection>
+   <Source>Non-Mixer.VocalsNanoFX7Slice (In):NanoNormo/out-1</Source>
+   <Target>Non-Mixer.VocalsNanoFX7Slice (Process):NanoFX7Slice/in-1</Target>
+  </Connection>
+  <Connection>
    <Source>a2j:seq192 MainSequencer [132] (capture): seq192 4</Source>
    <Target>a2j:MonoSynthMicroTonal [133] (playback): SynthIn1</Target>
   </Connection>
@@ -4068,8 +4080,16 @@
    <Target>Carla.HiCSynths/Rhodes:events-in</Target>
   </Connection>
   <Connection>
-   <Source>ZynAddSubFX.ZLowSynths:part3/out-L</Source>
-   <Target>Non-Mixer.BassSynths (Main):BassZDupieux/in-1</Target>
+   <Source>Non-Mixer.VocalsNanoFX7Slice (In):NanoGars/out-1</Source>
+   <Target>Non-Mixer.VocalsNanoFX7Slice (Process):NanoFX7Slice/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>a2j:seq192 MainSequencer [132] (capture): seq192 10</Source>
+   <Target>a2j:Tap192 ProdSampler [135] (playback): midi_in</Target>
+  </Connection>
+  <Connection>
+   <Source>a2j:seq192 MainSequencer [132] (capture): seq192 10</Source>
+   <Target>a2j:Tap192 ConstantSampler [136] (playback): midi_in</Target>
   </Connection>
   <Connection>
    <Source>ZynAddSubFX.ZLowSynths:part4/out-L</Source>
@@ -4080,24 +4100,8 @@
    <Target>Non-Mixer.Samples (Main):Samples1/in-1</Target>
   </Connection>
   <Connection>
-   <Source>Carla.LowCSynths/Trap1:Out L</Source>
-   <Target>Non-Mixer.BassSynths (Main):BassTrap1/in-1</Target>
-  </Connection>
-  <Connection>
    <Source>Tap192.ConstantSampler:output-L</Source>
    <Target>Non-Mixer.Samples (Main):ConstantSampler/in-1</Target>
-  </Connection>
-  <Connection>
-   <Source>Carla.LowCSynths/Trap2:Out L</Source>
-   <Target>Non-Mixer.BassSynths (Main):BassTrap2/in-1</Target>
-  </Connection>
-  <Connection>
-   <Source>Carla.LowCSynths/Barkline:Out L</Source>
-   <Target>Non-Mixer.BassSynths (Main):BassBarkline/in-1</Target>
-  </Connection>
-  <Connection>
-   <Source>Carla.LowCSynths/Boom:Out L</Source>
-   <Target>Non-Mixer.BassSynths (Main):BassBoom/in-1</Target>
   </Connection>
   <Connection>
    <Source>Carla.HiCSynths/Rhodes:Left Output</Source>
@@ -4108,20 +4112,20 @@
    <Target>Non-Mixer.Synths (Main):Rhodes/in-1</Target>
   </Connection>
   <Connection>
-   <Source>Tap192.ProdSampler:Samples2-L</Source>
-   <Target>Non-Mixer.Samples (Main):Samples2/in-1</Target>
+   <Source>Carla.LowCSynths/Trap1:Out L</Source>
+   <Target>Non-Mixer.BassSynths (Main):BassTrap1/in-1</Target>
   </Connection>
   <Connection>
-   <Source>Tap192.ProdSampler:Samples3-L</Source>
-   <Target>Non-Mixer.Samples (Main):Samples3/in-1</Target>
-  </Connection>
-  <Connection>
-   <Source>Tap192.ProdSampler:Samples4-L</Source>
-   <Target>Non-Mixer.Samples (Main):Samples4/in-1</Target>
+   <Source>QMidiArp.ZLowArp:out 1</Source>
+   <Target>a2j:ZynAddSubFX ZLowSynths [134] (playback): ZynAddSubFX</Target>
   </Connection>
   <Connection>
    <Source>Carla.HiCSynths/DubstepHorn:Out L</Source>
    <Target>Non-Mixer.Synths (Main):DubstepHorn/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Carla.LowCSynths/Trap2:Out L</Source>
+   <Target>Non-Mixer.BassSynths (Main):BassTrap2/in-1</Target>
   </Connection>
   <Connection>
    <Source>Carla.HiCSynths/Trap:Out L</Source>
@@ -4132,24 +4136,12 @@
    <Target>Non-Mixer.Synths (Main):EasyClassical/in-1</Target>
   </Connection>
   <Connection>
-   <Source>Tap192.ProdSampler:Samples5-L</Source>
-   <Target>Non-Mixer.Samples (Main):Samples5/in-1</Target>
+   <Source>Carla.LowCSynths/Barkline:Out L</Source>
+   <Target>Non-Mixer.BassSynths (Main):BassBarkline/in-1</Target>
   </Connection>
   <Connection>
-   <Source>QMidiArp.CHiArp:out 1</Source>
-   <Target>Carla.HiCSynths/Rhodes:events-in</Target>
-  </Connection>
-  <Connection>
-   <Source>QMidiArp.CHiArp:out 1</Source>
-   <Target>Carla.HiCSynths/Trap:events-in</Target>
-  </Connection>
-  <Connection>
-   <Source>QMidiArp.CHiArp:out 1</Source>
-   <Target>Carla.HiCSynths/EasyClassical:events-in</Target>
-  </Connection>
-  <Connection>
-   <Source>QMidiArp.CHiArp:out 1</Source>
-   <Target>Carla.HiCSynths/DubstepHorn:events-in</Target>
+   <Source>Carla.LowCSynths/Boom:Out L</Source>
+   <Target>Non-Mixer.BassSynths (Main):BassBoom/in-1</Target>
   </Connection>
   <Connection>
    <Source>QMidiArp.CLowArp:out 1</Source>
@@ -4172,8 +4164,36 @@
    <Target>a2j:ZynAddSubFX ZHiSynths [131] (playback): ZynAddSubFX</Target>
   </Connection>
   <Connection>
-   <Source>QMidiArp.ZLowArp:out 1</Source>
-   <Target>a2j:ZynAddSubFX ZLowSynths [134] (playback): ZynAddSubFX</Target>
+   <Source>QMidiArp.CHiArp:out 1</Source>
+   <Target>Carla.HiCSynths/Rhodes:events-in</Target>
+  </Connection>
+  <Connection>
+   <Source>QMidiArp.CHiArp:out 1</Source>
+   <Target>Carla.HiCSynths/Trap:events-in</Target>
+  </Connection>
+  <Connection>
+   <Source>QMidiArp.CHiArp:out 1</Source>
+   <Target>Carla.HiCSynths/EasyClassical:events-in</Target>
+  </Connection>
+  <Connection>
+   <Source>QMidiArp.CHiArp:out 1</Source>
+   <Target>Carla.HiCSynths/DubstepHorn:events-in</Target>
+  </Connection>
+  <Connection>
+   <Source>Tap192.ProdSampler:Samples2-L</Source>
+   <Target>Non-Mixer.Samples (Main):Samples2/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Tap192.ProdSampler:Samples3-L</Source>
+   <Target>Non-Mixer.Samples (Main):Samples3/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Tap192.ProdSampler:Samples4-L</Source>
+   <Target>Non-Mixer.Samples (Main):Samples4/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Tap192.ProdSampler:Samples5-L</Source>
+   <Target>Non-Mixer.Samples (Main):Samples5/in-1</Target>
   </Connection>
  </ExternalPatchbay>
 </CARLA-PROJECT>
