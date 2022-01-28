@@ -34,7 +34,7 @@ seq192_c=`jack_lsp |grep seq192| grep "seq192 2"|cut -f1,2 -d ":"`
 for name in ZLowSynths CLowSynths ZHiSynths CHiSynths
 do
   change_mono_port_name "$seq192_c: seq192 $i" $name
-  (i++)
+  ((i++))
 done
 
 change_mono_port_name "$seq192_c: seq192 10" "Samples"

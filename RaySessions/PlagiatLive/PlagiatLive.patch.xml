@@ -414,9 +414,6 @@
  <connection from="a2j:seq192 MainSequencer [132] (capture): seq192 3" to="a2j:ZynAddSubFX ZHiSynths [131] (playback): ZynAddSubFX"/>
  <connection from="a2j:seq192 MainSequencer [132] (capture): seq192 1" to="a2j:ZynAddSubFX ZLowSynths [130] (playback): ZynAddSubFX"/>
  <connection from="a2j:seq192 MainSequencer [132] (capture): seq192 4" to="Carla.HiCSynths/Rhodes:events-in"/>
- <connection from="a2j:seq192 MainSequencer [132] (capture): seq192 4" to="Carla.HiCSynths/EasyClassical:events-in"/>
- <connection from="a2j:seq192 MainSequencer [132] (capture): seq192 4" to="Carla.HiCSynths/Trap:events-in"/>
- <connection from="a2j:seq192 MainSequencer [132] (capture): seq192 4" to="Carla.HiCSynths/DubstepHorn:events-in"/>
  <connection from="a2j:seq192 MainSequencer [132] (capture): seq192 2" to="Carla.LowCSynths/Trap1:events-in"/>
  <connection from="a2j:seq192 MainSequencer [132] (capture): seq192 2" to="Carla.LowCSynths/Barkline:events-in"/>
  <connection from="a2j:seq192 MainSequencer [132] (capture): seq192 2" to="Carla.LowCSynths/Trap2:events-in"/>
@@ -437,4 +434,21 @@
  <connection from="a2j:loop192 MidiLooper [134] (capture): Loop 1" to="QMidiArp.CLowArp:in"/>
  <connection from="a2j:loop192 MidiLooper [134] (capture): Loop 2" to="QMidiArp.ZHiArp:in"/>
  <connection from="a2j:loop192 MidiLooper [134] (capture): Loop 3" to="QMidiArp.CHiArp:in"/>
+ <connection from="a2j:MonoSynthMicroTonal [136] (capture): SynthOut2" to="Carla.HiCSynths/EasyClassical:events-in"/>
+ <connection from="a2j:MonoSynthMicroTonal [136] (capture): SynthOut3" to="Carla.HiCSynths/DubstepHorn:events-in"/>
+ <connection from="a2j:MonoSynthMicroTonal [136] (capture): SynthOut1" to="Carla.HiCSynths/Trap:events-in"/>
+ <connection from="a2j:seq192 MainSequencer [132] (capture): seq192 4" to="a2j:MonoSynthMicroTonal [136] (playback): SynthIn1"/>
+ <connection from="a2j:seq192 MainSequencer [132] (capture): seq192 4" to="a2j:MonoSynthMicroTonal [136] (playback): SynthIn2"/>
+ <connection from="a2j:seq192 MainSequencer [132] (capture): seq192 4" to="a2j:MonoSynthMicroTonal [136] (playback): SynthIn3"/>
+ <connection from="a2j:seq192 MainSequencer [132] (capture): seq192 10" to="a2j:Tap192 ProdSampler [135] (playback): midi_in"/>
+ <connection from="a2j:seq192 MainSequencer [132] (capture): seq192 10" to="a2j:Tap192 ConstantSampler [134] (playback): midi_in"/>
+ <connection from="a2j:seq192 MainSequencer [132] (capture): seq192 10" to="a2j:Tap192 ConstantSampler [136] (playback): midi_in"/>
+ <connection from="a2j:seq192 MainSequencer [132] (capture): seq192 3" to="a2j:ZynAddSubFX ZHiSynths [130] (playback): ZynAddSubFX"/>
+ <connection from="a2j:seq192 MainSequencer [132] (capture): seq192 4" to="a2j:MonoSynthMicroTonal [133] (playback): SynthIn1"/>
+ <connection from="a2j:seq192 MainSequencer [132] (capture): seq192 4" to="a2j:MonoSynthMicroTonal [133] (playback): SynthIn2"/>
+ <connection from="a2j:seq192 MainSequencer [132] (capture): seq192 4" to="a2j:MonoSynthMicroTonal [133] (playback): SynthIn3"/>
+ <connection from="a2j:MonoSynthMicroTonal [133] (capture): SynthOut1" to="Carla.HiCSynths/Trap:events-in"/>
+ <connection from="a2j:MonoSynthMicroTonal [133] (capture): SynthOut2" to="Carla.HiCSynths/EasyClassical:events-in"/>
+ <connection from="a2j:MonoSynthMicroTonal [133] (capture): SynthOut3" to="Carla.HiCSynths/DubstepHorn:events-in"/>
+ <connection from="a2j:seq192 MainSequencer [132] (capture): seq192 1" to="a2j:ZynAddSubFX ZLowSynths [134] (playback): ZynAddSubFX"/>
 </RAY-JACKPATCH>
