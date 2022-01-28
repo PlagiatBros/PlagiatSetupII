@@ -457,4 +457,27 @@
  <connection from="a2j:loop192 MidiLooper [131] (capture): Loop 2" to="QMidiArp.ZHiArp:in"/>
  <connection from="QMidiArp.ZHiArp:out 1" to="a2j:ZynAddSubFX ZHiSynths [130] (playback): ZynAddSubFX"/>
  <connection from="a2j:loop192 MidiLooper [131] (capture): Loop 3" to="QMidiArp.CHiArp:in"/>
+ <connection from="a2j:loop192 MidiLooper [130] (capture): Loop 0" to="QMidiArp.ZLowArp:in"/>
+ <connection from="a2j:loop192 MidiLooper [130] (capture): Loop 1" to="QMidiArp.CLowArp:in"/>
+ <connection from="a2j:loop192 MidiLooper [130] (capture): Loop 2" to="QMidiArp.ZHiArp:in"/>
+ <connection from="a2j:loop192 MidiLooper [130] (capture): Loop 3" to="QMidiArp.CHiArp:in"/>
+ <connection from="system:capture_1" to="Non-Mixer.Inputs (Inputs):Bass/in-1"/>
+ <connection from="system:capture_5" to="Non-Mixer.Inputs (Inputs):OH/in-1"/>
+ <connection from="system:capture_4" to="Non-Mixer.Inputs (Inputs):Kick/in-1"/>
+ <connection from="system:capture_6" to="Non-Mixer.Inputs (Inputs):Ambiance/in-1"/>
+ <connection from="system:capture_2" to="Non-Mixer.Inputs (Inputs):VocalsKesch/in-1"/>
+ <connection from="system:capture_3" to="Non-Mixer.Inputs (Inputs):VocalsNano/in-1"/>
+ <connection from="Non-Mixer.Outputs (Outputs):Kick/aux-A/out-1" to="system:playback_3"/>
+ <connection from="Non-Mixer.Outputs (Outputs):Bass/aux-A/out-1" to="system:playback_4"/>
+ <connection from="Non-Mixer.Outputs (Outputs):Synths/aux-A/out-1" to="system:playback_2"/>
+ <connection from="Non-Mixer.Outputs (Outputs):Samples/aux-A/out-1" to="system:playback_1"/>
+ <connection from="Non-Mixer.MonitorsNano (MonitorsNano):MonitorsNano/out-1" to="system:playback_5"/>
+ <connection from="Non-Mixer.MonitorsNano (MonitorsNano):MonitorsNano/out-2" to="system:playback_6"/>
+ <connection from="Non-Mixer.MonitorsKesch (MonitorsKesch):MonitorsKesch/out-1" to="system:playback_7"/>
+ <connection from="Non-Mixer.MonitorsKesch (MonitorsKesch):MonitorsKesch/out-2" to="system:playback_8"/>
+ <connection from="Non-Mixer.Outputs (Outputs):BassSynths/aux-A/out-1" to="system:playback_9"/>
+ <connection from="Non-Mixer.Outputs (Outputs):VocalsNano/aux-A/out-1" to="system:playback_10"/>
+ <connection from="Non-Mixer.Outputs (Outputs):VocalsKesch/aux-A/out-1" to="system:playback_11"/>
+ <connection from="Non-Mixer.Outputs (Outputs):FOH/out-1" to="system:playback_13"/>
+ <connection from="Non-Mixer.Outputs (Outputs):FOH/out-2" to="system:playback_14"/>
 </RAY-JACKPATCH>

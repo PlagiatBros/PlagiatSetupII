@@ -40,8 +40,36 @@ done
 change_mono_port_name "$seq192_c: seq192 10" "Samples"
 
 #Interface In
+change_mono_port_name "system:capture_1" "Bass"
+change_mono_port_name "system:capture_2" "VxKesch"
+change_mono_port_name "system:capture_3" "VxNano"
+change_mono_port_name "system:capture_4" "Kick"
+change_mono_port_name "system:capture_5" "OH"
+change_mono_port_name "system:capture_6" "Audience"
+change_mono_port_name "system:capture_7" "LHommesPorcs"
+
 
 #Interface out
+change_mono_port_name "system:playback_1" "Samples"
+change_mono_port_name "system:playback_2" "Synths"
+change_mono_port_name "system:playback_3" "Kick"
+change_mono_port_name "system:playback_4" "Bass"
+
+i=5
+for name in NanoHeadphones KeschHeadphones
+do
+  change_mono_port_name "system:playback_$i" "$name-L"
+  ((i++))
+  change_mono_port_name "system:playback_$i" "$name-R"
+  ((i++))
+done
+
+change_mono_port_name "system:playback_9" "BassSynths"
+change_mono_port_name "system:playback_10" "VxNano"
+change_mono_port_name "system:playback_11" "VxKesch"
+change_mono_port_name "system:playback_12" "VxLhommesPorcs"
+
+
 
 #Tapeutape
 #TODO : envisager un set de pretty names par morceau
