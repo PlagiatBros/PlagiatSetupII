@@ -23,7 +23,6 @@ done
 i=0
 for name in Dupieux NotSoRhodes Organ1 Organ2 CosmaDupieux Bombarde Trumpets1 Trumpets2 Trumpets3 Stambul Dre DiploLike JestoProunk 8bits 8bitsSub
 do
-  echo $i": ZynAddSubFX.ZHiSynths:part$i/out- >> "$name
   change_stereo_port_name "ZynAddSubFX.ZHiSynths:part$i/out-" "$name/Out-"
   ((i++))
 done
@@ -37,7 +36,8 @@ do
   ((i++))
 done
 
-change_mono_port_name "$seq192_c: seq192 10" "Samples"
+change_mono_port_name "$seq192_c: seq192 10" "ProdSampler"
+change_mono_port_name "$seq192_c: seq192 11" "ConstantSampler"
 
 #Interface In
 change_mono_port_name "system:capture_1" "Bass"

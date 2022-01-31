@@ -51,3 +51,4 @@ ray_control run_step
 # script here some actions to run once the session is loaded.
 bash "$RAY_SCRIPTS_DIR/hdspTools_start.sh"
 bash "$RAY_SCRIPTS_DIR/jackPrettyNames.sh"
+raysession -r /home/plagiat/PlagiatSetup/RaySessions -p 2000 &

@@ -1,3 +1,3 @@
 #!/bin/bash
-a2jmidid -e&
+a2jmidid -u -e&
 #sleep 1
