@@ -6,8 +6,7 @@ from liblo import ServerThread
 from mididings.extra.osc import SendOSC
 import mididings.engine as _engine
 import mididings.event as _event
-
-PORT = 19999
+from ports import get_port
 
 config(
     backend='alsa',
@@ -20,7 +19,6 @@ monosynth_pitch =  [0 for i in range(12)]
 manual_pitch = [0, 0, 0]
 pb_factor = [1/12., 1/12., 1]
 note = 0
-
 
 def panic(path, args):
     for port in range(3):
@@ -38,7 +36,7 @@ def set_microtonal(path, args):
     print('monosynth pitch: %s' % monosynth_pitch)
 
 
-server = ServerThread(PORT)
+server = ServerThread(get_port('CalfPitcher'))
 server.add_method('/monosynth/pitch', None, set_microtonal)
 server.add_method('/panic', None, panic)
 server.add_method('/pitch_panic', None, pitch_panic)
