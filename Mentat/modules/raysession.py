@@ -8,24 +8,15 @@ class RaySession(Module):
 
         super().__init__(*args, **kwargs)
 
-        self.ray_version = "0.12.0"
-
         self.client_statuses = {}
         self.client_init = []
 
-        if not self.engine.restarted:
-            self.send('/nsm/server/announce', 'RaySessionMonitor', ':monitor:', '', 1, 1,  os.getpid())
-        else:
-            self.send('/nsm/server/monitor_reset')
+        self.send('/ray/server/monitor_quit')
+        self.send('/ray/server/monitor_announce')
 
     def route(self, address, args):
 
-        self.logger.info([address, args])
-
-        if address == '/nsm/client/open':
-            self.send('/reply', '/nsm/client/open', '')
-
-        elif address == '/nsm/client/monitor/client_state':
+        if address == '/ray/monitor/client_state':
             name = args[0]
             status = args[1]
             if status:
@@ -33,15 +24,15 @@ class RaySession(Module):
             else:
                 self.client_stopped(name)
 
-        elif address == '/nsm/client/monitor/client_event':
+        elif address == '/ray/monitor/client_event':
             name = args[0]
             event = args[1]
-            if event == 'client_ready':
+            if event == 'ready':
                 if name not in self.client_statuses or self.client_statuses[name] == 0:
                     self.client_started(name)
-            elif event == 'client_stopped_by_server':
+            elif event == 'stopped_by_server':
                 self.client_stopped(name)
-            elif event == 'client_stopped_by_itself':
+            elif event == 'stopped_by_itself':
                 self.client_stopped(name)
                 self.info('module %s crashed')
                 os.popen('dunstify -u critical -a Mentat -t 0 "%s" "a crashé"' % name)

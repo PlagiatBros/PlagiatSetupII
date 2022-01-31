@@ -15,7 +15,7 @@ class NonMixer(Module):
         self.signals = {}
 
         # get submodules
-        self.send('/non/hello', self.engine.osc_server.get_url(), '', '', self.engine.name)
+        self.send('/non/hello', 'osc.udp://127.0.0.1:%i' % self.engine.port, '', '', self.engine.name)
         self.send('/signal/list')
 
         self.create_meta_parameters()
@@ -47,11 +47,9 @@ class NonMixer(Module):
                 # only 1 arg: list end
                 self.logger.info('strip list retreived')
 
-            return False
+        return False
 
 
     def create_meta_parameters(self):
 
-        if name == 'VocalsKesch':
-
-            pass
+        pass

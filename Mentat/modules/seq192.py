@@ -21,7 +21,7 @@ class Seq192(Module):
 
     def set_screenset(self, name):
         if name in self.screenset_map:
-            self.set('screenset', self.screenset_map('name'))
+            self.set('screenset', self.screenset_map[name])
         else:
             self.logger.error('screenset %s not found' % name)
 

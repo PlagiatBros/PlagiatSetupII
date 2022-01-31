@@ -17,11 +17,14 @@ engine.add_module(modules.raysession)
 
 
 # add routes
-from routes import *
-engine.add_route(trackA)
+import routes
+from mentat import Route
+for name, mod in getmembers(routes):
+    if name[0] != '_' and isinstance(mod, Route):
+        engine.add_route(mod)
 
 # set default route
-engine.set_route('A')
+engine.set_route('Snapshat')
 
 # enable autorestart upon file modification
 engine.autorestart()

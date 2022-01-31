@@ -1,0 +1,31 @@
+        (Carla) LowCSynths/Trap1 -> BassTrap1
+        (Carla) LowCSynths/Trap2 -> BassTrap2
+        (Carla) LowCSynths/Barkline -> BassBarkline
+        (Carla) LowCSynths/Boom -> BassBoom
+(Zyn) part0 -> BassZDubstep
+(Zyn) part1 -> BassZDancestep
+(Zyn) part2 -> BassZRagstep
+(Zyn) part3 -> BassZDupieux
+(Zyn) part4 -> BassZPhrampton
+Ca, c'était les grave
+s
+Les Aigus
+(Zyn) part0 -> ZDupieux
+(Zyn) part1 -> ZNotSoRhodes
+        (Carla) HiCSynths/Rhodes -> Rhodes
+(Zyn) part2 -> ZOrgan
+(Zyn) part3 -> ZOrgan
+(Zyn) part4 -> ZDupieux
+(Zyn) part5 -> ZBombarde
+(Zyn) part6 -> ZTrumpets
+(Zyn) part7 -> ZTrumpets
+(Zyn) part8 -> ZTrumpets
+        (Carla) HiCSynths/DubstepHorn -> DubstepHorn
+(Zyn) part9 -> ZStambul
+        (Carla) HiCSynths/Trap -> Trap
+(Zyn) part10 -> ZDre
+(Zyn) part11 -> ZDiploLike
+(Zyn) part12 -> ZJestoProunk
+(Zyn) part13 -> Z8bits
+(Zyn) part14 -> Z8bits
+        (Carla) HiCSynths/EasyClassical -> EasyClassical

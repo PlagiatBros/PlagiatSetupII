@@ -17,7 +17,10 @@ class GlobalRoute(Route):
 
     def route(self, protocol, port, address, args):
 
-        print('global route:', args)
+        # if address == '/active_keys':
+        #     return
+
+        print('global route:', port, address, args)
 
         if address == '/set_route':
             engine.set_route(args[0])
