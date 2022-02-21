@@ -501,4 +501,11 @@
  <connection to="a2j:Tap192 ProdSampler (playback): midi_in" from="a2j:JmjKeyboard (capture): ProdSampler"/>
  <connection to="a2j:Tap192 ConstantSampler (playback): midi_in" from="a2j:JmjKeyboard (capture): ConstantSampler"/>
  <connection to="a2j:JmjKeyboard (playback): in" from="a2j:Joystick (capture): out"/>
+ <connection to="a2j:loop192 MidiLooper (playback): Loop 0" from="a2j:Mk2Keyboard (capture): ZLow"/>
+ <connection to="a2j:loop192 MidiLooper (playback): Loop 1" from="a2j:Mk2Keyboard (capture): CLow"/>
+ <connection to="a2j:loop192 MidiLooper (playback): Loop 2" from="a2j:Mk2Keyboard (capture): ZHi"/>
+ <connection to="a2j:loop192 MidiLooper (playback): Loop 3" from="a2j:Mk2Keyboard (capture): CHiSf"/>
+ <connection to="a2j:loop192 MidiLooper (playback): Loop 4" from="a2j:Mk2Keyboard (capture): CHi"/>
+ <connection to="a2j:Tap192 ProdSampler (playback): midi_in" from="a2j:Mk2Keyboard (capture): ProdSampler"/>
+ <connection to="a2j:Tap192 ConstantSampler (playback): midi_in" from="a2j:Mk2Keyboard (capture): ConstantSampler"/>
 </RAY-JACKPATCH>
