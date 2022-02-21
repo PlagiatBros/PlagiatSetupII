@@ -29,7 +29,7 @@
 
 
 # script here some actions to run before loading the session.
-
+bash "$RAY_SCRIPTS_DIR/hdspTools_stop.sh"
 sh "$RAY_SCRIPTS_DIR/jack_start.sh"
 sh "$RAY_SCRIPTS_DIR/a2j_start.sh"
 
