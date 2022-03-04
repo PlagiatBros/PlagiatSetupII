@@ -1,3 +1,4 @@
+a2jmidid					install
 acl						install
 adduser						install
 adwaita-icon-theme				install
@@ -47,6 +48,9 @@ busybox						install
 bzip2						install
 ca-certificates					install
 calf-plugins					install
+caps						install
+carla						install
+carla-data					install
 checkinstall					install
 cmake						install
 cmake-data					install
@@ -87,6 +91,7 @@ debian-faq					install
 debianutils					install
 desktop-base					install
 desktop-file-utils				install
+dex						install
 dh-elpa-helper					install
 dictionaries-common				install
 diffutils					install
@@ -380,6 +385,8 @@ libblockdev-utils2:amd64			install
 libblockdev2:amd64				install
 libbluetooth3:amd64				install
 libbluray2:amd64				install
+libboost-python1.74.0				install
+libboost-thread1.74.0:amd64			install
 libbpf0:amd64					install
 libbrlapi0.8:amd64				install
 libbrotli-dev:amd64				install
@@ -412,6 +419,7 @@ libcap-ng0:amd64				install
 libcap2:amd64					install
 libcap2-bin					install
 libcbor0:amd64					install
+libcbor0.8:amd64				install
 libcc1-0:amd64					install
 libccolamd2:amd64				install
 libcdio-cdda2:amd64				install
@@ -423,8 +431,10 @@ libcgraph6:amd64				install
 libcholmod3:amd64				install
 libchromaprint1:amd64				install
 libclang1-11					install
+libclang1-13					install
 libclone-perl					install
 libcodec2-0.9:amd64				install
+libcodec2-1.0:amd64				install
 libcolamd2:amd64				install
 libcolord2:amd64				install
 libcolorhug2:amd64				install
@@ -460,6 +470,8 @@ libdca0:amd64					install
 libdconf1:amd64					install
 libde265-0:amd64				install
 libdebconfclient0:amd64				install
+libdecor-0-0:amd64				install
+libdecor-0-plugin-1-cairo:amd64			install
 libdeflate-dev:amd64				install
 libdeflate0:amd64				install
 libdevmapper-event1.02.1:amd64			install
@@ -544,6 +556,7 @@ libfltk-images1.3:amd64				install
 libfltk1.3:amd64				install
 libfltk1.3-dev					install
 libfluidsynth2:amd64				install
+libfluidsynth3:amd64				install
 libfont-afm-perl				install
 libfontconfig-dev:amd64				install
 libfontconfig1:amd64				install
@@ -631,6 +644,8 @@ libgraphite2-dev:amd64				install
 libgs9:amd64					install
 libgs9-common					install
 libgsm1:amd64					install
+libgspell-1-2:amd64				install
+libgspell-1-common				install
 libgssapi-krb5-2:amd64				install
 libgssdp-1.2-0:amd64				install
 libgstreamer-gl1.0-0:amd64			install
@@ -650,6 +665,8 @@ libgtkmm-3.0-1v5:amd64				install
 libgtkmm-3.0-dev:amd64				install
 libgtksourceview-3.0-1:amd64			install
 libgtksourceview-3.0-common			install
+libgtksourceview-4-0:amd64			install
+libgtksourceview-4-common			install
 libgtop-2.0-11:amd64				install
 libgtop2-common					install
 libgts-0.7-5:amd64				install
@@ -692,6 +709,7 @@ libidn2-0:amd64					install
 libiec61883-0:amd64				install
 libieee1284-3:amd64				install
 libigdgmm11:amd64				install
+libigdgmm12:amd64				install
 libijs-0.35:amd64				install
 libilmbase25:amd64				install
 libimlib2:amd64					install
@@ -735,6 +753,7 @@ libjson-glib-1.0-0:amd64			install
 libjson-glib-1.0-common				install
 libjson-xs-perl					install
 libjsoncpp24:amd64				install
+libjsoncpp25:amd64				install
 libjte2:amd64					install
 libjxr-tools					install
 libjxr0:amd64					install
@@ -742,6 +761,13 @@ libk5crypto3:amd64				install
 libkate1:amd64					install
 libkeybinder-3.0-0:amd64			install
 libkeyutils1:amd64				install
+libkf5config-bin				install
+libkf5config-data				install
+libkf5config-dev:amd64				install
+libkf5config-dev-bin				install
+libkf5config-doc				install
+libkf5configcore5:amd64				install
+libkf5configgui5:amd64				install
 libklibc:amd64					install
 libkmod2:amd64					install
 libkpathsea6:amd64				install
@@ -762,6 +788,7 @@ liblist-moreutils-perl				install
 liblist-moreutils-xs-perl			install
 libllvm11:amd64					install
 libllvm12:amd64					install
+libllvm13:amd64					install
 liblmdb0:amd64					install
 liblo-dev					install
 liblo7:amd64					install
@@ -809,6 +836,7 @@ libmnl0:amd64					install
 libmodplug1:amd64				install
 libmount-dev:amd64				install
 libmount1:amd64					install
+libmousepad0					install
 libmp3lame0:amd64				install
 libmpc3:amd64					install
 libmpcdec6:amd64				install
@@ -830,7 +858,7 @@ libndp0:amd64					install
 libnet-dbus-perl				install
 libnet-http-perl				install
 libnet-smtp-ssl-perl				install
-libnet-ssleay-perl				install
+libnet-ssleay-perl:amd64			install
 libnetfilter-conntrack3:amd64			install
 libnetpbm10					install
 libnettle6:amd64				install
@@ -908,6 +936,7 @@ libpcre2-32-0:amd64				install
 libpcre2-8-0:amd64				install
 libpcre2-dev:amd64				install
 libpcre2-posix2:amd64				install
+libpcre2-posix3:amd64				install
 libpcre3:amd64					install
 libpcre3-dev:amd64				install
 libpcre32-3:amd64				install
@@ -960,6 +989,7 @@ libqm-dsp0:amd64				install
 libqmi-glib5:amd64				install
 libqmi-proxy					install
 libqrencode4:amd64				install
+libqt5concurrent5:amd64				install
 libqt5core5a:amd64				install
 libqt5dbus5:amd64				install
 libqt5designer5:amd64				install
@@ -971,6 +1001,8 @@ libqt5multimedia5-plugins:amd64			install
 libqt5multimediagsttools5:amd64			install
 libqt5multimediawidgets5:amd64			install
 libqt5network5:amd64				install
+libqt5opengl5:amd64				install
+libqt5opengl5-dev:amd64				install
 libqt5positioning5:amd64			install
 libqt5printsupport5:amd64			install
 libqt5qml5:amd64				install
@@ -1001,6 +1033,7 @@ librsvg2-2:amd64				install
 librsvg2-common:amd64				install
 librtaudio6:amd64				install
 librtmidi5:amd64				install
+librtmidi6:amd64				install
 librtmp1:amd64					install
 librubberband2:amd64				install
 libruby2.7:amd64				install
@@ -1051,6 +1084,7 @@ libsord-dev:amd64				install
 libsoundtouch1:amd64				install
 libsoup-gnome2.4-1:amd64			install
 libsoup2.4-1:amd64				install
+libsoup2.4-common				install
 libsoxr0:amd64					install
 libspa-0.2-modules:amd64			install
 libspandsp2:amd64				install
@@ -1157,6 +1191,7 @@ libvpx6:amd64					install
 libvpx7:amd64					install
 libvte-2.91-0:amd64				install
 libvte-2.91-common				install
+libvulkan-dev:amd64				install
 libvulkan1:amd64				install
 libwacom-bin					install
 libwacom-common					install
@@ -1264,6 +1299,7 @@ libxml-twig-perl				install
 libxml-xpathengine-perl				install
 libxml2:amd64					install
 libxml2-dev:amd64				install
+libxmlb2:amd64					install
 libxmu6:amd64					install
 libxmuu1:amd64					install
 libxnvctrl0:amd64				install
@@ -1308,8 +1344,8 @@ linux-base					install
 linux-image-4.19.0-8-amd64			deinstall
 linux-image-5.10.0-9-amd64			install
 linux-image-5.10.0-9-rt-amd64			install
-linux-image-5.14.0-2-amd64			install
-linux-image-amd64				install
+linux-image-5.15.0-2-rt-amd64			install
+linux-image-rt-amd64				install
 linux-libc-dev:amd64				install
 lm-sensors					install
 locales						install
@@ -1414,7 +1450,6 @@ procps						install
 projectm-data					install
 psmisc						install
 publicsuffix					install
-pulseaudio-utils				install
 pyqt5-dev-tools					install
 python						deinstall
 python-apt-common				install
@@ -1432,6 +1467,7 @@ python3-dbus					install
 python3-debconf					install
 python3-debian					install
 python3-debianbts				install
+python3-decorator				install
 python3-dev					install
 python3-distutils				install
 python3-feedparser				install
@@ -1451,6 +1487,7 @@ python3-pyalsa					install
 python3-pyatspi					install
 python3-pycurl					install
 python3-pyinotify				install
+python3-pyparsing				install
 python3-pyqt5					install
 python3-pyqt5.qtsvg				install
 python3-pyqt5.sip				install
@@ -1476,9 +1513,14 @@ qhelpgenerator-qt5				install
 qjackctl					install
 qlcplus						install
 qlcplus-data					install
+qmidiarp					install
 qt5-assistant					install
 qt5-gtk-platformtheme:amd64			install
+qt5-qmake:amd64					install
+qt5-qmake-bin					install
 qtattributionsscanner-qt5			install
+qtbase5-dev:amd64				install
+qtbase5-dev-tools				install
 qtchooser					install
 qttools5-dev-tools				install
 qttranslations5-l10n				install
@@ -1491,6 +1533,7 @@ reportbug					install
 rev-plugins					install
 ristretto					install
 rpcsvc-proto					install
+rsync						install
 rsyslog						install
 rubberband-ladspa				install
 ruby						install
@@ -1535,6 +1578,7 @@ systemd-timesyncd				install
 sysvinit-utils					install
 tango-icon-theme				install
 tap-plugins					install
+tap192						install
 tapeutape					install
 tar						install
 task-desktop					install

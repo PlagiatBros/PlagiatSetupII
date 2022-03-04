@@ -31,7 +31,7 @@ class ZynPart(Module):
                 address = '/part%i%s' % (part, param)
                 self.feedback_addresses[address] = [part, param]
                 self.send(address)
-                self.logger.info('probe %s' % address)
+                self.logger.debug('probe %s' % address)
 
     def route(self, address, args):
 
