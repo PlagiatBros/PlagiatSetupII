@@ -32,6 +32,7 @@
 bash "$RAY_SCRIPTS_DIR/hdspTools_stop.sh"
 sh "$RAY_SCRIPTS_DIR/jack_start.sh"
 
+bash "$RAY_SCRIPTS_DIR/hdspTools_start.sh"
 
 
 
@@ -51,18 +52,3 @@ fi
 ray_control run_step
 
 # script here some actions to run once the session is loaded.
-bash "$RAY_SCRIPTS_DIR/restart_failedClients.sh"
-
-
-echo "starting a2j"
-sh "$RAY_SCRIPTS_DIR/a2j_start.sh"
-echo "starting hdsp tools"
-bash "$RAY_SCRIPTS_DIR/hdspTools_start.sh"
-echo "jack pretty naming"
-
-echo "launching jack patch"
-ray_control client patch start
-echo "launching GUI"
-raysession -r /home/plagiat/PlagiatSetup/RaySessions -p 2000 -ncm  > /home/plagiat/PlagiatSetup/log/raysession.log 2<&1 &
-sleep 10
-bash "$RAY_SCRIPTS_DIR/jackPrettyNames.sh"
