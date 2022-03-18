@@ -1016,7 +1016,7 @@
       ],
       "out_xy": [
         6,
-        -348
+        -295
       ],
       "flags": 68
     },
@@ -1296,7 +1296,7 @@
       ],
       "out_xy": [
         -10,
-        -199
+        -146
       ],
       "flags": 68
     },
@@ -2675,8 +2675,8 @@
         2013
       ],
       "out_xy": [
-        745,
-        2027
+        758,
+        2034
       ],
       "flags": 68
     },
@@ -2695,8 +2695,8 @@
         316
       ],
       "out_xy": [
-        274,
-        2080
+        240,
+        2067
       ],
       "flags": 68
     },
@@ -2731,8 +2731,8 @@
         1667
       ],
       "in_xy": [
-        512,
-        2055
+        547,
+        2033
       ],
       "out_xy": [
         741,
@@ -2751,8 +2751,8 @@
         1791
       ],
       "in_xy": [
-        514,
-        2117
+        547,
+        2112
       ],
       "out_xy": [
         741,
@@ -2771,8 +2771,8 @@
         1787
       ],
       "in_xy": [
-        511,
-        2188
+        547,
+        2208
       ],
       "out_xy": [
         741,
@@ -2967,8 +2967,8 @@
       "in_zone": "",
       "out_zone": "",
       "null_xy": [
-        1184,
-        2591
+        1185,
+        2673
       ],
       "in_xy": [
         102,
@@ -2996,7 +2996,7 @@
       ],
       "out_xy": [
         746,
-        1687
+        1705
       ],
       "flags": 68
     },
@@ -3008,7 +3008,7 @@
       "out_zone": "",
       "null_xy": [
         1185,
-        2488
+        2560
       ],
       "in_xy": [
         234,
@@ -3028,7 +3028,7 @@
       "out_zone": "",
       "null_xy": [
         1203,
-        2393
+        2447
       ],
       "in_xy": [
         332,
@@ -3076,7 +3076,7 @@
       ],
       "out_xy": [
         765,
-        1746
+        1764
       ],
       "flags": 68
     },
@@ -3087,8 +3087,8 @@
       "in_zone": "",
       "out_zone": "",
       "null_xy": [
-        1194,
-        2692
+        1185,
+        2786
       ],
       "in_xy": [
         332,
@@ -3116,7 +3116,7 @@
       ],
       "out_xy": [
         747,
-        1805
+        1823
       ],
       "flags": 68
     },
@@ -3135,8 +3135,8 @@
         2712
       ],
       "out_xy": [
-        770,
-        1937
+        772,
+        1959
       ],
       "flags": 68
     },
@@ -3155,8 +3155,8 @@
         2616
       ],
       "out_xy": [
-        753,
-        1876
+        748,
+        1882
       ],
       "flags": 68
     },
@@ -3168,7 +3168,7 @@
       "out_zone": "",
       "null_xy": [
         1205,
-        2203
+        2221
       ],
       "in_xy": [
         276,
@@ -3188,7 +3188,7 @@
       "out_zone": "",
       "null_xy": [
         1184,
-        2298
+        2334
       ],
       "in_xy": [
         278,
@@ -3232,7 +3232,7 @@
       ],
       "in_xy": [
         -58,
-        -28
+        -10
       ],
       "out_xy": [
         141,
@@ -4337,6 +4337,206 @@
       "out_xy": [
         0,
         2803
+      ],
+      "flags": 0
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Non-Mixer.VocalsNanoFX2Delay/Unnamed",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        -160,
+        1760
+      ],
+      "in_xy": [
+        400,
+        2807
+      ],
+      "out_xy": [
+        0,
+        2807
+      ],
+      "flags": 0
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Non-Mixer.VocalsNanoFX3TrapVerb/Unnamed",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        -160,
+        1760
+      ],
+      "in_xy": [
+        400,
+        2825
+      ],
+      "out_xy": [
+        0,
+        2825
+      ],
+      "flags": 0
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Non-Mixer.VocalsNanoFX4Disint/Unnamed",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        -160,
+        1760
+      ],
+      "in_xy": [
+        400,
+        2843
+      ],
+      "out_xy": [
+        0,
+        2843
+      ],
+      "flags": 0
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Non-Mixer.VocalsNanoFX5RingMod/Unnamed",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        -160,
+        1760
+      ],
+      "in_xy": [
+        400,
+        2861
+      ],
+      "out_xy": [
+        0,
+        2861
+      ],
+      "flags": 0
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Non-Mixer.VocalsNanoFX6Granular/Unnamed",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        -160,
+        1760
+      ],
+      "in_xy": [
+        400,
+        2879
+      ],
+      "out_xy": [
+        0,
+        2879
+      ],
+      "flags": 0
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Non-Mixer.VocalsNanoFX7Slice/Unnamed",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        -160,
+        1760
+      ],
+      "in_xy": [
+        400,
+        2897
+      ],
+      "out_xy": [
+        0,
+        2897
+      ],
+      "flags": 0
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Autotune (microtonal)",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        -160,
+        1760
+      ],
+      "in_xy": [
+        400,
+        2915
+      ],
+      "out_xy": [
+        0,
+        2915
+      ],
+      "flags": 0
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Autotune.NanoMeuf",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        416,
+        1986
+      ],
+      "in_xy": [
+        400,
+        2915
+      ],
+      "out_xy": [
+        0,
+        2915
+      ],
+      "flags": 0
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Autotune.NanoNormo",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        414,
+        2093
+      ],
+      "in_xy": [
+        400,
+        2915
+      ],
+      "out_xy": [
+        0,
+        2915
+      ],
+      "flags": 0
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Autotune.NanoGars",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        418,
+        2190
+      ],
+      "in_xy": [
+        400,
+        2915
+      ],
+      "out_xy": [
+        0,
+        2915
       ],
       "flags": 0
     }
