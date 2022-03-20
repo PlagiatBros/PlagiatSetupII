@@ -3412,6 +3412,10 @@
    <Target>Non-Mixer.SamplesFX4Autofilter (In):ConstantSampler/in-1</Target>
   </Connection>
   <Connection>
+   <Source>Non-Mixer.Samples (Main):ConstantSampler/out-1</Source>
+   <Target>Non-Mixer.Samples (Out):SamplesOut/in-1</Target>
+  </Connection>
+  <Connection>
    <Source>Non-Mixer.SamplesFX1Delay (In):Samples1/out-1</Source>
    <Target>Non-Mixer.SamplesFX1Delay (Process):SamplesFX1Delay/in-1</Target>
   </Connection>

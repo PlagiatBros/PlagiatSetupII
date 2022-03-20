@@ -31,9 +31,10 @@
 	Gain_Module 0x1D create :parameter_values "0.000000:0.000000" :is_default 1 :chain 0x1B :active 1
 	Meter_Module 0x1E create :is_default 1 :chain 0x1B :active 1
 	JACK_Module 0x1F create :parameter_values "1.000000:0.000000" :is_default 1 :chain 0x1B :active 1
-	Mixer_Strip 0x20 create :name "SamplesFX3Reverb" :width "narrow" :tab "fader" :color 1632236533 :gain_mode 0 :mute_mode 0 :group 0x26 :auto_input "" :manual_connection 0
+	Mixer_Strip 0x20 create :name "SamplesFX3Reverb" :width "narrow" :tab "signal" :color 1632236533 :gain_mode 0 :mute_mode 0 :group 0x26 :auto_input "" :manual_connection 0
 	Chain 0x21 create :strip 0x20 :tab "chain"
 	JACK_Module 0x22 create :parameter_values "0.000000:1.000000" :is_default 1 :chain 0x21 :active 1
+	Plugin_Module 0x51 create :lv2_plugin_uri "http://guitarix.sourceforge.net/plugins/gx_mbreverb_#_mbreverb_" :plugin_ins 1 :plugin_outs 1 :parameter_values "0.500000:0.500000:0.500000:0.500000:0.500000:80.000000:210.000000:1700.000000:5000.000000:0.500000:0.500000:0.500000:0.500000:0.500000:50.000000:50.000000:50.000000:50.000000:50.000000" :is_default 0 :chain 0x21 :active 1
 	Gain_Module 0x23 create :parameter_values "0.000000:0.000000" :is_default 1 :chain 0x21 :active 1
 	Meter_Module 0x24 create :is_default 1 :chain 0x21 :active 1
 	JACK_Module 0x25 create :parameter_values "1.000000:0.000000" :is_default 1 :chain 0x21 :active 1
