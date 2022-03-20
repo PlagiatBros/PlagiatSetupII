@@ -66,7 +66,7 @@
 	Mixer_Strip 0x43 create :name "BassZynWah" :width "narrow" :tab "signal" :color 828223282 :gain_mode 0 :mute_mode 0 :group 0x24 :auto_input "" :manual_connection 0
 	Chain 0x44 create :strip 0x43 :tab "chain"
 	JACK_Module 0x45 create :parameter_values "0.000000:1.000000" :is_default 1 :chain 0x44 :active 1
-	Plugin_Module 0xA8 create :lv2_plugin_uri "http://zynaddsubfx.sourceforge.net/fx#AlienWah" :plugin_ins 2 :plugin_outs 2 :parameter_values "70.000000:0.000000:0.000000:62.000000:60.000000:105.000000:25.000000:0.000000:64.000000" :is_default 0 :chain 0x44 :active 1
+	Plugin_Module 0xA8 create :lv2_plugin_uri "http://zynaddsubfx.sourceforge.net/fx#AlienWah" :plugin_ins 2 :plugin_outs 2 :parameter_values "70.000000:0.000000:0.000000:62.000000:60.000000:105.000000:25.000000:0.000000:64.000000" :is_default 0 :chain 0x44 :active 0
 	Plugin_Module 0xA9 create :lv2_plugin_uri "http://invadarecords.com/plugins/lv2/compressor/stereo" :plugin_ins 2 :plugin_outs 2 :parameter_values "0.000000:0.500000:0.015000:0.050000:0.000000:1.000000:0.000000:1.000000" :is_default 0 :chain 0x44 :active 1
 	Gain_Module 0x46 create :parameter_values "0.000000:0.000000" :is_default 1 :chain 0x44 :active 1
 	Meter_Module 0x47 create :is_default 1 :chain 0x44 :active 1
