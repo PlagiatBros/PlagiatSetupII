@@ -40,7 +40,9 @@ class Transport(Module):
         # self.engine.modules['Seq192'].set('tempo', bpm)
         # self.engine.modules['Loop192'].set('tempo', bpm)
 
-        for mixer, strip in [('Bass', 'BassScape')]:
+        for mixer, strip in [
+                ('Bass', 'BassScape'),
+                ('SynthFX5Scape', 'FX5Scape')]:
             self.engine.modules[mixer].set(strip, 'scape_bpm', bpm)
 
     def set_cycle(self, eighths, pattern=None):
