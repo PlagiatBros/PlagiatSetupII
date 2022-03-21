@@ -64,14 +64,20 @@ bass = NonMixer('Bass', 'osc', 10010)
 bassfx = BassFX('BassFX', 'osc', 10011)
 
 bassSynths = NonMixer('BassSynths', 'osc', 10020)
+
 synths = NonMixer('Synths', 'osc', 10030)
+synthsFX1Reverb = NonMixer('SynthsFX1Reverb', 'osc', 10031)
+synthsFX2Delay = NonMixer('SynthsFX2Delay', 'osc', 10032)
+synthsFX3Delay = NonMixer('SynthsFX3Delay', 'osc', 10033)
+synthsFX4Autofilter = NonMixer('SynthsFX4Autofilter', 'osc', 10034)
+synthsFX5TapeDelay = NonMixer('SynthsFX5TapeDelay', 'osc', 10035)
 
 samples = NonMixer('Samples', 'osc', 10040)
 samplesFX1Delay = NonMixer('SamplesFX1Delay', 'osc', 10041)
 samplesFX2Delay = NonMixer('SamplesFX2Delay', 'osc', 10042)
 samplesFX3Reverb = NonMixer('SamplesFX3Reverb', 'osc', 10043)
 samplesFX4Autofilter = NonMixer('SamplesFX4Autofilter', 'osc', 10044)
-samplesFX5TapeDelay = NonMixer('samplesFX5TapeDelay', 'osc', 10045)
+samplesFX5TapeDelay = NonMixer('SamplesFX5TapeDelay', 'osc', 10045)
 
 vocalsNano = Vocals('VocalsNano', 'osc', 10050)
 vocalsNanoFX1Delay = NonMixer('VocalsNanoFX1Delay', 'osc', 10051)
@@ -81,7 +87,7 @@ vocalsNanoFX4Disint = NonMixer('VocalsNanoFX4Disint', 'osc', 10054)
 vocalsNanoFX5RingMod = NonMixer('VocalsNanoFX5RingMod', 'osc', 10055)
 vocalsNanoFX6Granular = NonMixer('VocalsNanoFX6Granular', 'osc', 10056)
 vocalsNanoFX7Slice = NonMixer('VocalsNanoFX7Slice', 'osc', 10057)
-vocalsNanoFX8TapeDelay = NonMixer('vocalsNanoFX8TapeDelay', 'osc', 10058)
+vocalsNanoFX8TapeDelay = NonMixer('VocalsNanoFX8TapeDelay', 'osc', 10058)
 
 vocalsKesch = Vocals('VocalsKesch', 'osc', 10060)
 vocalsKeschFX1Delay = NonMixer('VocalsKeschFX1Delay', 'osc', 10061)
@@ -91,7 +97,7 @@ vocalsKeschFX4Disint = NonMixer('VocalsKeschFX4Disint', 'osc', 10064)
 vocalsKeschFX5RingMod = NonMixer('VocalsKeschFX5RingMod', 'osc', 10065)
 vocalsKeschFX6Granular = NonMixer('VocalsKeschFX6Granular', 'osc', 10066)
 vocalsKeschFX7Slice = NonMixer('VocalsKeschFX7Slice', 'osc', 10067)
-vocalsKeschFX8TapeDelay = NonMixer('vocalsKeschX8TapeDelay', 'osc', 10068)
+vocalsKeschFX8TapeDelay = NonMixer('VocalsKeschX8TapeDelay', 'osc', 10068)
 
 """
 Samplers
