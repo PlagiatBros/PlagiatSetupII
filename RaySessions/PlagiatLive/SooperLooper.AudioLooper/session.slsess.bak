@@ -1,6 +1,6 @@
 <?xml version='1.0'?>
 <SLSession version="1.7.8">
- <Globals tempo="0" input_gain="1" smart_eighths="1" eighth_per_cycle="16" common_dry="0" common_wet="1" auto_disable_latency="1" jack_timebase_master="0" use_midi_start="0" output_midi_clock="0" send_midi_start_on_trigger="0" use_midi_stop="0" sync_source="1"/>
+ <Globals tempo="0" input_gain="1" smart_eighths="1" eighth_per_cycle="16" common_dry="0" common_wet="1" auto_disable_latency="1" jack_timebase_master="1" use_midi_start="0" output_midi_clock="0" send_midi_start_on_trigger="0" use_midi_stop="0" sync_source="-3"/>
  <Loopers>
   <Looper pitch_shift="0" use_common_outs="yes" tempo_stretch="no" discrete_io="yes" stretch_ratio="1" loop_secs="40" use_common_ins="yes" auto_latency="yes" channels="1" relative_sync="no" index="0" discrete_prefader="yes">
    <Panner bypassed="no" link_direction="0" linked="no">
@@ -72,7 +72,7 @@
    </Panner>
    <Controls>
     <Control value="0" name="rec_thresh"/>
-    <Control value="0" name="dry"/>
+    <Control value="1" name="dry"/>
     <Control value="1" name="wet"/>
     <Control value="1" name="feedback"/>
     <Control value="1" name="rate"/>

@@ -73,8 +73,8 @@ class Transport(Module):
 
         else:
 
-            self.engine.modules['Looper'].start()
-            # self.engine.modules['Seq192'].start()
+            # self.engine.modules['Looper'].start()
+            self.engine.modules['Seq192'].start()
             # self.engine.modules['Loop192'].start()
 
         self.engine.modules['Klick'].start()
@@ -87,8 +87,8 @@ class Transport(Module):
 
         else:
 
-            self.engine.modules['Looper'].stop()
-            # self.engine.modules['Seq192'].stop()
+            # self.engine.modules['Looper'].stop()
+            self.engine.modules['Seq192'].stop()
             # self.engine.modules['Loop192'].stop()
 
         self.engine.modules['Klick'].stop()

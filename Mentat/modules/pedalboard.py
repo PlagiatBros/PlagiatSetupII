@@ -15,9 +15,10 @@ class PedalBoard(Module):
 
     def route(self, address, args):
 
-        if args[0] == 0:
+        if args[0] == 1 and not self.route_select:
 
             self.engine.modules['Transport'].stop()
+            return False # bypass further routing
 
         elif args[0] == 12:
 

@@ -11,7 +11,7 @@ class Tap192(Module):
         self.ready = False
         self.pending_kit = None
 
-        self.add_parameter('kit', '/kit/select', 's', default='snapshat')
+        self.add_parameter('kit', '/kit/select', 's', default='s:Snapshat')
 
         self.send('/setup/get/kits_list', 'Plagiat')
 
@@ -21,6 +21,7 @@ class Tap192(Module):
 
             if name in self.kits:
 
+                name = 's:' + name
                 self.set('kit', name)
                 self.logger.info('switched to kit %s' % name)
 
@@ -36,7 +37,7 @@ class Tap192(Module):
 
     def route(self, address, args):
 
-        if address == '/tap192/kits_list':
+        if address == '/setup/tap192/kits_list':
 
             self.kits = args[1:]
 

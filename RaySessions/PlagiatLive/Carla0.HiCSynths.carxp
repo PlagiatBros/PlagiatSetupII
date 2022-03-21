@@ -1,0 +1,5091 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE CARLA-PROJECT>
+<CARLA-PROJECT VERSION='2.4'>
+ <EngineSettings>
+  <ForceStereo>false</ForceStereo>
+  <PreferPluginBridges>false</PreferPluginBridges>
+  <PreferUiBridges>true</PreferUiBridges>
+  <UIsAlwaysOnTop>false</UIsAlwaysOnTop>
+  <MaxParameters>200</MaxParameters>
+  <UIBridgesTimeout>4000</UIBridgesTimeout>
+ </EngineSettings>
+
+ <Transport>
+  <BeatsPerMinute>120</BeatsPerMinute>
+ </Transport>
+
+ <!-- ACE Fluid Synth -->
+ <Plugin>
+  <Info>
+   <Type>LV2</Type>
+   <Name>Rhodes</Name>
+   <URI>urn:ardour:a-fluidsynth</URI>
+  </Info>
+
+  <Data>
+   <Active>No</Active>
+   <ControlChannel>1</ControlChannel>
+   <Options>0x3f0</Options>
+
+   <Parameter>
+    <Index>0</Index>
+    <Name>Output Level</Name>
+    <Symbol>level</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>1</Index>
+    <Name>Reverb Enable</Name>
+    <Symbol>rev_enable</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>2</Index>
+    <Name>Reverb Roomsize</Name>
+    <Symbol>rev_roomsize</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>3</Index>
+    <Name>Reverb Damping</Name>
+    <Symbol>rev_damp</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>4</Index>
+    <Name>Reverb Width</Name>
+    <Symbol>rev_width</Symbol>
+    <Value>10</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>5</Index>
+    <Name>Reverb Dry/Wet</Name>
+    <Symbol>rev_level</Symbol>
+    <Value>0.100000001490116</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>6</Index>
+    <Name>Chorus Enable</Name>
+    <Symbol>chorus_enable</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>7</Index>
+    <Name>Chorus Voice Count</Name>
+    <Symbol>chorus_nr</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>8</Index>
+    <Name>Chorus Speed</Name>
+    <Symbol>chorus_speed</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>9</Index>
+    <Name>Chorus Depth</Name>
+    <Symbol>chorus_depth</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>10</Index>
+    <Name>Chorus Level</Name>
+    <Symbol>chorus_level</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>11</Index>
+    <Name>Chorus Type</Name>
+    <Symbol>chorus_type</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>12</Index>
+    <Name>Enable</Name>
+    <Symbol>enable</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#Path</Type>
+    <Key>urn:ardour:a-fluidsynth:sf2file</Key>
+    <Value>jRhodes3.sf2</Value>
+   </CustomData>
+  </Data>
+ </Plugin>
+
+ <!-- Calf Monosynth -->
+ <Plugin>
+  <Info>
+   <Type>LV2</Type>
+   <Name>DubstepHorn</Name>
+   <URI>http://calf.sourceforge.net/plugins/Monosynth</URI>
+  </Info>
+
+  <Data>
+   <Active>Yes</Active>
+   <ControlChannel>1</ControlChannel>
+   <Options>0x3f1</Options>
+
+   <Parameter>
+    <Index>0</Index>
+    <Name>Osc1 Wave</Name>
+    <Symbol>o1_wave</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>1</Index>
+    <Name>Osc2 Wave</Name>
+    <Symbol>o2_wave</Symbol>
+    <Value>7</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>2</Index>
+    <Name>Osc1 PW</Name>
+    <Symbol>o1_pw</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>3</Index>
+    <Name>Osc2 PW</Name>
+    <Symbol>o2_pw</Symbol>
+    <Value>-1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>4</Index>
+    <Name>O1&lt;&gt;2 Detune</Name>
+    <Symbol>o12_detune</Symbol>
+    <Value>10</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>5</Index>
+    <Name>Osc2 Transpose</Name>
+    <Symbol>o2_xpose</Symbol>
+    <Value>12</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>6</Index>
+    <Name>Phase mode</Name>
+    <Symbol>phase_mode</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>7</Index>
+    <Name>O1&lt;&gt;2 Mix</Name>
+    <Symbol>o12_mix</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>8</Index>
+    <Name>Filter</Name>
+    <Symbol>filter</Symbol>
+    <Value>4</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>9</Index>
+    <Name>Cutoff</Name>
+    <Symbol>cutoff</Symbol>
+    <Value>114.718002319336</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>10</Index>
+    <Name>Resonance</Name>
+    <Symbol>res</Symbol>
+    <Value>6</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>11</Index>
+    <Name>Separation</Name>
+    <Symbol>filter_sep</Symbol>
+    <Value>192</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>12</Index>
+    <Name>Env-&gt;Cutoff</Name>
+    <Symbol>env2cutoff</Symbol>
+    <Value>9288</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>13</Index>
+    <Name>Env-&gt;Res</Name>
+    <Symbol>env2res</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>14</Index>
+    <Name>Env-&gt;Amp</Name>
+    <Symbol>env2amp</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>15</Index>
+    <Name>EG1 Attack</Name>
+    <Symbol>adsr_a</Symbol>
+    <Value>37.1660003662109</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>16</Index>
+    <Name>EG1 Decay</Name>
+    <Symbol>adsr_d</Symbol>
+    <Value>68.765998840332</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>17</Index>
+    <Name>EG1 Sustain</Name>
+    <Symbol>adsr_s</Symbol>
+    <Value>0.570100009441376</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>18</Index>
+    <Name>EG1 Fade</Name>
+    <Symbol>adsr_f</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>19</Index>
+    <Name>EG1 Release</Name>
+    <Symbol>adsr_r</Symbol>
+    <Value>91.8440017700195</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>20</Index>
+    <Name>Key Follow</Name>
+    <Symbol>key_follow</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>21</Index>
+    <Name>Legato Mode</Name>
+    <Symbol>legato</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>22</Index>
+    <Name>Portamento</Name>
+    <Symbol>portamento</Symbol>
+    <Value>56.1749992370605</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>23</Index>
+    <Name>Vel-&gt;Filter</Name>
+    <Symbol>vel2filter</Symbol>
+    <Value>0.400000005960464</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>24</Index>
+    <Name>Vel-&gt;Amp</Name>
+    <Symbol>vel2amp</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>25</Index>
+    <Name>Volume</Name>
+    <Symbol>master</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>26</Index>
+    <Name>PBend Range</Name>
+    <Symbol>pbend_range</Symbol>
+    <Value>2400</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>27</Index>
+    <Name>LFO1 Rate</Name>
+    <Symbol>lfo_rate</Symbol>
+    <Value>6.39599990844727</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>28</Index>
+    <Name>LFO1 Delay</Name>
+    <Symbol>lfo_delay</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>29</Index>
+    <Name>LFO1-&gt;Filter</Name>
+    <Symbol>lfo2filter</Symbol>
+    <Value>768</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>30</Index>
+    <Name>LFO1-&gt;Pitch</Name>
+    <Symbol>lfo2pitch</Symbol>
+    <Value>100</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>31</Index>
+    <Name>LFO1-&gt;PW</Name>
+    <Symbol>lfo2pw</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>32</Index>
+    <Name>ModWheel-&gt;LFO1</Name>
+    <Symbol>mwhl2lfo</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>33</Index>
+    <Name>Scale Detune</Name>
+    <Symbol>scale_detune</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>34</Index>
+    <Name>EG2-&gt;Cutoff</Name>
+    <Symbol>adsr2_cutoff</Symbol>
+    <Value>864</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>35</Index>
+    <Name>EG2-&gt;Res</Name>
+    <Symbol>adsr2_res</Symbol>
+    <Value>0.239999994635582</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>36</Index>
+    <Name>EG2-&gt;Amp</Name>
+    <Symbol>adsr2_amp</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>37</Index>
+    <Name>EG2 Attack</Name>
+    <Symbol>adsr2_a</Symbol>
+    <Value>2.91000008583069</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>38</Index>
+    <Name>EG2 Decay</Name>
+    <Symbol>adsr2_d</Symbol>
+    <Value>532.385986328125</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>39</Index>
+    <Name>EG2 Sustain</Name>
+    <Symbol>adsr2_s</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>40</Index>
+    <Name>EG2 Fade</Name>
+    <Symbol>adsr2_f</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>41</Index>
+    <Name>Release</Name>
+    <Symbol>adsr2_r</Symbol>
+    <Value>50</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>42</Index>
+    <Name>Osc1 Stretch</Name>
+    <Symbol>o1_stretch</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>43</Index>
+    <Name>Osc1 Window</Name>
+    <Symbol>o1_window</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>44</Index>
+    <Name>LFO1 Trigger Mode</Name>
+    <Symbol>lfo1_trig</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>45</Index>
+    <Name>LFO2 Trigger Mode</Name>
+    <Symbol>lfo2_trig</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>46</Index>
+    <Name>LFO1 Rate</Name>
+    <Symbol>lfo2_rate</Symbol>
+    <Value>9.35200023651123</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>47</Index>
+    <Name>LFO1 Delay</Name>
+    <Symbol>lfo2_delay</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>48</Index>
+    <Name>Osc2 Unison</Name>
+    <Symbol>o2_unison</Symbol>
+    <Value>0.439999997615814</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>49</Index>
+    <Name>Osc2 Unison Detune</Name>
+    <Symbol>o2_unisonfrq</Symbol>
+    <Value>2.04500007629395</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>50</Index>
+    <Name>Osc1 Transpose</Name>
+    <Symbol>o1_xpose</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>51</Index>
+    <Name>MIDI Channel</Name>
+    <Symbol>midi</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:0,0</Key>
+    <Value>None</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:0,1</Key>
+    <Value>0..1</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:0,2</Key>
+    <Value>None</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:0,3</Key>
+    <Value>0</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:0,4</Key>
+    <Value>None</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:1,0</Key>
+    <Value>None</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:1,1</Key>
+    <Value>0..1</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:1,2</Key>
+    <Value>None</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:1,3</Key>
+    <Value>0</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:1,4</Key>
+    <Value>None</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:2,0</Key>
+    <Value>None</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:2,1</Key>
+    <Value>0..1</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:2,2</Key>
+    <Value>None</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:2,3</Key>
+    <Value>0</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:2,4</Key>
+    <Value>None</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:3,0</Key>
+    <Value>None</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:3,1</Key>
+    <Value>0..1</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:3,2</Key>
+    <Value>None</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:3,3</Key>
+    <Value>0</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:3,4</Key>
+    <Value>None</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:4,0</Key>
+    <Value>None</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:4,1</Key>
+    <Value>0..1</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:4,2</Key>
+    <Value>None</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:4,3</Key>
+    <Value>0</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:4,4</Key>
+    <Value>None</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:5,0</Key>
+    <Value>None</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:5,1</Key>
+    <Value>0..1</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:5,2</Key>
+    <Value>None</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:5,3</Key>
+    <Value>0</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:5,4</Key>
+    <Value>None</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:6,0</Key>
+    <Value>None</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:6,1</Key>
+    <Value>0..1</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:6,2</Key>
+    <Value>None</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:6,3</Key>
+    <Value>0</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:6,4</Key>
+    <Value>None</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:7,0</Key>
+    <Value>None</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:7,1</Key>
+    <Value>0..1</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:7,2</Key>
+    <Value>None</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:7,3</Key>
+    <Value>0</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:7,4</Key>
+    <Value>None</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:8,0</Key>
+    <Value>None</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:8,1</Key>
+    <Value>0..1</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:8,2</Key>
+    <Value>None</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:8,3</Key>
+    <Value>0</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:8,4</Key>
+    <Value>None</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:9,0</Key>
+    <Value>None</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:9,1</Key>
+    <Value>0..1</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:9,2</Key>
+    <Value>None</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:9,3</Key>
+    <Value>0</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:9,4</Key>
+    <Value>None</Value>
+   </CustomData>
+  </Data>
+ </Plugin>
+
+ <!-- Calf Monosynth -->
+ <Plugin>
+  <Info>
+   <Type>LV2</Type>
+   <Name>Trap</Name>
+   <URI>http://calf.sourceforge.net/plugins/Monosynth</URI>
+  </Info>
+
+  <Data>
+   <Active>Yes</Active>
+   <ControlChannel>1</ControlChannel>
+   <Options>0x3f1</Options>
+
+   <Parameter>
+    <Index>0</Index>
+    <Name>Osc1 Wave</Name>
+    <Symbol>o1_wave</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>1</Index>
+    <Name>Osc2 Wave</Name>
+    <Symbol>o2_wave</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>2</Index>
+    <Name>Osc1 PW</Name>
+    <Symbol>o1_pw</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>3</Index>
+    <Name>Osc2 PW</Name>
+    <Symbol>o2_pw</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>4</Index>
+    <Name>O1&lt;&gt;2 Detune</Name>
+    <Symbol>o12_detune</Symbol>
+    <Value>10</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>5</Index>
+    <Name>Osc2 Transpose</Name>
+    <Symbol>o2_xpose</Symbol>
+    <Value>12</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>6</Index>
+    <Name>Phase mode</Name>
+    <Symbol>phase_mode</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>7</Index>
+    <Name>O1&lt;&gt;2 Mix</Name>
+    <Symbol>o12_mix</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>8</Index>
+    <Name>Filter</Name>
+    <Symbol>filter</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>9</Index>
+    <Name>Cutoff</Name>
+    <Symbol>cutoff</Symbol>
+    <Value>33</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>10</Index>
+    <Name>Resonance</Name>
+    <Symbol>res</Symbol>
+    <Value>3</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>11</Index>
+    <Name>Separation</Name>
+    <Symbol>filter_sep</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>12</Index>
+    <Name>Env-&gt;Cutoff</Name>
+    <Symbol>env2cutoff</Symbol>
+    <Value>8000</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>13</Index>
+    <Name>Env-&gt;Res</Name>
+    <Symbol>env2res</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>14</Index>
+    <Name>Env-&gt;Amp</Name>
+    <Symbol>env2amp</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>15</Index>
+    <Name>EG1 Attack</Name>
+    <Symbol>adsr_a</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>16</Index>
+    <Name>EG1 Decay</Name>
+    <Symbol>adsr_d</Symbol>
+    <Value>350</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>17</Index>
+    <Name>EG1 Sustain</Name>
+    <Symbol>adsr_s</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>18</Index>
+    <Name>EG1 Fade</Name>
+    <Symbol>adsr_f</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>19</Index>
+    <Name>EG1 Release</Name>
+    <Symbol>adsr_r</Symbol>
+    <Value>100</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>20</Index>
+    <Name>Key Follow</Name>
+    <Symbol>key_follow</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>21</Index>
+    <Name>Legato Mode</Name>
+    <Symbol>legato</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>22</Index>
+    <Name>Portamento</Name>
+    <Symbol>portamento</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>23</Index>
+    <Name>Vel-&gt;Filter</Name>
+    <Symbol>vel2filter</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>24</Index>
+    <Name>Vel-&gt;Amp</Name>
+    <Symbol>vel2amp</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>25</Index>
+    <Name>Volume</Name>
+    <Symbol>master</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>26</Index>
+    <Name>PBend Range</Name>
+    <Symbol>pbend_range</Symbol>
+    <Value>200</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>27</Index>
+    <Name>LFO1 Rate</Name>
+    <Symbol>lfo_rate</Symbol>
+    <Value>5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>28</Index>
+    <Name>LFO1 Delay</Name>
+    <Symbol>lfo_delay</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>29</Index>
+    <Name>LFO1-&gt;Filter</Name>
+    <Symbol>lfo2filter</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>30</Index>
+    <Name>LFO1-&gt;Pitch</Name>
+    <Symbol>lfo2pitch</Symbol>
+    <Value>100</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>31</Index>
+    <Name>LFO1-&gt;PW</Name>
+    <Symbol>lfo2pw</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>32</Index>
+    <Name>ModWheel-&gt;LFO1</Name>
+    <Symbol>mwhl2lfo</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>33</Index>
+    <Name>Scale Detune</Name>
+    <Symbol>scale_detune</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>34</Index>
+    <Name>EG2-&gt;Cutoff</Name>
+    <Symbol>adsr2_cutoff</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>35</Index>
+    <Name>EG2-&gt;Res</Name>
+    <Symbol>adsr2_res</Symbol>
+    <Value>0.300000011920929</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>36</Index>
+    <Name>EG2-&gt;Amp</Name>
+    <Symbol>adsr2_amp</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>37</Index>
+    <Name>EG2 Attack</Name>
+    <Symbol>adsr2_a</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>38</Index>
+    <Name>EG2 Decay</Name>
+    <Symbol>adsr2_d</Symbol>
+    <Value>100</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>39</Index>
+    <Name>EG2 Sustain</Name>
+    <Symbol>adsr2_s</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>40</Index>
+    <Name>EG2 Fade</Name>
+    <Symbol>adsr2_f</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>41</Index>
+    <Name>Release</Name>
+    <Symbol>adsr2_r</Symbol>
+    <Value>50</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>42</Index>
+    <Name>Osc1 Stretch</Name>
+    <Symbol>o1_stretch</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>43</Index>
+    <Name>Osc1 Window</Name>
+    <Symbol>o1_window</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>44</Index>
+    <Name>LFO1 Trigger Mode</Name>
+    <Symbol>lfo1_trig</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>45</Index>
+    <Name>LFO2 Trigger Mode</Name>
+    <Symbol>lfo2_trig</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>46</Index>
+    <Name>LFO1 Rate</Name>
+    <Symbol>lfo2_rate</Symbol>
+    <Value>5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>47</Index>
+    <Name>LFO1 Delay</Name>
+    <Symbol>lfo2_delay</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>48</Index>
+    <Name>Osc2 Unison</Name>
+    <Symbol>o2_unison</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>49</Index>
+    <Name>Osc2 Unison Detune</Name>
+    <Symbol>o2_unisonfrq</Symbol>
+    <Value>2</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>50</Index>
+    <Name>Osc1 Transpose</Name>
+    <Symbol>o1_xpose</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>51</Index>
+    <Name>MIDI Channel</Name>
+    <Symbol>midi</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:0,0</Key>
+    <Value>None</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:0,1</Key>
+    <Value>0..1</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:0,2</Key>
+    <Value>None</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:0,3</Key>
+    <Value>0</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:0,4</Key>
+    <Value>None</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:1,0</Key>
+    <Value>None</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:1,1</Key>
+    <Value>0..1</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:1,2</Key>
+    <Value>None</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:1,3</Key>
+    <Value>0</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:1,4</Key>
+    <Value>None</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:2,0</Key>
+    <Value>None</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:2,1</Key>
+    <Value>0..1</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:2,2</Key>
+    <Value>None</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:2,3</Key>
+    <Value>0</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:2,4</Key>
+    <Value>None</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:3,0</Key>
+    <Value>None</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:3,1</Key>
+    <Value>0..1</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:3,2</Key>
+    <Value>None</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:3,3</Key>
+    <Value>0</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:3,4</Key>
+    <Value>None</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:4,0</Key>
+    <Value>None</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:4,1</Key>
+    <Value>0..1</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:4,2</Key>
+    <Value>None</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:4,3</Key>
+    <Value>0</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:4,4</Key>
+    <Value>None</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:5,0</Key>
+    <Value>None</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:5,1</Key>
+    <Value>0..1</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:5,2</Key>
+    <Value>None</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:5,3</Key>
+    <Value>0</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:5,4</Key>
+    <Value>None</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:6,0</Key>
+    <Value>None</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:6,1</Key>
+    <Value>0..1</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:6,2</Key>
+    <Value>None</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:6,3</Key>
+    <Value>0</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:6,4</Key>
+    <Value>None</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:7,0</Key>
+    <Value>None</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:7,1</Key>
+    <Value>0..1</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:7,2</Key>
+    <Value>None</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:7,3</Key>
+    <Value>0</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:7,4</Key>
+    <Value>None</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:8,0</Key>
+    <Value>None</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:8,1</Key>
+    <Value>0..1</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:8,2</Key>
+    <Value>None</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:8,3</Key>
+    <Value>0</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:8,4</Key>
+    <Value>None</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:9,0</Key>
+    <Value>None</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:9,1</Key>
+    <Value>0..1</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:9,2</Key>
+    <Value>None</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:9,3</Key>
+    <Value>0</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:9,4</Key>
+    <Value>None</Value>
+   </CustomData>
+  </Data>
+ </Plugin>
+
+ <!-- Calf Monosynth -->
+ <Plugin>
+  <Info>
+   <Type>LV2</Type>
+   <Name>EasyClassical</Name>
+   <URI>http://calf.sourceforge.net/plugins/Monosynth</URI>
+  </Info>
+
+  <Data>
+   <Active>Yes</Active>
+   <ControlChannel>1</ControlChannel>
+   <Options>0x3f1</Options>
+
+   <Parameter>
+    <Index>0</Index>
+    <Name>Osc1 Wave</Name>
+    <Symbol>o1_wave</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>1</Index>
+    <Name>Osc2 Wave</Name>
+    <Symbol>o2_wave</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>2</Index>
+    <Name>Osc1 PW</Name>
+    <Symbol>o1_pw</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>3</Index>
+    <Name>Osc2 PW</Name>
+    <Symbol>o2_pw</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>4</Index>
+    <Name>O1&lt;&gt;2 Detune</Name>
+    <Symbol>o12_detune</Symbol>
+    <Value>10</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>5</Index>
+    <Name>Osc2 Transpose</Name>
+    <Symbol>o2_xpose</Symbol>
+    <Value>12</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>6</Index>
+    <Name>Phase mode</Name>
+    <Symbol>phase_mode</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>7</Index>
+    <Name>O1&lt;&gt;2 Mix</Name>
+    <Symbol>o12_mix</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>8</Index>
+    <Name>Filter</Name>
+    <Symbol>filter</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>9</Index>
+    <Name>Cutoff</Name>
+    <Symbol>cutoff</Symbol>
+    <Value>33</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>10</Index>
+    <Name>Resonance</Name>
+    <Symbol>res</Symbol>
+    <Value>3</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>11</Index>
+    <Name>Separation</Name>
+    <Symbol>filter_sep</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>12</Index>
+    <Name>Env-&gt;Cutoff</Name>
+    <Symbol>env2cutoff</Symbol>
+    <Value>8000</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>13</Index>
+    <Name>Env-&gt;Res</Name>
+    <Symbol>env2res</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>14</Index>
+    <Name>Env-&gt;Amp</Name>
+    <Symbol>env2amp</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>15</Index>
+    <Name>EG1 Attack</Name>
+    <Symbol>adsr_a</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>16</Index>
+    <Name>EG1 Decay</Name>
+    <Symbol>adsr_d</Symbol>
+    <Value>350</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>17</Index>
+    <Name>EG1 Sustain</Name>
+    <Symbol>adsr_s</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>18</Index>
+    <Name>EG1 Fade</Name>
+    <Symbol>adsr_f</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>19</Index>
+    <Name>EG1 Release</Name>
+    <Symbol>adsr_r</Symbol>
+    <Value>100</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>20</Index>
+    <Name>Key Follow</Name>
+    <Symbol>key_follow</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>21</Index>
+    <Name>Legato Mode</Name>
+    <Symbol>legato</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>22</Index>
+    <Name>Portamento</Name>
+    <Symbol>portamento</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>23</Index>
+    <Name>Vel-&gt;Filter</Name>
+    <Symbol>vel2filter</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>24</Index>
+    <Name>Vel-&gt;Amp</Name>
+    <Symbol>vel2amp</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>25</Index>
+    <Name>Volume</Name>
+    <Symbol>master</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>26</Index>
+    <Name>PBend Range</Name>
+    <Symbol>pbend_range</Symbol>
+    <Value>200</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>27</Index>
+    <Name>LFO1 Rate</Name>
+    <Symbol>lfo_rate</Symbol>
+    <Value>5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>28</Index>
+    <Name>LFO1 Delay</Name>
+    <Symbol>lfo_delay</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>29</Index>
+    <Name>LFO1-&gt;Filter</Name>
+    <Symbol>lfo2filter</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>30</Index>
+    <Name>LFO1-&gt;Pitch</Name>
+    <Symbol>lfo2pitch</Symbol>
+    <Value>100</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>31</Index>
+    <Name>LFO1-&gt;PW</Name>
+    <Symbol>lfo2pw</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>32</Index>
+    <Name>ModWheel-&gt;LFO1</Name>
+    <Symbol>mwhl2lfo</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>33</Index>
+    <Name>Scale Detune</Name>
+    <Symbol>scale_detune</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>34</Index>
+    <Name>EG2-&gt;Cutoff</Name>
+    <Symbol>adsr2_cutoff</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>35</Index>
+    <Name>EG2-&gt;Res</Name>
+    <Symbol>adsr2_res</Symbol>
+    <Value>0.300000011920929</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>36</Index>
+    <Name>EG2-&gt;Amp</Name>
+    <Symbol>adsr2_amp</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>37</Index>
+    <Name>EG2 Attack</Name>
+    <Symbol>adsr2_a</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>38</Index>
+    <Name>EG2 Decay</Name>
+    <Symbol>adsr2_d</Symbol>
+    <Value>100</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>39</Index>
+    <Name>EG2 Sustain</Name>
+    <Symbol>adsr2_s</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>40</Index>
+    <Name>EG2 Fade</Name>
+    <Symbol>adsr2_f</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>41</Index>
+    <Name>Release</Name>
+    <Symbol>adsr2_r</Symbol>
+    <Value>50</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>42</Index>
+    <Name>Osc1 Stretch</Name>
+    <Symbol>o1_stretch</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>43</Index>
+    <Name>Osc1 Window</Name>
+    <Symbol>o1_window</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>44</Index>
+    <Name>LFO1 Trigger Mode</Name>
+    <Symbol>lfo1_trig</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>45</Index>
+    <Name>LFO2 Trigger Mode</Name>
+    <Symbol>lfo2_trig</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>46</Index>
+    <Name>LFO1 Rate</Name>
+    <Symbol>lfo2_rate</Symbol>
+    <Value>5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>47</Index>
+    <Name>LFO1 Delay</Name>
+    <Symbol>lfo2_delay</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>48</Index>
+    <Name>Osc2 Unison</Name>
+    <Symbol>o2_unison</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>49</Index>
+    <Name>Osc2 Unison Detune</Name>
+    <Symbol>o2_unisonfrq</Symbol>
+    <Value>2</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>50</Index>
+    <Name>Osc1 Transpose</Name>
+    <Symbol>o1_xpose</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>51</Index>
+    <Name>MIDI Channel</Name>
+    <Symbol>midi</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <CustomData>
+    <Type>http://kxstudio.sf.net/ns/carla/property</Type>
+    <Key>CarlaSkinIsCompacted</Key>
+    <Value>false</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:0,0</Key>
+    <Value>None</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:0,1</Key>
+    <Value>0..1</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:0,2</Key>
+    <Value>None</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:0,3</Key>
+    <Value>0</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:0,4</Key>
+    <Value>None</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:1,0</Key>
+    <Value>None</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:1,1</Key>
+    <Value>0..1</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:1,2</Key>
+    <Value>None</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:1,3</Key>
+    <Value>0</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:1,4</Key>
+    <Value>None</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:2,0</Key>
+    <Value>None</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:2,1</Key>
+    <Value>0..1</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:2,2</Key>
+    <Value>None</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:2,3</Key>
+    <Value>0</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:2,4</Key>
+    <Value>None</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:3,0</Key>
+    <Value>None</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:3,1</Key>
+    <Value>0..1</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:3,2</Key>
+    <Value>None</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:3,3</Key>
+    <Value>0</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:3,4</Key>
+    <Value>None</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:4,0</Key>
+    <Value>None</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:4,1</Key>
+    <Value>0..1</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:4,2</Key>
+    <Value>None</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:4,3</Key>
+    <Value>0</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:4,4</Key>
+    <Value>None</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:5,0</Key>
+    <Value>None</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:5,1</Key>
+    <Value>0..1</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:5,2</Key>
+    <Value>None</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:5,3</Key>
+    <Value>0</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:5,4</Key>
+    <Value>None</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:6,0</Key>
+    <Value>None</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:6,1</Key>
+    <Value>0..1</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:6,2</Key>
+    <Value>None</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:6,3</Key>
+    <Value>0</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:6,4</Key>
+    <Value>None</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:7,0</Key>
+    <Value>None</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:7,1</Key>
+    <Value>0..1</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:7,2</Key>
+    <Value>None</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:7,3</Key>
+    <Value>0</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:7,4</Key>
+    <Value>None</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:8,0</Key>
+    <Value>None</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:8,1</Key>
+    <Value>0..1</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:8,2</Key>
+    <Value>None</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:8,3</Key>
+    <Value>0</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:8,4</Key>
+    <Value>None</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:9,0</Key>
+    <Value>None</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:9,1</Key>
+    <Value>0..1</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:9,2</Key>
+    <Value>None</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:9,3</Key>
+    <Value>0</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:9,4</Key>
+    <Value>None</Value>
+   </CustomData>
+  </Data>
+ </Plugin>
+
+ <!-- Calf Monosynth -->
+ <Plugin>
+  <Info>
+   <Type>LV2</Type>
+   <Name>TrapFifth</Name>
+   <URI>http://calf.sourceforge.net/plugins/Monosynth</URI>
+  </Info>
+
+  <Data>
+   <Active>Yes</Active>
+   <ControlChannel>1</ControlChannel>
+   <Options>0x3f1</Options>
+
+   <Parameter>
+    <Index>0</Index>
+    <Name>Osc1 Wave</Name>
+    <Symbol>o1_wave</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>1</Index>
+    <Name>Osc2 Wave</Name>
+    <Symbol>o2_wave</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>2</Index>
+    <Name>Osc1 PW</Name>
+    <Symbol>o1_pw</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>3</Index>
+    <Name>Osc2 PW</Name>
+    <Symbol>o2_pw</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>4</Index>
+    <Name>O1&lt;&gt;2 Detune</Name>
+    <Symbol>o12_detune</Symbol>
+    <Value>10</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>5</Index>
+    <Name>Osc2 Transpose</Name>
+    <Symbol>o2_xpose</Symbol>
+    <Value>12</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>6</Index>
+    <Name>Phase mode</Name>
+    <Symbol>phase_mode</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>7</Index>
+    <Name>O1&lt;&gt;2 Mix</Name>
+    <Symbol>o12_mix</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>8</Index>
+    <Name>Filter</Name>
+    <Symbol>filter</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>9</Index>
+    <Name>Cutoff</Name>
+    <Symbol>cutoff</Symbol>
+    <Value>33</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>10</Index>
+    <Name>Resonance</Name>
+    <Symbol>res</Symbol>
+    <Value>3</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>11</Index>
+    <Name>Separation</Name>
+    <Symbol>filter_sep</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>12</Index>
+    <Name>Env-&gt;Cutoff</Name>
+    <Symbol>env2cutoff</Symbol>
+    <Value>8000</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>13</Index>
+    <Name>Env-&gt;Res</Name>
+    <Symbol>env2res</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>14</Index>
+    <Name>Env-&gt;Amp</Name>
+    <Symbol>env2amp</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>15</Index>
+    <Name>EG1 Attack</Name>
+    <Symbol>adsr_a</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>16</Index>
+    <Name>EG1 Decay</Name>
+    <Symbol>adsr_d</Symbol>
+    <Value>350</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>17</Index>
+    <Name>EG1 Sustain</Name>
+    <Symbol>adsr_s</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>18</Index>
+    <Name>EG1 Fade</Name>
+    <Symbol>adsr_f</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>19</Index>
+    <Name>EG1 Release</Name>
+    <Symbol>adsr_r</Symbol>
+    <Value>100</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>20</Index>
+    <Name>Key Follow</Name>
+    <Symbol>key_follow</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>21</Index>
+    <Name>Legato Mode</Name>
+    <Symbol>legato</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>22</Index>
+    <Name>Portamento</Name>
+    <Symbol>portamento</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>23</Index>
+    <Name>Vel-&gt;Filter</Name>
+    <Symbol>vel2filter</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>24</Index>
+    <Name>Vel-&gt;Amp</Name>
+    <Symbol>vel2amp</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>25</Index>
+    <Name>Volume</Name>
+    <Symbol>master</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>26</Index>
+    <Name>PBend Range</Name>
+    <Symbol>pbend_range</Symbol>
+    <Value>200</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>27</Index>
+    <Name>LFO1 Rate</Name>
+    <Symbol>lfo_rate</Symbol>
+    <Value>5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>28</Index>
+    <Name>LFO1 Delay</Name>
+    <Symbol>lfo_delay</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>29</Index>
+    <Name>LFO1-&gt;Filter</Name>
+    <Symbol>lfo2filter</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>30</Index>
+    <Name>LFO1-&gt;Pitch</Name>
+    <Symbol>lfo2pitch</Symbol>
+    <Value>100</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>31</Index>
+    <Name>LFO1-&gt;PW</Name>
+    <Symbol>lfo2pw</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>32</Index>
+    <Name>ModWheel-&gt;LFO1</Name>
+    <Symbol>mwhl2lfo</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>33</Index>
+    <Name>Scale Detune</Name>
+    <Symbol>scale_detune</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>34</Index>
+    <Name>EG2-&gt;Cutoff</Name>
+    <Symbol>adsr2_cutoff</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>35</Index>
+    <Name>EG2-&gt;Res</Name>
+    <Symbol>adsr2_res</Symbol>
+    <Value>0.300000011920929</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>36</Index>
+    <Name>EG2-&gt;Amp</Name>
+    <Symbol>adsr2_amp</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>37</Index>
+    <Name>EG2 Attack</Name>
+    <Symbol>adsr2_a</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>38</Index>
+    <Name>EG2 Decay</Name>
+    <Symbol>adsr2_d</Symbol>
+    <Value>100</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>39</Index>
+    <Name>EG2 Sustain</Name>
+    <Symbol>adsr2_s</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>40</Index>
+    <Name>EG2 Fade</Name>
+    <Symbol>adsr2_f</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>41</Index>
+    <Name>Release</Name>
+    <Symbol>adsr2_r</Symbol>
+    <Value>50</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>42</Index>
+    <Name>Osc1 Stretch</Name>
+    <Symbol>o1_stretch</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>43</Index>
+    <Name>Osc1 Window</Name>
+    <Symbol>o1_window</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>44</Index>
+    <Name>LFO1 Trigger Mode</Name>
+    <Symbol>lfo1_trig</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>45</Index>
+    <Name>LFO2 Trigger Mode</Name>
+    <Symbol>lfo2_trig</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>46</Index>
+    <Name>LFO1 Rate</Name>
+    <Symbol>lfo2_rate</Symbol>
+    <Value>5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>47</Index>
+    <Name>LFO1 Delay</Name>
+    <Symbol>lfo2_delay</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>48</Index>
+    <Name>Osc2 Unison</Name>
+    <Symbol>o2_unison</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>49</Index>
+    <Name>Osc2 Unison Detune</Name>
+    <Symbol>o2_unisonfrq</Symbol>
+    <Value>2</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>50</Index>
+    <Name>Osc1 Transpose</Name>
+    <Symbol>o1_xpose</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>51</Index>
+    <Name>MIDI Channel</Name>
+    <Symbol>midi</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <CustomData>
+    <Type>http://kxstudio.sf.net/ns/carla/property</Type>
+    <Key>CarlaSkinIsCompacted</Key>
+    <Value>false</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:0,0</Key>
+    <Value>None</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:0,1</Key>
+    <Value>0..1</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:0,2</Key>
+    <Value>None</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:0,3</Key>
+    <Value>0</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:0,4</Key>
+    <Value>None</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:1,0</Key>
+    <Value>None</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:1,1</Key>
+    <Value>0..1</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:1,2</Key>
+    <Value>None</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:1,3</Key>
+    <Value>0</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:1,4</Key>
+    <Value>None</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:2,0</Key>
+    <Value>None</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:2,1</Key>
+    <Value>0..1</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:2,2</Key>
+    <Value>None</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:2,3</Key>
+    <Value>0</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:2,4</Key>
+    <Value>None</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:3,0</Key>
+    <Value>None</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:3,1</Key>
+    <Value>0..1</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:3,2</Key>
+    <Value>None</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:3,3</Key>
+    <Value>0</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:3,4</Key>
+    <Value>None</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:4,0</Key>
+    <Value>None</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:4,1</Key>
+    <Value>0..1</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:4,2</Key>
+    <Value>None</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:4,3</Key>
+    <Value>0</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:4,4</Key>
+    <Value>None</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:5,0</Key>
+    <Value>None</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:5,1</Key>
+    <Value>0..1</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:5,2</Key>
+    <Value>None</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:5,3</Key>
+    <Value>0</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:5,4</Key>
+    <Value>None</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:6,0</Key>
+    <Value>None</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:6,1</Key>
+    <Value>0..1</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:6,2</Key>
+    <Value>None</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:6,3</Key>
+    <Value>0</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:6,4</Key>
+    <Value>None</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:7,0</Key>
+    <Value>None</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:7,1</Key>
+    <Value>0..1</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:7,2</Key>
+    <Value>None</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:7,3</Key>
+    <Value>0</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:7,4</Key>
+    <Value>None</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:8,0</Key>
+    <Value>None</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:8,1</Key>
+    <Value>0..1</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:8,2</Key>
+    <Value>None</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:8,3</Key>
+    <Value>0</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:8,4</Key>
+    <Value>None</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:9,0</Key>
+    <Value>None</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:9,1</Key>
+    <Value>0..1</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:9,2</Key>
+    <Value>None</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:9,3</Key>
+    <Value>0</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:9,4</Key>
+    <Value>None</Value>
+   </CustomData>
+  </Data>
+ </Plugin>
+
+ <ExternalPatchbay>
+  <Connection>
+   <Source>system:capture_1</Source>
+   <Target>Non-Mixer.Inputs (Inputs):Bass/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>system:capture_2</Source>
+   <Target>Non-Mixer.Inputs (Inputs):VocalsKesch/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>system:capture_3</Source>
+   <Target>Non-Mixer.Inputs (Inputs):VocalsNano/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>system:capture_4</Source>
+   <Target>Non-Mixer.Inputs (Inputs):Kick/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>system:capture_5</Source>
+   <Target>Non-Mixer.Inputs (Inputs):OH/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>system:capture_6</Source>
+   <Target>Non-Mixer.Inputs (Inputs):Ambiance/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.Inputs (Inputs):Kick/out-1</Source>
+   <Target>Non-Mixer.Drums (Main):Kick/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.Inputs (Inputs):OH/out-1</Source>
+   <Target>Non-Mixer.Drums (Main):OH/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.Inputs (Inputs):Bass/out-1</Source>
+   <Target>sooperlooper:loop0_in_1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.Inputs (Inputs):VocalsNano/out-1</Source>
+   <Target>sooperlooper:loop4_in_1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.Inputs (Inputs):VocalsKesch/out-1</Source>
+   <Target>sooperlooper:loop6_in_1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.Inputs (Inputs):Ambiance/out-1</Source>
+   <Target>Non-Mixer.MonitorsNano (MonitorsNano):Ambiance/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.Inputs (Inputs):Ambiance/out-1</Source>
+   <Target>Non-Mixer.MonitorsKesch (MonitorsKesch):Ambiance/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.Outputs (Outputs):Kick/aux-A/out-1</Source>
+   <Target>system:playback_3</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.Outputs (Outputs):Kick/out-1</Source>
+   <Target>Non-Mixer.Outputs (Outputs):FOH/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.Outputs (Outputs):Kick/out-2</Source>
+   <Target>Non-Mixer.Outputs (Outputs):FOH/in-2</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.Outputs (Outputs):Bass/aux-A/out-1</Source>
+   <Target>system:playback_4</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.Outputs (Outputs):Bass/out-1</Source>
+   <Target>Non-Mixer.Outputs (Outputs):FOH/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.Outputs (Outputs):Bass/out-2</Source>
+   <Target>Non-Mixer.Outputs (Outputs):FOH/in-2</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.Outputs (Outputs):BassSynths/aux-A/out-1</Source>
+   <Target>system:playback_9</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.Outputs (Outputs):BassSynths/out-1</Source>
+   <Target>Non-Mixer.Outputs (Outputs):FOH/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.Outputs (Outputs):BassSynths/out-2</Source>
+   <Target>Non-Mixer.Outputs (Outputs):FOH/in-2</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.Outputs (Outputs):Synths/aux-A/out-1</Source>
+   <Target>system:playback_2</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.Outputs (Outputs):Synths/out-1</Source>
+   <Target>Non-Mixer.Outputs (Outputs):FOH/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.Outputs (Outputs):Synths/out-2</Source>
+   <Target>Non-Mixer.Outputs (Outputs):FOH/in-2</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.Outputs (Outputs):Samples/aux-A/out-1</Source>
+   <Target>system:playback_1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.Outputs (Outputs):Samples/out-1</Source>
+   <Target>Non-Mixer.Outputs (Outputs):FOH/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.Outputs (Outputs):Samples/out-2</Source>
+   <Target>Non-Mixer.Outputs (Outputs):FOH/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.Outputs (Outputs):VocalsNano/aux-A/out-1</Source>
+   <Target>system:playback_10</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.Outputs (Outputs):VocalsNano/out-1</Source>
+   <Target>Non-Mixer.Outputs (Outputs):FOH/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.Outputs (Outputs):VocalsNano/out-2</Source>
+   <Target>Non-Mixer.Outputs (Outputs):FOH/in-2</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.Outputs (Outputs):VocalsKesch/aux-A/out-1</Source>
+   <Target>system:playback_11</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.Outputs (Outputs):VocalsKesch/out-1</Source>
+   <Target>Non-Mixer.Outputs (Outputs):FOH/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.Outputs (Outputs):VocalsKesch/out-2</Source>
+   <Target>Non-Mixer.Outputs (Outputs):FOH/in-2</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.Outputs (Outputs):FOH/out-1</Source>
+   <Target>system:playback_13</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.Outputs (Outputs):FOH/out-1</Source>
+   <Target>darkice-8683:left</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.Outputs (Outputs):FOH/out-2</Source>
+   <Target>system:playback_14</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.Outputs (Outputs):FOH/out-2</Source>
+   <Target>darkice-8683:right</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.MonitorsNano (MonitorsNano):Klick/out-1</Source>
+   <Target>Non-Mixer.MonitorsNano (MonitorsNano):MonitorsNano/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.MonitorsNano (MonitorsNano):Klick/out-1</Source>
+   <Target>Non-Mixer.MonitorsNano (MonitorsNano):MonitorsNano/in-2</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.MonitorsNano (MonitorsNano):Kick/out-1</Source>
+   <Target>Non-Mixer.MonitorsNano (MonitorsNano):MonitorsNano/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.MonitorsNano (MonitorsNano):Kick/out-1</Source>
+   <Target>Non-Mixer.MonitorsNano (MonitorsNano):MonitorsNano/in-2</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.MonitorsNano (MonitorsNano):OH/out-1</Source>
+   <Target>Non-Mixer.MonitorsNano (MonitorsNano):MonitorsNano/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.MonitorsNano (MonitorsNano):OH/out-1</Source>
+   <Target>Non-Mixer.MonitorsNano (MonitorsNano):MonitorsNano/in-2</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.MonitorsNano (MonitorsNano):Bass/out-1</Source>
+   <Target>Non-Mixer.MonitorsNano (MonitorsNano):MonitorsNano/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.MonitorsNano (MonitorsNano):Bass/out-2</Source>
+   <Target>Non-Mixer.MonitorsNano (MonitorsNano):MonitorsNano/in-2</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.MonitorsNano (MonitorsNano):BassSynths/out-1</Source>
+   <Target>Non-Mixer.MonitorsNano (MonitorsNano):MonitorsNano/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.MonitorsNano (MonitorsNano):BassSynths/out-2</Source>
+   <Target>Non-Mixer.MonitorsNano (MonitorsNano):MonitorsNano/in-2</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.MonitorsNano (MonitorsNano):Synths/out-1</Source>
+   <Target>Non-Mixer.MonitorsNano (MonitorsNano):MonitorsNano/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.MonitorsNano (MonitorsNano):Synths/out-2</Source>
+   <Target>Non-Mixer.MonitorsNano (MonitorsNano):MonitorsNano/in-2</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.MonitorsNano (MonitorsNano):Samples/out-1</Source>
+   <Target>Non-Mixer.MonitorsNano (MonitorsNano):MonitorsNano/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.MonitorsNano (MonitorsNano):Samples/out-2</Source>
+   <Target>Non-Mixer.MonitorsNano (MonitorsNano):MonitorsNano/in-2</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.MonitorsNano (MonitorsNano):VocalsNano/out-1</Source>
+   <Target>Non-Mixer.MonitorsNano (MonitorsNano):MonitorsNano/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.MonitorsNano (MonitorsNano):VocalsNano/out-2</Source>
+   <Target>Non-Mixer.MonitorsNano (MonitorsNano):MonitorsNano/in-2</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.MonitorsNano (MonitorsNano):VocalsKesch/out-1</Source>
+   <Target>Non-Mixer.MonitorsNano (MonitorsNano):MonitorsNano/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.MonitorsNano (MonitorsNano):VocalsKesch/out-2</Source>
+   <Target>Non-Mixer.MonitorsNano (MonitorsNano):MonitorsNano/in-2</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.MonitorsNano (MonitorsNano):Ambiance/out-1</Source>
+   <Target>Non-Mixer.MonitorsNano (MonitorsNano):MonitorsNano/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.MonitorsNano (MonitorsNano):Ambiance/out-1</Source>
+   <Target>Non-Mixer.MonitorsNano (MonitorsNano):MonitorsNano/in-2</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.MonitorsNano (MonitorsNano):MonitorsNano/out-1</Source>
+   <Target>system:playback_5</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.MonitorsNano (MonitorsNano):MonitorsNano/out-2</Source>
+   <Target>system:playback_6</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.MonitorsKesch (MonitorsKesch):Klick/out-1</Source>
+   <Target>Non-Mixer.MonitorsKesch (MonitorsKesch):MonitorsKesch/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.MonitorsKesch (MonitorsKesch):Klick/out-1</Source>
+   <Target>Non-Mixer.MonitorsKesch (MonitorsKesch):MonitorsKesch/in-2</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.MonitorsKesch (MonitorsKesch):Kick/out-1</Source>
+   <Target>Non-Mixer.MonitorsKesch (MonitorsKesch):MonitorsKesch/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.MonitorsKesch (MonitorsKesch):Kick/out-1</Source>
+   <Target>Non-Mixer.MonitorsKesch (MonitorsKesch):MonitorsKesch/in-2</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.MonitorsKesch (MonitorsKesch):OH/out-1</Source>
+   <Target>Non-Mixer.MonitorsKesch (MonitorsKesch):MonitorsKesch/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.MonitorsKesch (MonitorsKesch):OH/out-1</Source>
+   <Target>Non-Mixer.MonitorsKesch (MonitorsKesch):MonitorsKesch/in-2</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.MonitorsKesch (MonitorsKesch):Bass/out-1</Source>
+   <Target>Non-Mixer.MonitorsKesch (MonitorsKesch):MonitorsKesch/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.MonitorsKesch (MonitorsKesch):Bass/out-2</Source>
+   <Target>Non-Mixer.MonitorsKesch (MonitorsKesch):MonitorsKesch/in-2</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.MonitorsKesch (MonitorsKesch):BassSynths/out-1</Source>
+   <Target>Non-Mixer.MonitorsKesch (MonitorsKesch):MonitorsKesch/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.MonitorsKesch (MonitorsKesch):BassSynths/out-2</Source>
+   <Target>Non-Mixer.MonitorsKesch (MonitorsKesch):MonitorsKesch/in-2</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.MonitorsKesch (MonitorsKesch):Synths/out-1</Source>
+   <Target>Non-Mixer.MonitorsKesch (MonitorsKesch):MonitorsKesch/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.MonitorsKesch (MonitorsKesch):Synths/out-2</Source>
+   <Target>Non-Mixer.MonitorsKesch (MonitorsKesch):MonitorsKesch/in-2</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.MonitorsKesch (MonitorsKesch):Samples/out-1</Source>
+   <Target>Non-Mixer.MonitorsKesch (MonitorsKesch):MonitorsKesch/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.MonitorsKesch (MonitorsKesch):Samples/out-2</Source>
+   <Target>Non-Mixer.MonitorsKesch (MonitorsKesch):MonitorsKesch/in-2</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.MonitorsKesch (MonitorsKesch):VocalsNano/out-1</Source>
+   <Target>Non-Mixer.MonitorsKesch (MonitorsKesch):MonitorsKesch/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.MonitorsKesch (MonitorsKesch):VocalsNano/out-2</Source>
+   <Target>Non-Mixer.MonitorsKesch (MonitorsKesch):MonitorsKesch/in-2</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.MonitorsKesch (MonitorsKesch):VocalsKesch/out-1</Source>
+   <Target>Non-Mixer.MonitorsKesch (MonitorsKesch):MonitorsKesch/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.MonitorsKesch (MonitorsKesch):VocalsKesch/out-2</Source>
+   <Target>Non-Mixer.MonitorsKesch (MonitorsKesch):MonitorsKesch/in-2</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.MonitorsKesch (MonitorsKesch):Ambiance/out-1</Source>
+   <Target>Non-Mixer.MonitorsKesch (MonitorsKesch):MonitorsKesch/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.MonitorsKesch (MonitorsKesch):Ambiance/out-1</Source>
+   <Target>Non-Mixer.MonitorsKesch (MonitorsKesch):MonitorsKesch/in-2</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.MonitorsKesch (MonitorsKesch):MonitorsKesch/out-1</Source>
+   <Target>system:playback_7</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.MonitorsKesch (MonitorsKesch):MonitorsKesch/out-2</Source>
+   <Target>system:playback_8</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.Drums (Main):Kick/out-1</Source>
+   <Target>Non-Mixer.Outputs (Outputs):Kick/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.Drums (Main):Kick/out-1</Source>
+   <Target>Non-Mixer.MonitorsNano (MonitorsNano):Kick/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.Drums (Main):Kick/out-1</Source>
+   <Target>Non-Mixer.MonitorsKesch (MonitorsKesch):Kick/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.Drums (Main):OH/out-1</Source>
+   <Target>Non-Mixer.MonitorsNano (MonitorsNano):OH/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.Drums (Main):OH/out-1</Source>
+   <Target>Non-Mixer.MonitorsKesch (MonitorsKesch):OH/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.Bass (In):BassIn/out-1</Source>
+   <Target>Non-Mixer.Bass (Main):BassDry/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.Bass (In):BassIn/out-1</Source>
+   <Target>Non-Mixer.Bass (Main):BassSub/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.Bass (In):BassIn/out-1</Source>
+   <Target>Non-Mixer.BassFX (In):BassScapeIn/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.Bass (In):BassIn/out-1</Source>
+   <Target>Non-Mixer.BassFX (In):BassDegradeIn/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.Bass (In):BassIn/out-1</Source>
+   <Target>Non-Mixer.BassFX (In):BassWobbleIn/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.Bass (In):BassIn/out-1</Source>
+   <Target>Non-Mixer.BassFX (In):BassDistoHiIn/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.Bass (In):BassIn/out-1</Source>
+   <Target>Non-Mixer.BassFX (In):BassZynWahIn/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.Bass (In):BassIn/out-1</Source>
+   <Target>Non-Mixer.BassFX (In):BassTapeDelayIn/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.Bass (Main):BassDry/out-1</Source>
+   <Target>Non-Mixer.Bass (Out):BassOut/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.Bass (Main):BassSub/out-1</Source>
+   <Target>Non-Mixer.Bass (Out):BassOut/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.Bass (Out):BassOut/out-1</Source>
+   <Target>sooperlooper:loop1_in_1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.BassFX (In):BassScapeIn/out-1</Source>
+   <Target>Non-Mixer.BassFX (Process):BassScape/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.BassFX (Process):BassScape/out-1</Source>
+   <Target>Non-Mixer.Bass (Out):BassOut/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.BassFX (In):BassDegradeIn/out-1</Source>
+   <Target>Non-Mixer.BassFX (Process):BassDegrade/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.BassFX (Process):BassDegrade/out-1</Source>
+   <Target>Non-Mixer.Bass (Out):BassOut/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.BassFX (In):BassWobbleIn/out-1</Source>
+   <Target>Non-Mixer.BassFX (Process):BassWobble/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.BassFX (Process):BassWobble/out-1</Source>
+   <Target>Non-Mixer.Bass (Out):BassOut/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.BassFX (In):BassDistoHiIn/out-1</Source>
+   <Target>Non-Mixer.BassFX (Process):BassDistoHi/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.BassFX (Process):BassDistoHi/out-1</Source>
+   <Target>Non-Mixer.Bass (Out):BassOut/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.BassFX (In):BassZynWahIn/out-1</Source>
+   <Target>Non-Mixer.BassFX (Process):BassZynWah/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.BassFX (Process):BassZynWah/out-1</Source>
+   <Target>Non-Mixer.Bass (Out):BassOut/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.BassSynths (Main):BassTrap1/out-1</Source>
+   <Target>Non-Mixer.BassSynths (Out):BassSynthsOut/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.BassSynths (Main):BassTrap2/out-1</Source>
+   <Target>Non-Mixer.BassSynths (Out):BassSynthsOut/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.BassSynths (Main):BassBarkline/out-1</Source>
+   <Target>Non-Mixer.BassSynths (Out):BassSynthsOut/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.BassSynths (Main):BassBoom/out-1</Source>
+   <Target>Non-Mixer.BassSynths (Out):BassSynthsOut/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.BassSynths (Main):BassZDubstep/out-1</Source>
+   <Target>Non-Mixer.BassSynths (Out):BassSynthsOut/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.BassSynths (Main):BassZDancestep/out-1</Source>
+   <Target>Non-Mixer.BassSynths (Out):BassSynthsOut/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.BassSynths (Main):BassZRagstep/out-1</Source>
+   <Target>Non-Mixer.BassSynths (Out):BassSynthsOut/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.BassSynths (Main):BassZDupieux/out-1</Source>
+   <Target>Non-Mixer.BassSynths (Out):BassSynthsOut/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.BassSynths (Main):BassZPhrampton/out-1</Source>
+   <Target>Non-Mixer.BassSynths (Out):BassSynthsOut/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.BassSynths (Out):BassSynthsOut/out-1</Source>
+   <Target>sooperlooper:loop2_in_1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.Synths (Main):ZDupieux/aux-A/out-1</Source>
+   <Target>Non-Mixer.Synths (Process):Reverb/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.Synths (Main):ZDupieux/aux-B/out-1</Source>
+   <Target>Non-Mixer.Synths (Process):TapeDelay/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.Synths (Main):ZDupieux/out-1</Source>
+   <Target>Non-Mixer.Synths (Out):SynthsOut/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.Synths (Main):ZNotSoRhodes/aux-A/out-1</Source>
+   <Target>Non-Mixer.Synths (Process):Reverb/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.Synths (Main):ZNotSoRhodes/aux-B/out-1</Source>
+   <Target>Non-Mixer.Synths (Process):TapeDelay/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.Synths (Main):ZNotSoRhodes/out-1</Source>
+   <Target>Non-Mixer.Synths (Out):SynthsOut/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.Synths (Main):Rhodes/aux-A/out-1</Source>
+   <Target>Non-Mixer.Synths (Process):Reverb/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.Synths (Main):Rhodes/aux-B/out-1</Source>
+   <Target>Non-Mixer.Synths (Process):TapeDelay/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.Synths (Main):Rhodes/out-1</Source>
+   <Target>Non-Mixer.Synths (Out):SynthsOut/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.Synths (Main):ZOrgan/aux-A/out-1</Source>
+   <Target>Non-Mixer.Synths (Process):Reverb/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.Synths (Main):ZOrgan/aux-B/out-1</Source>
+   <Target>Non-Mixer.Synths (Process):TapeDelay/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.Synths (Main):ZOrgan/out-1</Source>
+   <Target>Non-Mixer.Synths (Out):SynthsOut/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.Synths (Main):ZCosma/aux-A/out-1</Source>
+   <Target>Non-Mixer.Synths (Process):Reverb/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.Synths (Main):ZCosma/aux-B/out-1</Source>
+   <Target>Non-Mixer.Synths (Process):TapeDelay/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.Synths (Main):ZCosma/out-1</Source>
+   <Target>Non-Mixer.Synths (Out):SynthsOut/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.Synths (Main):ZBombarde/aux-A/out-1</Source>
+   <Target>Non-Mixer.Synths (Process):Reverb/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.Synths (Main):ZBombarde/aux-B/out-1</Source>
+   <Target>Non-Mixer.Synths (Process):TapeDelay/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.Synths (Main):ZBombarde/out-1</Source>
+   <Target>Non-Mixer.Synths (Out):SynthsOut/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.Synths (Main):ZTrumpets/aux-A/out-1</Source>
+   <Target>Non-Mixer.Synths (Process):Reverb/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.Synths (Main):ZTrumpets/aux-B/out-1</Source>
+   <Target>Non-Mixer.Synths (Process):TapeDelay/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.Synths (Main):ZTrumpets/out-1</Source>
+   <Target>Non-Mixer.Synths (Out):SynthsOut/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.Synths (Main):DubstepHorn/aux-A/out-1</Source>
+   <Target>Non-Mixer.Synths (Process):Reverb/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.Synths (Main):DubstepHorn/aux-B/out-1</Source>
+   <Target>Non-Mixer.Synths (Process):TapeDelay/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.Synths (Main):DubstepHorn/out-1</Source>
+   <Target>Non-Mixer.Synths (Out):SynthsOut/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.Synths (Main):ZStambul/aux-A/out-1</Source>
+   <Target>Non-Mixer.Synths (Process):Reverb/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.Synths (Main):ZStambul/aux-B/out-1</Source>
+   <Target>Non-Mixer.Synths (Process):TapeDelay/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.Synths (Main):ZStambul/out-1</Source>
+   <Target>Non-Mixer.Synths (Out):SynthsOut/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.Synths (Main):Trap/aux-A/out-1</Source>
+   <Target>Non-Mixer.Synths (Process):Reverb/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.Synths (Main):Trap/aux-B/out-1</Source>
+   <Target>Non-Mixer.Synths (Process):TapeDelay/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.Synths (Main):Trap/out-1</Source>
+   <Target>Non-Mixer.Synths (Out):SynthsOut/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.Samples (Main):Samples1/out-1</Source>
+   <Target>Non-Mixer.SamplesFX1Delay (In):Samples1/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.Samples (Main):Samples1/out-1</Source>
+   <Target>Non-Mixer.Samples (Out):SamplesOut/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.Samples (Main):Samples1/out-1</Source>
+   <Target>Non-Mixer.SamplesFX3Reverb (In):Samples1/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.Samples (Main):Samples1/out-1</Source>
+   <Target>Non-Mixer.SamplesFX4Autofilter (In):Samples1/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.Samples (Main):Samples1/out-1</Source>
+   <Target>Non-Mixer.SamplesWork (In):Samples1/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.Samples (Main):Samples1/out-1</Source>
+   <Target>Non-Mixer.SamplesFX2Delay (In):Samples1/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.Samples (Main):Samples1/out-1</Source>
+   <Target>Non-Mixer.SamplesFX5TapeDelay (In):Samples1/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.Synths (Main):ZDre/aux-B/out-1</Source>
+   <Target>Non-Mixer.Synths (Process):TapeDelay/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.Synths (Main):ZDre/out-1</Source>
+   <Target>Non-Mixer.Synths (Out):SynthsOut/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.Samples (Main):Samples2/out-1</Source>
+   <Target>Non-Mixer.SamplesFX1Delay (In):Samples2/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.Samples (Main):Samples2/out-1</Source>
+   <Target>Non-Mixer.Samples (Out):SamplesOut/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.Samples (Main):Samples2/out-1</Source>
+   <Target>Non-Mixer.SamplesFX3Reverb (In):Samples2/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.Samples (Main):Samples2/out-1</Source>
+   <Target>Non-Mixer.SamplesFX4Autofilter (In):Samples2/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.Samples (Main):Samples2/out-1</Source>
+   <Target>Non-Mixer.SamplesWork (In):Samples2/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.Samples (Main):Samples2/out-1</Source>
+   <Target>Non-Mixer.SamplesFX2Delay (In):Samples2/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.Samples (Main):Samples2/out-1</Source>
+   <Target>Non-Mixer.SamplesFX5TapeDelay (In):Samples2/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.Samples (Main):Samples3/out-1</Source>
+   <Target>Non-Mixer.SamplesFX1Delay (In):Samples3/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.Samples (Main):Samples3/out-1</Source>
+   <Target>Non-Mixer.Samples (Out):SamplesOut/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.Samples (Main):Samples3/out-1</Source>
+   <Target>Non-Mixer.SamplesFX3Reverb (In):Samples3/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.Samples (Main):Samples3/out-1</Source>
+   <Target>Non-Mixer.SamplesFX4Autofilter (In):Samples3/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.Samples (Main):Samples3/out-1</Source>
+   <Target>Non-Mixer.SamplesWork (In):Samples3/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.Samples (Main):Samples3/out-1</Source>
+   <Target>Non-Mixer.SamplesFX2Delay (In):Samples3/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.Samples (Main):Samples3/out-1</Source>
+   <Target>Non-Mixer.SamplesFX5TapeDelay (In):Samples3/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.Samples (Main):Samples4/out-1</Source>
+   <Target>Non-Mixer.Samples (Out):SamplesOut/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.Samples (Main):Samples4/out-1</Source>
+   <Target>Non-Mixer.SamplesFX1Delay (In):Samples4/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.Samples (Main):Samples4/out-1</Source>
+   <Target>Non-Mixer.SamplesFX3Reverb (In):Samples4/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.Samples (Main):Samples4/out-1</Source>
+   <Target>Non-Mixer.SamplesFX4Autofilter (In):Samples4/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.Samples (Main):Samples4/out-1</Source>
+   <Target>Non-Mixer.SamplesFX2Delay (In):Samples4/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.Samples (Main):Samples4/out-1</Source>
+   <Target>Non-Mixer.SamplesFX5TapeDelay (In):Samples4/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.Synths (Main):ZDiploLike/aux-A/out-1</Source>
+   <Target>Non-Mixer.Synths (Process):Reverb/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.Samples (Main):Samples5/out-1</Source>
+   <Target>Non-Mixer.Samples (Out):SamplesOut/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.Samples (Main):Samples5/out-1</Source>
+   <Target>Non-Mixer.SamplesFX1Delay (In):Samples5/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.Samples (Main):Samples5/out-1</Source>
+   <Target>Non-Mixer.SamplesFX3Reverb (In):Samples5/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.Samples (Main):Samples5/out-1</Source>
+   <Target>Non-Mixer.SamplesFX4Autofilter (In):Samples5/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.Samples (Main):Samples5/out-1</Source>
+   <Target>Non-Mixer.SamplesWork (In):Samples5/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.Samples (Main):Samples5/out-1</Source>
+   <Target>Non-Mixer.SamplesFX2Delay (In):Samples5/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.Samples (Main):Samples5/out-1</Source>
+   <Target>Non-Mixer.SamplesFX5TapeDelay (In):Samples5/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.SamplesFX1Delay (In):Samples1/out-1</Source>
+   <Target>Non-Mixer.SamplesFX1Delay (Process):SamplesFX1Delay/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.SamplesFX1Delay (In):Samples2/out-1</Source>
+   <Target>Non-Mixer.SamplesFX1Delay (Process):SamplesFX1Delay/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.Synths (Main):ZDiploLike/aux-B/out-1</Source>
+   <Target>Non-Mixer.Synths (Process):TapeDelay/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.SamplesFX1Delay (In):Samples3/out-1</Source>
+   <Target>Non-Mixer.SamplesFX1Delay (Process):SamplesFX1Delay/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.Synths (Main):ZDiploLike/out-1</Source>
+   <Target>Non-Mixer.Synths (Out):SynthsOut/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.SamplesFX1Delay (In):Samples4/out-1</Source>
+   <Target>Non-Mixer.SamplesFX1Delay (Process):SamplesFX1Delay/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.Samples (Out):SamplesOut/out-1</Source>
+   <Target>Non-Mixer.Outputs (Outputs):Samples/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.Samples (Out):SamplesOut/out-1</Source>
+   <Target>Non-Mixer.MonitorsNano (MonitorsNano):Samples/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.Samples (Out):SamplesOut/out-1</Source>
+   <Target>Non-Mixer.MonitorsKesch (MonitorsKesch):Samples/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.Samples (Main):ConstantSampler/out-1</Source>
+   <Target>Non-Mixer.Samples (Out):SamplesOut/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.Samples (Main):ConstantSampler/out-1</Source>
+   <Target>Non-Mixer.SamplesFX1Delay (In):ConstantSampler/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.Samples (Main):ConstantSampler/out-1</Source>
+   <Target>Non-Mixer.SamplesFX3Reverb (In):ConstantSampler/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.Samples (Main):ConstantSampler/out-1</Source>
+   <Target>Non-Mixer.SamplesFX4Autofilter (In):ConstantSampler/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.Samples (Main):ConstantSampler/out-1</Source>
+   <Target>Non-Mixer.SamplesFX2Delay (In):ConstantSampler/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.Samples (Main):ConstantSampler/out-1</Source>
+   <Target>Non-Mixer.SamplesFX5TapeDelay (In):ConstantSampler/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.SamplesFX1Delay (In):Samples5/out-1</Source>
+   <Target>Non-Mixer.SamplesFX1Delay (Process):SamplesFX1Delay/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.SamplesFX2Delay (In):Samples1/out-1</Source>
+   <Target>Non-Mixer.SamplesFX2Delay (Process):SamplesFX2Delay/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.SamplesFX2Delay (In):Samples2/out-1</Source>
+   <Target>Non-Mixer.SamplesFX2Delay (Process):SamplesFX2Delay/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.SamplesFX2Delay (In):Samples3/out-1</Source>
+   <Target>Non-Mixer.SamplesFX2Delay (Process):SamplesFX2Delay/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.SamplesFX2Delay (In):Samples4/out-1</Source>
+   <Target>Non-Mixer.SamplesFX2Delay (Process):SamplesFX2Delay/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.SamplesFX3Reverb (In):Samples1/out-1</Source>
+   <Target>Non-Mixer.SamplesFX3Reverb (Process):SamplesFX3Reverb/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.SamplesFX2Delay (In):Samples5/out-1</Source>
+   <Target>Non-Mixer.SamplesFX2Delay (Process):SamplesFX2Delay/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.SamplesFX1Delay (Process):SamplesFX1Delay/out-1</Source>
+   <Target>Non-Mixer.Samples (Out):SamplesOut/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.SamplesFX3Reverb (In):Samples2/out-1</Source>
+   <Target>Non-Mixer.SamplesFX3Reverb (Process):SamplesFX3Reverb/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.SamplesFX1Delay (In):ConstantSampler/out-1</Source>
+   <Target>Non-Mixer.SamplesFX1Delay (Process):SamplesFX1Delay/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.SamplesFX3Reverb (In):Samples3/out-1</Source>
+   <Target>Non-Mixer.SamplesFX3Reverb (Process):SamplesFX3Reverb/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.SamplesFX3Reverb (In):Samples4/out-1</Source>
+   <Target>Non-Mixer.SamplesFX3Reverb (Process):SamplesFX3Reverb/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.SamplesFX4Autofilter (In):Samples1/out-1</Source>
+   <Target>Non-Mixer.SamplesFX4Autofilter (Process):SamplesFX4Autofilter/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.SamplesFX3Reverb (In):Samples5/out-1</Source>
+   <Target>Non-Mixer.SamplesFX3Reverb (Process):SamplesFX3Reverb/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.SamplesFX2Delay (Process):SamplesFX2Delay/out-1</Source>
+   <Target>Non-Mixer.Samples (Out):SamplesOut/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.SamplesFX4Autofilter (In):Samples2/out-1</Source>
+   <Target>Non-Mixer.SamplesFX4Autofilter (Process):SamplesFX4Autofilter/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.SamplesFX2Delay (In):ConstantSampler/out-1</Source>
+   <Target>Non-Mixer.SamplesFX2Delay (Process):SamplesFX2Delay/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.SamplesFX4Autofilter (In):Samples3/out-1</Source>
+   <Target>Non-Mixer.SamplesFX4Autofilter (Process):SamplesFX4Autofilter/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.SamplesFX4Autofilter (In):Samples4/out-1</Source>
+   <Target>Non-Mixer.SamplesFX4Autofilter (Process):SamplesFX4Autofilter/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.SamplesFX4Autofilter (In):Samples5/out-1</Source>
+   <Target>Non-Mixer.SamplesFX4Autofilter (Process):SamplesFX4Autofilter/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.SamplesWork (In):Samples1/out-1</Source>
+   <Target>Non-Mixer.SamplesWork (Process):SamplesWork/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.SamplesFX3Reverb (Process):SamplesFX3Reverb/out-1</Source>
+   <Target>Non-Mixer.Samples (Out):SamplesOut/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.SamplesFX3Reverb (In):ConstantSampler/out-1</Source>
+   <Target>Non-Mixer.SamplesFX3Reverb (Process):SamplesFX3Reverb/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.SamplesWork (In):Samples2/out-1</Source>
+   <Target>Non-Mixer.SamplesWork (Process):SamplesWork/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.SamplesWork (In):Samples3/out-1</Source>
+   <Target>Non-Mixer.SamplesWork (Process):SamplesWork/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.SamplesFX4Autofilter (Process):SamplesFX4Autofilter/out-1</Source>
+   <Target>Non-Mixer.Samples (Out):SamplesOut/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.SamplesFX4Autofilter (In):ConstantSampler/out-1</Source>
+   <Target>Non-Mixer.SamplesFX4Autofilter (Process):SamplesFX4Autofilter/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.SamplesWork (In):Samples4/out-1</Source>
+   <Target>Non-Mixer.SamplesWork (Process):SamplesWork/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.VocalsNano (In):NanoIn/out-1</Source>
+   <Target>Autotune.NanoMeuf:in</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.VocalsNano (In):NanoIn/out-1</Source>
+   <Target>Autotune.NanoGars:in</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.VocalsNano (In):NanoIn/out-1</Source>
+   <Target>Autotune.NanoNormo:in</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.SamplesWork (In):Samples5/out-1</Source>
+   <Target>Non-Mixer.SamplesWork (Process):SamplesWork/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.VocalsNano (Out):NanoOut/out-1</Source>
+   <Target>sooperlooper:loop5_in_1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.VocalsNanoFX1Delay (In):NanoMeuf/out-1</Source>
+   <Target>Non-Mixer.VocalsNanoFX1Delay (Process):NanoFX1Delay/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.SamplesWork (Process):SamplesWork/out-1</Source>
+   <Target>Non-Mixer.Samples (Out):SamplesOut/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.VocalsNanoFX1Delay (In):NanoNormo/out-1</Source>
+   <Target>Non-Mixer.VocalsNanoFX1Delay (Process):NanoFX1Delay/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.VocalsNanoFX1Delay (In):NanoGars/out-1</Source>
+   <Target>Non-Mixer.VocalsNanoFX1Delay (Process):NanoFX1Delay/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.VocalsNano (Meuf):NanoMeuf/aux-A/out-1</Source>
+   <Target>Non-Mixer.VocalsNano (ArtificialBackings):NanoABNormo/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.VocalsNanoFX1Delay (In):NanoAB/out-1</Source>
+   <Target>Non-Mixer.VocalsNanoFX1Delay (Process):NanoFX1Delay/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.VocalsNano (Meuf):NanoMeuf/aux-B/out-1</Source>
+   <Target>Non-Mixer.VocalsNano (ArtificialBackings):NanoABGars/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.VocalsNanoFX2Delay (In):NanoMeuf/out-1</Source>
+   <Target>Non-Mixer.VocalsNanoFX2Delay (Process):NanoFX2Delay/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.VocalsNano (Meuf):NanoMeuf/aux-C/out-1</Source>
+   <Target>Non-Mixer.VocalsNanoFX2Delay (In):NanoMeuf/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.VocalsNano (Meuf):NanoMeuf/aux-C/out-1</Source>
+   <Target>Non-Mixer.VocalsNanoFX1Delay (In):NanoMeuf/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.VocalsNano (Meuf):NanoMeuf/aux-C/out-1</Source>
+   <Target>Non-Mixer.VocalsNanoFX3TrapVerb (In):NanoMeuf/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.VocalsNano (Meuf):NanoMeuf/aux-C/out-1</Source>
+   <Target>Non-Mixer.VocalsNanoFX4Disint (In):NanoMeuf/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.VocalsNano (Meuf):NanoMeuf/aux-C/out-1</Source>
+   <Target>Non-Mixer.VocalsNanoFX5RingMod (In):NanoMeuf/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.VocalsNano (Meuf):NanoMeuf/aux-C/out-1</Source>
+   <Target>Non-Mixer.VocalsNanoFX6Granular (In):NanoMeuf/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.VocalsNano (Meuf):NanoMeuf/aux-C/out-1</Source>
+   <Target>Non-Mixer.VocalsNanoFX7Slice (In):NanoMeuf/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.VocalsNano (Meuf):NanoMeuf/aux-C/out-1</Source>
+   <Target>Non-Mixer.VocalsNanoFX8TapeDelay (In):NanoMeuf/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.VocalsNano (Meuf):NanoMeuf/out-1</Source>
+   <Target>Non-Mixer.VocalsNano (Out):NanoOut/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.VocalsNanoFX2Delay (In):NanoNormo/out-1</Source>
+   <Target>Non-Mixer.VocalsNanoFX2Delay (Process):NanoFX2Delay/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.VocalsNanoFX2Delay (In):NanoGars/out-1</Source>
+   <Target>Non-Mixer.VocalsNanoFX2Delay (Process):NanoFX2Delay/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.VocalsNanoFX2Delay (In):NanoAB/out-1</Source>
+   <Target>Non-Mixer.VocalsNanoFX2Delay (Process):NanoFX2Delay/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.VocalsNanoFX1Delay (Process):NanoFX1Delay/out-1</Source>
+   <Target>Non-Mixer.VocalsNano (Out):NanoOut/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.VocalsNanoFX3TrapVerb (In):NanoMeuf/out-1</Source>
+   <Target>Non-Mixer.VocalsNanoFX3TrapVerb (Process):NanoFX3TrapVerb/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.VocalsNano (Normo):NanoNormo/aux-A/out-1</Source>
+   <Target>Non-Mixer.VocalsNano (ArtificialBackings):NanoABMeuf/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.VocalsNanoFX3TrapVerb (In):NanoNormo/out-1</Source>
+   <Target>Non-Mixer.VocalsNanoFX3TrapVerb (Process):NanoFX3TrapVerb/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.VocalsNano (Normo):NanoNormo/aux-B/out-1</Source>
+   <Target>Non-Mixer.VocalsNano (ArtificialBackings):NanoABGars/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.VocalsNano (Normo):NanoNormo/aux-C/out-1</Source>
+   <Target>Non-Mixer.VocalsNanoFX3TrapVerb (In):NanoNormo/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.VocalsNano (Normo):NanoNormo/aux-C/out-1</Source>
+   <Target>Non-Mixer.VocalsNanoFX2Delay (In):NanoNormo/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.VocalsNano (Normo):NanoNormo/aux-C/out-1</Source>
+   <Target>Non-Mixer.VocalsNanoFX1Delay (In):NanoNormo/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.VocalsNano (Normo):NanoNormo/aux-C/out-1</Source>
+   <Target>Non-Mixer.VocalsNanoFX4Disint (In):NanoNormo/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.VocalsNano (Normo):NanoNormo/aux-C/out-1</Source>
+   <Target>Non-Mixer.VocalsNanoFX5RingMod (In):NanoNormo/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.VocalsNano (Normo):NanoNormo/aux-C/out-1</Source>
+   <Target>Non-Mixer.VocalsNanoFX6Granular (In):NanoNormo/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.VocalsNano (Normo):NanoNormo/aux-C/out-1</Source>
+   <Target>Non-Mixer.VocalsNanoFX7Slice (In):NanoNormo/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.VocalsNano (Normo):NanoNormo/aux-C/out-1</Source>
+   <Target>Non-Mixer.VocalsNanoFX8TapeDelay (In):NanoNormo/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.VocalsNanoFX3TrapVerb (In):NanoGars/out-1</Source>
+   <Target>Non-Mixer.VocalsNanoFX3TrapVerb (Process):NanoFX3TrapVerb/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.VocalsNano (Normo):NanoNormo/out-1</Source>
+   <Target>Non-Mixer.VocalsNano (Out):NanoOut/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.VocalsNanoFX2Delay (Process):NanoFX2Delay/out-1</Source>
+   <Target>Non-Mixer.VocalsNano (Out):NanoOut/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.VocalsNanoFX3TrapVerb (In):NanoAB/out-1</Source>
+   <Target>Non-Mixer.VocalsNanoFX3TrapVerb (Process):NanoFX3TrapVerb/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.VocalsNanoFX4Disint (In):NanoMeuf/out-1</Source>
+   <Target>Non-Mixer.VocalsNanoFX4Disint (Process):NanoFX4Disint/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.VocalsNanoFX4Disint (In):NanoNormo/out-1</Source>
+   <Target>Non-Mixer.VocalsNanoFX4Disint (Process):NanoFX4Disint/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.VocalsNanoFX5RingMod (In):NanoMeuf/out-1</Source>
+   <Target>Non-Mixer.VocalsNanoFX5RingMod (Process):NanoFX5RingMod/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.VocalsNanoFX4Disint (In):NanoGars/out-1</Source>
+   <Target>Non-Mixer.VocalsNanoFX4Disint (Process):NanoFX4Disint/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.VocalsNanoFX5RingMod (In):NanoNormo/out-1</Source>
+   <Target>Non-Mixer.VocalsNanoFX5RingMod (Process):NanoFX5RingMod/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.VocalsNano (Gars):NanoGars/aux-A/out-1</Source>
+   <Target>Non-Mixer.VocalsNano (ArtificialBackings):NanoABMeuf/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.VocalsNanoFX4Disint (In):NanoAB/out-1</Source>
+   <Target>Non-Mixer.VocalsNanoFX4Disint (Process):NanoFX4Disint/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.VocalsNano (Gars):NanoGars/aux-B/out-1</Source>
+   <Target>Non-Mixer.VocalsNano (ArtificialBackings):NanoABNormo/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.VocalsNanoFX5RingMod (In):NanoGars/out-1</Source>
+   <Target>Non-Mixer.VocalsNanoFX5RingMod (Process):NanoFX5RingMod/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.VocalsNano (Gars):NanoGars/aux-C/out-1</Source>
+   <Target>Non-Mixer.VocalsNanoFX5RingMod (In):NanoGars/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.VocalsNano (Gars):NanoGars/aux-C/out-1</Source>
+   <Target>Non-Mixer.VocalsNanoFX4Disint (In):NanoGars/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.VocalsNano (Gars):NanoGars/aux-C/out-1</Source>
+   <Target>Non-Mixer.VocalsNanoFX3TrapVerb (In):NanoGars/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.VocalsNano (Gars):NanoGars/aux-C/out-1</Source>
+   <Target>Non-Mixer.VocalsNanoFX2Delay (In):NanoGars/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.VocalsNano (Gars):NanoGars/aux-C/out-1</Source>
+   <Target>Non-Mixer.VocalsNanoFX1Delay (In):NanoGars/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.VocalsNano (Gars):NanoGars/aux-C/out-1</Source>
+   <Target>Non-Mixer.VocalsNanoFX6Granular (In):NanoGars/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.VocalsNano (Gars):NanoGars/aux-C/out-1</Source>
+   <Target>Non-Mixer.VocalsNanoFX7Slice (In):NanoGars/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.VocalsNano (Gars):NanoGars/aux-C/out-1</Source>
+   <Target>Non-Mixer.VocalsNanoFX8TapeDelay (In):NanoGars/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.VocalsNano (Gars):NanoGars/out-1</Source>
+   <Target>Non-Mixer.VocalsNano (Out):NanoOut/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.VocalsNanoFX5RingMod (In):NanoAB/out-1</Source>
+   <Target>Non-Mixer.VocalsNanoFX5RingMod (Process):NanoFX5RingMod/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.VocalsNanoFX6Granular (In):NanoMeuf/out-1</Source>
+   <Target>Non-Mixer.VocalsNanoFX6Granular (Process):NanoFX6Granular/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.VocalsNanoFX3TrapVerb (Process):NanoFX3TrapVerb/out-1</Source>
+   <Target>Non-Mixer.VocalsNano (Out):NanoOut/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.VocalsNanoFX6Granular (In):NanoNormo/out-1</Source>
+   <Target>Non-Mixer.VocalsNanoFX6Granular (Process):NanoFX6Granular/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.VocalsNanoFX6Granular (In):NanoGars/out-1</Source>
+   <Target>Non-Mixer.VocalsNanoFX6Granular (Process):NanoFX6Granular/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.VocalsNanoFX7Slice (In):NanoMeuf/out-1</Source>
+   <Target>Non-Mixer.VocalsNanoFX7Slice (Process):NanoFX7Slice/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.VocalsNanoFX6Granular (In):NanoAB/out-1</Source>
+   <Target>Non-Mixer.VocalsNanoFX6Granular (Process):NanoFX6Granular/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.VocalsNanoFX7Slice (In):NanoNormo/out-1</Source>
+   <Target>Non-Mixer.VocalsNanoFX7Slice (Process):NanoFX7Slice/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.VocalsNanoFX4Disint (Process):NanoFX4Disint/out-1</Source>
+   <Target>Non-Mixer.VocalsNano (Out):NanoOut/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.VocalsNanoFX7Slice (In):NanoGars/out-1</Source>
+   <Target>Non-Mixer.VocalsNanoFX7Slice (Process):NanoFX7Slice/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.VocalsNano (ArtificialBackings):NanoABMeuf/out-1</Source>
+   <Target>Non-Mixer.VocalsNanoFX6Granular (In):NanoAB/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.VocalsNano (ArtificialBackings):NanoABMeuf/out-1</Source>
+   <Target>Non-Mixer.VocalsNanoFX5RingMod (In):NanoAB/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.VocalsNano (ArtificialBackings):NanoABMeuf/out-1</Source>
+   <Target>Non-Mixer.VocalsNanoFX4Disint (In):NanoAB/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.VocalsNano (ArtificialBackings):NanoABMeuf/out-1</Source>
+   <Target>Non-Mixer.VocalsNanoFX3TrapVerb (In):NanoAB/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.VocalsNano (ArtificialBackings):NanoABMeuf/out-1</Source>
+   <Target>Non-Mixer.VocalsNanoFX2Delay (In):NanoAB/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.VocalsNano (ArtificialBackings):NanoABMeuf/out-1</Source>
+   <Target>Non-Mixer.VocalsNanoFX1Delay (In):NanoAB/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.VocalsNano (ArtificialBackings):NanoABMeuf/out-1</Source>
+   <Target>Non-Mixer.VocalsNano (Out):NanoOut/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.VocalsNano (ArtificialBackings):NanoABMeuf/out-1</Source>
+   <Target>Non-Mixer.VocalsNanoFX7Slice (In):NanoAB/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.VocalsNanoFX7Slice (In):NanoAB/out-1</Source>
+   <Target>Non-Mixer.VocalsNanoFX7Slice (Process):NanoFX7Slice/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.VocalsNano (ArtificialBackings):NanoABNormo/out-1</Source>
+   <Target>Non-Mixer.VocalsNanoFX6Granular (In):NanoAB/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.VocalsNano (ArtificialBackings):NanoABNormo/out-1</Source>
+   <Target>Non-Mixer.VocalsNanoFX5RingMod (In):NanoAB/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.VocalsNano (ArtificialBackings):NanoABNormo/out-1</Source>
+   <Target>Non-Mixer.VocalsNanoFX4Disint (In):NanoAB/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.VocalsNano (ArtificialBackings):NanoABNormo/out-1</Source>
+   <Target>Non-Mixer.VocalsNanoFX3TrapVerb (In):NanoAB/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.VocalsNano (ArtificialBackings):NanoABNormo/out-1</Source>
+   <Target>Non-Mixer.VocalsNanoFX2Delay (In):NanoAB/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.VocalsNano (ArtificialBackings):NanoABNormo/out-1</Source>
+   <Target>Non-Mixer.VocalsNanoFX1Delay (In):NanoAB/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.VocalsNano (ArtificialBackings):NanoABNormo/out-1</Source>
+   <Target>Non-Mixer.VocalsNano (Out):NanoOut/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.VocalsNano (ArtificialBackings):NanoABNormo/out-1</Source>
+   <Target>Non-Mixer.VocalsNanoFX7Slice (In):NanoAB/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.VocalsNanoFX5RingMod (Process):NanoFX5RingMod/out-1</Source>
+   <Target>Non-Mixer.VocalsNano (Out):NanoOut/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.VocalsNano (ArtificialBackings):NanoABGars/out-1</Source>
+   <Target>Non-Mixer.VocalsNanoFX6Granular (In):NanoAB/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.VocalsNano (ArtificialBackings):NanoABGars/out-1</Source>
+   <Target>Non-Mixer.VocalsNanoFX5RingMod (In):NanoAB/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.VocalsNano (ArtificialBackings):NanoABGars/out-1</Source>
+   <Target>Non-Mixer.VocalsNanoFX4Disint (In):NanoAB/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.VocalsNano (ArtificialBackings):NanoABGars/out-1</Source>
+   <Target>Non-Mixer.VocalsNanoFX3TrapVerb (In):NanoAB/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.VocalsNano (ArtificialBackings):NanoABGars/out-1</Source>
+   <Target>Non-Mixer.VocalsNanoFX2Delay (In):NanoAB/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.VocalsNano (ArtificialBackings):NanoABGars/out-1</Source>
+   <Target>Non-Mixer.VocalsNanoFX1Delay (In):NanoAB/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.VocalsNano (ArtificialBackings):NanoABGars/out-1</Source>
+   <Target>Non-Mixer.VocalsNano (Out):NanoOut/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.VocalsNano (ArtificialBackings):NanoABGars/out-1</Source>
+   <Target>Non-Mixer.VocalsNanoFX7Slice (In):NanoAB/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.VocalsNano (ArtificialBackings):NanoABGars/out-1</Source>
+   <Target>Non-Mixer.VocalsNanoFX8TapeDelay (In):NanoAB/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.VocalsKesch (In):KeschIn/out-1</Source>
+   <Target>Autotune.KeschMeuf:in</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.VocalsKesch (In):KeschIn/out-1</Source>
+   <Target>Autotune.KeschNormo:in</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.VocalsKesch (In):KeschIn/out-1</Source>
+   <Target>Autotune.KeschGars:in</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.VocalsNanoFX6Granular (Process):NanoFX6Granular/out-1</Source>
+   <Target>Non-Mixer.VocalsNano (Out):NanoOut/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.VocalsKeschFX1Delay (In):KeschMeuf/out-1</Source>
+   <Target>Non-Mixer.VocalsKeschFX1Delay (Process):KeschFX1Delay/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.VocalsNanoFX7Slice (Process):NanoFX7Slice/out-1</Source>
+   <Target>Non-Mixer.VocalsNano (Out):NanoOut/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.VocalsKeschFX1Delay (In):KeschNormo/out-1</Source>
+   <Target>Non-Mixer.VocalsKeschFX1Delay (Process):KeschFX1Delay/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.VocalsKeschFX1Delay (In):KeschGars/out-1</Source>
+   <Target>Non-Mixer.VocalsKeschFX1Delay (Process):KeschFX1Delay/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.VocalsKesch (Out):KeschOut/out-1</Source>
+   <Target>sooperlooper:loop7_in_1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.VocalsKeschFX1Delay (In):KeschAB/out-1</Source>
+   <Target>Non-Mixer.VocalsKeschFX1Delay (Process):KeschFX1Delay/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.VocalsKeschFX2Delay (In):KeschMeuf/out-1</Source>
+   <Target>Non-Mixer.VocalsKeschFX2Delay (Process):KeschFX2Delay/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.VocalsKeschFX2Delay (In):KeschNormo/out-1</Source>
+   <Target>Non-Mixer.VocalsKeschFX2Delay (Process):KeschFX2Delay/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.VocalsKeschFX2Delay (In):KeschGars/out-1</Source>
+   <Target>Non-Mixer.VocalsKeschFX2Delay (Process):KeschFX2Delay/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.VocalsKesch (Meuf):KeschMeuf/aux-A/out-1</Source>
+   <Target>Non-Mixer.VocalsKesch (ArtificialBackings):KeschABNormo/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.VocalsKesch (Meuf):KeschMeuf/aux-B/out-1</Source>
+   <Target>Non-Mixer.VocalsKesch (ArtificialBackings):KeschABGars/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.VocalsKeschFX2Delay (In):KeschAB/out-1</Source>
+   <Target>Non-Mixer.VocalsKeschFX2Delay (Process):KeschFX2Delay/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.VocalsKesch (Meuf):KeschMeuf/aux-C/out-1</Source>
+   <Target>Non-Mixer.VocalsKeschFX1Delay (In):KeschMeuf/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.VocalsKesch (Meuf):KeschMeuf/aux-C/out-1</Source>
+   <Target>Non-Mixer.VocalsKeschFX3TrapVerb (In):KeschMeuf/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.VocalsKesch (Meuf):KeschMeuf/aux-C/out-1</Source>
+   <Target>Non-Mixer.VocalsKeschFX2Delay (In):KeschMeuf/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.VocalsKesch (Meuf):KeschMeuf/aux-C/out-1</Source>
+   <Target>Non-Mixer.VocalsKeschFX4Disint (In):KeschMeuf/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.VocalsKesch (Meuf):KeschMeuf/aux-C/out-1</Source>
+   <Target>Non-Mixer.VocalsKeschFX5RingMod (In):KeschMeuf/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.VocalsKesch (Meuf):KeschMeuf/aux-C/out-1</Source>
+   <Target>Non-Mixer.VocalsKeschFX6Granular (In):KeschMeuf/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.VocalsKesch (Meuf):KeschMeuf/aux-C/out-1</Source>
+   <Target>Non-Mixer.VocalsKeschFX7Slice (In):KeschMeuf/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.VocalsKesch (Meuf):KeschMeuf/aux-C/out-1</Source>
+   <Target>Non-Mixer.VocalsKeschFX8TapeDelay (In):KeschMeuf/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.VocalsKeschFX3TrapVerb (In):KeschMeuf/out-1</Source>
+   <Target>Non-Mixer.VocalsKeschFX3TrapVerb (Process):KeschFX3TrapVerb/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.VocalsKesch (Meuf):KeschMeuf/out-1</Source>
+   <Target>Non-Mixer.VocalsKesch (Out):KeschOut/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.VocalsKeschFX3TrapVerb (In):KeschNormo/out-1</Source>
+   <Target>Non-Mixer.VocalsKeschFX3TrapVerb (Process):KeschFX3TrapVerb/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.VocalsKeschFX1Delay (Process):KeschFX1Delay/out-1</Source>
+   <Target>Non-Mixer.VocalsKesch (Out):KeschOut/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.VocalsKeschFX3TrapVerb (In):KeschGars/out-1</Source>
+   <Target>Non-Mixer.VocalsKeschFX3TrapVerb (Process):KeschFX3TrapVerb/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.VocalsKeschFX3TrapVerb (In):KeschAB/out-1</Source>
+   <Target>Non-Mixer.VocalsKeschFX3TrapVerb (Process):KeschFX3TrapVerb/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.VocalsKeschFX4Disint (In):KeschMeuf/out-1</Source>
+   <Target>Non-Mixer.VocalsKeschFX4Disint (Process):KeschFX4Disint/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.VocalsKeschFX4Disint (In):KeschNormo/out-1</Source>
+   <Target>Non-Mixer.VocalsKeschFX4Disint (Process):KeschFX4Disint/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.VocalsKeschFX2Delay (Process):KeschFX2Delay/out-1</Source>
+   <Target>Non-Mixer.VocalsKesch (Out):KeschOut/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.VocalsKeschFX4Disint (In):KeschGars/out-1</Source>
+   <Target>Non-Mixer.VocalsKeschFX4Disint (Process):KeschFX4Disint/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.VocalsKesch (Normo):KeschNormo/aux-A/out-1</Source>
+   <Target>Non-Mixer.VocalsKesch (ArtificialBackings):KeschABMeuf/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.VocalsKesch (Normo):KeschNormo/aux-B/out-1</Source>
+   <Target>Non-Mixer.VocalsKesch (ArtificialBackings):KeschABGars/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>a2j:seq192 MainSequencer (capture): seq192 1</Source>
+   <Target>a2j:ZynAddSubFX ZLowSynths (playback): ZynAddSubFX</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.VocalsKeschFX4Disint (In):KeschAB/out-1</Source>
+   <Target>Non-Mixer.VocalsKeschFX4Disint (Process):KeschFX4Disint/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.VocalsKesch (Normo):KeschNormo/aux-C/out-1</Source>
+   <Target>Non-Mixer.VocalsKeschFX1Delay (In):KeschNormo/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.VocalsKesch (Normo):KeschNormo/aux-C/out-1</Source>
+   <Target>Non-Mixer.VocalsKeschFX2Delay (In):KeschNormo/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.VocalsKesch (Normo):KeschNormo/aux-C/out-1</Source>
+   <Target>Non-Mixer.VocalsKeschFX3TrapVerb (In):KeschNormo/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.VocalsKesch (Normo):KeschNormo/aux-C/out-1</Source>
+   <Target>Non-Mixer.VocalsKeschFX4Disint (In):KeschNormo/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.VocalsKesch (Normo):KeschNormo/aux-C/out-1</Source>
+   <Target>Non-Mixer.VocalsKeschFX5RingMod (In):KeschNormo/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.VocalsKesch (Normo):KeschNormo/aux-C/out-1</Source>
+   <Target>Non-Mixer.VocalsKeschFX6Granular (In):KeschNormo/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.VocalsKesch (Normo):KeschNormo/aux-C/out-1</Source>
+   <Target>Non-Mixer.VocalsKeschFX7Slice (In):KeschNormo/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.VocalsKesch (Normo):KeschNormo/aux-C/out-1</Source>
+   <Target>Non-Mixer.VocalsKeschFX8TapeDelay (In):KeschNormo/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.VocalsKeschFX5RingMod (In):KeschMeuf/out-1</Source>
+   <Target>Non-Mixer.VocalsKeschFX5RingMod (Process):KeschFX5RingMod/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>a2j:seq192 MainSequencer (capture): seq192 2</Source>
+   <Target>Carla.LowCSynths/Boom:events-in</Target>
+  </Connection>
+  <Connection>
+   <Source>a2j:seq192 MainSequencer (capture): seq192 2</Source>
+   <Target>Carla.LowCSynths/Trap2:events-in</Target>
+  </Connection>
+  <Connection>
+   <Source>a2j:seq192 MainSequencer (capture): seq192 2</Source>
+   <Target>Carla.LowCSynths/Trap1:events-in</Target>
+  </Connection>
+  <Connection>
+   <Source>a2j:seq192 MainSequencer (capture): seq192 2</Source>
+   <Target>Carla.LowCSynths/Barkline:events-in</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.VocalsKesch (Normo):KeschNormo/out-1</Source>
+   <Target>Non-Mixer.VocalsKesch (Out):KeschOut/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>a2j:seq192 MainSequencer (capture): seq192 3</Source>
+   <Target>a2j:ZynAddSubFX ZHiSynths (playback): ZynAddSubFX</Target>
+  </Connection>
+  <Connection>
+   <Source>a2j:seq192 MainSequencer (capture): seq192 4</Source>
+   <Target>Carla.HiCSynths/Rhodes:events-in</Target>
+  </Connection>
+  <Connection>
+   <Source>a2j:seq192 MainSequencer (capture): seq192 4</Source>
+   <Target>a2j:MonoSynthMicroTonal (playback): TrapIn</Target>
+  </Connection>
+  <Connection>
+   <Source>a2j:seq192 MainSequencer (capture): seq192 4</Source>
+   <Target>a2j:MonoSynthMicroTonal (playback): EasyClassicalIn</Target>
+  </Connection>
+  <Connection>
+   <Source>a2j:seq192 MainSequencer (capture): seq192 4</Source>
+   <Target>a2j:MonoSynthMicroTonal (playback): DubstepHornIn</Target>
+  </Connection>
+  <Connection>
+   <Source>a2j:seq192 MainSequencer (capture): seq192 4</Source>
+   <Target>a2j:MonoSynthMicroTonal (playback): TrapFifthIn</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.VocalsKeschFX5RingMod (In):KeschNormo/out-1</Source>
+   <Target>Non-Mixer.VocalsKeschFX5RingMod (Process):KeschFX5RingMod/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.VocalsKeschFX3TrapVerb (Process):KeschFX3TrapVerb/out-1</Source>
+   <Target>Non-Mixer.VocalsKesch (Out):KeschOut/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.VocalsKeschFX5RingMod (In):KeschGars/out-1</Source>
+   <Target>Non-Mixer.VocalsKeschFX5RingMod (Process):KeschFX5RingMod/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.VocalsKeschFX7Slice (In):KeschMeuf/out-1</Source>
+   <Target>Non-Mixer.VocalsKeschFX7Slice (Process):KeschFX7Slice/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.VocalsKeschFX5RingMod (In):KeschAB/out-1</Source>
+   <Target>Non-Mixer.VocalsKeschFX5RingMod (Process):KeschFX5RingMod/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.VocalsKeschFX7Slice (In):KeschNormo/out-1</Source>
+   <Target>Non-Mixer.VocalsKeschFX7Slice (Process):KeschFX7Slice/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.VocalsKeschFX6Granular (In):KeschMeuf/out-1</Source>
+   <Target>Non-Mixer.VocalsKeschFX6Granular (Process):KeschFX6Granular/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.VocalsKeschFX6Granular (In):KeschNormo/out-1</Source>
+   <Target>Non-Mixer.VocalsKeschFX6Granular (Process):KeschFX6Granular/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.VocalsKesch (ArtificialBackings):KeschABNormo/out-1</Source>
+   <Target>Non-Mixer.VocalsKeschFX5RingMod (In):KeschAB/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.VocalsKesch (ArtificialBackings):KeschABNormo/out-1</Source>
+   <Target>Non-Mixer.VocalsKeschFX4Disint (In):KeschAB/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.VocalsKesch (ArtificialBackings):KeschABNormo/out-1</Source>
+   <Target>Non-Mixer.VocalsKeschFX3TrapVerb (In):KeschAB/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.VocalsKesch (ArtificialBackings):KeschABNormo/out-1</Source>
+   <Target>Non-Mixer.VocalsKeschFX2Delay (In):KeschAB/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.VocalsKesch (ArtificialBackings):KeschABNormo/out-1</Source>
+   <Target>Non-Mixer.VocalsKeschFX1Delay (In):KeschAB/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.VocalsKesch (ArtificialBackings):KeschABNormo/out-1</Source>
+   <Target>Non-Mixer.VocalsKesch (Out):KeschOut/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.VocalsKesch (ArtificialBackings):KeschABNormo/out-1</Source>
+   <Target>Non-Mixer.VocalsKeschFX6Granular (In):KeschAB/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.VocalsKesch (ArtificialBackings):KeschABNormo/out-1</Source>
+   <Target>Non-Mixer.VocalsKeschFX7Slice (In):KeschAB/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.VocalsKesch (ArtificialBackings):KeschABNormo/out-1</Source>
+   <Target>Non-Mixer.VocalsKeschFX8TapeDelay (In):KeschAB/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.VocalsKeschFX4Disint (Process):KeschFX4Disint/out-1</Source>
+   <Target>Non-Mixer.VocalsKesch (Out):KeschOut/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.VocalsKeschFX7Slice (In):KeschGars/out-1</Source>
+   <Target>Non-Mixer.VocalsKeschFX7Slice (Process):KeschFX7Slice/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.VocalsKeschFX6Granular (In):KeschGars/out-1</Source>
+   <Target>Non-Mixer.VocalsKeschFX6Granular (Process):KeschFX6Granular/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>a2j:loop192 MidiLooper (capture): Loop 0</Source>
+   <Target>QMidiArp.ZLowArp:in</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.VocalsKesch (Gars):KeschGars/aux-A/out-1</Source>
+   <Target>Non-Mixer.VocalsKesch (ArtificialBackings):KeschABMeuf/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.VocalsKeschFX7Slice (In):KeschAB/out-1</Source>
+   <Target>Non-Mixer.VocalsKeschFX7Slice (Process):KeschFX7Slice/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.VocalsKeschFX6Granular (In):KeschAB/out-1</Source>
+   <Target>Non-Mixer.VocalsKeschFX6Granular (Process):KeschFX6Granular/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.VocalsKesch (Gars):KeschGars/aux-B/out-1</Source>
+   <Target>Non-Mixer.VocalsKesch (ArtificialBackings):KeschABNormo/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>a2j:loop192 MidiLooper (capture): Loop 1</Source>
+   <Target>QMidiArp.CLowArp:in</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.VocalsKesch (Gars):KeschGars/aux-C/out-1</Source>
+   <Target>Non-Mixer.VocalsKeschFX1Delay (In):KeschGars/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.VocalsKesch (Gars):KeschGars/aux-C/out-1</Source>
+   <Target>Non-Mixer.VocalsKeschFX2Delay (In):KeschGars/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.VocalsKesch (Gars):KeschGars/aux-C/out-1</Source>
+   <Target>Non-Mixer.VocalsKeschFX3TrapVerb (In):KeschGars/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.VocalsKesch (Gars):KeschGars/aux-C/out-1</Source>
+   <Target>Non-Mixer.VocalsKeschFX4Disint (In):KeschGars/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.VocalsKesch (Gars):KeschGars/aux-C/out-1</Source>
+   <Target>Non-Mixer.VocalsKeschFX5RingMod (In):KeschGars/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.VocalsKesch (Gars):KeschGars/aux-C/out-1</Source>
+   <Target>Non-Mixer.VocalsKeschFX6Granular (In):KeschGars/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.VocalsKesch (Gars):KeschGars/aux-C/out-1</Source>
+   <Target>Non-Mixer.VocalsKeschFX7Slice (In):KeschGars/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.VocalsKesch (Gars):KeschGars/aux-C/out-1</Source>
+   <Target>Non-Mixer.VocalsKeschFX8TapeDelay (In):KeschGars/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.VocalsKeschFX5RingMod (Process):KeschFX5RingMod/out-1</Source>
+   <Target>Non-Mixer.VocalsKesch (Out):KeschOut/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.VocalsKesch (Gars):KeschGars/out-1</Source>
+   <Target>Non-Mixer.VocalsKesch (Out):KeschOut/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>a2j:loop192 MidiLooper (capture): Loop 2</Source>
+   <Target>QMidiArp.ZHiArp:in</Target>
+  </Connection>
+  <Connection>
+   <Source>Autotune.KeschMeuf:out</Source>
+   <Target>Non-Mixer.VocalsKesch (Meuf):KeschMeuf/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>a2j:seq192 MainSequencer (capture): seq192 10</Source>
+   <Target>a2j:Tap192 ProdSampler (playback): midi_in</Target>
+  </Connection>
+  <Connection>
+   <Source>a2j:loop192 MidiLooper (capture): Loop 3</Source>
+   <Target>Carla.HiCSynths/Rhodes:events-in</Target>
+  </Connection>
+  <Connection>
+   <Source>Autotune.KeschNormo:out</Source>
+   <Target>Non-Mixer.VocalsKesch (Normo):KeschNormo/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.VocalsKesch (ArtificialBackings):KeschABGars/out-1</Source>
+   <Target>Non-Mixer.VocalsKeschFX6Granular (In):KeschAB/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.VocalsKesch (ArtificialBackings):KeschABGars/out-1</Source>
+   <Target>Non-Mixer.VocalsKeschFX5RingMod (In):KeschAB/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.VocalsKesch (ArtificialBackings):KeschABGars/out-1</Source>
+   <Target>Non-Mixer.VocalsKeschFX4Disint (In):KeschAB/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.VocalsKesch (ArtificialBackings):KeschABGars/out-1</Source>
+   <Target>Non-Mixer.VocalsKeschFX3TrapVerb (In):KeschAB/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.VocalsKesch (ArtificialBackings):KeschABGars/out-1</Source>
+   <Target>Non-Mixer.VocalsKeschFX2Delay (In):KeschAB/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.VocalsKesch (ArtificialBackings):KeschABGars/out-1</Source>
+   <Target>Non-Mixer.VocalsKeschFX1Delay (In):KeschAB/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.VocalsKesch (ArtificialBackings):KeschABGars/out-1</Source>
+   <Target>Non-Mixer.VocalsKesch (Out):KeschOut/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.VocalsKesch (ArtificialBackings):KeschABGars/out-1</Source>
+   <Target>Non-Mixer.VocalsKeschFX7Slice (In):KeschAB/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.VocalsKesch (ArtificialBackings):KeschABGars/out-1</Source>
+   <Target>Non-Mixer.VocalsKeschFX8TapeDelay (In):KeschAB/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Autotune.KeschGars:out</Source>
+   <Target>Non-Mixer.VocalsKesch (Gars):KeschGars/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>a2j:loop192 MidiLooper (capture): Loop 4</Source>
+   <Target>QMidiArp.CHiArp:in</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.VocalsKeschFX7Slice (Process):KeschFX7Slice/out-1</Source>
+   <Target>Non-Mixer.VocalsKesch (Out):KeschOut/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.VocalsKeschFX6Granular (Process):KeschFX6Granular/out-1</Source>
+   <Target>Non-Mixer.VocalsKesch (Out):KeschOut/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>a2j:JmjKeyboard (capture): ZLow</Source>
+   <Target>a2j:loop192 MidiLooper (playback): Loop 0</Target>
+  </Connection>
+  <Connection>
+   <Source>a2j:JmjKeyboard (capture): CLow</Source>
+   <Target>a2j:loop192 MidiLooper (playback): Loop 1</Target>
+  </Connection>
+  <Connection>
+   <Source>a2j:JmjKeyboard (capture): ZHi</Source>
+   <Target>a2j:loop192 MidiLooper (playback): Loop 2</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.VocalsKesch (ArtificialBackings):KeschABMeuf/out-1</Source>
+   <Target>Non-Mixer.VocalsKeschFX6Granular (In):KeschAB/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.VocalsKesch (ArtificialBackings):KeschABMeuf/out-1</Source>
+   <Target>Non-Mixer.VocalsKeschFX5RingMod (In):KeschAB/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.VocalsKesch (ArtificialBackings):KeschABMeuf/out-1</Source>
+   <Target>Non-Mixer.VocalsKeschFX4Disint (In):KeschAB/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.VocalsKesch (ArtificialBackings):KeschABMeuf/out-1</Source>
+   <Target>Non-Mixer.VocalsKeschFX3TrapVerb (In):KeschAB/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.VocalsKesch (ArtificialBackings):KeschABMeuf/out-1</Source>
+   <Target>Non-Mixer.VocalsKeschFX2Delay (In):KeschAB/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.VocalsKesch (ArtificialBackings):KeschABMeuf/out-1</Source>
+   <Target>Non-Mixer.VocalsKeschFX1Delay (In):KeschAB/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.VocalsKesch (ArtificialBackings):KeschABMeuf/out-1</Source>
+   <Target>Non-Mixer.VocalsKesch (Out):KeschOut/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.VocalsKesch (ArtificialBackings):KeschABMeuf/out-1</Source>
+   <Target>Non-Mixer.VocalsKeschFX7Slice (In):KeschAB/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.VocalsKesch (ArtificialBackings):KeschABMeuf/out-1</Source>
+   <Target>Non-Mixer.VocalsKeschFX8TapeDelay (In):KeschAB/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>ZynAddSubFX.ZHiSynths:part0/out-L</Source>
+   <Target>Non-Mixer.Synths (Main):ZDupieux/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>a2j:JmjKeyboard (capture): CHiSf</Source>
+   <Target>a2j:loop192 MidiLooper (playback): Loop 3</Target>
+  </Connection>
+  <Connection>
+   <Source>ZynAddSubFX.ZHiSynths:part1/out-L</Source>
+   <Target>Non-Mixer.Synths (Main):ZNotSoRhodes/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>a2j:JmjKeyboard (capture): CHi</Source>
+   <Target>a2j:loop192 MidiLooper (playback): Loop 4</Target>
+  </Connection>
+  <Connection>
+   <Source>ZynAddSubFX.ZLowSynths:part0/out-L</Source>
+   <Target>Non-Mixer.BassSynths (Main):BassZDubstep/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Tap192.ProdSampler:Samples1-L</Source>
+   <Target>Non-Mixer.Samples (Main):Samples1/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>ZynAddSubFX.ZHiSynths:part2/out-L</Source>
+   <Target>Non-Mixer.Synths (Main):ZOrgan/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>a2j:JmjKeyboard (capture): ProdSampler</Source>
+   <Target>a2j:Tap192 ProdSampler (playback): midi_in</Target>
+  </Connection>
+  <Connection>
+   <Source>ZynAddSubFX.ZLowSynths:part1/out-L</Source>
+   <Target>Non-Mixer.BassSynths (Main):BassZDancestep/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>ZynAddSubFX.ZHiSynths:part3/out-L</Source>
+   <Target>Non-Mixer.Synths (Main):ZOrgan/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.BassFX (In):BassTapeDelayIn/out-1</Source>
+   <Target>Non-Mixer.BassFX (Process):BassTapeDelay/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>ZynAddSubFX.ZLowSynths:part2/out-L</Source>
+   <Target>Non-Mixer.BassSynths (Main):BassZRagstep/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>ZynAddSubFX.ZHiSynths:part4/out-L</Source>
+   <Target>Non-Mixer.Synths (Main):ZCosma/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>ZynAddSubFX.ZLowSynths:part3/out-L</Source>
+   <Target>Non-Mixer.BassSynths (Main):BassZDupieux/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>ZynAddSubFX.ZHiSynths:part5/out-L</Source>
+   <Target>Non-Mixer.Synths (Main):ZBombarde/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>a2j:Hammerfall DSP (capture): HDSP MIDI 1</Source>
+   <Target>a2j:JmjKeyboard (playback): in</Target>
+  </Connection>
+  <Connection>
+   <Source>QMidiArp.CLowArp:out 1</Source>
+   <Target>Carla.LowCSynths/Barkline:events-in</Target>
+  </Connection>
+  <Connection>
+   <Source>QMidiArp.CLowArp:out 1</Source>
+   <Target>Carla.LowCSynths/Trap1:events-in</Target>
+  </Connection>
+  <Connection>
+   <Source>QMidiArp.CLowArp:out 1</Source>
+   <Target>Carla.LowCSynths/Trap2:events-in</Target>
+  </Connection>
+  <Connection>
+   <Source>QMidiArp.CLowArp:out 1</Source>
+   <Target>Carla.LowCSynths/Boom:events-in</Target>
+  </Connection>
+  <Connection>
+   <Source>QMidiArp.ZLowArp:out 1</Source>
+   <Target>a2j:ZynAddSubFX ZLowSynths (playback): ZynAddSubFX</Target>
+  </Connection>
+  <Connection>
+   <Source>Autotune.NanoMeuf:out</Source>
+   <Target>Non-Mixer.VocalsNano (Meuf):NanoMeuf/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>QMidiArp.ZHiArp:out 1</Source>
+   <Target>a2j:ZynAddSubFX ZHiSynths (playback): ZynAddSubFX</Target>
+  </Connection>
+  <Connection>
+   <Source>Autotune.NanoNormo:out</Source>
+   <Target>Non-Mixer.VocalsNano (Normo):NanoNormo/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>a2j:MonoSynthMicroTonal (capture): TrapOut</Source>
+   <Target>Carla.HiCSynths/Trap:events-in</Target>
+  </Connection>
+  <Connection>
+   <Source>Autotune.NanoGars:out</Source>
+   <Target>Non-Mixer.VocalsNano (Gars):NanoGars/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>a2j:MonoSynthMicroTonal (capture): EasyClassicalOut</Source>
+   <Target>Carla.HiCSynths/EasyClassical:events-in</Target>
+  </Connection>
+  <Connection>
+   <Source>a2j:Mk2Keyboard (capture): ZLow</Source>
+   <Target>a2j:loop192 MidiLooper (playback): Loop 0</Target>
+  </Connection>
+  <Connection>
+   <Source>ZynAddSubFX.ZLowSynths:part4/out-L</Source>
+   <Target>Non-Mixer.BassSynths (Main):BassZPhrampton/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>ZynAddSubFX.ZHiSynths:part6/out-L</Source>
+   <Target>Non-Mixer.Synths (Main):ZTrumpets/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>a2j:Mk2Keyboard (capture): CLow</Source>
+   <Target>a2j:loop192 MidiLooper (playback): Loop 1</Target>
+  </Connection>
+  <Connection>
+   <Source>ZynAddSubFX.ZHiSynths:part7/out-L</Source>
+   <Target>Non-Mixer.Synths (Main):ZTrumpets/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>a2j:Mk2Keyboard (capture): ZHi</Source>
+   <Target>a2j:loop192 MidiLooper (playback): Loop 2</Target>
+  </Connection>
+  <Connection>
+   <Source>ZynAddSubFX.ZHiSynths:part8/out-L</Source>
+   <Target>Non-Mixer.Synths (Main):ZTrumpets/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>a2j:Mk2Keyboard (capture): CHiSf</Source>
+   <Target>a2j:loop192 MidiLooper (playback): Loop 3</Target>
+  </Connection>
+  <Connection>
+   <Source>ZynAddSubFX.ZHiSynths:part9/out-L</Source>
+   <Target>Non-Mixer.Synths (Main):ZStambul/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>a2j:Mk2Keyboard (capture): CHi</Source>
+   <Target>a2j:loop192 MidiLooper (playback): Loop 4</Target>
+  </Connection>
+  <Connection>
+   <Source>ZynAddSubFX.ZHiSynths:part10/out-L</Source>
+   <Target>Non-Mixer.Synths (Main):ZDre/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>a2j:Mk2Keyboard (capture): ProdSampler</Source>
+   <Target>a2j:Tap192 ProdSampler (playback): midi_in</Target>
+  </Connection>
+  <Connection>
+   <Source>ZynAddSubFX.ZHiSynths:part11/out-L</Source>
+   <Target>Non-Mixer.Synths (Main):ZDiploLike/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>ZynAddSubFX.ZHiSynths:part12/out-L</Source>
+   <Target>Non-Mixer.Synths (Main):ZJestoProunk/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>ZynAddSubFX.ZHiSynths:part13/out-L</Source>
+   <Target>Non-Mixer.Synths (Main):Z8bits/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>ZynAddSubFX.ZHiSynths:part14/out-L</Source>
+   <Target>Non-Mixer.Synths (Main):Z8bits/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>a2j:Joystick (capture): out</Source>
+   <Target>a2j:JmjKeyboard (playback): in</Target>
+  </Connection>
+  <Connection>
+   <Source>Carla.LowCSynths/Trap1:Out L</Source>
+   <Target>Non-Mixer.BassSynths (Main):BassTrap1/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Carla.HiCSynths/Rhodes:Left Output</Source>
+   <Target>Non-Mixer.Synths (Main):Rhodes/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Carla.HiCSynths/Rhodes:Right Output</Source>
+   <Target>Non-Mixer.Synths (Main):Rhodes/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Carla.LowCSynths/Trap2:Out L</Source>
+   <Target>Non-Mixer.BassSynths (Main):BassTrap2/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Carla.HiCSynths/DubstepHorn:Out L</Source>
+   <Target>Non-Mixer.Synths (Main):DubstepHorn/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Carla.HiCSynths/Trap:Out L</Source>
+   <Target>Non-Mixer.Synths (Main):Trap/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Carla.LowCSynths/Barkline:Out L</Source>
+   <Target>Non-Mixer.BassSynths (Main):BassBarkline/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Tap192.ProdSampler:Samples2-L</Source>
+   <Target>Non-Mixer.Samples (Main):Samples2/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Tap192.ProdSampler:Samples3-L</Source>
+   <Target>Non-Mixer.Samples (Main):Samples3/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Tap192.ProdSampler:Samples4-L</Source>
+   <Target>Non-Mixer.Samples (Main):Samples4/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Tap192.ProdSampler:Samples5-L</Source>
+   <Target>Non-Mixer.Samples (Main):Samples5/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Carla.LowCSynths/Boom:Out L</Source>
+   <Target>Non-Mixer.BassSynths (Main):BassBoom/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Carla.HiCSynths/EasyClassical:Out L</Source>
+   <Target>Non-Mixer.Synths (Main):EasyClassical/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>sooperlooper:loop0_out_1</Source>
+   <Target>Non-Mixer.Bass (In):BassIn/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>sooperlooper:loop1_out_1</Source>
+   <Target>Non-Mixer.Outputs (Outputs):Bass/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>sooperlooper:loop1_out_1</Source>
+   <Target>Non-Mixer.MonitorsNano (MonitorsNano):Bass/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>sooperlooper:loop1_out_1</Source>
+   <Target>Non-Mixer.MonitorsKesch (MonitorsKesch):Bass/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>sooperlooper:loop2_out_1</Source>
+   <Target>Non-Mixer.Outputs (Outputs):BassSynths/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>sooperlooper:loop2_out_1</Source>
+   <Target>Non-Mixer.MonitorsNano (MonitorsNano):BassSynths/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>sooperlooper:loop2_out_1</Source>
+   <Target>Non-Mixer.MonitorsKesch (MonitorsKesch):BassSynths/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>sooperlooper:loop3_out_1</Source>
+   <Target>Non-Mixer.Outputs (Outputs):Synths/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>sooperlooper:loop3_out_1</Source>
+   <Target>Non-Mixer.MonitorsNano (MonitorsNano):Synths/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>sooperlooper:loop3_out_1</Source>
+   <Target>Non-Mixer.MonitorsKesch (MonitorsKesch):Synths/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>sooperlooper:loop4_out_1</Source>
+   <Target>Non-Mixer.VocalsNano (In):NanoIn/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>sooperlooper:loop5_out_1</Source>
+   <Target>Non-Mixer.Outputs (Outputs):VocalsNano/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>sooperlooper:loop6_out_1</Source>
+   <Target>Non-Mixer.VocalsKesch (In):KeschIn/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>sooperlooper:loop7_out_1</Source>
+   <Target>Non-Mixer.Outputs (Outputs):VocalsKesch/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.BassFX (Process):BassTapeDelay/out-1</Source>
+   <Target>Non-Mixer.Bass (Out):BassOut/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Carla.HiCSynths/TrapFifth:Out L</Source>
+   <Target>Non-Mixer.Synths (Main):TrapFifth/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.Synths (Main):ZJestoProunk/aux-A/out-1</Source>
+   <Target>Non-Mixer.Synths (Process):Reverb/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.Synths (Main):ZJestoProunk/aux-B/out-1</Source>
+   <Target>Non-Mixer.Synths (Process):TapeDelay/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.Synths (Main):ZJestoProunk/out-1</Source>
+   <Target>Non-Mixer.Synths (Out):SynthsOut/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.Synths (Main):Z8bits/aux-A/out-1</Source>
+   <Target>Non-Mixer.Synths (Process):Reverb/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.Synths (Main):Z8bits/aux-B/out-1</Source>
+   <Target>Non-Mixer.Synths (Process):TapeDelay/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.Synths (Main):Z8bits/out-1</Source>
+   <Target>Non-Mixer.Synths (Out):SynthsOut/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.Synths (Main):EasyClassical/aux-A/out-1</Source>
+   <Target>Non-Mixer.Synths (Process):Reverb/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.Synths (Main):EasyClassical/aux-B/out-1</Source>
+   <Target>Non-Mixer.Synths (Process):TapeDelay/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.Synths (Main):EasyClassical/out-1</Source>
+   <Target>Non-Mixer.Synths (Out):SynthsOut/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.Synths (Out):SynthsOut/out-1</Source>
+   <Target>sooperlooper:loop3_in_1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.Synths (Process):Reverb/out-1</Source>
+   <Target>Non-Mixer.Synths (Out):SynthsOut/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.Synths (Process):TapeDelay/aux-A/out-1</Source>
+   <Target>Non-Mixer.Synths (Process):Reverb/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.Synths (Process):TapeDelay/out-1</Source>
+   <Target>Non-Mixer.Synths (Out):SynthsOut/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.SamplesFX5TapeDelay (In):Samples1/out-1</Source>
+   <Target>Non-Mixer.SamplesFX5TapeDelay (Process):SamplesFX5TapeDelay/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.SamplesFX5TapeDelay (In):Samples2/out-1</Source>
+   <Target>Non-Mixer.SamplesFX5TapeDelay (Process):SamplesFX5TapeDelay/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.SamplesFX5TapeDelay (In):Samples3/out-1</Source>
+   <Target>Non-Mixer.SamplesFX5TapeDelay (Process):SamplesFX5TapeDelay/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.SamplesFX5TapeDelay (In):Samples4/out-1</Source>
+   <Target>Non-Mixer.SamplesFX5TapeDelay (Process):SamplesFX5TapeDelay/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.SamplesFX5TapeDelay (In):Samples5/out-1</Source>
+   <Target>Non-Mixer.SamplesFX5TapeDelay (Process):SamplesFX5TapeDelay/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.SamplesFX5TapeDelay (Process):SamplesFX5TapeDelay/out-1</Source>
+   <Target>Non-Mixer.Samples (Out):SamplesOut/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.SamplesFX5TapeDelay (In):ConstantSampler/out-1</Source>
+   <Target>Non-Mixer.SamplesFX5TapeDelay (Process):SamplesFX5TapeDelay/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.VocalsNanoFX8TapeDelay (In):NanoMeuf/out-1</Source>
+   <Target>Non-Mixer.VocalsNanoFX8TapeDelay (Process):NanoFX8TapeDelay/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.VocalsNanoFX8TapeDelay (In):NanoNormo/out-1</Source>
+   <Target>Non-Mixer.VocalsNanoFX8TapeDelay (Process):NanoFX8TapeDelay/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.VocalsNanoFX8TapeDelay (In):NanoGars/out-1</Source>
+   <Target>Non-Mixer.VocalsNanoFX8TapeDelay (Process):NanoFX8TapeDelay/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.VocalsNanoFX8TapeDelay (In):NanoAB/out-1</Source>
+   <Target>Non-Mixer.VocalsNanoFX8TapeDelay (Process):NanoFX8TapeDelay/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.VocalsNanoFX8TapeDelay (Process):NanoFX8TapeDelay/out-1</Source>
+   <Target>Non-Mixer.VocalsNano (Out):NanoOut/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.VocalsKeschFX8TapeDelay (In):KeschMeuf/out-1</Source>
+   <Target>Non-Mixer.VocalsKeschFX8TapeDelay (Process):KeschFX8TapeDelay/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.VocalsKeschFX8TapeDelay (In):KeschNormo/out-1</Source>
+   <Target>Non-Mixer.VocalsKeschFX8TapeDelay (Process):KeschFX8TapeDelay/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.VocalsKeschFX8TapeDelay (In):KeschGars/out-1</Source>
+   <Target>Non-Mixer.VocalsKeschFX8TapeDelay (Process):KeschFX8TapeDelay/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.VocalsKeschFX8TapeDelay (In):KeschAB/out-1</Source>
+   <Target>Non-Mixer.VocalsKeschFX8TapeDelay (Process):KeschFX8TapeDelay/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.VocalsKeschFX8TapeDelay (Process):KeschFX8TapeDelay/out-1</Source>
+   <Target>Non-Mixer.VocalsKesch (Out):KeschOut/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.Synths (Main):TrapFifth/out-1</Source>
+   <Target>Non-Mixer.Synths (Out):SynthsOut/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Tap192.ConstantSampler:output-L</Source>
+   <Target>Non-Mixer.Samples (Main):ConstantSampler/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>a2j:MonoSynthMicroTonal (capture): DubstepHornOut</Source>
+   <Target>Carla.HiCSynths/DubstepHorn:events-in</Target>
+  </Connection>
+  <Connection>
+   <Source>a2j:MonoSynthMicroTonal (capture): TrapFifthOut</Source>
+   <Target>Carla.HiCSynths/TrapFifth:events-in</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.Synths (Main):TrapFifth/aux-A/out-1</Source>
+   <Target>Non-Mixer.Synths (Process):Reverb/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.Synths (Main):TrapFifth/aux-B/out-1</Source>
+   <Target>Non-Mixer.Synths (Process):TapeDelay/in-1</Target>
+  </Connection>
+ </ExternalPatchbay>
+</CARLA-PROJECT>

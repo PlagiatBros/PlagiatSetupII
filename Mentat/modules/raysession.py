@@ -52,6 +52,7 @@ class RaySession(Module):
                 self.client_init.append(name)
             else:
                 # restart: send state
+                self.logger.info('client %s restarted, sending state' % name)
                 module.send_state()
 
     def client_stopped(self, name):

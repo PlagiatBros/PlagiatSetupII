@@ -40,7 +40,7 @@ class ZynPart(Module):
             data = ZynPart.parameters[param]
             name = '/'.join(param.split('/')[4:])
             self.add_parameter('%i/%s' % (part, name), address, data['type'], default=args[0])
-            self.logger.info('add param %s' % ['%i/%s' % (part, name), data['type'], args[0]])
+            self.logger.debug('add param %s' % ['%i/%s' % (part, name), data['type'], args[0]])
             del self.feedback_addresses[address]
 
     def set_all(self, name, value):

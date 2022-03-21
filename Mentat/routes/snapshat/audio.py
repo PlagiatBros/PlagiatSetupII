@@ -4,15 +4,25 @@ class Audio():
 
     def part(self, part, *args, **kwargs):
 
+        if part == 'pont':
+
+            transport.set_tempo(90)
+            seq192.select('solo', part+'*')
+            transport.start()
+
 
         if part == 'couplet':
 
             transport.set_tempo(90)
-            seq192.select('solo', part)
+            seq192.select('solo', part+'*')
             transport.start()
-
 
         if part == 'refrain':
 
             transport.set_tempo(90)
+            seq192.select('solo', part+'*')
             transport.start()
+
+        if part == 'contrechant':
+
+            seq192.select('on', part+'*')

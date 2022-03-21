@@ -1,3 +1,5 @@
+from sys import argv
+
 from mentat import Engine, Module
 
 from .raysession import RaySession
@@ -12,16 +14,18 @@ from .sooperlooper import SooperLooper
 from .loop192 import Loop192
 from .seq192 import Seq192
 from .nonmixer import NonMixer
+from .nonmixers import *
 from .zynaddsubfx import ZynAddSubFx, ZynPart
 from .tap192 import Tap192
 from .mk2minilab import Mk2Control, Mk2Keyboard
 from .jmjkeyboard import JmjKeyboard
 from .joystick import Joystick
 
+
 """
 Engine
 """
-engine = Engine('Mentat', 2001, '/home/plagiat/PlagiatSetup/Mentat')
+engine = Engine('Mentat', 2001, '/home/plagiat/PlagiatSetup/Mentat', tcp_port=55001, debug='--debug' in argv)
 raysession = RaySession('RaySession', 'osc', 2000)
 
 
@@ -39,7 +43,7 @@ joystick = Joystick('Joystick', 'osc', 3004)
 """
 Loopers
 """
-looper = SooperLooper('Looper', 'osc', 9900)
+looper = SooperLooper('Looper', 'osc', 9951)
 loop192 = Loop192('Loop192', 'osc', 9910)
 
 """
@@ -57,15 +61,37 @@ monitorsNano = NonMixer('MonitorsNano', 'osc', 10002)
 monitorsKesch = NonMixer('MonitorsKesch', 'osc', 10003)
 
 bass = NonMixer('Bass', 'osc', 10010)
+bassfx = BassFX('BassFX', 'osc', 10011)
+
 bassSynths = NonMixer('BassSynths', 'osc', 10020)
 synths = NonMixer('Synths', 'osc', 10030)
+
 samples = NonMixer('Samples', 'osc', 10040)
 samplesFX1Delay = NonMixer('SamplesFX1Delay', 'osc', 10041)
 samplesFX2Delay = NonMixer('SamplesFX2Delay', 'osc', 10042)
 samplesFX3Reverb = NonMixer('SamplesFX3Reverb', 'osc', 10043)
 samplesFX4Autofilter = NonMixer('SamplesFX4Autofilter', 'osc', 10044)
-vocalsNano = NonMixer('VocalsNano', 'osc', 10050)
-vocalsKesch = NonMixer('VocalsKesch', 'osc', 10060)
+samplesFX5TapeDelay = NonMixer('samplesFX5TapeDelay', 'osc', 10045)
+
+vocalsNano = Vocals('VocalsNano', 'osc', 10050)
+vocalsNanoFX1Delay = NonMixer('VocalsNanoFX1Delay', 'osc', 10051)
+vocalsNanoFX2Delay = NonMixer('VocalsNanoFX2Delay', 'osc', 10052)
+vocalsNanoFX3TrapVerb = NonMixer('VocalsNanoFX3TrapVerb', 'osc', 10053)
+vocalsNanoFX4Disint = NonMixer('VocalsNanoFX4Disint', 'osc', 10054)
+vocalsNanoFX5RingMod = NonMixer('VocalsNanoFX5RingMod', 'osc', 10055)
+vocalsNanoFX6Granular = NonMixer('VocalsNanoFX6Granular', 'osc', 10056)
+vocalsNanoFX7Slice = NonMixer('VocalsNanoFX7Slice', 'osc', 10057)
+vocalsNanoFX8TapeDelay = NonMixer('vocalsNanoFX8TapeDelay', 'osc', 10058)
+
+vocalsKesch = Vocals('VocalsKesch', 'osc', 10060)
+vocalsKeschFX1Delay = NonMixer('VocalsKeschFX1Delay', 'osc', 10061)
+vocalsKeschFX2Delay = NonMixer('VocalsKeschFX2Delay', 'osc', 10062)
+vocalsKeschFX3TrapVerb = NonMixer('VocalsKeschFX3TrapVerb', 'osc', 10063)
+vocalsKeschFX4Disint = NonMixer('VocalsKeschFX4Disint', 'osc', 10064)
+vocalsKeschFX5RingMod = NonMixer('VocalsKeschFX5RingMod', 'osc', 10065)
+vocalsKeschFX6Granular = NonMixer('VocalsKeschFX6Granular', 'osc', 10066)
+vocalsKeschFX7Slice = NonMixer('VocalsKeschFX7Slice', 'osc', 10067)
+vocalsKeschFX8TapeDelay = NonMixer('vocalsKeschX8TapeDelay', 'osc', 10068)
 
 """
 Samplers
@@ -122,13 +148,13 @@ zyntreble.add_submodule(
 """
 Autotunes
 """
-# TODO mettre les vrais ports
-autotuneNano = Autotune('AutotuneNano', 'osc', 20000 )
-autotuneNanoUp = Autotune('AutotuneNanoUp', 'osc', 20001 )
-autotuneNanoDown = Autotune('AutotuneNanoDown', 'osc', 20003 )
-autotuneKesch = Autotune('AutotuneKesch', 'osc', 20004 )
-autotuneKeschUp = Autotune('AutotuneKeschUp', 'osc', 20005 )
-autotuneKeschDown = Autotune('AutotuneKeschDown', 'osc', 20006 )
+autotuneNanoMeuf = Autotune('NanoMeuf', 'osc', 12050, offset=4.0)
+autotuneNanoNormo = Autotune('NanoNormo', 'osc', 12051, offset=0.0)
+autotuneNanoGars = Autotune('NanoGars', 'osc', 12052, offset=-4.0)
+
+autotuneKeschMeuf = Autotune('KeschMeuf', 'osc', 12061, offset=4.0)
+autotuneKeschNormo = Autotune('KeschNormo', 'osc', 12060, offset=0.0)
+autotuneKeschGars = Autotune('KeschGars', 'osc', 12062, offset=-4.0)
 
 
 """

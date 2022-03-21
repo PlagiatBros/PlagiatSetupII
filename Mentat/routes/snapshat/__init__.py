@@ -38,9 +38,11 @@ class Snapshat(Light, Video, Audio, GlobalRoute):
         super().route(protocol, port, address, args)
 
         if address =='/pedalboard/button':
+            if args[0] == 1:
+                self.engine.modules['Transport'].stop()
             if args[0] == 2:
-                self.part("couplet")
+                self.part("pont")
             if args[0] == 3:
-                self.part("refrain")
-            if args[0] == 4:
                 self.part("couplet")
+            if args[0] == 4:
+                self.part("refrain")
