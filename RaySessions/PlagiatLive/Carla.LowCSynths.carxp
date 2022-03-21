@@ -2884,8 +2884,16 @@
    <Target>system:playback_13</Target>
   </Connection>
   <Connection>
+   <Source>Non-Mixer.Outputs (Outputs):FOH/out-1</Source>
+   <Target>darkice-8683:left</Target>
+  </Connection>
+  <Connection>
    <Source>Non-Mixer.Outputs (Outputs):FOH/out-2</Source>
    <Target>system:playback_14</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.Outputs (Outputs):FOH/out-2</Source>
+   <Target>darkice-8683:right</Target>
   </Connection>
   <Connection>
    <Source>Non-Mixer.MonitorsNano (MonitorsNano):Klick/out-1</Source>
@@ -4180,6 +4188,10 @@
    <Target>Non-Mixer.VocalsKesch (ArtificialBackings):KeschABGars/in-1</Target>
   </Connection>
   <Connection>
+   <Source>a2j:seq192 MainSequencer (capture): seq192 1</Source>
+   <Target>a2j:ZynAddSubFX ZLowSynths (playback): ZynAddSubFX</Target>
+  </Connection>
+  <Connection>
    <Source>Non-Mixer.VocalsKeschFX4Disint (In):KeschAB/out-1</Source>
    <Target>Non-Mixer.VocalsKeschFX4Disint (Process):KeschFX4Disint/in-1</Target>
   </Connection>
@@ -4220,8 +4232,48 @@
    <Target>Non-Mixer.VocalsKeschFX5RingMod (Process):KeschFX5RingMod/in-1</Target>
   </Connection>
   <Connection>
+   <Source>a2j:seq192 MainSequencer (capture): seq192 2</Source>
+   <Target>Carla.LowCSynths/Boom:events-in</Target>
+  </Connection>
+  <Connection>
+   <Source>a2j:seq192 MainSequencer (capture): seq192 2</Source>
+   <Target>Carla.LowCSynths/Trap2:events-in</Target>
+  </Connection>
+  <Connection>
+   <Source>a2j:seq192 MainSequencer (capture): seq192 2</Source>
+   <Target>Carla.LowCSynths/Trap1:events-in</Target>
+  </Connection>
+  <Connection>
+   <Source>a2j:seq192 MainSequencer (capture): seq192 2</Source>
+   <Target>Carla.LowCSynths/Barkline:events-in</Target>
+  </Connection>
+  <Connection>
    <Source>Non-Mixer.VocalsKesch (Normo):KeschNormo/out-1</Source>
    <Target>Non-Mixer.VocalsKesch (Out):KeschOut/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>a2j:seq192 MainSequencer (capture): seq192 3</Source>
+   <Target>a2j:ZynAddSubFX ZHiSynths (playback): ZynAddSubFX</Target>
+  </Connection>
+  <Connection>
+   <Source>a2j:seq192 MainSequencer (capture): seq192 4</Source>
+   <Target>Carla.HiCSynths/Rhodes:events-in</Target>
+  </Connection>
+  <Connection>
+   <Source>a2j:seq192 MainSequencer (capture): seq192 4</Source>
+   <Target>a2j:MonoSynthMicroTonal (playback): TrapIn</Target>
+  </Connection>
+  <Connection>
+   <Source>a2j:seq192 MainSequencer (capture): seq192 4</Source>
+   <Target>a2j:MonoSynthMicroTonal (playback): EasyClassicalIn</Target>
+  </Connection>
+  <Connection>
+   <Source>a2j:seq192 MainSequencer (capture): seq192 4</Source>
+   <Target>a2j:MonoSynthMicroTonal (playback): DubstepHornIn</Target>
+  </Connection>
+  <Connection>
+   <Source>a2j:seq192 MainSequencer (capture): seq192 4</Source>
+   <Target>a2j:MonoSynthMicroTonal (playback): TrapFifthIn</Target>
   </Connection>
   <Connection>
    <Source>Non-Mixer.VocalsKeschFX5RingMod (In):KeschNormo/out-1</Source>
@@ -4324,10 +4376,6 @@
    <Target>Non-Mixer.VocalsKesch (ArtificialBackings):KeschABNormo/in-1</Target>
   </Connection>
   <Connection>
-   <Source>a2j:MonoSynthMicroTonal (capture): SynthOut3</Source>
-   <Target>Carla.HiCSynths/DubstepHorn:events-in</Target>
-  </Connection>
-  <Connection>
    <Source>a2j:loop192 MidiLooper (capture): Loop 1</Source>
    <Target>QMidiArp.CLowArp:in</Target>
   </Connection>
@@ -4368,68 +4416,20 @@
    <Target>Non-Mixer.VocalsKesch (Out):KeschOut/in-1</Target>
   </Connection>
   <Connection>
-   <Source>a2j:seq192 MainSequencer (capture): seq192 1</Source>
-   <Target>a2j:ZynAddSubFX ZLowSynths (playback): ZynAddSubFX</Target>
-  </Connection>
-  <Connection>
    <Source>Non-Mixer.VocalsKesch (Gars):KeschGars/out-1</Source>
    <Target>Non-Mixer.VocalsKesch (Out):KeschOut/in-1</Target>
-  </Connection>
-  <Connection>
-   <Source>a2j:seq192 MainSequencer (capture): seq192 2</Source>
-   <Target>Carla.LowCSynths/Barkline:events-in</Target>
-  </Connection>
-  <Connection>
-   <Source>a2j:seq192 MainSequencer (capture): seq192 2</Source>
-   <Target>Carla.LowCSynths/Trap1:events-in</Target>
-  </Connection>
-  <Connection>
-   <Source>a2j:seq192 MainSequencer (capture): seq192 2</Source>
-   <Target>Carla.LowCSynths/Trap2:events-in</Target>
-  </Connection>
-  <Connection>
-   <Source>a2j:seq192 MainSequencer (capture): seq192 2</Source>
-   <Target>Carla.LowCSynths/Boom:events-in</Target>
-  </Connection>
-  <Connection>
-   <Source>QMidiArp.CHiArp:out 1</Source>
-   <Target>a2j:MonoSynthMicroTonal (playback): SynthIn1</Target>
-  </Connection>
-  <Connection>
-   <Source>QMidiArp.CHiArp:out 1</Source>
-   <Target>a2j:MonoSynthMicroTonal (playback): SynthIn2</Target>
-  </Connection>
-  <Connection>
-   <Source>QMidiArp.CHiArp:out 1</Source>
-   <Target>a2j:MonoSynthMicroTonal (playback): SynthIn3</Target>
-  </Connection>
-  <Connection>
-   <Source>a2j:seq192 MainSequencer (capture): seq192 3</Source>
-   <Target>a2j:ZynAddSubFX ZHiSynths (playback): ZynAddSubFX</Target>
   </Connection>
   <Connection>
    <Source>a2j:loop192 MidiLooper (capture): Loop 2</Source>
    <Target>QMidiArp.ZHiArp:in</Target>
   </Connection>
   <Connection>
-   <Source>a2j:seq192 MainSequencer (capture): seq192 4</Source>
-   <Target>a2j:MonoSynthMicroTonal (playback): SynthIn1</Target>
-  </Connection>
-  <Connection>
-   <Source>a2j:seq192 MainSequencer (capture): seq192 4</Source>
-   <Target>a2j:MonoSynthMicroTonal (playback): SynthIn2</Target>
-  </Connection>
-  <Connection>
-   <Source>a2j:seq192 MainSequencer (capture): seq192 4</Source>
-   <Target>a2j:MonoSynthMicroTonal (playback): SynthIn3</Target>
-  </Connection>
-  <Connection>
-   <Source>a2j:seq192 MainSequencer (capture): seq192 4</Source>
-   <Target>Carla.HiCSynths/Rhodes:events-in</Target>
-  </Connection>
-  <Connection>
    <Source>Autotune.KeschMeuf:out</Source>
    <Target>Non-Mixer.VocalsKesch (Meuf):KeschMeuf/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>a2j:seq192 MainSequencer (capture): seq192 10</Source>
+   <Target>a2j:Tap192 ProdSampler (playback): midi_in</Target>
   </Connection>
   <Connection>
    <Source>a2j:loop192 MidiLooper (capture): Loop 3</Source>
@@ -4482,10 +4482,6 @@
   <Connection>
    <Source>a2j:loop192 MidiLooper (capture): Loop 4</Source>
    <Target>QMidiArp.CHiArp:in</Target>
-  </Connection>
-  <Connection>
-   <Source>a2j:seq192 MainSequencer (capture): seq192 10</Source>
-   <Target>a2j:Tap192 ProdSampler (playback): midi_in</Target>
   </Connection>
   <Connection>
    <Source>Non-Mixer.VocalsKeschFX7Slice (Process):KeschFX7Slice/out-1</Source>
@@ -4640,7 +4636,7 @@
    <Target>Non-Mixer.VocalsNano (Normo):NanoNormo/in-1</Target>
   </Connection>
   <Connection>
-   <Source>a2j:MonoSynthMicroTonal (capture): SynthOut1</Source>
+   <Source>a2j:MonoSynthMicroTonal (capture): TrapOut</Source>
    <Target>Carla.HiCSynths/Trap:events-in</Target>
   </Connection>
   <Connection>
@@ -4648,7 +4644,7 @@
    <Target>Non-Mixer.VocalsNano (Gars):NanoGars/in-1</Target>
   </Connection>
   <Connection>
-   <Source>a2j:MonoSynthMicroTonal (capture): SynthOut2</Source>
+   <Source>a2j:MonoSynthMicroTonal (capture): EasyClassicalOut</Source>
    <Target>Carla.HiCSynths/EasyClassical:events-in</Target>
   </Connection>
   <Connection>
@@ -4720,6 +4716,10 @@
    <Target>a2j:JmjKeyboard (playback): in</Target>
   </Connection>
   <Connection>
+   <Source>Carla.LowCSynths/Trap1:Out L</Source>
+   <Target>Non-Mixer.BassSynths (Main):BassTrap1/in-1</Target>
+  </Connection>
+  <Connection>
    <Source>Carla.HiCSynths/Rhodes:Left Output</Source>
    <Target>Non-Mixer.Synths (Main):Rhodes/in-1</Target>
   </Connection>
@@ -4728,16 +4728,12 @@
    <Target>Non-Mixer.Synths (Main):Rhodes/in-1</Target>
   </Connection>
   <Connection>
-   <Source>Carla.LowCSynths/Trap1:Out L</Source>
-   <Target>Non-Mixer.BassSynths (Main):BassTrap1/in-1</Target>
+   <Source>Carla.LowCSynths/Trap2:Out L</Source>
+   <Target>Non-Mixer.BassSynths (Main):BassTrap2/in-1</Target>
   </Connection>
   <Connection>
    <Source>Carla.HiCSynths/DubstepHorn:Out L</Source>
    <Target>Non-Mixer.Synths (Main):DubstepHorn/in-1</Target>
-  </Connection>
-  <Connection>
-   <Source>Carla.LowCSynths/Trap2:Out L</Source>
-   <Target>Non-Mixer.BassSynths (Main):BassTrap2/in-1</Target>
   </Connection>
   <Connection>
    <Source>Carla.HiCSynths/Trap:Out L</Source>
@@ -4764,12 +4760,12 @@
    <Target>Non-Mixer.Samples (Main):Samples5/in-1</Target>
   </Connection>
   <Connection>
-   <Source>Carla.HiCSynths/EasyClassical:Out L</Source>
-   <Target>Non-Mixer.Synths (Main):EasyClassical/in-1</Target>
-  </Connection>
-  <Connection>
    <Source>Carla.LowCSynths/Boom:Out L</Source>
    <Target>Non-Mixer.BassSynths (Main):BassBoom/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Carla.HiCSynths/EasyClassical:Out L</Source>
+   <Target>Non-Mixer.Synths (Main):EasyClassical/in-1</Target>
   </Connection>
   <Connection>
    <Source>sooperlooper:loop0_out_1</Source>
@@ -4828,6 +4824,14 @@
    <Target>Non-Mixer.Outputs (Outputs):VocalsKesch/in-1</Target>
   </Connection>
   <Connection>
+   <Source>Non-Mixer.BassFX (Process):BassTapeDelay/out-1</Source>
+   <Target>Non-Mixer.Bass (Out):BassOut/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Carla.HiCSynths/TrapFifth:Out L</Source>
+   <Target>Non-Mixer.Synths (Main):TrapFifth/in-1</Target>
+  </Connection>
+  <Connection>
    <Source>Non-Mixer.Synths (Main):ZJestoProunk/aux-A/out-1</Source>
    <Target>Non-Mixer.Synths (Process):Reverb/in-1</Target>
   </Connection>
@@ -4878,10 +4882,6 @@
   <Connection>
    <Source>Non-Mixer.Synths (Process):TapeDelay/out-1</Source>
    <Target>Non-Mixer.Synths (Out):SynthsOut/in-1</Target>
-  </Connection>
-  <Connection>
-   <Source>Tap192.ConstantSampler:output-L</Source>
-   <Target>Non-Mixer.Samples (Main):ConstantSampler/in-1</Target>
   </Connection>
   <Connection>
    <Source>Non-Mixer.SamplesFX5TapeDelay (In):Samples1/out-1</Source>
@@ -4950,6 +4950,30 @@
   <Connection>
    <Source>Non-Mixer.VocalsKeschFX8TapeDelay (Process):KeschFX8TapeDelay/out-1</Source>
    <Target>Non-Mixer.VocalsKesch (Out):KeschOut/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.Synths (Main):TrapFifth/out-1</Source>
+   <Target>Non-Mixer.Synths (Out):SynthsOut/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Tap192.ConstantSampler:output-L</Source>
+   <Target>Non-Mixer.Samples (Main):ConstantSampler/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>a2j:MonoSynthMicroTonal (capture): DubstepHornOut</Source>
+   <Target>Carla.HiCSynths/DubstepHorn:events-in</Target>
+  </Connection>
+  <Connection>
+   <Source>a2j:MonoSynthMicroTonal (capture): TrapFifthOut</Source>
+   <Target>Carla.HiCSynths/TrapFifth:events-in</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.Synths (Main):TrapFifth/aux-A/out-1</Source>
+   <Target>Non-Mixer.Synths (Process):Reverb/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.Synths (Main):TrapFifth/aux-B/out-1</Source>
+   <Target>Non-Mixer.Synths (Process):TapeDelay/in-1</Target>
   </Connection>
  </ExternalPatchbay>
 </CARLA-PROJECT>
