@@ -476,7 +476,7 @@
       ],
       "out_xy": [
         480,
-        587
+        565
       ],
       "flags": 116
     },
@@ -496,7 +496,7 @@
       ],
       "out_xy": [
         480,
-        644
+        622
       ],
       "flags": 116
     },
@@ -576,7 +576,7 @@
       ],
       "out_xy": [
         29,
-        293
+        291
       ],
       "flags": 68
     },
@@ -595,8 +595,8 @@
         410
       ],
       "out_xy": [
-        143,
-        1552
+        144,
+        1611
       ],
       "flags": 68
     },
@@ -1731,8 +1731,8 @@
         623
       ],
       "in_xy": [
-        568,
-        1620
+        564,
+        1790
       ],
       "out_xy": [
         276,
@@ -2051,8 +2051,8 @@
         882
       ],
       "in_xy": [
-        465,
-        724
+        471,
+        679
       ],
       "out_xy": [
         -225,
@@ -2171,12 +2171,12 @@
         911
       ],
       "in_xy": [
-        79,
-        1198
+        88,
+        1196
       ],
       "out_xy": [
-        116,
-        1701
+        130,
+        1760
       ],
       "flags": 68
     },
@@ -2192,7 +2192,7 @@
       ],
       "in_xy": [
         471,
-        873
+        828
       ],
       "out_xy": [
         -236,
@@ -2211,12 +2211,12 @@
         379
       ],
       "in_xy": [
-        79,
-        1257
+        88,
+        1255
       ],
       "out_xy": [
-        204,
-        1776
+        122,
+        1820
       ],
       "flags": 68
     },
@@ -2231,7 +2231,7 @@
         1291
       ],
       "in_xy": [
-        462,
+        454,
         1022
       ],
       "out_xy": [
@@ -2271,12 +2271,12 @@
         1554
       ],
       "in_xy": [
-        504,
-        1480
+        541,
+        1647
       ],
       "out_xy": [
-        -175,
-        2245
+        -168,
+        1946
       ],
       "flags": 68
     },
@@ -2291,12 +2291,12 @@
         1240
       ],
       "in_xy": [
-        92,
-        1316
+        88,
+        1314
       ],
       "out_xy": [
-        204,
-        1835
+        122,
+        1895
       ],
       "flags": 68
     },
@@ -2311,12 +2311,12 @@
         1299
       ],
       "in_xy": [
-        92,
-        1375
+        88,
+        1373
       ],
       "out_xy": [
-        204,
-        1897
+        122,
+        1954
       ],
       "flags": 68
     },
@@ -2331,12 +2331,12 @@
         1181
       ],
       "in_xy": [
-        147,
-        1493
+        144,
+        1552
       ],
       "out_xy": [
-        204,
-        2054
+        173,
+        2149
       ],
       "flags": 68
     },
@@ -2675,8 +2675,8 @@
         2013
       ],
       "out_xy": [
-        758,
-        2036
+        751,
+        2269
       ],
       "flags": 68
     },
@@ -2695,8 +2695,8 @@
         276
       ],
       "out_xy": [
-        273,
-        2170
+        286,
+        2358
       ],
       "flags": 68
     },
@@ -2731,12 +2731,12 @@
         1667
       ],
       "in_xy": [
-        547,
-        2033
+        560,
+        2169
       ],
       "out_xy": [
-        741,
-        2131
+        759,
+        2384
       ],
       "flags": 68
     },
@@ -2751,12 +2751,12 @@
         1791
       ],
       "in_xy": [
-        547,
-        2112
+        560,
+        2248
       ],
       "out_xy": [
-        741,
-        2261
+        759,
+        2514
       ],
       "flags": 68
     },
@@ -2771,12 +2771,12 @@
         1787
       ],
       "in_xy": [
-        547,
-        2208
+        560,
+        2344
       ],
       "out_xy": [
-        741,
-        2397
+        759,
+        2650
       ],
       "flags": 68
     },
@@ -4131,7 +4131,7 @@
         -688
       ],
       "in_xy": [
-        331,
+        323,
         1071
       ],
       "out_xy": [
@@ -4487,8 +4487,8 @@
       "in_zone": "",
       "out_zone": "",
       "null_xy": [
-        416,
-        2163
+        429,
+        2279
       ],
       "in_xy": [
         400,
@@ -4507,8 +4507,8 @@
       "in_zone": "",
       "out_zone": "",
       "null_xy": [
-        416,
-        2242
+        429,
+        2358
       ],
       "in_xy": [
         400,
@@ -4527,8 +4527,8 @@
       "in_zone": "",
       "out_zone": "",
       "null_xy": [
-        416,
-        2321
+        429,
+        2437
       ],
       "in_xy": [
         400,
@@ -5076,7 +5076,7 @@
       ],
       "out_xy": [
         53,
-        182
+        180
       ],
       "flags": 68
     },
@@ -5371,12 +5371,12 @@
         -250
       ],
       "in_xy": [
-        92,
-        1434
+        84,
+        1432
       ],
       "out_xy": [
-        204,
-        1984
+        118,
+        2013
       ],
       "flags": 68
     },
@@ -5767,6 +5767,346 @@
       "in_zone": "",
       "out_zone": "",
       "null_xy": [
+        843,
+        -353
+      ],
+      "in_xy": [
+        400,
+        3961
+      ],
+      "out_xy": [
+        0,
+        3961
+      ],
+      "flags": 0
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Non-Mixer.SamplesFX6Scape/Unnamed",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        1,
+        -236
+      ],
+      "in_xy": [
+        400,
+        3961
+      ],
+      "out_xy": [
+        0,
+        3961
+      ],
+      "flags": 0
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Non-Mixer.SamplesFX6Scape/Unnamed.1",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        -200,
+        1766
+      ],
+      "in_xy": [
+        400,
+        3961
+      ],
+      "out_xy": [
+        0,
+        3961
+      ],
+      "flags": 0
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Non-Mixer.SamplesFX6Scape/Unnamed.2",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        -200,
+        1831
+      ],
+      "in_xy": [
+        400,
+        3961
+      ],
+      "out_xy": [
+        0,
+        3961
+      ],
+      "flags": 0
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Non-Mixer.SamplesFX6Scape/Unnamed.3",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        -200,
+        1896
+      ],
+      "in_xy": [
+        400,
+        3961
+      ],
+      "out_xy": [
+        0,
+        3961
+      ],
+      "flags": 0
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Non-Mixer.SamplesFX6Scape/Unnamed.4",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        -200,
+        1961
+      ],
+      "in_xy": [
+        400,
+        3961
+      ],
+      "out_xy": [
+        0,
+        3961
+      ],
+      "flags": 0
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Non-Mixer.SamplesFX6Scape/Unnamed.5",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        -200,
+        2026
+      ],
+      "in_xy": [
+        400,
+        3961
+      ],
+      "out_xy": [
+        0,
+        3961
+      ],
+      "flags": 0
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Non-Mixer.SamplesFX6Scape/Unnamed.6",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        -175,
+        2382
+      ],
+      "in_xy": [
+        400,
+        3961
+      ],
+      "out_xy": [
+        0,
+        3961
+      ],
+      "flags": 0
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Non-Mixer.SamplesFX6Scape (In)",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        1,
+        -236
+      ],
+      "in_xy": [
+        493,
+        1487
+      ],
+      "out_xy": [
+        -169,
+        1766
+      ],
+      "flags": 68
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Non-Mixer.SamplesFX6Scape (Process)",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        -117,
+        1958
+      ],
+      "in_xy": [
+        110,
+        1491
+      ],
+      "out_xy": [
+        144,
+        2072
+      ],
+      "flags": 68
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Non-Mixer.VocalsNanoFX9Scape/Unnamed",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        1,
+        -236
+      ],
+      "in_xy": [
+        400,
+        3961
+      ],
+      "out_xy": [
+        0,
+        3961
+      ],
+      "flags": 0
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Non-Mixer.VocalsNanoFX9Scape/Unnamed.1",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        -168,
+        2083
+      ],
+      "in_xy": [
+        400,
+        3961
+      ],
+      "out_xy": [
+        0,
+        3961
+      ],
+      "flags": 0
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Non-Mixer.VocalsNanoFX9Scape/Unnamed.2",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        -168,
+        2148
+      ],
+      "in_xy": [
+        400,
+        3961
+      ],
+      "out_xy": [
+        0,
+        3961
+      ],
+      "flags": 0
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Non-Mixer.VocalsNanoFX9Scape/Unnamed.3",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        -168,
+        2213
+      ],
+      "in_xy": [
+        400,
+        3961
+      ],
+      "out_xy": [
+        0,
+        3961
+      ],
+      "flags": 0
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Non-Mixer.VocalsNanoFX9Scape/Unnamed.4",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        -168,
+        2278
+      ],
+      "in_xy": [
+        400,
+        3961
+      ],
+      "out_xy": [
+        0,
+        3961
+      ],
+      "flags": 0
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Non-Mixer.VocalsNanoFX9Scape (In)",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        1193,
+        3028
+      ],
+      "in_xy": [
+        400,
+        3961
+      ],
+      "out_xy": [
+        0,
+        3961
+      ],
+      "flags": 0
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Non-Mixer.VocalsNanoFX9Scape (Process)",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        1294,
+        3196
+      ],
+      "in_xy": [
+        1579,
+        3000
+      ],
+      "out_xy": [
+        765,
+        2013
+      ],
+      "flags": 68
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Non-Mixer.KeschVocalsFX9Scape/Unnamed",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
         1,
         -301
       ],
@@ -5779,6 +6119,126 @@
         3961
       ],
       "flags": 0
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Non-Mixer.KeschVocalsFX9Scape/Unnamed.1",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        1,
+        -236
+      ],
+      "in_xy": [
+        400,
+        3961
+      ],
+      "out_xy": [
+        0,
+        3961
+      ],
+      "flags": 0
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Non-Mixer.KeschVocalsFX9Scape/Unnamed.2",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        -168,
+        2083
+      ],
+      "in_xy": [
+        400,
+        3961
+      ],
+      "out_xy": [
+        0,
+        3961
+      ],
+      "flags": 0
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Non-Mixer.KeschVocalsFX9Scape/Unnamed.3",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        -168,
+        2148
+      ],
+      "in_xy": [
+        400,
+        3961
+      ],
+      "out_xy": [
+        0,
+        3961
+      ],
+      "flags": 0
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Non-Mixer.KeschVocalsFX9Scape/Unnamed.4",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        -168,
+        2213
+      ],
+      "in_xy": [
+        400,
+        3961
+      ],
+      "out_xy": [
+        0,
+        3961
+      ],
+      "flags": 0
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Non-Mixer.KeschVocalsFX9Scape (In)",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        476,
+        3953
+      ],
+      "in_xy": [
+        400,
+        3961
+      ],
+      "out_xy": [
+        0,
+        3961
+      ],
+      "flags": 0
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Non-Mixer.KeschVocalsFX9Scape (Process)",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        170,
+        2516
+      ],
+      "in_xy": [
+        761,
+        3958
+      ],
+      "out_xy": [
+        147,
+        3141
+      ],
+      "flags": 68
     }
   ]
 }
