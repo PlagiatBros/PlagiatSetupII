@@ -2,6 +2,14 @@ from ..nonmixer import NonMixer
 
 class BassFX(NonMixer):
 
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+
+        pre_add = 'Non-Mixer.BassFX/strip/'
+        self.add_parameter('scape_bpm', pre_add + 'BassScape/C%2A%20Scape%20-%20Stereo%20delay%20with%20chromatic%20resonances/bpm', 'f', default=120.0)
+
+
+
     def create_meta_parameters(self):
 
         for strip_name in self.submodules:

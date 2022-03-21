@@ -325,8 +325,6 @@ Non-Mixer.Synths (Main):ZTrumpets/out-1  |> Non-Mixer.SynthsFX3Delay (In):ZTrump
 Non-Mixer.Synths (Main):ZTrumpets/out-1  |> Non-Mixer.SynthsFX4TapeDelay (In):ZTrumpets/in-1
 Non-Mixer.Synths (Main):ZTrumpets/out-1  |> Non-Mixer.SynthsFX5Scape (In):ZTrumpets/in-1
 Non-Mixer.Synths (Out):SynthsOut/out-1   |> sooperlooper:loop3_in_1
-Non-Mixer.Synths (Process):Reverb/out-1  |> Non-Mixer.Synths (Out):SynthsOut/in-1
-Non-Mixer.Synths (Process):TapeDelay/out-1 |> Non-Mixer.Synths (Out):SynthsOut/in-1
 Non-Mixer.SynthsFX1Reverb (In):DubstepHorn/out-1 |> Non-Mixer.SynthsFX1Reverb (Process):FX1Reverb/in-1
 Non-Mixer.SynthsFX1Reverb (In):EasyClassical/out-1 |> Non-Mixer.SynthsFX1Reverb (Process):FX1Reverb/in-1
 Non-Mixer.SynthsFX1Reverb (In):Rhodes/out-1 |> Non-Mixer.SynthsFX1Reverb (Process):FX1Reverb/in-1

@@ -26,8 +26,13 @@ class Snapshat(Light, Video, Audio, GlobalRoute):
         Called when the engine switches to this route.
         """
 
+        # Setups, banks...
         seq192.set_screenset(self.name)
         prodSampler.set_kit(self.name)
+
+        # Microtonality
+
+        # Controllers
 
     def route(self, protocol, port, address, args):
         """
@@ -37,7 +42,7 @@ class Snapshat(Light, Video, Audio, GlobalRoute):
         """
         super().route(protocol, port, address, args)
 
-        if address =='/pedalboard/button':
+        if address == '/pedalboard/button':
             if args[0] == 1:
                 self.engine.modules['Transport'].stop()
             if args[0] == 2:
@@ -46,3 +51,9 @@ class Snapshat(Light, Video, Audio, GlobalRoute):
                 self.part("couplet")
             if args[0] == 4:
                 self.part("refrain")
+
+        if address == '/mk2/button':
+            if args[0] == 2:
+                self.part("contrechant")
+            if args[0] == 3:
+                self.part("trap")

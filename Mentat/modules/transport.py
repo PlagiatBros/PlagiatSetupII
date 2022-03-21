@@ -39,6 +39,7 @@ class Transport(Module):
         self.engine.modules['Klick'].set('tempo', bpm)
         # self.engine.modules['Seq192'].set('tempo', bpm)
         # self.engine.modules['Loop192'].set('tempo', bpm)
+        self.engine.modules['BassFX'].set('scape_bpm', bpm)
 
     def set_cycle(self, eighths, pattern=None):
 

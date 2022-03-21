@@ -3217,15 +3217,7 @@
   </Connection>
   <Connection>
    <Source>Non-Mixer.Synths (Main):ZDupieux/out-1</Source>
-   <Target>Non-Mixer.SynthsFX5Scape (In):ZDupieux/in-1</Target>
-  </Connection>
-  <Connection>
-   <Source>Non-Mixer.Synths (Main):ZDupieux/out-1</Source>
-   <Target>Non-Mixer.SynthsFX4TapeDelay (In):ZDupieux/in-1</Target>
-  </Connection>
-  <Connection>
-   <Source>Non-Mixer.Synths (Main):ZDupieux/out-1</Source>
-   <Target>Non-Mixer.SynthsFX3Delay (In):ZDupieux/in-1</Target>
+   <Target>Non-Mixer.SynthsFX1Reverb (In):ZDupieux/in-1</Target>
   </Connection>
   <Connection>
    <Source>Non-Mixer.Synths (Main):ZDupieux/out-1</Source>
@@ -3233,7 +3225,15 @@
   </Connection>
   <Connection>
    <Source>Non-Mixer.Synths (Main):ZDupieux/out-1</Source>
-   <Target>Non-Mixer.SynthsFX1Reverb (In):ZDupieux/in-1</Target>
+   <Target>Non-Mixer.SynthsFX3Delay (In):ZDupieux/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.Synths (Main):ZDupieux/out-1</Source>
+   <Target>Non-Mixer.SynthsFX4TapeDelay (In):ZDupieux/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.Synths (Main):ZDupieux/out-1</Source>
+   <Target>Non-Mixer.SynthsFX5Scape (In):ZDupieux/in-1</Target>
   </Connection>
   <Connection>
    <Source>Non-Mixer.Synths (Main):ZDupieux/out-1</Source>
@@ -3241,15 +3241,7 @@
   </Connection>
   <Connection>
    <Source>Non-Mixer.Synths (Main):ZNotSoRhodes/out-1</Source>
-   <Target>Non-Mixer.SynthsFX5Scape (In):ZNotSoRhodes/in-1</Target>
-  </Connection>
-  <Connection>
-   <Source>Non-Mixer.Synths (Main):ZNotSoRhodes/out-1</Source>
-   <Target>Non-Mixer.SynthsFX4TapeDelay (In):ZNotSoRhodes/in-1</Target>
-  </Connection>
-  <Connection>
-   <Source>Non-Mixer.Synths (Main):ZNotSoRhodes/out-1</Source>
-   <Target>Non-Mixer.SynthsFX3Delay (In):ZNotSoRhodes/in-1</Target>
+   <Target>Non-Mixer.SynthsFX1Reverb (In):ZNotSoRhodes/in-1</Target>
   </Connection>
   <Connection>
    <Source>Non-Mixer.Synths (Main):ZNotSoRhodes/out-1</Source>
@@ -3257,7 +3249,15 @@
   </Connection>
   <Connection>
    <Source>Non-Mixer.Synths (Main):ZNotSoRhodes/out-1</Source>
-   <Target>Non-Mixer.SynthsFX1Reverb (In):ZNotSoRhodes/in-1</Target>
+   <Target>Non-Mixer.SynthsFX3Delay (In):ZNotSoRhodes/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.Synths (Main):ZNotSoRhodes/out-1</Source>
+   <Target>Non-Mixer.SynthsFX4TapeDelay (In):ZNotSoRhodes/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.Synths (Main):ZNotSoRhodes/out-1</Source>
+   <Target>Non-Mixer.SynthsFX5Scape (In):ZNotSoRhodes/in-1</Target>
   </Connection>
   <Connection>
    <Source>Non-Mixer.Synths (Main):ZNotSoRhodes/out-1</Source>
@@ -3265,15 +3265,7 @@
   </Connection>
   <Connection>
    <Source>Non-Mixer.Synths (Main):Rhodes/out-1</Source>
-   <Target>Non-Mixer.SynthsFX5Scape (In):Rhodes/in-1</Target>
-  </Connection>
-  <Connection>
-   <Source>Non-Mixer.Synths (Main):Rhodes/out-1</Source>
-   <Target>Non-Mixer.SynthsFX4TapeDelay (In):Rhodes/in-1</Target>
-  </Connection>
-  <Connection>
-   <Source>Non-Mixer.Synths (Main):Rhodes/out-1</Source>
-   <Target>Non-Mixer.SynthsFX3Delay (In):Rhodes/in-1</Target>
+   <Target>Non-Mixer.SynthsFX1Reverb (In):Rhodes/in-1</Target>
   </Connection>
   <Connection>
    <Source>Non-Mixer.Synths (Main):Rhodes/out-1</Source>
@@ -3281,7 +3273,15 @@
   </Connection>
   <Connection>
    <Source>Non-Mixer.Synths (Main):Rhodes/out-1</Source>
-   <Target>Non-Mixer.SynthsFX1Reverb (In):Rhodes/in-1</Target>
+   <Target>Non-Mixer.SynthsFX3Delay (In):Rhodes/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.Synths (Main):Rhodes/out-1</Source>
+   <Target>Non-Mixer.SynthsFX4TapeDelay (In):Rhodes/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.Synths (Main):Rhodes/out-1</Source>
+   <Target>Non-Mixer.SynthsFX5Scape (In):Rhodes/in-1</Target>
   </Connection>
   <Connection>
    <Source>Non-Mixer.Synths (Main):Rhodes/out-1</Source>
@@ -3289,15 +3289,7 @@
   </Connection>
   <Connection>
    <Source>Non-Mixer.Synths (Main):ZOrgan/out-1</Source>
-   <Target>Non-Mixer.SynthsFX5Scape (In):ZOrgan/in-1</Target>
-  </Connection>
-  <Connection>
-   <Source>Non-Mixer.Synths (Main):ZOrgan/out-1</Source>
-   <Target>Non-Mixer.SynthsFX4TapeDelay (In):ZOrgan/in-1</Target>
-  </Connection>
-  <Connection>
-   <Source>Non-Mixer.Synths (Main):ZOrgan/out-1</Source>
-   <Target>Non-Mixer.SynthsFX3Delay (In):ZOrgan/in-1</Target>
+   <Target>Non-Mixer.SynthsFX1Reverb (In):ZOrgan/in-1</Target>
   </Connection>
   <Connection>
    <Source>Non-Mixer.Synths (Main):ZOrgan/out-1</Source>
@@ -3305,7 +3297,15 @@
   </Connection>
   <Connection>
    <Source>Non-Mixer.Synths (Main):ZOrgan/out-1</Source>
-   <Target>Non-Mixer.SynthsFX1Reverb (In):ZOrgan/in-1</Target>
+   <Target>Non-Mixer.SynthsFX3Delay (In):ZOrgan/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.Synths (Main):ZOrgan/out-1</Source>
+   <Target>Non-Mixer.SynthsFX4TapeDelay (In):ZOrgan/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.Synths (Main):ZOrgan/out-1</Source>
+   <Target>Non-Mixer.SynthsFX5Scape (In):ZOrgan/in-1</Target>
   </Connection>
   <Connection>
    <Source>Non-Mixer.Synths (Main):ZOrgan/out-1</Source>
@@ -3313,15 +3313,7 @@
   </Connection>
   <Connection>
    <Source>Non-Mixer.Synths (Main):ZCosma/out-1</Source>
-   <Target>Non-Mixer.SynthsFX5Scape (In):ZCosma/in-1</Target>
-  </Connection>
-  <Connection>
-   <Source>Non-Mixer.Synths (Main):ZCosma/out-1</Source>
-   <Target>Non-Mixer.SynthsFX4TapeDelay (In):ZCosma/in-1</Target>
-  </Connection>
-  <Connection>
-   <Source>Non-Mixer.Synths (Main):ZCosma/out-1</Source>
-   <Target>Non-Mixer.SynthsFX3Delay (In):ZCosma/in-1</Target>
+   <Target>Non-Mixer.SynthsFX1Reverb (In):ZCosma/in-1</Target>
   </Connection>
   <Connection>
    <Source>Non-Mixer.Synths (Main):ZCosma/out-1</Source>
@@ -3329,7 +3321,15 @@
   </Connection>
   <Connection>
    <Source>Non-Mixer.Synths (Main):ZCosma/out-1</Source>
-   <Target>Non-Mixer.SynthsFX1Reverb (In):ZCosma/in-1</Target>
+   <Target>Non-Mixer.SynthsFX3Delay (In):ZCosma/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.Synths (Main):ZCosma/out-1</Source>
+   <Target>Non-Mixer.SynthsFX4TapeDelay (In):ZCosma/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.Synths (Main):ZCosma/out-1</Source>
+   <Target>Non-Mixer.SynthsFX5Scape (In):ZCosma/in-1</Target>
   </Connection>
   <Connection>
    <Source>Non-Mixer.Synths (Main):ZCosma/out-1</Source>
@@ -3337,15 +3337,7 @@
   </Connection>
   <Connection>
    <Source>Non-Mixer.Synths (Main):ZBombarde/out-1</Source>
-   <Target>Non-Mixer.SynthsFX5Scape (In):ZBombarde/in-1</Target>
-  </Connection>
-  <Connection>
-   <Source>Non-Mixer.Synths (Main):ZBombarde/out-1</Source>
-   <Target>Non-Mixer.SynthsFX4TapeDelay (In):ZBombarde/in-1</Target>
-  </Connection>
-  <Connection>
-   <Source>Non-Mixer.Synths (Main):ZBombarde/out-1</Source>
-   <Target>Non-Mixer.SynthsFX3Delay (In):ZBombarde/in-1</Target>
+   <Target>Non-Mixer.SynthsFX1Reverb (In):ZBombarde/in-1</Target>
   </Connection>
   <Connection>
    <Source>Non-Mixer.Synths (Main):ZBombarde/out-1</Source>
@@ -3353,7 +3345,15 @@
   </Connection>
   <Connection>
    <Source>Non-Mixer.Synths (Main):ZBombarde/out-1</Source>
-   <Target>Non-Mixer.SynthsFX1Reverb (In):ZBombarde/in-1</Target>
+   <Target>Non-Mixer.SynthsFX3Delay (In):ZBombarde/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.Synths (Main):ZBombarde/out-1</Source>
+   <Target>Non-Mixer.SynthsFX4TapeDelay (In):ZBombarde/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.Synths (Main):ZBombarde/out-1</Source>
+   <Target>Non-Mixer.SynthsFX5Scape (In):ZBombarde/in-1</Target>
   </Connection>
   <Connection>
    <Source>Non-Mixer.Synths (Main):ZBombarde/out-1</Source>
@@ -3361,15 +3361,7 @@
   </Connection>
   <Connection>
    <Source>Non-Mixer.Synths (Main):ZTrumpets/out-1</Source>
-   <Target>Non-Mixer.SynthsFX5Scape (In):ZTrumpets/in-1</Target>
-  </Connection>
-  <Connection>
-   <Source>Non-Mixer.Synths (Main):ZTrumpets/out-1</Source>
-   <Target>Non-Mixer.SynthsFX4TapeDelay (In):ZTrumpets/in-1</Target>
-  </Connection>
-  <Connection>
-   <Source>Non-Mixer.Synths (Main):ZTrumpets/out-1</Source>
-   <Target>Non-Mixer.SynthsFX3Delay (In):ZTrumpets/in-1</Target>
+   <Target>Non-Mixer.SynthsFX1Reverb (In):ZTrumpets/in-1</Target>
   </Connection>
   <Connection>
    <Source>Non-Mixer.Synths (Main):ZTrumpets/out-1</Source>
@@ -3377,7 +3369,15 @@
   </Connection>
   <Connection>
    <Source>Non-Mixer.Synths (Main):ZTrumpets/out-1</Source>
-   <Target>Non-Mixer.SynthsFX1Reverb (In):ZTrumpets/in-1</Target>
+   <Target>Non-Mixer.SynthsFX3Delay (In):ZTrumpets/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.Synths (Main):ZTrumpets/out-1</Source>
+   <Target>Non-Mixer.SynthsFX4TapeDelay (In):ZTrumpets/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.Synths (Main):ZTrumpets/out-1</Source>
+   <Target>Non-Mixer.SynthsFX5Scape (In):ZTrumpets/in-1</Target>
   </Connection>
   <Connection>
    <Source>Non-Mixer.Synths (Main):ZTrumpets/out-1</Source>
@@ -3385,15 +3385,7 @@
   </Connection>
   <Connection>
    <Source>Non-Mixer.Synths (Main):DubstepHorn/out-1</Source>
-   <Target>Non-Mixer.SynthsFX5Scape (In):DubstepHorn/in-1</Target>
-  </Connection>
-  <Connection>
-   <Source>Non-Mixer.Synths (Main):DubstepHorn/out-1</Source>
-   <Target>Non-Mixer.SynthsFX4TapeDelay (In):DubstepHorn/in-1</Target>
-  </Connection>
-  <Connection>
-   <Source>Non-Mixer.Synths (Main):DubstepHorn/out-1</Source>
-   <Target>Non-Mixer.SynthsFX3Delay (In):DubstepHorn/in-1</Target>
+   <Target>Non-Mixer.SynthsFX1Reverb (In):DubstepHorn/in-1</Target>
   </Connection>
   <Connection>
    <Source>Non-Mixer.Synths (Main):DubstepHorn/out-1</Source>
@@ -3401,7 +3393,15 @@
   </Connection>
   <Connection>
    <Source>Non-Mixer.Synths (Main):DubstepHorn/out-1</Source>
-   <Target>Non-Mixer.SynthsFX1Reverb (In):DubstepHorn/in-1</Target>
+   <Target>Non-Mixer.SynthsFX3Delay (In):DubstepHorn/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.Synths (Main):DubstepHorn/out-1</Source>
+   <Target>Non-Mixer.SynthsFX4TapeDelay (In):DubstepHorn/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.Synths (Main):DubstepHorn/out-1</Source>
+   <Target>Non-Mixer.SynthsFX5Scape (In):DubstepHorn/in-1</Target>
   </Connection>
   <Connection>
    <Source>Non-Mixer.Synths (Main):DubstepHorn/out-1</Source>
@@ -3409,15 +3409,7 @@
   </Connection>
   <Connection>
    <Source>Non-Mixer.Synths (Main):ZStambul/out-1</Source>
-   <Target>Non-Mixer.SynthsFX5Scape (In):ZStambul/in-1</Target>
-  </Connection>
-  <Connection>
-   <Source>Non-Mixer.Synths (Main):ZStambul/out-1</Source>
-   <Target>Non-Mixer.SynthsFX4TapeDelay (In):ZStambul/in-1</Target>
-  </Connection>
-  <Connection>
-   <Source>Non-Mixer.Synths (Main):ZStambul/out-1</Source>
-   <Target>Non-Mixer.SynthsFX3Delay (In):ZStambul/in-1</Target>
+   <Target>Non-Mixer.SynthsFX1Reverb (In):ZStambul/in-1</Target>
   </Connection>
   <Connection>
    <Source>Non-Mixer.Synths (Main):ZStambul/out-1</Source>
@@ -3425,7 +3417,15 @@
   </Connection>
   <Connection>
    <Source>Non-Mixer.Synths (Main):ZStambul/out-1</Source>
-   <Target>Non-Mixer.SynthsFX1Reverb (In):ZStambul/in-1</Target>
+   <Target>Non-Mixer.SynthsFX3Delay (In):ZStambul/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.Synths (Main):ZStambul/out-1</Source>
+   <Target>Non-Mixer.SynthsFX4TapeDelay (In):ZStambul/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.Synths (Main):ZStambul/out-1</Source>
+   <Target>Non-Mixer.SynthsFX5Scape (In):ZStambul/in-1</Target>
   </Connection>
   <Connection>
    <Source>Non-Mixer.Synths (Main):ZStambul/out-1</Source>
@@ -3433,15 +3433,7 @@
   </Connection>
   <Connection>
    <Source>Non-Mixer.Synths (Main):Trap/out-1</Source>
-   <Target>Non-Mixer.SynthsFX5Scape (In):Trap/in-1</Target>
-  </Connection>
-  <Connection>
-   <Source>Non-Mixer.Synths (Main):Trap/out-1</Source>
-   <Target>Non-Mixer.SynthsFX4TapeDelay (In):Trap/in-1</Target>
-  </Connection>
-  <Connection>
-   <Source>Non-Mixer.Synths (Main):Trap/out-1</Source>
-   <Target>Non-Mixer.SynthsFX3Delay (In):Trap/in-1</Target>
+   <Target>Non-Mixer.SynthsFX1Reverb (In):Trap/in-1</Target>
   </Connection>
   <Connection>
    <Source>Non-Mixer.Synths (Main):Trap/out-1</Source>
@@ -3449,7 +3441,15 @@
   </Connection>
   <Connection>
    <Source>Non-Mixer.Synths (Main):Trap/out-1</Source>
-   <Target>Non-Mixer.SynthsFX1Reverb (In):Trap/in-1</Target>
+   <Target>Non-Mixer.SynthsFX3Delay (In):Trap/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.Synths (Main):Trap/out-1</Source>
+   <Target>Non-Mixer.SynthsFX4TapeDelay (In):Trap/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.Synths (Main):Trap/out-1</Source>
+   <Target>Non-Mixer.SynthsFX5Scape (In):Trap/in-1</Target>
   </Connection>
   <Connection>
    <Source>Non-Mixer.Synths (Main):Trap/out-1</Source>
@@ -3457,15 +3457,7 @@
   </Connection>
   <Connection>
    <Source>Non-Mixer.Synths (Main):ZDre/out-1</Source>
-   <Target>Non-Mixer.SynthsFX5Scape (In):ZDre/in-1</Target>
-  </Connection>
-  <Connection>
-   <Source>Non-Mixer.Synths (Main):ZDre/out-1</Source>
-   <Target>Non-Mixer.SynthsFX4TapeDelay (In):ZDre/in-1</Target>
-  </Connection>
-  <Connection>
-   <Source>Non-Mixer.Synths (Main):ZDre/out-1</Source>
-   <Target>Non-Mixer.SynthsFX3Delay (In):ZDre/in-1</Target>
+   <Target>Non-Mixer.SynthsFX1Reverb (In):ZDre/in-1</Target>
   </Connection>
   <Connection>
    <Source>Non-Mixer.Synths (Main):ZDre/out-1</Source>
@@ -3473,7 +3465,15 @@
   </Connection>
   <Connection>
    <Source>Non-Mixer.Synths (Main):ZDre/out-1</Source>
-   <Target>Non-Mixer.SynthsFX1Reverb (In):ZDre/in-1</Target>
+   <Target>Non-Mixer.SynthsFX3Delay (In):ZDre/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.Synths (Main):ZDre/out-1</Source>
+   <Target>Non-Mixer.SynthsFX4TapeDelay (In):ZDre/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.Synths (Main):ZDre/out-1</Source>
+   <Target>Non-Mixer.SynthsFX5Scape (In):ZDre/in-1</Target>
   </Connection>
   <Connection>
    <Source>Non-Mixer.Synths (Main):ZDre/out-1</Source>
@@ -3481,15 +3481,7 @@
   </Connection>
   <Connection>
    <Source>Non-Mixer.Synths (Main):ZDiploLike/out-1</Source>
-   <Target>Non-Mixer.SynthsFX5Scape (In):ZDiploLike/in-1</Target>
-  </Connection>
-  <Connection>
-   <Source>Non-Mixer.Synths (Main):ZDiploLike/out-1</Source>
-   <Target>Non-Mixer.SynthsFX4TapeDelay (In):ZDiploLike/in-1</Target>
-  </Connection>
-  <Connection>
-   <Source>Non-Mixer.Synths (Main):ZDiploLike/out-1</Source>
-   <Target>Non-Mixer.SynthsFX3Delay (In):ZDiploLike/in-1</Target>
+   <Target>Non-Mixer.SynthsFX1Reverb (In):ZDiploLike/in-1</Target>
   </Connection>
   <Connection>
    <Source>Non-Mixer.Synths (Main):ZDiploLike/out-1</Source>
@@ -3497,7 +3489,15 @@
   </Connection>
   <Connection>
    <Source>Non-Mixer.Synths (Main):ZDiploLike/out-1</Source>
-   <Target>Non-Mixer.SynthsFX1Reverb (In):ZDiploLike/in-1</Target>
+   <Target>Non-Mixer.SynthsFX3Delay (In):ZDiploLike/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.Synths (Main):ZDiploLike/out-1</Source>
+   <Target>Non-Mixer.SynthsFX4TapeDelay (In):ZDiploLike/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.Synths (Main):ZDiploLike/out-1</Source>
+   <Target>Non-Mixer.SynthsFX5Scape (In):ZDiploLike/in-1</Target>
   </Connection>
   <Connection>
    <Source>Non-Mixer.Synths (Main):ZDiploLike/out-1</Source>
@@ -3505,15 +3505,7 @@
   </Connection>
   <Connection>
    <Source>Non-Mixer.Synths (Main):ZJestoProunk/out-1</Source>
-   <Target>Non-Mixer.SynthsFX5Scape (In):ZJestoProunk/in-1</Target>
-  </Connection>
-  <Connection>
-   <Source>Non-Mixer.Synths (Main):ZJestoProunk/out-1</Source>
-   <Target>Non-Mixer.SynthsFX4TapeDelay (In):ZJestoProunk/in-1</Target>
-  </Connection>
-  <Connection>
-   <Source>Non-Mixer.Synths (Main):ZJestoProunk/out-1</Source>
-   <Target>Non-Mixer.SynthsFX3Delay (In):ZJestoProunk/in-1</Target>
+   <Target>Non-Mixer.SynthsFX1Reverb (In):ZJestoProunk/in-1</Target>
   </Connection>
   <Connection>
    <Source>Non-Mixer.Synths (Main):ZJestoProunk/out-1</Source>
@@ -3521,7 +3513,15 @@
   </Connection>
   <Connection>
    <Source>Non-Mixer.Synths (Main):ZJestoProunk/out-1</Source>
-   <Target>Non-Mixer.SynthsFX1Reverb (In):ZJestoProunk/in-1</Target>
+   <Target>Non-Mixer.SynthsFX3Delay (In):ZJestoProunk/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.Synths (Main):ZJestoProunk/out-1</Source>
+   <Target>Non-Mixer.SynthsFX4TapeDelay (In):ZJestoProunk/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.Synths (Main):ZJestoProunk/out-1</Source>
+   <Target>Non-Mixer.SynthsFX5Scape (In):ZJestoProunk/in-1</Target>
   </Connection>
   <Connection>
    <Source>Non-Mixer.Synths (Main):ZJestoProunk/out-1</Source>
@@ -3529,15 +3529,7 @@
   </Connection>
   <Connection>
    <Source>Non-Mixer.Synths (Main):Z8bits/out-1</Source>
-   <Target>Non-Mixer.SynthsFX5Scape (In):Z8bits/in-1</Target>
-  </Connection>
-  <Connection>
-   <Source>Non-Mixer.Synths (Main):Z8bits/out-1</Source>
-   <Target>Non-Mixer.SynthsFX4TapeDelay (In):Z8bits/in-1</Target>
-  </Connection>
-  <Connection>
-   <Source>Non-Mixer.Synths (Main):Z8bits/out-1</Source>
-   <Target>Non-Mixer.SynthsFX3Delay (In):Z8bits/in-1</Target>
+   <Target>Non-Mixer.SynthsFX1Reverb (In):Z8bits/in-1</Target>
   </Connection>
   <Connection>
    <Source>Non-Mixer.Synths (Main):Z8bits/out-1</Source>
@@ -3545,7 +3537,15 @@
   </Connection>
   <Connection>
    <Source>Non-Mixer.Synths (Main):Z8bits/out-1</Source>
-   <Target>Non-Mixer.SynthsFX1Reverb (In):Z8bits/in-1</Target>
+   <Target>Non-Mixer.SynthsFX3Delay (In):Z8bits/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.Synths (Main):Z8bits/out-1</Source>
+   <Target>Non-Mixer.SynthsFX4TapeDelay (In):Z8bits/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.Synths (Main):Z8bits/out-1</Source>
+   <Target>Non-Mixer.SynthsFX5Scape (In):Z8bits/in-1</Target>
   </Connection>
   <Connection>
    <Source>Non-Mixer.Synths (Main):Z8bits/out-1</Source>
@@ -3557,15 +3557,7 @@
   </Connection>
   <Connection>
    <Source>Non-Mixer.Synths (Main):EasyClassical/out-1</Source>
-   <Target>Non-Mixer.SynthsFX5Scape (In):EasyClassical/in-1</Target>
-  </Connection>
-  <Connection>
-   <Source>Non-Mixer.Synths (Main):EasyClassical/out-1</Source>
-   <Target>Non-Mixer.SynthsFX3Delay (In):EasyClassical/in-1</Target>
-  </Connection>
-  <Connection>
-   <Source>Non-Mixer.Synths (Main):EasyClassical/out-1</Source>
-   <Target>Non-Mixer.SynthsFX2Delay (In):EasyClassical/in-1</Target>
+   <Target>Non-Mixer.SynthsFX4TapeDelay (In):EasyClassical/in-1</Target>
   </Connection>
   <Connection>
    <Source>Non-Mixer.Synths (Main):EasyClassical/out-1</Source>
@@ -3573,7 +3565,15 @@
   </Connection>
   <Connection>
    <Source>Non-Mixer.Synths (Main):EasyClassical/out-1</Source>
-   <Target>Non-Mixer.SynthsFX4TapeDelay (In):EasyClassical/in-1</Target>
+   <Target>Non-Mixer.SynthsFX2Delay (In):EasyClassical/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.Synths (Main):EasyClassical/out-1</Source>
+   <Target>Non-Mixer.SynthsFX3Delay (In):EasyClassical/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.Synths (Main):EasyClassical/out-1</Source>
+   <Target>Non-Mixer.SynthsFX5Scape (In):EasyClassical/in-1</Target>
   </Connection>
   <Connection>
    <Source>Non-Mixer.Synths (Main):EasyClassical/out-1</Source>
@@ -3585,15 +3585,7 @@
   </Connection>
   <Connection>
    <Source>Non-Mixer.Synths (Main):TrapFifth/out-1</Source>
-   <Target>Non-Mixer.SynthsFX5Scape (In):TrapFifth/in-1</Target>
-  </Connection>
-  <Connection>
-   <Source>Non-Mixer.Synths (Main):TrapFifth/out-1</Source>
-   <Target>Non-Mixer.SynthsFX4TapeDelay (In):TrapFifth/in-1</Target>
-  </Connection>
-  <Connection>
-   <Source>Non-Mixer.Synths (Main):TrapFifth/out-1</Source>
-   <Target>Non-Mixer.SynthsFX3Delay (In):TrapFifth/in-1</Target>
+   <Target>Non-Mixer.SynthsFX1Reverb (In):TrapFifth/in-1</Target>
   </Connection>
   <Connection>
    <Source>Non-Mixer.Synths (Main):TrapFifth/out-1</Source>
@@ -3601,7 +3593,15 @@
   </Connection>
   <Connection>
    <Source>Non-Mixer.Synths (Main):TrapFifth/out-1</Source>
-   <Target>Non-Mixer.SynthsFX1Reverb (In):TrapFifth/in-1</Target>
+   <Target>Non-Mixer.SynthsFX3Delay (In):TrapFifth/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.Synths (Main):TrapFifth/out-1</Source>
+   <Target>Non-Mixer.SynthsFX4TapeDelay (In):TrapFifth/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.Synths (Main):TrapFifth/out-1</Source>
+   <Target>Non-Mixer.SynthsFX5Scape (In):TrapFifth/in-1</Target>
   </Connection>
   <Connection>
    <Source>Non-Mixer.Synths (Main):TrapFifth/out-1</Source>
@@ -3620,16 +3620,8 @@
    <Target>Non-Mixer.SynthsFX1Reverb (Process):FX1Reverb/in-1</Target>
   </Connection>
   <Connection>
-   <Source>Non-Mixer.Synths (Process):Reverb/out-1</Source>
-   <Target>Non-Mixer.Synths (Out):SynthsOut/in-1</Target>
-  </Connection>
-  <Connection>
    <Source>Non-Mixer.SynthsFX1Reverb (In):ZCosma/out-1</Source>
    <Target>Non-Mixer.SynthsFX1Reverb (Process):FX1Reverb/in-1</Target>
-  </Connection>
-  <Connection>
-   <Source>Non-Mixer.Synths (Process):TapeDelay/out-1</Source>
-   <Target>Non-Mixer.Synths (Out):SynthsOut/in-1</Target>
   </Connection>
   <Connection>
    <Source>Non-Mixer.SynthsFX2Delay (In):ZDupieux/out-1</Source>
