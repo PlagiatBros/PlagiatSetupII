@@ -714,161 +714,161 @@
     <Index>0</Index>
     <Name>Osc1 Wave</Name>
     <Symbol>o1_wave</Symbol>
-    <Value>0</Value>
+    <Value>3.0</Value>
    </Parameter>
 
    <Parameter>
     <Index>1</Index>
     <Name>Osc2 Wave</Name>
     <Symbol>o2_wave</Symbol>
-    <Value>1</Value>
+    <Value>0.0</Value>
    </Parameter>
 
    <Parameter>
     <Index>2</Index>
     <Name>Osc1 PW</Name>
     <Symbol>o1_pw</Symbol>
-    <Value>0</Value>
+    <Value>0.0</Value>
    </Parameter>
 
    <Parameter>
     <Index>3</Index>
     <Name>Osc2 PW</Name>
     <Symbol>o2_pw</Symbol>
-    <Value>0</Value>
+    <Value>0.0</Value>
    </Parameter>
 
    <Parameter>
     <Index>4</Index>
     <Name>O1&lt;&gt;2 Detune</Name>
     <Symbol>o12_detune</Symbol>
-    <Value>10</Value>
+    <Value>7.49069023</Value>
    </Parameter>
 
    <Parameter>
     <Index>5</Index>
     <Name>Osc2 Transpose</Name>
     <Symbol>o2_xpose</Symbol>
-    <Value>12</Value>
+    <Value>0.0</Value>
    </Parameter>
 
    <Parameter>
     <Index>6</Index>
     <Name>Phase mode</Name>
     <Symbol>phase_mode</Symbol>
-    <Value>0</Value>
+    <Value>1.0</Value>
    </Parameter>
 
    <Parameter>
     <Index>7</Index>
     <Name>O1&lt;&gt;2 Mix</Name>
     <Symbol>o12_mix</Symbol>
-    <Value>0.5</Value>
+    <Value>0.153</Value>
    </Parameter>
 
    <Parameter>
     <Index>8</Index>
     <Name>Filter</Name>
     <Symbol>filter</Symbol>
-    <Value>1</Value>
+    <Value>1.0</Value>
    </Parameter>
 
    <Parameter>
     <Index>9</Index>
     <Name>Cutoff</Name>
     <Symbol>cutoff</Symbol>
-    <Value>33</Value>
+    <Value>238.65559387</Value>
    </Parameter>
 
    <Parameter>
     <Index>10</Index>
     <Name>Resonance</Name>
     <Symbol>res</Symbol>
-    <Value>3</Value>
+    <Value>1.11203003</Value>
    </Parameter>
 
    <Parameter>
     <Index>11</Index>
     <Name>Separation</Name>
     <Symbol>filter_sep</Symbol>
-    <Value>0</Value>
+    <Value>0.0</Value>
    </Parameter>
 
    <Parameter>
     <Index>12</Index>
     <Name>Env-&gt;Cutoff</Name>
     <Symbol>env2cutoff</Symbol>
-    <Value>8000</Value>
+    <Value>5616.0</Value>
    </Parameter>
 
    <Parameter>
     <Index>13</Index>
     <Name>Env-&gt;Res</Name>
     <Symbol>env2res</Symbol>
-    <Value>1</Value>
+    <Value>0.14</Value>
    </Parameter>
 
    <Parameter>
     <Index>14</Index>
     <Name>Env-&gt;Amp</Name>
     <Symbol>env2amp</Symbol>
-    <Value>0</Value>
+    <Value>1.0</Value>
    </Parameter>
 
    <Parameter>
     <Index>15</Index>
     <Name>EG1 Attack</Name>
     <Symbol>adsr_a</Symbol>
-    <Value>1</Value>
+    <Value>1.0</Value>
    </Parameter>
 
    <Parameter>
     <Index>16</Index>
     <Name>EG1 Decay</Name>
     <Symbol>adsr_d</Symbol>
-    <Value>350</Value>
+    <Value>494.91247559</Value>
    </Parameter>
 
    <Parameter>
     <Index>17</Index>
     <Name>EG1 Sustain</Name>
     <Symbol>adsr_s</Symbol>
-    <Value>0.5</Value>
+    <Value>0.69011086</Value>
    </Parameter>
 
    <Parameter>
     <Index>18</Index>
     <Name>EG1 Fade</Name>
     <Symbol>adsr_f</Symbol>
-    <Value>0</Value>
+    <Value>0.0</Value>
    </Parameter>
 
    <Parameter>
     <Index>19</Index>
     <Name>EG1 Release</Name>
     <Symbol>adsr_r</Symbol>
-    <Value>100</Value>
+    <Value>67.76589966</Value>
    </Parameter>
 
    <Parameter>
     <Index>20</Index>
     <Name>Key Follow</Name>
     <Symbol>key_follow</Symbol>
-    <Value>0</Value>
+    <Value>1.0</Value>
    </Parameter>
 
    <Parameter>
     <Index>21</Index>
     <Name>Legato Mode</Name>
     <Symbol>legato</Symbol>
-    <Value>0</Value>
+    <Value>0.0</Value>
    </Parameter>
 
    <Parameter>
     <Index>22</Index>
     <Name>Portamento</Name>
     <Symbol>portamento</Symbol>
-    <Value>1</Value>
+    <Value>175.67114258</Value>
    </Parameter>
 
    <Parameter>
@@ -882,28 +882,28 @@
     <Index>24</Index>
     <Name>Vel-&gt;Amp</Name>
     <Symbol>vel2amp</Symbol>
-    <Value>0</Value>
+    <Value>0.0</Value>
    </Parameter>
 
    <Parameter>
     <Index>25</Index>
     <Name>Volume</Name>
     <Symbol>master</Symbol>
-    <Value>0.5</Value>
+    <Value>0.46293738</Value>
    </Parameter>
 
    <Parameter>
     <Index>26</Index>
     <Name>PBend Range</Name>
     <Symbol>pbend_range</Symbol>
-    <Value>200</Value>
+    <Value>1100.0</Value>
    </Parameter>
 
    <Parameter>
     <Index>27</Index>
     <Name>LFO1 Rate</Name>
     <Symbol>lfo_rate</Symbol>
-    <Value>5</Value>
+    <Value>5.0</Value>
    </Parameter>
 
    <Parameter>
@@ -917,126 +917,126 @@
     <Index>29</Index>
     <Name>LFO1-&gt;Filter</Name>
     <Symbol>lfo2filter</Symbol>
-    <Value>0</Value>
+    <Value>0.0</Value>
    </Parameter>
 
    <Parameter>
     <Index>30</Index>
     <Name>LFO1-&gt;Pitch</Name>
     <Symbol>lfo2pitch</Symbol>
-    <Value>100</Value>
+    <Value>100.0</Value>
    </Parameter>
 
    <Parameter>
     <Index>31</Index>
     <Name>LFO1-&gt;PW</Name>
     <Symbol>lfo2pw</Symbol>
-    <Value>0</Value>
+    <Value>0.0</Value>
    </Parameter>
 
    <Parameter>
     <Index>32</Index>
     <Name>ModWheel-&gt;LFO1</Name>
     <Symbol>mwhl2lfo</Symbol>
-    <Value>1</Value>
+    <Value>1.0</Value>
    </Parameter>
 
    <Parameter>
     <Index>33</Index>
     <Name>Scale Detune</Name>
     <Symbol>scale_detune</Symbol>
-    <Value>1</Value>
+    <Value>1.0</Value>
    </Parameter>
 
    <Parameter>
     <Index>34</Index>
     <Name>EG2-&gt;Cutoff</Name>
     <Symbol>adsr2_cutoff</Symbol>
-    <Value>0</Value>
+    <Value>0.0</Value>
    </Parameter>
 
    <Parameter>
     <Index>35</Index>
     <Name>EG2-&gt;Res</Name>
     <Symbol>adsr2_res</Symbol>
-    <Value>0.300000011920929</Value>
+    <Value>0.14</Value>
    </Parameter>
 
    <Parameter>
     <Index>36</Index>
     <Name>EG2-&gt;Amp</Name>
     <Symbol>adsr2_amp</Symbol>
-    <Value>1</Value>
+    <Value>1.0</Value>
    </Parameter>
 
    <Parameter>
     <Index>37</Index>
     <Name>EG2 Attack</Name>
     <Symbol>adsr2_a</Symbol>
-    <Value>1</Value>
+    <Value>1.0</Value>
    </Parameter>
 
    <Parameter>
     <Index>38</Index>
     <Name>EG2 Decay</Name>
     <Symbol>adsr2_d</Symbol>
-    <Value>100</Value>
+    <Value>457.30502319</Value>
    </Parameter>
 
    <Parameter>
     <Index>39</Index>
     <Name>EG2 Sustain</Name>
     <Symbol>adsr2_s</Symbol>
-    <Value>0.5</Value>
+    <Value>0.5999999</Value>
    </Parameter>
 
    <Parameter>
     <Index>40</Index>
     <Name>EG2 Fade</Name>
     <Symbol>adsr2_f</Symbol>
-    <Value>0</Value>
+    <Value>0.0</Value>
    </Parameter>
 
    <Parameter>
     <Index>41</Index>
     <Name>Release</Name>
     <Symbol>adsr2_r</Symbol>
-    <Value>50</Value>
+    <Value>50.0</Value>
    </Parameter>
 
    <Parameter>
     <Index>42</Index>
     <Name>Osc1 Stretch</Name>
     <Symbol>o1_stretch</Symbol>
-    <Value>1</Value>
+    <Value>1.0</Value>
    </Parameter>
 
    <Parameter>
     <Index>43</Index>
     <Name>Osc1 Window</Name>
     <Symbol>o1_window</Symbol>
-    <Value>0</Value>
+    <Value>0.0</Value>
    </Parameter>
 
    <Parameter>
     <Index>44</Index>
     <Name>LFO1 Trigger Mode</Name>
     <Symbol>lfo1_trig</Symbol>
-    <Value>0</Value>
+    <Value>0.0</Value>
    </Parameter>
 
    <Parameter>
     <Index>45</Index>
     <Name>LFO2 Trigger Mode</Name>
     <Symbol>lfo2_trig</Symbol>
-    <Value>0</Value>
+    <Value>0.0</Value>
    </Parameter>
 
    <Parameter>
     <Index>46</Index>
     <Name>LFO1 Rate</Name>
     <Symbol>lfo2_rate</Symbol>
-    <Value>5</Value>
+    <Value>5.0</Value>
    </Parameter>
 
    <Parameter>
@@ -1050,28 +1050,28 @@
     <Index>48</Index>
     <Name>Osc2 Unison</Name>
     <Symbol>o2_unison</Symbol>
-    <Value>0</Value>
+    <Value>0.0</Value>
    </Parameter>
 
    <Parameter>
     <Index>49</Index>
     <Name>Osc2 Unison Detune</Name>
     <Symbol>o2_unisonfrq</Symbol>
-    <Value>2</Value>
+    <Value>2.0</Value>
    </Parameter>
 
    <Parameter>
     <Index>50</Index>
     <Name>Osc1 Transpose</Name>
     <Symbol>o1_xpose</Symbol>
-    <Value>0</Value>
+    <Value>0.0</Value>
    </Parameter>
 
    <Parameter>
     <Index>51</Index>
     <Name>MIDI Channel</Name>
     <Symbol>midi</Symbol>
-    <Value>0</Value>
+    <Value>0.0</Value>
    </Parameter>
 
    <CustomData>
