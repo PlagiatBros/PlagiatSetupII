@@ -1,6 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<!DOCTYPE CARLA-PROJECT>
-<CARLA-PROJECT VERSION='2.4'>
+<CARLA-PROJECT VERSION="2.4">
  <EngineSettings>
   <ForceStereo>false</ForceStereo>
   <PreferPluginBridges>false</PreferPluginBridges>
@@ -14,7 +12,7 @@
   <BeatsPerMinute>120</BeatsPerMinute>
  </Transport>
 
- <!-- Calf Monosynth -->
+ 
  <Plugin>
   <Info>
    <Type>LV2</Type>
@@ -31,14 +29,14 @@
     <Index>0</Index>
     <Name>Osc1 Wave</Name>
     <Symbol>o1_wave</Symbol>
-    <Value>0</Value>
+    <Value>3</Value>
    </Parameter>
 
    <Parameter>
     <Index>1</Index>
     <Name>Osc2 Wave</Name>
     <Symbol>o2_wave</Symbol>
-    <Value>1</Value>
+    <Value>0</Value>
    </Parameter>
 
    <Parameter>
@@ -66,7 +64,7 @@
     <Index>5</Index>
     <Name>Osc2 Transpose</Name>
     <Symbol>o2_xpose</Symbol>
-    <Value>12</Value>
+    <Value>0</Value>
    </Parameter>
 
    <Parameter>
@@ -80,7 +78,7 @@
     <Index>7</Index>
     <Name>O1&lt;&gt;2 Mix</Name>
     <Symbol>o12_mix</Symbol>
-    <Value>0.5</Value>
+    <Value>0.217</Value>
    </Parameter>
 
    <Parameter>
@@ -94,14 +92,14 @@
     <Index>9</Index>
     <Name>Cutoff</Name>
     <Symbol>cutoff</Symbol>
-    <Value>33</Value>
+    <Value>221.682</Value>
    </Parameter>
 
    <Parameter>
     <Index>10</Index>
     <Name>Resonance</Name>
     <Symbol>res</Symbol>
-    <Value>3</Value>
+    <Value>1.41878</Value>
    </Parameter>
 
    <Parameter>
@@ -115,7 +113,7 @@
     <Index>12</Index>
     <Name>Env-&gt;Cutoff</Name>
     <Symbol>env2cutoff</Symbol>
-    <Value>8000</Value>
+    <Value>647.999</Value>
    </Parameter>
 
    <Parameter>
@@ -136,21 +134,21 @@
     <Index>15</Index>
     <Name>EG1 Attack</Name>
     <Symbol>adsr_a</Symbol>
-    <Value>1</Value>
+    <Value>1.21905</Value>
    </Parameter>
 
    <Parameter>
     <Index>16</Index>
     <Name>EG1 Decay</Name>
     <Symbol>adsr_d</Symbol>
-    <Value>350</Value>
+    <Value>10</Value>
    </Parameter>
 
    <Parameter>
     <Index>17</Index>
     <Name>EG1 Sustain</Name>
     <Symbol>adsr_s</Symbol>
-    <Value>0.5</Value>
+    <Value>0.5068</Value>
    </Parameter>
 
    <Parameter>
@@ -164,7 +162,7 @@
     <Index>19</Index>
     <Name>EG1 Release</Name>
     <Symbol>adsr_r</Symbol>
-    <Value>100</Value>
+    <Value>337.415</Value>
    </Parameter>
 
    <Parameter>
@@ -185,14 +183,14 @@
     <Index>22</Index>
     <Name>Portamento</Name>
     <Symbol>portamento</Symbol>
-    <Value>1</Value>
+    <Value>127.661</Value>
    </Parameter>
 
    <Parameter>
     <Index>23</Index>
     <Name>Vel-&gt;Filter</Name>
     <Symbol>vel2filter</Symbol>
-    <Value>0.5</Value>
+    <Value>0</Value>
    </Parameter>
 
    <Parameter>
@@ -213,7 +211,7 @@
     <Index>26</Index>
     <Name>PBend Range</Name>
     <Symbol>pbend_range</Symbol>
-    <Value>200</Value>
+    <Value>2100</Value>
    </Parameter>
 
    <Parameter>
@@ -276,7 +274,7 @@
     <Index>35</Index>
     <Name>EG2-&gt;Res</Name>
     <Symbol>adsr2_res</Symbol>
-    <Value>0.300000011920929</Value>
+    <Value>0</Value>
    </Parameter>
 
    <Parameter>
@@ -297,28 +295,28 @@
     <Index>38</Index>
     <Name>EG2 Decay</Name>
     <Symbol>adsr2_d</Symbol>
-    <Value>100</Value>
+    <Value>10</Value>
    </Parameter>
 
    <Parameter>
     <Index>39</Index>
     <Name>EG2 Sustain</Name>
     <Symbol>adsr2_s</Symbol>
-    <Value>0.5</Value>
+    <Value>0.6</Value>
    </Parameter>
 
    <Parameter>
     <Index>40</Index>
     <Name>EG2 Fade</Name>
     <Symbol>adsr2_f</Symbol>
-    <Value>0</Value>
+    <Value>-10000</Value>
    </Parameter>
 
    <Parameter>
     <Index>41</Index>
     <Name>Release</Name>
     <Symbol>adsr2_r</Symbol>
-    <Value>50</Value>
+    <Value>799.736</Value>
    </Parameter>
 
    <Parameter>
@@ -699,7 +697,7 @@
   </Data>
  </Plugin>
 
- <!-- Calf Monosynth -->
+ 
  <Plugin>
   <Info>
    <Type>LV2</Type>
@@ -1378,7 +1376,7 @@
   </Data>
  </Plugin>
 
- <!-- Calf Monosynth -->
+ 
  <Plugin>
   <Info>
    <Type>LV2</Type>
@@ -2057,7 +2055,7 @@
   </Data>
  </Plugin>
 
- <!-- Calf Monosynth -->
+ 
  <Plugin>
   <Info>
    <Type>LV2</Type>
