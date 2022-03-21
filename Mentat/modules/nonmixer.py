@@ -43,6 +43,10 @@ class NonMixer(Module):
                         self.submodules[strip_name].parameters[parameter_name].range = args[3:5]
                         self.init_params.append(parameter_address)
 
+                        if parameter_name in NonMixer.parameter_aliases:
+                            self.submodules[strip_name].add_alias_parameter(NonMixer.parameter_aliases[parameter_name], parameter_name)
+
+
             else:
 
                 for parameter_address in self.init_params:
@@ -63,9 +67,10 @@ class NonMixer(Module):
 
         return False
 
-
-
-
     def create_meta_parameters(self):
 
         pass
+
+    parameter_aliases = {
+        'C%2A%20Scape%20-%20Stereo%20delay%20with%20chromatic%20resonances/bpm': 'scape_bpm'
+    }

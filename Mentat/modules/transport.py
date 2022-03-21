@@ -24,9 +24,6 @@ class Transport(Module):
                 self.logger.error('Jack is not running, jack transport module disabled')
                 self.jack = None
 
-        self.engine.root_module.add_alias_parameter('bass_scape_bpm', ['Bass', 'BassScape', 'C%2A%20Scape%20-%20Stereo%20delay%20with%20chromatic%20resonances/bpm'])
-
-
     def jack_callback(self, state, blocksize, pos, new_pos):
 
         pos.beats_per_minute = self.engine.tempo
@@ -42,7 +39,9 @@ class Transport(Module):
         self.engine.modules['Klick'].set('tempo', bpm)
         # self.engine.modules['Seq192'].set('tempo', bpm)
         # self.engine.modules['Loop192'].set('tempo', bpm)
-        self.engine.root_module.set('bass_scape_bpm', bpm)
+
+        for mixer, strip in [('Bass', 'BassScape')]:
+            self.engine.modules[mixer].set(strip, 'scape_bpm', bpm)
 
     def set_cycle(self, eighths, pattern=None):
 
