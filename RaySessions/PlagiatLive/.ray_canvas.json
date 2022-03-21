@@ -475,8 +475,8 @@
         61
       ],
       "out_xy": [
-        424,
-        628
+        480,
+        587
       ],
       "flags": 116
     },
@@ -495,8 +495,8 @@
         661
       ],
       "out_xy": [
-        471,
-        685
+        480,
+        644
       ],
       "flags": 116
     },
@@ -575,8 +575,8 @@
         31
       ],
       "out_xy": [
-        14,
-        438
+        40,
+        197
       ],
       "flags": 68
     },
@@ -595,8 +595,8 @@
         410
       ],
       "out_xy": [
-        117,
-        1424
+        137,
+        1555
       ],
       "flags": 68
     },
@@ -691,8 +691,8 @@
         156
       ],
       "in_xy": [
-        -89,
-        709
+        -95,
+        687
       ],
       "out_xy": [
         -389,
@@ -1012,7 +1012,7 @@
       ],
       "in_xy": [
         -319,
-        -325
+        -307
       ],
       "out_xy": [
         1,
@@ -1291,12 +1291,12 @@
         80
       ],
       "in_xy": [
-        -125,
-        786
+        -281,
+        735
       ],
       "out_xy": [
         -16,
-        -384
+        -414
       ],
       "flags": 68
     },
@@ -1731,8 +1731,8 @@
         623
       ],
       "in_xy": [
-        556,
-        1550
+        568,
+        1620
       ],
       "out_xy": [
         276,
@@ -2051,8 +2051,8 @@
         882
       ],
       "in_xy": [
-        471,
-        742
+        465,
+        724
       ],
       "out_xy": [
         -225,
@@ -2171,12 +2171,12 @@
         911
       ],
       "in_xy": [
-        62,
-        1162
+        79,
+        1083
       ],
       "out_xy": [
-        239,
-        1591
+        110,
+        1704
       ],
       "flags": 68
     },
@@ -2192,7 +2192,7 @@
       ],
       "in_xy": [
         471,
-        891
+        873
       ],
       "out_xy": [
         -236,
@@ -2211,12 +2211,12 @@
         379
       ],
       "in_xy": [
-        62,
-        1221
+        83,
+        1155
       ],
       "out_xy": [
-        245,
-        1658
+        110,
+        1779
       ],
       "flags": 68
     },
@@ -2232,7 +2232,7 @@
       ],
       "in_xy": [
         462,
-        1040
+        1022
       ],
       "out_xy": [
         -216,
@@ -2252,7 +2252,7 @@
       ],
       "in_xy": [
         447,
-        1189
+        1171
       ],
       "out_xy": [
         -211,
@@ -2271,12 +2271,12 @@
         1554
       ],
       "in_xy": [
-        498,
-        1338
+        504,
+        1480
       ],
       "out_xy": [
-        -160,
-        1651
+        -175,
+        1807
       ],
       "flags": 68
     },
@@ -2291,12 +2291,12 @@
         1240
       ],
       "in_xy": [
-        62,
-        1280
+        92,
+        1248
       ],
       "out_xy": [
-        245,
-        1728
+        110,
+        1838
       ],
       "flags": 68
     },
@@ -2311,12 +2311,12 @@
         1299
       ],
       "in_xy": [
-        80,
-        1339
+        96,
+        1349
       ],
       "out_xy": [
-        232,
-        1794
+        110,
+        1897
       ],
       "flags": 68
     },
@@ -2331,12 +2331,12 @@
         1181
       ],
       "in_xy": [
-        84,
-        1589
+        141,
+        1481
       ],
       "out_xy": [
-        273,
-        1867
+        157,
+        2028
       ],
       "flags": 68
     },
@@ -2676,7 +2676,7 @@
       ],
       "out_xy": [
         758,
-        2034
+        2036
       ],
       "flags": 68
     },
@@ -2695,8 +2695,8 @@
         276
       ],
       "out_xy": [
-        266,
-        2067
+        273,
+        2170
       ],
       "flags": 68
     },
@@ -2736,7 +2736,7 @@
       ],
       "out_xy": [
         741,
-        2130
+        2131
       ],
       "flags": 68
     },
@@ -2955,8 +2955,8 @@
         2125
       ],
       "out_xy": [
-        767,
-        1569
+        773,
+        1496
       ],
       "flags": 68
     },
@@ -2995,8 +2995,8 @@
         2317
       ],
       "out_xy": [
-        746,
-        1705
+        752,
+        1630
       ],
       "flags": 68
     },
@@ -3055,8 +3055,8 @@
         2203
       ],
       "out_xy": [
-        767,
-        1628
+        773,
+        1555
       ],
       "flags": 68
     },
@@ -3075,8 +3075,8 @@
         2418
       ],
       "out_xy": [
-        765,
-        1764
+        771,
+        1689
       ],
       "flags": 68
     },
@@ -3115,8 +3115,8 @@
         2504
       ],
       "out_xy": [
-        747,
-        1823
+        753,
+        1748
       ],
       "flags": 68
     },
@@ -3135,8 +3135,8 @@
         2712
       ],
       "out_xy": [
-        772,
-        1959
+        778,
+        1866
       ],
       "flags": 68
     },
@@ -3155,8 +3155,8 @@
         2616
       ],
       "out_xy": [
-        748,
-        1882
+        754,
+        1807
       ],
       "flags": 68
     },
@@ -3215,8 +3215,8 @@
         138
       ],
       "out_xy": [
-        -191,
-        855
+        -263,
+        832
       ],
       "flags": 68
     },
@@ -3271,8 +3271,8 @@
         -147
       ],
       "in_xy": [
-        111,
-        1031
+        -110,
+        791
       ],
       "out_xy": [
         -402,
@@ -4132,7 +4132,7 @@
       ],
       "in_xy": [
         331,
-        1089
+        1071
       ],
       "out_xy": [
         -1856,
@@ -4488,7 +4488,7 @@
       "out_zone": "",
       "null_xy": [
         416,
-        1986
+        2163
       ],
       "in_xy": [
         400,
@@ -4507,8 +4507,8 @@
       "in_zone": "",
       "out_zone": "",
       "null_xy": [
-        414,
-        2093
+        416,
+        2242
       ],
       "in_xy": [
         400,
@@ -4527,8 +4527,8 @@
       "in_zone": "",
       "out_zone": "",
       "null_xy": [
-        418,
-        2190
+        416,
+        2321
       ],
       "in_xy": [
         400,
@@ -4655,8 +4655,8 @@
         3015
       ],
       "out_xy": [
-        127,
-        3161
+        138,
+        3310
       ],
       "flags": 68
     },
@@ -4715,8 +4715,8 @@
         3105
       ],
       "out_xy": [
-        127,
-        3274
+        138,
+        3423
       ],
       "flags": 68
     },
@@ -4875,8 +4875,8 @@
         3175
       ],
       "out_xy": [
-        145,
-        3395
+        156,
+        3542
       ],
       "flags": 68
     },
@@ -4935,8 +4935,8 @@
         2925
       ],
       "out_xy": [
-        110,
-        3066
+        121,
+        3215
       ],
       "flags": 68
     },
@@ -5071,12 +5071,12 @@
         587
       ],
       "in_xy": [
-        245,
-        814
+        317,
+        785
       ],
       "out_xy": [
-        26,
-        356
+        53,
+        75
       ],
       "flags": 68
     },
@@ -5099,6 +5099,566 @@
         3843
       ],
       "flags": 0
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "ardour",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        29,
+        -295
+      ],
+      "in_xy": [
+        400,
+        560
+      ],
+      "out_xy": [
+        0,
+        560
+      ],
+      "flags": 0
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "ams_1 Midi",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        1,
+        -319
+      ],
+      "in_xy": [
+        400,
+        3843
+      ],
+      "out_xy": [
+        0,
+        3843
+      ],
+      "flags": 0
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "ams_1",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        -160,
+        1788
+      ],
+      "in_xy": [
+        400,
+        3843
+      ],
+      "out_xy": [
+        0,
+        3843
+      ],
+      "flags": 0
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Non-Mixer.BassFX/Unnamed",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        1,
+        -319
+      ],
+      "in_xy": [
+        400,
+        3843
+      ],
+      "out_xy": [
+        0,
+        3843
+      ],
+      "flags": 0
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Non-Mixer.BassFX/Unnamed.1",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        -160,
+        1788
+      ],
+      "in_xy": [
+        400,
+        3843
+      ],
+      "out_xy": [
+        0,
+        3843
+      ],
+      "flags": 0
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Non-Mixer.SamplesFX5TapeDelay/Unnamed",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        1,
+        -301
+      ],
+      "in_xy": [
+        400,
+        3843
+      ],
+      "out_xy": [
+        0,
+        3843
+      ],
+      "flags": 0
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Non-Mixer.SamplesFX5TapeDelay/Unnamed.1",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        1,
+        -236
+      ],
+      "in_xy": [
+        400,
+        3843
+      ],
+      "out_xy": [
+        0,
+        3843
+      ],
+      "flags": 0
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Non-Mixer.SamplesFX5TapeDelay/Unnamed.2",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        -160,
+        1788
+      ],
+      "in_xy": [
+        400,
+        3843
+      ],
+      "out_xy": [
+        0,
+        3843
+      ],
+      "flags": 0
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Non-Mixer.SamplesFX5TapeDelay/Unnamed.3",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        -160,
+        1853
+      ],
+      "in_xy": [
+        400,
+        3843
+      ],
+      "out_xy": [
+        0,
+        3843
+      ],
+      "flags": 0
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Non-Mixer.SamplesFX5TapeDelay/Unnamed.4",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        -160,
+        1918
+      ],
+      "in_xy": [
+        400,
+        3843
+      ],
+      "out_xy": [
+        0,
+        3843
+      ],
+      "flags": 0
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Non-Mixer.SamplesFX5TapeDelay/Unnamed.5",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        -160,
+        1983
+      ],
+      "in_xy": [
+        400,
+        3843
+      ],
+      "out_xy": [
+        0,
+        3843
+      ],
+      "flags": 0
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Non-Mixer.SamplesFX5TapeDelay/Unnamed.6",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        -160,
+        2048
+      ],
+      "in_xy": [
+        400,
+        3843
+      ],
+      "out_xy": [
+        0,
+        3843
+      ],
+      "flags": 0
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Non-Mixer.SamplesFX5TapeDelay (In)",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        -215,
+        1967
+      ],
+      "in_xy": [
+        469,
+        1323
+      ],
+      "out_xy": [
+        -208,
+        1658
+      ],
+      "flags": 68
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Non-Mixer.SamplesFX5TapeDelay (Process)",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        -34,
+        -250
+      ],
+      "in_xy": [
+        97,
+        1413
+      ],
+      "out_xy": [
+        98,
+        1963
+      ],
+      "flags": 68
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Non-Mixer.VocalsNanoFX8TapeDelay/Unnamed",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        1,
+        -301
+      ],
+      "in_xy": [
+        400,
+        3843
+      ],
+      "out_xy": [
+        0,
+        3843
+      ],
+      "flags": 0
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Non-Mixer.VocalsNanoFX8TapeDelay/Unnamed.1",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        1,
+        -236
+      ],
+      "in_xy": [
+        400,
+        3843
+      ],
+      "out_xy": [
+        0,
+        3843
+      ],
+      "flags": 0
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Non-Mixer.VocalsNanoFX8TapeDelay/Unnamed.2",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        -175,
+        1944
+      ],
+      "in_xy": [
+        400,
+        3843
+      ],
+      "out_xy": [
+        0,
+        3843
+      ],
+      "flags": 0
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Non-Mixer.VocalsNanoFX8TapeDelay/Unnamed.3",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        -175,
+        2009
+      ],
+      "in_xy": [
+        400,
+        3843
+      ],
+      "out_xy": [
+        0,
+        3843
+      ],
+      "flags": 0
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Non-Mixer.VocalsNanoFX8TapeDelay/Unnamed.4",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        -175,
+        2074
+      ],
+      "in_xy": [
+        400,
+        3843
+      ],
+      "out_xy": [
+        0,
+        3843
+      ],
+      "flags": 0
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Non-Mixer.VocalsNanoFX8TapeDelay (In)",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        1165,
+        2910
+      ],
+      "in_xy": [
+        400,
+        3843
+      ],
+      "out_xy": [
+        0,
+        3843
+      ],
+      "flags": 0
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Non-Mixer.VocalsNanoFX8TapeDelay (Process)",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        -2,
+        -292
+      ],
+      "in_xy": [
+        1574,
+        2872
+      ],
+      "out_xy": [
+        744,
+        1944
+      ],
+      "flags": 68
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Non-Mixer.VocalsKeschFX8TapeDelay/Unnamed",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        -175,
+        1944
+      ],
+      "in_xy": [
+        400,
+        3843
+      ],
+      "out_xy": [
+        0,
+        3843
+      ],
+      "flags": 0
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Non-Mixer.VocalsKeschFX8TapeDelay/Unnamed.1",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        -175,
+        2009
+      ],
+      "in_xy": [
+        400,
+        3843
+      ],
+      "out_xy": [
+        0,
+        3843
+      ],
+      "flags": 0
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Non-Mixer.VocalsKeschFX8TapeDelay/Unnamed.2",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        -175,
+        2074
+      ],
+      "in_xy": [
+        400,
+        3843
+      ],
+      "out_xy": [
+        0,
+        3843
+      ],
+      "flags": 0
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Non-Mixer.VocalsKeschFX8TapeDelay/Unnamed.3",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        -175,
+        2139
+      ],
+      "in_xy": [
+        400,
+        3843
+      ],
+      "out_xy": [
+        0,
+        3843
+      ],
+      "flags": 0
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Non-Mixer.VocalsKeschFX8TapeDelay/Unnamed.4",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        -175,
+        2204
+      ],
+      "in_xy": [
+        400,
+        3843
+      ],
+      "out_xy": [
+        0,
+        3843
+      ],
+      "flags": 0
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Non-Mixer.VocalsKeschFX8TapeDelay (In)",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        465,
+        3832
+      ],
+      "in_xy": [
+        400,
+        3843
+      ],
+      "out_xy": [
+        0,
+        3843
+      ],
+      "flags": 0
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Non-Mixer.VocalsKeschFX8TapeDelay (Process)",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        -88,
+        2435
+      ],
+      "in_xy": [
+        758,
+        3854
+      ],
+      "out_xy": [
+        117,
+        3075
+      ],
+      "flags": 68
     }
   ]
 }
