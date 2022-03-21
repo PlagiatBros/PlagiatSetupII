@@ -2184,14 +2184,14 @@
     <Index>0</Index>
     <Name>Osc1 Wave</Name>
     <Symbol>o1_wave</Symbol>
-    <Value>0</Value>
+    <Value>7</Value>
    </Parameter>
 
    <Parameter>
     <Index>1</Index>
     <Name>Osc2 Wave</Name>
     <Symbol>o2_wave</Symbol>
-    <Value>1</Value>
+    <Value>0</Value>
    </Parameter>
 
    <Parameter>
@@ -2212,7 +2212,7 @@
     <Index>4</Index>
     <Name>O1&lt;&gt;2 Detune</Name>
     <Symbol>o12_detune</Symbol>
-    <Value>10</Value>
+    <Value>7.44</Value>
    </Parameter>
 
    <Parameter>
@@ -2226,14 +2226,14 @@
     <Index>6</Index>
     <Name>Phase mode</Name>
     <Symbol>phase_mode</Symbol>
-    <Value>0</Value>
+    <Value>1</Value>
    </Parameter>
 
    <Parameter>
     <Index>7</Index>
     <Name>O1&lt;&gt;2 Mix</Name>
     <Symbol>o12_mix</Symbol>
-    <Value>0.5</Value>
+    <Value>0.335</Value>
    </Parameter>
 
    <Parameter>
@@ -2247,14 +2247,14 @@
     <Index>9</Index>
     <Name>Cutoff</Name>
     <Symbol>cutoff</Symbol>
-    <Value>33</Value>
+    <Value>238.352</Value>
    </Parameter>
 
    <Parameter>
     <Index>10</Index>
     <Name>Resonance</Name>
     <Symbol>res</Symbol>
-    <Value>3</Value>
+    <Value>1.10819</Value>
    </Parameter>
 
    <Parameter>
@@ -2268,21 +2268,21 @@
     <Index>12</Index>
     <Name>Env-&gt;Cutoff</Name>
     <Symbol>env2cutoff</Symbol>
-    <Value>8000</Value>
+    <Value>5667.2</Value>
    </Parameter>
 
    <Parameter>
     <Index>13</Index>
     <Name>Env-&gt;Res</Name>
     <Symbol>env2res</Symbol>
-    <Value>1</Value>
+    <Value>0.14</Value>
    </Parameter>
 
    <Parameter>
     <Index>14</Index>
     <Name>Env-&gt;Amp</Name>
     <Symbol>env2amp</Symbol>
-    <Value>0</Value>
+    <Value>1</Value>
    </Parameter>
 
    <Parameter>
@@ -2296,14 +2296,14 @@
     <Index>16</Index>
     <Name>EG1 Decay</Name>
     <Symbol>adsr_d</Symbol>
-    <Value>350</Value>
+    <Value>489.568</Value>
    </Parameter>
 
    <Parameter>
     <Index>17</Index>
     <Name>EG1 Sustain</Name>
     <Symbol>adsr_s</Symbol>
-    <Value>0.5</Value>
+    <Value>0.690476</Value>
    </Parameter>
 
    <Parameter>
@@ -2317,14 +2317,14 @@
     <Index>19</Index>
     <Name>EG1 Release</Name>
     <Symbol>adsr_r</Symbol>
-    <Value>100</Value>
+    <Value>66.874</Value>
    </Parameter>
 
    <Parameter>
     <Index>20</Index>
     <Name>Key Follow</Name>
     <Symbol>key_follow</Symbol>
-    <Value>0</Value>
+    <Value>2</Value>
    </Parameter>
 
    <Parameter>
@@ -2338,7 +2338,7 @@
     <Index>22</Index>
     <Name>Portamento</Name>
     <Symbol>portamento</Symbol>
-    <Value>1</Value>
+    <Value>111.337</Value>
    </Parameter>
 
    <Parameter>
@@ -2429,7 +2429,7 @@
     <Index>35</Index>
     <Name>EG2-&gt;Res</Name>
     <Symbol>adsr2_res</Symbol>
-    <Value>0.300000011920929</Value>
+    <Value>0.14</Value>
    </Parameter>
 
    <Parameter>
@@ -2450,14 +2450,14 @@
     <Index>38</Index>
     <Name>EG2 Decay</Name>
     <Symbol>adsr2_d</Symbol>
-    <Value>100</Value>
+    <Value>467.663</Value>
    </Parameter>
 
    <Parameter>
     <Index>39</Index>
     <Name>EG2 Sustain</Name>
     <Symbol>adsr2_s</Symbol>
-    <Value>0.5</Value>
+    <Value>0.6</Value>
    </Parameter>
 
    <Parameter>
@@ -2534,7 +2534,7 @@
     <Index>50</Index>
     <Name>Osc1 Transpose</Name>
     <Symbol>o1_xpose</Symbol>
-    <Value>0</Value>
+    <Value>19</Value>
    </Parameter>
 
    <Parameter>
