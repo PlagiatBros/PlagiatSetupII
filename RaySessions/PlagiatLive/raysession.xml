@@ -42,7 +42,7 @@
   <client launched="1" prefix_mode="1" executable="carla" label="Low Synths [Carla] 9720" jack_naming="1" id="LowCSynths" gui_visible="0" last_open_duration="11.90358853340149" name="Carla"/>
   <client launched="1" prefix_mode="1" executable="carla" label="HiSynths [Carla] 9730" jack_naming="1" id="HiCSynths" gui_visible="0" last_open_duration="12.313084602355957" name="Carla"/>
   <client launched="1" prefix_mode="1" executable="tap192" label="Prod Sampler [Tap192] 11040" arguments="-p 11040" jack_naming="1" id="ProdSampler" gui_visible="0" name="Tap192" icon="tap192"/>
-  <client launched="0" prefix_mode="1" executable="tap192" label="Constant Sampler [Tap192] 11041" arguments="-p 11041" jack_naming="1" id="ConstantSampler" gui_visible="0" name="Tap192" icon="tap192"/>
+  <client launched="1" prefix_mode="1" executable="tap192" label="Constant Sampler [Tap192] 11041" arguments="-p 11041" jack_naming="1" id="ConstantSampler" gui_visible="0" name="Tap192" icon="tap192"/>
   <client launched="1" prefix_mode="1" executable="seq192" label="Main Sequencer [seq192] 9920" arguments="-p 9920 -j" jack_naming="1" id="MainSequencer" gui_visible="1" name="seq192"/>
   <client launched="1" prefix_mode="1" executable="loop192" label="MidiLooper [loop192] 9910" arguments="-l 5 -p 9910 -j" jack_naming="1" id="MidiLooper" gui_visible="0" name="loop192"/>
   <client launched="1" prefix_mode="1" config_file="" executable="python3" label="Calf Microtonal Pitcher [Mididings] 19999" no_save_level="0" arguments="$PLAGIAT_SETUP_DIR/Mididings/calfmicropitcher.py" jack_naming="1" wait_win="0" id="CalfMicroPitcher" stop_signal="15" name="calfmicropitcher.py" protocol="Ray-Hack" icon="mididings" save_signal="0" desktop_file="//not_found"/>

@@ -11,7 +11,7 @@
  </EngineSettings>
 
  <Transport>
-  <BeatsPerMinute>0</BeatsPerMinute>
+  <BeatsPerMinute>90</BeatsPerMinute>
  </Transport>
 
  <!-- Calf Monosynth -->
