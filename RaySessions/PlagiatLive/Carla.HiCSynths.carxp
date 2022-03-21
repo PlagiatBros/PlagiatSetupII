@@ -1,6 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<!DOCTYPE CARLA-PROJECT>
-<CARLA-PROJECT VERSION='2.4'>
+<CARLA-PROJECT VERSION="2.4">
  <EngineSettings>
   <ForceStereo>false</ForceStereo>
   <PreferPluginBridges>false</PreferPluginBridges>
@@ -14,7 +12,7 @@
   <BeatsPerMinute>120</BeatsPerMinute>
  </Transport>
 
- <!-- ACE Fluid Synth -->
+ 
  <Plugin>
   <Info>
    <Type>LV2</Type>
@@ -126,7 +124,7 @@
   </Data>
  </Plugin>
 
- <!-- Calf Monosynth -->
+ 
  <Plugin>
   <Info>
    <Type>LV2</Type>
@@ -805,7 +803,7 @@
   </Data>
  </Plugin>
 
- <!-- Calf Monosynth -->
+ 
  <Plugin>
   <Info>
    <Type>LV2</Type>
@@ -885,14 +883,14 @@
     <Index>9</Index>
     <Name>Cutoff</Name>
     <Symbol>cutoff</Symbol>
-    <Value>33</Value>
+    <Value>26.8471</Value>
    </Parameter>
 
    <Parameter>
     <Index>10</Index>
     <Name>Resonance</Name>
     <Symbol>res</Symbol>
-    <Value>3</Value>
+    <Value>2.73888</Value>
    </Parameter>
 
    <Parameter>
@@ -997,7 +995,7 @@
     <Index>25</Index>
     <Name>Volume</Name>
     <Symbol>master</Symbol>
-    <Value>0.5</Value>
+    <Value>0.465753</Value>
    </Parameter>
 
    <Parameter>
@@ -1067,7 +1065,7 @@
     <Index>35</Index>
     <Name>EG2-&gt;Res</Name>
     <Symbol>adsr2_res</Symbol>
-    <Value>0.300000011920929</Value>
+    <Value>0.3</Value>
    </Parameter>
 
    <Parameter>
@@ -1484,7 +1482,7 @@
   </Data>
  </Plugin>
 
- <!-- Calf Monosynth -->
+ 
  <Plugin>
   <Info>
    <Type>LV2</Type>
@@ -2169,7 +2167,7 @@
   </Data>
  </Plugin>
 
- <!-- Calf Monosynth -->
+ 
  <Plugin>
   <Info>
    <Type>LV2</Type>
