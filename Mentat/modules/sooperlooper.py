@@ -6,7 +6,7 @@ class Loop(Module):
 
         super().__init__(*args, **kwargs)
 
-        self.add_parameter('wet', '/sl/%i/set' % loop_n, 'sf', static_args=['wet'], default=0)
+        # self.add_parameter('wet', '/sl/%i/set' % loop_n, 'sf', static_args=['wet'], default=0)
 
 
 class SooperLooper(Module):
@@ -19,22 +19,25 @@ class SooperLooper(Module):
         self.add_parameter('tempo', '/set', 'sf', static_args=['tempo'], default=120)
 
         for i in range(16):
-            self.add_submodule(Loop('%i' % i, loop_n=i, parent=self))
+            self.add_submodule(Loop('loop_%i' % i, loop_n=i, parent=self))
 
 
 
-    def start(self):
+    def reset(self, i='-1'):
+        self.send('/sl/%s/hit' % i, 'undo_all')
 
+    def trigger(self, i='-1'):
         self.send('/set', 'sync_source', 0)
-        self.send('/sl/-1/hit', 'sync', 0)
-        self.send('/sl/-1/hit', 'trigger')
-        self.send('/sl/-1/hit', 'sync', 1)
+        self.send('/sl/%s/set' % i, 'sync', 0)
+        self.send('/sl/%s/hit' % i, 'trigger')
+        self.send('/sl/%s/set' % i, 'sync', 1)
         self.send('/set', 'sync_source', -3)
 
-        # reset wet depending on local state
-        self.send_state()
+    def record(self, i):
+        self.send('/sl/%s/hit' % i, 'record')
 
+    def overdub(self, i):
+        self.send('/sl/%s/hit' % i, 'overdub')
 
-    def stop(self):
-
-        self.send('/sl/-1/set', 'pause_on', 0)
+    def pause(self, i='-1'):
+        self.send('/sl/%s/hit' % i, 'pause_on')

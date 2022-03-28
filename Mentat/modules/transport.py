@@ -35,15 +35,16 @@ class Transport(Module):
     def set_tempo(self, bpm):
 
         self.engine.set_tempo(bpm)
-        self.engine.modules['Looper'].set('tempo', bpm)
+
+        if not MENTAT_JACK_MASTER:
+            self.engine.modules['Looper'].set('tempo', bpm)
+
         self.engine.modules['Klick'].set('tempo', bpm)
-        # self.engine.modules['Seq192'].set('tempo', bpm)
-        # self.engine.modules['Loop192'].set('tempo', bpm)
 
         for mixer, strip in [
-                ('Bass', 'BassScape'),
-                ('SynthFX5Scape', 'FX5Scape')]:
-            self.engine.modules[mixer].set(strip, 'scape_bpm', bpm)
+                ('BassFX', 'BassScape'),
+                ('SynthsFX5Scape', 'SynthsFX5Scape')]:
+            self.engine.modules[mixer].set(strip, 'Scape', 'bpm', bpm)
 
     def set_cycle(self, eighths, pattern=None):
 
@@ -78,9 +79,8 @@ class Transport(Module):
 
         else:
 
-            # self.engine.modules['Looper'].start()
+            # seq192 will start jack transport
             self.engine.modules['Seq192'].start()
-            # self.engine.modules['Loop192'].start()
 
         self.engine.modules['Klick'].start()
 
@@ -92,8 +92,7 @@ class Transport(Module):
 
         else:
 
-            # self.engine.modules['Looper'].stop()
+            # seq192 will stop jack transport
             self.engine.modules['Seq192'].stop()
-            # self.engine.modules['Loop192'].stop()
 
         self.engine.modules['Klick'].stop()

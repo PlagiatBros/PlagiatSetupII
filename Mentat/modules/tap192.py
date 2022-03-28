@@ -11,9 +11,9 @@ class Tap192(Module):
         self.ready = False
         self.pending_kit = None
 
-        self.add_parameter('kit', '/kit/select', 's', default='s:Snapshat')
-
-        self.send('/setup/get/kits_list', 'Plagiat')
+        if self.name == 'ProdSampler':
+            self.add_parameter('kit', '/kit/select', 's', default='s:Snapshat')
+            self.send('/setup/get/kits_list', 'Plagiat')
 
     def set_kit(self, name):
 

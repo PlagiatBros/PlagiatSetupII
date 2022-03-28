@@ -6,6 +6,12 @@ class Strip(Module):
 
         super().__init__(*args, **kwargs)
 
+class Plugin(Module):
+
+    def __init__(self, *args, **kwargs):
+
+        super().__init__(*args, **kwargs)
+
 class NonMixer(Module):
 
     def __init__(self, *args, **kwargs):
@@ -35,16 +41,33 @@ class NonMixer(Module):
 
                         self.add_submodule(Strip(strip_name, parent=self))
 
+
+                    strip_mod = self.submodules[strip_name]
+
                     if path[-1] == 'unscaled':
 
                         parameter_name = '/'.join(path[3:-1])
                         parameter_address = ('Non-Mixer.%s' % self.name) + '/' + '/'.join(path[1:])
-                        self.submodules[strip_name].add_parameter(parameter_name, parameter_address, 'f', default=None)
-                        self.submodules[strip_name].parameters[parameter_name].range = args[3:5]
+
+                        plugin_name, _, param_shortname = parameter_name.partition('/')
+
+                        if plugin_name in NonMixer.plugin_aliases:
+                            plugin_name = NonMixer.plugin_aliases[plugin_name]
+                        if param_shortname in NonMixer.parameter_aliases:
+                            param_shortname = NonMixer.parameter_aliases[param_shortname]
+
+                        if plugin_name not in strip_mod.submodules:
+                            strip_mod.add_submodule(Plugin(plugin_name, parent=strip_mod))
+
+                        plugin_mod = strip_mod.submodules[plugin_name]
+
+
+                        plugin_mod.add_parameter(param_shortname, parameter_address, 'f', default=None)
+                        plugin_mod.parameters[param_shortname].range = args[3:5]
+
                         self.init_params.append(parameter_address)
 
-                        if parameter_name in NonMixer.parameter_aliases:
-                            self.submodules[strip_name].add_alias_parameter(NonMixer.parameter_aliases[parameter_name], parameter_name)
+                        # self.submodules[strip_name].add_alias_parameter(NonMixer.plugin_aliases[plugin_name] + '/' + param_shortname , parameter_name)
 
 
             else:
@@ -61,7 +84,12 @@ class NonMixer(Module):
             strip, _, pname = args[0].partition('/strip/')[2].partition('/')
             if 'unscaled' in pname:
                 pname = pname[:-9]
-            self.set(strip, pname, args[1])
+            plugin_name, _, param_shortname = pname.partition('/')
+            if plugin_name in NonMixer.plugin_aliases:
+                plugin_name = NonMixer.plugin_aliases[plugin_name]
+            if param_shortname in NonMixer.parameter_aliases:
+                param_shortname = NonMixer.parameter_aliases[param_shortname]
+            self.set(strip, plugin_name, param_shortname, args[1])
             self.init_params.remove(args[0])
             # self.logger.info('init parameter %s %s to value %s ' % (strip, pname, args[1]))
 
@@ -71,6 +99,16 @@ class NonMixer(Module):
 
         pass
 
+    plugin_aliases = {
+        'C%2A%20Scape%20-%20Stereo%20delay%20with%20chromatic%20resonances': 'Scape',
+
+        '4%20Low-pass%20Filter%20with%20Resonance%20(FCRCIA)': 'Lowpass',
+        'AM%20pitchshifter': 'Pitchshifter'
+    }
+
     parameter_aliases = {
-        'C%2A%20Scape%20-%20Stereo%20delay%20with%20chromatic%20resonances/bpm': 'scape_bpm'
+        'Gain%20(dB)': 'Gain',
+
+        'Cutoff%20Frequency': 'Cutoff', # 4 poles lowpass
+        'Pitch%20shifter': 'Pitch'
     }

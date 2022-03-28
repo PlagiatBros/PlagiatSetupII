@@ -48,7 +48,7 @@ class RaySession(Module):
             module = self.engine.modules[name]
             if name not in self.client_init:
                 # first start: load default state if any
-                module.load('default')
+                # module.load('default')
                 self.client_init.append(name)
             else:
                 # restart: send state

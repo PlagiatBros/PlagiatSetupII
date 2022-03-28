@@ -18,6 +18,24 @@ class Autotune(Module):
         self.add_parameter('offset',    '/x42/parameter', 'if', static_args=[6], default=offset)
         self.add_parameter('fastmode',  '/x42/parameter', 'if', static_args=[7], default=1.0)
 
+        self.base_offset = offset
+        self.pitch_value = 1.0
+
+        def pitch_getter(offset):
+            return self.pitch_value
+
+        def pitch_setter(pitch):
+
+            if fval < 1:
+                val = pitch * 24 / 0.75 + (-24 / 0.75)
+            elif fval > 1:
+                val = pitch * 12 - 12
+
+            self.pitch_value = pitch
+            self.set('offset', val + self.base_offset)
+
+        self.add_meta_parameter('pitch',  ['offset'], pitch_getter, pitch_setter)
+
 
     def set_notes(self, notes):
         i = 0

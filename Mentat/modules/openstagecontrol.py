@@ -46,6 +46,7 @@ class OpenStageControl(Module):
         # /module_name param_name value
         module_path = address.split('/')
         module_name = module_path[1]
+        print(address, args)
         if module_name in self.engine.modules:
             self.engine.modules[module_name].set(*module_path[2:], *args)
             return False
@@ -82,44 +83,53 @@ class OpenStageControl(Module):
                         'value':  urllib.parse.unquote(sname)
                     })
                     plugs = {}
-                    for pname in smod.parameters:
-                        submodname = pname.partition('/')[0]
-                        if submodname != 'Gain':
-                            if submodname not in plugs:
+                    for plugname, plugmod in smod.submodules.items():
+                        if plugname != 'Gain':
+                            if plugname not in plugs:
                                 modal = {
                                     'type': 'modal',
-                                    'label': urllib.parse.unquote(submodname),
+                                    'label': urllib.parse.unquote(plugname),
                                     'layout': 'vertical',
                                     'height': 30,
                                     'widgets': []
                                 }
-                                plugs[submodname] = modal
+                                plugs[plugname] = modal
                                 strip['widgets'].append(modal)
-                            param = smod.parameters[pname]
-                            modal['widgets'].append({
-                                'type': 'panel',
-                                'layout': 'horizontal',
-                                'innerPadding': False,
-                                'lineWidth': 0,
-                                'height': 80,
-                                'widgets': [
-                                    {
-                                        'type': 'fader',
-                                        'horizontal': True,
-                                        'pips': True,
-                                        'range': {'min': param.range[0], 'max': param.range[1]},
-                                        'html': '<label>%s</label>' %  urllib.parse.unquote(pname.partition('/')[2]),
-                                        'value': param.args[0],
-                                        'linkId': param.address,
-                                        'expand': True
-                                    },
-                                    {
-                                        'type': 'input',
-                                        'width': 100,
-                                        'linkId': param.address
-                                    }
-                                ]
-                            })
+
+                            for pname in plugmod.parameters:
+
+                                param = plugmod.parameters[pname]
+                                modal['widgets'].append({
+                                    'type': 'panel',
+                                    'layout': 'horizontal',
+                                    'innerPadding': False,
+                                    'lineWidth': 0,
+                                    'height': 80,
+                                    'widgets': [
+                                        {
+                                            'type': 'text',
+                                            'value': urllib.parse.unquote(pname),
+                                            'width': 120,
+                                            'wrap': True
+                                        },
+                                        {
+                                            'type': 'fader',
+                                            'horizontal': True,
+                                            'pips': True,
+                                            'range': {'min': {'%.1f' % param.range[0]: param.range[0]}, 'max': {'%.1f' % param.range[1]: param.range[1]}},
+                                            'value': param.args[0],
+                                            'linkId': param.address,
+                                            'address': '/%s/%s/%s/%s' % (name, sname, plugname, pname),
+                                            'expand': True
+                                        },
+                                        {
+                                            'type': 'input',
+                                            'width': 120,
+                                            'address': '/%s/%s/%s/%s' % (name, sname, plugname, pname),
+                                            'linkId': param.address
+                                        }
+                                    ]
+                                })
 
                     strip['widgets'].append({
                         'type': 'text',
@@ -130,13 +140,17 @@ class OpenStageControl(Module):
                         'type': 'fader',
                         'range': {'min': -70, '6%': -60, '12%': -50, '20%': -40, '30%': -30, '42%': -20, '60%': -10, '80%': 0, 'max': 6 },
                         'height': '50%',
+                        'default': 0,
+                        'doubleTap': True,
                         'pips': True,
-                        'value': smod.parameters['Gain/Gain%20(dB)'].args[0]
+                        'value': smod.get('Gain', 'Gain'),
+                        'address': '/%s/%s/Gain/Gain' % (name, sname)
                     })
                     strip['widgets'].append({
                         'type': 'button',
                         'label': 'Mute',
-                        'value': smod.parameters['Gain/Mute'].args[0]
+                        'value': smod.get('Gain', 'Mute'),
+                        'address': '/%s/%s/Gain/Mute' % (name, sname)
                     })
 
         blob = json.dumps(panel)

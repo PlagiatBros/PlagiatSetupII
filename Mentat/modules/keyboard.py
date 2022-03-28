@@ -5,3 +5,40 @@ class Keyboard(Module):
     def __init__(self, *args, **kwargs):
 
         super().__init__(*args, **kwargs)
+
+        self.send('/mididings/query')
+
+        self.add_parameter('scene', '/mididings/switch_scene', 'i', default=1)
+        self.add_parameter('subscene', '/mididings/switch_subscene', 'i', default=1)
+
+        self.scenes = {}
+
+    def route(self, address, args):
+
+        if address == '/mididings/begin_scenes':
+            self.scenes = {}
+
+        elif address == '/mididings/add_scene':
+
+            scene_number, scene_name, *subscenes = args
+            self.scenes[scene_name] = {
+                'number': scene_number,
+                'subscenes': subscenes
+            }
+
+
+        elif address == '/mididings/end_scenes':
+            # self.logger.info(self.scenes)
+            pass
+
+    def set_scene(self, name):
+        """
+        set subscene by name
+        """
+        for scene in self.scenes:
+            if name in self.scenes[scene]['subscenes']:
+                self.set('scene', self.scenes[scene]['number'])
+                self.set('subscene', self.scenes[scene]['subscenes'].index(name) + 1)
+                self.logger.info('switched to scene "%s"' % name)
+                return
+        self.logger.error('scene "%s" not found' % name)

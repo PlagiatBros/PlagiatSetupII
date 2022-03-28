@@ -38,15 +38,15 @@ def print_params(mod, depth=0):
     global _docs
 
     t = type(mod).__name__
-    if t in _types:
-        return
+    # if t in _types:
+    #     return
     _types.append(t)
 
     _docs += '\n\n' + '    ' * depth
-    if depth != 0:
-        _docs += t + ': ' + ', '.join([mod.name] + [x.name for x in mod.parent_module.submodules.values() if type(x) == type(mod) and x != mod])
-    else:
-        _docs += t + ': ' + mod.name
+    # if depth != 0:
+    #     _docs += t + ': ' + ', '.join([mod.name] + [x.name for x in mod.parent_module.submodules.values() if type(x) == type(mod) and x != mod])
+    # else:
+    _docs += t + ': ' + mod.name
 
     params = [p for p in mod.parameters.values() if type(p).__name__ == 'Parameter']
     mparams = [p for p in mod.parameters.values() if type(p).__name__ == 'MetaParameter']
