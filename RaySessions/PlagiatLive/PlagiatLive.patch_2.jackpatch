@@ -59,11 +59,6 @@ Non-Mixer.Inputs (Inputs):Kick/out-1     |> Non-Mixer.Drums (Main):Kick/in-1
 Non-Mixer.Inputs (Inputs):OH/out-1       |> Non-Mixer.Drums (Main):OH/in-1
 Non-Mixer.Inputs (Inputs):VocalsKesch/out-1 |> sooperlooper:loop6_in_1
 Non-Mixer.Inputs (Inputs):VocalsNano/out-1 |> sooperlooper:loop4_in_1
-Non-Mixer.VocalsKeschFX9Scape (In):KeschAB/out-1 |> Non-Mixer.VocalsKeschFX9Scape (Process):KeschFX9Scape/in-1
-Non-Mixer.VocalsKeschFX9Scape (In):KeschGars/out-1 |> Non-Mixer.VocalsKeschFX9Scape (Process):KeschFX9Scape/in-1
-Non-Mixer.VocalsKeschFX9Scape (In):KeschMeuf/out-1 |> Non-Mixer.VocalsKeschFX9Scape (Process):KeschFX9Scape/in-1
-Non-Mixer.VocalsKeschFX9Scape (In):KeschNormo/out-1 |> Non-Mixer.VocalsKeschFX9Scape (Process):KeschFX9Scape/in-1
-Non-Mixer.VocalsKeschFX9Scape (Process):KeschFX9Scape/out-1 |> Non-Mixer.VocalsKesch (Out):KeschOut/in-1
 Non-Mixer.MonitorsKesch (MonitorsKesch):Ambiance/out-1 |> Non-Mixer.MonitorsKesch (MonitorsKesch):MonitorsKesch/in-1
 Non-Mixer.MonitorsKesch (MonitorsKesch):Ambiance/out-1 |> Non-Mixer.MonitorsKesch (MonitorsKesch):MonitorsKesch/in-2
 Non-Mixer.MonitorsKesch (MonitorsKesch):Bass/out-1 |> Non-Mixer.MonitorsKesch (MonitorsKesch):MonitorsKesch/in-1
@@ -325,92 +320,6 @@ Non-Mixer.Synths (Main):ZTrumpets/out-1  |> Non-Mixer.SynthsFX3Delay (In):ZTrump
 Non-Mixer.Synths (Main):ZTrumpets/out-1  |> Non-Mixer.SynthsFX4TapeDelay (In):ZTrumpets/in-1
 Non-Mixer.Synths (Main):ZTrumpets/out-1  |> Non-Mixer.SynthsFX5Scape (In):ZTrumpets/in-1
 Non-Mixer.Synths (Out):SynthsOut/out-1   |> sooperlooper:loop3_in_1
-Non-Mixer.SynthsFX1Reverb (In):DubstepHorn/out-1 |> Non-Mixer.SynthsFX1Reverb (Process):FX1Reverb/in-1
-Non-Mixer.SynthsFX1Reverb (In):EasyClassical/out-1 |> Non-Mixer.SynthsFX1Reverb (Process):FX1Reverb/in-1
-Non-Mixer.SynthsFX1Reverb (In):Rhodes/out-1 |> Non-Mixer.SynthsFX1Reverb (Process):FX1Reverb/in-1
-Non-Mixer.SynthsFX1Reverb (In):Trap/out-1 |> Non-Mixer.SynthsFX1Reverb (Process):FX1Reverb/in-1
-Non-Mixer.SynthsFX1Reverb (In):TrapFifth/out-1 |> Non-Mixer.SynthsFX1Reverb (Process):FX1Reverb/in-1
-Non-Mixer.SynthsFX1Reverb (In):Z8bits/out-1 |> Non-Mixer.SynthsFX1Reverb (Process):FX1Reverb/in-1
-Non-Mixer.SynthsFX1Reverb (In):ZBombarde/out-1 |> Non-Mixer.SynthsFX1Reverb (Process):FX1Reverb/in-1
-Non-Mixer.SynthsFX1Reverb (In):ZCosma/out-1 |> Non-Mixer.SynthsFX1Reverb (Process):FX1Reverb/in-1
-Non-Mixer.SynthsFX1Reverb (In):ZDiploLike/out-1 |> Non-Mixer.SynthsFX1Reverb (Process):FX1Reverb/in-1
-Non-Mixer.SynthsFX1Reverb (In):ZDre/out-1 |> Non-Mixer.SynthsFX1Reverb (Process):FX1Reverb/in-1
-Non-Mixer.SynthsFX1Reverb (In):ZDupieux/out-1 |> Non-Mixer.SynthsFX1Reverb (Process):FX1Reverb/in-1
-Non-Mixer.SynthsFX1Reverb (In):ZJestoProunk/out-1 |> Non-Mixer.SynthsFX1Reverb (Process):FX1Reverb/in-1
-Non-Mixer.SynthsFX1Reverb (In):ZNotSoRhodes/out-1 |> Non-Mixer.SynthsFX1Reverb (Process):FX1Reverb/in-1
-Non-Mixer.SynthsFX1Reverb (In):ZOrgan/out-1 |> Non-Mixer.SynthsFX1Reverb (Process):FX1Reverb/in-1
-Non-Mixer.SynthsFX1Reverb (In):ZStambul/out-1 |> Non-Mixer.SynthsFX1Reverb (Process):FX1Reverb/in-1
-Non-Mixer.SynthsFX1Reverb (In):ZTrumpets/out-1 |> Non-Mixer.SynthsFX1Reverb (Process):FX1Reverb/in-1
-Non-Mixer.SynthsFX1Reverb (Process):FX1Reverb/out-1 |> Non-Mixer.Synths (Out):SynthsOut/in-1
-Non-Mixer.SynthsFX2Delay (In):DubstepHorn/out-1 |> Non-Mixer.SynthsFX2Delay (Process):FX2Delay/in-1
-Non-Mixer.SynthsFX2Delay (In):EasyClassical/out-1 |> Non-Mixer.SynthsFX2Delay (Process):FX2Delay/in-1
-Non-Mixer.SynthsFX2Delay (In):Rhodes/out-1 |> Non-Mixer.SynthsFX2Delay (Process):FX2Delay/in-1
-Non-Mixer.SynthsFX2Delay (In):Trap/out-1 |> Non-Mixer.SynthsFX2Delay (Process):FX2Delay/in-1
-Non-Mixer.SynthsFX2Delay (In):TrapFifth/out-1 |> Non-Mixer.SynthsFX2Delay (Process):FX2Delay/in-1
-Non-Mixer.SynthsFX2Delay (In):Z8bits/out-1 |> Non-Mixer.SynthsFX2Delay (Process):FX2Delay/in-1
-Non-Mixer.SynthsFX2Delay (In):ZBombarde/out-1 |> Non-Mixer.SynthsFX2Delay (Process):FX2Delay/in-1
-Non-Mixer.SynthsFX2Delay (In):ZCosma/out-1 |> Non-Mixer.SynthsFX2Delay (Process):FX2Delay/in-1
-Non-Mixer.SynthsFX2Delay (In):ZDiploLike/out-1 |> Non-Mixer.SynthsFX2Delay (Process):FX2Delay/in-1
-Non-Mixer.SynthsFX2Delay (In):ZDre/out-1 |> Non-Mixer.SynthsFX2Delay (Process):FX2Delay/in-1
-Non-Mixer.SynthsFX2Delay (In):ZDupieux/out-1 |> Non-Mixer.SynthsFX2Delay (Process):FX2Delay/in-1
-Non-Mixer.SynthsFX2Delay (In):ZJestoProunk/out-1 |> Non-Mixer.SynthsFX2Delay (Process):FX2Delay/in-1
-Non-Mixer.SynthsFX2Delay (In):ZNotSoRhodes/out-1 |> Non-Mixer.SynthsFX2Delay (Process):FX2Delay/in-1
-Non-Mixer.SynthsFX2Delay (In):ZOrgan/out-1 |> Non-Mixer.SynthsFX2Delay (Process):FX2Delay/in-1
-Non-Mixer.SynthsFX2Delay (In):ZStambul/out-1 |> Non-Mixer.SynthsFX2Delay (Process):FX2Delay/in-1
-Non-Mixer.SynthsFX2Delay (In):ZTrumpets/out-1 |> Non-Mixer.SynthsFX2Delay (Process):FX2Delay/in-1
-Non-Mixer.SynthsFX2Delay (Process):FX2Delay/out-1 |> Non-Mixer.Synths (Out):SynthsOut/in-1
-Non-Mixer.SynthsFX3Delay (In):DubstepHorn/out-1 |> Non-Mixer.SynthsFX3Delay (Process):FX3Delay/in-1
-Non-Mixer.SynthsFX3Delay (In):EasyClassical/out-1 |> Non-Mixer.SynthsFX3Delay (Process):FX3Delay/in-1
-Non-Mixer.SynthsFX3Delay (In):Rhodes/out-1 |> Non-Mixer.SynthsFX3Delay (Process):FX3Delay/in-1
-Non-Mixer.SynthsFX3Delay (In):Trap/out-1 |> Non-Mixer.SynthsFX3Delay (Process):FX3Delay/in-1
-Non-Mixer.SynthsFX3Delay (In):TrapFifth/out-1 |> Non-Mixer.SynthsFX3Delay (Process):FX3Delay/in-1
-Non-Mixer.SynthsFX3Delay (In):Z8bits/out-1 |> Non-Mixer.SynthsFX3Delay (Process):FX3Delay/in-1
-Non-Mixer.SynthsFX3Delay (In):ZBombarde/out-1 |> Non-Mixer.SynthsFX3Delay (Process):FX3Delay/in-1
-Non-Mixer.SynthsFX3Delay (In):ZCosma/out-1 |> Non-Mixer.SynthsFX3Delay (Process):FX3Delay/in-1
-Non-Mixer.SynthsFX3Delay (In):ZDiploLike/out-1 |> Non-Mixer.SynthsFX3Delay (Process):FX3Delay/in-1
-Non-Mixer.SynthsFX3Delay (In):ZDre/out-1 |> Non-Mixer.SynthsFX3Delay (Process):FX3Delay/in-1
-Non-Mixer.SynthsFX3Delay (In):ZDupieux/out-1 |> Non-Mixer.SynthsFX3Delay (Process):FX3Delay/in-1
-Non-Mixer.SynthsFX3Delay (In):ZJestoProunk/out-1 |> Non-Mixer.SynthsFX3Delay (Process):FX3Delay/in-1
-Non-Mixer.SynthsFX3Delay (In):ZNotSoRhodes/out-1 |> Non-Mixer.SynthsFX3Delay (Process):FX3Delay/in-1
-Non-Mixer.SynthsFX3Delay (In):ZOrgan/out-1 |> Non-Mixer.SynthsFX3Delay (Process):FX3Delay/in-1
-Non-Mixer.SynthsFX3Delay (In):ZStambul/out-1 |> Non-Mixer.SynthsFX3Delay (Process):FX3Delay/in-1
-Non-Mixer.SynthsFX3Delay (In):ZTrumpets/out-1 |> Non-Mixer.SynthsFX3Delay (Process):FX3Delay/in-1
-Non-Mixer.SynthsFX3Delay (Process):FX3Delay/out-1 |> Non-Mixer.Synths (Out):SynthsOut/in-1
-Non-Mixer.SynthsFX4TapeDelay (In):DubstepHorn/out-1 |> Non-Mixer.SynthsFX4TapeDelay (Process):FX4TapeDelay/in-1
-Non-Mixer.SynthsFX4TapeDelay (In):EasyClassical/out-1 |> Non-Mixer.SynthsFX4TapeDelay (Process):FX4TapeDelay/in-1
-Non-Mixer.SynthsFX4TapeDelay (In):Rhodes/out-1 |> Non-Mixer.SynthsFX4TapeDelay (Process):FX4TapeDelay/in-1
-Non-Mixer.SynthsFX4TapeDelay (In):Trap/out-1 |> Non-Mixer.SynthsFX4TapeDelay (Process):FX4TapeDelay/in-1
-Non-Mixer.SynthsFX4TapeDelay (In):TrapFifth/out-1 |> Non-Mixer.SynthsFX4TapeDelay (Process):FX4TapeDelay/in-1
-Non-Mixer.SynthsFX4TapeDelay (In):Z8bits/out-1 |> Non-Mixer.SynthsFX4TapeDelay (Process):FX4TapeDelay/in-1
-Non-Mixer.SynthsFX4TapeDelay (In):ZBombarde/out-1 |> Non-Mixer.SynthsFX4TapeDelay (Process):FX4TapeDelay/in-1
-Non-Mixer.SynthsFX4TapeDelay (In):ZCosma/out-1 |> Non-Mixer.SynthsFX4TapeDelay (Process):FX4TapeDelay/in-1
-Non-Mixer.SynthsFX4TapeDelay (In):ZDiploLike/out-1 |> Non-Mixer.SynthsFX4TapeDelay (Process):FX4TapeDelay/in-1
-Non-Mixer.SynthsFX4TapeDelay (In):ZDre/out-1 |> Non-Mixer.SynthsFX4TapeDelay (Process):FX4TapeDelay/in-1
-Non-Mixer.SynthsFX4TapeDelay (In):ZDupieux/out-1 |> Non-Mixer.SynthsFX4TapeDelay (Process):FX4TapeDelay/in-1
-Non-Mixer.SynthsFX4TapeDelay (In):ZJestoProunk/out-1 |> Non-Mixer.SynthsFX4TapeDelay (Process):FX4TapeDelay/in-1
-Non-Mixer.SynthsFX4TapeDelay (In):ZNotSoRhodes/out-1 |> Non-Mixer.SynthsFX4TapeDelay (Process):FX4TapeDelay/in-1
-Non-Mixer.SynthsFX4TapeDelay (In):ZOrgan/out-1 |> Non-Mixer.SynthsFX4TapeDelay (Process):FX4TapeDelay/in-1
-Non-Mixer.SynthsFX4TapeDelay (In):ZStambul/out-1 |> Non-Mixer.SynthsFX4TapeDelay (Process):FX4TapeDelay/in-1
-Non-Mixer.SynthsFX4TapeDelay (In):ZTrumpets/out-1 |> Non-Mixer.SynthsFX4TapeDelay (Process):FX4TapeDelay/in-1
-Non-Mixer.SynthsFX4TapeDelay (Process):FX4TapeDelay/out-1 |> Non-Mixer.Synths (Out):SynthsOut/in-1
-Non-Mixer.SynthsFX5Scape (In):DubstepHorn/out-1 |> Non-Mixer.SynthsFX5Scape (Process):FX5Scape/in-1
-Non-Mixer.SynthsFX5Scape (In):EasyClassical/out-1 |> Non-Mixer.SynthsFX5Scape (Process):FX5Scape/in-1
-Non-Mixer.SynthsFX5Scape (In):Rhodes/out-1 |> Non-Mixer.SynthsFX5Scape (Process):FX5Scape/in-1
-Non-Mixer.SynthsFX5Scape (In):Trap/out-1 |> Non-Mixer.SynthsFX5Scape (Process):FX5Scape/in-1
-Non-Mixer.SynthsFX5Scape (In):TrapFifth/out-1 |> Non-Mixer.SynthsFX5Scape (Process):FX5Scape/in-1
-Non-Mixer.SynthsFX5Scape (In):Z8bits/out-1 |> Non-Mixer.SynthsFX5Scape (Process):FX5Scape/in-1
-Non-Mixer.SynthsFX5Scape (In):ZBombarde/out-1 |> Non-Mixer.SynthsFX5Scape (Process):FX5Scape/in-1
-Non-Mixer.SynthsFX5Scape (In):ZCosma/out-1 |> Non-Mixer.SynthsFX5Scape (Process):FX5Scape/in-1
-Non-Mixer.SynthsFX5Scape (In):ZDiploLike/out-1 |> Non-Mixer.SynthsFX5Scape (Process):FX5Scape/in-1
-Non-Mixer.SynthsFX5Scape (In):ZDre/out-1 |> Non-Mixer.SynthsFX5Scape (Process):FX5Scape/in-1
-Non-Mixer.SynthsFX5Scape (In):ZDupieux/out-1 |> Non-Mixer.SynthsFX5Scape (Process):FX5Scape/in-1
-Non-Mixer.SynthsFX5Scape (In):ZJestoProunk/out-1 |> Non-Mixer.SynthsFX5Scape (Process):FX5Scape/in-1
-Non-Mixer.SynthsFX5Scape (In):ZNotSoRhodes/out-1 |> Non-Mixer.SynthsFX5Scape (Process):FX5Scape/in-1
-Non-Mixer.SynthsFX5Scape (In):ZOrgan/out-1 |> Non-Mixer.SynthsFX5Scape (Process):FX5Scape/in-1
-Non-Mixer.SynthsFX5Scape (In):ZStambul/out-1 |> Non-Mixer.SynthsFX5Scape (Process):FX5Scape/in-1
-Non-Mixer.SynthsFX5Scape (In):ZTrumpets/out-1 |> Non-Mixer.SynthsFX5Scape (Process):FX5Scape/in-1
-Non-Mixer.SynthsFX5Scape (Process):FX5Scape/out-1 |> Non-Mixer.Synths (Out):SynthsOut/in-1
-Non-Mixer.VocalsKesch (ArtificialBackings):KeschABGars/out-1 |> Non-Mixer.VocalsKeschFX9Scape (In):KeschAB/in-1
 Non-Mixer.VocalsKesch (ArtificialBackings):KeschABGars/out-1 |> Non-Mixer.VocalsKesch (Out):KeschOut/in-1
 Non-Mixer.VocalsKesch (ArtificialBackings):KeschABGars/out-1 |> Non-Mixer.VocalsKeschFX1Delay (In):KeschAB/in-1
 Non-Mixer.VocalsKesch (ArtificialBackings):KeschABGars/out-1 |> Non-Mixer.VocalsKeschFX2Delay (In):KeschAB/in-1
@@ -420,7 +329,7 @@ Non-Mixer.VocalsKesch (ArtificialBackings):KeschABGars/out-1 |> Non-Mixer.Vocals
 Non-Mixer.VocalsKesch (ArtificialBackings):KeschABGars/out-1 |> Non-Mixer.VocalsKeschFX6Granular (In):KeschAB/in-1
 Non-Mixer.VocalsKesch (ArtificialBackings):KeschABGars/out-1 |> Non-Mixer.VocalsKeschFX7Slice (In):KeschAB/in-1
 Non-Mixer.VocalsKesch (ArtificialBackings):KeschABGars/out-1 |> Non-Mixer.VocalsKeschFX8TapeDelay (In):KeschAB/in-1
-Non-Mixer.VocalsKesch (ArtificialBackings):KeschABMeuf/out-1 |> Non-Mixer.VocalsKeschFX9Scape (In):KeschAB/in-1
+Non-Mixer.VocalsKesch (ArtificialBackings):KeschABGars/out-1 |> Non-Mixer.VocalsKeschFX9Scape (In):KeschAB/in-1
 Non-Mixer.VocalsKesch (ArtificialBackings):KeschABMeuf/out-1 |> Non-Mixer.VocalsKesch (Out):KeschOut/in-1
 Non-Mixer.VocalsKesch (ArtificialBackings):KeschABMeuf/out-1 |> Non-Mixer.VocalsKeschFX1Delay (In):KeschAB/in-1
 Non-Mixer.VocalsKesch (ArtificialBackings):KeschABMeuf/out-1 |> Non-Mixer.VocalsKeschFX2Delay (In):KeschAB/in-1
@@ -430,7 +339,7 @@ Non-Mixer.VocalsKesch (ArtificialBackings):KeschABMeuf/out-1 |> Non-Mixer.Vocals
 Non-Mixer.VocalsKesch (ArtificialBackings):KeschABMeuf/out-1 |> Non-Mixer.VocalsKeschFX6Granular (In):KeschAB/in-1
 Non-Mixer.VocalsKesch (ArtificialBackings):KeschABMeuf/out-1 |> Non-Mixer.VocalsKeschFX7Slice (In):KeschAB/in-1
 Non-Mixer.VocalsKesch (ArtificialBackings):KeschABMeuf/out-1 |> Non-Mixer.VocalsKeschFX8TapeDelay (In):KeschAB/in-1
-Non-Mixer.VocalsKesch (ArtificialBackings):KeschABNormo/out-1 |> Non-Mixer.VocalsKeschFX9Scape (In):KeschAB/in-1
+Non-Mixer.VocalsKesch (ArtificialBackings):KeschABMeuf/out-1 |> Non-Mixer.VocalsKeschFX9Scape (In):KeschAB/in-1
 Non-Mixer.VocalsKesch (ArtificialBackings):KeschABNormo/out-1 |> Non-Mixer.VocalsKesch (Out):KeschOut/in-1
 Non-Mixer.VocalsKesch (ArtificialBackings):KeschABNormo/out-1 |> Non-Mixer.VocalsKeschFX1Delay (In):KeschAB/in-1
 Non-Mixer.VocalsKesch (ArtificialBackings):KeschABNormo/out-1 |> Non-Mixer.VocalsKeschFX2Delay (In):KeschAB/in-1
@@ -440,9 +349,9 @@ Non-Mixer.VocalsKesch (ArtificialBackings):KeschABNormo/out-1 |> Non-Mixer.Vocal
 Non-Mixer.VocalsKesch (ArtificialBackings):KeschABNormo/out-1 |> Non-Mixer.VocalsKeschFX6Granular (In):KeschAB/in-1
 Non-Mixer.VocalsKesch (ArtificialBackings):KeschABNormo/out-1 |> Non-Mixer.VocalsKeschFX7Slice (In):KeschAB/in-1
 Non-Mixer.VocalsKesch (ArtificialBackings):KeschABNormo/out-1 |> Non-Mixer.VocalsKeschFX8TapeDelay (In):KeschAB/in-1
+Non-Mixer.VocalsKesch (ArtificialBackings):KeschABNormo/out-1 |> Non-Mixer.VocalsKeschFX9Scape (In):KeschAB/in-1
 Non-Mixer.VocalsKesch (Gars):KeschGars/aux-A/out-1 |> Non-Mixer.VocalsKesch (ArtificialBackings):KeschABMeuf/in-1
 Non-Mixer.VocalsKesch (Gars):KeschGars/aux-B/out-1 |> Non-Mixer.VocalsKesch (ArtificialBackings):KeschABNormo/in-1
-Non-Mixer.VocalsKesch (Gars):KeschGars/aux-C/out-1 |> Non-Mixer.VocalsKeschFX9Scape (In):KeschGars/in-1
 Non-Mixer.VocalsKesch (Gars):KeschGars/aux-C/out-1 |> Non-Mixer.VocalsKeschFX1Delay (In):KeschGars/in-1
 Non-Mixer.VocalsKesch (Gars):KeschGars/aux-C/out-1 |> Non-Mixer.VocalsKeschFX2Delay (In):KeschGars/in-1
 Non-Mixer.VocalsKesch (Gars):KeschGars/aux-C/out-1 |> Non-Mixer.VocalsKeschFX3TrapVerb (In):KeschGars/in-1
@@ -451,13 +360,13 @@ Non-Mixer.VocalsKesch (Gars):KeschGars/aux-C/out-1 |> Non-Mixer.VocalsKeschFX5Ri
 Non-Mixer.VocalsKesch (Gars):KeschGars/aux-C/out-1 |> Non-Mixer.VocalsKeschFX6Granular (In):KeschGars/in-1
 Non-Mixer.VocalsKesch (Gars):KeschGars/aux-C/out-1 |> Non-Mixer.VocalsKeschFX7Slice (In):KeschGars/in-1
 Non-Mixer.VocalsKesch (Gars):KeschGars/aux-C/out-1 |> Non-Mixer.VocalsKeschFX8TapeDelay (In):KeschGars/in-1
+Non-Mixer.VocalsKesch (Gars):KeschGars/aux-C/out-1 |> Non-Mixer.VocalsKeschFX9Scape (In):KeschGars/in-1
 Non-Mixer.VocalsKesch (Gars):KeschGars/out-1 |> Non-Mixer.VocalsKesch (Out):KeschOut/in-1
 Non-Mixer.VocalsKesch (In):KeschIn/out-1 |> Autotune.KeschGars:in
 Non-Mixer.VocalsKesch (In):KeschIn/out-1 |> Autotune.KeschMeuf:in
 Non-Mixer.VocalsKesch (In):KeschIn/out-1 |> Autotune.KeschNormo:in
 Non-Mixer.VocalsKesch (Meuf):KeschMeuf/aux-A/out-1 |> Non-Mixer.VocalsKesch (ArtificialBackings):KeschABNormo/in-1
 Non-Mixer.VocalsKesch (Meuf):KeschMeuf/aux-B/out-1 |> Non-Mixer.VocalsKesch (ArtificialBackings):KeschABGars/in-1
-Non-Mixer.VocalsKesch (Meuf):KeschMeuf/aux-C/out-1 |> Non-Mixer.VocalsKeschFX9Scape (In):KeschMeuf/in-1
 Non-Mixer.VocalsKesch (Meuf):KeschMeuf/aux-C/out-1 |> Non-Mixer.VocalsKeschFX1Delay (In):KeschMeuf/in-1
 Non-Mixer.VocalsKesch (Meuf):KeschMeuf/aux-C/out-1 |> Non-Mixer.VocalsKeschFX2Delay (In):KeschMeuf/in-1
 Non-Mixer.VocalsKesch (Meuf):KeschMeuf/aux-C/out-1 |> Non-Mixer.VocalsKeschFX3TrapVerb (In):KeschMeuf/in-1
@@ -466,10 +375,10 @@ Non-Mixer.VocalsKesch (Meuf):KeschMeuf/aux-C/out-1 |> Non-Mixer.VocalsKeschFX5Ri
 Non-Mixer.VocalsKesch (Meuf):KeschMeuf/aux-C/out-1 |> Non-Mixer.VocalsKeschFX6Granular (In):KeschMeuf/in-1
 Non-Mixer.VocalsKesch (Meuf):KeschMeuf/aux-C/out-1 |> Non-Mixer.VocalsKeschFX7Slice (In):KeschMeuf/in-1
 Non-Mixer.VocalsKesch (Meuf):KeschMeuf/aux-C/out-1 |> Non-Mixer.VocalsKeschFX8TapeDelay (In):KeschMeuf/in-1
+Non-Mixer.VocalsKesch (Meuf):KeschMeuf/aux-C/out-1 |> Non-Mixer.VocalsKeschFX9Scape (In):KeschMeuf/in-1
 Non-Mixer.VocalsKesch (Meuf):KeschMeuf/out-1 |> Non-Mixer.VocalsKesch (Out):KeschOut/in-1
 Non-Mixer.VocalsKesch (Normo):KeschNormo/aux-A/out-1 |> Non-Mixer.VocalsKesch (ArtificialBackings):KeschABMeuf/in-1
 Non-Mixer.VocalsKesch (Normo):KeschNormo/aux-B/out-1 |> Non-Mixer.VocalsKesch (ArtificialBackings):KeschABGars/in-1
-Non-Mixer.VocalsKesch (Normo):KeschNormo/aux-C/out-1 |> Non-Mixer.VocalsKeschFX9Scape (In):KeschNormo/in-1
 Non-Mixer.VocalsKesch (Normo):KeschNormo/aux-C/out-1 |> Non-Mixer.VocalsKeschFX1Delay (In):KeschNormo/in-1
 Non-Mixer.VocalsKesch (Normo):KeschNormo/aux-C/out-1 |> Non-Mixer.VocalsKeschFX2Delay (In):KeschNormo/in-1
 Non-Mixer.VocalsKesch (Normo):KeschNormo/aux-C/out-1 |> Non-Mixer.VocalsKeschFX3TrapVerb (In):KeschNormo/in-1
@@ -478,48 +387,9 @@ Non-Mixer.VocalsKesch (Normo):KeschNormo/aux-C/out-1 |> Non-Mixer.VocalsKeschFX5
 Non-Mixer.VocalsKesch (Normo):KeschNormo/aux-C/out-1 |> Non-Mixer.VocalsKeschFX6Granular (In):KeschNormo/in-1
 Non-Mixer.VocalsKesch (Normo):KeschNormo/aux-C/out-1 |> Non-Mixer.VocalsKeschFX7Slice (In):KeschNormo/in-1
 Non-Mixer.VocalsKesch (Normo):KeschNormo/aux-C/out-1 |> Non-Mixer.VocalsKeschFX8TapeDelay (In):KeschNormo/in-1
+Non-Mixer.VocalsKesch (Normo):KeschNormo/aux-C/out-1 |> Non-Mixer.VocalsKeschFX9Scape (In):KeschNormo/in-1
 Non-Mixer.VocalsKesch (Normo):KeschNormo/out-1 |> Non-Mixer.VocalsKesch (Out):KeschOut/in-1
 Non-Mixer.VocalsKesch (Out):KeschOut/out-1 |> sooperlooper:loop7_in_1
-Non-Mixer.VocalsKeschFX1Delay (In):KeschAB/out-1 |> Non-Mixer.VocalsKeschFX1Delay (Process):KeschFX1Delay/in-1
-Non-Mixer.VocalsKeschFX1Delay (In):KeschGars/out-1 |> Non-Mixer.VocalsKeschFX1Delay (Process):KeschFX1Delay/in-1
-Non-Mixer.VocalsKeschFX1Delay (In):KeschMeuf/out-1 |> Non-Mixer.VocalsKeschFX1Delay (Process):KeschFX1Delay/in-1
-Non-Mixer.VocalsKeschFX1Delay (In):KeschNormo/out-1 |> Non-Mixer.VocalsKeschFX1Delay (Process):KeschFX1Delay/in-1
-Non-Mixer.VocalsKeschFX1Delay (Process):KeschFX1Delay/out-1 |> Non-Mixer.VocalsKesch (Out):KeschOut/in-1
-Non-Mixer.VocalsKeschFX2Delay (In):KeschAB/out-1 |> Non-Mixer.VocalsKeschFX2Delay (Process):KeschFX2Delay/in-1
-Non-Mixer.VocalsKeschFX2Delay (In):KeschGars/out-1 |> Non-Mixer.VocalsKeschFX2Delay (Process):KeschFX2Delay/in-1
-Non-Mixer.VocalsKeschFX2Delay (In):KeschMeuf/out-1 |> Non-Mixer.VocalsKeschFX2Delay (Process):KeschFX2Delay/in-1
-Non-Mixer.VocalsKeschFX2Delay (In):KeschNormo/out-1 |> Non-Mixer.VocalsKeschFX2Delay (Process):KeschFX2Delay/in-1
-Non-Mixer.VocalsKeschFX2Delay (Process):KeschFX2Delay/out-1 |> Non-Mixer.VocalsKesch (Out):KeschOut/in-1
-Non-Mixer.VocalsKeschFX3TrapVerb (In):KeschAB/out-1 |> Non-Mixer.VocalsKeschFX3TrapVerb (Process):KeschFX3TrapVerb/in-1
-Non-Mixer.VocalsKeschFX3TrapVerb (In):KeschGars/out-1 |> Non-Mixer.VocalsKeschFX3TrapVerb (Process):KeschFX3TrapVerb/in-1
-Non-Mixer.VocalsKeschFX3TrapVerb (In):KeschMeuf/out-1 |> Non-Mixer.VocalsKeschFX3TrapVerb (Process):KeschFX3TrapVerb/in-1
-Non-Mixer.VocalsKeschFX3TrapVerb (In):KeschNormo/out-1 |> Non-Mixer.VocalsKeschFX3TrapVerb (Process):KeschFX3TrapVerb/in-1
-Non-Mixer.VocalsKeschFX3TrapVerb (Process):KeschFX3TrapVerb/out-1 |> Non-Mixer.VocalsKesch (Out):KeschOut/in-1
-Non-Mixer.VocalsKeschFX4Disint (In):KeschAB/out-1 |> Non-Mixer.VocalsKeschFX4Disint (Process):KeschFX4Disint/in-1
-Non-Mixer.VocalsKeschFX4Disint (In):KeschGars/out-1 |> Non-Mixer.VocalsKeschFX4Disint (Process):KeschFX4Disint/in-1
-Non-Mixer.VocalsKeschFX4Disint (In):KeschMeuf/out-1 |> Non-Mixer.VocalsKeschFX4Disint (Process):KeschFX4Disint/in-1
-Non-Mixer.VocalsKeschFX4Disint (In):KeschNormo/out-1 |> Non-Mixer.VocalsKeschFX4Disint (Process):KeschFX4Disint/in-1
-Non-Mixer.VocalsKeschFX4Disint (Process):KeschFX4Disint/out-1 |> Non-Mixer.VocalsKesch (Out):KeschOut/in-1
-Non-Mixer.VocalsKeschFX5RingMod (In):KeschAB/out-1 |> Non-Mixer.VocalsKeschFX5RingMod (Process):KeschFX5RingMod/in-1
-Non-Mixer.VocalsKeschFX5RingMod (In):KeschGars/out-1 |> Non-Mixer.VocalsKeschFX5RingMod (Process):KeschFX5RingMod/in-1
-Non-Mixer.VocalsKeschFX5RingMod (In):KeschMeuf/out-1 |> Non-Mixer.VocalsKeschFX5RingMod (Process):KeschFX5RingMod/in-1
-Non-Mixer.VocalsKeschFX5RingMod (In):KeschNormo/out-1 |> Non-Mixer.VocalsKeschFX5RingMod (Process):KeschFX5RingMod/in-1
-Non-Mixer.VocalsKeschFX5RingMod (Process):KeschFX5RingMod/out-1 |> Non-Mixer.VocalsKesch (Out):KeschOut/in-1
-Non-Mixer.VocalsKeschFX6Granular (In):KeschAB/out-1 |> Non-Mixer.VocalsKeschFX6Granular (Process):KeschFX6Granular/in-1
-Non-Mixer.VocalsKeschFX6Granular (In):KeschGars/out-1 |> Non-Mixer.VocalsKeschFX6Granular (Process):KeschFX6Granular/in-1
-Non-Mixer.VocalsKeschFX6Granular (In):KeschMeuf/out-1 |> Non-Mixer.VocalsKeschFX6Granular (Process):KeschFX6Granular/in-1
-Non-Mixer.VocalsKeschFX6Granular (In):KeschNormo/out-1 |> Non-Mixer.VocalsKeschFX6Granular (Process):KeschFX6Granular/in-1
-Non-Mixer.VocalsKeschFX6Granular (Process):KeschFX6Granular/out-1 |> Non-Mixer.VocalsKesch (Out):KeschOut/in-1
-Non-Mixer.VocalsKeschFX7Slice (In):KeschAB/out-1 |> Non-Mixer.VocalsKeschFX7Slice (Process):KeschFX7Slice/in-1
-Non-Mixer.VocalsKeschFX7Slice (In):KeschGars/out-1 |> Non-Mixer.VocalsKeschFX7Slice (Process):KeschFX7Slice/in-1
-Non-Mixer.VocalsKeschFX7Slice (In):KeschMeuf/out-1 |> Non-Mixer.VocalsKeschFX7Slice (Process):KeschFX7Slice/in-1
-Non-Mixer.VocalsKeschFX7Slice (In):KeschNormo/out-1 |> Non-Mixer.VocalsKeschFX7Slice (Process):KeschFX7Slice/in-1
-Non-Mixer.VocalsKeschFX7Slice (Process):KeschFX7Slice/out-1 |> Non-Mixer.VocalsKesch (Out):KeschOut/in-1
-Non-Mixer.VocalsKeschFX8TapeDelay (In):KeschAB/out-1 |> Non-Mixer.VocalsKeschFX8TapeDelay (Process):KeschFX8TapeDelay/in-1
-Non-Mixer.VocalsKeschFX8TapeDelay (In):KeschGars/out-1 |> Non-Mixer.VocalsKeschFX8TapeDelay (Process):KeschFX8TapeDelay/in-1
-Non-Mixer.VocalsKeschFX8TapeDelay (In):KeschMeuf/out-1 |> Non-Mixer.VocalsKeschFX8TapeDelay (Process):KeschFX8TapeDelay/in-1
-Non-Mixer.VocalsKeschFX8TapeDelay (In):KeschNormo/out-1 |> Non-Mixer.VocalsKeschFX8TapeDelay (Process):KeschFX8TapeDelay/in-1
-Non-Mixer.VocalsKeschFX8TapeDelay (Process):KeschFX8TapeDelay/out-1 |> Non-Mixer.VocalsKesch (Out):KeschOut/in-1
 Non-Mixer.VocalsNano (ArtificialBackings):NanoABGars/out-1 |> Non-Mixer.VocalsNano (Out):NanoOut/in-1
 Non-Mixer.VocalsNano (ArtificialBackings):NanoABGars/out-1 |> Non-Mixer.VocalsNanoFX1Delay (In):NanoAB/in-1
 Non-Mixer.VocalsNano (ArtificialBackings):NanoABGars/out-1 |> Non-Mixer.VocalsNanoFX2Delay (In):NanoAB/in-1
@@ -588,56 +458,12 @@ Non-Mixer.VocalsNano (Normo):NanoNormo/aux-C/out-1 |> Non-Mixer.VocalsNanoFX8Tap
 Non-Mixer.VocalsNano (Normo):NanoNormo/aux-C/out-1 |> Non-Mixer.VocalsNanoFX9Scape (In):NanoNormo/in-1
 Non-Mixer.VocalsNano (Normo):NanoNormo/out-1 |> Non-Mixer.VocalsNano (Out):NanoOut/in-1
 Non-Mixer.VocalsNano (Out):NanoOut/out-1 |> sooperlooper:loop5_in_1
-Non-Mixer.VocalsNanoFX1Delay (In):NanoAB/out-1 |> Non-Mixer.VocalsNanoFX1Delay (Process):NanoFX1Delay/in-1
-Non-Mixer.VocalsNanoFX1Delay (In):NanoGars/out-1 |> Non-Mixer.VocalsNanoFX1Delay (Process):NanoFX1Delay/in-1
-Non-Mixer.VocalsNanoFX1Delay (In):NanoMeuf/out-1 |> Non-Mixer.VocalsNanoFX1Delay (Process):NanoFX1Delay/in-1
-Non-Mixer.VocalsNanoFX1Delay (In):NanoNormo/out-1 |> Non-Mixer.VocalsNanoFX1Delay (Process):NanoFX1Delay/in-1
-Non-Mixer.VocalsNanoFX1Delay (Process):NanoFX1Delay/out-1 |> Non-Mixer.VocalsNano (Out):NanoOut/in-1
-Non-Mixer.VocalsNanoFX2Delay (In):NanoAB/out-1 |> Non-Mixer.VocalsNanoFX2Delay (Process):NanoFX2Delay/in-1
-Non-Mixer.VocalsNanoFX2Delay (In):NanoGars/out-1 |> Non-Mixer.VocalsNanoFX2Delay (Process):NanoFX2Delay/in-1
-Non-Mixer.VocalsNanoFX2Delay (In):NanoMeuf/out-1 |> Non-Mixer.VocalsNanoFX2Delay (Process):NanoFX2Delay/in-1
-Non-Mixer.VocalsNanoFX2Delay (In):NanoNormo/out-1 |> Non-Mixer.VocalsNanoFX2Delay (Process):NanoFX2Delay/in-1
-Non-Mixer.VocalsNanoFX2Delay (Process):NanoFX2Delay/out-1 |> Non-Mixer.VocalsNano (Out):NanoOut/in-1
-Non-Mixer.VocalsNanoFX3TrapVerb (In):NanoAB/out-1 |> Non-Mixer.VocalsNanoFX3TrapVerb (Process):NanoFX3TrapVerb/in-1
-Non-Mixer.VocalsNanoFX3TrapVerb (In):NanoGars/out-1 |> Non-Mixer.VocalsNanoFX3TrapVerb (Process):NanoFX3TrapVerb/in-1
-Non-Mixer.VocalsNanoFX3TrapVerb (In):NanoMeuf/out-1 |> Non-Mixer.VocalsNanoFX3TrapVerb (Process):NanoFX3TrapVerb/in-1
-Non-Mixer.VocalsNanoFX3TrapVerb (In):NanoNormo/out-1 |> Non-Mixer.VocalsNanoFX3TrapVerb (Process):NanoFX3TrapVerb/in-1
-Non-Mixer.VocalsNanoFX3TrapVerb (Process):NanoFX3TrapVerb/out-1 |> Non-Mixer.VocalsNano (Out):NanoOut/in-1
-Non-Mixer.VocalsNanoFX4Disint (In):NanoAB/out-1 |> Non-Mixer.VocalsNanoFX4Disint (Process):NanoFX4Disint/in-1
-Non-Mixer.VocalsNanoFX4Disint (In):NanoGars/out-1 |> Non-Mixer.VocalsNanoFX4Disint (Process):NanoFX4Disint/in-1
-Non-Mixer.VocalsNanoFX4Disint (In):NanoMeuf/out-1 |> Non-Mixer.VocalsNanoFX4Disint (Process):NanoFX4Disint/in-1
-Non-Mixer.VocalsNanoFX4Disint (In):NanoNormo/out-1 |> Non-Mixer.VocalsNanoFX4Disint (Process):NanoFX4Disint/in-1
-Non-Mixer.VocalsNanoFX4Disint (Process):NanoFX4Disint/out-1 |> Non-Mixer.VocalsNano (Out):NanoOut/in-1
-Non-Mixer.VocalsNanoFX5RingMod (In):NanoAB/out-1 |> Non-Mixer.VocalsNanoFX5RingMod (Process):NanoFX5RingMod/in-1
-Non-Mixer.VocalsNanoFX5RingMod (In):NanoGars/out-1 |> Non-Mixer.VocalsNanoFX5RingMod (Process):NanoFX5RingMod/in-1
-Non-Mixer.VocalsNanoFX5RingMod (In):NanoMeuf/out-1 |> Non-Mixer.VocalsNanoFX5RingMod (Process):NanoFX5RingMod/in-1
-Non-Mixer.VocalsNanoFX5RingMod (In):NanoNormo/out-1 |> Non-Mixer.VocalsNanoFX5RingMod (Process):NanoFX5RingMod/in-1
-Non-Mixer.VocalsNanoFX5RingMod (Process):NanoFX5RingMod/out-1 |> Non-Mixer.VocalsNano (Out):NanoOut/in-1
-Non-Mixer.VocalsNanoFX6Granular (In):NanoAB/out-1 |> Non-Mixer.VocalsNanoFX6Granular (Process):NanoFX6Granular/in-1
-Non-Mixer.VocalsNanoFX6Granular (In):NanoGars/out-1 |> Non-Mixer.VocalsNanoFX6Granular (Process):NanoFX6Granular/in-1
-Non-Mixer.VocalsNanoFX6Granular (In):NanoMeuf/out-1 |> Non-Mixer.VocalsNanoFX6Granular (Process):NanoFX6Granular/in-1
-Non-Mixer.VocalsNanoFX6Granular (In):NanoNormo/out-1 |> Non-Mixer.VocalsNanoFX6Granular (Process):NanoFX6Granular/in-1
-Non-Mixer.VocalsNanoFX6Granular (Process):NanoFX6Granular/out-1 |> Non-Mixer.VocalsNano (Out):NanoOut/in-1
-Non-Mixer.VocalsNanoFX7Slice (In):NanoAB/out-1 |> Non-Mixer.VocalsNanoFX7Slice (Process):NanoFX7Slice/in-1
-Non-Mixer.VocalsNanoFX7Slice (In):NanoGars/out-1 |> Non-Mixer.VocalsNanoFX7Slice (Process):NanoFX7Slice/in-1
-Non-Mixer.VocalsNanoFX7Slice (In):NanoMeuf/out-1 |> Non-Mixer.VocalsNanoFX7Slice (Process):NanoFX7Slice/in-1
-Non-Mixer.VocalsNanoFX7Slice (In):NanoNormo/out-1 |> Non-Mixer.VocalsNanoFX7Slice (Process):NanoFX7Slice/in-1
-Non-Mixer.VocalsNanoFX7Slice (Process):NanoFX7Slice/out-1 |> Non-Mixer.VocalsNano (Out):NanoOut/in-1
-Non-Mixer.VocalsNanoFX8TapeDelay (In):NanoAB/out-1 |> Non-Mixer.VocalsNanoFX8TapeDelay (Process):NanoFX8TapeDelay/in-1
-Non-Mixer.VocalsNanoFX8TapeDelay (In):NanoGars/out-1 |> Non-Mixer.VocalsNanoFX8TapeDelay (Process):NanoFX8TapeDelay/in-1
-Non-Mixer.VocalsNanoFX8TapeDelay (In):NanoMeuf/out-1 |> Non-Mixer.VocalsNanoFX8TapeDelay (Process):NanoFX8TapeDelay/in-1
-Non-Mixer.VocalsNanoFX8TapeDelay (In):NanoNormo/out-1 |> Non-Mixer.VocalsNanoFX8TapeDelay (Process):NanoFX8TapeDelay/in-1
-Non-Mixer.VocalsNanoFX8TapeDelay (Process):NanoFX8TapeDelay/out-1 |> Non-Mixer.VocalsNano (Out):NanoOut/in-1
-Non-Mixer.VocalsNanoFX9Scape (In):NanoAB/out-1 |> Non-Mixer.VocalsNanoFX9Scape (Process):NanoFX9Scape/in-1
-Non-Mixer.VocalsNanoFX9Scape (In):NanoGars/out-1 |> Non-Mixer.VocalsNanoFX9Scape (Process):NanoFX9Scape/in-1
-Non-Mixer.VocalsNanoFX9Scape (In):NanoMeuf/out-1 |> Non-Mixer.VocalsNanoFX9Scape (Process):NanoFX9Scape/in-1
-Non-Mixer.VocalsNanoFX9Scape (In):NanoNormo/out-1 |> Non-Mixer.VocalsNanoFX9Scape (Process):NanoFX9Scape/in-1
-Non-Mixer.VocalsNanoFX9Scape (Process):NanoFX9Scape/out-1 |> Non-Mixer.VocalsNano (Out):NanoOut/in-1
 QMidiArp.CLowArp:out 1                   |> Carla.LowCSynths/Barkline:events-in
 QMidiArp.CLowArp:out 1                   |> Carla.LowCSynths/Boom:events-in
 QMidiArp.CLowArp:out 1                   |> Carla.LowCSynths/Trap1:events-in
 QMidiArp.CLowArp:out 1                   |> Carla.LowCSynths/Trap2:events-in
 QMidiArp.ZLowArp:out 1                   |> a2j:ZynAddSubFX ZLowSynths (playback): ZynAddSubFX
+Tap192.ConstantSampler:output-L          |> Non-Mixer.Samples (Main):ConstantSampler/in-1
 Tap192.ProdSampler:Samples1-L            |> Non-Mixer.Samples (Main):Samples1/in-1
 Tap192.ProdSampler:Samples2-L            |> Non-Mixer.Samples (Main):Samples2/in-1
 Tap192.ProdSampler:Samples3-L            |> Non-Mixer.Samples (Main):Samples3/in-1
@@ -667,6 +493,7 @@ a2j:Hammerfall DSP (capture): HDSP MIDI 1 |> a2j:JmjKeyboard (playback): in
 a2j:JmjKeyboard (capture): CHi           |> a2j:loop192 MidiLooper (playback): Loop 4
 a2j:JmjKeyboard (capture): CHiSf         |> a2j:loop192 MidiLooper (playback): Loop 3
 a2j:JmjKeyboard (capture): CLow          |> a2j:loop192 MidiLooper (playback): Loop 1
+a2j:JmjKeyboard (capture): ConstantSampler |> a2j:Tap192 ConstantSampler (playback): midi_in
 a2j:JmjKeyboard (capture): ProdSampler   |> a2j:Tap192 ProdSampler (playback): midi_in
 a2j:JmjKeyboard (capture): ZHi           |> a2j:loop192 MidiLooper (playback): Loop 2
 a2j:JmjKeyboard (capture): ZLow          |> a2j:loop192 MidiLooper (playback): Loop 0
@@ -674,6 +501,7 @@ a2j:Joystick (capture): out              |> a2j:JmjKeyboard (playback): in
 a2j:Mk2Keyboard (capture): CHi           |> a2j:loop192 MidiLooper (playback): Loop 4
 a2j:Mk2Keyboard (capture): CHiSf         |> a2j:loop192 MidiLooper (playback): Loop 3
 a2j:Mk2Keyboard (capture): CLow          |> a2j:loop192 MidiLooper (playback): Loop 1
+a2j:Mk2Keyboard (capture): ConstantSampler |> a2j:Tap192 ConstantSampler (playback): midi_in
 a2j:Mk2Keyboard (capture): ProdSampler   |> a2j:Tap192 ProdSampler (playback): midi_in
 a2j:Mk2Keyboard (capture): ZHi           |> a2j:loop192 MidiLooper (playback): Loop 2
 a2j:Mk2Keyboard (capture): ZLow          |> a2j:loop192 MidiLooper (playback): Loop 0
@@ -697,6 +525,8 @@ a2j:seq192 MainSequencer (capture): seq192 4 |> a2j:MonoSynthMicroTonal (playbac
 a2j:seq192 MainSequencer (capture): seq192 4 |> a2j:MonoSynthMicroTonal (playback): EasyClassicalIn
 a2j:seq192 MainSequencer (capture): seq192 4 |> a2j:MonoSynthMicroTonal (playback): TrapFifthIn
 a2j:seq192 MainSequencer (capture): seq192 4 |> a2j:MonoSynthMicroTonal (playback): TrapIn
+klick:out                                |> Non-Mixer.MonitorsKesch (MonitorsKesch):Klick/in-1
+klick:out                                |> Non-Mixer.MonitorsNano (MonitorsNano):Klick/in-1
 sooperlooper:loop0_out_1                 |> Non-Mixer.Bass (In):BassIn/in-1
 sooperlooper:loop1_out_1                 |> Non-Mixer.MonitorsKesch (MonitorsKesch):Bass/in-1
 sooperlooper:loop1_out_1                 |> Non-Mixer.MonitorsNano (MonitorsNano):Bass/in-1
