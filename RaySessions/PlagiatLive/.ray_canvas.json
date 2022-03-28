@@ -6102,7 +6102,7 @@
     },
     {
       "port_types_view": 3,
-      "group_name": "Non-Mixer.KeschVocalsFX9Scape/Unnamed",
+      "group_name": "Non-Mixer.VocalsKeschFX9Scape/Unnamed",
       "null_zone": "",
       "in_zone": "",
       "out_zone": "",
@@ -6122,7 +6122,7 @@
     },
     {
       "port_types_view": 3,
-      "group_name": "Non-Mixer.KeschVocalsFX9Scape/Unnamed.1",
+      "group_name": "Non-Mixer.VocalsKeschFX9Scape/Unnamed.1",
       "null_zone": "",
       "in_zone": "",
       "out_zone": "",
@@ -6142,7 +6142,7 @@
     },
     {
       "port_types_view": 3,
-      "group_name": "Non-Mixer.KeschVocalsFX9Scape/Unnamed.2",
+      "group_name": "Non-Mixer.VocalsKeschFX9Scape/Unnamed.2",
       "null_zone": "",
       "in_zone": "",
       "out_zone": "",
@@ -6162,7 +6162,7 @@
     },
     {
       "port_types_view": 3,
-      "group_name": "Non-Mixer.KeschVocalsFX9Scape/Unnamed.3",
+      "group_name": "Non-Mixer.VocalsKeschFX9Scape/Unnamed.3",
       "null_zone": "",
       "in_zone": "",
       "out_zone": "",
@@ -6182,7 +6182,7 @@
     },
     {
       "port_types_view": 3,
-      "group_name": "Non-Mixer.KeschVocalsFX9Scape/Unnamed.4",
+      "group_name": "Non-Mixer.VocalsKeschFX9Scape/Unnamed.4",
       "null_zone": "",
       "in_zone": "",
       "out_zone": "",
@@ -6202,7 +6202,7 @@
     },
     {
       "port_types_view": 3,
-      "group_name": "Non-Mixer.KeschVocalsFX9Scape (In)",
+      "group_name": "Non-Mixer.VocalsKeschFX9Scape (In)",
       "null_zone": "",
       "in_zone": "",
       "out_zone": "",
@@ -6222,7 +6222,7 @@
     },
     {
       "port_types_view": 3,
-      "group_name": "Non-Mixer.KeschVocalsFX9Scape (Process)",
+      "group_name": "Non-Mixer.VocalsKeschFX9Scape (Process)",
       "null_zone": "",
       "in_zone": "",
       "out_zone": "",

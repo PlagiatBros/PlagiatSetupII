@@ -4,10 +4,10 @@
     <jack-output name="output"/>
   </options>
   <creation>
-    <setup name="new setup" channel="1" cc="-1">
-      <kit name="new kit" volume="1.000000">
-        <instrument name="new instrument" minnote="60" maxnote="60" rootnote="60" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="output" volume="1.000000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
-          <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/Crowd/applause_encore.aiff" sampleRelative="../../../../Samples/Crowd/applause_encore.aiff"/>
+    <setup name="Plagiat" channel="1" cc="-1">
+      <kit name="ConstantKit" volume="1.000000">
+        <instrument name="BoringBloke" minnote="60" maxnote="60" rootnote="60" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="output" volume="1.000000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
+          <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/Constant/BoringBloke/BoringBloke.wav" sampleRelative="../../../../Samples/Constant/BoringBloke/BoringBloke.wav"/>
         </instrument>
       </kit>
     </setup>

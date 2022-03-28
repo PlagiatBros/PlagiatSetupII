@@ -25,7 +25,7 @@
 	Gain_Module 0x36 create :parameter_values "0.000000:0.000000" :is_default 1 :chain 0x34 :active 1
 	Meter_Module 0x37 create :is_default 1 :chain 0x34 :active 1
 	JACK_Module 0x38 create :parameter_values "1.000000:0.000000" :is_default 1 :chain 0x34 :active 1
-	Mixer_Strip 0x14 create :name "NanoFX1Delay" :width "narrow" :tab "signal" :color 223902552 :gain_mode 0 :mute_mode 0 :group 0x1A :auto_input "" :manual_connection 0
+	Mixer_Strip 0x14 create :name "VocalsNanoFX1Delay" :width "narrow" :tab "signal" :color 223902552 :gain_mode 0 :mute_mode 0 :group 0x1A :auto_input "" :manual_connection 0
 	Chain 0x15 create :strip 0x14 :tab "chain"
 	JACK_Module 0x16 create :parameter_values "0.000000:1.000000" :is_default 1 :chain 0x15 :active 1
 	Plugin_Module 0x39 create :lv2_plugin_uri "http://guitarix.sourceforge.net/plugins/gx_mbdelay_#_mbdelay_" :plugin_ins 1 :plugin_outs 1 :parameter_values "30.000000:60.000000:90.000000:120.000000:150.000000:50.000000:50.000000:50.000000:50.000000:50.000000:-10.000000:-5.000000:-2.000000:0.000000:-10.000000:90.000000:410.000000:1800.000000:6153.000000" :is_default 0 :chain 0x15 :active 1
