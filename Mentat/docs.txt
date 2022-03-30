@@ -1898,6 +1898,22 @@ Module: Mentat
                 Gain (Non-Mixer.Outputs/strip/Bass/Aux%20(A)/Gain%20(dB)/unscaled f)
 
 
+            Plugin: Pitchshifter
+
+                Parameters:
+
+                Pitch%20shift (Non-Mixer.Outputs/strip/Bass/AM%20pitchshifter/Pitch%20shift/unscaled f)
+                Buffer%20size (Non-Mixer.Outputs/strip/Bass/AM%20pitchshifter/Buffer%20size/unscaled f)
+
+
+            Plugin: 4%20Pole%20Low-Pass%20Filter%20with%20Resonance%20(FCRCIA)
+
+                Parameters:
+
+                Cutoff (Non-Mixer.Outputs/strip/Bass/4%20Pole%20Low-Pass%20Filter%20with%20Resonance%20(FCRCIA)/Cutoff%20Frequency/unscaled f)
+                Resonance (Non-Mixer.Outputs/strip/Bass/4%20Pole%20Low-Pass%20Filter%20with%20Resonance%20(FCRCIA)/Resonance/unscaled f)
+
+
             Plugin: Gain
 
                 Parameters:
@@ -1913,22 +1929,6 @@ Module: Mentat
                 Pan (Non-Mixer.Outputs/strip/Bass/Mono%20Pan/Pan/unscaled f)
 
 
-            Plugin: 4%20Pole%20Low-Pass%20Filter%20with%20Resonance%20(FCRCIA)
-
-                Parameters:
-
-                Cutoff (Non-Mixer.Outputs/strip/Bass/4%20Pole%20Low-Pass%20Filter%20with%20Resonance%20(FCRCIA)/Cutoff%20Frequency/unscaled f)
-                Resonance (Non-Mixer.Outputs/strip/Bass/4%20Pole%20Low-Pass%20Filter%20with%20Resonance%20(FCRCIA)/Resonance/unscaled f)
-
-
-            Plugin: Pitchshifter
-
-                Parameters:
-
-                Pitch%20shift (Non-Mixer.Outputs/strip/Bass/AM%20pitchshifter/Pitch%20shift/unscaled f)
-                Buffer%20size (Non-Mixer.Outputs/strip/Bass/AM%20pitchshifter/Buffer%20size/unscaled f)
-
-
         Strip: BassSynths
 
             Plugin: Aux%20(A)
@@ -1936,6 +1936,22 @@ Module: Mentat
                 Parameters:
 
                 Gain (Non-Mixer.Outputs/strip/BassSynths/Aux%20(A)/Gain%20(dB)/unscaled f)
+
+
+            Plugin: Pitchshifter
+
+                Parameters:
+
+                Pitch%20shift (Non-Mixer.Outputs/strip/BassSynths/AM%20pitchshifter/Pitch%20shift/unscaled f)
+                Buffer%20size (Non-Mixer.Outputs/strip/BassSynths/AM%20pitchshifter/Buffer%20size/unscaled f)
+
+
+            Plugin: 4%20Pole%20Low-Pass%20Filter%20with%20Resonance%20(FCRCIA)
+
+                Parameters:
+
+                Cutoff (Non-Mixer.Outputs/strip/BassSynths/4%20Pole%20Low-Pass%20Filter%20with%20Resonance%20(FCRCIA)/Cutoff%20Frequency/unscaled f)
+                Resonance (Non-Mixer.Outputs/strip/BassSynths/4%20Pole%20Low-Pass%20Filter%20with%20Resonance%20(FCRCIA)/Resonance/unscaled f)
 
 
             Plugin: Gain
@@ -1953,22 +1969,6 @@ Module: Mentat
                 Pan (Non-Mixer.Outputs/strip/BassSynths/Mono%20Pan/Pan/unscaled f)
 
 
-            Plugin: 4%20Pole%20Low-Pass%20Filter%20with%20Resonance%20(FCRCIA)
-
-                Parameters:
-
-                Cutoff (Non-Mixer.Outputs/strip/BassSynths/4%20Pole%20Low-Pass%20Filter%20with%20Resonance%20(FCRCIA)/Cutoff%20Frequency/unscaled f)
-                Resonance (Non-Mixer.Outputs/strip/BassSynths/4%20Pole%20Low-Pass%20Filter%20with%20Resonance%20(FCRCIA)/Resonance/unscaled f)
-
-
-            Plugin: Pitchshifter
-
-                Parameters:
-
-                Pitch%20shift (Non-Mixer.Outputs/strip/BassSynths/AM%20pitchshifter/Pitch%20shift/unscaled f)
-                Buffer%20size (Non-Mixer.Outputs/strip/BassSynths/AM%20pitchshifter/Buffer%20size/unscaled f)
-
-
         Strip: Synths
 
             Plugin: Aux%20(A)
@@ -1976,6 +1976,22 @@ Module: Mentat
                 Parameters:
 
                 Gain (Non-Mixer.Outputs/strip/Synths/Aux%20(A)/Gain%20(dB)/unscaled f)
+
+
+            Plugin: Pitchshifter
+
+                Parameters:
+
+                Pitch%20shift (Non-Mixer.Outputs/strip/Synths/AM%20pitchshifter/Pitch%20shift/unscaled f)
+                Buffer%20size (Non-Mixer.Outputs/strip/Synths/AM%20pitchshifter/Buffer%20size/unscaled f)
+
+
+            Plugin: 4%20Pole%20Low-Pass%20Filter%20with%20Resonance%20(FCRCIA)
+
+                Parameters:
+
+                Cutoff (Non-Mixer.Outputs/strip/Synths/4%20Pole%20Low-Pass%20Filter%20with%20Resonance%20(FCRCIA)/Cutoff%20Frequency/unscaled f)
+                Resonance (Non-Mixer.Outputs/strip/Synths/4%20Pole%20Low-Pass%20Filter%20with%20Resonance%20(FCRCIA)/Resonance/unscaled f)
 
 
             Plugin: Gain
@@ -1993,22 +2009,6 @@ Module: Mentat
                 Pan (Non-Mixer.Outputs/strip/Synths/Mono%20Pan/Pan/unscaled f)
 
 
-            Plugin: 4%20Pole%20Low-Pass%20Filter%20with%20Resonance%20(FCRCIA)
-
-                Parameters:
-
-                Cutoff (Non-Mixer.Outputs/strip/Synths/4%20Pole%20Low-Pass%20Filter%20with%20Resonance%20(FCRCIA)/Cutoff%20Frequency/unscaled f)
-                Resonance (Non-Mixer.Outputs/strip/Synths/4%20Pole%20Low-Pass%20Filter%20with%20Resonance%20(FCRCIA)/Resonance/unscaled f)
-
-
-            Plugin: Pitchshifter
-
-                Parameters:
-
-                Pitch%20shift (Non-Mixer.Outputs/strip/Synths/AM%20pitchshifter/Pitch%20shift/unscaled f)
-                Buffer%20size (Non-Mixer.Outputs/strip/Synths/AM%20pitchshifter/Buffer%20size/unscaled f)
-
-
         Strip: Samples
 
             Plugin: Aux%20(A)
@@ -2016,6 +2016,22 @@ Module: Mentat
                 Parameters:
 
                 Gain (Non-Mixer.Outputs/strip/Samples/Aux%20(A)/Gain%20(dB)/unscaled f)
+
+
+            Plugin: Pitchshifter
+
+                Parameters:
+
+                Pitch%20shift (Non-Mixer.Outputs/strip/Samples/AM%20pitchshifter/Pitch%20shift/unscaled f)
+                Buffer%20size (Non-Mixer.Outputs/strip/Samples/AM%20pitchshifter/Buffer%20size/unscaled f)
+
+
+            Plugin: 4%20Pole%20Low-Pass%20Filter%20with%20Resonance%20(FCRCIA)
+
+                Parameters:
+
+                Cutoff (Non-Mixer.Outputs/strip/Samples/4%20Pole%20Low-Pass%20Filter%20with%20Resonance%20(FCRCIA)/Cutoff%20Frequency/unscaled f)
+                Resonance (Non-Mixer.Outputs/strip/Samples/4%20Pole%20Low-Pass%20Filter%20with%20Resonance%20(FCRCIA)/Resonance/unscaled f)
 
 
             Plugin: Gain
@@ -2031,22 +2047,6 @@ Module: Mentat
                 Parameters:
 
                 Pan (Non-Mixer.Outputs/strip/Samples/Mono%20Pan/Pan/unscaled f)
-
-
-            Plugin: 4%20Pole%20Low-Pass%20Filter%20with%20Resonance%20(FCRCIA)
-
-                Parameters:
-
-                Cutoff (Non-Mixer.Outputs/strip/Samples/4%20Pole%20Low-Pass%20Filter%20with%20Resonance%20(FCRCIA)/Cutoff%20Frequency/unscaled f)
-                Resonance (Non-Mixer.Outputs/strip/Samples/4%20Pole%20Low-Pass%20Filter%20with%20Resonance%20(FCRCIA)/Resonance/unscaled f)
-
-
-            Plugin: Pitchshifter
-
-                Parameters:
-
-                Pitch%20shift (Non-Mixer.Outputs/strip/Samples/AM%20pitchshifter/Pitch%20shift/unscaled f)
-                Buffer%20size (Non-Mixer.Outputs/strip/Samples/AM%20pitchshifter/Buffer%20size/unscaled f)
 
 
         Strip: VocalsNano
@@ -4097,16 +4097,6 @@ Module: Mentat
                 Mute (Non-Mixer.VocalsKesch/strip/KeschIn/Gain/Mute/unscaled f)
 
 
-        Strip: KeschOut
-
-            Plugin: Gain
-
-                Parameters:
-
-                Gain (Non-Mixer.VocalsKesch/strip/KeschOut/Gain/Gain%20(dB)/unscaled f)
-                Mute (Non-Mixer.VocalsKesch/strip/KeschOut/Gain/Mute/unscaled f)
-
-
         Strip: KeschMeuf
 
             Plugin: ACE%20EQ
@@ -4426,6 +4416,16 @@ Module: Mentat
 
                 Gain (Non-Mixer.VocalsKesch/strip/KeschABGars/Gain/Gain%20(dB)/unscaled f)
                 Mute (Non-Mixer.VocalsKesch/strip/KeschABGars/Gain/Mute/unscaled f)
+
+
+        Strip: KeschOut
+
+            Plugin: Gain
+
+                Parameters:
+
+                Gain (Non-Mixer.VocalsKesch/strip/KeschOut/Gain/Gain%20(dB)/unscaled f)
+                Mute (Non-Mixer.VocalsKesch/strip/KeschOut/Gain/Mute/unscaled f)
 
 
     NonMixer: VocalsKeschFX1Delay
@@ -5144,16 +5144,6 @@ Module: Mentat
                 Mute (Non-Mixer.VocalsNano/strip/NanoIn/Gain/Mute/unscaled f)
 
 
-        Strip: NanoOut
-
-            Plugin: Gain
-
-                Parameters:
-
-                Gain (Non-Mixer.VocalsNano/strip/NanoOut/Gain/Gain%20(dB)/unscaled f)
-                Mute (Non-Mixer.VocalsNano/strip/NanoOut/Gain/Mute/unscaled f)
-
-
         Strip: NanoMeuf
 
             Plugin: ACE%20EQ
@@ -5473,6 +5463,16 @@ Module: Mentat
 
                 Gain (Non-Mixer.VocalsNano/strip/NanoABGars/Gain/Gain%20(dB)/unscaled f)
                 Mute (Non-Mixer.VocalsNano/strip/NanoABGars/Gain/Mute/unscaled f)
+
+
+        Strip: NanoOut
+
+            Plugin: Gain
+
+                Parameters:
+
+                Gain (Non-Mixer.VocalsNano/strip/NanoOut/Gain/Gain%20(dB)/unscaled f)
+                Mute (Non-Mixer.VocalsNano/strip/NanoOut/Gain/Mute/unscaled f)
 
 
     NonMixer: VocalsNanoFX1Delay

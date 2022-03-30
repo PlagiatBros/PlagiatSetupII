@@ -5,11 +5,11 @@ from .light import Light
 
 from modules import *
 
-class Snapshat(Light, Video, Audio, GlobalRoute):
+class Mcob(Light, Video, Audio, GlobalRoute):
 
     def __init__(self):
 
-        super().__init__(name='Snapshat')
+        super().__init__(name='Mcob')
 
 
     def part(self, *args, **kwargs):
@@ -25,7 +25,7 @@ class Snapshat(Light, Video, Audio, GlobalRoute):
         """
         Called when the engine switches to this route.
         """
-        transport.set_tempo(90)
+        transport.set_tempo(120)
         transport.set_cycle(8)
 
         # Setups, banks...
@@ -34,15 +34,15 @@ class Snapshat(Light, Video, Audio, GlobalRoute):
 
         # Microtonality
         microtonality.enable()
-        microtonality.set_tuning(0, 0, 0, 0.35, 0, 0, 0, 0, 0, 0, 0.35, 0)
+        microtonality.set_tuning(0, 0, 0, 0, 0, 0.35, 0, 0, 0.35, 0, 0.35, 0)
 
         # Controllers
         mk2Control.set_lights({
             1:'blue',
             2:'purple',
-            3: 'purple',
-            4: 'purple',
-            # 5: 'green',
+            3:'purple',
+            4:'purple',
+            5:'purple',
             6:'yellow',
             7:'yellow',
             8:'yellow',
@@ -61,7 +61,7 @@ class Snapshat(Light, Video, Audio, GlobalRoute):
             if args[0] == 1:
                 self.part("stop")
             if args[0] == 2:
-                self.part("pont")
+                self.part("intro")
             if args[0] == 3:
                 self.part("couplet")
             if args[0] == 4:
@@ -73,7 +73,7 @@ class Snapshat(Light, Video, Audio, GlobalRoute):
         if address == '/mk2/button':
 
             if args[0] == 2:
-                self.part("contrechant", modifier=True)
+                self.part("refrain")
             if args[0] == 3:
                 self.part("trap", modifier=True)
             if args[0] == 4:
