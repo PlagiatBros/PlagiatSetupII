@@ -163,6 +163,7 @@ class Audio():
         if part == 'goto_mcob':
 
             engine.set_route('mcob')
+            engine.active_route.part('intro')
 
 
         if part == 'nanomeuf':
