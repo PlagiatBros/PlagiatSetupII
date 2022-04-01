@@ -100,7 +100,7 @@ def create_keyboard(name):
                 Scene('LowCTrap1',
                     lowCTrap1
                 ),
-                Scene('LowCTrap1',
+                Scene('LowCTrap2',
                     lowCTrap2
                 ),
                 Scene('LowCBarkline',

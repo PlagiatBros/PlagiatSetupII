@@ -11,8 +11,8 @@ from ports import get_port
 config(
     backend='alsa',
     client_name='MonoSynthMicroTonal',
-    out_ports=['SynthOut1', 'SynthOut2', 'SynthOut3'],
-    in_ports=['SynthIn1', 'SynthIn2', 'SynthIn3']
+    out_ports=['TrapOut', 'EasyClassicalOut', 'DubstepHornOut', 'TrapFifthOut'],
+    in_ports=['TrapIn', 'EasyClassicalIn', 'DubstepHornIn', 'TrapFifthIn']
 )
 
 monosynth_pitch =  [0 for i in range(12)]
