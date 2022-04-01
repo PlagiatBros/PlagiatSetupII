@@ -72,6 +72,8 @@ class Snapshat(Light, Video, Audio, GlobalRoute):
 
         if address == '/mk2/button':
 
+            if args[0] == 1:
+                self.part("stop")
             if args[0] == 2:
                 self.part("contrechant", modifier=True)
             if args[0] == 3:

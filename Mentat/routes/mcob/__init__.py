@@ -52,7 +52,7 @@ class Mcob(Light, Video, Audio, GlobalRoute):
         """
         Call parent class method first
         so that the order of routing is
-        GlobalRoute -> Snapshat
+        GlobalRoute -> MCOB
         """
         super().route(protocol, port, address, args)
 
@@ -63,24 +63,17 @@ class Mcob(Light, Video, Audio, GlobalRoute):
             if args[0] == 2:
                 self.part("intro")
             if args[0] == 3:
-                self.part("couplet")
+                self.part("couplet1-1")
             if args[0] == 4:
-                self.part("refrain")
-
-            if args[0] == 11:
-                self.part("goto_mcob")
+                self.part("couplet1-2", modifier=True)
 
         if address == '/mk2/button':
 
             if args[0] == 2:
                 self.part("refrain")
             if args[0] == 3:
-                self.part("trap", modifier=True)
-            if args[0] == 4:
-                self.part("boomboclaat") # TODO LIGHTS + VIDEO
-            if args[0] == 6:
-                self.part("nanomeuf", modifier=True)
-            if args[0] == 7:
-                self.part("nanonormo", modifier=True)
-            if args[0] == 8:
-                self.part("nanogars", modifier=True)
+                self.part("couplet1-3")
+
+
+            if args[0] == 5:
+                self.part("look", modifier=True)
