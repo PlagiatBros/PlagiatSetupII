@@ -6,16 +6,15 @@ class MicroTonality(Module):
 
         super().__init__(*args, **kwargs)
 
-        self.autotunes = ['AutotuneNano', 'AutotuneNanoUp', 'AutotuneNanoDown', 'AutotuneKesch', 'AutotuneKeschUp', 'AutotuneKeschDown']
+        self.autotunes = ['NanoMeuf', 'NanoNormo', 'NanoGars', 'KeschMeuf', 'KeschNormo', 'KeschGars']
         self.zynsynth = 'ZHiSynths'
-        self.calfpitcher = 'Pitcher'
+        self.calfpitcher = 'CalfPitcher'
 
     def enable(self):
 
         modules = self.engine.modules
 
-        for zyn in self.zynsynths:
-            modules[zyn].set('microtonality', True)
+        modules[self.zynsynth].set('microtonality', True)
 
 
     def disable(self):
@@ -39,8 +38,8 @@ class MicroTonality(Module):
         modules[self.zynsynth].set('tuning', "\n".join([str(100.0 + i * 100 + zyntuning[i] * 100) for i in range(12)]).replace('1200.0', '2/1'))
 
         # calf
-        modules[self.calfpitcher].set('tuning', tuning)
+        modules[self.calfpitcher].set('tuning', *tuning)
 
         # autotuner
         for at in self.autotunes:
-            modules[at].set('tuning', tuning)
+            modules[at].set_tuning(tuning)

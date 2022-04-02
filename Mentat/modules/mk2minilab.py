@@ -17,28 +17,30 @@ class Mk2Control(Module):
 
         super().__init__(*args, **kwargs)
 
-        self.colors = []
+        self.sysex = []
 
     def set_lights(self, lights):
 
         for i in range(1,17):
-            self.colors = []
-            color = Mk2Minilab.default_colors[i-1]
-            if i in pads:
-                color = Mk2Minilab.mk2colors['purple']
+            self.sysex = []
+            color = self.default_colors[i-1]
+            if i in lights:
+                color = self.mk2colors['purple']
                 if type(lights) == dict:
-                    color =  Mk2Minilab.mk2colors[lights[i]]
+                    color =  self.mk2colors[lights[i]]
                 elif i == 1:
-                    color = Mk2Minilab.mk2colors['blue']
+                    color = self.mk2colors['blue']
                 elif i == 8:
-                    color = Mk2Minilab.mk2colors['red']
-                self.colors.append(push)
-            self.send('/sysex', [0xf0, 0x00, 0x20, 0x6b, 0x7f, 0x42, 0x02, 0x00, 0x10, 111 + i, color, 0xf7])
+                    color = self.mk2colors['red']
+
+            self.sysex.append([0xf0, 0x00, 0x20, 0x6b, 0x7f, 0x42, 0x02, 0x00, 0x10, 111 + i, color, 0xf7])
+
+        self.resend_lights()
 
     def resend_lights(self):
 
-        for c in self.colors:
-            self.send('/sysex', color)
+        for s in self.sysex:
+            self.send('/sysex', *s)
 
     def route(self, address, args):
 
@@ -57,19 +59,19 @@ class Mk2Control(Module):
 
         return False
 
-Mk2Control.mk2colors = mk2colors = {
-    'red': 1,
-    'blue': 16,
-    'green': 4,
-    'purple': 17,
-    'cyan': 20,
-    'yellow': 5,
-    'white': 127
-}
+    mk2colors = mk2colors = {
+        'red': 1,
+        'blue': 16,
+        'green': 4,
+        'purple': 17,
+        'cyan': 20,
+        'yellow': 5,
+        'white': 127
+    }
 
-Mk2Control.default_colors = [
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, # buttons 1-8
-	mk2colors['red'], mk2colors['red'],mk2colors['yellow'], # sl vx pre rec/overdub/pause
-	mk2colors['red'], mk2colors['red'],mk2colors['yellow'], # sl vx post rec/overdub/pause
-	0x00, mk2colors['purple']
-]
+    default_colors = [
+    	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, # buttons 1-8
+    	mk2colors['red'], mk2colors['red'],mk2colors['yellow'], # sl vx pre rec/overdub/pause
+    	mk2colors['red'], mk2colors['red'],mk2colors['yellow'], # sl vx post rec/overdub/pause
+    	0x00, mk2colors['purple']
+    ]
