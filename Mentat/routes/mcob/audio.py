@@ -222,7 +222,7 @@ class Audio():
         if name == 'prince2pac_launcher':
 
             while True:
-                self.stop_sequence('prince2pac_launcher')
+                self.stop_sequence('prince2pac_launcher') # ??
                 self.start_sequence('prince2pac_vocals_a')
                 self.start_sequence('prince2pac_basses_a')
                 self.wait(4, 'beat')
@@ -265,11 +265,9 @@ class Audio():
                 seq192.set('off', 'prince2pac_basssynth') # Préciser le nom de séquence # On coupe le bass synth et allez hop bass/batt
 
         if name == 'prince2pac_pitchdown':
-            for name in outputs.submodules:
-                postprocess.animate_pitch(name, 1, 0.25, 0.5, 'beat')
+            postprocess.animate_pitch('*', 1, 0.25, 0.5, 'beat')
             self.wait(0.95, 'beat')
-            for name in outputs.submodules:
-                postprocess.animate_pitch(name, 0.25, 1, 0.05, 'beat')
+            postprocess.animate_pitch('*', 0.25, 1, 0.05, 'beat')
 
         if name == 'prince2pac_vocals_b':
             vocalsKesch.set('meuf_exclu', 'on')
