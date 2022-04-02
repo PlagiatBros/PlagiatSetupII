@@ -201,50 +201,49 @@ class Audio():
             postprocess.animate_pitch('*', 0.25, 1, 0.05, 'beat')
 
         if name == 'prince2pac_vocals_b':
-            vocalsKesch.set('meuf_exclu', 'on')
-            vocalsKesch.set('normo', 'on')
-            self.wait(4, 'beat')
 
-            self.wait(2+2./3, 'beat')
-            vocalsKesch.set('gars_exclu', 'on')
-            self.wait(1./3, 'beat')
-            self.wait(1, 'beat')
-
-            self.wait(2*4, 'beat')
-
-            vocalsKesch.set('gars_exclu', 'on')
-            self.wait(4, 'beat')
-            self.wait(2*4, 'beat')
-            self.wait(3+2./3, 'beat')
-            vocalsKesch.set('normo', 'on')
-            self.wait(1./3, 'beat')
-
-            self.wait(2*4, 'beat')
-
-            vocalsKesch.set('normo_exclu', 'on')
-            self.wait(2, 'beat')
-            vocalsKesch.set('meuf', 'on')
-            self.wait(2, 'beat')
-            vocalsKesch.set('meuf', 'off')
-            self.wait(3+0.5, 'beat')
-            vocalsKesch.set('meuf', 'on')
-            self.wait(0.5, 'beat')
-            self.wait(1+0.5, 'beat')
-            vocalsKesch.set('meuf', off)
-            self.wait(0.5, 'beat')
-            vocalsKesch.set('meuf', 'on')
-            self.wait(1, 'beat')
-            self.wait(0.5, 'beat')
-            vocalsKesch.set('meuf', off)
-            self.wait(0.5, 'beat')
-            vocalsKesch.set('meuf', 'on')
-            self.wait(4, 'beat')
-            self.wait(1+0.5, 'beat')
-            vocalsKesch.set('meuf', 'off')
-            self.wait(0.5, 'beat')
-            vocalsKesch.set('meuf', 'on')
-            self.wait(2, 'beat')
-            self.wait(2*4, 'beat')
+            self.play_sequence([
+                {   # bar 1
+                    1: lambda: [vocalsKesch.set('meuf_exclu', 'on'), vocalsKesch.set('normo', 'on')],
+                },
+                {  # bar 2
+                    3 + 2/3: lambda: vocalsKesch.set('gars_exclu', 'on'),
+                },
+                {}, # bar 3
+                {}, # bar 4
+                {   # bar 5
+                    1: lambda: vocalsKesch.set('gars_exclu', 'on')
+                },
+                {}, # bar 6
+                {}, # bar 7
+                {   # bar 8
+                    4 + 2/3: lambda: vocalsKesch.set('normo', 'on')
+                },
+                {}, # bar 9
+                {}, # bar 10
+                {   # bar 11
+                    1: lambda: vocalsKesch.set('normo_exclu', 'on'),
+                    3: lambda: vocalsKesch.set('meuf', 'on')
+                },
+                {   # bar 12
+                    1: lambda: vocalsKesch.set('meuf', 'off')
+                    4.5: lambda: vocalsKesch.set('meuf', 'on')
+                },
+                {   # bar 13
+                    2.5: lambda: vocalsKesch.set('meuf', 'off'),
+                    3: lambda: vocalsKesch.set('meuf', 'on'),
+                    4.5: lambda: vocalsKesch.set('meuf', 'off'),
+                },
+                {   # bar 14
+                    1: lambda: vocalsKesch.set('meuf', 'on'),
+                },
+                {   # bar 15
+                    2.5: lambda: vocalsKesch.set('meuf', 'off'),
+                    3: lambda: vocalsKesch.set('meuf', 'on')
+                },
+                {},  # bar 16
+                {},  # bar 17
+            ], length=4, loop=False)
 
         if name == 'prince2pac_basses_b':
             pass
