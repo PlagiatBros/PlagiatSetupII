@@ -66,3 +66,22 @@ class GlobalRoute(Route):
     def resetSamples(self):
         for i in range (1,6):
             samples.set('Samples' + str(i), 'Gain', 'Mute', 1.0)
+
+    def start_sequence(self, name, *args, **kwargs):
+        """
+        Start looped scene, pass scene name as first argument
+        Internally adds 'sequences/' prefix to the name to distinguish from one shot scenes
+        """
+        self.start_scene('sequence/%s' % name, self.sequences, name, *args, **kwargs)
+
+    def stop_sequence(self, name):
+        """
+        Stop looped scene
+        """
+        self.stop_scene('sequence/%s' % name)
+
+    def sequences(self, name, *args, **kwargs):
+        """
+        Looped scenes
+        """
+        pass

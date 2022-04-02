@@ -6,7 +6,7 @@ class Audio():
 
         if not modifier:
             # stop all mentat sequences
-            self.stop_scene('sequence/*')
+            self.stop_sequence('*')
             # pause all loops
             looper.pause()
 
@@ -127,7 +127,7 @@ class Audio():
             # Misc
 
             # Sequences (Mentat)
-            self.start_scene('sequence/refrain', self.scenes, 'refrain')
+            self.start_sequence('refrain')
 
         if part == 'contrechant':
             # Sequences
@@ -152,12 +152,12 @@ class Audio():
 
             # Controllers
             #   ## Keyboards
-            jmjKeyboard.set_scene('LowCTrap1')
+            jmjKeyboard.set_sound('LowCTrap1')
 
             # Misc
 
             # Sequences (Mentat)
-            self.start_scene('sequence/trap', self.scenes, 'trap')
+            self.start_sequence('trap')
 
 
         if part == 'goto_mcob':
@@ -174,7 +174,7 @@ class Audio():
             vocalsNano.set('gars_exclu', 'on')
 
 
-    def scenes(self, name):
+    def sequences(self, name):
 
         if name == 'refrain':
 

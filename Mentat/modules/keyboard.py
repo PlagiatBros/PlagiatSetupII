@@ -31,7 +31,7 @@ class Keyboard(Module):
             # self.logger.info(self.scenes)
             pass
 
-    def set_scene(self, name):
+    def set_sound(self, name):
         """
         set subscene by name
         """
