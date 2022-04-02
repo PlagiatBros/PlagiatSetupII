@@ -19,101 +19,67 @@ class Audio():
             self.resetFX()
             self.resetSamples()
 
-
         if part == 'pont':
+            """
+            PONT / INTRO
+            """
 
             # Sequences
             seq192.select('solo', part + '_*')
 
-            # Transport, loopers, BPM, Delays...
-            #   ## Transport
+            # Transport
             transport.start()
-            #   ## Klick
-            ### Default pattern
 
-            #   ## Sooperlooper
-
-            # Mix, FX, Synths Programs, Vocals...
-            #   ## Samples
+            # Samples
             samplesFX6Scape.set('Samples1', 'Gain', 'Gain', -6.0)
             samplesFX6Scape.set('SamplesFX6Scape', 'Gain', 'Mute', 0.0)
             samples.set('Samples1', 'Gain', 'Mute', 0.0)
 
-            #   ## Bass
-            ##### Default is dry
-
-            #   ## Synths
-            #   ## Vocals
-            vocalsNano.set('gars_exclu', 'on')
-            vocalsKesch.set('meuf_exclu', 'on')
-
-            # Controllers
-            #   ## Keyboards
-
-            # Misc
-            #   ## Previous sequence shutdown
             prodSampler.send("/instrument/stop", "s:Plagiat/Snapshat/Koto0")
             constantSampler.send("/instrument/stop", "s:BoringBloke")
 
+            # Vocals
+            vocalsNano.set('gars_exclu', 'on')
+            vocalsKesch.set('meuf_exclu', 'on')
 
         if part == 'couplet':
+            """
+            COUPLET
+            """
+
             # Sequences
             seq192.select('solo', part + '_*')
 
-            # Transport, loopers, BPM, Delays...
-            #   ## Transport
-            transport.set_cycle(8)
+            # Transport
             transport.start()
-            #   ## Klick
-            ### Default pattern
 
-            #   ## Sooperlooper
-
-            # Mix, FX, Synths Programs, Vocals...
-            #   ## Samples
+            # Samples
             samplesFX6Scape.set('Samples1', 'Gain', 'Gain', -6.0)
             samplesFX6Scape.set('SamplesFX6Scape', 'Gain', 'Mute', 0.0)
             samples.set('Samples1', 'Gain', 'Mute', 0.0)
 
-            #   ## Bass
-            ##### Default is dry
-
-            #   ## Synths
-            #   ## Vocals
+            # Vocals
             vocalsNano.set('meuf_exclu', 'on')
             vocalsKesch.set('meuf_exclu', 'on')
 
-            # Controllers
-            #   ## Keyboards
-
-            # Misc
-
-
         if part == 'refrain':
+            """
+            REFRAIN
+            """
+
             # Sequences
             seq192.select('solo', part + '_*')
 
-            # Transport, loopers, BPM, Delays...
-            #   ## Transport
+            # Transport
             transport.start()
 
-            #   ## Klick
-            ### Default pattern
-
-            #   ## Sooperlooper
-
-            # Mix, FX, Synths Programs, Vocals...
-            #   ## Samples
+            # Samples
             samplesFX6Scape.set('Samples1', 'Gain', 'Gain', -6.0)
             samplesFX6Scape.set('SamplesFX6Scape', 'Gain', 'Mute', 0.0)
             samples.set('Samples1', 'Gain', 'Mute', 0.0)
             samples.set('Samples2', 'Gain', 'Mute', 0.0)
 
-            #   ## Bass
-            ##### Default is dry
-
-            #   ## Synths
-            #   ## Vocals
+            # Vocals
             vocalsNano.set('meuf_exclu', 'on')
             vocalsNanoFX2Delay.set('NanoMeuf', 'Gain', 'Gain', 0.0)
             vocalsNanoFX2Delay.set('VocalsNanoFX2Delay', 'Gain', 'Mute', 0.0)
@@ -121,40 +87,32 @@ class Audio():
             vocalsKeschFX2Delay.set('KeschMeuf', 'Gain', 'Gain', 0.0)
             vocalsKeschFX2Delay.set('VocalsKeschFX2Delay', 'Gain', 'Mute', 0.0)
 
-            # Controllers
-            #   ## Keyboards
-
-            # Misc
-
             # Sequences (Mentat)
             self.start_sequence('refrain')
 
         if part == 'contrechant':
+            """
+            CONTRECHANT
+            """
+
             # Sequences
             seq192.select('on', part + '_*')
 
-            # Mix, FX, Synths Programs, Vocals...
-            #   ## Samples
-            #   ## Bass
-            #   ## Synths
-            #   ## Vocals
+            # Vocals
             vocalsNanoFX3TrapVerb.set('NanoMeuf', 'Gain', 'Gain', -70.0) # en cas de sortie de Trap
             vocalsNanoFX3TrapVerb.set('VocalsNanoFX3TrapVerb', 'Gain', 'Mute', 1.0)
 
         if part == 'trap':
-            # Mix, FX, Synths Programs, Vocals...
-            #   ## Samples
-            #   ## Bass
-            #   ## Synths
-            #   ## Vocals
+            """
+            TRAP
+            """
+
+            # Vocals
             vocalsNanoFX3TrapVerb.set('NanoMeuf', 'Gain', 'Gain', 0.0)
             vocalsNanoFX3TrapVerb.set('VocalsNanoFX3TrapVerb', 'Gain', 'Mute', 0.0)
 
-            # Controllers
-            #   ## Keyboards
+            # Keyboards
             jmjKeyboard.set_sound('LowCTrap1')
-
-            # Misc
 
             # Sequences (Mentat)
             self.start_sequence('trap')
@@ -165,11 +123,12 @@ class Audio():
             engine.set_route('mcob')
             engine.active_route.part('intro')
 
-
         if part == 'nanomeuf':
             vocalsNano.set('meuf_exclu', 'on')
+
         if part == 'nanonormo':
             vocalsNano.set('normo_exclu', 'on')
+
         if part == 'nanogars':
             vocalsNano.set('gars_exclu', 'on')
 
