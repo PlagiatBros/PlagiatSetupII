@@ -262,7 +262,7 @@ class Audio():
                 self.wait(3, 'beat')
                 self.start_sequence('prince2pac_pitchdown')
                 self.wait(1, 'beat')
-                seq192.set('off', 'prince2pac_basssynth') # Préciser le nom de séquence # On coupe le bass synth et allez hop bass/batt
+                seq192.select('off', 'prince2pac_basssynth') # Préciser le nom de séquence # On coupe le bass synth et allez hop bass/batt
 
         if name == 'prince2pac_pitchdown':
             postprocess.animate_pitch('*', 1, 0.25, 0.5, 'beat')
