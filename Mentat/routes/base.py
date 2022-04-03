@@ -58,9 +58,9 @@ class RouteBase(Route):
 
             if hasattr(method, 'mk2_buttons'):
                 for button in method.mk2_buttons:
-                    if button not in self.direct_routing['/pedalboard/button']:
-                        self.direct_routing['/pedalboard/button'][button] = []
-                    self.direct_routing['/pedalboard/button'][button].insert(0, method)
+                    if button not in self.direct_routing['/mk2/button']:
+                        self.direct_routing['/mk2/button'][button] = []
+                    self.direct_routing['/mk2/button'][button].insert(0, method)
                     self.mk2_lights[button] = method.mk2_buttons[button]
 
     def activate(self):

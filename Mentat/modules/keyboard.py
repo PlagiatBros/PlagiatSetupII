@@ -39,6 +39,6 @@ class Keyboard(Module):
             if name in self.scenes[scene]['subscenes']:
                 self.set('scene', self.scenes[scene]['number'])
                 self.set('subscene', self.scenes[scene]['subscenes'].index(name) + 1)
-                self.logger.info('switched to scene "%s"' % name)
+                self.logger.info('switched to sound "%s"' % name)
                 return
-        self.logger.error('scene "%s" not found' % name)
+        self.logger.error('sound "%s" not found' % name)

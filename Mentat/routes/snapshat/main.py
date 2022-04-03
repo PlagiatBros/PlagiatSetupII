@@ -157,7 +157,7 @@ class Snapshat(Video, Light, RouteBase):
         GOTO MCOB
         """
         engine.set_route('mcob')
-        engine.active_route.part('intro')
+        engine.active_route.intro()
 
     @mk2_button(6, 'yellow')
     def nanomeuf(self):
