@@ -1,6 +1,6 @@
 # add local package to import path
 # not needed if package is installed
-from sys import path, exit
+from sys import path, exit, argv
 from os.path import dirname
 path.insert(0, dirname(__file__) + '/../src/mentat')
 
@@ -77,7 +77,8 @@ def docs():
     f.write(_docs)
     f.close()
 
-engine.root_module.start_scene('docs', docs)
+if '--docs' in argv:
+    engine.root_module.start_scene('docs', docs)
 #################################################################
 #################################################################
 

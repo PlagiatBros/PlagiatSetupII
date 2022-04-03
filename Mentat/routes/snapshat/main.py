@@ -6,11 +6,6 @@ from modules import *
 
 class Snapshat(Video, Light, RouteBase):
 
-
-    @pedalboard_button(10)
-    def test(self):
-        print('call from MAIN')
-
     def __init__(self):
 
         super().__init__(name='Snapshat')
@@ -29,6 +24,10 @@ class Snapshat(Video, Light, RouteBase):
         # Microtonality
         microtonality.enable()
         microtonality.set_tuning(0, 0, 0, 0.35, 0, 0, 0, 0, 0, 0, 0.35, 0)
+
+    @pedalboard_button(10)
+    def test_btn(self):
+        print('call from MAIN')
 
     @pedalboard_button(1)
     @mk2_button(1, 'blue')

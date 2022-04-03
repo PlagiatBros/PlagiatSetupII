@@ -83,15 +83,25 @@ class RouteBase(Route):
             engine.set_route(args[0])
 
 
-    def start_sequence(self, name, *args, **kwargs):
+    def start_sequence(self, name, sequence, loop=True):
         """
         Start scene with sequence prefix and self.play_sequence() as method
-        """
-        self.start_scene('sequences/%s' % name, self.play_sequence, *args, **kwargs)
 
-    def stop_sequence(self, name, *args, **kwargs):
+        **Parameters**
+
+        - `name`: name of sequence
+        - `sequence`: see Route.play_sequences()
+        - `loop`: see Route.play_sequences()
+        """
+        self.start_scene('sequences/%s' % name, self.play_sequence, sequence, loop)
+
+    def stop_sequence(self, name):
         """
         Stop scene with sequence prefix
+
+        **Parameters**
+
+        - `name`: name of sequence
         """
         self.stop_scene('sequences/%s' % name)
 

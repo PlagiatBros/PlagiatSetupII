@@ -159,7 +159,11 @@ class Mcob(Video, Light, RouteBase):
         vocalsKesch.set('gars_exclu', 'on')
 
         # Sequences (Mentat)
-        self.start_sequence('prince2pac_launcher')
+        self.start_scene('prince2pac_launcher', lambda: [
+            self.wait_next_cycle(),
+            self.start_sequence('prince2pac_vocals_a', self.sequences['prince2pac_vocals_a'], loop=False),
+            self.start_sequence('prince2pac_basses_a', self.sequences['prince2pac_basses_a'], loop=False),
+        ])
 
     @mk2_button(3, 'purple')
     def couplet1_3(self):
@@ -179,107 +183,99 @@ class Mcob(Video, Light, RouteBase):
         vocalsKesch.set('gars_exclu', 'on')
 
         # Sequences (Mentat)
-        self.start_sequence('prince2pac_vocals_b')
-        self.start_sequence('prince2pac_basses_b')
+        self.start_sequence('prince2pac_vocals_b', self.sequences['prince2pac_vocals_b'], loop=False)
+        self.start_sequence('prince2pac_basses_b', self.sequences['prince2pac_basses_b'], loop=False)
 
 
-    def sequences(self, name):
+    sequences = {
+        """
+        Sequences for self.start_sequences
+        """
 
-        if name == 'prince2pac_launcher':
+        'prince2pac_vocals_a': [
+            {   # bar 1
+                'signature': '4/4',
+                1: lambda: vocalsKesch.set('gars_exclu', 'on')
+            },
+            {}, {}, {}, {}, {}, # bars 2, 3, 4, 5, 6,
+            {   # bar 7
+                1: lambda: [vocalsKesch.set('gars', 'on'), vocalsKesch.set('normo', 'on')]
+            },
+            {}, {}, # bars 8, 9
+            {   # bar 10
+                1: lambda: vocalsKesch.set('normo_exclu', 'on')
+            },
+            {}, {}, # bars 11, 12
+            {   # bar 13
+                2: lambda: vocalsKesch.set('meuf', 'on'),
+                3: lambda: vocalsKesch.set('meuf', 'off'),
+                4: lambda: vocalsKesch.set('meuf', 'on'),
+            },
+            {   # bar 14
+                1: lambda: vocalsKesch.set('meuf', 'off'),
+            },
+            {}, {}, {}, # bars 15, 16, 17
+        ],
 
-            while True:
-                self.stop_sequence('prince2pac_launcher') # ??
-                self.start_sequence('prince2pac_vocals_a')
-                self.start_sequence('prince2pac_basses_a')
-                self.wait(4, 'beat')
+        'prince2pac_basses_a': [
+            {'signature': '%s/4' % 15*4},
+            {
+                'signature': '4/4',
+                4: lambda: postprocess.animate_pitch('*', 1, 0.25, 0.5, 'beat'),
+                4.95: lambda: postprocess.animate_pitch('*', 0.25, 1, 0.05, 'beat')
+            },
+            {
+                1: lambda: seq192.select('off', 'prince2pac_basssynth')
+                # Préciser le nom de séquence # On coupe le bass synth et allez hop bass/batt
+            }
+        ],
 
-        if name == 'prince2pac_vocals_a':
+        'prince2pac_vocals_b': [
+            {   # bar 1
+                'signature': '4/4',
+                1: lambda: [vocalsKesch.set('meuf_exclu', 'on'), vocalsKesch.set('normo', 'on')],
+            },
+            {  # bar 2
+                3 + 2/3: lambda: vocalsKesch.set('gars_exclu', 'on'),
+            },
+            {}, # bar 3
+            {}, # bar 4
+            {   # bar 5
+                1: lambda: vocalsKesch.set('gars_exclu', 'on')
+            },
+            {}, # bar 6
+            {}, # bar 7
+            {   # bar 8
+                4 + 2/3: lambda: vocalsKesch.set('normo', 'on')
+            },
+            {}, # bar 9
+            {}, # bar 10
+            {   # bar 11
+                1: lambda: vocalsKesch.set('normo_exclu', 'on'),
+                3: lambda: vocalsKesch.set('meuf', 'on')
+            },
+            {   # bar 12
+                1: lambda: vocalsKesch.set('meuf', 'off'),
+                4.5: lambda: vocalsKesch.set('meuf', 'on')
+            },
+            {   # bar 13
+                2.5: lambda: vocalsKesch.set('meuf', 'off'),
+                3: lambda: vocalsKesch.set('meuf', 'on'),
+                4.5: lambda: vocalsKesch.set('meuf', 'off'),
+            },
+            {   # bar 14
+                1: lambda: vocalsKesch.set('meuf', 'on'),
+            },
+            {   # bar 15
+                2.5: lambda: vocalsKesch.set('meuf', 'off'),
+                3: lambda: vocalsKesch.set('meuf', 'on')
+            },
+            {},  # bar 16
+            {},  # bar 17
+        ],
 
-            while True:
-                vocalsKesch.set('gars_exclu', 'on')
-                self.wait(4, 'beat')
-                self.wait(5*4, 'beat')
+        'prince2pac_basses_b': {
+            # todo
+        }
 
-                vocalsKesch.set('gars', 'on')
-                vocalsKesch.set('normo', 'on')
-                self.wait(4, 'beat')
-                self.wait(4, 'beat')
-
-                vocalsKesch.set('normo_exclu', 'on')
-                self.wait(4, 'beat')
-                self.wait(2*4, 'beat')
-
-                self.wait(1, 'beat')
-                vocalsKesch.set('meuf', 'on')
-                self.wait(1, 'beat')
-                vocalsKesch.set('meuf', 'off')
-                self.wait(1, 'beat')
-                vocalsKesch.set('meuf', 'on')
-                self.wait(1, 'beat')
-
-                vocalsKesch.set('meuf', 'off')
-                self.wait(4, 'beat')
-                self.wait(3*4, 'beat')
-
-        if name == 'prince2pac_basses_a':
-
-            while True:
-                self.wait(15*4, 'beat')
-                self.wait(3, 'beat')
-                self.start_sequence('prince2pac_pitchdown')
-                self.wait(1, 'beat')
-                seq192.select('off', 'prince2pac_basssynth') # Préciser le nom de séquence # On coupe le bass synth et allez hop bass/batt
-
-        if name == 'prince2pac_pitchdown':
-            postprocess.animate_pitch('*', 1, 0.25, 0.5, 'beat')
-            self.wait(0.95, 'beat')
-            postprocess.animate_pitch('*', 0.25, 1, 0.05, 'beat')
-
-        if name == 'prince2pac_vocals_b':
-
-            self.play_sequence([
-                {   # bar 1
-                    'signature': '4/4',
-                    1: lambda: [vocalsKesch.set('meuf_exclu', 'on'), vocalsKesch.set('normo', 'on')],
-                },
-                {  # bar 2
-                    3 + 2/3: lambda: vocalsKesch.set('gars_exclu', 'on'),
-                },
-                {}, # bar 3
-                {}, # bar 4
-                {   # bar 5
-                    1: lambda: vocalsKesch.set('gars_exclu', 'on')
-                },
-                {}, # bar 6
-                {}, # bar 7
-                {   # bar 8
-                    4 + 2/3: lambda: vocalsKesch.set('normo', 'on')
-                },
-                {}, # bar 9
-                {}, # bar 10
-                {   # bar 11
-                    1: lambda: vocalsKesch.set('normo_exclu', 'on'),
-                    3: lambda: vocalsKesch.set('meuf', 'on')
-                },
-                {   # bar 12
-                    1: lambda: vocalsKesch.set('meuf', 'off')
-                    4.5: lambda: vocalsKesch.set('meuf', 'on')
-                },
-                {   # bar 13
-                    2.5: lambda: vocalsKesch.set('meuf', 'off'),
-                    3: lambda: vocalsKesch.set('meuf', 'on'),
-                    4.5: lambda: vocalsKesch.set('meuf', 'off'),
-                },
-                {   # bar 14
-                    1: lambda: vocalsKesch.set('meuf', 'on'),
-                },
-                {   # bar 15
-                    2.5: lambda: vocalsKesch.set('meuf', 'off'),
-                    3: lambda: vocalsKesch.set('meuf', 'on')
-                },
-                {},  # bar 16
-                {},  # bar 17
-            ], loop=False)
-
-        if name == 'prince2pac_basses_b':
-            pass
+    }
