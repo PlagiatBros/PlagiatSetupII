@@ -1,5 +1,8 @@
+from ..base import mk2_button, pedalboard_button
+from modules import *
+
 class Light():
 
-    def part(self, *args, **kwargs):
-
-        pass
+    @pedalboard_button(10)
+    def light_test(self):
+        print('call from LIGHT')

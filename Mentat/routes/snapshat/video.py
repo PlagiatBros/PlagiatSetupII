@@ -1,5 +1,8 @@
+from ..base import mk2_button, pedalboard_button
+from modules import *
+
 class Video():
 
-    def part(self, *args, **kwargs):
-
-        pass
+    @pedalboard_button(10)
+    def light_video(self):
+        print('call from VIDEO')

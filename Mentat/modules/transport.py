@@ -72,7 +72,7 @@ class Transport(Module):
 
         self.engine.set_time_signature(signature)
 
-        eighths = self.engine.cycle_length * 2
+        eighths = int(self.engine.cycle_length * 2)
 
         if pattern is None:
             pattern = ''

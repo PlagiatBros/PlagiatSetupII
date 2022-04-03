@@ -1,5 +1,5 @@
-from .trackA import TrackA
-from .snapshat import Snapshat
+from .snapshat.main import Snapshat
+from .mcob.main import Mcob
 
-trackA = TrackA()
 snapshat = Snapshat()
+mcob = Mcob()
