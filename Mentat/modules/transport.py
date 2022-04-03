@@ -33,6 +33,15 @@ class Transport(Module):
         # pos.beat_type = 8.0
 
     def set_tempo(self, bpm):
+        """
+        Set tempo.
+        Set sooperlooper's tempo and let jack transport do the rest (sl is transport master).
+        Some delays are synced to the tempo as well.
+
+        **Parameters**
+
+        - `bpm`: beats per minute
+        """
 
         self.engine.set_tempo(bpm)
 
