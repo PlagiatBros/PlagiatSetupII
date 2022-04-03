@@ -177,6 +177,9 @@ class Mcob(Video, Light, RouteBase):
         # Sequences
         seq192.select('solo', 'couplet1-3_*')
 
+        # Transport
+        transport.start()
+
         # Vocals
         vocalsNano.set('gars', 'on')
         vocalsNano.set('normo', 'on')
