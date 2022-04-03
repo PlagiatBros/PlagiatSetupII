@@ -36,6 +36,11 @@ class SooperLooper(Module):
     def record(self, i):
         self.send('/sl/%s/hit' % i, 'record')
 
+    # def record_now(self, i):
+    #     self.send('/sl/%s/set' % i, 'sync', 0)
+    #     self.send('/sl/%s/hit' % i, 'record')
+    #     self.send('/sl/%s/set' % i, 'sync', 1)
+
     def overdub(self, i):
         self.send('/sl/%s/hit' % i, 'overdub')
 

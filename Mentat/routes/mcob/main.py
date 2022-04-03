@@ -41,7 +41,6 @@ class Mcob(Video, Light, RouteBase):
         """
         INTRO
         """
-
         self.pause_loopers()
         self.reset()
 
@@ -49,6 +48,7 @@ class Mcob(Video, Light, RouteBase):
         seq192.select('solo', 'intro_*')
 
         # Transport
+        transport.set_tempo(120)
         transport.start()
 
         # Samples
@@ -71,7 +71,6 @@ class Mcob(Video, Light, RouteBase):
         """
         REFRAIN
         """
-
         self.pause_loopers()
         self.reset()
 
@@ -79,6 +78,7 @@ class Mcob(Video, Light, RouteBase):
         seq192.select('solo', 'refrain_*')
 
         # Transport
+        transport.set_tempo(120)
         transport.start()
 
         # Samples
@@ -105,7 +105,6 @@ class Mcob(Video, Light, RouteBase):
         """
         COUPLET 1 - Trap "Look"
         """
-
         self.pause_loopers()
         self.reset()
 
@@ -113,6 +112,7 @@ class Mcob(Video, Light, RouteBase):
         seq192.select('solo', 'couplet1-1_*')
 
         # Transport
+        transport.set_tempo(120)
         transport.start()
 
         # Samples
@@ -139,7 +139,6 @@ class Mcob(Video, Light, RouteBase):
         """
         COUPLET 1 - Prince 2 Pac
         """
-
         # Sequences
         seq192.select('solo', 'couplet1-2_*')
 
@@ -170,14 +169,11 @@ class Mcob(Video, Light, RouteBase):
         """
         COUPLET 1 - Shaft
         """
-
-        self.pause_loopers()
-        self.reset()
-
         # Sequences
         seq192.select('solo', 'couplet1-3_*')
 
         # Transport
+        transport.set_tempo(120)
         transport.start()
 
         # Vocals
@@ -188,6 +184,194 @@ class Mcob(Video, Light, RouteBase):
         # Sequences (Mentat)
         self.start_sequence('prince2pac_vocals_b', self.seq_prince2pac_vocals_b, loop=False)
         self.start_sequence('prince2pac_basses_b', self.seq_prince2pac_basses_b, loop=False)
+
+    @mk2_button(4, 'purple')
+    def couplet1_4(self):
+        """
+        COUPLET 1 - Ragga
+        """
+        self.pause_loopers()
+        self.reset()
+
+        # Sequences
+        seq192.select('solo', 'couplet1-4_*')
+
+        # Transport
+        transport.set_tempo(120)
+        transport.start()
+
+        # Samples
+        samplesFX6Scape.set('Samples2', 'Gain', 'Gain', -10.0) # attention - 10 et - 5 dans setup précédent
+        samplesFX6Scape.set('SamplesFX6Scape', 'Gain', 'Mute', 0.0)
+
+        samplesFX2Delay.set('Samples2', 'Gain', 'Gain', -9.0)
+        samplesFX2Delay.set('SamplesFX2Delay', 'Gain', 'Mute', 0.0)
+
+        samples.set('Samples1', 'Gain', 'Mute', 0.0)
+        samples.set('Samples2', 'Gain', 'Mute', 0.0)
+        samples.set('Samples4', 'Gain', 'Mute', 0.0)
+
+        # Vocals
+        vocalsKesch.set('meuf_exclu', 'on')
+        vocalsNano.set('gars_exclu', 'on')
+
+    @pedalboard_button(5)
+    def prerefrain(self):
+        """
+        PRE-REFRAIN
+        """
+        self.pause_loopers()
+        self.reset()
+
+        # Sequences
+        seq192.select('solo', 'prerefrain_*')
+
+        # Transport
+        transport.set_tempo(120)
+        transport.start()
+
+        # Samples
+        samplesFX6Scape.set('Samples2', 'Gain', 'Gain', -5.0)
+        samplesFX6Scape.set('SamplesFX6Scape', 'Gain', 'Mute', 0.0)
+
+        samples.set('Samples1', 'Gain', 'Mute', 0.0)
+        samples.set('Samples2', 'Gain', 'Mute', 0.0)
+        samples.set('Samples5', 'Gain', 'Mute', 0.0)
+
+        # Vocals
+        vocalsKesch.set('gars', 'on')
+        vocalsKesch.set('meuf', 'on')
+        vocalsNano.set('normo_exclu', 'on')
+
+    @mk2_button(2)
+    def refrain2(self):
+        """
+        REFRAIN 2 (cf REFRAIN)
+        """
+        # méthode vide juste pour que le déroulé du morceau appairaisse de façon linéaire
+        pass
+
+    @pedalboard_button(6)
+    def couplet2(self):
+        """
+        COUPLET 2
+        """
+        self.pause_loopers()
+        self.reset()
+
+        # Looper
+        looper.reset(0)
+        looper.record(0)
+
+        # Sequences
+        seq192.select('solo', 'couplet2_*')
+
+        # Transport
+        transport.set_tempo(120)
+        transport.start()
+
+        # Samples
+        samplesFX6Scape.set('Samples2', 'Gain', 'Gain', -10.0) # attention - 10 et - 5 dans setup précédent
+        samplesFX6Scape.set('SamplesFX6Scape', 'Gain', 'Mute', 0.0)
+
+        samplesFX2Delay.set('Samples2', 'Gain', 'Gain', -9.0)
+        samplesFX2Delay.set('SamplesFX2Delay', 'Gain', 'Mute', 0.0)
+
+        samples.set('Samples1', 'Gain', 'Mute', 0.0)
+        samples.set('Samples2', 'Gain', 'Mute', 0.0)
+        samples.set('Samples4', 'Gain', 'Mute', 0.0)
+
+        # Vocals
+        vocalsKesch.set('gars', 'on')
+        vocalsKesch.set('meuf', 'on')
+        vocalsNano.set('normo_exclu', 'on')
+
+    @pedalboard_button(7)
+    def blast(self):
+        """
+        BLAST
+        """
+        self.pause_loopers()
+        self.reset()
+
+        # Sequences
+        seq192.select('solo', 'blast1_*')
+
+        # Transport
+        transport.start()
+        transport.set_tempo(120)
+
+        # Samples
+        samplesFX6Scape.set('Samples2', 'Gain', 'Gain', -5.0)
+        samplesFX6Scape.set('SamplesFX6Scape', 'Gain', 'Mute', 0.0)
+
+        samples.set('Samples1', 'Gain', 'Mute', 0.0)
+        samples.set('Samples2', 'Gain', 'Mute', 0.0)
+        samples.set('Samples3', 'Gain', 'Mute', 0.0)
+        samples.set('Samples5', 'Gain', 'Mute', 0.0)
+
+        # Scenes
+        self.start_sequence('delayed_blast', {
+            'signature': '32/4',
+            33: lambda: seq192.select('solo', 'blast2_*'),
+        })
+
+
+    @pedalboard_button(8)
+    def trance(self):
+        """
+        TRANCE
+        """
+        self.pause_loopers()
+        self.reset()
+
+        # Sequences
+        seq192.select('solo', 'trance_*')
+
+        # Transport
+        transport.start()
+        transport.set_tempo(130)
+
+    @pedalboard_button(9)
+    def rec_synth(self):
+        """
+        RECORD SYNTH
+        """
+        looper.record(7)
+
+    @pedalboard_button(10)
+    def loop_synth(self):
+        """
+        OVERDUB SYNTH
+        """
+        looper.overdub(7)
+
+    @mk2_button(5, 'purple')
+    def relance_trance(self):
+        """
+        RELANCE TRANCE
+        """
+        self.pause_loopers()
+        self.reset()
+
+        # Looper
+        looper.trigger('[0,3,7]')
+
+        # Transport
+        transport.set_tempo(130)
+        transport.start()
+
+        # Samples
+        samplesFX6Scape.set('Samples2', 'Gain', 'Gain', -5.0)
+        samplesFX6Scape.set('SamplesFX6Scape', 'Gain', 'Mute', 0.0)
+
+        samples.set('Samples1', 'Gain', 'Mute', 0.0)
+        samples.set('Samples2', 'Gain', 'Mute', 0.0)
+        samples.set('Samples5', 'Gain', 'Mute', 0.0)
+
+        # Vocals
+        vocalsKesch.set('meuf_exclu', 'on') # TODO delay
+        vocalsNano.set('meuf_exclu', 'on')
 
 
     """
