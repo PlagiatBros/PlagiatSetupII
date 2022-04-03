@@ -7,6 +7,7 @@ from modules import *
 
 from inspect import getmembers
 
+method_index = 0
 class pedalboard_button():
     """
     Decorator for route methods that can be called directly
@@ -15,6 +16,10 @@ class pedalboard_button():
     def __init__(self, button):
         self.button = button
     def __call__(self, method):
+        if not hasattr(method, 'index'):
+            global method_index
+            method.index = method_index
+            method_index += 1
         if not hasattr(method, 'pedalboard_buttons'):
             method.pedalboard_buttons = {}
         method.pedalboard_buttons[self.button] = True
@@ -31,6 +36,10 @@ class mk2_button():
         self.button = button
         self.color = color
     def __call__(self, method):
+        if not hasattr(method, 'index'):
+            global method_index
+            method.index = method_index
+            method_index += 1
         if not hasattr(method, 'mk2_buttons'):
             method.mk2_buttons = {}
         method.mk2_buttons[self.button] = self.color

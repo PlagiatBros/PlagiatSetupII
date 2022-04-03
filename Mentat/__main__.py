@@ -2,10 +2,12 @@
 # not needed if package is installed
 from sys import path, exit, argv
 from os.path import dirname
+import logging
 path.insert(0, dirname(__file__) + '/../src/mentat')
 
 # add all modules
-from inspect import getmembers, signature
+from inspect import getmembers, signature, getdoc
+from textwrap import indent
 from mentat import Module
 from modules import engine
 import modules
@@ -25,9 +27,6 @@ for name, mod in getmembers(routes):
 
 # set default route
 engine.set_route('Snapshat')
-
-# enable autorestart upon file modification
-engine.autorestart()
 
 #################################################################
 #################################################################
@@ -70,6 +69,28 @@ def print_params(mod, depth=0):
     for name in mod.submodules:
         print_params(mod.submodules[name], depth + 1)
 
+def print_routes():
+    global _docs
+
+    for name, route in engine.routes.items():
+        if getdoc(route):
+            print(getdoc(route))
+        else:
+            print(route.name)
+        print()
+        methods = [x for n,x in getmembers(route) if callable(x) and (hasattr(x, 'mk2_buttons') or hasattr(x, 'pedalboard_buttons'))]
+        methods = sorted(methods, key=lambda m: m.index)
+        for part in methods:
+            if hasattr(part, 'mk2_buttons'):
+                print('  Mk2 button: %s' % ', '.join([str(x) for x in part.mk2_buttons.keys()]))
+            if hasattr(part, 'pedalboard_buttons'):
+                print('  Pedalboard button: %s' % ', '.join([str(x) for x in part.pedalboard_buttons.keys()]))
+            if getdoc(part):
+                print(indent(getdoc(part), '    '), '\n')
+            else:
+                print(indent(part.__name__, '    '), '\n')
+
+
 def docs():
     engine.root_module.wait(2,'s')
     print_params(engine.root_module, 0)
@@ -79,8 +100,21 @@ def docs():
 
 if '--docs' in argv:
     engine.root_module.start_scene('docs', docs)
+    engine.stop_scene('*')
+    exit(0)
+
+if '--routes-docs' in argv:
+    logging.getLogger().setLevel(logging.CRITICAL)
+    print_routes()
+    engine.stop_scene('*')
+    exit(0)
+
+
 #################################################################
 #################################################################
+
+# enable autorestart upon file modification
+engine.autorestart()
 
 # start main loop
 engine.start()

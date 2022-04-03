@@ -5,6 +5,9 @@ from .light import Light
 from modules import *
 
 class Mcob(Video, Light, RouteBase):
+    """
+    MCOB
+    """
 
     def __init__(self):
 
@@ -31,6 +34,7 @@ class Mcob(Video, Light, RouteBase):
     def stop(self):
         """
         STOP
+        zazad
         """
         self.pause_loopers()
         transport.stop()
