@@ -26,7 +26,7 @@ class Snapshat(Light, Video, Audio, GlobalRoute):
         Called when the engine switches to this route.
         """
         transport.set_tempo(90)
-        transport.set_cycle(8)
+        transport.set_cycle('4/4')
 
         # Setups, banks...
         seq192.set_screenset(self.name)

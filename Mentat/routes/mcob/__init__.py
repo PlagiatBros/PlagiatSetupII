@@ -26,7 +26,7 @@ class Mcob(Light, Video, Audio, GlobalRoute):
         Called when the engine switches to this route.
         """
         transport.set_tempo(120)
-        transport.set_cycle(8)
+        transport.set_cycle('4/4')
 
         # Setups, banks...
         seq192.set_screenset(self.name)

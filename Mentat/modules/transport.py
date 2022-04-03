@@ -46,9 +46,24 @@ class Transport(Module):
                 ('SynthsFX5Scape', 'SynthsFX5Scape')]:
             self.engine.modules[mixer].set(strip, 'Scape', 'bpm', bpm)
 
-    def set_cycle(self, eighths, pattern=None):
+    def set_cycle(self, signature, pattern=None):
+        """
+        Set time signature (cycle length)
 
-        self.engine.set_cycle_length(eighths)
+        **Parameters**
+
+        - `signature`: musical time signature string ('4/4') or eigths per cycle number (legacy)
+        - `pattern`:
+            klick pattern (X = accented beat, x = normal beat, . = silence).
+            If `None`, a default pattern is generated (straight quarter notes with an accent on beat 1)
+        """
+
+        if type(signature) in [float, int]:
+            signature = '%s/8' % signature
+
+        self.engine.set_time_signature(signature)
+
+        eighths = self.engine.cycle_length * 2
 
         if pattern is None:
             pattern = ''
@@ -61,12 +76,17 @@ class Transport(Module):
                     pattern += 'x'
 
         self.engine.modules['Klick'].set('pattern', pattern)
-        self.engine.modules['Klick'].set('cycle', '%i/8' % eighths)
+        self.engine.modules['Klick'].set('cycle', signature)
 
         self.engine.modules['Loop192'].set('cycle', eighths)
         self.engine.modules['Looper'].set('cycle', eighths)
 
     def start(self):
+        """
+        Start transport.
+        Tell seq192 to start and let jack transport do the rest.
+        Klick is started manually.
+        """
 
         self.engine.start_cycle()
 
@@ -85,6 +105,11 @@ class Transport(Module):
         self.engine.modules['Klick'].start()
 
     def stop(self):
+        """
+        Stop transport.
+        Tell seq192 to stop and let jack transport do the rest.
+        Klick is stopped manually.
+        """
 
         if MENTAT_JACK_MASTER and self.jack:
 
