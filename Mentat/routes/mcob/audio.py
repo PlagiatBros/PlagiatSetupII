@@ -204,6 +204,7 @@ class Audio():
 
             self.play_sequence([
                 {   # bar 1
+                    'signature': '4/4',
                     1: lambda: [vocalsKesch.set('meuf_exclu', 'on'), vocalsKesch.set('normo', 'on')],
                 },
                 {  # bar 2
@@ -243,7 +244,7 @@ class Audio():
                 },
                 {},  # bar 16
                 {},  # bar 17
-            ], length=4, loop=False)
+            ], loop=False)
 
         if name == 'prince2pac_basses_b':
             pass
