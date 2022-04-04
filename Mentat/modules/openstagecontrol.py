@@ -178,7 +178,7 @@ class OpenStageControl(Module):
                         'address': '/%s/%s/Gain/Mute' % (name, sname)
                     })
 
-        self.edit_gui(self. 'non-mixers', panel)
+        self.edit_gui('non-mixers', panel)
 
     def edit_gui(self, widget, data):
         """
@@ -190,7 +190,7 @@ class OpenStageControl(Module):
         self.send('/EDIT_QUEUE/START', widget)
         size = 1024 * 16
         i = 0
-        
+
         while True:
             bits = blob[i:i+size]
             self.send('/EDIT_QUEUE/APPEND', widget, bits)

@@ -328,6 +328,14 @@ class Mcob(Video, Light, RouteBase):
         # Sequences
         seq192.select('solo', 'trance_*')
 
+        # Samples
+        samplesFX6Scape.set('Samples2', 'Gain', 'Gain', -5.0)
+        samplesFX6Scape.set('SamplesFX6Scape', 'Gain', 'Mute', 0.0)
+
+        samples.set('Samples1', 'Gain', 'Mute', 0.0)
+        samples.set('Samples2', 'Gain', 'Mute', 0.0)
+        samples.set('Samples5', 'Gain', 'Mute', 0.0)
+
         # Transport
         transport.start()
         transport.set_tempo(130)
