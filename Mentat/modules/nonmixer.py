@@ -1,18 +1,28 @@
 from mentat import Module
 
 class Strip(Module):
+    """
+    NonMixer Strip
+    """
 
     def __init__(self, *args, **kwargs):
 
         super().__init__(*args, **kwargs)
 
 class Plugin(Module):
-
+    """
+    NonMixer Plugin
+    """
     def __init__(self, *args, **kwargs):
 
         super().__init__(*args, **kwargs)
 
 class NonMixer(Module):
+    """
+    Base module for NonMixer instances.
+    Retrieves all controllable parameters with their values automatically at init, structured as follows:
+    NonMixer > Strips > Plugins > Parameters
+    """
 
     def __init__(self, *args, **kwargs):
 
@@ -26,10 +36,16 @@ class NonMixer(Module):
         self.send('/signal/list')
 
     def route(self, address, args):
+        """
+        Populate submodules and parameters from non's response
+        """
 
         if address == '/reply' and args[0] == '/signal/list':
 
             if len(args) > 1:
+                """
+                Populating
+                """
 
                 path = args[1].split('/')
 
@@ -70,13 +86,14 @@ class NonMixer(Module):
                         # self.submodules[strip_name].add_alias_parameter(NonMixer.plugin_aliases[plugin_name] + '/' + param_shortname , parameter_name)
 
 
-            else:
-
+            else: # only 1 arg: list end
+                """
+                All received, query current values and create meta parameters
+                """
                 for parameter_address in self.init_params:
                     self.send(parameter_address)
 
-                # only 1 arg: list end
-                # self.logger.info('strip list retreived')
+
                 self.create_meta_parameters()
 
         elif address == '/reply' and args[0] in self.init_params:
@@ -96,7 +113,9 @@ class NonMixer(Module):
         return False
 
     def create_meta_parameters(self):
-
+        """
+        For specific instances we'll create meta parameters
+        """
         pass
 
     plugin_aliases = {

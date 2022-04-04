@@ -2,7 +2,7 @@ from mentat import Module
 
 class Keyboard(Module):
     """
-    Keyboard sound switcher base (mididings patches)
+    Base module for keyboard sound banks (mididings patches)
     """
 
     def __init__(self, *args, **kwargs):

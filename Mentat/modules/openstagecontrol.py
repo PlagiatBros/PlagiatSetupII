@@ -5,6 +5,9 @@ import json
 import urllib.parse
 
 class OpenStageControl(Module):
+    """
+    Open Stage Control touch interface.
+    """
 
     def __init__(self, *args, **kwargs):
 
@@ -17,6 +20,12 @@ class OpenStageControl(Module):
         self.osc_state = {}
 
     def parameter_changed(self, module, name, value):
+        """
+        Whenever a parameter changes, send it to the interface:
+            /submodule_name/module_name parameter_name *value
+
+        and store that state locally.
+        """
 
         # send state changes to OSC
         # /module_name param_name value
@@ -32,6 +41,9 @@ class OpenStageControl(Module):
         self.osc_state[address][name] = value
 
     def send_state(self):
+        """
+        Send local state (because it's not part of this module's actual state)
+        """
 
         super().send_state()
 
@@ -41,19 +53,32 @@ class OpenStageControl(Module):
                 self.send(address, name, *self.osc_state[address][name])
 
     def route(self, address, args):
+        """
+        Allow controlling any module from the interface using the same syntax:
+            /submodule_name/module_name parameter_name *value
+        """
 
         # send OSC controls to modules
         # /module_name param_name value
         module_path = address.split('/')
         module_name = module_path[1]
-        print(address, args)
+
         if module_name in self.engine.modules:
             self.engine.modules[module_name].set(*module_path[2:], *args)
             return False
 
 
     def populate_gui(self):
-        self.wait(2, 's')
+        """
+        Here be dragons.
+
+        Generates a gui for all non mixers instance.
+
+        Maybe this could be extended to all modules.
+        Maybe this is overkill.
+        """
+
+        self.wait(2, 's') # wait until everyone is here (bad, should rely on events)
 
         panel = {'tabs': []}
 
@@ -153,14 +178,24 @@ class OpenStageControl(Module):
                         'address': '/%s/%s/Gain/Mute' % (name, sname)
                     })
 
-        blob = json.dumps(panel)
-        self.send('/EDIT_QUEUE/START', 'non-mixers')
+        self.edit_gui(self. 'non-mixers', panel)
+
+    def edit_gui(self, widget, data):
+        """
+        Send data to interface, split it into small chunks that udp can handle.
+        """
+
+        blob = json.dumps(data)
+
+        self.send('/EDIT_QUEUE/START', widget)
         size = 1024 * 16
         i = 0
+        
         while True:
             bits = blob[i:i+size]
-            self.send('/EDIT_QUEUE/APPEND', 'non-mixers', bits)
+            self.send('/EDIT_QUEUE/APPEND', widget, bits)
             if i >= len(blob):
                 break
             i += size
-        self.send('/EDIT_QUEUE/END', 'non-mixers')
+
+        self.send('/EDIT_QUEUE/END', widget)
