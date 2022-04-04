@@ -1,6 +1,9 @@
 from mentat import Module
 
 class Keyboard(Module):
+    """
+    Keyboard sound switcher base (mididings patches)
+    """
 
     def __init__(self, *args, **kwargs):
 
@@ -14,6 +17,9 @@ class Keyboard(Module):
         self.scenes = {}
 
     def route(self, address, args):
+        """
+        Retrieve available sounds from mididings
+        """
 
         if address == '/mididings/begin_scenes':
             self.scenes = {}
@@ -33,7 +39,11 @@ class Keyboard(Module):
 
     def set_sound(self, name):
         """
-        set subscene by name
+        Set sound by name
+
+        **Parameters**
+
+        - `name`: name of sound (subscene in mididings patch)
         """
         for scene in self.scenes:
             if name in self.scenes[scene]['subscenes']:

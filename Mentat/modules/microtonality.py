@@ -1,6 +1,9 @@
 from mentat import Module
 
 class MicroTonality(Module):
+    """
+    Microtonality manager for autotunes, zyn synths and calf synths.
+    """
 
     def __init__(self, *args, **kwargs):
 
@@ -11,14 +14,18 @@ class MicroTonality(Module):
         self.calfpitcher = 'CalfPitcher'
 
     def enable(self):
-
+        """
+        Enable microtonality
+        """
         modules = self.engine.modules
 
         modules[self.zynsynth].set('microtonality', True)
 
 
     def disable(self):
-
+        """
+        Disable microtonality
+        """
         modules = self.engine.modules
 
         self.set_tuning(*[0.0 for i in range(12)])
@@ -28,7 +35,11 @@ class MicroTonality(Module):
 
     def set_tuning(self, *tuning):
         """
-        *tuning: 12 semi-tones tuning between -1 and 1
+        Set per-note tuning for autotunes, zyn synths and calf synths.
+
+        **Parameters**
+
+        - `*tunings`: 12 float arguments between -1 (-1 semi-tone) and 1 (+1 semi-tone)
         """
 
         modules = self.engine.modules
@@ -42,4 +53,4 @@ class MicroTonality(Module):
 
         # autotuner
         for at in self.autotunes:
-            modules[at].set_tuning(tuning)
+            modules[at].set_tuning(*tuning)

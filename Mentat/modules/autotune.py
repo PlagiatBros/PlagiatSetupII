@@ -1,6 +1,9 @@
 from mentat import Module
 
 class Autotune(Module):
+    """
+    Autotuner (x42-fat1)
+    """
 
     def __init__(self, *args, offset=0.0, **kwargs):
 
@@ -37,13 +40,27 @@ class Autotune(Module):
         self.add_meta_parameter('pitch',  ['offset'], pitch_getter, pitch_setter)
 
 
-    def set_notes(self, notes):
+    def set_notes(self, *notes):
+        """
+        Set allowed notes for the autotuner.
+
+        **Parameters**
+
+        - `*notes`: 12 int arguments that can be either 1 (allowed) or 0 (disallowed)
+        """
         i = 0
         for note in notes:
             self.set('note_%i' % i, note)
             i += 1
 
-    def set_tuning(self, tunings):
+    def set_tuning(self, *tunings):
+        """
+        Set per-note tuning.
+
+        **Parameters**
+
+        - `*tunings`: 12 float arguments between -1 (-1 semi-tone) and 1 (+1 semi-tone)
+        """
         i = 0
         for tuning in tunings:
             self.set('tuning_%i' % i, tuning)

@@ -1,6 +1,9 @@
 from mentat import Module
 
 class Klick(Module):
+    """
+    Metronom, your only true friend.
+    """
 
     def __init__(self, *args, **kwargs):
 
@@ -12,7 +15,13 @@ class Klick(Module):
 
 
     def start(self):
+        """
+        Start metronom
+        """
         self.send('/klick/metro/start')
 
     def stop(self):
+        """
+        Stop metronom
+        """
         self.send('/klick/metro/stop')

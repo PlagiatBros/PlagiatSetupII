@@ -3,6 +3,9 @@ from .keyboard import Keyboard
 
 
 class Mk2Keyboard(Keyboard):
+    """
+    Mk2 piano keyboard (mididings patch)
+    """
 
     def __init__(self, *args, **kwargs):
 
@@ -10,7 +13,7 @@ class Mk2Keyboard(Keyboard):
 
 class Mk2Control(Module):
     """
-    MIDI control interface
+    Mk2 MIDI control interface
     """
 
     def __init__(self, *args, **kwargs):

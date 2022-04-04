@@ -42,7 +42,8 @@ class mk2_button():
             method_index += 1
         if not hasattr(method, 'mk2_buttons'):
             method.mk2_buttons = {}
-        method.mk2_buttons[self.button] = self.color
+        if not self.button in method.mk2_buttons:
+            method.mk2_buttons[self.button] = self.color
         return method
 
 class RouteBase(Route):
