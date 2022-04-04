@@ -23,6 +23,15 @@ class Mk2Control(Module):
         self.sysex = []
 
     def set_lights(self, lights):
+        """
+        Generates sysex messages for setting colors on pads
+
+        **Parameters**
+
+        - `lights`:
+            `dict` with pad number as keys (1-indexed) and color names as values. Omitted pad will be turned off.
+            Available color: red, blue, green purple, cyan, yellow, white
+        """
 
         for i in range(1,17):
             self.sysex = []
@@ -41,11 +50,18 @@ class Mk2Control(Module):
         self.resend_lights()
 
     def resend_lights(self):
+        """
+        Send sysex messages to mk2
+        """
 
         for s in self.sysex:
             self.send('/sysex', *s)
 
     def route(self, address, args):
+        """
+        Route controls from mk2.
+        Reset colors whenever a pad is hit, otherwise it dosen't stay lit.
+        """
 
         if address == '/control':
 

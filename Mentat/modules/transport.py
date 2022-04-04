@@ -5,6 +5,9 @@ if MENTAT_JACK_MASTER:
 from mentat import Module
 
 class Transport(Module):
+    """
+    Transport manager (tempo, time signature, klick pattern, playback)
+    """
 
     def __init__(self, *args, **kwargs):
 

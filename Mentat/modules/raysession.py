@@ -3,6 +3,10 @@ from mentat import Module
 import os
 
 class RaySession(Module):
+    """
+    RaySession (Non Session Manager) monitor.
+    Keeps track of clients states and keep mentat modules in sync with them.
+    """
 
     def __init__(self, *args, **kwargs):
 

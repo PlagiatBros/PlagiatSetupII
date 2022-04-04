@@ -1,6 +1,9 @@
 from mentat import Module
 
 class Tap192(Module):
+    """
+    Sample player
+    """
 
     def __init__(self, *args, **kwargs):
 
@@ -16,6 +19,13 @@ class Tap192(Module):
             self.send('/setup/get/kits_list', 'Plagiat')
 
     def set_kit(self, name):
+        """
+        Set active kit by name
+
+        **Parameters**
+
+        - `name`: name of kit (as written in Tap192)
+        """
 
         if self.ready:
 
@@ -36,7 +46,9 @@ class Tap192(Module):
 
 
     def route(self, address, args):
-
+        """
+        Store kit list sent by Tap192
+        """
         if address == '/setup/tap192/kits_list':
 
             self.kits = args[1:]

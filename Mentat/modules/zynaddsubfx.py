@@ -1,6 +1,9 @@
 from mentat import Module
 
 class ZynAddSubFx(Module):
+    """
+    ZynAddSubFx synthesizer
+    """
 
     def __init__(self, *args, **kwargs):
 
@@ -18,6 +21,9 @@ class ZynAddSubFx(Module):
         return False
 
 class ZynPart(Module):
+    """
+    ZynAddSubFx sound, can be associated with multiple parts in zyn.
+    """
 
     def __init__(self, *args, parts=[], **kwargs):
 
@@ -34,7 +40,9 @@ class ZynPart(Module):
                 self.logger.debug('probe %s' % address)
 
     def route(self, address, args):
-
+        """
+        Store initial values of parameters
+        """
         if address in self.feedback_addresses:
             part, param = self.feedback_addresses[address]
             data = ZynPart.parameters[param]
