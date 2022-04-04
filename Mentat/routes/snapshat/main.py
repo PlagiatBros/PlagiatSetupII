@@ -6,10 +6,6 @@ from modules import *
 
 class Snapshat(Video, Light, RouteBase):
 
-    def __init__(self):
-
-        super().__init__(name='Snapshat')
-
     def activate(self):
         """
         Called when the engine switches to this route.

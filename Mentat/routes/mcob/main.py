@@ -9,10 +9,6 @@ class Mcob(Video, Light, RouteBase):
     MCOB
     """
 
-    def __init__(self):
-
-        super().__init__(name='Mcob')
-
     def activate(self):
         """
         Called when the engine switches to this route.
