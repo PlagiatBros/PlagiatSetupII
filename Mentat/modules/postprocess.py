@@ -27,7 +27,7 @@ class PostProcess(Module):
         self.no_AMpitch = ['VocalsNano', 'VocalsKesch']
         mod = self.engine.modules['Outputs']
         for n in fnmatch.filter(mod.submodules.keys(), strip_name):
-            if n not in no_AMpitch:
+            if n not in self.no_AMpitch:
                 mod.set(n, 'Pitchshifter', 'Pitch', pitch)
             else:
                 pre = n[6:]
@@ -50,7 +50,7 @@ class PostProcess(Module):
         self.no_AMpitch = ['VocalsNano', 'VocalsKesch']
         mod = self.engine.modules['Outputs']
         for n in fnmatch.filter(mod.submodules.keys(), strip_name):
-            if n not in no_AMpitch:
+            if n not in self.no_AMpitch:
                 mod.animate(n, 'Pitchshifter', 'Pitch', start, end, duration, mode, easing)
             else:
                 pre = n[6:]
