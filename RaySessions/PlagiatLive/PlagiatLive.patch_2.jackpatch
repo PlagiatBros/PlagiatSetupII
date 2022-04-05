@@ -109,9 +109,9 @@ Non-Mixer.Outputs (Outputs):Bass/out-2   |> Non-Mixer.Outputs (Outputs):FOH/in-2
 Non-Mixer.Outputs (Outputs):BassSynths/aux-A/out-1 |> system:playback_9
 Non-Mixer.Outputs (Outputs):BassSynths/out-1 |> Non-Mixer.Outputs (Outputs):FOH/in-1
 Non-Mixer.Outputs (Outputs):BassSynths/out-2 |> Non-Mixer.Outputs (Outputs):FOH/in-2
-Non-Mixer.Outputs (Outputs):FOH/out-1    |> darkice-3120:left
+Non-Mixer.Outputs (Outputs):FOH/out-1    |> darkice-6209:left
 Non-Mixer.Outputs (Outputs):FOH/out-1    |> system:playback_13
-Non-Mixer.Outputs (Outputs):FOH/out-2    |> darkice-3120:right
+Non-Mixer.Outputs (Outputs):FOH/out-2    |> darkice-6209:right
 Non-Mixer.Outputs (Outputs):FOH/out-2    |> system:playback_14
 Non-Mixer.Outputs (Outputs):Kick/aux-A/out-1 |> system:playback_3
 Non-Mixer.Outputs (Outputs):Kick/out-1   |> Non-Mixer.Outputs (Outputs):FOH/in-1
