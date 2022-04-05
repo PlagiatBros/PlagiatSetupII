@@ -3731,8 +3731,8 @@
         604
       ],
       "in_xy": [
-        -1050,
-        -163
+        -1036,
+        -238
       ],
       "out_xy": [
         -695,
@@ -3751,8 +3751,8 @@
         557
       ],
       "in_xy": [
-        -1028,
-        -240
+        -1034,
+        -158
       ],
       "out_xy": [
         -695,
@@ -3772,7 +3772,7 @@
       ],
       "in_xy": [
         -1050,
-        -104
+        -96
       ],
       "out_xy": [
         -695,
@@ -4187,8 +4187,8 @@
       "in_zone": "",
       "out_zone": "",
       "null_xy": [
-        -1303,
-        -391
+        -1368,
+        -398
       ],
       "in_xy": [
         400,
@@ -7119,6 +7119,106 @@
         1302
       ],
       "flags": 68
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "Non-Mixer.MonitorsNano/Unnamed",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        -7,
+        80
+      ],
+      "in_xy": [
+        400,
+        4015
+      ],
+      "out_xy": [
+        0,
+        4015
+      ],
+      "flags": 0
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "mumble",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        1072,
+        174
+      ],
+      "in_xy": [
+        400,
+        4082
+      ],
+      "out_xy": [
+        0,
+        4082
+      ],
+      "flags": 0
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "darkice-3120",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        1057,
+        339
+      ],
+      "in_xy": [
+        400,
+        4082
+      ],
+      "out_xy": [
+        0,
+        4082
+      ],
+      "flags": 0
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "cLowRouter",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        -1223,
+        -269
+      ],
+      "in_xy": [
+        400,
+        4082
+      ],
+      "out_xy": [
+        0,
+        4082
+      ],
+      "flags": 0
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "cHiRouter",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        -1441,
+        581
+      ],
+      "in_xy": [
+        400,
+        4082
+      ],
+      "out_xy": [
+        0,
+        4082
+      ],
+      "flags": 0
     }
   ]
 }
