@@ -34,3 +34,6 @@
 [submodule "src/fat1.lv2"]
 	path = src/fat1.lv2
 	url = git://github.com/PlagiatBros/fat1.lv2.git
+[submodule "src/mididings"]
+	path = src/mididings
+	url = git@github.com:dsacre/mididings
