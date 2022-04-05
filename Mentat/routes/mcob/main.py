@@ -160,7 +160,7 @@ class Mcob(Video, Light, RouteBase):
         # Sequences (Mentat)
         self.start_scene('prince2pac_launcher', lambda: [
             self.wait_next_cycle(),
-            self.start_sequence('prince2pac_vocals_a', [
+            self.start_sequence('prince2pac_a', [
                 {   # bar 1
                     'signature': '4/4',
                     1: lambda: vocalsKesch.set('gars_exclu', 'on')
@@ -188,8 +188,8 @@ class Mcob(Video, Light, RouteBase):
                     4.95: lambda: postprocess.animate_pitch('*', 0.25, 1, 0.05, 'beat')
                 },
                 {  # bar 17
-                    1: lambda: seq192.select('off', 'prince2pac_basssynth')
-                    # Préciser le nom de séquence # On coupe le bass synth et allez hop bass/batt
+                    1: lambda: [seq192.select('off', 'couplet1-2_cLow_*'),seq192.select('on', 'couplet1-2_cLow_trap1')]
+                    # On coupe le bass synth et allez hop bass/batt
                 },
             ], loop=False),
         ])
@@ -200,7 +200,7 @@ class Mcob(Video, Light, RouteBase):
         COUPLET 1 - Shaft
         """
         # Sequences
-        seq192.select('solo', 'couplet1-3_*')
+        seq192.select('solo', 'couplet1-2_*')
 
         # Transport
         transport.set_tempo(120)
@@ -212,15 +212,20 @@ class Mcob(Video, Light, RouteBase):
         vocalsKesch.set('gars_exclu', 'on')
 
         # Sequences (Mentat)
-        self.start_sequence('prince2pac_vocals_b', [
+        self.start_sequence('prince2pac_b', [
             {   # bar 1
                 'signature': '4/4',
-                1: lambda: [vocalsKesch.set('meuf_exclu', 'on'), vocalsKesch.set('normo', 'on')],
+                1: lambda: [
+                    vocalsKesch.set('meuf_exclu', 'on'), vocalsKesch.set('normo', 'on'),
+                    seq192.select('off', 'couplet1-2_cLow_*')
+                    ],
             },
             {  # bar 2
                 3 + 2/3: lambda: vocalsKesch.set('gars_exclu', 'on'),
             },
-            {}, {}, # bar 3, 4
+            {  # bar 3
+                1: lambda: seq192.select('on', 'couplet1-2_cLow_*')
+            }, {}, # bar 4
             {   # bar 5
                 1: lambda: vocalsKesch.set('gars_exclu', 'on')
             },
@@ -251,6 +256,7 @@ class Mcob(Video, Light, RouteBase):
             },
             {}, {},  # bar 16, 17
         ], loop=False)
+
 
     @mk2_button(4, 'purple')
     def couplet1_4(self):
