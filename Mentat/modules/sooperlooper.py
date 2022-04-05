@@ -26,6 +26,20 @@ class SooperLooper(Module):
         for i in range(16):
             self.add_submodule(Loop('loop_%i' % i, loop_n=i, parent=self))
 
+        self.pending_record = None
+
+    def start(self):
+        """
+        Reset cycle start position
+        """
+        self.send('/set', 'sync_source', 0)
+        if self.pending_record is not None:
+            self.send('/sl/%s/set' % self.pending_record, 'sync', 0)
+            self.send('/sl/%s/hit' % self.pending_record, 'record')
+            self.send('/sl/%s/set' % self.pending_record, 'sync', 1)
+            self.pending_record = None
+        self.send('/set', 'sync_source', -3)
+
     def reset(self, i='-1'):
         """
         Reset loop(s) (remove audio content and duration)
@@ -50,15 +64,15 @@ class SooperLooper(Module):
             - osc pattern to affect multiple loops (examples: '[1,2,5]', '[2-5]'...)
             - `-1` to affect all loops
         """
-        self.send('/set', 'sync_source', 0)
         self.send('/sl/%s/set' % i, 'sync', 0)
+        self.send('/sl/%s/hit' % i, 'pause_off')
         self.send('/sl/%s/hit' % i, 'trigger')
         self.send('/sl/%s/set' % i, 'sync', 1)
-        self.send('/set', 'sync_source', -3)
 
     def record(self, i):
         """
-        Start recording at next cycle
+        Start recording at next cycle.
+        WARNING: record will not start before the beginning of the 3rd cycle after transport.start() was called/
 
         **Parameters**
 
@@ -69,10 +83,18 @@ class SooperLooper(Module):
         """
         self.send('/sl/%s/hit' % i, 'record')
 
-    # def record_now(self, i):
-    #     self.send('/sl/%s/set' % i, 'sync', 0)
-    #     self.send('/sl/%s/hit' % i, 'record')
-    #     self.send('/sl/%s/set' % i, 'sync', 1)
+    def record_on_start(self, i):
+        """
+        Start recording next time transport.start()
+
+        **Parameters**
+
+        - `i`:
+            - loop number or
+            - osc pattern to affect multiple loops (examples: '[1,2,5]', '[2-5]'...)
+            - `-1` to affect all loops
+        """
+        self.pending_record = i
 
     def overdub(self, i):
         """
@@ -98,4 +120,5 @@ class SooperLooper(Module):
             - osc pattern to affect multiple loops (examples: '[1,2,5]', '[2-5]'...)
             - `-1` to affect all loops
         """
+        self.send('/sl/%s/hit' % i, 'pause_off')
         self.send('/sl/%s/hit' % i, 'pause_on')
