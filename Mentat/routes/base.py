@@ -85,7 +85,7 @@ class RouteBase(Route):
         Base routing for all routes
         """
         if address in self.direct_routing:
-            if args[0] in self.direct_routing[address]:
+            if len(args) > 0 and args[0] in self.direct_routing[address]:
                 for method in self.direct_routing[address][args[0]]:
                     method()
 
