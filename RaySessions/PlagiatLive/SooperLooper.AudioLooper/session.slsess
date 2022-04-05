@@ -17,10 +17,10 @@
     <Control value="0" name="scratch_pos"/>
     <Control value="0" name="delay_trigger"/>
     <Control value="0" name="use_feedback_play"/>
-    <Control value="0" name="quantize"/>
+    <Control value="1" name="quantize"/>
     <Control value="0" name="round"/>
     <Control value="0" name="redo_is_tap"/>
-    <Control value="0" name="sync"/>
+    <Control value="1" name="sync"/>
     <Control value="0" name="use_rate"/>
     <Control value="64" name="fade_samples"/>
     <Control value="0" name="playback_sync"/>
@@ -33,11 +33,11 @@
     <Control value="0" name="round_integer_tempo"/>
    </Controls>
   </Looper>
-  <Looper channels="1" stretch_ratio="1" loop_secs="40" discrete_prefader="yes" use_common_outs="yes" tempo_stretch="no" use_common_ins="yes" index="1" relative_sync="no" discrete_io="yes" auto_latency="yes" pitch_shift="0">
-   <Panner link_direction="0" linked="no" bypassed="no">
-    <StreamPanner muted="no" x="0.500000" type="Equal Power Stereo"/>
-    <Output y="0.000000" x="0.000000"/>
-    <Output y="0.000000" x="1.000000"/>
+  <Looper auto_latency="yes" tempo_stretch="no" use_common_ins="yes" channels="1" loop_secs="40" discrete_io="yes" relative_sync="no" pitch_shift="0" use_common_outs="yes" stretch_ratio="1" index="1">
+   <Panner linked="no" link_direction="0" bypassed="no">
+    <StreamPanner muted="no" type="Equal Power Stereo" x="0.500000"/>
+    <Output x="0.000000" y="0.000000"/>
+    <Output x="1.000000" y="0.000000"/>
    </Panner>
    <Controls>
     <Control value="0" name="rec_thresh"/>
@@ -48,10 +48,10 @@
     <Control value="0" name="scratch_pos"/>
     <Control value="0" name="delay_trigger"/>
     <Control value="0" name="use_feedback_play"/>
-    <Control value="0" name="quantize"/>
+    <Control value="1" name="quantize"/>
     <Control value="0" name="round"/>
     <Control value="0" name="redo_is_tap"/>
-    <Control value="0" name="sync"/>
+    <Control value="1" name="sync"/>
     <Control value="0" name="use_rate"/>
     <Control value="64" name="fade_samples"/>
     <Control value="0" name="playback_sync"/>
@@ -64,11 +64,11 @@
     <Control value="0" name="round_integer_tempo"/>
    </Controls>
   </Looper>
-  <Looper channels="1" stretch_ratio="1" loop_secs="40" discrete_prefader="yes" use_common_outs="yes" tempo_stretch="no" use_common_ins="yes" index="2" relative_sync="no" discrete_io="yes" auto_latency="yes" pitch_shift="0">
-   <Panner link_direction="0" linked="no" bypassed="no">
-    <StreamPanner muted="no" x="0.500000" type="Equal Power Stereo"/>
-    <Output y="0.000000" x="0.000000"/>
-    <Output y="0.000000" x="1.000000"/>
+  <Looper loop_audio="../../../../../../plagiat/PlagiatSetup/RaySessions/PlagiatLive/SooperLooper.AudioLooper/session.slsess_loop_02.wav" auto_latency="yes" tempo_stretch="no" use_common_ins="yes" channels="1" loop_secs="40" discrete_io="yes" relative_sync="no" pitch_shift="0" use_common_outs="yes" stretch_ratio="1" index="2">
+   <Panner linked="no" link_direction="0" bypassed="no">
+    <StreamPanner muted="no" type="Equal Power Stereo" x="0.500000"/>
+    <Output x="0.000000" y="0.000000"/>
+    <Output x="1.000000" y="0.000000"/>
    </Panner>
    <Controls>
     <Control value="0" name="rec_thresh"/>
@@ -79,10 +79,10 @@
     <Control value="0" name="scratch_pos"/>
     <Control value="0" name="delay_trigger"/>
     <Control value="0" name="use_feedback_play"/>
-    <Control value="0" name="quantize"/>
+    <Control value="1" name="quantize"/>
     <Control value="0" name="round"/>
     <Control value="0" name="redo_is_tap"/>
-    <Control value="0" name="sync"/>
+    <Control value="1" name="sync"/>
     <Control value="0" name="use_rate"/>
     <Control value="64" name="fade_samples"/>
     <Control value="0" name="playback_sync"/>
@@ -95,11 +95,11 @@
     <Control value="0" name="round_integer_tempo"/>
    </Controls>
   </Looper>
-  <Looper channels="1" stretch_ratio="1" loop_secs="40" discrete_prefader="yes" use_common_outs="yes" tempo_stretch="no" use_common_ins="yes" index="3" relative_sync="no" discrete_io="yes" auto_latency="yes" pitch_shift="0">
-   <Panner link_direction="0" linked="no" bypassed="no">
-    <StreamPanner muted="no" x="0.500000" type="Equal Power Stereo"/>
-    <Output y="0.000000" x="0.000000"/>
-    <Output y="0.000000" x="1.000000"/>
+  <Looper auto_latency="yes" tempo_stretch="no" use_common_ins="yes" channels="1" loop_secs="40" discrete_io="yes" relative_sync="no" pitch_shift="0" use_common_outs="yes" stretch_ratio="1" index="3">
+   <Panner linked="no" link_direction="0" bypassed="no">
+    <StreamPanner muted="no" type="Equal Power Stereo" x="0.500000"/>
+    <Output x="0.000000" y="0.000000"/>
+    <Output x="1.000000" y="0.000000"/>
    </Panner>
    <Controls>
     <Control value="0" name="rec_thresh"/>
@@ -110,10 +110,10 @@
     <Control value="0" name="scratch_pos"/>
     <Control value="0" name="delay_trigger"/>
     <Control value="0" name="use_feedback_play"/>
-    <Control value="0" name="quantize"/>
+    <Control value="1" name="quantize"/>
     <Control value="0" name="round"/>
     <Control value="0" name="redo_is_tap"/>
-    <Control value="0" name="sync"/>
+    <Control value="1" name="sync"/>
     <Control value="0" name="use_rate"/>
     <Control value="64" name="fade_samples"/>
     <Control value="0" name="playback_sync"/>
@@ -126,11 +126,11 @@
     <Control value="0" name="round_integer_tempo"/>
    </Controls>
   </Looper>
-  <Looper channels="1" stretch_ratio="1" loop_secs="40" discrete_prefader="yes" use_common_outs="yes" tempo_stretch="no" use_common_ins="yes" index="4" relative_sync="no" discrete_io="yes" auto_latency="yes" pitch_shift="0">
-   <Panner link_direction="0" linked="no" bypassed="no">
-    <StreamPanner muted="no" x="0.500000" type="Equal Power Stereo"/>
-    <Output y="0.000000" x="0.000000"/>
-    <Output y="0.000000" x="1.000000"/>
+  <Looper auto_latency="yes" tempo_stretch="no" use_common_ins="yes" channels="1" loop_secs="40" discrete_io="yes" relative_sync="no" pitch_shift="0" use_common_outs="yes" stretch_ratio="1" index="4">
+   <Panner linked="no" link_direction="0" bypassed="no">
+    <StreamPanner muted="no" type="Equal Power Stereo" x="0.500000"/>
+    <Output x="0.000000" y="0.000000"/>
+    <Output x="1.000000" y="0.000000"/>
    </Panner>
    <Controls>
     <Control value="0" name="rec_thresh"/>
@@ -141,10 +141,10 @@
     <Control value="0" name="scratch_pos"/>
     <Control value="0" name="delay_trigger"/>
     <Control value="0" name="use_feedback_play"/>
-    <Control value="0" name="quantize"/>
+    <Control value="1" name="quantize"/>
     <Control value="0" name="round"/>
     <Control value="0" name="redo_is_tap"/>
-    <Control value="0" name="sync"/>
+    <Control value="1" name="sync"/>
     <Control value="0" name="use_rate"/>
     <Control value="64" name="fade_samples"/>
     <Control value="0" name="playback_sync"/>
@@ -157,11 +157,11 @@
     <Control value="0" name="round_integer_tempo"/>
    </Controls>
   </Looper>
-  <Looper channels="1" stretch_ratio="1" loop_secs="40" discrete_prefader="yes" use_common_outs="yes" tempo_stretch="no" use_common_ins="yes" index="5" relative_sync="no" discrete_io="yes" auto_latency="yes" pitch_shift="0">
-   <Panner link_direction="0" linked="no" bypassed="no">
-    <StreamPanner muted="no" x="0.500000" type="Equal Power Stereo"/>
-    <Output y="0.000000" x="0.000000"/>
-    <Output y="0.000000" x="1.000000"/>
+  <Looper auto_latency="yes" tempo_stretch="no" use_common_ins="yes" channels="1" loop_secs="40" discrete_io="yes" relative_sync="no" pitch_shift="0" use_common_outs="yes" stretch_ratio="1" index="5">
+   <Panner linked="no" link_direction="0" bypassed="no">
+    <StreamPanner muted="no" type="Equal Power Stereo" x="0.500000"/>
+    <Output x="0.000000" y="0.000000"/>
+    <Output x="1.000000" y="0.000000"/>
    </Panner>
    <Controls>
     <Control value="0" name="rec_thresh"/>
@@ -172,10 +172,10 @@
     <Control value="0" name="scratch_pos"/>
     <Control value="0" name="delay_trigger"/>
     <Control value="0" name="use_feedback_play"/>
-    <Control value="0" name="quantize"/>
+    <Control value="1" name="quantize"/>
     <Control value="0" name="round"/>
     <Control value="0" name="redo_is_tap"/>
-    <Control value="0" name="sync"/>
+    <Control value="1" name="sync"/>
     <Control value="0" name="use_rate"/>
     <Control value="64" name="fade_samples"/>
     <Control value="0" name="playback_sync"/>
@@ -188,11 +188,11 @@
     <Control value="0" name="round_integer_tempo"/>
    </Controls>
   </Looper>
-  <Looper channels="1" stretch_ratio="1" loop_secs="40" discrete_prefader="yes" use_common_outs="yes" tempo_stretch="no" use_common_ins="yes" index="6" relative_sync="no" discrete_io="yes" auto_latency="yes" pitch_shift="0">
-   <Panner link_direction="0" linked="no" bypassed="no">
-    <StreamPanner muted="no" x="0.500000" type="Equal Power Stereo"/>
-    <Output y="0.000000" x="0.000000"/>
-    <Output y="0.000000" x="1.000000"/>
+  <Looper auto_latency="yes" tempo_stretch="no" use_common_ins="yes" channels="1" loop_secs="40" discrete_io="yes" relative_sync="no" pitch_shift="0" use_common_outs="yes" stretch_ratio="1" index="6">
+   <Panner linked="no" link_direction="0" bypassed="no">
+    <StreamPanner muted="no" type="Equal Power Stereo" x="0.500000"/>
+    <Output x="0.000000" y="0.000000"/>
+    <Output x="1.000000" y="0.000000"/>
    </Panner>
    <Controls>
     <Control value="0" name="rec_thresh"/>
@@ -203,10 +203,10 @@
     <Control value="0" name="scratch_pos"/>
     <Control value="0" name="delay_trigger"/>
     <Control value="0" name="use_feedback_play"/>
-    <Control value="0" name="quantize"/>
+    <Control value="1" name="quantize"/>
     <Control value="0" name="round"/>
     <Control value="0" name="redo_is_tap"/>
-    <Control value="0" name="sync"/>
+    <Control value="1" name="sync"/>
     <Control value="0" name="use_rate"/>
     <Control value="64" name="fade_samples"/>
     <Control value="0" name="playback_sync"/>
@@ -219,11 +219,11 @@
     <Control value="0" name="round_integer_tempo"/>
    </Controls>
   </Looper>
-  <Looper channels="1" stretch_ratio="1" loop_secs="40" discrete_prefader="yes" use_common_outs="yes" tempo_stretch="no" use_common_ins="yes" index="7" relative_sync="no" discrete_io="yes" auto_latency="yes" pitch_shift="0">
-   <Panner link_direction="0" linked="no" bypassed="no">
-    <StreamPanner muted="no" x="0.500000" type="Equal Power Stereo"/>
-    <Output y="0.000000" x="0.000000"/>
-    <Output y="0.000000" x="1.000000"/>
+  <Looper auto_latency="yes" tempo_stretch="no" use_common_ins="yes" channels="1" loop_secs="40" discrete_io="yes" relative_sync="no" pitch_shift="0" use_common_outs="yes" stretch_ratio="1" index="7">
+   <Panner linked="no" link_direction="0" bypassed="no">
+    <StreamPanner muted="no" type="Equal Power Stereo" x="0.500000"/>
+    <Output x="0.000000" y="0.000000"/>
+    <Output x="1.000000" y="0.000000"/>
    </Panner>
    <Controls>
     <Control value="0" name="rec_thresh"/>
@@ -234,10 +234,10 @@
     <Control value="0" name="scratch_pos"/>
     <Control value="0" name="delay_trigger"/>
     <Control value="0" name="use_feedback_play"/>
-    <Control value="0" name="quantize"/>
+    <Control value="1" name="quantize"/>
     <Control value="0" name="round"/>
     <Control value="0" name="redo_is_tap"/>
-    <Control value="0" name="sync"/>
+    <Control value="1" name="sync"/>
     <Control value="0" name="use_rate"/>
     <Control value="64" name="fade_samples"/>
     <Control value="0" name="playback_sync"/>
