@@ -85,7 +85,7 @@ class SooperLooper(Module):
 
     def record_on_start(self, i):
         """
-        Start recording next time transport.start()
+        Start recording next time transport.start() is called
 
         **Parameters**
 
