@@ -152,7 +152,7 @@ class Snapshat(Video, Light, RouteBase):
         """
         GOTO MCOB
         """
-        engine.set_route('mcob')
+        engine.set_route('Mcob')
         engine.active_route.intro()
 
     @mk2_button(6, 'yellow')

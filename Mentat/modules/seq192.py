@@ -13,7 +13,8 @@ class Seq192(Module):
         self.add_parameter('screenset', '/screenset', 'i', default=0)
 
         self.screenset_map = {
-            'Snapshat': 0
+            'Snapshat': 0,
+            'Mcob': 1
         }
 
     def start(self):
@@ -60,7 +61,7 @@ class Seq192(Module):
             - row number(s) on active screenset (0-indexed)
             - multiple rows can be specified
             - if omitted, all rows are affected
-        - `*name`: 
+        - `*name`:
             - sequence name or osc pattern (can match multiple sequence names)
             - multiple names can be specified
         """
