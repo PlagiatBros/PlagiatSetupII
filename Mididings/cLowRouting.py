@@ -1,7 +1,7 @@
 from mididings import *
 
 config(
-    backend='alsa',
+    backend='jack',
     client_name='cLowRouter',
     out_ports=['Trap1', 'Trap2', 'Barkline', 'Boom'],
     in_ports=['In']

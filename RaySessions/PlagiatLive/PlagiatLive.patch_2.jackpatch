@@ -109,9 +109,7 @@ Non-Mixer.Outputs (Outputs):Bass/out-2   |> Non-Mixer.Outputs (Outputs):FOH/in-2
 Non-Mixer.Outputs (Outputs):BassSynths/aux-A/out-1 |> system:playback_9
 Non-Mixer.Outputs (Outputs):BassSynths/out-1 |> Non-Mixer.Outputs (Outputs):FOH/in-1
 Non-Mixer.Outputs (Outputs):BassSynths/out-2 |> Non-Mixer.Outputs (Outputs):FOH/in-2
-Non-Mixer.Outputs (Outputs):FOH/out-1    |> darkice-6209:left
 Non-Mixer.Outputs (Outputs):FOH/out-1    |> system:playback_13
-Non-Mixer.Outputs (Outputs):FOH/out-2    |> darkice-6209:right
 Non-Mixer.Outputs (Outputs):FOH/out-2    |> system:playback_14
 Non-Mixer.Outputs (Outputs):Kick/aux-A/out-1 |> system:playback_3
 Non-Mixer.Outputs (Outputs):Kick/out-1   |> Non-Mixer.Outputs (Outputs):FOH/in-1
@@ -635,8 +633,8 @@ Non-Mixer.VocalsNanoFX9Scape (In):NanoGars/out-1 |> Non-Mixer.VocalsNanoFX9Scape
 Non-Mixer.VocalsNanoFX9Scape (In):NanoMeuf/out-1 |> Non-Mixer.VocalsNanoFX9Scape (Process):VocalsNanoFX9Scape/in-1
 Non-Mixer.VocalsNanoFX9Scape (In):NanoNormo/out-1 |> Non-Mixer.VocalsNanoFX9Scape (Process):VocalsNanoFX9Scape/in-1
 Non-Mixer.VocalsNanoFX9Scape (Process):VocalsNanoFX9Scape/out-1 |> Non-Mixer.VocalsNano (Out):NanoOut/in-1
-QMidiArp.CHiArp:out 1                    |> a2j:cHiRouter (playback): MainIn
-QMidiArp.CLowArp:out 1                   |> a2j:cLowRouter (playback): In
+QMidiArp.CHiArp:out 1                    |> cHiRouter:MainIn
+QMidiArp.CLowArp:out 1                   |> cLowRouter:In
 QMidiArp.ZHiArp:out 1                    |> a2j:ZynAddSubFX ZHiSynths (playback): ZynAddSubFX
 QMidiArp.ZLowArp:out 1                   |> a2j:ZynAddSubFX ZLowSynths (playback): ZynAddSubFX
 Tap192.ConstantSampler:output-L          |> Non-Mixer.Samples (Main):ConstantSampler/in-1
@@ -685,26 +683,21 @@ a2j:MonoSynthMicroTonal (capture): DubstepHornOut |> Carla.HiCSynths/DubstepHorn
 a2j:MonoSynthMicroTonal (capture): EasyClassicalOut |> Carla.HiCSynths/EasyClassical:events-in
 a2j:MonoSynthMicroTonal (capture): TrapFifthOut |> Carla.HiCSynths/TrapFifth:events-in
 a2j:MonoSynthMicroTonal (capture): TrapOut |> Carla.HiCSynths/Trap:events-in
-a2j:cHiRouter (capture): DubstepHorn     |> a2j:MonoSynthMicroTonal (playback): DubstepHornIn
-a2j:cHiRouter (capture): EasyClassical   |> a2j:MonoSynthMicroTonal (playback): EasyClassicalIn
-a2j:cHiRouter (capture): Rhodes          |> Carla.HiCSynths/Rhodes:events-in
-a2j:cHiRouter (capture): Trap            |> a2j:MonoSynthMicroTonal (playback): TrapIn
-a2j:cHiRouter (capture): TrapFifth       |> a2j:MonoSynthMicroTonal (playback): TrapFifthIn
-a2j:cLowRouter (capture): Barkline       |> Carla.LowCSynths/Barkline:events-in
-a2j:cLowRouter (capture): Boom           |> Carla.LowCSynths/Boom:events-in
-a2j:cLowRouter (capture): Trap1          |> Carla.LowCSynths/Trap1:events-in
-a2j:cLowRouter (capture): Trap2          |> Carla.LowCSynths/Trap2:events-in
 a2j:loop192 MidiLooper (capture): Loop 0 |> QMidiArp.ZLowArp:in
 a2j:loop192 MidiLooper (capture): Loop 1 |> QMidiArp.CLowArp:in
 a2j:loop192 MidiLooper (capture): Loop 2 |> QMidiArp.ZHiArp:in
-a2j:loop192 MidiLooper (capture): Loop 3 |> a2j:cHiRouter (playback): RhodesIn
+a2j:loop192 MidiLooper (capture): Loop 3 |> cHiRouter:RhodesIn
 a2j:loop192 MidiLooper (capture): Loop 4 |> QMidiArp.CHiArp:in
 a2j:seq192 MainSequencer (capture): seq192 1 |> a2j:ZynAddSubFX ZLowSynths (playback): ZynAddSubFX
 a2j:seq192 MainSequencer (capture): seq192 10 |> a2j:Tap192 ProdSampler (playback): midi_in
-a2j:seq192 MainSequencer (capture): seq192 2 |> a2j:cLowRouter (playback): In
+a2j:seq192 MainSequencer (capture): seq192 2 |> cLowRouter:In
 a2j:seq192 MainSequencer (capture): seq192 3 |> a2j:ZynAddSubFX ZHiSynths (playback): ZynAddSubFX
-a2j:seq192 MainSequencer (capture): seq192 4 |> a2j:cHiRouter (playback): RhodesIn
-a2j:seq192 MainSequencer (capture): seq192 5 |> a2j:cHiRouter (playback): MainIn
+a2j:seq192 MainSequencer (capture): seq192 4 |> cHiRouter:RhodesIn
+a2j:seq192 MainSequencer (capture): seq192 5 |> cHiRouter:MainIn
+cLowRouter:Barkline                      |> Carla.LowCSynths/Barkline:events-in
+cLowRouter:Boom                          |> Carla.LowCSynths/Boom:events-in
+cLowRouter:Trap1                         |> Carla.LowCSynths/Trap1:events-in
+cLowRouter:Trap2                         |> Carla.LowCSynths/Trap2:events-in
 klick:out                                |> Non-Mixer.MonitorsKesch (MonitorsKesch):Klick/in-1
 klick:out                                |> Non-Mixer.MonitorsNano (MonitorsNano):Klick/in-1
 sooperlooper:loop0_out_1                 |> Non-Mixer.Bass (In):BassIn/in-1
