@@ -14,6 +14,7 @@ class OpenStageControl(Module):
         super().__init__(*args, **kwargs)
 
         self.add_event_callback('parameter_changed', self.parameter_changed)
+        self.add_event_callback('client_restarted', self.client_restarted)
 
         self.start_scene('populate_gui', self.populate_gui)
 
@@ -39,6 +40,11 @@ class OpenStageControl(Module):
         if address not in self.osc_state:
             self.osc_state[address] = {}
         self.osc_state[address][name] = value
+
+    def client_restarted(self, name):
+        if name == self.name:
+            self.start_scene('populate_gui', self.populate_gui)
+
 
     def send_state(self):
         """

@@ -19,7 +19,7 @@ class Autotune(Module):
         self.add_parameter('filter',    '/x42/parameter', 'if', static_args=[4], default=0.02)
         self.add_parameter('correction','/x42/parameter', 'if', static_args=[5], default=1.0)
         self.add_parameter('offset',    '/x42/parameter', 'if', static_args=[6], default=offset)
-        self.add_parameter('fastmode',  '/x42/parameter', 'if', static_args=[7], default=1.0)
+        self.add_parameter('fastmode',  '/x42/parameter', 'if', static_args=[8], default=1.0)
 
         self.base_offset = offset
         self.pitch_value = 1.0

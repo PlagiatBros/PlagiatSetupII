@@ -113,6 +113,8 @@ class Transport(Module):
 
             # seq192 will start jack transport
             self.engine.modules['Seq192'].start()
+            # sooperlooper needs a cycle start hack
+            self.engine.modules['Looper'].start()
 
         self.engine.modules['Klick'].start()
 

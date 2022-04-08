@@ -333,8 +333,7 @@ class Mcob(Video, Light, RouteBase):
         self.reset()
 
         # Looper
-        looper.reset(0)
-        looper.record(0)
+        looper.record_on_start(0)
 
         # Sequences
         seq192.select('solo', 'couplet2_*')
