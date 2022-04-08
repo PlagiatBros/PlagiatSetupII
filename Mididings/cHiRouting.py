@@ -1,7 +1,7 @@
 from mididings import *
 
 config(
-    backend='alsa',
+    backend='jack',
     client_name='cHiRouter',
     out_ports=['Rhodes', 'Trap', 'EasyClassical', 'DubstepHorn', 'TrapFifth'],
     in_ports=['MainIn', 'RhodesIn']
