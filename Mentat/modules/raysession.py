@@ -1,5 +1,7 @@
 from mentat import Module
 
+from .alsapatch import AlsaPatcher
+
 import os
 
 class RaySession(Module):
@@ -14,6 +16,11 @@ class RaySession(Module):
 
         self.client_statuses = {}
         self.client_init = []
+
+        self.alsa_patcher = AlsaPatcher('AlsaPatcher')
+        self.alsa_patcher.load('%s/RaySessions/PlagiatLive/PlagiatLive.alsapatch')
+
+        self.start_scene('alsa_connections', self.reconnect_alsa)
 
         self.send('/ray/server/monitor_quit')
         self.send('/ray/server/monitor_announce')
@@ -34,6 +41,9 @@ class RaySession(Module):
             if event == 'ready':
                 if name not in self.client_statuses or self.client_statuses[name] == 0:
                     self.client_started(name)
+
+                self.start_scene('alsa_connections', self.reconnect_alsa)
+
             elif event == 'stopped_by_server':
                 self.client_stopped(name)
             elif event == 'stopped_by_itself':
@@ -60,6 +70,13 @@ class RaySession(Module):
                 self.engine.dispatch_event('client_restarted', name)
                 module.send_state()
 
+
     def client_stopped(self, name):
 
         self.client_statuses[name] = 0
+
+
+    def reconnect_alsa(self):
+        self.wait(0.5, 'sec')
+        self.alsa_patcher.get_alsa_connections()
+        self.alsa_patcher.apply_patch()
