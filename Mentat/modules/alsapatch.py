@@ -9,6 +9,7 @@ class AlsaPort():
 
 
 class AlsaClient():
+
     def __init__(self, name, id, ports):
 
         self.name = name
@@ -19,15 +20,11 @@ class AlsaClient():
             port_name, port_id, connection_list = port
             self.ports[port_name] = AlsaPort(port_name, port_id)
 
-    def get_port(self, name):
-
-        if name in self.ports:
-            return self.ports[name]
-        else:
-            print('Error: Alsa MIDI: port "%s" not found in client "%s"' % (name, self.name))
-
 
 class AlsaPatcher(Module):
+    """
+    A dead simple Alsa MIDI patcher inspired by asspatch
+    """
 
     def __init__(self, *args, **kwargs):
 
@@ -76,7 +73,18 @@ class AlsaPatcher(Module):
             self.logger.error('Error: Alsa MIDI: client "%s" not found' % name)
 
 
+    def get_port(self, client, port_name):
+
+            if port_name in client.ports:
+                return client.ports[port_name]
+            else:
+                self.logger('Error: Alsa MIDI: port "%s" not found in client "%s"' % (port_name, client.name))
+
+
     def apply_patch(self):
+        """
+        Apply patch : attempt to make very connection in memory and ignore reconnection errors.
+        """
 
         for connection in self.connections:
 
@@ -87,8 +95,8 @@ class AlsaPatcher(Module):
 
             if src_client and dest_client:
 
-                src_port = src_client.get_port(src_port_name)
-                dest_port = dest_client.get_port(dest_port_name)
+                src_port = self.get_port(src_client, src_port_name)
+                dest_port = self.get_port(dest_client, dest_port_name)
 
                 if src_port and dest_port:
 
@@ -133,3 +141,13 @@ class AlsaPatcher(Module):
                 id=client_id,
                 ports=port_list
             )
+
+    def connect(self, timeout=0.5):
+        """
+        Query alsa ports and apply
+        """
+        self.start_scene('connect', lambda:[
+            self.wait(timeout, 'seconds'),
+            self.get_alsa_connections(),
+            self.apply_patch()
+        ])

@@ -18,9 +18,8 @@ class RaySession(Module):
         self.client_init = []
 
         self.alsa_patcher = AlsaPatcher('AlsaPatcher')
-        self.alsa_patcher.load('%s/RaySessions/PlagiatLive/PlagiatLive.alsapatch')
-
-        self.start_scene('alsa_connections', self.reconnect_alsa)
+        self.alsa_patcher.load('%s/RaySessions/PlagiatLive/PlagiatLive.alsapatch' % os.getenv('PLAGIAT_SETUP_DIR'))
+        self.alsa_patcher.connect()
 
         self.send('/ray/server/monitor_quit')
         self.send('/ray/server/monitor_announce')
@@ -42,7 +41,7 @@ class RaySession(Module):
                 if name not in self.client_statuses or self.client_statuses[name] == 0:
                     self.client_started(name)
 
-                self.start_scene('alsa_connections', self.reconnect_alsa)
+                self.alsa_patcher.connect()
 
             elif event == 'stopped_by_server':
                 self.client_stopped(name)
@@ -74,9 +73,3 @@ class RaySession(Module):
     def client_stopped(self, name):
 
         self.client_statuses[name] = 0
-
-
-    def reconnect_alsa(self):
-        self.wait(0.5, 'sec')
-        self.alsa_patcher.get_alsa_connections()
-        self.alsa_patcher.apply_patch()
