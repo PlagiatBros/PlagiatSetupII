@@ -1,6 +1,11 @@
 from pyalsa import alsaseq
 
-from mentat import Module
+try:
+    from mentat import Module
+except:
+    # for __main__ usage
+    class Module():
+        pass
 
 class AlsaPort():
     def __init__(self, name, id):
@@ -32,38 +37,11 @@ class AlsaPatcher(Module):
 
         self.seq = alsaseq.Sequencer(clientname='alsapatcher')
 
+        self.active_connections = []
         self.connections = []
 
         self.clients = {}
-
-    def load(self, file):
-        """
-        Load a patch from file. Each line must be of the following form:
-        clientname:portname |> clientname:portname
-        """
-        self.connections = []
-
-        try:
-            f = open(file, 'r')
-        except:
-            self.logger.error('Error: Alsa MIDI: could not open patch file "%s"' % file)
-            return
-
-        i=0
-        for line in f.readlines():
-            i += 1
-
-            if len(line):
-                src, _, dest = line.partition('|>')
-                src_client_name, _, src_port_name = src.strip().rpartition(':')
-                dest_client_name, _, dest_port_name = dest.strip().rpartition(':')
-
-                if len(src_client_name) and len(src_port_name) and len(dest_client_name) and len(dest_port_name):
-
-                    self.connections.append((src_client_name, src_port_name, dest_client_name, dest_port_name))
-
-                else:
-                    self.logger.error('Error: Alsa MIDI: could not parse connection "%s" at line %i' % (line, i))
+        self.clients_names = {}
 
     def get_client(self, name):
 
@@ -79,32 +57,6 @@ class AlsaPatcher(Module):
                 return client.ports[port_name]
             else:
                 self.logger('Error: Alsa MIDI: port "%s" not found in client "%s"' % (port_name, client.name))
-
-
-    def apply_patch(self):
-        """
-        Apply patch : attempt to make very connection in memory and ignore reconnection errors.
-        """
-
-        for connection in self.connections:
-
-            src_client_name, src_port_name, dest_client_name, dest_port_name = connection
-
-            src_client = self.get_client(src_client_name)
-            dest_client = self.get_client(dest_client_name)
-
-            if src_client and dest_client:
-
-                src_port = self.get_port(src_client, src_port_name)
-                dest_port = self.get_port(dest_client, dest_port_name)
-
-                if src_port and dest_port:
-
-                    try:
-                        self.seq.connect_ports((src_client.id, src_port.id), (dest_client.id, dest_port.id))
-                    except:
-                        # already connected
-                        pass
 
 
     def get_alsa_connections(self):
@@ -132,9 +84,15 @@ class AlsaPatcher(Module):
 
         clients = self.seq.connection_list()
 
+        self.clients_names.clear()
+        self.clients.clear()
+        self.active_connections.clear()
+
         for client in clients:
 
             client_name, client_id, port_list = client
+
+            self.clients_names[client_id] = client_name
 
             self.clients[client_name] = AlsaClient(
                 name=client_name,
@@ -142,12 +100,114 @@ class AlsaPatcher(Module):
                 ports=port_list
             )
 
+            for port in port_list:
+                port_name, port_id, connection_list = port
+                connections = connection_list[0]
+                for connection in connections:
+                    self.active_connections.append((client_id, port_id, connection[0], connection[1]))
+
+    def load(self, file):
+        """
+        Load a patch from file. Each line must be of the following form:
+        clientname:portname |> clientname:portname
+        """
+
+        self.connections.clear()
+
+        try:
+            f = open(file, 'r')
+        except:
+            self.logger.error('Error: Alsa MIDI: could not open patch file "%s"' % file)
+            return
+
+        i=0
+        for line in f.readlines():
+            i += 1
+
+            if len(line):
+                src, _, dest = line.partition('|>')
+                src_client_name, _, src_port_name = src.strip().rpartition(':')
+                dest_client_name, _, dest_port_name = dest.strip().rpartition(':')
+
+                if len(src_client_name) and len(src_port_name) and len(dest_client_name) and len(dest_port_name):
+
+                    self.connections.append((src_client_name, src_port_name, dest_client_name, dest_port_name))
+
+                else:
+                    self.logger.error('Error: Alsa MIDI: could not parse connection "%s" at line %i' % (line, i))
+
+
+    def apply_patch(self):
+        """
+        Apply patch : attempt to make very connection in memory and ignore reconnection errors.
+        """
+
+        self.get_alsa_connections(),
+
+        for connection in self.connections:
+
+            src_client_name, src_port_name, dest_client_name, dest_port_name = connection
+
+            src_client = self.get_client(src_client_name)
+            dest_client = self.get_client(dest_client_name)
+
+            if src_client and dest_client:
+
+                src_port = self.get_port(src_client, src_port_name)
+                dest_port = self.get_port(dest_client, dest_port_name)
+
+                if src_port and dest_port:
+
+                    if (src_client.id, src_port.id, dest_client.id, dest_port.id) not in self.active_connections:
+
+                        try:
+                            self.seq.connect_ports((src_client.id, src_port.id), (dest_client.id, dest_port.id))
+                        except Exception as e:
+                            self.logger.error('error while making connection %s:\n%s' % (list(connection), e))
+
+
+    def print_connections(self):
+        """
+        Print connections
+        """
+        self.get_alsa_connections(),
+
+        patch = []
+
+        for connection in self.active_connections:
+
+            src_client_id, src_port_id, dest_client_id, dest_port_id = connection
+
+            src_client_name = self.clients_names[src_client_id]
+            src_port_name = [port for port in self.clients[src_client_name].ports.values() if port.id == src_port_id][0].name
+
+            if src_client_name == 'System' and src_port_name == 'Announce':
+                continue
+
+            dest_client_name = self.clients_names[dest_client_id]
+            dest_port_name = [port for port in self.clients[dest_client_name].ports.values() if port.id == dest_port_id][0].name
+
+            src = src_client_name + ':' + src_port_name
+            dest = dest_client_name + ':' + dest_port_name
+
+            patch.append(src.ljust(36, ' ') + ' |> ' + dest)
+
+        print('\n'.join(patch))
+
     def connect(self, timeout=0.5):
         """
         Query alsa ports and apply
         """
         self.start_scene('connect', lambda:[
             self.wait(timeout, 'seconds'),
-            self.get_alsa_connections(),
             self.apply_patch()
         ])
+
+
+if __name__ == '__main__':
+    """
+    Usage:
+    python alsapatch.py > patch.alsapatch
+    """
+    a = AlsaPatcher()
+    a.print_connections()
