@@ -56,7 +56,13 @@ class Transport(Module):
         for mixer, strip in [
                 ('BassFX', 'BassScape'),
                 ('SynthsFX5Scape', 'SynthsFX5Scape')]:
-            self.engine.modules[mixer].set(strip, 'Scape', 'bpm', bpm)
+            if strip in self.engine.modules[mixer].submodules:
+                self.engine.modules[mixer].set(strip, 'Scape', 'bpm', bpm)
+            else:
+                # just in case non mixer infos are not loaded yet
+                self.start_scene(strip + '_bpm', lambda: [
+                    self.wait(1, 's'), self.engine.modules[mixer].set(strip, 'Scape', 'bpm', bpm)
+                ])
 
     def set_cycle(self, signature, pattern=None):
         """
