@@ -93,8 +93,9 @@ class Transport(Module):
                 else:
                     pattern += 'x'
 
+        nom, denom = signature.split('/')
+        self.engine.modules['Klick'].set('cycle', int(nom), int(denom))
         self.engine.modules['Klick'].set('pattern', pattern)
-        self.engine.modules['Klick'].set('cycle', signature)
 
         self.engine.modules['Loop192'].set('cycle', eighths)
         self.engine.modules['Looper'].set('cycle', eighths)
