@@ -20,7 +20,7 @@
           <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2020/ConnassesSACEM/48k_FrayedEnds.2.wav" sampleRelative="../../../../Samples/So2020/ConnassesSACEM/48k_FrayedEnds.2.wav"/>
         </instrument>
       </kit>
-      <kit name="AgneauGastrique" volume="1.000000">
+      <kit name="AgneauGastrik" volume="1.000000">
         <instrument name="AnoushkaRing" minnote="60" maxnote="60" rootnote="60" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples1" volume="0.390000" pan="0.000000" pitch_over_range="true" play_mode="trigger" play_loop="no" play_reverse="no">
           <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2020/AgnoGastrik/48k_AnoushkaSHankar.2@142-118.wav" sampleRelative="../../../../Samples/So2020/AgnoGastrik/48k_AnoushkaSHankar.2@142-118.wav"/>
         </instrument>

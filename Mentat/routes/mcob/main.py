@@ -434,6 +434,8 @@ class Mcob(Video, Light, RouteBase):
         self.pause_loopers()
         self.reset()
 
+        seq192.select('off', '*')
+
         # Looper
         looper.trigger('[0,3,7]')
 
