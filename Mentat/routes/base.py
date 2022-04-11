@@ -155,6 +155,10 @@ class RouteBase(Route):
                 # Outs
                 mod.set(name, 'Gain', 'Mute', 1.0)
 
+
+        # postprocess.set_filter('*', 24000)
+        # postprocess.set_pitch('*', 1)
+
     def resetSamples(self):
         """
         Reset (mute) all samples
@@ -177,3 +181,6 @@ class RouteBase(Route):
         """
         self.resetFX()
         self.resetSamples()
+
+        for name in outputs.submodules:
+            outputs.submodules[name].set('Gain', 'Mute', 0)

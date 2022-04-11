@@ -6,12 +6,15 @@ from modules import *
 
 class AgneauGastrik(Video, Light, RouteBase):
 
+    klick_pattern =          'X.x.x.x.X.x.x.x.X.x.x.x.Xxx.x.x.X.x.x.xX.x.x.x.X.x.x.x.X.x.xxx.X.x.x.x.X.x'
+    klick_pattern_reversed = 'X.x.x.x.X.x.x.x.X.x.xxx.X.x.x.x.X.xX.x.x.x.X.x.x.x.X.x.x.x.Xxx.x.x.X.x.x.x'
+
     def activate(self):
         """
         Called when the engine switches to this route.
         """
         transport.set_tempo(150)
-        transport.set_cycle('74/8', pattern='X.x.x.x.X.x.x.x.X.x.x.x.Xxx.x.x.X.x.x.xX.x.x.x.X.x.x.x.X.x.xxx.X.x.x.x.X.x')
+        transport.set_cycle('74/8', pattern=self.klick_pattern)
 
         # Setups, banks...
         seq192.set_screenset(self.name)
@@ -81,8 +84,10 @@ class AgneauGastrik(Video, Light, RouteBase):
         self.pause_loopers()
         self.reset()
 
+        transport.set_cycle('34/8')
+
         # Sequences
-        seq192.select('solo', 'couplet1_launcher*')
+        seq192.select('solo', 'launcher_*')
 
         # Transport
         transport.start()
@@ -91,12 +96,11 @@ class AgneauGastrik(Video, Light, RouteBase):
         vocalsNano.set('normo_exclu', 'on')
         vocalsKesch.set('gars_exclu', 'on')
 
-        # Sequences (Mentat)
-        self.start_sequence('refrain', {
-            'signature': '8/4',
-            1: lambda: vocalsKesch.set('gars_exclu', 'on'),
-            6: lambda: vocalsKesch.set('meuf_exclu', 'on'),
-        })
+        # Scene
+        self.start_scene('couplet_launcher', lambda:[
+            self.wait_next_cycle(),
+            self.couplet_1()
+        ])
 
     @mk2_button(3, 'purple')
     def couplet_1(self):
@@ -106,19 +110,124 @@ class AgneauGastrik(Video, Light, RouteBase):
         self.pause_loopers()
         self.reset()
 
+        transport.set_cycle('74/8', self.klick_pattern_reversed)
+
         # Sequences
         seq192.select('solo', 'couplet1_*')
 
         # Transport
         transport.start()
 
+        # Samples
+        samples.set('Samples1', 'Gain', 'Mute', 0.0)
+        samples.set('Samples2', 'Gain', 'Mute', 0.0)
+        samples.set('Samples3', 'Gain', 'Mute', 0.0)
+        samples.set('Samples4', 'Gain', 'Mute', 0.0)
+        samples.set('Samples5', 'Gain', 'Mute', 0.0)
+
         # Vocals
         vocalsNano.set('normo_exclu', 'on')
         vocalsKesch.set('gars_exclu', 'on')
 
-        # Sequences (Mentat)
-        self.start_sequence('refrain', {
-            'signature': '8/4',
-            1: lambda: vocalsKesch.set('gars_exclu', 'on'),
-            6: lambda: vocalsKesch.set('meuf_exclu', 'on'),
-        })
+
+        self.start_sequence('couplet1', [
+            {}, # smell it quick
+            {   # kind of mate
+                7.5: lambda: [
+                    # nano: « frisco »
+                    outputs.set('Synths', 'Gain', 'Mute', 1),
+                    outputs.set('Samples', 'Gain', 'Mute', 1),
+                ],
+                9.5: lambda: [
+                    outputs.set('Synths', 'Gain', 'Mute', 0),
+                    outputs.set('Samples', 'Gain', 'Mute', 0),
+                ],
+            },
+            {   # see it's easy
+                1: lambda: seq192.select('solo', 'couplet1b_*')
+            },
+            {   # things accelerating
+
+            },
+        ], loop=False)
+
+
+    @mk2_button(4, 'purple')
+    def refrain(self):
+        """
+        REFRAIN
+        """
+
+        self.pause_loopers()
+        self.reset()
+
+        transport.set_cycle('74/8', self.klick_pattern)
+
+        # Sequences
+        seq192.select('solo', 'refrain_*')
+
+        # Transport
+        transport.start()
+
+        # Samples
+        samples.set('Samples1', 'Gain', 'Mute', 0.0)
+        samples.set('Samples2', 'Gain', 'Mute', 0.0)
+        samples.set('Samples3', 'Gain', 'Mute', 0.0)
+        samples.set('Samples4', 'Gain', 'Mute', 0.0)
+        samples.set('Samples5', 'Gain', 'Mute', 0.0)
+
+        # Vocals
+        vocalsNano.set('gars_exclu', 'on')
+        vocalsKesch.set('normo_exclu', 'on')
+
+
+    @pedalboard_button(4)
+    def couplet_2(self):
+        """
+        COUPLET 2
+        """
+        self.pause_loopers()
+        self.reset()
+
+        transport.set_cycle('74/8', self.klick_pattern)
+
+        # Sequences
+        seq192.select('solo', 'couplet2_*')
+
+        # Transport
+        transport.start()
+
+        # Samples
+        samples.set('Samples1', 'Gain', 'Mute', 0.0)
+        samples.set('Samples2', 'Gain', 'Mute', 0.0)
+        samples.set('Samples3', 'Gain', 'Mute', 0.0)
+        samples.set('Samples4', 'Gain', 'Mute', 0.0)
+        samples.set('Samples5', 'Gain', 'Mute', 0.0)
+
+        # Vocals
+        vocalsNano.set('gars_exclu', 'on')
+        vocalsKesch.set('normo_exclu', 'on')
+
+
+        self.start_sequence('couplet2', [
+            {    # me grow i warn ya
+                'signature': '39/8',
+            },
+            {   # boutros boutros boutros
+                'signature': '35/8',
+                1: lambda: [
+                ],
+            },
+            {    # go get
+                'signature': '39/8',
+            },
+            {   # augustus ceasar
+                'signature': '35/8',
+                1: lambda: [
+                ],
+            },
+            {   # one, take butter
+                'signature': '16/4',
+                16.5: lambda: self.start_scene('stop', lambda: self.stop())
+            },
+        ], loop=False)

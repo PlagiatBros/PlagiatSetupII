@@ -20,12 +20,17 @@ class PostProcess(Module):
 
         **Parameters**
 
-        - `strip_name`: name of strip (with unix filename pattern matching support)
+        - `strip_name`: name of strip (with unix filename pattern matching support), or list of names
         - `pitch`: pitch multiplier (0.5 = -1 octave, 2 = +1 octave)
         """
+        if type(strip_name) is list:
+            for n in strip_name:
+                self.set_pitch(n, pitch)
+            return
 
         self.no_AMpitch = ['VocalsNano', 'VocalsKesch']
         mod = self.engine.modules['Outputs']
+
         for n in fnmatch.filter(mod.submodules.keys(), strip_name):
             if n not in self.no_AMpitch:
                 mod.set(n, 'Pitchshifter', 'Pitch', pitch)
@@ -40,13 +45,18 @@ class PostProcess(Module):
 
         **Parameters**
 
-        - `strip_name`: name of strip (with unix filename pattern matching support)
+        - `strip_name`: name of strip (with unix filename pattern matching support), or list of names
         - `start`: pitch multiplier start value (0.5 = -1 octave, 2 = +1 octave)
         - `end`: pitch multiplier end value (0.5 = -1 octave, 2 = +1 octave)
         - `duration`: animation duration
         - `mode`: beats or seconds
         - `easing`: interpolation curve (see mentat's documentation)
         """
+        if type(strip_name) is list:
+            for n in strip_name:
+                self.animate_pitch(n, start, end, duration, mode, easing)
+            return
+
         self.no_AMpitch = ['VocalsNano', 'VocalsKesch']
         mod = self.engine.modules['Outputs']
         for n in fnmatch.filter(mod.submodules.keys(), strip_name):
@@ -60,13 +70,18 @@ class PostProcess(Module):
 
     def set_filter(self, strip_name, freq):
         """
-        Set lowpass filter cutoff parameter for one or multiple strips
+        Set lowpass filter cutoff parameter for one or multiple strips, or list of names
 
         **Parameters**
 
         - `strip_name`: name of strip (with unix filename pattern matching support)
         - `freq`: cutoff frequency in Hz
         """
+        if type(strip_name) is list:
+            for n in strip_name:
+                self.set_filter(n, freq)
+            return
+
         mod = self.engine.modules['Outputs']
         for n in fnmatch.filter(mod.submodules.keys(), strip_name):
             mod.set(n, 'Lowpass', 'Cutoff', freq)
@@ -77,13 +92,17 @@ class PostProcess(Module):
 
         **Parameters**
 
-        - `strip_name`: name of strip (with unix filename pattern matching support)
+        - `strip_name`: name of strip (with unix filename pattern matching support), or list of names
         - `start`: cutoff frequency start value in Hz
         - `end`: cutoff frequency end value in Hz
         - `duration`: animation duration
         - `mode`: beats or seconds
         - `easing`: interpolation curve (see mentat's documentation)
         """
+        if type(strip_name) is list:
+            for n in strip_name:
+                self.animate_filter(n, start, end, duration, mode, easing)
+            return
         mod = self.engine.modules['Outputs']
         for n in fnmatch.filter(mod.submodules.keys(), strip_name):
             mod.animate(n, 'Lowpass', 'Cutoff', start, end, duration, mode, easing)
