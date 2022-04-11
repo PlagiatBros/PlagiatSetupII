@@ -97,9 +97,11 @@ class AgneauGastrik(Video, Light, RouteBase):
         vocalsKesch.set('gars_exclu', 'on')
 
         # Scene
-        self.start_scene('couplet_launcher', lambda:[
-            self.wait_next_cycle(),
-            self.couplet_1()
+        self.start_sequence('couplet_launcher', [
+            {},
+            {
+                1: lambda: self.start_scene('launch_couplet1', lambda: self.couplet_1())
+            }
         ])
 
     @mk2_button(3, 'purple')
@@ -147,7 +149,7 @@ class AgneauGastrik(Video, Light, RouteBase):
                 1: lambda: seq192.select('solo', 'couplet1b_*')
             },
             {   # things accelerating
-
+                1: lambda: seq192.select('solo', 'couplet1_*')
             },
         ], loop=False)
 
