@@ -14,7 +14,8 @@ class Seq192(Module):
 
         self.screenset_map = {
             'Snapshat': 0,
-            'Mcob': 1
+            'Mcob': 1,
+            'AgneauGastrik': 2
         }
 
     def start(self):
