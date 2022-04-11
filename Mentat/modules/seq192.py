@@ -39,7 +39,7 @@ class Seq192(Module):
         - `name`: screenset name
         """
         if name in self.screenset_map:
-            self.set('screenset', self.screenset_map[name])
+            self.set('screenset', self.screenset_map[name], force_send=True)
         else:
             self.logger.error('screenset %s not found' % name)
 

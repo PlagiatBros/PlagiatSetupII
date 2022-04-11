@@ -32,7 +32,7 @@ class Tap192(Module):
             if name in self.kits:
 
                 name = 's:' + name
-                self.set('kit', name)
+                self.set('kit', name, force_send=True)
                 self.logger.info('switched to kit %s' % name)
 
             else:
