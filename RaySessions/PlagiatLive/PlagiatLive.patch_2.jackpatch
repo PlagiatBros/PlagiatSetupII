@@ -694,6 +694,11 @@ a2j:seq192 MainSequencer (capture): seq192 2 |> cLowRouter:In
 a2j:seq192 MainSequencer (capture): seq192 3 |> a2j:ZynAddSubFX ZHiSynths (playback): ZynAddSubFX
 a2j:seq192 MainSequencer (capture): seq192 4 |> cHiRouter:RhodesIn
 a2j:seq192 MainSequencer (capture): seq192 5 |> cHiRouter:MainIn
+cHiRouter:DubstepHorn                    |> a2j:MonoSynthMicroTonal (playback): DubstepHornIn
+cHiRouter:EasyClassical                  |> a2j:MonoSynthMicroTonal (playback): EasyClassicalIn
+cHiRouter:Rhodes                         |> Carla.HiCSynths/Rhodes:events-in
+cHiRouter:Trap                           |> a2j:MonoSynthMicroTonal (playback): TrapIn
+cHiRouter:TrapFifth                      |> a2j:MonoSynthMicroTonal (playback): TrapFifthIn
 cLowRouter:Barkline                      |> Carla.LowCSynths/Barkline:events-in
 cLowRouter:Boom                          |> Carla.LowCSynths/Boom:events-in
 cLowRouter:Trap1                         |> Carla.LowCSynths/Trap1:events-in
@@ -711,8 +716,12 @@ sooperlooper:loop3_out_1                 |> Non-Mixer.MonitorsKesch (MonitorsKes
 sooperlooper:loop3_out_1                 |> Non-Mixer.MonitorsNano (MonitorsNano):Synths/in-1
 sooperlooper:loop3_out_1                 |> Non-Mixer.Outputs (Outputs):Synths/in-1
 sooperlooper:loop4_out_1                 |> Non-Mixer.VocalsNano (In):NanoIn/in-1
+sooperlooper:loop5_out_1                 |> Non-Mixer.MonitorsKesch (MonitorsKesch):VocalsNano/in-1
+sooperlooper:loop5_out_1                 |> Non-Mixer.MonitorsNano (MonitorsNano):VocalsNano/in-1
 sooperlooper:loop5_out_1                 |> Non-Mixer.Outputs (Outputs):VocalsNano/in-1
 sooperlooper:loop6_out_1                 |> Non-Mixer.VocalsKesch (In):KeschIn/in-1
+sooperlooper:loop7_out_1                 |> Non-Mixer.MonitorsKesch (MonitorsKesch):VocalsKesch/in-1
+sooperlooper:loop7_out_1                 |> Non-Mixer.MonitorsNano (MonitorsNano):VocalsKesch/in-1
 sooperlooper:loop7_out_1                 |> Non-Mixer.Outputs (Outputs):VocalsKesch/in-1
 system:capture_1                         |> Non-Mixer.Inputs (Inputs):Bass/in-1
 system:capture_2                         |> Non-Mixer.Inputs (Inputs):VocalsKesch/in-1
