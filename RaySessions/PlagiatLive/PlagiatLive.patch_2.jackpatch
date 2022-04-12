@@ -694,11 +694,14 @@ a2j:seq192 MainSequencer (capture): seq192 2 |> cLowRouter:In
 a2j:seq192 MainSequencer (capture): seq192 3 |> a2j:ZynAddSubFX ZHiSynths (playback): ZynAddSubFX
 a2j:seq192 MainSequencer (capture): seq192 4 |> cHiRouter:RhodesIn
 a2j:seq192 MainSequencer (capture): seq192 5 |> cHiRouter:MainIn
+cFluidBridge:capture                     |> cHiRouter:RhodesIn
+cHiBridge:capture                        |> cHiRouter:MainIn
 cHiRouter:DubstepHorn                    |> a2j:MonoSynthMicroTonal (playback): DubstepHornIn
 cHiRouter:EasyClassical                  |> a2j:MonoSynthMicroTonal (playback): EasyClassicalIn
 cHiRouter:Rhodes                         |> Carla.HiCSynths/Rhodes:events-in
 cHiRouter:Trap                           |> a2j:MonoSynthMicroTonal (playback): TrapIn
 cHiRouter:TrapFifth                      |> a2j:MonoSynthMicroTonal (playback): TrapFifthIn
+cLowBridge:capture                       |> cLowRouter:In
 cLowRouter:Barkline                      |> Carla.LowCSynths/Barkline:events-in
 cLowRouter:Boom                          |> Carla.LowCSynths/Boom:events-in
 cLowRouter:Trap1                         |> Carla.LowCSynths/Trap1:events-in
