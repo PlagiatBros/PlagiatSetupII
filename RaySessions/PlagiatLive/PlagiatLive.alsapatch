@@ -1,0 +1,39 @@
+QMidiArp.ZHiArp:out 1                    |> ZynAddSubFX ZHiSynths : ZynAddSubFX
+QMidiArp.ZLowArp:out 1                   |> ZynAddSubFX ZLowSynths : ZynAddSubFX
+Hammerfall DSP : HDSP MIDI 1 |> JmjKeyboard : in
+JmjKeyboard : CHi           |> loop192 MidiLooper : Loop 4
+JmjKeyboard : CHiSf         |> loop192 MidiLooper : Loop 3
+JmjKeyboard : CLow          |> loop192 MidiLooper : Loop 1
+JmjKeyboard : ConstantSampler |> Tap192 ConstantSampler : midi_in
+JmjKeyboard : ProdSampler   |> Tap192 ProdSampler : midi_in
+JmjKeyboard : ZHi           |> loop192 MidiLooper : Loop 2
+JmjKeyboard : ZLow          |> loop192 MidiLooper : Loop 0
+Joystick : out              |> JmjKeyboard : in
+Mk2Keyboard : CHi           |> loop192 MidiLooper : Loop 4
+Mk2Keyboard : CHiSf         |> loop192 MidiLooper : Loop 3
+Mk2Keyboard : CLow          |> loop192 MidiLooper : Loop 1
+Mk2Keyboard : ConstantSampler |> Tap192 ConstantSampler : midi_in
+Mk2Keyboard : ProdSampler   |> Tap192 ProdSampler : midi_in
+Mk2Keyboard : ZHi           |> loop192 MidiLooper : Loop 2
+Mk2Keyboard : ZLow          |> loop192 MidiLooper : Loop 0
+MonoSynthMicroTonal : DubstepHornOut |> Carla.HiCSynths/DubstepHorn:events-in
+MonoSynthMicroTonal : EasyClassicalOut |> Carla.HiCSynths/EasyClassical:events-in
+MonoSynthMicroTonal : TrapFifthOut |> Carla.HiCSynths/TrapFifth:events-in
+MonoSynthMicroTonal : TrapOut |> Carla.HiCSynths/Trap:events-in
+loop192 MidiLooper : Loop 0 |> QMidiArp.ZLowArp:in
+loop192 MidiLooper : Loop 1 |> QMidiArp.CLowArp:in
+loop192 MidiLooper : Loop 2 |> QMidiArp.ZHiArp:in
+loop192 MidiLooper : Loop 3 |> cFluidBridge
+loop192 MidiLooper : Loop 4 |> QMidiArp.CHiArp:in
+seq192 MainSequencer : seq192 1 |> ZynAddSubFX ZLowSynths : ZynAddSubFX
+seq192 MainSequencer : seq192 10 |> Tap192 ProdSampler : midi_in
+seq192 MainSequencer : seq192 2 |> cLowRouter:In
+seq192 MainSequencer : seq192 3 |> ZynAddSubFX ZHiSynths : ZynAddSubFX
+seq192 MainSequencer : seq192 4 |> cFluidBridge
+seq192 MainSequencer : seq192 5 |> cHiBridge
+cHiRouter:DubstepHorn                    |> MonoSynthMicroTonal : DubstepHornIn
+cHiRouter:EasyClassical                  |> MonoSynthMicroTonal : EasyClassicalIn
+cHiRouter:Trap                           |> MonoSynthMicroTonal : TrapIn
+cHiRouter:TrapFifth                      |> MonoSynthMicroTonal : TrapFifthIn
+QMidiArp.CHiArp:out 1                    |> cHiBridge
+QMidiArp.CLowArp:out 1                   |> cLowRouter:In
