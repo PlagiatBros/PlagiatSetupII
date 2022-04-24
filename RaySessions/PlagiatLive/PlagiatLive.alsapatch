@@ -1,34 +1,34 @@
 Hammerfall DSP : HDSP MIDI 1 |> JmjKeyboard : in
 Joystick : out              |> JmjKeyboard : in
 
-JmjKeyboard : ZLow          |> loop192 MidiLooper : Loop 0
-JmjKeyboard : CLow          |> loop192 MidiLooper : Loop 1
-JmjKeyboard : ZHi           |> loop192 MidiLooper : Loop 2
-JmjKeyboard : CHiSf         |> loop192 MidiLooper : Loop 3
-JmjKeyboard : CHi           |> loop192 MidiLooper : Loop 4
-JmjKeyboard : ConstantSampler |> Tap192 ConstantSampler : midi_in
-JmjKeyboard : ProdSampler   |> Tap192 ProdSampler : midi_in
+JmjKeyboard : ZLow          |> loop192.MidiLooper : Loop 0
+JmjKeyboard : CLow          |> loop192.MidiLooper : Loop 1
+JmjKeyboard : ZHi           |> loop192.MidiLooper : Loop 2
+JmjKeyboard : CHiSf         |> loop192.MidiLooper : Loop 3
+JmjKeyboard : CHi           |> loop192.MidiLooper : Loop 4
+JmjKeyboard : ConstantSampler |> Tap192.ConstantSampler : midi_in
+JmjKeyboard : ProdSampler   |> Tap192.ProdSampler : midi_in
 
-Mk2Keyboard : ZLow          |> loop192 MidiLooper : Loop 0
-Mk2Keyboard : CLow          |> loop192 MidiLooper : Loop 1
-Mk2Keyboard : ZHi           |> loop192 MidiLooper : Loop 2
-Mk2Keyboard : CHiSf         |> loop192 MidiLooper : Loop 3
-Mk2Keyboard : CHi           |> loop192 MidiLooper : Loop 4
-Mk2Keyboard : ConstantSampler |> Tap192 ConstantSampler : midi_in
-Mk2Keyboard : ProdSampler   |> Tap192 ProdSampler : midi_in
+Mk2Keyboard : ZLow          |> loop192.MidiLooper : Loop 0
+Mk2Keyboard : CLow          |> loop192.MidiLooper : Loop 1
+Mk2Keyboard : ZHi           |> loop192.MidiLooper : Loop 2
+Mk2Keyboard : CHiSf         |> loop192.MidiLooper : Loop 3
+Mk2Keyboard : CHi           |> loop192.MidiLooper : Loop 4
+Mk2Keyboard : ConstantSampler |> Tap192.ConstantSampler : midi_in
+Mk2Keyboard : ProdSampler   |> Tap192.ProdSampler : midi_in
 
-loop192 MidiLooper : Loop 0 |> ZynAddSubFX ZLowSynths : ZynAddSubFX
-loop192 MidiLooper : Loop 1 |> cLowBridge : In
-loop192 MidiLooper : Loop 2 |> ZynAddSubFX ZHiSynths : ZynAddSubFX
-loop192 MidiLooper : Loop 3 |> cFluidBridge : playback
-loop192 MidiLooper : Loop 4 |> MonoSynthMicroTonal : In
+loop192.MidiLooper : Loop 0 |> ZynAddSubFX.ZLowSynths : ZynAddSubFX
+loop192.MidiLooper : Loop 1 |> cLowBridge : playback
+loop192.MidiLooper : Loop 2 |> ZynAddSubFX.ZHiSynths : ZynAddSubFX
+loop192.MidiLooper : Loop 3 |> cFluidBridge : playback
+loop192.MidiLooper : Loop 4 |> MonoSynthMicroTonal : In
 
-seq192 MainSequencer : seq192 1 |> ZynAddSubFX ZLowSynths : ZynAddSubFX
-seq192 MainSequencer : seq192 2 |> cLowBridge:In
-seq192 MainSequencer : seq192 3 |> ZynAddSubFX ZHiSynths : ZynAddSubFX
-seq192 MainSequencer : seq192 4 |> cFluidBridge : playback
-seq192 MainSequencer : seq192 5 |> MonoSynthMicroTonal : In
-seq192 MainSequencer : seq192 10 |> Tap192 ProdSampler : midi_in
+seq192.MainSequencer : seq192 1 |> ZynAddSubFX.ZLowSynths : ZynAddSubFX
+seq192.MainSequencer : seq192 2 |> cLowBridge : playback
+seq192.MainSequencer : seq192 3 |> ZynAddSubFX.ZHiSynths : ZynAddSubFX
+seq192.MainSequencer : seq192 4 |> cFluidBridge : playback
+seq192.MainSequencer : seq192 5 |> MonoSynthMicroTonal : In
+seq192.MainSequencer : seq192 10 |> Tap192.ProdSampler : midi_in
 
 
 MonoSynthMicroTonal : Out   |> cHiBridge : playback
