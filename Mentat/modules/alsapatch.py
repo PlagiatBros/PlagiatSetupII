@@ -2,6 +2,7 @@ from pyalsa import alsaseq
 
 try:
     from mentat import Module
+    from mentat import Engine
 except:
     # for __main__ usage
     class Module():
@@ -126,8 +127,8 @@ class AlsaPatcher(Module):
 
             if len(line):
                 src, _, dest = line.partition('|>')
-                src_client_name, _, src_port_name = src.strip().rpartition(':')
-                dest_client_name, _, dest_port_name = dest.strip().rpartition(':')
+                src_client_name, _, src_port_name = [x.strip() for x in src.strip().rpartition(':')]
+                dest_client_name, _, dest_port_name = [x.strip() for x in dest.strip().rpartition(':')]
 
                 if len(src_client_name) and len(src_port_name) and len(dest_client_name) and len(dest_port_name):
 
@@ -209,5 +210,7 @@ if __name__ == '__main__':
     Usage:
     python alsapatch.py > patch.alsapatch
     """
-    a = AlsaPatcher()
+    if Engine.INSTANCE is None:
+        e = Engine('AlsaListMentat', 12345, './')
+    a = AlsaPatcher('AlsaList')
     a.print_connections()
