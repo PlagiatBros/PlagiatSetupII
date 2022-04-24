@@ -141,6 +141,7 @@ class Mcob(Video, Light, RouteBase):
         """
         # Sequences
         seq192.select('solo', 'couplet1-2_*')
+        seq192.select('off', 'couplet1-2_samples_princeguitar2')
 
         # Samples
         samplesFX6Scape.set('Samples2', 'Gain', 'Gain', -10.0) # attention - 10 et - 5 dans setup précédent
@@ -188,7 +189,7 @@ class Mcob(Video, Light, RouteBase):
                     4.95: lambda: postprocess.animate_pitch('*', 0.25, 1, 0.05, 'beat')
                 },
                 {  # bar 17
-                    1: lambda: [seq192.select('off', 'couplet1-2_cLow_*'),seq192.select('on', 'couplet1-2_cLow_trap1')]
+                    1: lambda: [seq192.select('off', 'couplet1-2_cLow_*'), seq192.select('off', 'couplet1-2_samples_princeguitar'), seq192.select('on', 'couplet1-2_samples_princeguitar2'), seq192.select('on', 'couplet1-2_cLow_trap1')]
                     # On coupe le bass synth et allez hop bass/batt
                 },
             ], loop=False),
@@ -201,6 +202,7 @@ class Mcob(Video, Light, RouteBase):
         """
         # Sequences
         seq192.select('solo', 'couplet1-2_*')
+        seq192.select('off', 'couplet1-2_samples_princeguitar2')
 
         # Transport
         transport.set_tempo(120)
