@@ -104,9 +104,13 @@ Non-Mixer.MonitorsNano (MonitorsNano):VocalsKesch/out-2 |> Non-Mixer.MonitorsNan
 Non-Mixer.MonitorsNano (MonitorsNano):VocalsNano/out-1 |> Non-Mixer.MonitorsNano (MonitorsNano):MonitorsNano/in-1
 Non-Mixer.MonitorsNano (MonitorsNano):VocalsNano/out-2 |> Non-Mixer.MonitorsNano (MonitorsNano):MonitorsNano/in-2
 Non-Mixer.Outputs (Outputs):Bass/aux-A/out-1 |> system:playback_4
+Non-Mixer.Outputs (Outputs):Bass/aux-B/out-1 |> Non-Mixer.MonitorsNano (MonitorsNano):Bass/in-1
+Non-Mixer.Outputs (Outputs):Bass/aux-C/out-1 |> Non-Mixer.MonitorsKesch (MonitorsKesch):Bass/in-1
 Non-Mixer.Outputs (Outputs):Bass/out-1   |> Non-Mixer.Outputs (Outputs):FOH/in-1
 Non-Mixer.Outputs (Outputs):Bass/out-2   |> Non-Mixer.Outputs (Outputs):FOH/in-2
 Non-Mixer.Outputs (Outputs):BassSynths/aux-A/out-1 |> system:playback_9
+Non-Mixer.Outputs (Outputs):BassSynths/aux-B/out-1 |> Non-Mixer.MonitorsNano (MonitorsNano):BassSynths/in-1
+Non-Mixer.Outputs (Outputs):BassSynths/aux-C/out-1 |> Non-Mixer.MonitorsKesch (MonitorsKesch):BassSynths/in-1
 Non-Mixer.Outputs (Outputs):BassSynths/out-1 |> Non-Mixer.Outputs (Outputs):FOH/in-1
 Non-Mixer.Outputs (Outputs):BassSynths/out-2 |> Non-Mixer.Outputs (Outputs):FOH/in-2
 Non-Mixer.Outputs (Outputs):FOH/out-1    |> system:playback_13
@@ -115,9 +119,13 @@ Non-Mixer.Outputs (Outputs):Kick/aux-A/out-1 |> system:playback_3
 Non-Mixer.Outputs (Outputs):Kick/out-1   |> Non-Mixer.Outputs (Outputs):FOH/in-1
 Non-Mixer.Outputs (Outputs):Kick/out-2   |> Non-Mixer.Outputs (Outputs):FOH/in-2
 Non-Mixer.Outputs (Outputs):Samples/aux-A/out-1 |> system:playback_1
+Non-Mixer.Outputs (Outputs):Samples/aux-B/out-1 |> Non-Mixer.MonitorsNano (MonitorsNano):Samples/in-1
+Non-Mixer.Outputs (Outputs):Samples/aux-C/out-1 |> Non-Mixer.MonitorsKesch (MonitorsKesch):Samples/in-1
 Non-Mixer.Outputs (Outputs):Samples/out-1 |> Non-Mixer.Outputs (Outputs):FOH/in-1
 Non-Mixer.Outputs (Outputs):Samples/out-2 |> Non-Mixer.Outputs (Outputs):FOH/in-2
 Non-Mixer.Outputs (Outputs):Synths/aux-A/out-1 |> system:playback_2
+Non-Mixer.Outputs (Outputs):Synths/aux-B/out-1 |> Non-Mixer.MonitorsNano (MonitorsNano):Synths/in-1
+Non-Mixer.Outputs (Outputs):Synths/aux-C/out-1 |> Non-Mixer.MonitorsKesch (MonitorsKesch):Synths/in-1
 Non-Mixer.Outputs (Outputs):Synths/out-1 |> Non-Mixer.Outputs (Outputs):FOH/in-1
 Non-Mixer.Outputs (Outputs):Synths/out-2 |> Non-Mixer.Outputs (Outputs):FOH/in-2
 Non-Mixer.Outputs (Outputs):VocalsKesch/aux-A/out-1 |> system:playback_11
@@ -172,8 +180,6 @@ Non-Mixer.Samples (Main):Samples5/out-1  |> Non-Mixer.SamplesFX4Autofilter (In):
 Non-Mixer.Samples (Main):Samples5/out-1  |> Non-Mixer.SamplesFX5TapeDelay (In):Samples5/in-1
 Non-Mixer.Samples (Main):Samples5/out-1  |> Non-Mixer.SamplesFX6Scape (In):Samples5/in-1
 Non-Mixer.Samples (Main):Samples5/out-1  |> Non-Mixer.SamplesWork (In):Samples5/in-1
-Non-Mixer.Samples (Out):SamplesOut/out-1 |> Non-Mixer.MonitorsKesch (MonitorsKesch):Samples/in-1
-Non-Mixer.Samples (Out):SamplesOut/out-1 |> Non-Mixer.MonitorsNano (MonitorsNano):Samples/in-1
 Non-Mixer.Samples (Out):SamplesOut/out-1 |> Non-Mixer.Outputs (Outputs):Samples/in-1
 Non-Mixer.SamplesFX1Delay (In):ConstantSampler/out-1 |> Non-Mixer.SamplesFX1Delay (Process):SamplesFX1Delay/in-1
 Non-Mixer.SamplesFX1Delay (In):Samples1/out-1 |> Non-Mixer.SamplesFX1Delay (Process):SamplesFX1Delay/in-1
@@ -709,14 +715,8 @@ cLowRouter:Trap2                         |> Carla.LowCSynths/Trap2:events-in
 klick:out                                |> Non-Mixer.MonitorsKesch (MonitorsKesch):Klick/in-1
 klick:out                                |> Non-Mixer.MonitorsNano (MonitorsNano):Klick/in-1
 sooperlooper:loop0_out_1                 |> Non-Mixer.Bass (In):BassIn/in-1
-sooperlooper:loop1_out_1                 |> Non-Mixer.MonitorsKesch (MonitorsKesch):Bass/in-1
-sooperlooper:loop1_out_1                 |> Non-Mixer.MonitorsNano (MonitorsNano):Bass/in-1
 sooperlooper:loop1_out_1                 |> Non-Mixer.Outputs (Outputs):Bass/in-1
-sooperlooper:loop2_out_1                 |> Non-Mixer.MonitorsKesch (MonitorsKesch):BassSynths/in-1
-sooperlooper:loop2_out_1                 |> Non-Mixer.MonitorsNano (MonitorsNano):BassSynths/in-1
 sooperlooper:loop2_out_1                 |> Non-Mixer.Outputs (Outputs):BassSynths/in-1
-sooperlooper:loop3_out_1                 |> Non-Mixer.MonitorsKesch (MonitorsKesch):Synths/in-1
-sooperlooper:loop3_out_1                 |> Non-Mixer.MonitorsNano (MonitorsNano):Synths/in-1
 sooperlooper:loop3_out_1                 |> Non-Mixer.Outputs (Outputs):Synths/in-1
 sooperlooper:loop4_out_1                 |> Non-Mixer.VocalsNano (In):NanoIn/in-1
 sooperlooper:loop5_out_1                 |> Non-Mixer.MonitorsKesch (MonitorsKesch):VocalsNano/in-1
