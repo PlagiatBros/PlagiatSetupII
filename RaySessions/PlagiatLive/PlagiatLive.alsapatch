@@ -6,10 +6,17 @@ JmjKeyboard : CLow          |> loop192.MidiLooper : Loop 1
 JmjKeyboard : ZHi           |> loop192.MidiLooper : Loop 2
 JmjKeyboard : CHiSf         |> loop192.MidiLooper : Loop 3
 JmjKeyboard : CHi           |> loop192.MidiLooper : Loop 4
+JmjKeyboard : ZLow          |> ZynAddSubFX.ZLowSynths : ZynAddSubFX
+JmjKeyboard : CLow          |> cLowBridge : playback
+JmjKeyboard : ZHi           |> ZynAddSubFX.ZHiSynths : ZynAddSubFX
+JmjKeyboard : CHiSf         |> cFluidBridge : playback
+JmjKeyboard : CHi           |> MonoSynthMicroTonal : In
+
 JmjKeyboard : ConstantSampler |> Tap192.ConstantSampler : midi_in
 JmjKeyboard : ProdSampler   |> Tap192.ProdSampler : midi_in
 
 Mentat : Mk2Control |>  Arturia MiniLab mkII : Arturia MiniLab mkII MIDI 1
+Arturia MiniLab mkII : Arturia MiniLab mkII MIDI 1  |> Mentat : Mk2Control
 Arturia MiniLab mkII : Arturia MiniLab mkII MIDI 1  |>  Mk2Keyboard : in
 
 Mk2Keyboard : ZLow          |> loop192.MidiLooper : Loop 0
@@ -17,6 +24,12 @@ Mk2Keyboard : CLow          |> loop192.MidiLooper : Loop 1
 Mk2Keyboard : ZHi           |> loop192.MidiLooper : Loop 2
 Mk2Keyboard : CHiSf         |> loop192.MidiLooper : Loop 3
 Mk2Keyboard : CHi           |> loop192.MidiLooper : Loop 4
+Mk2Keyboard : ZLow          |> ZynAddSubFX.ZLowSynths : ZynAddSubFX
+Mk2Keyboard : CLow          |> cLowBridge : playback
+Mk2Keyboard : ZHi           |> ZynAddSubFX.ZHiSynths : ZynAddSubFX
+Mk2Keyboard : CHiSf         |> cFluidBridge : playback
+Mk2Keyboard : CHi           |> MonoSynthMicroTonal : In
+
 Mk2Keyboard : ConstantSampler |> Tap192.ConstantSampler : midi_in
 Mk2Keyboard : ProdSampler   |> Tap192.ProdSampler : midi_in
 

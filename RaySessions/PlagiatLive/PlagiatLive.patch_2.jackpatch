@@ -39,13 +39,17 @@ Non-Mixer.BassFX (Process):BassWobble/out-1 |> Non-Mixer.Bass (Out):BassOut/in-1
 Non-Mixer.BassFX (Process):BassZynWah/out-1 |> Non-Mixer.Bass (Out):BassOut/in-1
 Non-Mixer.BassSynths (Main):BassBarkline/out-1 |> Non-Mixer.BassSynths (Out):BassSynthsOut/in-1
 Non-Mixer.BassSynths (Main):BassBoom/out-1 |> Non-Mixer.BassSynths (Out):BassSynthsOut/in-1
+Non-Mixer.BassSynths (Main):BassTest/out-1 |> Non-Mixer.BassSynths (Out):BassSynthsOut/in-1
 Non-Mixer.BassSynths (Main):BassTrap1/out-1 |> Non-Mixer.BassSynths (Out):BassSynthsOut/in-1
 Non-Mixer.BassSynths (Main):BassTrap2/out-1 |> Non-Mixer.BassSynths (Out):BassSynthsOut/in-1
+Non-Mixer.BassSynths (Main):BassZ8bits/out-1 |> Non-Mixer.BassSynths (Out):BassSynthsOut/in-1
+Non-Mixer.BassSynths (Main):BassZBoombaard/out-1 |> Non-Mixer.BassSynths (Out):BassSynthsOut/in-1
 Non-Mixer.BassSynths (Main):BassZDancestep/out-1 |> Non-Mixer.BassSynths (Out):BassSynthsOut/in-1
 Non-Mixer.BassSynths (Main):BassZDubstep/out-1 |> Non-Mixer.BassSynths (Out):BassSynthsOut/in-1
 Non-Mixer.BassSynths (Main):BassZDupieux/out-1 |> Non-Mixer.BassSynths (Out):BassSynthsOut/in-1
 Non-Mixer.BassSynths (Main):BassZPhrampton/out-1 |> Non-Mixer.BassSynths (Out):BassSynthsOut/in-1
 Non-Mixer.BassSynths (Main):BassZRagstep/out-1 |> Non-Mixer.BassSynths (Out):BassSynthsOut/in-1
+Non-Mixer.BassSynths (Main):BassZSine/out-1 |> Non-Mixer.BassSynths (Out):BassSynthsOut/in-1
 Non-Mixer.BassSynths (Out):BassSynthsOut/out-1 |> sooperlooper:loop2_in_1
 Non-Mixer.Drums (Main):Kick/out-1        |> Non-Mixer.MonitorsKesch (MonitorsKesch):Kick/in-1
 Non-Mixer.Drums (Main):Kick/out-1        |> Non-Mixer.MonitorsNano (MonitorsNano):Kick/in-1
@@ -283,6 +287,12 @@ Non-Mixer.Synths (Main):ZDiploLike/out-1 |> Non-Mixer.SynthsFX2Delay (In):ZDiplo
 Non-Mixer.Synths (Main):ZDiploLike/out-1 |> Non-Mixer.SynthsFX3Delay (In):ZDiploLike/in-1
 Non-Mixer.Synths (Main):ZDiploLike/out-1 |> Non-Mixer.SynthsFX4TapeDelay (In):ZDiploLike/in-1
 Non-Mixer.Synths (Main):ZDiploLike/out-1 |> Non-Mixer.SynthsFX5Scape (In):ZDiploLike/in-1
+Non-Mixer.Synths (Main):ZDiploLikeWide/out-1 |> Non-Mixer.Synths (Out):SynthsOut/in-1
+Non-Mixer.Synths (Main):ZDiploLikeWide/out-1 |> Non-Mixer.SynthsFX1Reverb (In):ZDiploLikeWide/in-1
+Non-Mixer.Synths (Main):ZDiploLikeWide/out-1 |> Non-Mixer.SynthsFX2Delay (In):ZDiploLikeWide/in-1
+Non-Mixer.Synths (Main):ZDiploLikeWide/out-1 |> Non-Mixer.SynthsFX3Delay (In):ZDiploLikeWide/in-1
+Non-Mixer.Synths (Main):ZDiploLikeWide/out-1 |> Non-Mixer.SynthsFX4TapeDelay (In):ZDiploLikeWide/in-1
+Non-Mixer.Synths (Main):ZDiploLikeWide/out-1 |> Non-Mixer.SynthsFX5Scape (In):ZDiploLikeWide/in-1
 Non-Mixer.Synths (Main):ZDre/out-1       |> Non-Mixer.Synths (Out):SynthsOut/in-1
 Non-Mixer.Synths (Main):ZDre/out-1       |> Non-Mixer.SynthsFX1Reverb (In):ZDre/in-1
 Non-Mixer.Synths (Main):ZDre/out-1       |> Non-Mixer.SynthsFX2Delay (In):ZDre/in-1
@@ -335,6 +345,7 @@ Non-Mixer.SynthsFX1Reverb (In):Z8bits/out-1 |> Non-Mixer.SynthsFX1Reverb (Proces
 Non-Mixer.SynthsFX1Reverb (In):ZBombarde/out-1 |> Non-Mixer.SynthsFX1Reverb (Process):SynthsFX1Reverb/in-1
 Non-Mixer.SynthsFX1Reverb (In):ZCosma/out-1 |> Non-Mixer.SynthsFX1Reverb (Process):SynthsFX1Reverb/in-1
 Non-Mixer.SynthsFX1Reverb (In):ZDiploLike/out-1 |> Non-Mixer.SynthsFX1Reverb (Process):SynthsFX1Reverb/in-1
+Non-Mixer.SynthsFX1Reverb (In):ZDiploLikeWide/out-1 |> Non-Mixer.SynthsFX1Reverb (Process):SynthsFX1Reverb/in-1
 Non-Mixer.SynthsFX1Reverb (In):ZDre/out-1 |> Non-Mixer.SynthsFX1Reverb (Process):SynthsFX1Reverb/in-1
 Non-Mixer.SynthsFX1Reverb (In):ZDupieux/out-1 |> Non-Mixer.SynthsFX1Reverb (Process):SynthsFX1Reverb/in-1
 Non-Mixer.SynthsFX1Reverb (In):ZJestoProunk/out-1 |> Non-Mixer.SynthsFX1Reverb (Process):SynthsFX1Reverb/in-1
@@ -352,6 +363,7 @@ Non-Mixer.SynthsFX2Delay (In):Z8bits/out-1 |> Non-Mixer.SynthsFX2Delay (Process)
 Non-Mixer.SynthsFX2Delay (In):ZBombarde/out-1 |> Non-Mixer.SynthsFX2Delay (Process):SynthsFX2Delay/in-1
 Non-Mixer.SynthsFX2Delay (In):ZCosma/out-1 |> Non-Mixer.SynthsFX2Delay (Process):SynthsFX2Delay/in-1
 Non-Mixer.SynthsFX2Delay (In):ZDiploLike/out-1 |> Non-Mixer.SynthsFX2Delay (Process):SynthsFX2Delay/in-1
+Non-Mixer.SynthsFX2Delay (In):ZDiploLikeWide/out-1 |> Non-Mixer.SynthsFX2Delay (Process):SynthsFX2Delay/in-1
 Non-Mixer.SynthsFX2Delay (In):ZDre/out-1 |> Non-Mixer.SynthsFX2Delay (Process):SynthsFX2Delay/in-1
 Non-Mixer.SynthsFX2Delay (In):ZDupieux/out-1 |> Non-Mixer.SynthsFX2Delay (Process):SynthsFX2Delay/in-1
 Non-Mixer.SynthsFX2Delay (In):ZJestoProunk/out-1 |> Non-Mixer.SynthsFX2Delay (Process):SynthsFX2Delay/in-1
@@ -369,6 +381,7 @@ Non-Mixer.SynthsFX3Delay (In):Z8bits/out-1 |> Non-Mixer.SynthsFX3Delay (Process)
 Non-Mixer.SynthsFX3Delay (In):ZBombarde/out-1 |> Non-Mixer.SynthsFX3Delay (Process):SynthsFX3Delay/in-1
 Non-Mixer.SynthsFX3Delay (In):ZCosma/out-1 |> Non-Mixer.SynthsFX3Delay (Process):SynthsFX3Delay/in-1
 Non-Mixer.SynthsFX3Delay (In):ZDiploLike/out-1 |> Non-Mixer.SynthsFX3Delay (Process):SynthsFX3Delay/in-1
+Non-Mixer.SynthsFX3Delay (In):ZDiploLikeWide/out-1 |> Non-Mixer.SynthsFX3Delay (Process):SynthsFX3Delay/in-1
 Non-Mixer.SynthsFX3Delay (In):ZDre/out-1 |> Non-Mixer.SynthsFX3Delay (Process):SynthsFX3Delay/in-1
 Non-Mixer.SynthsFX3Delay (In):ZDupieux/out-1 |> Non-Mixer.SynthsFX3Delay (Process):SynthsFX3Delay/in-1
 Non-Mixer.SynthsFX3Delay (In):ZJestoProunk/out-1 |> Non-Mixer.SynthsFX3Delay (Process):SynthsFX3Delay/in-1
@@ -386,6 +399,7 @@ Non-Mixer.SynthsFX4TapeDelay (In):Z8bits/out-1 |> Non-Mixer.SynthsFX4TapeDelay (
 Non-Mixer.SynthsFX4TapeDelay (In):ZBombarde/out-1 |> Non-Mixer.SynthsFX4TapeDelay (Process):SynthsFX4TapeDelay/in-1
 Non-Mixer.SynthsFX4TapeDelay (In):ZCosma/out-1 |> Non-Mixer.SynthsFX4TapeDelay (Process):SynthsFX4TapeDelay/in-1
 Non-Mixer.SynthsFX4TapeDelay (In):ZDiploLike/out-1 |> Non-Mixer.SynthsFX4TapeDelay (Process):SynthsFX4TapeDelay/in-1
+Non-Mixer.SynthsFX4TapeDelay (In):ZDiploLikeWide/out-1 |> Non-Mixer.SynthsFX4TapeDelay (Process):SynthsFX4TapeDelay/in-1
 Non-Mixer.SynthsFX4TapeDelay (In):ZDre/out-1 |> Non-Mixer.SynthsFX4TapeDelay (Process):SynthsFX4TapeDelay/in-1
 Non-Mixer.SynthsFX4TapeDelay (In):ZDupieux/out-1 |> Non-Mixer.SynthsFX4TapeDelay (Process):SynthsFX4TapeDelay/in-1
 Non-Mixer.SynthsFX4TapeDelay (In):ZJestoProunk/out-1 |> Non-Mixer.SynthsFX4TapeDelay (Process):SynthsFX4TapeDelay/in-1
@@ -403,6 +417,7 @@ Non-Mixer.SynthsFX5Scape (In):Z8bits/out-1 |> Non-Mixer.SynthsFX5Scape (Process)
 Non-Mixer.SynthsFX5Scape (In):ZBombarde/out-1 |> Non-Mixer.SynthsFX5Scape (Process):SynthsFX5Scape/in-1
 Non-Mixer.SynthsFX5Scape (In):ZCosma/out-1 |> Non-Mixer.SynthsFX5Scape (Process):SynthsFX5Scape/in-1
 Non-Mixer.SynthsFX5Scape (In):ZDiploLike/out-1 |> Non-Mixer.SynthsFX5Scape (Process):SynthsFX5Scape/in-1
+Non-Mixer.SynthsFX5Scape (In):ZDiploLikeWide/out-1 |> Non-Mixer.SynthsFX5Scape (Process):SynthsFX5Scape/in-1
 Non-Mixer.SynthsFX5Scape (In):ZDre/out-1 |> Non-Mixer.SynthsFX5Scape (Process):SynthsFX5Scape/in-1
 Non-Mixer.SynthsFX5Scape (In):ZDupieux/out-1 |> Non-Mixer.SynthsFX5Scape (Process):SynthsFX5Scape/in-1
 Non-Mixer.SynthsFX5Scape (In):ZJestoProunk/out-1 |> Non-Mixer.SynthsFX5Scape (Process):SynthsFX5Scape/in-1
@@ -639,10 +654,6 @@ Non-Mixer.VocalsNanoFX9Scape (In):NanoGars/out-1 |> Non-Mixer.VocalsNanoFX9Scape
 Non-Mixer.VocalsNanoFX9Scape (In):NanoMeuf/out-1 |> Non-Mixer.VocalsNanoFX9Scape (Process):VocalsNanoFX9Scape/in-1
 Non-Mixer.VocalsNanoFX9Scape (In):NanoNormo/out-1 |> Non-Mixer.VocalsNanoFX9Scape (Process):VocalsNanoFX9Scape/in-1
 Non-Mixer.VocalsNanoFX9Scape (Process):VocalsNanoFX9Scape/out-1 |> Non-Mixer.VocalsNano (Out):NanoOut/in-1
-QMidiArp.CHiArp:out 1                    |> cHiRouter:MainIn
-QMidiArp.CLowArp:out 1                   |> cLowRouter:In
-QMidiArp.ZHiArp:out 1                    |> a2j:ZynAddSubFX ZHiSynths (playback): ZynAddSubFX
-QMidiArp.ZLowArp:out 1                   |> a2j:ZynAddSubFX ZLowSynths (playback): ZynAddSubFX
 Tap192.ConstantSampler:output-L          |> Non-Mixer.Samples (Main):ConstantSampler/in-1
 Tap192.ProdSampler:Samples1-L            |> Non-Mixer.Samples (Main):Samples1/in-1
 Tap192.ProdSampler:Samples2-L            |> Non-Mixer.Samples (Main):Samples2/in-1
@@ -656,6 +667,7 @@ ZynAddSubFX.ZHiSynths:part11/out-L       |> Non-Mixer.Synths (Main):ZDiploLike/i
 ZynAddSubFX.ZHiSynths:part12/out-L       |> Non-Mixer.Synths (Main):ZJestoProunk/in-1
 ZynAddSubFX.ZHiSynths:part13/out-L       |> Non-Mixer.Synths (Main):Z8bits/in-1
 ZynAddSubFX.ZHiSynths:part14/out-L       |> Non-Mixer.Synths (Main):Z8bits/in-1
+ZynAddSubFX.ZHiSynths:part15/out-L       |> Non-Mixer.Synths (Main):ZDiploLikeWide/in-1
 ZynAddSubFX.ZHiSynths:part2/out-L        |> Non-Mixer.Synths (Main):ZOrgan/in-1
 ZynAddSubFX.ZHiSynths:part3/out-L        |> Non-Mixer.Synths (Main):ZOrgan/in-1
 ZynAddSubFX.ZHiSynths:part4/out-L        |> Non-Mixer.Synths (Main):ZCosma/in-1
@@ -669,33 +681,10 @@ ZynAddSubFX.ZLowSynths:part1/out-L       |> Non-Mixer.BassSynths (Main):BassZDan
 ZynAddSubFX.ZLowSynths:part2/out-L       |> Non-Mixer.BassSynths (Main):BassZRagstep/in-1
 ZynAddSubFX.ZLowSynths:part3/out-L       |> Non-Mixer.BassSynths (Main):BassZDupieux/in-1
 ZynAddSubFX.ZLowSynths:part4/out-L       |> Non-Mixer.BassSynths (Main):BassZPhrampton/in-1
-a2j:Hammerfall DSP (capture): HDSP MIDI 1 |> a2j:JmjKeyboard (playback): in
-a2j:JmjKeyboard (capture): CHi           |> a2j:loop192 MidiLooper (playback): Loop 4
-a2j:JmjKeyboard (capture): CHiSf         |> a2j:loop192 MidiLooper (playback): Loop 3
-a2j:JmjKeyboard (capture): CLow          |> a2j:loop192 MidiLooper (playback): Loop 1
-a2j:JmjKeyboard (capture): ConstantSampler |> a2j:Tap192 ConstantSampler (playback): midi_in
-a2j:JmjKeyboard (capture): ProdSampler   |> a2j:Tap192 ProdSampler (playback): midi_in
-a2j:JmjKeyboard (capture): ZHi           |> a2j:loop192 MidiLooper (playback): Loop 2
-a2j:JmjKeyboard (capture): ZLow          |> a2j:loop192 MidiLooper (playback): Loop 0
-a2j:Joystick (capture): out              |> a2j:JmjKeyboard (playback): in
-a2j:Mk2Keyboard (capture): CHi           |> a2j:loop192 MidiLooper (playback): Loop 4
-a2j:Mk2Keyboard (capture): CHiSf         |> a2j:loop192 MidiLooper (playback): Loop 3
-a2j:Mk2Keyboard (capture): CLow          |> a2j:loop192 MidiLooper (playback): Loop 1
-a2j:Mk2Keyboard (capture): ConstantSampler |> a2j:Tap192 ConstantSampler (playback): midi_in
-a2j:Mk2Keyboard (capture): ProdSampler   |> a2j:Tap192 ProdSampler (playback): midi_in
-a2j:Mk2Keyboard (capture): ZHi           |> a2j:loop192 MidiLooper (playback): Loop 2
-a2j:Mk2Keyboard (capture): ZLow          |> a2j:loop192 MidiLooper (playback): Loop 0
-a2j:loop192 MidiLooper (capture): Loop 0 |> QMidiArp.ZLowArp:in
-a2j:loop192 MidiLooper (capture): Loop 1 |> QMidiArp.CLowArp:in
-a2j:loop192 MidiLooper (capture): Loop 2 |> QMidiArp.ZHiArp:in
-a2j:loop192 MidiLooper (capture): Loop 3 |> cHiRouter:RhodesIn
-a2j:loop192 MidiLooper (capture): Loop 4 |> QMidiArp.CHiArp:in
-a2j:seq192 MainSequencer (capture): seq192 1 |> a2j:ZynAddSubFX ZLowSynths (playback): ZynAddSubFX
-a2j:seq192 MainSequencer (capture): seq192 10 |> a2j:Tap192 ProdSampler (playback): midi_in
-a2j:seq192 MainSequencer (capture): seq192 2 |> cLowRouter:In
-a2j:seq192 MainSequencer (capture): seq192 3 |> a2j:ZynAddSubFX ZHiSynths (playback): ZynAddSubFX
-a2j:seq192 MainSequencer (capture): seq192 4 |> cHiRouter:RhodesIn
-a2j:seq192 MainSequencer (capture): seq192 5 |> cHiRouter:MainIn
+ZynAddSubFX.ZLowSynths:part5/out-L       |> Non-Mixer.BassSynths (Main):BassZSine/in-1
+ZynAddSubFX.ZLowSynths:part7/out-L       |> Non-Mixer.BassSynths (Main):BassZ8bits/in-1
+ZynAddSubFX.ZLowSynths:part8/out-L       |> Non-Mixer.BassSynths (Main):BassZ8bits/in-1
+ZynAddSubFX.ZLowSynths:part9/out-L       |> Non-Mixer.BassSynths (Main):BassZBoombaard/in-1
 cFluidBridge:capture                     |> cHiRouter:RhodesIn
 cHiBridge:capture                        |> cHiRouter:MainIn
 cHiRouter:DubstepHorn                    |> Carla.HiCSynths/DubstepHorn:events-in

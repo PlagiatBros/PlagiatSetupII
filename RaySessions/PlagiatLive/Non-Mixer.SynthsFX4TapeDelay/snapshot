@@ -97,6 +97,12 @@
 	Gain_Module 0x5E create :parameter_values "-70.000000:0.000000" :is_default 1 :chain 0x5C :active 1
 	Meter_Module 0x5F create :is_default 1 :chain 0x5C :active 1
 	JACK_Module 0x60 create :parameter_values "1.000000:0.000000" :is_default 1 :chain 0x5C :active 1
+	Mixer_Strip 0xD4 create :name "ZDiploLikeWide" :width "narrow" :tab "fader" :color 1937246054 :gain_mode 0 :mute_mode 0 :group 0x61 :auto_input "" :manual_connection 0
+	Chain 0xD5 create :strip 0xD4 :tab "chain"
+	JACK_Module 0xD6 create :parameter_values "0.000000:1.000000" :is_default 1 :chain 0xD5 :active 1
+	Gain_Module 0xD7 create :parameter_values "-70.000000:0.000000" :is_default 1 :chain 0xD5 :active 1
+	Meter_Module 0xD8 create :is_default 1 :chain 0xD5 :active 1
+	JACK_Module 0xD9 create :parameter_values "1.000000:0.000000" :is_default 1 :chain 0xD5 :active 1
 	Mixer_Strip 0x62 create :name "SynthsFX4TapeDelay" :width "narrow" :tab "signal" :color 1783112937 :gain_mode 0 :mute_mode 0 :group 0x69 :auto_input "" :manual_connection 0
 	Chain 0x63 create :strip 0x62 :tab "chain"
 	JACK_Module 0x64 create :parameter_values "0.000000:1.000000" :is_default 1 :chain 0x63 :active 1
