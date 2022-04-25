@@ -5279,10 +5279,6 @@
    <Target>Non-Mixer.VocalsKeschFX5RingMod (Process):VocalsKeschFX5RingMod/in-1</Target>
   </Connection>
   <Connection>
-   <Source>ZynAddSubFX.ZLowSynths:part5/out-L</Source>
-   <Target>Non-Mixer.BassSynths (Main):BassZSine/in-1</Target>
-  </Connection>
-  <Connection>
    <Source>Non-Mixer.VocalsKeschFX1Delay (Process):VocalsKeschFX1Delay/out-1</Source>
    <Target>Non-Mixer.VocalsKesch (Out):KeschOut/in-1</Target>
   </Connection>
@@ -5571,16 +5567,8 @@
    <Target>Non-Mixer.Synths (Main):ZTrumpets/in-1</Target>
   </Connection>
   <Connection>
-   <Source>ZynAddSubFX.ZLowSynths:part7/out-L</Source>
-   <Target>Non-Mixer.BassSynths (Main):BassZ8bits/in-1</Target>
-  </Connection>
-  <Connection>
    <Source>ZynAddSubFX.ZHiSynths:part8/out-L</Source>
    <Target>Non-Mixer.Synths (Main):ZTrumpets/in-1</Target>
-  </Connection>
-  <Connection>
-   <Source>ZynAddSubFX.ZLowSynths:part8/out-L</Source>
-   <Target>Non-Mixer.BassSynths (Main):BassZ8bits/in-1</Target>
   </Connection>
   <Connection>
    <Source>ZynAddSubFX.ZHiSynths:part9/out-L</Source>
@@ -5689,6 +5677,46 @@
   <Connection>
    <Source>Non-Mixer.Synths (Main):ZDiploLikeWide/out-1</Source>
    <Target>Non-Mixer.Synths (Out):SynthsOut/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.Synths (Main):ZDiploLikeWide/out-1</Source>
+   <Target>Non-Mixer.SynthsFX2Delay (In):ZDiploLikeWide/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.Synths (Main):ZDiploLikeWide/out-1</Source>
+   <Target>Non-Mixer.SynthsFX3Delay (In):ZDiploLikeWide/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.Synths (Main):ZDiploLikeWide/out-1</Source>
+   <Target>Non-Mixer.SynthsFX4TapeDelay (In):ZDiploLikeWide/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.Synths (Main):ZDiploLikeWide/out-1</Source>
+   <Target>Non-Mixer.SynthsFX5Scape (In):ZDiploLikeWide/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.Synths (Main):ZDiploLikeWide/out-1</Source>
+   <Target>Non-Mixer.SynthsFX1Reverb (In):ZDiploLikeWide/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.SynthsFX1Reverb (In):ZDiploLikeWide/out-1</Source>
+   <Target>Non-Mixer.SynthsFX1Reverb (Process):SynthsFX1Reverb/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.SynthsFX2Delay (In):ZDiploLikeWide/out-1</Source>
+   <Target>Non-Mixer.SynthsFX2Delay (Process):SynthsFX2Delay/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.SynthsFX3Delay (In):ZDiploLikeWide/out-1</Source>
+   <Target>Non-Mixer.SynthsFX3Delay (Process):SynthsFX3Delay/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.SynthsFX4TapeDelay (In):ZDiploLikeWide/out-1</Source>
+   <Target>Non-Mixer.SynthsFX4TapeDelay (Process):SynthsFX4TapeDelay/in-1</Target>
+  </Connection>
+  <Connection>
+   <Source>Non-Mixer.SynthsFX5Scape (In):ZDiploLikeWide/out-1</Source>
+   <Target>Non-Mixer.SynthsFX5Scape (Process):SynthsFX5Scape/in-1</Target>
   </Connection>
  </ExternalPatchbay>
 </CARLA-PROJECT>
