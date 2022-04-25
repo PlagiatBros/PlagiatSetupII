@@ -128,6 +128,7 @@ class RouteBase(Route):
 
             # SynthsFX
             if 'SynthsFX' in name:
+
                 for name in mod.submodules:
                     # Ins
                     if name not in mod.name:

@@ -111,6 +111,8 @@ class AlsaPatcher(Module):
         """
         Load a patch from file. Each line must be of the following form:
         clientname:portname |> clientname:portname
+
+        Empty lines and lines starting with a "#" are ignored.
         """
 
         self.connections.clear()
@@ -125,7 +127,9 @@ class AlsaPatcher(Module):
         for line in f.readlines():
             i += 1
 
-            if len(line):
+            line = line.strip()
+
+            if len(line) and line[0] != '#':
                 src, _, dest = line.partition('|>')
                 src_client_name, _, src_port_name = [x.strip() for x in src.strip().rpartition(':')]
                 dest_client_name, _, dest_port_name = [x.strip() for x in dest.strip().rpartition(':')]

@@ -13,6 +13,9 @@ class AgneauGastrik(Video, Light, RouteBase):
         """
         Called when the engine switches to this route.
         """
+
+        super().activate()
+        
         transport.set_tempo(150)
         transport.set_cycle('74/8', pattern=self.klick_pattern)
 

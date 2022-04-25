@@ -11,6 +11,12 @@ class Mk2Keyboard(Keyboard):
 
         super().__init__(*args, **kwargs)
 
+        self.set_sound('CEasyClassical')
+        self.set_sound('LowZDancestep')
+        self.set_sound('LowZRagstep')
+        self.set_sound('ZBombarde')
+
+
 class Mk2Control(Module):
     """
     Mk2 MIDI control interface
@@ -22,6 +28,8 @@ class Mk2Control(Module):
 
         self.sysex = []
 
+        self.shift_key = False
+
     def set_lights(self, lights):
         """
         Generates sysex messages for setting colors on pads
@@ -32,9 +40,9 @@ class Mk2Control(Module):
             `dict` with pad number as keys (1-indexed) and color names as values. Omitted pad will be turned off.
             Available color: red, blue, green purple, cyan, yellow, white
         """
-
+        self.logger.info('setting lights')
+        self.sysex = []
         for i in range(1,17):
-            self.sysex = []
             color = self.default_colors[i-1]
             if i in lights:
                 color = self.mk2colors['purple']
@@ -55,6 +63,7 @@ class Mk2Control(Module):
         """
 
         for s in self.sysex:
+            # self.logger.info('sending /sysex %s' % s)
             self.send('/sysex', *s)
 
     def route(self, address, args):
@@ -62,11 +71,21 @@ class Mk2Control(Module):
         Route controls from mk2.
         Reset colors whenever a pad is hit, otherwise it dosen't stay lit.
         """
+        self.logger.info('%s %s' %(address, args))
 
-        if address == '/control':
+        if self.shift_key:
 
-            cc = args[0]
-            if cc > 100 and cc < 117:
+            if address == '/pitch_bend':
+
+                p = 1.0 + args[1] / 8192 * 0.75
+
+                self.engine.modules['PostProcess'].set_pitch('*', p)
+
+
+        if address == '/control_change':
+
+            cc = args[1]
+            if cc > 100 and cc < 117 and args[2] == 0:
 
                 if cc < 109:
                     # pads 1-8
@@ -75,6 +94,11 @@ class Mk2Control(Module):
                     pass
 
                 self.resend_lights()
+
+        elif address == '/sysex':
+
+            if args[:-2] == [240, 0, 32, 107, 127, 66, 2, 0, 0, 46]:
+                self.shift_key = args[-2] == 127
 
         return False
 

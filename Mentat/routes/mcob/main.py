@@ -13,6 +13,9 @@ class Mcob(Video, Light, RouteBase):
         """
         Called when the engine switches to this route.
         """
+
+        super().activate()
+
         transport.set_tempo(120)
         transport.set_cycle('4/4')
 
@@ -65,6 +68,16 @@ class Mcob(Video, Light, RouteBase):
 
         # Keyboard
         jmjKeyboard.set_sound('LowZDupieux')
+
+    @pedalboard_button(5)
+    def prerefrain0(self):
+        """
+        PRÉ-REFRAIN 0 (cf PRÉ-REFRAIN)
+        """
+        # méthode vide juste pour que le déroulé du morceau appairaisse de façon linéaire
+        pass
+
+
 
     @mk2_button(2, 'purple')
     def refrain(self):
@@ -203,6 +216,7 @@ class Mcob(Video, Light, RouteBase):
         # Sequences
         seq192.select('solo', 'couplet1-2_*')
         seq192.select('off', 'couplet1-2_samples_princeguitar2')
+        seq192.select('off', 'couplet1-2_cLow_*')
 
         # Transport
         transport.set_tempo(120)
@@ -217,10 +231,7 @@ class Mcob(Video, Light, RouteBase):
         self.start_sequence('prince2pac_b', [
             {   # bar 1
                 'signature': '4/4',
-                1: lambda: [
-                    vocalsKesch.set('meuf_exclu', 'on'), vocalsKesch.set('normo', 'on'),
-                    seq192.select('off', 'couplet1-2_cLow_*')
-                    ],
+                1: lambda: [vocalsKesch.set('meuf_exclu', 'on'), vocalsKesch.set('normo', 'on')],
             },
             {  # bar 2
                 3 + 2/3: lambda: vocalsKesch.set('gars_exclu', 'on'),
@@ -318,6 +329,9 @@ class Mcob(Video, Light, RouteBase):
         vocalsKesch.set('meuf', 'on')
         vocalsNano.set('normo_exclu', 'on')
 
+        # Keyboards
+        jmjKeyboard.set_sound('ConstantSampler')
+
     @mk2_button(2)
     def refrain2(self):
         """
@@ -359,6 +373,17 @@ class Mcob(Video, Light, RouteBase):
         vocalsKesch.set('gars', 'on')
         vocalsKesch.set('meuf', 'on')
         vocalsNano.set('normo_exclu', 'on')
+
+        # Keyboards
+        jmjKeyboard.set_sound('ZNotSoRhodes')
+
+    @mk2_button(4)
+    def couplet2_1(self):
+        """
+        Couplet 2-1 (RAGGA) (cf Couplet 1-4)
+        """
+        # méthode vide juste pour que le déroulé du morceau appairaisse de façon linéaire
+        pass
 
     @pedalboard_button(7)
     def blast(self):

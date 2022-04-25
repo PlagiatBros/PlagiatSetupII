@@ -10,6 +10,9 @@ class Snapshat(Video, Light, RouteBase):
         """
         Called when the engine switches to this route.
         """
+
+        super().activate()
+
         transport.set_tempo(90)
         transport.set_cycle('4/4')
 

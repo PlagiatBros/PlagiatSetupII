@@ -15,6 +15,7 @@ class Keyboard(Module):
         self.add_parameter('subscene', '/mididings/switch_subscene', 'i', default=1)
 
         self.scenes = {}
+        self.pending_scene = None
 
     def route(self, address, args):
         """
@@ -34,8 +35,11 @@ class Keyboard(Module):
 
 
         elif address == '/mididings/end_scenes':
-            # self.logger.info(self.scenes)
-            pass
+            if self.scenes and self.pending_scene != None:
+                self.set_sound(self.pending_scene)
+                self.pending_scene = None
+
+        return False
 
     def set_sound(self, name):
         """
@@ -45,10 +49,14 @@ class Keyboard(Module):
 
         - `name`: name of sound (subscene in mididings patch)
         """
-        for scene in self.scenes:
-            if name in self.scenes[scene]['subscenes']:
-                self.set('scene', self.scenes[scene]['number'])
-                self.set('subscene', self.scenes[scene]['subscenes'].index(name) + 1)
-                self.logger.info('switched to sound "%s"' % name)
-                return
-        self.logger.error('sound "%s" not found' % name)
+        if not self.scenes:
+            self.pending_scene = name
+        else:
+            for scene in self.scenes:
+                if name in self.scenes[scene]['subscenes']:
+                    print(self.scenes[scene])
+                    self.set('scene', self.scenes[scene]['number'])
+                    self.set('subscene', self.scenes[scene]['subscenes'].index(name) + 1)
+                    self.logger.info('switched to sound "%s"' % name)
+                    return
+            self.logger.error('sound "%s" not found' % name)
