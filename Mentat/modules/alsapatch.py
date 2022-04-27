@@ -57,7 +57,7 @@ class AlsaPatcher(Module):
             if port_name in client.ports:
                 return client.ports[port_name]
             else:
-                self.logger('Error: Alsa MIDI: port "%s" not found in client "%s"' % (port_name, client.name))
+                self.logger.error('Error: Alsa MIDI: port "%s" not found in client "%s"' % (port_name, client.name))
 
 
     def get_alsa_connections(self):

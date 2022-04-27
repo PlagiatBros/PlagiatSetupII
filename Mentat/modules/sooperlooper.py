@@ -24,9 +24,63 @@ class SooperLooper(Module):
         self.add_parameter('tempo', '/set', 'sf', static_args=['tempo'], default=120)
 
         for i in range(16):
-            self.add_submodule(Loop('loop_%i' % i, loop_n=i, parent=self))
+            loop = Loop('loop_%i' % i, loop_n=i, parent=self)
+            self.add_submodule(loop)
+            loop.add_parameter('length', None, 'f', default=1)
+            loop.add_parameter('position', None, 'f', default=0)
+
+            loop.add_parameter('waiting', None, 'f', default=0)
+            loop.add_parameter('recording', None, 'f', default=0)
+            loop.add_parameter('overdubbing', None, 'f', default=0)
+            loop.add_parameter('paused', None, 'f', default=0)
 
         self.pending_record = None
+
+        self.add_event_callback('client_started', self.client_started)
+
+
+    def client_started(self, name):
+        """
+        Subscribe to sl feedback when
+        """
+        if name == self.name or name == 'OpenStageControl':
+            url = 'osc.udp://127.0.0.1:%i' % self.engine.port
+                for feed in ['state', 'loop_len', 'loop_pos']:
+                    if name == self.name:
+                        self.send('/sl/-1/unregister_auto_update',feed, url, '/sl_feedback')
+                        self.send('/sl/-1/register_auto_update',feed, 100, url, '/sl_feedback')
+                    self.send('/sl/-1/get',feed, url, '/sl_feedback')
+
+    sl_states = {
+        1: ['waiting', 'paused'],
+        2: ['recording'],
+        3: ['waiting', 'recording'],
+        5: ['overdubbing'],
+        14: ['paused']
+    }
+    def route(self, address, args):
+        """
+        Route sl feedback to loop modules' parameters
+        """
+        if address == '/sl_feedback':
+
+            n, param, value = args
+
+            if param == 'state':
+                state = sl_states[value] if value in sl_states else []
+                for p in ['waiting', 'recording', 'overdubbing', 'paused']:
+                    self.set('loop_%i' % n, p, 1 if p in state else 0)
+            elif param == 'loop_len':
+                self.set('loop_%i' % n, 'length', value)
+            elif param == 'loop_pos':
+                self.set('loop_%i' % n, 'position', value)
+
+
+        return False
+
+
+
+
 
     def start(self):
         """
@@ -120,5 +174,31 @@ class SooperLooper(Module):
             - osc pattern to affect multiple loops (examples: '[1,2,5]', '[2-5]'...)
             - `-1` to affect all loops
         """
-        self.send('/sl/%s/hit' % i, 'pause_off')
+        # self.send('/sl/%s/hit' % i, 'pause_off')
         self.send('/sl/%s/hit' % i, 'pause_on')
+
+    def unpause(self, i='-1'):
+        """
+        Unpause playback
+
+        **Parameters**
+
+        - `i`:
+            - loop number or
+            - osc pattern to affect multiple loops (examples: '[1,2,5]', '[2-5]'...)
+            - `-1` to affect all loops
+        """
+        self.send('/sl/%s/hit' % i, 'pause_off')
+
+    def toggle_pause(self, i='-1'):
+        """
+        Toggle pause playback
+
+        **Parameters**
+
+        - `i`:
+            - loop number or
+            - osc pattern to affect multiple loops (examples: '[1,2,5]', '[2-5]'...)
+            - `-1` to affect all loops
+        """
+        self.send('/sl/%s/hit' % i, 'pause')

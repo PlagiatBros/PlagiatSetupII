@@ -14,16 +14,14 @@ class OpenStageControl(Module):
         super().__init__(*args, **kwargs)
 
         self.add_event_callback('parameter_changed', self.parameter_changed)
-        self.add_event_callback('client_restarted', self.client_restarted)
-
-        self.start_scene('populate_gui', self.populate_gui)
+        self.add_event_callback('client_started', self.client_started)
 
         self.osc_state = {}
 
     def parameter_changed(self, module, name, value):
         """
         Whenever a parameter changes, send it to the interface:
-            /submodule_name/module_name parameter_name *value
+            /module_name/submodule_name parameter_name *value
 
         and store that state locally.
         """
@@ -41,7 +39,7 @@ class OpenStageControl(Module):
             self.osc_state[address] = {}
         self.osc_state[address][name] = value
 
-    def client_restarted(self, name):
+    def client_started(self, name):
         if name == self.name:
             self.start_scene('populate_gui', self.populate_gui)
 
@@ -61,16 +59,40 @@ class OpenStageControl(Module):
     def route(self, address, args):
         """
         Allow controlling any module from the interface using the same syntax:
-            /submodule_name/module_name parameter_name *value
+            /module_name/submodule_name parameter_name *value
+            or
+            /module_name/submodule_name/call method_name *args
         """
 
         # send OSC controls to modules
         # /module_name param_name value
-        module_path = address.split('/')
-        module_name = module_path[1]
+        module_path = address.split('/')[1:]
+        module_name = module_path[0]
 
         if module_name in self.engine.modules:
-            self.engine.modules[module_name].set(*module_path[2:], *args)
+
+            call = False
+            if module_path[-1] == 'call':
+                module_path = module_path[:-1]
+                call = True
+
+            # resolve module path
+            mod = self.engine.modules[module_name]
+            for n in module_path[1:]:
+                if n in mod.submodules:
+                    mod = mod.submodules[n]
+                else:
+                    self.logger.error('unknown submodule %s for module %s' % (n, module_name))
+                    return False
+
+            if call:
+                if hasattr(mod, args[0]):
+                    method = getattr(mod, args[0]):
+                    if callable(method):
+                        method(*args[1:])
+            else:
+                self.engine.modules[module_name].set(*module_path[1:], *args)
+
             return False
 
 
@@ -86,7 +108,7 @@ class OpenStageControl(Module):
 
         self.wait(2, 's') # wait until everyone is here (bad, should rely on events)
 
-        panel = {'tabs': []}
+        panel = {'tabs': [], 'verticalTabs': True}
 
         for name, mod in self.engine.modules.items():
             if isinstance(mod, NonMixer):
@@ -96,6 +118,7 @@ class OpenStageControl(Module):
                     'layout': 'horizontal',
                     'innerPadding': False,
                     'widgets': [],
+                    'padding': 1,
                     'contain': False
                 }
                 panel['tabs'].append(tab)
@@ -106,13 +129,28 @@ class OpenStageControl(Module):
                         'width': 120,
                         'widgets': [],
                         'innerPadding': False,
-                        'lineWidth': 0
+                        'padding': 1,
+                        'lineWidth': 0,
+                        'css': 'class: non-strip;',
+                        'scroll': False
                     }
                     tab['widgets'].append(strip)
                     strip['widgets'].append({
                         'type': 'text',
                         'value':  urllib.parse.unquote(sname)
                     })
+                    plugins = {
+                        'type': 'panel',
+                        'layout': 'vertical',
+                        'height': 120,
+                        'widgets': [],
+                        'innerPadding': True,
+                        'padding': 1,
+                        'css': 'class: non-plugins;',
+                        'scroll': True,
+                        'contain': False
+                    }
+                    strip['widgets'].append(plugins)
                     plugs = {}
                     for plugname, plugmod in smod.submodules.items():
                         if plugname != 'Gain':
@@ -122,10 +160,12 @@ class OpenStageControl(Module):
                                     'label': urllib.parse.unquote(plugname),
                                     'layout': 'vertical',
                                     'height': 30,
+                                    'padding': 1,
+                                    'innerPadding': False,
                                     'widgets': []
                                 }
                                 plugs[plugname] = modal
-                                strip['widgets'].append(modal)
+                                plugins['widgets'].append(modal)
 
                             for pname in plugmod.parameters:
 
@@ -149,9 +189,12 @@ class OpenStageControl(Module):
                                             'pips': True,
                                             'range': {'min': {'%.1f' % param.range[0]: param.range[0]}, 'max': {'%.1f' % param.range[1]: param.range[1]}},
                                             'value': param.args[0],
+                                            'default': param.args[0],
                                             'linkId': param.address,
                                             'address': '/%s/%s/%s/%s' % (name, sname, plugname, pname),
-                                            'expand': True
+                                            'pips': True,
+                                            'expand': True,
+                                            'design': 'round'
                                         },
                                         {
                                             'type': 'input',
@@ -163,25 +206,21 @@ class OpenStageControl(Module):
                                 })
 
                     strip['widgets'].append({
-                        'type': 'text',
-                        'label': False,
-                        'expand': True,
+                    'type': 'button',
+                    'label': 'Mute',
+                    'value': smod.get('Gain', 'Mute'),
+                    'address': '/%s/%s/Gain/Mute' % (name, sname)
                     })
                     strip['widgets'].append({
                         'type': 'fader',
                         'range': {'min': -70, '6%': -60, '12%': -50, '20%': -40, '30%': -30, '42%': -20, '60%': -10, '80%': 0, 'max': 6 },
-                        'height': '50%',
-                        'default': 0,
+                        'expand': True,
+                        'default': smod.get('Gain', 'Gain'),
                         'doubleTap': True,
                         'pips': True,
+                        'design': 'round',
                         'value': smod.get('Gain', 'Gain'),
                         'address': '/%s/%s/Gain/Gain' % (name, sname)
-                    })
-                    strip['widgets'].append({
-                        'type': 'button',
-                        'label': 'Mute',
-                        'value': smod.get('Gain', 'Mute'),
-                        'address': '/%s/%s/Gain/Mute' % (name, sname)
                     })
 
         self.edit_gui('non-mixers', panel)
@@ -190,7 +229,6 @@ class OpenStageControl(Module):
         """
         Send data to interface, split it into small chunks that udp can handle.
         """
-
         blob = json.dumps(data)
 
         self.send('/EDIT_QUEUE/START', widget)
