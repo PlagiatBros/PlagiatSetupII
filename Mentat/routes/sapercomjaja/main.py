@@ -25,6 +25,27 @@ class AgneauGastrik(Video, Light, RouteBase):
         microtonality.enable()
         microtonality.set_tuning(0, 0, 0, 0, 0, 0.35, 0, 0, 0.35, 0, 0.35, 0)
 
+    def couplet_m(self):
+        """
+        Couplets M
+        """
+        self.pause_loopers()
+        self.reset()
+
+        # Sequences
+        seq192.select('solo', 'couplet_m_*')
+
+        # Transport
+        transport.set_cycle('3/4', pattern="Xxx")
+        transport.start()
+
+        # Samples
+        samples.set('Samples4', 'Gain', 'Mute', 0.0)
+
+        # Keyboards
+        jmjKeyboard.set_sound('CLowBoomTrapline')
+        #### TODO mk2Keyboard ?
+
     @pedalboard_button(1)
     @mk2_button(1, 'blue')
     def stop(self):
@@ -78,8 +99,8 @@ class AgneauGastrik(Video, Light, RouteBase):
         samples.set('Samples4', 'Gain', 'Mute', 0.0)
 
         # Vocals
-        vocalsNano.set('meuf_exclu', 'on')
-        vocalsKesch.set('gars_exclu', 'on')
+        vocalsNano.set('normo_exclu', 'on')
+        vocalsKesch.set('meuf_exclu', 'on')
 
         # Keyboards
         jmjKeyboard.set_sound('LowCTrap1')
@@ -89,22 +110,35 @@ class AgneauGastrik(Video, Light, RouteBase):
         """
         Couplet M 1
         """
-        self.pause_loopers()
-        self.reset()
-
-        # Sequences
-        seq192.select('solo', 'couplet_m1_*')
-
-        # Transport
-        transport.set_cycle('3/4', pattern="Xxx")
-        transport.start()
-
-        # Samples
-        samples.set('Samples4', 'Gain', 'Mute', 0.0)
+        self.couplet_m()
 
         # Vocals
-        vocalsNano.set('meuf_exclu', 'on')
-        vocalsKesch.set('gars_exclu', 'on')
+        vocalsNano.set('gars_exclu', 'on')
+        vocalsKesch.set('normo_exclu', 'on')
 
-        # Keyboards
-        jmjKeyboard.set_sound('CLowBoomTrapline')
+
+    @pedalboard_button(3) # bouton 6 à l'origine
+    def mandelaaa2(self):
+        """
+        Mandela A A A (cf. mandelaaa)
+        """
+        # méthode vide juste pour que le déroulé du morceau appairaisse de façon linéaire
+        pass
+
+    @pedalboard_button(5) # bouton 8 à l'origine
+    def couplet_m2(self):
+        """
+        Couplet M 2
+        """
+        self.couplet_m()
+
+        # Vocals
+        vocalsNano.set('gars_exclu', 'on')
+        vocalsKesch.set('meuf_exclu', 'on')
+
+    @pedalboard_button(6) # bouton 9 à l'origine
+    def eggz_trapcut(self):
+        """
+        Mamaz Bakingz Eggz
+        """
+        #### TODO scène trapcut
