@@ -24,13 +24,14 @@ def create_keyboard(name):
         AutoRestart()
     )
 
-    generic_in = Transpose(-12) >> [
+    generic_in = Transpose(-12) >> ~ChannelFilter(16) >> [
         Filter(NOTE),
         Filter(CTRL) >> [
             CtrlFilter(1) >> SendOSC(mentatPort, '/pedalVolume', lambda ev: ev.value) >> Discard(), # Pédale de volume
             CtrlFilter(64), # Pédale de sustain
             Discard()
-            ]
+            ],
+        Filter(PITCHBEND)
         ]
 
     # Zyn LowSynths
@@ -39,35 +40,35 @@ def create_keyboard(name):
     lowZRagstep = generic_in >> Output('ZLow', 3)
     lowZDupieux = generic_in >> Output('ZLow', 4)
     lowZPhrampton = generic_in >> Output('ZLow', 5)
+    lowZSine = generic_in >> Output('ZLow', 6)
+    lowZ8bit = generic_in >> Output('ZLow', 8)
 
     # Carla LowSynths
     lowCTrap1 = generic_in >> Output('CLow', 1)
     lowCTrap2 = generic_in >> Output('CLow', 2)
     lowCBarkline = generic_in >> Output('CLow', 3)
     lowCBoom = generic_in >> Output('CLow', 4)
+    lowCBoomTrapLine = generic_in >> [
+        Output('CLow', 2),
+        Output('CLow', 3),
+        Output('CLow', 4),
+        ]
 
     # Zyn HiSynths
     zDupieux = generic_in >> Output('ZHi', 1)
     zNotSoRhodes = generic_in >> Output('ZHi', 2)
-    zOrgan = generic_in >> [
-        Output('ZHi', 3),
-        Output('ZHi', 4),
-        ]
+    zOrgan = generic_in >> Output('ZHi', 4)
     zCosma = generic_in >> Output('ZHi', 5)
     zBombarde = generic_in >> Output('ZHi', 6)
-    zTrumpets = generic_in >> [
-        Output('ZHi', 7),
-        Output('ZHi', 8),
-        Output('ZHi', 9),
-        ]
-    zStambul = generic_in >> Output('ZHi', 10)
-    zDre = generic_in >> Output('ZHi', 11)
-    zDiploLike = generic_in >> Output('ZHi', 12)
-    zJestoProunk = generic_in >> Output('ZHi', 13)
-    z8bits = generic_in >> [
-        Output('ZHi', 14),
-        Output('ZHi', 15),
-        ]
+    zTrumpets = generic_in >> Output('ZHi', 7)
+
+    zStambul = generic_in >> Output('ZHi', 8)
+    zDre = generic_in >> Output('ZHi', 9)
+    zDiploLike = generic_in >> Output('ZHi', 11)
+    zJestoProunk = generic_in >> Output('ZHi', 12)
+    z8bits = generic_in >> Output('ZHi', 13)
+
+    zDiploLikeWide = generic_in >> Output('ZHi', 14)
 
     # Carla HiSynths
     cRhodes = generic_in >> Output('CHiSf')
@@ -97,6 +98,12 @@ def create_keyboard(name):
                 Scene('LowZPhrampton',
                     lowZPhrampton
                 ),
+                Scene('LowZSine',
+                    lowZSine
+                ),
+                Scene('LowZ8bit',
+                    lowZ8bit
+                ),
                 Scene('LowCTrap1',
                     lowCTrap1
                 ),
@@ -108,6 +115,9 @@ def create_keyboard(name):
                 ),
                 Scene('LowCBoom',
                     lowCBoom
+                ),
+                Scene('LowCBoomTrapline',
+                    lowCBoomTrapline
                 ),
 
             ]),
@@ -138,6 +148,9 @@ def create_keyboard(name):
                 ),
                 Scene('ZDiploLike',
                     zDiploLike
+                ),
+                Scene('ZDiploLikeWide',
+                    zDiploLikeWide
                 ),
                 Scene('ZJestoProunk',
                     zJestoProunk
