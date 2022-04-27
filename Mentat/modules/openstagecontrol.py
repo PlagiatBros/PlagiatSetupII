@@ -87,7 +87,7 @@ class OpenStageControl(Module):
 
             if call:
                 if hasattr(mod, args[0]):
-                    method = getattr(mod, args[0]):
+                    method = getattr(mod, args[0])
                     if callable(method):
                         method(*args[1:])
             else:

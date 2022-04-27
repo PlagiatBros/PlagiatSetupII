@@ -45,11 +45,11 @@ class SooperLooper(Module):
         """
         if name == self.name or name == 'OpenStageControl':
             url = 'osc.udp://127.0.0.1:%i' % self.engine.port
-                for feed in ['state', 'loop_len', 'loop_pos']:
-                    if name == self.name:
-                        self.send('/sl/-1/unregister_auto_update',feed, url, '/sl_feedback')
-                        self.send('/sl/-1/register_auto_update',feed, 100, url, '/sl_feedback')
-                    self.send('/sl/-1/get',feed, url, '/sl_feedback')
+            for feed in ['state', 'loop_len', 'loop_pos']:
+                if name == self.name:
+                    self.send('/sl/-1/unregister_auto_update',feed, url, '/sl_feedback')
+                    self.send('/sl/-1/register_auto_update',feed, 100, url, '/sl_feedback')
+                self.send('/sl/-1/get',feed, url, '/sl_feedback')
 
     sl_states = {
         1: ['waiting', 'paused'],
