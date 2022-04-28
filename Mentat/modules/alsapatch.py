@@ -49,7 +49,7 @@ class AlsaPatcher(Module):
         if name in self.clients:
             return self.clients[name]
         else:
-            self.logger.error('Error: Alsa MIDI: client "%s" not found' % name)
+            self.logger.warning('client "%s" not found' % name)
 
 
     def get_port(self, client, port_name):
@@ -57,7 +57,7 @@ class AlsaPatcher(Module):
             if port_name in client.ports:
                 return client.ports[port_name]
             else:
-                self.logger.error('Error: Alsa MIDI: port "%s" not found in client "%s"' % (port_name, client.name))
+                self.logger.warning('port "%s" not found in client "%s"' % (port_name, client.name))
 
 
     def get_alsa_connections(self):
@@ -120,7 +120,7 @@ class AlsaPatcher(Module):
         try:
             f = open(file, 'r')
         except:
-            self.logger.error('Error: Alsa MIDI: could not open patch file "%s"' % file)
+            self.logger.error('could not open patch file "%s"' % file)
             return
 
         i=0
@@ -139,7 +139,7 @@ class AlsaPatcher(Module):
                     self.connections.append((src_client_name, src_port_name, dest_client_name, dest_port_name))
 
                 else:
-                    self.logger.error('Error: Alsa MIDI: could not parse connection "%s" at line %i' % (line, i))
+                    self.logger.warning('could not parse connection "%s" at line %i' % (line, i))
 
 
     def apply_patch(self):

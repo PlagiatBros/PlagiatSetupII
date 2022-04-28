@@ -44,7 +44,7 @@ joystick = Joystick('Joystick', 'osc', 3004)
 """
 Loopers
 """
-looper = SooperLooper('Looper', 'osc', 9951)
+looper = SooperLooper('AudioLooper', 'osc', 9951)
 loop192 = Loop192('Loop192', 'osc', 9910)
 
 """

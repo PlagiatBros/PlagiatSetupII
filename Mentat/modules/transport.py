@@ -23,7 +23,7 @@ class Transport(Module):
         self.engine.set_tempo(bpm)
 
         self.engine.modules['Seq192'].set('tempo', bpm)
-        self.engine.modules['Looper'].set('tempo', bpm)
+        self.engine.modules['AudioLooper'].set('tempo', bpm)
         self.engine.modules['Klick'].set('tempo', bpm)
 
         for mixer, strip in [
@@ -71,7 +71,7 @@ class Transport(Module):
         self.engine.modules['Klick'].set('pattern', pattern)
 
         self.engine.modules['Loop192'].set('cycle', eighths)
-        self.engine.modules['Looper'].set('cycle', eighths)
+        self.engine.modules['AudioLooper'].set('cycle', eighths)
 
     def start(self):
         """
@@ -85,7 +85,7 @@ class Transport(Module):
         self.engine.modules['Seq192'].start()
 
         # sooperlooper needs a cycle start hack
-        self.engine.modules['Looper'].start()
+        self.engine.modules['AudioLooper'].start()
 
         self.engine.modules['Klick'].start()
 

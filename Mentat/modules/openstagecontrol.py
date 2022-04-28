@@ -40,8 +40,7 @@ class OpenStageControl(Module):
         self.osc_state[address][name] = value
 
     def client_started(self, name):
-        if name == self.name:
-            self.start_scene('populate_gui', self.populate_gui)
+        self.start_scene('populate_gui', self.populate_gui)
 
 
     def send_state(self):
@@ -106,7 +105,7 @@ class OpenStageControl(Module):
         Maybe this is overkill.
         """
 
-        self.wait(2, 's') # wait until everyone is here (bad, should rely on events)
+        self.wait(2, 's')
 
         panel = {'tabs': [], 'verticalTabs': True}
 
@@ -128,25 +127,21 @@ class OpenStageControl(Module):
                         'layout': 'vertical',
                         'width': 120,
                         'widgets': [],
-                        'innerPadding': False,
-                        'padding': 1,
+                        'innerPadding': True,
                         'lineWidth': 0,
-                        'css': 'class: non-strip;',
+                        'css': 'class: strip;',
+                        'html': '<div class="label center">%s</div>' % urllib.parse.unquote(sname),
                         'scroll': False
                     }
                     tab['widgets'].append(strip)
-                    strip['widgets'].append({
-                        'type': 'text',
-                        'value':  urllib.parse.unquote(sname)
-                    })
                     plugins = {
                         'type': 'panel',
                         'layout': 'vertical',
                         'height': 120,
                         'widgets': [],
                         'innerPadding': True,
-                        'padding': 1,
-                        'css': 'class: non-plugins;',
+                        'padding': 4,
+                        'css': 'class: carved;',
                         'scroll': True,
                         'contain': False
                     }
@@ -158,10 +153,12 @@ class OpenStageControl(Module):
                                 modal = {
                                     'type': 'modal',
                                     'label': urllib.parse.unquote(plugname),
-                                    'layout': 'vertical',
+                                    'layout': 'horizontal',
                                     'height': 30,
-                                    'padding': 1,
-                                    'innerPadding': False,
+                                    'popupPadding': 1,
+                                    'innerPadding': True,
+                                    'popupHeight': 400,
+                                    'popupWidth': 800,
                                     'widgets': []
                                 }
                                 plugs[plugname] = modal
@@ -172,29 +169,24 @@ class OpenStageControl(Module):
                                 param = plugmod.parameters[pname]
                                 modal['widgets'].append({
                                     'type': 'panel',
-                                    'layout': 'horizontal',
-                                    'innerPadding': False,
-                                    'lineWidth': 0,
-                                    'height': 80,
+                                    'layout': 'vertical',
+                                    'css': 'class: strip',
+                                    'html': '<div class="label center">%s</div>' % urllib.parse.unquote(pname),
+                                    'width': 120,
                                     'widgets': [
                                         {
-                                            'type': 'text',
-                                            'value': urllib.parse.unquote(pname),
-                                            'width': 120,
-                                            'wrap': True
-                                        },
-                                        {
-                                            'type': 'fader',
+                                            'type': 'knob',
                                             'horizontal': True,
                                             'pips': True,
                                             'range': {'min': {'%.1f' % param.range[0]: param.range[0]}, 'max': {'%.1f' % param.range[1]: param.range[1]}},
                                             'value': param.args[0],
                                             'default': param.args[0],
+                                            'doubleTap': True,
                                             'linkId': param.address,
                                             'address': '/%s/%s/%s/%s' % (name, sname, plugname, pname),
                                             'pips': True,
                                             'expand': True,
-                                            'design': 'round'
+                                            'design': 'solid'
                                         },
                                         {
                                             'type': 'input',
@@ -208,6 +200,8 @@ class OpenStageControl(Module):
                     strip['widgets'].append({
                     'type': 'button',
                     'label': 'Mute',
+                    'colorWidget': 'var(--yellow)',
+                    'css': 'class: discrete;',
                     'value': smod.get('Gain', 'Mute'),
                     'address': '/%s/%s/Gain/Mute' % (name, sname)
                     })
@@ -215,11 +209,11 @@ class OpenStageControl(Module):
                         'type': 'fader',
                         'range': {'min': -70, '6%': -60, '12%': -50, '20%': -40, '30%': -30, '42%': -20, '60%': -10, '80%': 0, 'max': 6 },
                         'expand': True,
-                        'default': smod.get('Gain', 'Gain'),
                         'doubleTap': True,
                         'pips': True,
                         'design': 'round',
                         'value': smod.get('Gain', 'Gain'),
+                        'default': smod.get('Gain', 'Gain'),
                         'address': '/%s/%s/Gain/Gain' % (name, sname)
                     })
 
@@ -243,3 +237,8 @@ class OpenStageControl(Module):
             i += size
 
         self.send('/EDIT_QUEUE/END', widget)
+
+
+    def transport_stop(self):
+        self.engine.modules['Transport'].stop()
+        self.engine.active_route.pause_loopers()
