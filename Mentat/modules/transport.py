@@ -26,6 +26,8 @@ class Transport(Module):
         self.engine.modules['AudioLooper'].set('tempo', bpm)
         self.engine.modules['Klick'].set('tempo', bpm)
 
+        self.engine.modules['OpenStageControl'].set('tempo', bpm)
+
         for mixer, strip in [
                 ('BassFX', 'BassScape'),
                 ('SynthsFX5Scape', 'SynthsFX5Scape')]:
@@ -73,6 +75,8 @@ class Transport(Module):
         self.engine.modules['Loop192'].set('cycle', eighths)
         self.engine.modules['AudioLooper'].set('cycle', eighths)
 
+        self.engine.modules['OpenStageControl'].set('signature', signature)
+
     def start(self):
         """
         Start transport.
@@ -89,6 +93,8 @@ class Transport(Module):
 
         self.engine.modules['Klick'].start()
 
+        self.engine.modules['OpenStageControl'].set('rolling', 1)
+
     def stop(self):
         """
         Stop transport.
@@ -99,3 +105,5 @@ class Transport(Module):
         self.engine.modules['Seq192'].stop()
 
         self.engine.modules['Klick'].stop()
+
+        self.engine.modules['OpenStageControl'].set('rolling', 0)

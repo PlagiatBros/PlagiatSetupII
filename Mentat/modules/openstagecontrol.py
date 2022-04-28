@@ -13,10 +13,40 @@ class OpenStageControl(Module):
 
         super().__init__(*args, **kwargs)
 
+        self.osc_state = {}
+        self.non_gui = {}
+
+        self.add_parameter('signature', '/signature', types='s', default='4/4')
+        self.add_parameter('tempo', '/tempo', types='f', default=120)
+        self.add_parameter('cursor', '/cursor', types='f', default=0)
+        self.add_parameter('routes', '/routes', types='s', default='Loading')
+        self.add_parameter('rolling', '/rolling', types='i', default=0)
+
         self.add_event_callback('parameter_changed', self.parameter_changed)
         self.add_event_callback('client_started', self.client_started)
+        self.add_event_callback('engine_started', lambda:
+            self.set('routes', ','.join(self.engine.routes.keys()))
+        )
 
-        self.osc_state = {}
+        self.start_scene('cycle_watch', self.cycle_watch)
+
+    def cycle_watch(self):
+        """
+        Watch time to display global metric / cycle position
+        """
+        self.wait(0.04)
+        engine = self.engine
+        transport = self.engine.modules['Transport']
+        while True:
+
+            cursor = 0
+            if self.get('rolling'):
+                cycle_duration = 1000000000 * engine.cycle_length * 60 / engine.tempo
+                cursor = ((engine.current_time - engine.cycle_start_time) % cycle_duration) / cycle_duration
+
+            self.set('cursor', cursor)
+
+            self.wait(0.04)
 
     def parameter_changed(self, module, name, value):
         """
@@ -55,34 +85,48 @@ class OpenStageControl(Module):
             for name in self.osc_state[address]:
                 self.send(address, name, *self.osc_state[address][name])
 
+    def resolve_path(self, path):
+        """
+        Resolve module path (see route())
+        """
+        module_name = path[0]
+
+        if module_name == 'Engine':
+            return self.engine
+        elif module_name in self.engine.modules:
+            mod = self.engine.modules[module_name]
+            for n in path[1:]:
+                if n in mod.submodules:
+                    mod = mod.submodules[n]
+            return mod
+        return None
+
     def route(self, address, args):
         """
-        Allow controlling any module from the interface using the same syntax:
+        Allow controlling any module parameter from the interface using the same syntax:
             /module_name/submodule_name parameter_name *value
-            or
+        or calling a module method:
             /module_name/submodule_name/call method_name *args
         """
+
+        if address == '/ready':
+            self.send_state()
+            return False
+
 
         # send OSC controls to modules
         # /module_name param_name value
         module_path = address.split('/')[1:]
         module_name = module_path[0]
 
-        if module_name in self.engine.modules:
+        call = False
+        if module_path[-1] == 'call':
+            module_path = module_path[:-1]
+            call = True
 
-            call = False
-            if module_path[-1] == 'call':
-                module_path = module_path[:-1]
-                call = True
+        mod = self.resolve_path(module_path)
 
-            # resolve module path
-            mod = self.engine.modules[module_name]
-            for n in module_path[1:]:
-                if n in mod.submodules:
-                    mod = mod.submodules[n]
-                else:
-                    self.logger.error('unknown submodule %s for module %s' % (n, module_name))
-                    return False
+        if mod is not None:
 
             if call:
                 if hasattr(mod, args[0]):
@@ -90,7 +134,7 @@ class OpenStageControl(Module):
                     if callable(method):
                         method(*args[1:])
             else:
-                self.engine.modules[module_name].set(*module_path[1:], *args)
+                mod.set(*args)
 
             return False
 
@@ -239,6 +283,21 @@ class OpenStageControl(Module):
         self.send('/EDIT_QUEUE/END', widget)
 
 
+    def transport_start(self):
+        """
+        Start transport and trigger rolling loops
+        """
+        if self.get('rolling'):
+            for loop in self.engine.modules['AudioLooper'].submodules.values():
+                if loop.get('playing'):
+                    self.engine.modules['AudioLooper'].trigger(loop.get('n'))
+
+
+        self.engine.modules['Transport'].start()
+
     def transport_stop(self):
+        """
+        Stop transport and loops
+        """
         self.engine.modules['Transport'].stop()
         self.engine.active_route.pause_loopers()

@@ -22,7 +22,7 @@
     "alphaFillOff": "auto",
     "alphaFillOn": "auto",
     "lineWidth": 0,
-    "padding": "auto",
+    "padding": 0,
     "html": "",
     "css": "",
     "colorBg": "auto",

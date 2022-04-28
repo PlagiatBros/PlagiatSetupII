@@ -25,7 +25,10 @@ class SooperLooper(Module):
 
         for i in range(16):
             loop = Loop('loop_%i' % i, loop_n=i, parent=self)
+
             self.add_submodule(loop)
+
+            loop.add_parameter('n', None, 'i', default=i)
             loop.add_parameter('length', None, 'f', default=1)
             loop.add_parameter('position', None, 'f', default=0)
 
@@ -33,6 +36,7 @@ class SooperLooper(Module):
             loop.add_parameter('recording', None, 'f', default=0)
             loop.add_parameter('overdubbing', None, 'f', default=0)
             loop.add_parameter('paused', None, 'f', default=0)
+            loop.add_parameter('playing', None, 'f', default=0)
 
         self.pending_record = None
 
@@ -54,6 +58,7 @@ class SooperLooper(Module):
         1: ['waiting', 'paused'],
         2: ['recording'],
         3: ['waiting', 'recording'],
+        4: ['playing'],
         5: ['overdubbing'],
         14: ['paused']
     }
@@ -67,7 +72,7 @@ class SooperLooper(Module):
 
             if param == 'state':
                 state = self.sl_states[value] if value in self.sl_states else []
-                for p in ['waiting', 'recording', 'overdubbing', 'paused']:
+                for p in ['waiting', 'recording', 'overdubbing', 'paused', 'playing']:
                     self.set('loop_%i' % n, p, 1 if p in state else 0)
             elif param == 'loop_len':
                 self.set('loop_%i' % n, 'length', value)
