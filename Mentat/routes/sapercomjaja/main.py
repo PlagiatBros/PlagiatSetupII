@@ -116,7 +116,7 @@ class AgneauGastrik(Video, Light, RouteBase):
         vocalsNano.set('gars_exclu', 'on')
         vocalsKesch.set('normo_exclu', 'on')
 
-    @mk2_button(2) # à l'origine bouton 6
+    @mk2_button(2, 'purple') # à l'origine bouton 6
     def zynette_dre(self):
         """
         Zynette Dre
@@ -145,7 +145,7 @@ class AgneauGastrik(Video, Light, RouteBase):
         vocalsNano.set('gars_exclu', 'on')
         vocalsKesch.set('meuf_exclu', 'on')
 
-    @mk2_button(2) # à l'origine bouton 6
+    @mk2_button(2, 'purple') # à l'origine bouton 6
     def zynette_dre2(self):
         """
         Zynette Dre (cf. zynette_dre)
