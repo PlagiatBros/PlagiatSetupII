@@ -285,6 +285,8 @@ class Stagiaire(Video, Light, RouteBase):
         """
         REFRAIN 2 (cf. REFRAIN)
         """
+        # méthode vide juste pour que le déroulé du morceau appairaisse de façon linéaire        
+        pass
 
     @mk2_button(5, 'yellow')
     def nanogars(self):
