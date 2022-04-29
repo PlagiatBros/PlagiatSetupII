@@ -147,3 +147,34 @@ class SW(Video, Light, RouteBase):
             }
 
         ], loop=False)
+
+    @pedalboard_button(2) # A l'origine bouton 6
+    def quintolet(self):
+        """
+        QUINTOLET
+        """
+        self.pause_loopers()
+        self.reset()
+
+        # Sequences
+        seq192.select('solo', 'quintolet_*')
+
+        # Transport
+        transport.start()
+
+        # Samples
+        samples.set('Samples1', 'Gain', 'Mute', 0.0)
+        samples.set('Samples2', 'Gain', 'Mute', 0.0)
+        samplesFX6Scape.set('Samples1', 'Gain', 'Gain', -4.5)
+        samplesFX6Scape.set('SamplesFX6Scape', 'Gain', 'Mute', 0.0)
+
+        # Vocals
+        vocalsNano.set('meuf_exclu', 'on')
+        vocalsNano.set('normo', 'on')
+        vocalsNano.set('gars', 'on')
+        vocalsKesch.set('meuf_exclu', 'on')
+        vocalsKeschFX2Delay.set('NanoMeuf', 'Gain', 'Gain', 0.0)
+        vocalsKeschFX2Delay.set('VocalsKeschFX2Delay', 'Gain', 'Mute', 0.0)
+
+        # Keyboard
+        jmjKeyboard.set_sound('ZNotSoRhodes')
