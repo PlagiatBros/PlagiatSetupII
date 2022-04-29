@@ -285,3 +285,26 @@ class Stagiaire(Video, Light, RouteBase):
         """
         REFRAIN 2 (cf. REFRAIN)
         """
+
+    @mk2_button(5, 'yellow')
+    def nanogars(self):
+        """
+        NANO GARS
+        """
+        vocalsNano.set('gars_exclu', on)
+
+    @mk2_button(6, 'yellow')
+    def nanomeuf(self):
+        """
+        NANO MEUF
+        """
+        vocalsNano.set('meuf_exclu', on)
+
+    @mk2_button(7, 'yellow')
+    def nanonormo(self):
+        """
+        NANO NORMO
+        """
+        vocalsNano.set('normo_exclu', on)
+
+    ### TODO TRAPCUT @mk2_button(5, 'purple')
