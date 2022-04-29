@@ -24,8 +24,7 @@ class Stagiaire(Video, Light, RouteBase):
         prodSampler.set_kit(self.name)
 
         # Microtonality
-        microtonality.enable()
-        microtonality.set_tuning(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+        microtonality.disable()
 
 
     @pedalboard_button(1)
@@ -50,6 +49,7 @@ class Stagiaire(Video, Light, RouteBase):
         seq192.select('solo', 'intro_*')
 
         # Transport
+        transport.set_tempo(117)
         transport.start()
 
         # Samples
@@ -77,6 +77,7 @@ class Stagiaire(Video, Light, RouteBase):
         seq192.select('solo', 'introS_*')
 
         # Transport
+        transport.set_tempo(117)
         transport.start()
 
         # Samples
@@ -104,6 +105,7 @@ class Stagiaire(Video, Light, RouteBase):
         seq192.select('solo', 'trap_*')
 
         # Transport
+        transport.set_tempo(117)
         transport.start()
         #### TODO Trapcut tempo 234
 
@@ -285,7 +287,7 @@ class Stagiaire(Video, Light, RouteBase):
         """
         REFRAIN 2 (cf. REFRAIN)
         """
-        # méthode vide juste pour que le déroulé du morceau appairaisse de façon linéaire        
+        # méthode vide juste pour que le déroulé du morceau appairaisse de façon linéaire
         pass
 
     @mk2_button(5, 'yellow')
