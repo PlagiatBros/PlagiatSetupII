@@ -185,7 +185,7 @@ class Stagiaire(Video, Light, RouteBase):
     @pedalboard_button(7)
     def refrain(self):
         """
-        Refrain
+        REFRAIN
         """
         self.pause_loopers()
         self.reset()
@@ -264,10 +264,24 @@ class Stagiaire(Video, Light, RouteBase):
 
 
 
-    @pedalboard_button(5)
-    def prerefrain0(self):
+    @pedalboard_button(4)
+    def trap2(self):
         """
-        PRÉ-REFRAIN 0 (cf PRÉ-REFRAIN)
+        TRAP 2 (cf. TRAP)
         """
         # méthode vide juste pour que le déroulé du morceau appairaisse de façon linéaire
         pass
+
+    @mk2_button(2, 'purple')
+    def afro3(self):
+        """
+        AFRO 3 (BUTTER cf. AFRO)
+        """
+        # méthode vide juste pour que le déroulé du morceau appairaisse de façon linéaire
+        pass
+
+    @pedalboard_button(7)
+    def refrain2(self):
+        """
+        REFRAIN 2 (cf. REFRAIN)
+        """
