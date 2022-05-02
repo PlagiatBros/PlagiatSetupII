@@ -65,6 +65,14 @@ class Stagiaire(Video, Light, RouteBase):
         vocalsNano.set('gars_exclu', 'on')
         vocalsKesch.set('gars_exclu', 'on')
 
+        # Sequences (Mentat)
+        self.start_sequence('intro', [
+            {}, {}, {}, # bar 1 - 3
+            { # bar 4
+                1: lambda: [ seq192.select('solo', 'introS_*'), transport.start()]
+            }
+        ], loop=False)
+
     @pedalboard_button(3)
     def intro_stagiaire(self):
         """
