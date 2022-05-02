@@ -131,7 +131,7 @@
 	Mixer_Strip 0x44 create :name "SynthsOut" :width "narrow" :tab "signal" :color 88887998 :gain_mode 0 :mute_mode 0 :group 0x4A :auto_input "" :manual_connection 0
 	Chain 0x45 create :strip 0x44 :tab "chain"
 	JACK_Module 0x46 create :parameter_values "0.000000:2.000000" :is_default 1 :chain 0x45 :active 1
-	Plugin_Module 0x3C0 create :lv2_plugin_uri "http://invadarecords.com/plugins/lv2/compressor/mono" :plugin_ins 2 :plugin_outs 2 :parameter_values "0.000000:0.500000:0.015000:0.087358:-3.500000:3.400000:4.000000:1.000000" :is_default 0 :chain 0x45 :active 1
+	Plugin_Module 0x3C6 create :plugin_id 1882 :plugin_ins 2 :plugin_outs 2 :parameter_values "0.503546:10.000000:90.000000:-3.500000:3.400000:3.250000:4.000000" :is_default 0 :chain 0x45 :active 1
 	Gain_Module 0x47 create :parameter_values "0.000000:0.000000" :is_default 1 :chain 0x45 :active 1
 	Meter_Module 0x48 create :is_default 1 :chain 0x45 :active 1
 	JACK_Module 0x49 create :parameter_values "2.000000:0.000000" :is_default 1 :chain 0x45 :active 1
