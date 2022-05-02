@@ -17,8 +17,7 @@ class ViktorHuguau(Video, Light, RouteBase):
         super().activate()
 
         transport.set_tempo(75)
-        transport.set_cycle('4/4')
-        transport.set_pattern('xxxx')
+        transport.set_cycle('4/4', 'xxxx')
 
         # Setups, banks...
         seq192.set_screenset(self.name)
@@ -69,8 +68,8 @@ class ViktorHuguau(Video, Light, RouteBase):
         self.reset()
 
         # Samples
-        prodSampler.send('/tap192/stop', 's:Plagiat/ViktorHuguau/blast')
-        prodSampler.send('/tap192/stop', 's:Plagiat/ViktorHuguau/Sax')
+        prodSampler.send('/instrument/stop', 's:Plagiat/ViktorHuguau/blast')
+        prodSampler.send('/instrument/stop', 's:Plagiat/ViktorHuguau/Sax')
 
     @mk2_button(3)
     def blast(self):
@@ -82,7 +81,7 @@ class ViktorHuguau(Video, Light, RouteBase):
 
         # Samples
         samples.set('Samples1', 'Gain', 'Mute', 0.0)
-        prodSampler.send('/tap192/play', 's:Plagiat/ViktorHuguau/blast')
+        prodSampler.send('/instrument/play', 's:Plagiat/ViktorHuguau/blast')
 
     @mk2_button(4)
     def sax(self):
@@ -94,4 +93,4 @@ class ViktorHuguau(Video, Light, RouteBase):
 
         # Samples
         samples.set('Samples1', 'Gain', 'Mute', 0.0)
-        prodSampler.send('/tap192/play', 's:Plagiat/ViktorHuguau/Sax')
+        prodSampler.send('/instrument/play', 's:Plagiat/ViktorHuguau/Sax')
