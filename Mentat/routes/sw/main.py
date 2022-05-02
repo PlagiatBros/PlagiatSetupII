@@ -24,8 +24,8 @@ class SW(Video, Light, RouteBase):
         prodSampler.set_kit(self.name)
 
         # Microtonality
-        microtonality.disable()
-
+        microtonality.enable()
+        microtonality.set_tuning(0.35, 0, 0, 0, 0, 0.35, 0, 0, 0.35, 0, 0, 0)
 
     @pedalboard_button(1)
     @mk2_button(1, 'blue')
@@ -102,9 +102,9 @@ class SW(Video, Light, RouteBase):
 
                     # Samples
                     samples.set('Samples2', 'Gain', 'Mute', 0.0),
-                    #samplesFX7Degrade.set('Samples2', 'Gain', 'Gain', -3.0),
-                    #samplesFX7Degrade.set('SamplesFX7Degrade', 'Gain', 'Mute', 0.0),
-                    samplesFX6Scape.set('SamplesDegrade', 'Gain', 'Gain', -18.0),
+                    samplesFX7Degrade.set('Samples2', 'Gain', 'Gain', -3.0),
+                    samplesFX7Degrade.set('SamplesFX7Degrade', 'Gain', 'Mute', 0.0),
+                    samplesFX6Scape.set('SamplesFX7Degrade', 'Gain', 'Gain', -18.0),
                     samplesFX6Scape.set('SamplesFX6Scape', 'Gain', 'Mute', 0.0),
 
                     # Vocals
@@ -165,7 +165,10 @@ class SW(Video, Light, RouteBase):
         # Samples
         samples.set('Samples1', 'Gain', 'Mute', 0.0)
         samples.set('Samples2', 'Gain', 'Mute', 0.0)
+        samplesFX7Degrade.set('Samples2', 'Gain', 'Gain', -3.0)
+        samplesFX7Degrade.set('SamplesFX7Degrade', 'Gain', 'Mute', 0.0)
         samplesFX6Scape.set('Samples1', 'Gain', 'Gain', -4.5)
+        samplesFX6Scape.set('SamplesFX7Degrade', 'Gain', 'Gain', 0.0)
         samplesFX6Scape.set('SamplesFX6Scape', 'Gain', 'Mute', 0.0)
 
         # Vocals
@@ -241,8 +244,8 @@ class SW(Video, Light, RouteBase):
         samples.set('Samples1', 'Gain', 'Mute', 0.0)
         samples.set('Samples2', 'Gain', 'Mute', 0.0)
         samplesFX6Scape.set('Samples1', 'Gain', 'Gain', -4.5)
-#        samplesFX7Degrade.set('SamplesFX7Degrade', 'Gain', 'Mute', 0.0),
-        samplesFX6Scape.set('SamplesDegrade', 'Gain', 'Gain', -18.0),
+        samplesFX7Degrade.set('SamplesFX7Degrade', 'Gain', 'Mute', 0.0),
+        samplesFX6Scape.set('SamplesFX7Degrade', 'Gain', 'Gain', -18.0),
         samplesFX6Scape.set('SamplesFX6Scape', 'Gain', 'Mute', 0.0)
 
         # Vocals
@@ -279,8 +282,8 @@ class SW(Video, Light, RouteBase):
         samples.set('Samples1', 'Gain', 'Mute', 0.0)
         samples.set('Samples2', 'Gain', 'Mute', 0.0)
         samplesFX6Scape.set('Samples1', 'Gain', 'Gain', -4.5)
-#        samplesFX7Degrade.set('SamplesFX7Degrade', 'Gain', 'Mute', 0.0),
-        samplesFX6Scape.set('SamplesDegrade', 'Gain', 'Gain', -18.0),
+        samplesFX7Degrade.set('SamplesFX7Degrade', 'Gain', 'Mute', 0.0),
+        samplesFX6Scape.set('SamplesFX7Degrade', 'Gain', 'Gain', -18.0),
         samplesFX6Scape.set('SamplesFX6Scape', 'Gain', 'Mute', 0.0)
 
         # Vocals
@@ -288,20 +291,6 @@ class SW(Video, Light, RouteBase):
         vocalsNanoFX2Delay.set('NanoMeuf', 'Gain', 'Gain', 0.0)
         vocalsNanoFX4Disint.set('NanoMeuf', 'Gain', 'Gain', 0.0)
         vocalsKesch.set('meuf_exclu', 'on')
-
-    @mk2_button(3, 'purple')
-    def vanhalen(self):
-        """
-        VAN HALEN BRIDGE
-        """
-        self.pause_loopers()
-        self.reset()
-
-        # Transport
-        transport.stop()
-
-        # keyboards
-        jmjKeyboard.set_sound('ZTrumpets')
 
     @pedalboard_button(7)
     def lambotrap(self):
@@ -330,7 +319,7 @@ class SW(Video, Light, RouteBase):
         # keyboards
         jmjKeyboard.set_sound('LowCTrap1')
 
-    @mk2_button(4, 'purple')
+    @mk2_button(3, 'purple')
     def lambotrapout(self):
         """
         LAMBO TRAP OUT
@@ -339,12 +328,28 @@ class SW(Video, Light, RouteBase):
         # Sequences
         seq192.select('on', 'lambout')
 
-    @pedalboard_button(6)
+    @mk2_button(4, 'purple')
+    def vanhalen(self):
+        """
+        VAN HALEN BRIDGE
+        """
+        self.pause_loopers()
+        self.reset()
+
+        # Transport
+        transport.stop()
+
+        # keyboards
+        jmjKeyboard.set_sound('ZTrumpets')
+
+
+    @pedalboard_button(8)
     def drumnbass2(self):
         """
         DRUM 'N' BASS 2 (cf. DRUM 'N' BASS)
         """
-        pass
+        self.drumnbass()
+        seq192.select('on', 'drumnbassTOTAL*')
 
     @mk2_button(5, 'purple')
     def gettheshit(self):
@@ -362,7 +367,7 @@ class SW(Video, Light, RouteBase):
         samples.set('Samples2', 'Gain', 'Mute', 0.0)
         samplesFX6Scape.set('Samples1', 'Gain', 'Gain', -4.5)
         samplesFX7Degrade.set('SamplesFX7Degrade', 'Gain', 'Mute', 0.0),
-        samplesFX6Scape.set('SamplesDegrade', 'Gain', 'Gain', -18.0),
+        samplesFX6Scape.set('SamplesFX7Degrade', 'Gain', 'Gain', -18.0),
         samplesFX6Scape.set('SamplesFX6Scape', 'Gain', 'Mute', 0.0)
 
 
