@@ -8,9 +8,11 @@ config(
 )
 
 run([
-    ChannelFilter(1) >> Output('Rhodes', 1),
-    ChannelFilter(2) >> Output('Trap', 2),
-    ChannelFilter(3) >> Output('EasyClassical', 3),
-    ChannelFilter(4) >> Output('DubstepHorn', 4),
-    ChannelFilter(5) >> Output('TrapFifth', 5),
+    PortFilter('RhodesIn') >> ChannelFilter(1) >> Output('Rhodes', 1),
+    PortFilter('MainIn') >> [
+        ChannelFilter(2) >> Output('Trap', 2),
+        ChannelFilter(3) >> Output('EasyClassical', 3),
+        ChannelFilter(4) >> Output('DubstepHorn', 4),
+        ChannelFilter(5) >> Output('TrapFifth', 5),
+    ]
 ])

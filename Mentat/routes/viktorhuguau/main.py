@@ -59,7 +59,7 @@ class ViktorHuguau(Video, Light, RouteBase):
         # Bass
         bassFX.set('basscape','on')
 
-    @mk2_button(2)
+    @mk2_button(2, 'blue')
     def stopsampmles(self):
         """
         STOP BLAST 'N' SAX
@@ -71,7 +71,7 @@ class ViktorHuguau(Video, Light, RouteBase):
         prodSampler.send('/instrument/stop', 's:Plagiat/ViktorHuguau/blast')
         prodSampler.send('/instrument/stop', 's:Plagiat/ViktorHuguau/Sax')
 
-    @mk2_button(3)
+    @mk2_button(3, 'purple')
     def blast(self):
         """
         BLAST
@@ -83,7 +83,7 @@ class ViktorHuguau(Video, Light, RouteBase):
         samples.set('Samples1', 'Gain', 'Mute', 0.0)
         prodSampler.send('/instrument/play', 's:Plagiat/ViktorHuguau/blast')
 
-    @mk2_button(4)
+    @mk2_button(4, 'purple')
     def sax(self):
         """
         SAX

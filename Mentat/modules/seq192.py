@@ -19,7 +19,8 @@ class Seq192(Module):
             'SaperComJaja': 3,
             'Stagiaire' : 4,
             'SW': 5,
-            'ViktorHuguau' : 6
+            'ViktorHuguau' : 6,
+            'RamenerMooncup': 7
         }
 
     def start(self):

@@ -68,7 +68,7 @@ class Mk2Control(Module):
         Route controls from mk2.
         Reset colors whenever a pad is hit, otherwise it dosen't stay lit.
         """
-        self.logger.info('%s %s' %(address, args))
+        #self.logger.info('%s %s' %(address, args))
 
         if self.shift_key:
 

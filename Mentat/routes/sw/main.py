@@ -61,7 +61,7 @@ class SW(Video, Light, RouteBase):
         # Keyboard
         jmjKeyboard.set_sound('ZNotSoRhodes')
 
-    @mk2_button(2)
+    @mk2_button(2, 'purple')
     def couplet1(self):
         """
         COUPLET 1

@@ -81,6 +81,7 @@ samplesFX3Reverb = NonMixer('SamplesFX3Reverb', 'osc', 10043)
 samplesFX4Autofilter = NonMixer('SamplesFX4Autofilter', 'osc', 10044)
 samplesFX5TapeDelay = NonMixer('SamplesFX5TapeDelay', 'osc', 10045)
 samplesFX6Scape = NonMixer('SamplesFX6Scape', 'osc', 10046)
+samplesFX7Degrade = NonMixer('SamplesFX7Degrade', 'osc', 10047)
 
 vocalsNano = Vocals('VocalsNano', 'osc', 10050)
 vocalsNanoFX1Delay = NonMixer('VocalsNanoFX1Delay', 'osc', 10051)

@@ -14,7 +14,12 @@ class OpenStageControl(Module):
         super().__init__(*args, **kwargs)
 
         self.osc_state = {}
+
         self.non_gui = {}
+        self.ray_gui = {}
+
+        self.add_parameter('session_loaded', None, types='i', default=0)
+        self.add_parameter('session_populated', None, types='i', default=0)
 
         self.add_parameter('signature', '/signature', types='s', default='4/4')
         self.add_parameter('tempo', '/tempo', types='f', default=120)
@@ -59,6 +64,11 @@ class OpenStageControl(Module):
 
         and store that state locally.
         """
+        if module == self:
+            if name == 'session_loaded':
+                self.set('session_populated', 0)
+                if value == 1:
+                    self.start_scene('populate_gui', self.populate_gui)
 
         # send state changes to OSC
         # /module_name param_name value
@@ -74,7 +84,12 @@ class OpenStageControl(Module):
         self.osc_state[address][name] = value
 
     def client_started(self, name):
-        self.start_scene('populate_gui', self.populate_gui)
+
+        if self.get('session_loaded'):
+            if self.get('session_populated') == 0:
+                self.start_scene('populate_gui', self.populate_gui)
+
+        self.send_state()
 
 
     def send_state(self):
@@ -113,10 +128,6 @@ class OpenStageControl(Module):
             /module_name/submodule_name/call method_name *args
         """
 
-        if address == '/ready':
-            self.send_state()
-            return False
-
         if address == '/keyboard':
             self.engine.modules['OpenStageControlKeyboardOut'].send(*args)
             return False
@@ -136,7 +147,7 @@ class OpenStageControl(Module):
         if mod is not None:
 
             if call:
-                if hasattr(mod, args[0]):
+                if len(args) > 0 and type(args[0] == str) and hasattr(mod, args[0]):
                     method = getattr(mod, args[0])
                     if callable(method):
                         method(*args[1:])
@@ -155,8 +166,9 @@ class OpenStageControl(Module):
         Maybe this could be extended to all modules.
         Maybe this is overkill.
         """
-        return
-        self.wait(2, 's')
+
+        while self.get('session_loaded') == 0:
+            self.wait(2, 's')
 
         panel = {'tabs': [], 'verticalTabs': True}
 
@@ -269,6 +281,55 @@ class OpenStageControl(Module):
                     })
 
         self.edit_gui('non-mixers', panel)
+
+
+
+        ray = self.engine.modules['RaySession']
+        panel = {'widgets': [], 'layout': 'vertical', 'padding': 1, 'innerPadding': False, 'contain': False}
+        for p in ray.parameters:
+            if 'status_' in p:
+                name = p[7:]
+                strip = {'type': 'panel', 'layout': 'horizontal', 'css': 'class: strip;', 'height': 40, 'padding': 4,'widgets' : [
+                    {
+                        'type': 'text',
+                        'align': 'left',
+                        'address': '/RaySession',
+                        'preArgs': 'label_%s' % name,
+                        'expand': True
+                    },
+                    {
+                        'type': 'button',
+                        'label': '^play',
+                        'mode': 'momentary',
+                        'colorWidget': 'var(--green)',
+                        'css': '#{@{status_%s} ? \'class: on;\': \'\'}' % name,
+                        'address': '/RaySession/call',
+                        'preArgs': ['send', '/ray/client/start', name]
+                    },
+                    {
+                        'type': 'variable',
+                        'id': 'status_%s' % name,
+                        'address': '/RaySession',
+                        'preArgs': ['status_%s' % name]
+                    },
+                    {
+                        'type': 'button',
+                        'label': '^stop',
+                        'mode': 'momentary',
+                        'colorWidget': 'var(--red)',
+                        'address': '/RaySession/call',
+                        'preArgs': ['send', '/ray/client/stop', name]
+                    }
+
+                ]}
+                panel['widgets'].append(strip)
+
+
+
+        self.edit_gui('ray-session', panel)
+
+        self.set('session_populated', 1)
+        self.send_state()
 
     def edit_gui(self, widget, data):
         """

@@ -1,1 +1,22 @@
-{}
+{
+    "buses": {
+        "1": {
+            "name": "ZLowSynths",
+        },
+        "2": {
+            "name": "cLowBridge",
+        },
+        "3": {
+            "name": "ZHiSynths",
+        },
+        "4": {
+            "name": "MonoSynthMicroTonal",
+        },
+        "5": {
+            "name": "cFluidBridge",
+        },
+        "10": {
+            "name": "ProdSampler",
+        }
+    }
+}

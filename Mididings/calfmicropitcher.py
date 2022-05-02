@@ -59,14 +59,14 @@ def applyMicrotonal(ev):
 
     note = ev.note % 12
     port = ev.port - 1
-    channel = ev.channel - 1
+    channel = ev.channel
 
     _engine.output_event(PitchbendEvent(ev.port, ev.channel, int(monosynth_pitch[note] * pb_factor[channel] + manual_pitch[channel])))
     _engine.output_event(ev)
 
 def storePitchwheel(ev):
     port = ev.port - 1
-    channel = ev.channel - 1
+    channel = ev.channel
     manual_pitch[channel] = ev.value * pb_factor[channel]
 
     ev.value =  int(ev.value * pb_factor[channel]) + int(monosynth_pitch[note] * pb_factor[channel])

@@ -57,7 +57,7 @@ def create_keyboard(name):
     # Zyn HiSynths
     zDupieux = generic_in >> Output('ZHi', 1)
     zNotSoRhodes = generic_in >> Output('ZHi', 2)
-    zOrgan = generic_in >> Output('ZHi', 4)
+    zOrgan = generic_in >> Output('ZHi', 3)
     zCosma = generic_in >> Output('ZHi', 5)
     zBombarde = generic_in >> Output('ZHi', 6)
     zTrumpets = generic_in >> Output('ZHi', 7)
@@ -72,9 +72,10 @@ def create_keyboard(name):
 
     # Carla HiSynths
     cRhodes = generic_in >> Output('CHiSf')
-    cDubstepHorn = generic_in >> Output('CHi', 1)
+    cDubstepHorn = generic_in >> Output('CHi', 4)
     cTrap = generic_in >> Output('CHi', 2)
     cEasyClassical = generic_in >> Output('CHi', 3)
+    cTrapFifth = generic_in >> Output('CHi', 5)
 
     # Samples
     prodSampler = generic_in >> Output('ProdSampler')
@@ -169,6 +170,9 @@ def create_keyboard(name):
                 ),
                 Scene('CEasyClassical',
                     cEasyClassical
+                ),
+                Scene('CTrapFifth',
+                    cTrapFifth
                 ),
 
             ]),

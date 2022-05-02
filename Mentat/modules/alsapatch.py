@@ -199,7 +199,7 @@ class AlsaPatcher(Module):
 
         print('\n'.join(patch))
 
-    def connect(self, timeout=0.5):
+    def connect(self, timeout=1.0):
         """
         Query alsa ports and apply
         """

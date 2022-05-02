@@ -157,8 +157,8 @@ class RouteBase(Route):
                 mod.set(name, 'Gain', 'Mute', 1.0)
 
 
-        # postprocess.set_filter('*', 24000)
-        # postprocess.set_pitch('*', 1)
+        postprocess.set_filter('*', 24000)
+        postprocess.set_pitch('*', 1)
 
     def resetSamples(self):
         """
