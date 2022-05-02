@@ -91,7 +91,7 @@ class SW(Video, Light, RouteBase):
             {}, # bar 1
             { # bar 2
                 4 + 1/2. : lambda: samples.set('Samples2', 'Gain', 'Mute', 1.0)
-            }
+            },
             { # bar 3 ("Once")
                 1 : lambda: [
                     # Sequences
@@ -115,7 +115,7 @@ class SW(Video, Light, RouteBase):
             { # bar 7 ("Moroness")
                 1: lambda: [
                     # Sequences
-                    seq192.select('solo', 'couplet1-2_*')
+                    seq192.select('solo', 'couplet1-2_*'),
 
                     # Vocals
                     vocalsKeschFX2Delay.set('KeschMeuf', 'Gain', 'Gain', 0.0)
@@ -130,10 +130,10 @@ class SW(Video, Light, RouteBase):
         { # bar 21 ("Alone")
                 1: lambda: [
                     # Sequences
-                    seq192.select('solo', 'couplet1-2_*')
+                    seq192.select('solo', 'couplet1-2_*'),
 
                     # Vocals
-                    vocalsKeschFX2Delay.set('KeschMeuf', 'Gain', 'Gain', 0.0)
+                    vocalsKeschFX2Delay.set('KeschMeuf', 'Gain', 'Gain', 0.0),
 
                     # Samples
                     tap192.send('/tap192/play', 's:Plagiat/SW/BregoLong')

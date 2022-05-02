@@ -4,7 +4,7 @@ from .light import Light
 
 from modules import *
 
-class AgneauGastrik(Video, Light, RouteBase):
+class SaperComJaja(Video, Light, RouteBase):
 
     def activate(self):
         """
@@ -19,7 +19,7 @@ class AgneauGastrik(Video, Light, RouteBase):
 
         # Setups, banks...
         seq192.set_screenset(self.name)
-        prodSampler.set_kit(self.name)
+        prodSampler.set_kit('AgneauGastrik')
 
         # Microtonality
         microtonality.enable()
@@ -43,7 +43,7 @@ class AgneauGastrik(Video, Light, RouteBase):
         samples.set('Samples4', 'Gain', 'Mute', 0.0)
 
         # Keyboards
-        jmjKeyboard.set_sound('CLowBoomTrapline')
+        jmjKeyboard.set_sound('CLowBoomTrapLine')
         #### TODO mk2Keyboard ?
 
     @pedalboard_button(1)
@@ -183,7 +183,8 @@ class AgneauGastrik(Video, Light, RouteBase):
         """
 
         # Sequences
-        seq192.select('solo', 'mandelaaa_final_*')
+        seq192.select('solo', 'mandelaaa_*')
+        seq192.select('on', 'mandelaaafinal_*')
 
         # Transport
         transport.set_cycle('4/4', pattern="Xxxx")
