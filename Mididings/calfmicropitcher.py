@@ -11,24 +11,36 @@ from ports import get_port
 config(
     backend='alsa',
     client_name='MonoSynthMicroTonal',
-    out_ports=['TrapOut', 'EasyClassicalOut', 'DubstepHornOut', 'TrapFifthOut'],
-    in_ports=['TrapIn', 'EasyClassicalIn', 'DubstepHornIn', 'TrapFifthIn']
+    out_ports=['Out'],
+    in_ports=['In']
 )
 
 monosynth_pitch =  [0 for i in range(12)]
-manual_pitch = [0, 0, 0]
-pb_factor = [1/12., 1/12., 1]
+
+manual_pitch = {
+    2: 0,
+    3: 0,
+    4: 0,
+    5: 0
+}
+
+pb_factor = {
+    2: 1/12.,
+    3: 1/12.,
+    4: 1,
+    5: 1/12.
+}
 note = 0
 
 def panic(path, args):
-    for port in range(3):
+    for channel in pb_factor:
         for note in range(128):
-            _engine.output_event(_event.NoteOffEvent(port + 1, 1, note))
+            _engine.output_event(_event.NoteOffEvent(1, channel, note))
 
 def pitch_panic(path, args):
-    for port in range(3):
-        manual_pitch[port] = 0
-        _engine.output_event(_event.PitchbendEvent(port + 1, 1, int(monosynth_pitch[note] * pb_factor[port] + manual_pitch[port])))
+    for channel in pb_factor:
+        manual_pitch[channel] = 0
+        _engine.output_event(_event.PitchbendEvent(1, channel, int(monosynth_pitch[note] * pb_factor[channel] + manual_pitch[channel])))
 
 def set_microtonal(path, args):
     global monosynth_pitch
@@ -47,16 +59,18 @@ def applyMicrotonal(ev):
 
     note = ev.note % 12
     port = ev.port - 1
+    channel = ev.channel - 1
 
-    _engine.output_event(PitchbendEvent(ev.port, ev.channel, int(monosynth_pitch[note] * pb_factor[port] + manual_pitch[port])))
+    _engine.output_event(PitchbendEvent(ev.port, ev.channel, int(monosynth_pitch[note] * pb_factor[channel] + manual_pitch[channel])))
     _engine.output_event(ev)
 
 def storePitchwheel(ev):
     port = ev.port - 1
-    manual_pitch[port] = ev.value * pb_factor[port]
-    if ev.channel != 1:
-        ev.value =  int( ev.value * pb_factor[port])
-    ev.value +=  int(monosynth_pitch[note] * pb_factor[port])
+    channel = ev.channel - 1
+    manual_pitch[channel] = ev.value * pb_factor[channel]
+
+    ev.value =  int(ev.value * pb_factor[channel]) + int(monosynth_pitch[note] * pb_factor[channel])
+
     _engine.output_event(ev)
 
 run([

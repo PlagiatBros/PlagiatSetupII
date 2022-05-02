@@ -73,7 +73,7 @@ class SW(Video, Light, RouteBase):
         seq192.select('solo', 'intro_*')
 
         # Transport
-        transport.set_pattern('XxXx')
+        transport.set_cycle('4/4', 'XxXx')
         transport.start()
 
         # Samples
@@ -95,15 +95,15 @@ class SW(Video, Light, RouteBase):
             { # bar 3 ("Once")
                 1 : lambda: [
                     # Sequences
-                    seq192.set('solo', 'couplet1-1_*'),
+                    seq192.select('solo', 'couplet1-1_*'),
 
                     # Transport
-                    transport.set_pattern('Xxxx'),
+                    transport.set_cycle('4/4', 'Xxxx'),
 
                     # Samples
                     samples.set('Samples2', 'Gain', 'Mute', 0.0),
-                    samplesFX7Degrade.set('Samples2', 'Gain', 'Gain', -3.0),
-                    samplesFX7Degrade.set('SamplesFX7Degrade', 'Gain', 'Mute', 0.0),
+                    #samplesFX7Degrade.set('Samples2', 'Gain', 'Gain', -3.0),
+                    #samplesFX7Degrade.set('SamplesFX7Degrade', 'Gain', 'Mute', 0.0),
                     samplesFX6Scape.set('SamplesDegrade', 'Gain', 'Gain', -18.0),
                     samplesFX6Scape.set('SamplesFX6Scape', 'Gain', 'Mute', 0.0),
 
@@ -136,7 +136,7 @@ class SW(Video, Light, RouteBase):
                     vocalsKeschFX2Delay.set('KeschMeuf', 'Gain', 'Gain', 0.0),
 
                     # Samples
-                    tap192.send('/tap192/play', 's:Plagiat/SW/BregoLong')
+                    prodSampler.send('/tap192/play', 's:Plagiat/SW/BregoLong')
                 ],
                 3: lambda: vocalsKeschFX2Delay.set('KeschMeuf', 'Gain', 'Gain', -70.0),
                 4: lambda: vocalsKesch.set('normo_exclu', 'on')
@@ -148,7 +148,7 @@ class SW(Video, Light, RouteBase):
 
         ], loop=False)
 
-    @pedalboard_button(2) # A l'origine bouton 6
+    @pedalboard_button(3) # A l'origine bouton 6
     def quintolet(self):
         """
         QUINTOLET
@@ -179,7 +179,10 @@ class SW(Video, Light, RouteBase):
         # Bass
         bassFX.set('distohi', 'on')
 
-    @pedalboard_button(3) # A l'origine bouton 7
+        # Keyboards
+        jmjKeyboard.set_sound('LowZDancestep')
+
+    @pedalboard_button(4) # A l'origine bouton 7
     def refrain(self):
         """
         REFRAIN
@@ -199,23 +202,28 @@ class SW(Video, Light, RouteBase):
         samplesFX6Scape.set('Samples1', 'Gain', 'Gain', -4.5)
         samplesFX6Scape.set('SamplesFX6Scape', 'Gain', 'Mute', 0.0)
 
+        # Keyboards
+        synthsFX2Delay.set('ZDiploLikeWide', 'Gain', 'Gain', -6.0)
+        synthsFX2Delay.set('SynthsFX2Delay', 'Gain', 'Mute', 0.0)
+
+
         # Vocals
         vocalsNano.set('meuf_exclu', 'on')
         vocalsNanoFX2Delay.set('NanoMeuf', 'Gain', 'Gain', 0.0)
         vocalsNanoFX2Delay.set('VocalsNanoFX2Delay', 'Gain', 'Mute', 0.0)
         vocalsNanoFX4Disint.set('NanoMeuf', 'Gain', 'Gain', 0.0)
-        vocalsNanoFX4Disint.set('vocalsNanoFX4Disint', 'Gain', 'Mute', 0.0)
+        vocalsNanoFX4Disint.set('VocalsNanoFX4Disint', 'Gain', 'Mute', 0.0)
 
         vocalsKesch.set('meuf_exclu', 'on')
         vocalsKeschFX2Delay.set('KeschMeuf', 'Gain', 'Gain', 0.0)
         vocalsKeschFX2Delay.set('VocalsKeschFX2Delay', 'Gain', 'Mute', 0.0)
         vocalsKeschFX4Disint.set('KeschMeuf', 'Gain', 'Gain', 0.0)
-        vocalsKeschFX4Disint.set('vocalsKeschFX4Disint', 'Gain', 'Mute', 0.0)
+        vocalsKeschFX4Disint.set('VocalsKeschFX4Disint', 'Gain', 'Mute', 0.0)
 
         # Bass
         bassFX.set('distohi', 'on')
 
-    @pedalboard_button(4) # A l'origine bouton 8
+    @pedalboard_button(5) # A l'origine bouton 8
     def couplet2(self):
         """
         COUPLET 2
@@ -224,7 +232,7 @@ class SW(Video, Light, RouteBase):
         self.reset()
 
         # Sequences
-        seq192.select('solo', 'couplet2-1_*')
+        seq192.select('solo', 'dummy')
 
         # Transport
         transport.start()
@@ -233,7 +241,7 @@ class SW(Video, Light, RouteBase):
         samples.set('Samples1', 'Gain', 'Mute', 0.0)
         samples.set('Samples2', 'Gain', 'Mute', 0.0)
         samplesFX6Scape.set('Samples1', 'Gain', 'Gain', -4.5)
-        samplesFX7Degrade.set('SamplesFX7Degrade', 'Gain', 'Mute', 0.0),
+#        samplesFX7Degrade.set('SamplesFX7Degrade', 'Gain', 'Mute', 0.0),
         samplesFX6Scape.set('SamplesDegrade', 'Gain', 'Gain', -18.0),
         samplesFX6Scape.set('SamplesFX6Scape', 'Gain', 'Mute', 0.0)
 
@@ -247,12 +255,13 @@ class SW(Video, Light, RouteBase):
             { # bar 2
                 4 + 1/2.: lambda: [
                     seq192.select('solo', 'couplet2*'),
+                    transport.start(),
                     vocalsNano.set('gars_exclu', 'on')
                     ]
             }
         ], loop=False)
 
-    @pedalboard_button(5) # à l'origine bouton 9
+    @pedalboard_button(6) # à l'origine bouton 9
     def drumnbass(self):
         """
         DRUM 'N' BASS
@@ -261,7 +270,7 @@ class SW(Video, Light, RouteBase):
         self.reset()
 
         # Sequences
-        seq192.select('solo', 'dnb_*')
+        seq192.select('solo', 'drumnbass_*')
 
         # Transport
         transport.start()
@@ -270,7 +279,7 @@ class SW(Video, Light, RouteBase):
         samples.set('Samples1', 'Gain', 'Mute', 0.0)
         samples.set('Samples2', 'Gain', 'Mute', 0.0)
         samplesFX6Scape.set('Samples1', 'Gain', 'Gain', -4.5)
-        samplesFX7Degrade.set('SamplesFX7Degrade', 'Gain', 'Mute', 0.0),
+#        samplesFX7Degrade.set('SamplesFX7Degrade', 'Gain', 'Mute', 0.0),
         samplesFX6Scape.set('SamplesDegrade', 'Gain', 'Gain', -18.0),
         samplesFX6Scape.set('SamplesFX6Scape', 'Gain', 'Mute', 0.0)
 
@@ -294,7 +303,7 @@ class SW(Video, Light, RouteBase):
         # keyboards
         jmjKeyboard.set_sound('ZTrumpets')
 
-    @pedalboard_button(6)
+    @pedalboard_button(7)
     def lambotrap(self):
         """
         LAMBO TRAP
@@ -330,7 +339,7 @@ class SW(Video, Light, RouteBase):
         # Sequences
         seq192.select('on', 'lambout')
 
-    @pedalboard_button(5)
+    @pedalboard_button(6)
     def drumnbass2(self):
         """
         DRUM 'N' BASS 2 (cf. DRUM 'N' BASS)
@@ -357,7 +366,7 @@ class SW(Video, Light, RouteBase):
         samplesFX6Scape.set('SamplesFX6Scape', 'Gain', 'Mute', 0.0)
 
 
-    @pedalboard_button(3)
+    @pedalboard_button(4)
     def refrain2(self):
         """
         REFRAIN 2 (cf. REFRAIN)

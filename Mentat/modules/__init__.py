@@ -34,6 +34,7 @@ raysession = RaySession('RaySession', 'osc', 2000)
 Controllers
 """
 openstagecontrol = OpenStageControl('OpenStageControl', 'osc', 3000)
+openstagecontrolKeyboardOut = Module('OpenStageControlKeyboardOut', 'midi')
 pedalboard = PedalBoard('PedalBoard', 'osc', 3001)
 jmjKeyboard = JmjKeyboard('JmjKeyboard', 'osc', 3002)
 mk2Keyboard = Mk2Keyboard('Mk2Keyboard', 'osc', 3003)

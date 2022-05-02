@@ -117,6 +117,9 @@ class OpenStageControl(Module):
             self.send_state()
             return False
 
+        if address == '/keyboard':
+            self.engine.modules['OpenStageControlKeyboardOut'].send(*args)
+            return False
 
         # send OSC controls to modules
         # /module_name param_name value
@@ -152,7 +155,7 @@ class OpenStageControl(Module):
         Maybe this could be extended to all modules.
         Maybe this is overkill.
         """
-
+        return
         self.wait(2, 's')
 
         panel = {'tabs': [], 'verticalTabs': True}
@@ -305,3 +308,9 @@ class OpenStageControl(Module):
         """
         self.engine.modules['Transport'].stop()
         self.engine.active_route.pause_loopers()
+
+    def panic(self):
+        self.engine.modules['ZHiSynths'].send('/Panic')
+        self.engine.modules['ZLowSynths'].send('/Panic')
+        self.engine.modules['HiCSynths'].send('/panic')
+        self.engine.modules['LowCSynths'].send('/panic')
