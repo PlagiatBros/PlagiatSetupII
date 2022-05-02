@@ -50,10 +50,10 @@ change_mono_port_name "system:capture_7" "VocalsLHommesPorcs"
 
 
 #Interface out
-change_mono_port_name "system:playback_1" "Samples"
-change_mono_port_name "system:playback_2" "Synths"
+change_mono_port_name "system:playback_1" "Synths_L"
+change_mono_port_name "system:playback_2" "Synths_R"
 change_mono_port_name "system:playback_3" "Kick"
-change_mono_port_name "system:playback_4" "Bass"
+change_mono_port_name "system:playback_4" "VocalsLhommesPorcs"
 
 i=5
 for name in NanoHeadphones KeschHeadphones
@@ -64,10 +64,13 @@ do
   ((i++))
 done
 
-change_mono_port_name "system:playback_9" "BassSynths"
-change_mono_port_name "system:playback_10" "VocalsNano"
-change_mono_port_name "system:playback_11" "VocalsKesch"
-change_mono_port_name "system:playback_12" "VocalsLhommesPorcs"
+change_mono_port_name "system:playback_9" "Samples-L"
+change_mono_port_name "system:playback_10" "Samples-R"
+change_mono_port_name "system:playback_11" "Bass"
+change_mono_port_name "system:playback_12" "BassSynths"
+change_mono_port_name "system:playback_13" "VocalsNano"
+change_mono_port_name "system:playback_14" "VocalsKesch"
+
 
 # Sooperlooper
 i=0

@@ -95,12 +95,13 @@
     <Control name="round_integer_tempo" value="0"/>
    </Controls>
   </Looper>
-  <Looper discrete_io="yes" stretch_ratio="1" loop_secs="40" use_common_outs="yes" auto_latency="yes" pitch_shift="0" index="3" channels="1" discrete_prefader="yes" use_common_ins="yes" relative_sync="no" tempo_stretch="no">
-   <Panner linked="no" bypassed="no" link_direction="0">
-    <StreamPanner type="Equal Power Stereo" muted="no" x="0.500000"/>
-    <Output x="0.000000" y="0.000000"/>
-    <Output x="1.000000" y="0.000000"/>
-   </Panner>
+  <Looper discrete_io="yes" stretch_ratio="1" loop_secs="40" use_common_outs="yes" auto_latency="yes" pitch_shift="0" index="3" channels="2" discrete_prefader="yes" use_common_ins="yes" relative_sync="no" tempo_stretch="no">
+    <Panner linked="no" link_direction="0" bypassed="no">
+      <StreamPanner x="0.000000" type="Equal Power Stereo" muted="no"/>
+      <StreamPanner x="1.000000" type="Equal Power Stereo" muted="no"/>
+      <Output x="0.000000" y="0.000000"/>
+      <Output x="1.000000" y="0.000000"/>
+    </Panner>
    <Controls>
     <Control name="rec_thresh" value="0"/>
     <Control name="dry" value="1"/>
