@@ -11,9 +11,6 @@ class Mk2Keyboard(Keyboard):
 
         super().__init__(*args, **kwargs)
 
-        self.set_sound('CEasyClassical')
-        self.set_sound('LowZDancestep')
-        self.set_sound('LowZRagstep')
         self.set_sound('ZBombarde')
 
 

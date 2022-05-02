@@ -20,12 +20,16 @@ class OpenStageControl(Module):
         self.add_parameter('tempo', '/tempo', types='f', default=120)
         self.add_parameter('cursor', '/cursor', types='f', default=0)
         self.add_parameter('routes', '/routes', types='s', default='Loading')
+        self.add_parameter('active_route', '/active_route', types='s', default='')
         self.add_parameter('rolling', '/rolling', types='i', default=0)
 
         self.add_event_callback('parameter_changed', self.parameter_changed)
         self.add_event_callback('client_started', self.client_started)
         self.add_event_callback('engine_started', lambda:
             self.set('routes', ','.join(self.engine.routes.keys()))
+        )
+        self.add_event_callback('engine_route_changed', lambda n:
+            self.set('active_route', n)
         )
 
         self.start_scene('cycle_watch', self.cycle_watch)
