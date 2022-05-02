@@ -1,0 +1,102 @@
+.root-container {
+    --color-bg-backup: var(--color-background);
+    --strip-bg: #2a2f37;
+    --strip-ears: #212d40;
+    --yellow: #ffd23e;
+    --blue-green: #00ffff;
+    --green: rgba(69,255,72,1);
+    --red: red;
+    --blue: rgb(49, 173, 233);
+
+}
+
+.panel-container {
+    --scrollbar-size: 24rem;
+}
+
+
+
+.panel-container {
+    --line-width: 0rem;
+}
+
+.modal-container > .toggle,
+.button-container,
+.switch-container {
+    --alpha-fill-off: 0.05;
+    --alpha-stroke: 0.25;
+    --alpha-fill-on: 0.75
+}
+
+.button-container.on inner {
+    /* box-shadow: 0 0 4rem 0 var(--color-widget) inset; */
+    box-shadow: 0 0 2rem 0 var(--color-widget);
+}
+
+.button-container.discrete:not(.on){
+    --color-widget: white!important
+}
+.button-container.no-pulse inner:after {
+  animation: none
+}
+
+.knob-container {
+    --color-stroke: white;
+    --line-width: 3rem!important;
+}
+
+.strip {
+    --color-background: var(--strip-bg);
+    --widget-padding: 10rem;
+}
+
+.strip .label {
+    background: var(--color-ui-foreground);
+    position: relative;
+    text-align: left;
+    padding: 0 10rem;
+    width: 100%;
+}
+.strip .label.center {
+    text-align: center;
+}
+.section-label {
+    color: var(--color-fill);
+    padding: 2rem 10rem 0;
+    font-weight: 100;
+    text-transform: uppercase;
+    text-shadow: 0 0 2rem;
+    background: var(--strip-bg);
+    margin-bottom: 1rem;
+    /* position: relative; */
+}
+.navigation .tablink.on {
+    color: var(--color-fill);
+    font-weight: 100;
+    /* text-transform: uppercase; */
+    text-shadow: 0 0 2rem;
+}
+.text-container {
+    font-weight: 100;
+    color: var(--color-fill);
+    text-transform: uppercase;
+    --alpha-fill: 0;
+    text-shadow: 0 0 2rem;
+}
+
+.strip > inner > .input-container {
+    --color-widget: black;
+    --alpha-fill-off: 0.20;
+    --alpha-stroke: 0.5;
+    --widget-padding: 0;
+    height: 40rem;
+}
+.strip > inner > .input-container input {
+    color: white;
+    caret-color: white;
+}
+.carved {
+    --color-background: var(--color-bg-backup);
+    --line-width: 1rem;
+    --color-stroke: rgba(0,0,0,0.5)
+}

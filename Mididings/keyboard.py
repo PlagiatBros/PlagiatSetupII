@@ -117,7 +117,7 @@ def create_keyboard(name):
                     lowCBoom
                 ),
                 Scene('LowCBoomTrapline',
-                    lowCBoomTrapline
+                    lowCBoomTrapLine
                 ),
 
             ]),
