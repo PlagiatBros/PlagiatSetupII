@@ -180,7 +180,6 @@ class OpenStageControl(Module):
                         method(*args[1:])
             else:
 
-                print(args)
                 mod.set(*args)
 
             return False
