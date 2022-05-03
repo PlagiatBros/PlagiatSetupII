@@ -7,6 +7,7 @@
     --green: rgba(69,255,72,1);
     --red: red;
     --blue: rgb(49, 173, 233);
+    --label-height: 32rem;
 
 }
 
@@ -55,7 +56,11 @@
     position: relative;
     text-align: left;
     padding: 0 10rem;
+    height: var(--label-height);
+    line-height: var(--label-height);
     width: 100%;
+    text-overflow: ellipsis;
+    overflow: hidden;
 }
 .strip .label.center {
     text-align: center;
@@ -99,4 +104,118 @@
     --color-background: var(--color-bg-backup);
     --line-width: 1rem;
     --color-stroke: rgba(0,0,0,0.5)
+}
+.popup {
+    --color-background: var(--color-bg-backup);
+}
+.popup {
+    backdrop-filter: blur(1rem);
+}
+
+.plugin-modal > label {
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 24rem;
+    padding: 0 4rem;
+}
+
+
+.route-buttons .widget {
+    max-height: 50rem;
+}
+
+.route-buttons label {
+    justify-content: flex-start;
+    padding: 10rem;
+}
+
+.route-buttons .html {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    padding-right: 10rem;
+    padding-top: 14rem
+}
+.route-buttons .mk2,
+.route-buttons .pb {
+    height: 20rem;
+    line-height: 22rem;
+    width: 20rem;
+    position: relative;
+    margin-left: 10rem;
+    padding-left: 1rem;
+}
+.route-buttons .mk2::before,
+.route-buttons .pb::before {
+    content: "";
+    position: absolute;
+    top:0;left:0;right:0;bottom:0;
+    opacity: 0.5;
+    z-index: -1;
+}
+.route-buttons .mk2::before {
+    background: var(--blue);
+    border-radius: 3rem;
+
+}
+.route-buttons .pb::before {
+    background: grey;
+    border-radius: 50%;
+}
+
+
+.locked {
+    filter: grayscale(1) sepia(0.5) hue-rotate(190deg);
+    opacity: 0.75;
+    pointer-events: none;
+}
+.editing .locked {
+    pointer-events: auto
+}
+
+
+.center-tabs > inner {
+  /* border: 32rem solid var(--strip-bg);; */
+  border-bottom: 0;
+}
+.center-tabs > inner > .tab-container {
+    border: var(--label-height) solid var(--strip-bg);;
+
+}
+.center-tabs > inner > .navigation {
+  /* order: 1; */
+  margin-right:-2rem;
+  /* margin-bottom:-2rem; */
+  --nav-height: var(--label-height);
+  border-bottom: 0;
+}
+.center-tabs > inner > .navigation .tablink {
+    border-color: var(--strip-bg);
+    border-width: 2rem;
+}
+
+.center-tabs .section-label {
+  margin: 0;
+}
+
+.mixers-tab .navigation {
+  overflow: auto;
+  order:1;
+  border-left: 1rem solid var(--color-background);
+}
+.mixers-tab  .tablink {
+  min-width: 200rem;
+  justify-content:start;
+  min-height: calc(var(--label-height) + 1rem);
+
+}
+
+.vocals-buttons .button-container {
+    --line-width: 4rem;
+    font-size: 120%;
+    --widget-padding: 0;
+}
+.vocals-buttons .button-container.on {
+    --line-width: 0;
 }

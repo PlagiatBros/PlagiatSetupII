@@ -121,6 +121,8 @@ class SaperComJaja(Video, Light, RouteBase):
         """
         Zynette Dre
         """
+        
+        self.couplet_m1()
 
         # Sequences
         seq192.select('on', 'zynette_*')

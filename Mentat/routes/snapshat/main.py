@@ -24,10 +24,6 @@ class Snapshat(Video, Light, RouteBase):
         microtonality.enable()
         microtonality.set_tuning(0, 0, 0, 0.35, 0, 0, 0, 0, 0, 0, 0.35, 0)
 
-    @pedalboard_button(10)
-    def test_btn(self):
-        print('call from MAIN')
-
     @pedalboard_button(1)
     @mk2_button(1, 'blue')
     def stop(self):

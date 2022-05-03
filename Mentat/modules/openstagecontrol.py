@@ -3,6 +3,7 @@ from .nonmixer import NonMixer
 
 import json
 import urllib.parse
+from inspect import getmembers, getdoc
 
 class OpenStageControl(Module):
     """
@@ -26,6 +27,7 @@ class OpenStageControl(Module):
         self.add_parameter('cursor', '/cursor', types='f', default=0)
         self.add_parameter('routes', '/routes', types='s', default='Loading')
         self.add_parameter('active_route', '/active_route', types='s', default='')
+        self.add_parameter('route_methods', '/route_methods', types='s', default='')
         self.add_parameter('rolling', '/rolling', types='i', default=0)
 
         self.add_event_callback('parameter_changed', self.parameter_changed)
@@ -33,9 +35,7 @@ class OpenStageControl(Module):
         self.add_event_callback('engine_started', lambda:
             self.set('routes', ','.join(self.engine.routes.keys()))
         )
-        self.add_event_callback('engine_route_changed', lambda n:
-            self.set('active_route', n)
-        )
+        self.add_event_callback('engine_route_changed', self.engine_route_changed)
 
         self.start_scene('cycle_watch', self.cycle_watch)
 
@@ -82,6 +82,33 @@ class OpenStageControl(Module):
         if address not in self.osc_state:
             self.osc_state[address] = {}
         self.osc_state[address][name] = value
+
+    def engine_route_changed(self, name):
+
+        self.set('active_route', name)
+        route = self.engine.active_route
+        methods = [x for n,x in getmembers(route) if callable(x) and (hasattr(x, 'mk2_buttons') or hasattr(x, 'pedalboard_buttons'))]
+        methods = sorted(methods, key=lambda m: m.index)
+
+        data = []
+        for m in methods:
+            if route.name in m.__qualname__:
+                btns = ''
+                if hasattr(m, 'mk2_buttons'):
+                    btns += ''.join(['<div class="mk2">%s</div>' % x for x in m.mk2_buttons])
+                if hasattr(m, 'pedalboard_buttons'):
+                    btns += ''.join(['<div class="pb">%s</div>' % x for x in m.pedalboard_buttons])
+
+                data.append({
+                    'method': m.__name__,
+                    'label': getdoc(m).split('\n')[0] if getdoc(m) else m.__name__,
+                    'html': '%s' % btns
+                })
+
+        self.set('route_methods', json.dumps(data))
+
+
+
 
     def client_started(self, name):
 
@@ -152,6 +179,8 @@ class OpenStageControl(Module):
                     if callable(method):
                         method(*args[1:])
             else:
+
+                print(args)
                 mod.set(*args)
 
             return False
@@ -176,6 +205,7 @@ class OpenStageControl(Module):
             if isinstance(mod, NonMixer):
                 tab = {
                     'type': 'tab',
+                    'id': 'non-mixer.%s' % name,
                     'label': name,
                     'layout': 'horizontal',
                     'innerPadding': False,
@@ -216,8 +246,10 @@ class OpenStageControl(Module):
                                 modal = {
                                     'type': 'modal',
                                     'label': urllib.parse.unquote(plugname),
+                                    'popupLabel': '%s > %s' % (urllib.parse.unquote(sname), urllib.parse.unquote(plugname)),
                                     'layout': 'horizontal',
                                     'height': 30,
+                                    'css': 'class: plugin-modal',
                                     'popupPadding': 1,
                                     'innerPadding': True,
                                     'popupHeight': 400,
@@ -246,7 +278,9 @@ class OpenStageControl(Module):
                                             'default': param.args[0],
                                             'doubleTap': True,
                                             'linkId': param.address,
-                                            'address': '/%s/%s/%s/%s' % (name, sname, plugname, pname),
+                                            'address': '/%s/%s/%s' % (name, sname, plugname),
+                                            'preArgs': pname,
+                                            'decimals': 5,
                                             'pips': True,
                                             'expand': True,
                                             'design': 'solid'
@@ -254,8 +288,9 @@ class OpenStageControl(Module):
                                         {
                                             'type': 'input',
                                             'width': 120,
-                                            'address': '/%s/%s/%s/%s' % (name, sname, plugname, pname),
-                                            'linkId': param.address
+                                            'decimals': 5,
+                                            'linkId': param.address,
+                                            'bypass': True
                                         }
                                     ]
                                 })
@@ -277,7 +312,15 @@ class OpenStageControl(Module):
                         'design': 'round',
                         'value': smod.get('Gain', 'Gain'),
                         'default': smod.get('Gain', 'Gain'),
-                        'address': '/%s/%s/Gain/Gain' % (name, sname)
+                        'address': '/%s/%s/Gain/Gain' % (name, sname),
+                        'linkId': '/%s/%s/Gain/Gain' % (name, sname)
+                    })
+                    strip['widgets'].append({
+                        'type': 'input',
+                        'width': 120,
+                        'decimals': 5,
+                        'linkId': '/%s/%s/Gain/Gain' % (name, sname),
+                        'bypass': True
                     })
 
         self.edit_gui('non-mixers', panel)
@@ -375,3 +418,13 @@ class OpenStageControl(Module):
         self.engine.modules['ZLowSynths'].send('/Panic')
         self.engine.modules['HiCSynths'].send('/panic')
         self.engine.modules['LowCSynths'].send('/panic')
+
+    def route_method(self, name):
+
+        if hasattr(self.engine.active_route, name):
+            m = getattr(self.engine.active_route, name)
+            if callable(m):
+                if hasattr(m, 'mk2_buttons'):
+                    self.engine.active_route.route('osc', None, '/mk2/button', list(m.mk2_buttons.keys())[:1])
+                elif hasattr(m, 'pedalboard_buttons'):
+                    self.engine.active_route.route('osc', None, '/pedalboard/button', list(m.pedalboard_buttons.keys())[:1])
