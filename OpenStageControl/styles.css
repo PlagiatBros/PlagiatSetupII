@@ -111,6 +111,9 @@
 .popup {
     backdrop-filter: blur(1rem);
 }
+.popup-wrapper {
+    box-shadow: 0 0 20rem 0 rgba(0,0,0,0.3);
+}
 
 .plugin-modal > label {
     display: block;
