@@ -198,7 +198,7 @@ class OpenStageControl(Module):
         while self.get('session_loaded') == 0:
             self.wait(2, 's')
 
-        panel = {'tabs': [], 'verticalTabs': True}
+        panel = {'tabs': [], 'verticalTabs': True, 'bypass': True}
 
         for name, mod in self.engine.modules.items():
             if isinstance(mod, NonMixer):

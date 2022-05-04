@@ -84,10 +84,17 @@
 }
 .text-container {
     font-weight: 100;
-    color: var(--color-fill);
-    text-transform: uppercase;
+    /* color: var(--color-fill); */
+    /* text-transform: uppercase; */
     --alpha-fill: 0;
     /* text-shadow: 0 0 2rem; */
+}
+.text-container.carved {
+    --color-widget: var(--color-bg-backup);
+    --color-stroke: black;
+    --alpha-fill: 1;
+    --alpha-stroke: 0.5;
+    --line-width: 1rem;
 }
 
 .input-container {
@@ -200,6 +207,11 @@
 .center-tabs > inner > .navigation .tablink {
     border-color: var(--strip-bg);
     border-width: 2rem;
+    padding-top: 2rem;
+}
+.center-tabs > inner > .navigation .tablink.on::before {
+    top:0;
+    bottom: auto;
 }
 
 .center-tabs .section-label {

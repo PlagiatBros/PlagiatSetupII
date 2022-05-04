@@ -15,7 +15,7 @@ class AgneauGastrik(Video, Light, RouteBase):
         """
 
         super().activate()
-        
+
         transport.set_tempo(150)
         transport.set_cycle('74/8', pattern=self.klick_pattern)
 
@@ -138,7 +138,7 @@ class AgneauGastrik(Video, Light, RouteBase):
         self.start_sequence('couplet1', [
             {}, # smell it quick
             {   # kind of mate
-                7.5: lambda: [
+                8: lambda: [
                     # nano: « frisco »
                     outputs.set('Synths', 'Gain', 'Mute', 1),
                     outputs.set('Samples', 'Gain', 'Mute', 1),
