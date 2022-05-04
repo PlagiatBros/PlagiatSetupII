@@ -60,6 +60,9 @@ class RamenerMooncup(Video, Light, RouteBase):
 
     @mk2_button(2, 'purple')
     def couplet1(self):
+        """
+        COUPLET 1
+        """
         # Samples
         samples.set('Samples1', 'Gain', 'Mute', 0.0)
         samples.set('Samples[1-5]', 'Gain', 'Gain', -9.0)
@@ -89,7 +92,6 @@ class RamenerMooncup(Video, Light, RouteBase):
                     2: lambda: seq192.select('solo', 'dummy'),
                     2 + 0.4: lambda: postprocess.animate_pitch(['Samples*', 'Synths*'], None, 1, 0.1),
                     2 + 1/2. : lambda: [
-                        samples.set('Samples1', 'Gain', 'Mute', 0.0),
                         samples.set('Samples[1-5]', 'Gain', 'Gain', 0.0),
                         samplesFX1Delay.set('Samples[1-5]', 'Gain', 'Gain', 0.0),
                         samplesFX6Scape.set('Samples[1-5]', 'Gain', 'Gain', 0.0),
@@ -111,3 +113,56 @@ class RamenerMooncup(Video, Light, RouteBase):
 
 
         ])
+
+    @mk2_button(3, 'purple')
+    def refrain(self):
+        """
+        REFRAIN
+        """
+        self.pause_loopers()
+        self.reset()
+
+        # Sequences
+        seq192.select('solo', 'refrain_*')
+
+        # Transport
+        transport.start()
+
+        # Samples
+        samples.set('Samples1', 'Gain', 'Mute', 0.0)
+        samplesFX1Delay.set('Samples1', 'Gain', 'Gain', 0.0),
+        samplesFX6Scape.set('Samples1', 'Gain', 'Gain', 0.0),
+        samplesFX5TapeDelay.set('Samples1', 'Gain', 'Gain', 0.0),
+        samplesFX1Delay.set('SamplesFX1Delay', 'Gain', 'Mute', 0.0),
+        samplesFX6Scape.set('SamplesFX6Scape', 'Gain', 'Mute', 0.0),
+        samplesFX5TapeDelay.set('SamplesFX5TapeDelay', 'Gain', 'Gain', 0.0),
+
+
+        # Vocals
+        vocalsNano.set('normo_exclu', 'on')
+        vocalsKesch.set('gars_exclu', 'on')
+
+    @mk2_button(4, 'purple')
+    def couplet2(self):
+        """
+        COUPLET 2
+        """
+        self.pause_loopers()
+        self.reset()
+
+        # Sequences
+        seq192.select('solo', 'couplet2_*')
+
+        # Transport
+        transport.start()
+
+        # Samples
+        samples.set('Samples[1-5]', 'Gain', 'Mute', 0.0)
+
+        # Keyboards
+        jmjKeyboard.set_sound('LowZDancestep')
+
+        # Vocals
+        vocalsNano.set('gars_exclu', 'on')
+        vocalsKesch.set('normo_exclu', 'on')
+        vocalsKesch.set('meuf', 'on')
