@@ -184,7 +184,8 @@ class OpenStageControl(Module):
                         method(*args[1:])
             else:
 
-                mod.set(*args)
+                if type(args[0]) == str:
+                    mod.set(*args)
 
             return False
 
