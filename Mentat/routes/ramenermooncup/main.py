@@ -230,3 +230,81 @@ class RamenerMooncup(Video, Light, RouteBase):
         REFRAIN (cf. REFRAIN)
         """
         pass
+
+    @pedalboard_button(5)
+    def refrain_messe(self):
+        """
+        REFRAIN MESSE
+        """
+        self.pause_loopers()
+        self.reset()
+
+        # Transport
+        transport.stop()
+
+        # Keyboards
+        jmjKeyboard.set_sound('ZOrgan')
+
+        # Vocals
+        vocalsNano.set('normo_exclu', 'on')
+        vocalsKesch.set('normo_exclu', 'on')
+
+    @pedalboard_button(6)
+    @pedalboard_button(7)
+    def disco(self):
+        """
+        DISCO (6) / DROP THE BASS (7)
+        """
+        self.pause_loopers()
+        self.reset()
+
+        # Sequences
+        seq192.select('solo', 'disco_*')
+
+        # Transport
+        transport.start()
+
+        # Samples
+        samples.set('Samples1', 'Gain', 'Mute', 0.0)
+
+        # Keyboards
+        jmjKeyboard.set_sound('LowZDubstep')
+
+        # Vocals
+        vocalsNano.set('gars_exclu', 'on')
+        vocalsKesch.set('gars_exclu', 'on')
+
+    @pedalboard_button(8)
+    def ramener_launcher(self):
+        """
+        RAMENER LAUNCHER
+        """
+        self.pause_loopers()
+        self.reset()
+
+        # Sequences
+        seq192.select('solo', 'ramener0_*')
+
+        # Transport
+        transport.start()
+
+        # Samples
+        samples.set('Samples1', 'Gain', 'Mute', 0.0)
+
+        # Keyboards
+        jmjKeyboard.set_sound('LowZDancestep')
+
+        # Vocals
+        vocalsNano.set('meuf_exclu', 'on')
+        vocalsKesch.set('gars_exclu', 'on')
+
+        self.start_sequence('ramener', [
+            {}, {}, # bars 1-2
+            {
+                3: lambda: postprocess.animate_pitch('Samples', 1, 0.25, 2),
+                4 + 1/2.: seq192.select('solo', 'dummy')
+            },
+            {
+                seq192.select('solo', 'ramener*')
+            }
+        ], loop=False)
