@@ -143,15 +143,15 @@ class RamenerMooncup(Video, Light, RouteBase):
         vocalsKesch.set('gars_exclu', 'on')
 
     @mk2_button(4, 'purple')
-    def couplet2(self):
+    def couplet2_intro(self):
         """
-        COUPLET 2
+        COUPLET 2 (INTRO)
         """
         self.pause_loopers()
         self.reset()
 
         # Sequences
-        seq192.select('solo', 'couplet2_*')
+        seq192.select('solo', 'couplet2-1_*')
 
         # Transport
         transport.start()
@@ -166,3 +166,67 @@ class RamenerMooncup(Video, Light, RouteBase):
         vocalsNano.set('gars_exclu', 'on')
         vocalsKesch.set('normo_exclu', 'on')
         vocalsKesch.set('meuf', 'on')
+
+    @pedalboard_button(4)
+    def couplet2_main(self):
+        """
+        COUPLET 2 (MAIN - "Should I...")
+        """
+        self.pause_loopers()
+        self.reset()
+
+        # Sequences
+        seq192.select('solo', 'couplet2-2_*')
+
+        # Transport
+        transport.start()
+
+        # Samples
+        samples.set('Samples1', 'Gain', 'Mute', 0.0)
+        samplesFX1Delay.set('Samples1', 'Gain', 'Gain', 0.0),
+        samplesFX6Scape.set('Samples1', 'Gain', 'Gain', 0.0),
+        samplesFX5TapeDelay.set('Samples1', 'Gain', 'Gain', 0.0),
+        samplesFX1Delay.set('SamplesFX1Delay', 'Gain', 'Mute', 0.0),
+        samplesFX6Scape.set('SamplesFX6Scape', 'Gain', 'Mute', 0.0),
+        samplesFX5TapeDelay.set('SamplesFX5TapeDelay', 'Gain', 'Gain', 0.0),
+
+
+        # Keyboards
+        jmjKeyboard.set_sound('LowZDancestep')
+
+        # Vocals
+        vocalsNano.set('meuf_exclu', 'on')
+        vocalsKesch.set('gars_exclu', 'on')
+
+    self.start_sequence('couplet2-2', [
+        *[{} for i in range(15)], # bars 1 - 15
+        { # bar 16
+            3 + 1/2.: lambda: [
+
+                # Looper
+                looper.trig(0),
+
+                # Vocals
+                vocalsKesch.set('meuf_exclu', 'on')
+            ]
+        },
+        { # bar 17
+            1: lambda: [
+                # Samples
+                samples.set('Samples[1-5]', 'Gain', 'Mute', 0.0),
+
+                # Sequences
+                seq192.set('on', 'couplet2-3'),
+
+                # Vocals
+                vocalsNano.set('gars_exclu', 'on')
+            ]
+        }
+    ], loop=False)
+
+    @mk2_button(3, 'purple')
+    def refrain2(self):
+        """
+        REFRAIN (cf. REFRAIN)
+        """
+        pass
