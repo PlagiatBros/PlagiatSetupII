@@ -3614,7 +3614,7 @@
                     "ignoreDefaults": false,
                     "bypass": false,
                     "onCreate": "",
-                    "onValue": ""
+                    "onValue": "set('keyboard_keys/*', 0)"
                   },
                   {
                     "type": "button",
