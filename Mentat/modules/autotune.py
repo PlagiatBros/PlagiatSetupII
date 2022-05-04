@@ -29,9 +29,9 @@ class Autotune(Module):
 
         def pitch_setter(pitch):
 
-            if fval < 1:
+            if pitch < 1:
                 val = pitch * 24 / 0.75 + (-24 / 0.75)
-            elif fval > 1:
+            elif pitch >= 1:
                 val = pitch * 12 - 12
 
             self.pitch_value = pitch

@@ -30,6 +30,10 @@ class OpenStageControl(Module):
         self.add_parameter('route_methods', '/route_methods', types='s', default='')
         self.add_parameter('rolling', '/rolling', types='i', default=0)
 
+        for post_process in ['pitch', 'filter']:
+            for strip_type in ['voices', 'bass', 'synths', 'samples']:
+                self.add_parameter('%s_%s' % (post_process, strip_type), None, types='i', default=1)
+
         self.add_event_callback('parameter_changed', self.parameter_changed)
         self.add_event_callback('client_started', self.client_started)
         self.add_event_callback('engine_started', lambda:
@@ -427,3 +431,34 @@ class OpenStageControl(Module):
                     self.engine.active_route.route('osc', None, '/mk2/button', list(m.mk2_buttons.keys())[:1])
                 elif hasattr(m, 'pedalboard_buttons'):
                     self.engine.active_route.route('osc', None, '/pedalboard/button', list(m.pedalboard_buttons.keys())[:1])
+
+    def set_pitch(self, value):
+
+        strips = []
+        if self.get('pitch_voices') == 1:
+            strips.append('Vocals*')
+        if self.get('pitch_bass') == 1:
+            strips.append('Bass*')
+        if self.get('pitch_synths') == 1:
+            strips.append('Synths')
+        if self.get('pitch_samples') == 1:
+            strips.append('Samples*')
+
+        if strips:
+            self.engine.modules['PostProcess'].set_pitch(strips, value)
+
+
+    def set_filter(self, value):
+
+        strips = []
+        if self.get('filter_voices') == 1:
+            strips.append('Vocals*')
+        if self.get('filter_bass') == 1:
+            strips.append('Bass*')
+        if self.get('filter_synths') == 1:
+            strips.append('Synths')
+        if self.get('filter_samples') == 1:
+            strips.append('Samples*')
+
+        if strips:
+            self.engine.modules['PostProcess'].set_filter(strips, value)

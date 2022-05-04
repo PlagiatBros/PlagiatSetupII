@@ -12,6 +12,8 @@ class PostProcess(Module):
 
         super().__init__(*args, **kwargs)
 
+        self.no_AMpitch = ['VocalsNano', 'VocalsKesch']
+
 
     def set_pitch(self, strip_name, pitch):
         """
@@ -28,16 +30,16 @@ class PostProcess(Module):
                 self.set_pitch(n, pitch)
             return
 
-        self.no_AMpitch = ['VocalsNano', 'VocalsKesch']
         mod = self.engine.modules['Outputs']
 
         for n in fnmatch.filter(mod.submodules.keys(), strip_name):
             if n not in self.no_AMpitch:
-                mod.set(n, 'Pitchshifter', 'Pitch', pitch)
+                if 'Pitchshifter' in mod.submodules[n].submodules:
+                    mod.set(n, 'Pitchshifter', 'Pitch', pitch)
             else:
                 pre = n[6:]
                 for name in [pre+'Meuf', pre+'Normo', pre+'Gars']:
-                    self.engine.modules[name].set('Pitch', pitch)
+                    self.engine.modules[name].set('pitch', pitch)
 
     def animate_pitch(self, strip_name, start, end, duration, mode='beats', easing='linear'):
         """
@@ -57,11 +59,11 @@ class PostProcess(Module):
                 self.animate_pitch(n, start, end, duration, mode, easing)
             return
 
-        self.no_AMpitch = ['VocalsNano', 'VocalsKesch']
         mod = self.engine.modules['Outputs']
         for n in fnmatch.filter(mod.submodules.keys(), strip_name):
             if n not in self.no_AMpitch:
-                mod.animate(n, 'Pitchshifter', 'Pitch', start, end, duration, mode, easing)
+                if 'Pitchshifter' in mod.submodules[n].submodules:
+                    mod.animate(n, 'Pitchshifter', 'Pitch', start, end, duration, mode, easing)
             else:
                 pre = n[6:]
                 for name in [pre+'Meuf', pre+'Normo', pre+'Gars']:
@@ -84,7 +86,8 @@ class PostProcess(Module):
 
         mod = self.engine.modules['Outputs']
         for n in fnmatch.filter(mod.submodules.keys(), strip_name):
-            mod.set(n, 'Lowpass', 'Cutoff', freq)
+            if 'Lowpass' in mod.submodules[n].submodules:
+                mod.set(n, 'Lowpass', 'Cutoff', freq)
 
     def animate_filter(self, strip_name, start, end, duration, mode='beats', easing='linear'):
         """
@@ -105,7 +108,8 @@ class PostProcess(Module):
             return
         mod = self.engine.modules['Outputs']
         for n in fnmatch.filter(mod.submodules.keys(), strip_name):
-            mod.animate(n, 'Lowpass', 'Cutoff', start, end, duration, mode, easing)
+            if 'Lowpass' in mod.submodules[n].submodules:
+                mod.animate(n, 'Lowpass', 'Cutoff', start, end, duration, mode, easing)
 
 
     def slice(self):
