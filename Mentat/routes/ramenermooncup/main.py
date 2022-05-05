@@ -230,3 +230,173 @@ class RamenerMooncup(Video, Light, RouteBase):
         REFRAIN (cf. REFRAIN)
         """
         pass
+
+    @pedalboard_button(5)
+    def refrain_messe(self):
+        """
+        REFRAIN MESSE
+        """
+        self.pause_loopers()
+        self.reset()
+
+        # Transport
+        transport.stop()
+
+        # Keyboards
+        jmjKeyboard.set_sound('ZOrgan')
+
+        # Vocals
+        vocalsNano.set('normo_exclu', 'on')
+        vocalsKesch.set('normo_exclu', 'on')
+
+    @pedalboard_button(6)
+    @pedalboard_button(7)
+    def disco(self):
+        """
+        DISCO (6) / DROP THE BASS (7)
+        """
+        self.pause_loopers()
+        self.reset()
+
+        # Sequences
+        seq192.select('solo', 'disco_*')
+
+        # Transport
+        transport.start()
+
+        # Samples
+        samples.set('Samples1', 'Gain', 'Mute', 0.0)
+
+        # Keyboards
+        jmjKeyboard.set_sound('LowZDubstep')
+
+        # Vocals
+        vocalsNano.set('gars_exclu', 'on')
+        vocalsKesch.set('gars_exclu', 'on')
+
+    @pedalboard_button(8)
+    def ramener_launcher(self):
+        """
+        RAMENER LAUNCHER
+        """
+        self.pause_loopers()
+        self.reset()
+
+        # Sequences
+        seq192.select('solo', 'ramener0_*')
+
+        # Transport
+        transport.start()
+
+        # Samples
+        samples.set('Samples1', 'Gain', 'Mute', 0.0)
+
+        # Keyboards
+        jmjKeyboard.set_sound('LowZDancestep')
+
+        # Vocals
+        vocalsNano.set('gars_exclu', 'on')
+        vocalsKesch.set('gars_exclu', 'on')
+
+        self.start_sequence('ramener', [
+            {}, {}, # bars 1-2
+            {
+                3: lambda: postprocess.animate_pitch('Samples', 1, 0.25, 2),
+                4 + 1/2.: seq192.select('solo', 'dummy')
+            },
+            {
+                seq192.select('solo', 'ramener*') #### TODO : vérifier qu'il y a bien ça ???
+            }
+        ], loop=False)
+
+
+    @pedalboard_button(9)
+    def ramener_mesh(self):
+        """
+        RAMENER MESSHUGAH
+        """
+        self.pause_loopers()
+        self.reset()
+
+        # Sequences
+        seq192.select('solo', 'ramener0_*')
+
+        # Transport
+        transport.stop()
+
+        # Samples
+        samples.set('Samples1', 'Gain', 'Mute', 0.0)
+        #### TODO constantSampler.send('/instrument/play', 's:Plagiat/RamenerMooncup/') #### METTRE LE SAMPLE DANS CONSTANTSAMPLER
+
+        # Vocals
+        vocalsNano.set('meuf_exclu', 'on')
+        vocalsNano.set('normo', 'on')
+        vocalsNano.set('gars', 'on')
+        vocalsNanoFX2Delay.set('Nano*', 'Gain', 'Gain', 0.0)
+        vocalsNanoFX2Delay.set('VocalsNanoFX2Delay', 'Gain', 'Mute', 0.0)
+        vocalsKesch.set('meuf_exclu', 'on')
+        vocalsKesch.set('normo', 'on')
+        vocalsKesch.set('gars', 'on')
+        vocalsKeschFX2Delay.set('Kesch*', 'Gain', 'Gain', 0.0)
+        vocalsKeschFX2Delay.set('VocalsKeschFX2Delay', 'Gain', 'Mute', 0.0)
+
+
+        self.start_sequence('ramener', [
+            {
+                3: lambda: postprocess.animate_pitch('Samples', 1, 0.25, 2),
+                4 + 1/2.: seq192.select('solo', 'dummy')
+            },
+            {
+                # Sequences
+                seq192.select('solo', 'ramener*'),
+
+                # Transport
+                transport.start(),
+
+                # Samples
+                samples.set('Samples1', 'Gain', 'Mute', 0.0)
+            }
+        ], loop=False)
+
+    @pedalboard_button(10)
+    def ramener(self):
+        """
+        RAMENER
+        """
+        self.pause_loopers()
+        self.reset()
+
+        # Sequences
+        seq192.select('solo', 'ramener*')
+
+        # Transport
+        transport.start()
+
+        # Samples
+        samples.set('Samples1', 'Gain', 'Mute', 0.0)
+
+
+        # Vocals
+        vocalsNano.set('gars_exclu', 'on')
+        vocalsKesch.set('gars_exclu', 'on')
+
+    @mk2_button(6, 'yellow')
+    def nanogars(self):
+        """
+        VOCALS NANO GARS
+        """
+        vocalsNano.set('gars_exclu', 'on')
+
+    @mk2_button(7, 'yellow')
+    def nanomeuf(self):
+        """
+        VOCALS NANO MEUF
+        """
+        vocalsNano.set('meuf_exclu', 'on')
+
+    @mk2_button(6, 'yellow')
+    def nanonormo(self):
+        """
+        VOCALS NANO NORMO
+        """
+        vocalsNano.set('normo_exclu', 'on')
