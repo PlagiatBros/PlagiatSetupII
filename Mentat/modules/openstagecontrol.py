@@ -245,7 +245,7 @@ class OpenStageControl(Module):
                     strip['widgets'].append(plugins)
                     plugs = {}
                     for plugname, plugmod in smod.submodules.items():
-                        if plugname != 'Gain':
+                        if plugname != 'Gain' and plugname != 'Meter':
                             if plugname not in plugs:
                                 modal = {
                                     'type': 'modal',
@@ -305,7 +305,8 @@ class OpenStageControl(Module):
                     'colorWidget': 'var(--yellow)',
                     'css': 'class: discrete;',
                     'value': smod.get('Gain', 'Mute'),
-                    'address': '/%s/%s/Gain/Mute' % (name, sname)
+                    'address': '/%s/%s/Gain' % (name, sname),
+                    'preArgs': 'Mute'
                     })
                     strip['widgets'].append({
                         'type': 'fader',
@@ -316,8 +317,9 @@ class OpenStageControl(Module):
                         'design': 'round',
                         'value': smod.get('Gain', 'Gain'),
                         'default': smod.get('Gain', 'Gain'),
-                        'address': '/%s/%s/Gain/Gain' % (name, sname),
-                        'linkId': '/%s/%s/Gain/Gain' % (name, sname)
+                        'address': '/%s/%s/Gain' % (name, sname),
+                        'linkId': '/%s/%s/Gain/Gain' % (name, sname),
+                        'preArgs': 'Gain'
                     })
                     strip['widgets'].append({
                         'type': 'input',

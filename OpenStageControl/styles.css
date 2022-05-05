@@ -47,6 +47,11 @@
     --line-width: 3rem!important;
 }
 
+.fader-container.design-compact {
+    --color-text: var(--color-widget);
+    filter:drop-shadow(0 0 2px);
+}
+
 .strip {
     --color-background: var(--strip-bg);
     --widget-padding: 10rem;

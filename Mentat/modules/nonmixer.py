@@ -35,6 +35,27 @@ class NonMixer(Module):
         self.send('/non/hello', 'osc.udp://127.0.0.1:%i' % self.engine.port, '', '', self.engine.name)
         self.send('/signal/list')
 
+        if self.name == 'Outputs':
+            self.enable_meters(True)
+
+    def update_meters(self, foh=False):
+        if foh:
+            while True:
+                self.wait(1/30, 'sec')
+                self.send('Non-Mixer.'+self.name+'/strip/FOH/Meter/dB%20level/unscaled')
+        else:
+            while True:
+                self.wait(1/30, 'sec')
+                for strip in self.submodules:
+                    self.send('Non-Mixer.'+self.name+'/strip/'+strip+'/Meter/dB%20level/unscaled')
+
+    def enable_meters(self, foh=False):
+        self.start_scene('meter_levels' if not foh else 'foh_meter_levels', self.update_meters, foh)
+
+    def disable_meters(self):
+        self.start_scene('meter_levels', self.update_meters)
+
+
     def route(self, address, args):
         """
         Populate submodules and parameters from non's response
@@ -77,8 +98,11 @@ class NonMixer(Module):
 
                         plugin_mod = strip_mod.submodules[plugin_name]
 
+                        if plugin_name == 'Meter':
+                            plugin_mod.add_parameter(param_shortname, None, 'f', default=None)
+                        else:
+                            plugin_mod.add_parameter(param_shortname, parameter_address, 'f', default=None)
 
-                        plugin_mod.add_parameter(param_shortname, parameter_address, 'f', default=None)
                         plugin_mod.parameters[param_shortname].range = args[3:5]
 
                         self.init_params.append(parameter_address)
@@ -96,19 +120,25 @@ class NonMixer(Module):
 
                 self.create_meta_parameters()
 
-        elif address == '/reply' and args[0] in self.init_params:
-            path = args[0].partition('/strip/')[2]
-            strip, _, pname = args[0].partition('/strip/')[2].partition('/')
-            if 'unscaled' in pname:
-                pname = pname[:-9]
-            plugin_name, _, param_shortname = pname.partition('/')
-            if plugin_name in NonMixer.plugin_aliases:
-                plugin_name = NonMixer.plugin_aliases[plugin_name]
-            if param_shortname in NonMixer.parameter_aliases:
-                param_shortname = NonMixer.parameter_aliases[param_shortname]
-            self.set(strip, plugin_name, param_shortname, args[1])
-            self.init_params.remove(args[0])
-            # self.logger.info('init parameter %s %s to value %s ' % (strip, pname, args[1]))
+        elif address == '/reply':
+            if args[0] in self.init_params:
+                path = args[0].partition('/strip/')[2]
+                strip, _, pname = args[0].partition('/strip/')[2].partition('/')
+                if 'unscaled' in pname:
+                    pname = pname[:-9]
+                plugin_name, _, param_shortname = pname.partition('/')
+                if plugin_name in NonMixer.plugin_aliases:
+                    plugin_name = NonMixer.plugin_aliases[plugin_name]
+                if param_shortname in NonMixer.parameter_aliases:
+                    param_shortname = NonMixer.parameter_aliases[param_shortname]
+
+                if plugin_name == 'Meter':
+                    if args[1] < -70:
+                        args[1] = -70
+                else:
+                    self.init_params.remove(args[0])
+
+                self.set(strip, plugin_name, param_shortname, args[1])
 
         return False
 
@@ -127,6 +157,7 @@ class NonMixer(Module):
 
     parameter_aliases = {
         'Gain%20(dB)': 'Gain',
+        'dB%20level': 'Level',
 
         'Cutoff%20Frequency': 'Cutoff', # 4 poles lowpass
         'Pitch%20shift': 'Pitch'
