@@ -5,6 +5,7 @@
 jack_control eps port-max 4096
 jack_control eps client-timeout 0
 jack_control eps realtime True
+jack_control eps realtime-priority 95
 jack_control eps self-connect-mode a
 jack_control ds alsa
 jack_control dps device hw:DSP

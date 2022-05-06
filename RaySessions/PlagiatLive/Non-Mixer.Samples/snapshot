@@ -34,7 +34,7 @@
 	Mixer_Strip 0x44 create :name "SamplesOut" :width "narrow" :tab "signal" :color 88887998 :gain_mode 0 :mute_mode 0 :group 0x4C :auto_input "" :manual_connection 0
 	Chain 0x45 create :strip 0x44 :tab "chain"
 	JACK_Module 0x46 create :parameter_values "0.000000:2.000000" :is_default 1 :chain 0x45 :active 1
-	Plugin_Module 0xBD create :plugin_id 1882 :plugin_ins 2 :plugin_outs 2 :parameter_values "0.496454:20.000000:180.000000:-6.000000:2.000000:3.250000:3.000000" :is_default 0 :chain 0x45 :active 1
+	Plugin_Module 0xBD create :plugin_id 1882 :plugin_ins 2 :plugin_outs 2 :parameter_values "0.500000:20.000000:180.000000:-6.000000:2.000000:3.250000:0.000000" :is_default 0 :chain 0x45 :active 1
 	Gain_Module 0x47 create :parameter_values "0.000000:0.000000" :is_default 1 :chain 0x45 :active 1
 	Meter_Module 0x48 create :is_default 1 :chain 0x45 :active 1
 	JACK_Module 0x49 create :parameter_values "2.000000:0.000000" :is_default 1 :chain 0x45 :active 1
