@@ -6,6 +6,7 @@ from .stagiaire.main import Stagiaire
 from .sw.main import SW
 from .viktorhuguau.main import ViktorHuguau
 from .ramenermooncup.main import RamenerMooncup
+from .stickitout.main import StickItOut
 
 snapshat = Snapshat('Snapshat')
 mcob = Mcob('Mcob')
@@ -15,3 +16,4 @@ stagiaire = Stagiaire('Stagiaire')
 SW = SW('SW')
 viktorhuguau = ViktorHuguau('ViktorHuguau')
 RamenerMooncup = RamenerMooncup('RamenerMooncup')
+StickItOut = StickItOut('StickItOut')

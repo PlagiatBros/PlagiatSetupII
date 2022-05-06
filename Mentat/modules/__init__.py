@@ -92,7 +92,7 @@ vocalsNanoFX5RingMod = NonMixer('VocalsNanoFX5RingMod', 'osc', 10055)
 vocalsNanoFX6Granular = NonMixer('VocalsNanoFX6Granular', 'osc', 10056)
 vocalsNanoFX7Slice = NonMixer('VocalsNanoFX7Slice', 'osc', 10057)
 vocalsNanoFX8TapeDelay = NonMixer('VocalsNanoFX8TapeDelay', 'osc', 10058)
-vocalsNanoFX8Scape = NonMixer('VocalsNanoFX9Scape', 'osc', 10059)
+vocalsNanoFX9Scape = NonMixer('VocalsNanoFX9Scape', 'osc', 10059)
 
 vocalsKesch = Vocals('VocalsKesch', 'osc', 10060)
 vocalsKeschFX1Delay = NonMixer('VocalsKeschFX1Delay', 'osc', 10061)
@@ -102,8 +102,8 @@ vocalsKeschFX4Disint = NonMixer('VocalsKeschFX4Disint', 'osc', 10064)
 vocalsKeschFX5RingMod = NonMixer('VocalsKeschFX5RingMod', 'osc', 10065)
 vocalsKeschFX6Granular = NonMixer('VocalsKeschFX6Granular', 'osc', 10066)
 vocalsKeschFX7Slice = NonMixer('VocalsKeschFX7Slice', 'osc', 10067)
-vocalsKeschFX8TapeDelay = NonMixer('VocalsKeschX8TapeDelay', 'osc', 10068)
-vocalsKeschFX8Scape = NonMixer('VocalsKeschFX9Scape', 'osc', 10069)
+vocalsKeschFX8TapeDelay = NonMixer('VocalsKeschFX8TapeDelay', 'osc', 10068)
+vocalsKeschFX9Scape = NonMixer('VocalsKeschFX9Scape', 'osc', 10069)
 
 """
 Samplers
@@ -164,8 +164,8 @@ autotuneNanoMeuf = Autotune('NanoMeuf', 'osc', 12050, offset=4.0)
 autotuneNanoNormo = Autotune('NanoNormo', 'osc', 12051, offset=0.0)
 autotuneNanoGars = Autotune('NanoGars', 'osc', 12052, offset=-4.0)
 
-autotuneKeschMeuf = Autotune('KeschMeuf', 'osc', 12061, offset=4.0)
-autotuneKeschNormo = Autotune('KeschNormo', 'osc', 12060, offset=0.0)
+autotuneKeschMeuf = Autotune('KeschMeuf', 'osc', 12060, offset=4.0)
+autotuneKeschNormo = Autotune('KeschNormo', 'osc', 12061, offset=0.0)
 autotuneKeschGars = Autotune('KeschGars', 'osc', 12062, offset=-4.0)
 
 

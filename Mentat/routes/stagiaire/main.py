@@ -178,7 +178,7 @@ class Stagiaire(Video, Light, RouteBase):
         self.reset()
 
         # Looper
-        looper.play_on_start(0) #### TODO : ça existe ?
+        looper.trigger(0)
 
         # Sequences
         seq192.select('solo', 'afro_*')
@@ -216,57 +216,58 @@ class Stagiaire(Video, Light, RouteBase):
         samplesFX2Delay.set('SamplesFX2Delay', 'Gain', 'Mute', 0.0)
 
         # Vocals
-        vocalsNano.set('gars_exclu', 'on')
+        vocalsNano.set('normo_exclu', 'on')
         vocalsKesch.set('gars_exclu', 'on')
 
+        # TODO: c koi se bordél
         # Séquences (Mentat)
-        self.sequence_start('refrain_stagiaire', [
+        self.start_sequence('refrain_stagiaire', [
             {'signature': '4/4'}, # bar 1
             { # bar 2
                 4: lambda: [
-                    vocalsKeschFX2Delay.set('KeschMeuf', 'Mute', 0.0),
-                    vocalsKeschFX2Delay.set('KeschGars', 'Mute', 0.0),
-                    vocalsNanoFX2Delay.set('NanoMeuf', 'Mute', 0.0),
-                    vocalsNanoFX2Delay.set('NanoGars', 'Mute', 0.0)
+                    vocalsKeschFX2Delay.set('KeschMeuf', 'Gain', 'Gain', 0.0),
+                    vocalsKeschFX2Delay.set('KeschGars', 'Gain', 'Gain', 0.0),
+                    vocalsNanoFX2Delay.set('NanoMeuf', 'Gain', 'Gain', 0.0),
+                    vocalsNanoFX2Delay.set('NanoGars', 'Gain', 'Gain', 0.0)
                     ]
             },
             { # bar 3
                 2: lambda: vocalsKesch.set('meuf_exclu', 'on')
             },
             { # bar 4
-                3: lambda: vocalsKesch.set('gars_exlu', 'on')
+                3: lambda: vocalsKesch.set('gars_exclu', 'on')
             },
             { # bar 5
                 2: lambda: [
-                    vocalsKeschFX2Delay.set('KeschMeuf', 'Mute', 1.0),
-                    vocalsKeschFX2Delay.set('KeschGars', 'Mute', 1.0),
-                    vocalsNanoFX2Delay.set('NanoMeuf', 'Mute', 0.0),
-                    vocalsNanoFX2Delay.set('NanoGars', 'Mute', 0.0)
+                    vocalsKeschFX2Delay.set('KeschMeuf', 'Gain', 'Mute', 1.0),
+                    vocalsKeschFX2Delay.set('KeschGars', 'Gain', 'Mute', 1.0),
+                    vocalsNanoFX2Delay.set('NanoMeuf', 'Gain', 'Mute', 0.0),
+                    vocalsNanoFX2Delay.set('NanoGars', 'Gain', 'Mute', 0.0)
                     ]
             },
             { # bar 6
                 4: lambda: [
-                    vocalsKeschFX2Delay.set('KeschMeuf', 'Mute', 0.0),
-                    vocalsKeschFX2Delay.set('KeschGars', 'Mute', 0.0),
-                    vocalsNanoFX2Delay.set('NanoMeuf', 'Mute', 0.0),
-                    vocalsNanoFX2Delay.set('NanoGars', 'Mute', 0.0)
+                    vocalsKeschFX2Delay.set('KeschMeuf', 'Gain', 'Mute', 0.0),
+                    vocalsKeschFX2Delay.set('KeschGars', 'Gain', 'Mute', 0.0),
+                    vocalsNanoFX2Delay.set('NanoMeuf', 'Gain', 'Mute', 0.0),
+                    vocalsNanoFX2Delay.set('NanoGars', 'Gain', 'Mute', 0.0)
                     ]
             },
             { # bar 7
                 2: lambda: [
-                    vocalsKeschFX2Delay.set('KeschMeuf', 'Mute', 1.0),
-                    vocalsKeschFX2Delay.set('KeschGars', 'Mute', 1.0),
-                    vocalsNanoFX2Delay.set('NanoMeuf', 'Mute', 0.0),
-                    vocalsNanoFX2Delay.set('NanoGars', 'Mute', 0.0)
+                    vocalsKeschFX2Delay.set('KeschMeuf', 'Gain', 'Mute', 1.0),
+                    vocalsKeschFX2Delay.set('KeschGars', 'Gain', 'Mute', 1.0),
+                    vocalsNanoFX2Delay.set('NanoMeuf', 'Gain', 'Mute', 0.0),
+                    vocalsNanoFX2Delay.set('NanoGars', 'Gain', 'Mute', 0.0)
                     ]
 
             },
             { # bar 8
                 4: lambda: [
-                    vocalsKeschFX2Delay.set('KeschMeuf', 'Mute', 0.0),
-                    vocalsKeschFX2Delay.set('KeschGars', 'Mute', 0.0),
-                    vocalsNanoFX2Delay.set('NanoMeuf', 'Mute', 0.0),
-                    vocalsNanoFX2Delay.set('NanoGars', 'Mute', 0.0)
+                    vocalsKeschFX2Delay.set('KeschMeuf', 'Gain', 'Mute', 0.0),
+                    vocalsKeschFX2Delay.set('KeschGars', 'Gain', 'Mute', 0.0),
+                    vocalsNanoFX2Delay.set('NanoMeuf', 'Gain', 'Mute', 0.0),
+                    vocalsNanoFX2Delay.set('NanoGars', 'Gain', 'Mute', 0.0)
                     ]
             },
 
@@ -303,20 +304,20 @@ class Stagiaire(Video, Light, RouteBase):
         """
         NANO GARS
         """
-        vocalsNano.set('gars_exclu', on)
+        vocalsNano.set('gars_exclu', 'on')
 
     @mk2_button(6, 'yellow')
     def nanomeuf(self):
         """
         NANO MEUF
         """
-        vocalsNano.set('meuf_exclu', on)
+        vocalsNano.set('meuf_exclu', 'on')
 
     @mk2_button(7, 'yellow')
     def nanonormo(self):
         """
         NANO NORMO
         """
-        vocalsNano.set('normo_exclu', on)
+        vocalsNano.set('normo_exclu', 'on')
 
     ### TODO TRAPCUT @mk2_button(5, 'purple')

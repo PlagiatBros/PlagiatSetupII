@@ -20,7 +20,8 @@ class Seq192(Module):
             'Stagiaire' : 4,
             'SW': 5,
             'ViktorHuguau' : 6,
-            'RamenerMooncup': 7
+            'RamenerMooncup': 7,
+            'StickItOut': 8
         }
 
     def start(self):

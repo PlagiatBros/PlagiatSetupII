@@ -51,7 +51,7 @@ class RaySession(Module):
                 self.client_stopped(name)
             elif event == 'stopped_by_itself' or event == 'client_stopped_by_itself':
                 self.client_stopped(name)
-                self.info('module %s crashed')
+                self.logger.info('module %s crashed')
                 os.popen('dunstify -u critical -a Mentat -t 0 "%s" "a crashé"' % name)
 
         elif address == '/reply':

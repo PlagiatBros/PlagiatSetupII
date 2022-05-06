@@ -198,31 +198,31 @@ class RamenerMooncup(Video, Light, RouteBase):
         vocalsNano.set('meuf_exclu', 'on')
         vocalsKesch.set('gars_exclu', 'on')
 
-    self.start_sequence('couplet2-2', [
-        *[{} for i in range(15)], # bars 1 - 15
-        { # bar 16
-            3 + 1/2.: lambda: [
+        self.start_sequence('couplet2-2', [
+            *[{} for i in range(15)], # bars 1 - 15
+            { # bar 16
+                3 + 1/2.: lambda: [
 
-                # Looper
-                looper.trig(0),
+                    # Looper
+                    looper.trig(0),
 
-                # Vocals
-                vocalsKesch.set('meuf_exclu', 'on')
-            ]
-        },
-        { # bar 17
-            1: lambda: [
-                # Samples
-                samples.set('Samples[1-5]', 'Gain', 'Mute', 0.0),
+                    # Vocals
+                    vocalsKesch.set('meuf_exclu', 'on')
+                ]
+            },
+            { # bar 17
+                1: lambda: [
+                    # Samples
+                    samples.set('Samples[1-5]', 'Gain', 'Mute', 0.0),
 
-                # Sequences
-                seq192.set('on', 'couplet2-3'),
+                    # Sequences
+                    seq192.set('on', 'couplet2-3'),
 
-                # Vocals
-                vocalsNano.set('gars_exclu', 'on')
-            ]
-        }
-    ], loop=False)
+                    # Vocals
+                    vocalsNano.set('gars_exclu', 'on')
+                ]
+            }
+        ], loop=False)
 
     @mk2_button(3, 'purple')
     def refrain2(self):

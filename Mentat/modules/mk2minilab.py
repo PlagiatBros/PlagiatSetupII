@@ -82,15 +82,18 @@ class Mk2Control(Module):
         if address == '/control_change':
 
             cc = args[1]
-            if cc > 100 and cc < 117 and args[2] == 0:
+            if cc > 100 and cc < 117:
 
-                if cc < 109:
-                    # pads 1-8
-                    self.engine.route('osc', 'mk2', '/mk2/button', [cc - 100])
-                else:
-                    pass
+                if args[2] == 127:
 
-                self.resend_lights()
+                    if cc < 109:
+                        # pads 1-8
+                        self.engine.route('osc', 'mk2', '/mk2/button', [cc - 100])
+                    else:
+                        pass
+
+                if args[2] == 0:
+                    self.resend_lights()
 
         elif address == '/sysex':
 

@@ -183,7 +183,7 @@ class Mcob(Video, Light, RouteBase):
                 {   # bar 7
                     1: lambda: [vocalsKesch.set('gars', 'on'), vocalsKesch.set('normo', 'on')]
                 },
-                {}, {}, # bars 8, 9
+                {},# {}, # bars 8, 9
                 {   # bar 10
                     1: lambda: vocalsKesch.set('normo_exclu', 'on')
                 },
@@ -211,7 +211,7 @@ class Mcob(Video, Light, RouteBase):
     @mk2_button(3, 'purple')
     def couplet1_3(self):
         """
-        COUPLET 1 - Shaft
+        COUPLET 1 - No Ambition
         """
         # Sequences
         seq192.select('solo', 'couplet1-2_*')
@@ -249,6 +249,8 @@ class Mcob(Video, Light, RouteBase):
             {}, {}, # bar 9, 10
             {   # bar 11
                 1: lambda: vocalsKesch.set('normo_exclu', 'on'),
+            },
+            {
                 3: lambda: vocalsKesch.set('meuf', 'on')
             },
             {   # bar 12
@@ -262,8 +264,6 @@ class Mcob(Video, Light, RouteBase):
             },
             {   # bar 14
                 1: lambda: vocalsKesch.set('meuf', 'on'),
-            },
-            {   # bar 15
                 2.5: lambda: vocalsKesch.set('meuf', 'off'),
                 3: lambda: vocalsKesch.set('meuf', 'on')
             },
@@ -370,12 +370,22 @@ class Mcob(Video, Light, RouteBase):
         samples.set('Samples4', 'Gain', 'Mute', 0.0)
 
         # Vocals
-        vocalsKesch.set('gars', 'on')
-        vocalsKesch.set('meuf', 'on')
-        vocalsNano.set('normo_exclu', 'on')
+        vocalsKesch.set('gars_exclu', 'on')
 
         # Keyboards
         jmjKeyboard.set_sound('ZNotSoRhodes')
+
+        self.start_sequence('stop_looping', [
+            {
+                'signature': '32/4',
+                32: lambda: looper.record(0),
+                33: lambda: [
+                        vocalsNano.set('gars_exclu', 'on'),
+                        vocalsNanoFX3TrapVerb.set('NanoGars', 'Gain', 'Gain', 0),
+                        vocalsNanoFX3TrapVerb.set('VocalsNanoFX3TrapVerb', 'Gain', 'Mute', 0)
+                ]
+            }
+        ], loop=False)
 
     @mk2_button(4)
     def couplet2_1(self):
@@ -438,6 +448,9 @@ class Mcob(Video, Light, RouteBase):
         # Transport
         transport.start()
         transport.set_tempo(130)
+
+        # Keyboards
+        jmjKeyboard.set_sound('ZNotSoRhodes')
 
     @pedalboard_button(9)
     def rec_synth(self):
