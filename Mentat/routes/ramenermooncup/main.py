@@ -88,9 +88,9 @@ class RamenerMooncup(Video, Light, RouteBase):
                 },
                 *[{} for i in range(29)], # bars 9 - 21
                 { # bar 22
-                    1: lambda: postprocess.animate_pitch(['Samples*', 'Synths*'], 1, 0.25, 1),
+                    1: lambda: postprocess.animate_pitch(['Samples', 'Synth*'], 1, 0.25, 1),
                     2: lambda: seq192.select('solo', 'dummy'),
-                    2 + 0.4: lambda: postprocess.animate_pitch(['Samples*', 'Synths*'], None, 1, 0.1),
+                    2 + 0.4: lambda: postprocess.animate_pitch(['Samples', 'Synths'], None, 1, 0.1),
                     2 + 1/2. : lambda: [
                         samples.set('Samples[1-5]', 'Gain', 'Gain', 0.0),
                         samplesFX1Delay.set('Samples[1-5]', 'Gain', 'Gain', 0.0),

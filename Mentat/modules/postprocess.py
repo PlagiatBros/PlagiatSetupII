@@ -12,104 +12,170 @@ class PostProcess(Module):
 
         super().__init__(*args, **kwargs)
 
-        self.no_AMpitch = ['VocalsNano', 'VocalsKesch']
+        root = self.engine.root_module
+
+        autotunes = ['NanoMeuf', 'NanoNormo', 'NanoGars', 'KeschMeuf', 'KeschNormo', 'KeschGars']
+        basses = ['Bass', 'BassSynths']
+        root.add_meta_parameter(
+            'pitch_vocals',
+            [[autotune, 'pitch'] for autotune in autotunes],
+            getter= lambda *p: p[0],
+            setter= lambda p: [root.set(autotune, 'pitch', p) for autotune in autotunes]
+        )
+
+        root.add_meta_parameter(
+            'pitch_bass',
+            [['Outputs', bass, 'Pitchshifter', 'Pitch'] for bass in basses],
+            getter= lambda *p: p[0],
+            setter= lambda p: [root.set('Outputs', bass, 'Pitchshifter', 'Pitch', p) for bass in basses]
+        )
+
+        root.add_meta_parameter(
+            'pitch_synths',
+            [['Outputs', 'Synths', 'Pitchshifter', 'Pitch']],
+            getter= lambda p: p,
+            setter= lambda p: root.set('Outputs', 'Synths', 'Pitchshifter', 'Pitch', p)
+        )
+
+        root.add_meta_parameter(
+            'pitch_samples',
+            [['Outputs', 'Samples', 'Pitchshifter', 'Pitch']],
+            getter= lambda p: p,
+            setter= lambda p: root.set('Outputs', 'Samples', 'Pitchshifter', 'Pitch', p)
+        )
+
+        pitches = ['vocals', 'bass', 'synths', 'samples']
+        root.add_meta_parameter(
+            'pitch',
+            ['pitch_%s' % pitch for pitch in pitches],
+            getter= lambda *p: p[0],
+            setter= lambda p: [root.set('pitch_%s' % pitch, p) for pitch in pitches]
+        )
+
+        root.add_meta_parameter(
+            'filter_bass',
+            [['Outputs', bass, 'Lowpass', 'Cutoff'] for bass in basses],
+            getter= lambda *f: f[0],
+            setter= lambda f: [root.set('Outputs', bass, 'Lowpass', 'Cutoff', f) for bass in basses]
+        )
+
+        root.add_meta_parameter(
+            'filter_synths',
+            [['Outputs', 'Synths', 'Lowpass', 'Cutoff']],
+            getter= lambda f: f,
+            setter= lambda f: [root.set('Outputs', 'Synths', 'Lowpass', 'Cutoff', f)]
+        )
+
+        root.add_meta_parameter(
+            'filter_samples',
+            [['Outputs', 'Samples', 'Lowpass', 'Cutoff']],
+            getter= lambda f: f,
+            setter= lambda f: [root.set('Outputs', 'Samples', 'Lowpass', 'Cutoff', f)]
+        )
+
+        filters = ['bass', 'synths', 'samples']
+        root.add_meta_parameter(
+            'filter',
+            ['filter_%s' % filter for filter in filters],
+            getter= lambda *f: f[0],
+            setter= lambda f: [root.set('filter_%s' % filter, f) for filter in filters]
+        )
 
 
-    def set_pitch(self, strip_name, pitch):
+    def set_pitch(self, strip, pitch):
         """
         Set pitch shifting parameter for one or multiple strips.
         For vocals this is handled at the autotuner's level, for the others with AM Pitchshifter
 
         **Parameters**
 
-        - `strip_name`: name of strip (with unix filename pattern matching support), or list of names
+        - `strip`: '*', 'vocals', 'bass', 'synths' or 'samples'. Can be a list to target multiple strips.
         - `pitch`: pitch multiplier (0.5 = -1 octave, 2 = +1 octave)
         """
-        if type(strip_name) is list:
-            for n in strip_name:
+        if type(strip) is list:
+            for n in strip:
                 self.set_pitch(n, pitch)
             return
 
-        mod = self.engine.modules['Outputs']
+        root = self.engine.root_module
 
-        for n in fnmatch.filter(mod.submodules.keys(), strip_name):
-            if n not in self.no_AMpitch:
-                if 'Pitchshifter' in mod.submodules[n].submodules:
-                    mod.set(n, 'Pitchshifter', 'Pitch', pitch)
-            else:
-                pre = n[6:]
-                for name in [pre+'Meuf', pre+'Normo', pre+'Gars']:
-                    self.engine.modules[name].set('pitch', pitch)
+        if strip == '*':
+            root.set('pitch', pitch)
+        else:
+            root.set('pitch_%s' % strip.lower(), pitch)
 
-    def animate_pitch(self, strip_name, start, end, duration, mode='beats', easing='linear'):
+    def animate_pitch(self, strip, start, end, duration, mode='beats', easing='linear'):
         """
         Animate pitch shifting for one or multiple strips
 
         **Parameters**
 
-        - `strip_name`: name of strip (with unix filename pattern matching support), or list of names
+        - `strip`: '*', 'vocals', 'bass', 'synths' or 'samples'. Can be a list to target multiple strips.
         - `start`: pitch multiplier start value (0.5 = -1 octave, 2 = +1 octave)
         - `end`: pitch multiplier end value (0.5 = -1 octave, 2 = +1 octave)
         - `duration`: animation duration
         - `mode`: beats or seconds
         - `easing`: interpolation curve (see mentat's documentation)
         """
-        if type(strip_name) is list:
-            for n in strip_name:
+
+        if type(strip) is list:
+            for n in strip:
                 self.animate_pitch(n, start, end, duration, mode, easing)
             return
 
-        mod = self.engine.modules['Outputs']
-        for n in fnmatch.filter(mod.submodules.keys(), strip_name):
-            if n not in self.no_AMpitch:
-                if 'Pitchshifter' in mod.submodules[n].submodules:
-                    mod.animate(n, 'Pitchshifter', 'Pitch', start, end, duration, mode, easing)
-            else:
-                pre = n[6:]
-                for name in [pre+'Meuf', pre+'Normo', pre+'Gars']:
-                    self.engine.modules[name].animate(n, 'Pitch', start, end, duration, mode, easing)
+        root = self.engine.root_module
+
+        if strip == '*':
+            root.animate('pitch', pitch)
+        else:
+            root.animate('pitch_%s' % strip.lower(), pitch)
 
 
-    def set_filter(self, strip_name, freq):
+    def set_filter(self, strip, freq):
         """
         Set lowpass filter cutoff parameter for one or multiple strips, or list of names
 
         **Parameters**
 
-        - `strip_name`: name of strip (with unix filename pattern matching support)
+        - `strip`: '*', 'bass', 'synths' or 'samples'. Can be a list to target multiple strips.
         - `freq`: cutoff frequency in Hz
         """
-        if type(strip_name) is list:
-            for n in strip_name:
+        if type(strip) is list:
+            for n in strip:
                 self.set_filter(n, freq)
             return
 
-        mod = self.engine.modules['Outputs']
-        for n in fnmatch.filter(mod.submodules.keys(), strip_name):
-            if 'Lowpass' in mod.submodules[n].submodules:
-                mod.set(n, 'Lowpass', 'Cutoff', freq)
+        root = self.engine.root_module
 
-    def animate_filter(self, strip_name, start, end, duration, mode='beats', easing='linear'):
+        if strip == '*':
+            root.set('filter', freq)
+        else:
+            root.set('filter_%s' % strip.lower(), freq)
+
+    def animate_filter(self, strip, start, end, duration, mode='beats', easing='linear'):
         """
         Animate lowpass filter cutoff for one or multiple strips
 
         **Parameters**
 
-        - `strip_name`: name of strip (with unix filename pattern matching support), or list of names
+        - `strip`: '*', 'bass', 'synths' or 'samples'. Can be a list to target multiple strips.
         - `start`: cutoff frequency start value in Hz
         - `end`: cutoff frequency end value in Hz
         - `duration`: animation duration
         - `mode`: beats or seconds
         - `easing`: interpolation curve (see mentat's documentation)
         """
-        if type(strip_name) is list:
-            for n in strip_name:
+        if type(strip) is list:
+            for n in strip:
                 self.animate_filter(n, start, end, duration, mode, easing)
             return
-        mod = self.engine.modules['Outputs']
-        for n in fnmatch.filter(mod.submodules.keys(), strip_name):
-            if 'Lowpass' in mod.submodules[n].submodules:
-                mod.animate(n, 'Lowpass', 'Cutoff', start, end, duration, mode, easing)
+
+        root = self.engine.root_module
+
+        if strip == '*':
+            root.animate('filter', pitch)
+        else:
+            root.animate('filter_%s' % strip.lower(), pitch)
 
 
     def slice(self):

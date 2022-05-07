@@ -141,7 +141,7 @@ class Snapshat(Video, Light, RouteBase):
         vocalsNanoFX3TrapVerb.set('VocalsNanoFX3TrapVerb', 'Gain', 'Mute', 0.0)
 
         # Samples
-        postprocess.animate_filter('Samples', 20000, 1000, 1)
+        postprocess.animate_filter('Samples', None, 1000, 1)
 
         # Keyboards
         jmjKeyboard.set_sound('LowCTrap1')

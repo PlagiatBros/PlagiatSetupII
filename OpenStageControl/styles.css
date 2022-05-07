@@ -51,7 +51,27 @@
     --color-text: var(--color-widget);
     filter:drop-shadow(0 0 2px);
 }
-
+.fader-container.design-compact .label {
+    position: absolute;
+    background: none;
+    bottom: 0;
+    left: 0;
+    transform: rotate(180deg);
+    text-overflow: ellipsis;
+    -webkit-writing-mode:vertical-rl;
+    writing-mode:vertical-rl;
+    text-transform: uppercase;
+    height: 100rem;
+    font-size: 140%;
+    font-weight: 100;
+    width: 100%;
+    pointer-events: none;
+    margin-bottom: 10rem;
+    color:white;
+    opacity: 0.5;
+    display: flex;
+    align-items: center;
+}
 .strip {
     --color-background: var(--strip-bg);
     --widget-padding: 10rem;
@@ -237,7 +257,8 @@
 
 .vocals-buttons .button-container {
     --line-width: 4rem;
-    font-size: 120%;
+    font-size: 160%;
+    font-weight: 100;
     --widget-padding: 0;
 }
 .vocals-buttons .button-container.on {
