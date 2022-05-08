@@ -470,7 +470,7 @@
                     "colorStroke": "auto",
                     "colorFill": "auto",
                     "alphaStroke": "auto",
-                    "alphaFillOff": 0.05,
+                    "alphaFillOff": 0.1,
                     "alphaFillOn": 0.5,
                     "lineWidth": 0,
                     "padding": 0,
@@ -986,7 +986,7 @@
                 "height": "auto",
                 "expand": false,
                 "colorText": "auto",
-                "colorWidget": "cyan",
+                "colorWidget": "var(--blue-green)",
                 "colorStroke": "auto",
                 "colorFill": "auto",
                 "alphaStroke": "auto",
@@ -1573,7 +1573,7 @@
                         "gradient": [],
                         "snap": false,
                         "spring": false,
-                        "doubleTap": true,
+                        "doubleTap": false,
                         "range": {
                           "min": 200,
                           "max": 24000
@@ -1633,7 +1633,7 @@
                         "gradient": [],
                         "snap": false,
                         "spring": false,
-                        "doubleTap": true,
+                        "doubleTap": false,
                         "range": {
                           "min": 200,
                           "max": 24000
@@ -1693,7 +1693,7 @@
                         "gradient": [],
                         "snap": false,
                         "spring": false,
-                        "doubleTap": true,
+                        "doubleTap": false,
                         "range": {
                           "min": 200,
                           "max": 24000
@@ -3941,7 +3941,7 @@
             "top": 50,
             "left": 1470,
             "lock": false,
-            "id": "panel_1764",
+            "id": "utils_panel",
             "visible": true,
             "interaction": true,
             "comments": "",
@@ -3957,8 +3957,8 @@
             "alphaFillOn": "auto",
             "lineWidth": "auto",
             "padding": "auto",
-            "html": "",
-            "css": "",
+            "html": "<div class=\"label center\">&nbsp;</div>",
+            "css": "class: strip",
             "colorBg": "auto",
             "layout": "default",
             "justify": "start",

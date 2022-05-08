@@ -141,7 +141,7 @@
     --line-width: 1rem;
     --color-stroke: rgba(0,0,0,0.5)
 }
-.popup {
+.modal-container .popup {
     --color-background: var(--color-bg-backup);
 }
 .popup {
@@ -211,7 +211,7 @@
 
 }
 .route-buttons .pb::before {
-    background: grey;
+    background: var(--purple);
     border-radius: 50%;
 }
 
@@ -269,9 +269,10 @@
 
 .vocals-buttons .button-container {
     --line-width: 4rem;
-    font-size: 160%;
+    font-size: 140%;
     font-weight: 100;
     --widget-padding: 0;
+    text-transform: uppercase;
 }
 .vocals-buttons .button-container.on {
     --line-width: 0;
