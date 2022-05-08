@@ -19,6 +19,8 @@ class OpenStageControl(Module):
         self.non_gui = {}
         self.ray_gui = {}
 
+        self.active_non_mixer = None
+
         self.add_parameter('session_loaded', None, types='i', default=0)
         self.add_parameter('session_populated', None, types='i', default=0)
 
@@ -203,13 +205,14 @@ class OpenStageControl(Module):
         while self.get('session_loaded') == 0:
             self.wait(2, 's')
 
-        panel = {'tabs': [], 'verticalTabs': True, 'bypass': True}
+        panel = {'tabs': [], 'verticalTabs': True, 'bypass': True, 'onValue': 'var name = getProp("non-mixer_tab_" + value, "label"); if (name) send("/OpenStageControl/call", "set_active_non_mixer", name)'}
 
+        index = 0
         for name, mod in self.engine.modules.items():
             if isinstance(mod, NonMixer):
                 tab = {
                     'type': 'tab',
-                    'id': 'non-mixer.%s' % name,
+                    'id': 'non-mixer_tab_%i' % index,
                     'label': name,
                     'layout': 'horizontal',
                     'innerPadding': False,
@@ -217,6 +220,7 @@ class OpenStageControl(Module):
                     'padding': 1,
                     'contain': False
                 }
+                index += 1
                 panel['tabs'].append(tab)
                 for sname, smod in mod.submodules.items():
                     strip = {
@@ -309,17 +313,37 @@ class OpenStageControl(Module):
                     'preArgs': 'Mute'
                     })
                     strip['widgets'].append({
-                        'type': 'fader',
-                        'range': {'min': -70, '6%': -60, '12%': -50, '20%': -40, '30%': -30, '42%': -20, '60%': -10, '80%': 0, 'max': 6 },
+                        'type': 'panel',
                         'expand': True,
-                        'doubleTap': True,
-                        'pips': True,
-                        'design': 'round',
-                        'value': smod.get('Gain', 'Gain'),
-                        'default': smod.get('Gain', 'Gain'),
-                        'address': '/%s/%s/Gain' % (name, sname),
-                        'linkId': '/%s/%s/Gain/Gain' % (name, sname),
-                        'preArgs': 'Gain'
+                        'scroll': False,
+                        'widgets': [
+                            {
+                                'type': 'fader',
+                                'range': {'min': -70, '6%': -60, '12%': -50, '20%': -40, '30%': -30, '42%': -20, '60%': -10, '80%': 0, 'max': 6 },
+                                'width': '100%',
+                                'height': '100%',
+                                'doubleTap': True,
+                                'pips': True,
+                                'design': 'round',
+                                'value': smod.get('Gain', 'Gain'),
+                                'default': smod.get('Gain', 'Gain'),
+                                'address': '/%s/%s/Gain' % (name, sname),
+                                'linkId': '/%s/%s/Gain/Gain' % (name, sname),
+                                'preArgs': 'Gain'
+                            },
+                            {
+                                'type': 'fader',
+                                'css': 'class: meter',
+                                'range': {'min': -70, '6%': -60, '12%': -50, '20%': -40, '30%': -30, '42%': -20, '60%': -10, '80%': 0, 'max': 6 },
+                                'interaction': False,
+                                'pips': False,
+                                'design': 'compact',
+                                'dashed': [2,2],
+                                'default': -70,
+                                'address': '/%s/%s/Meter' % (name, sname),
+                                'preArgs': 'Level'
+                            }
+                        ]
                     })
                     strip['widgets'].append({
                         'type': 'input',
@@ -435,33 +459,10 @@ class OpenStageControl(Module):
                 elif hasattr(m, 'pedalboard_buttons'):
                     self.engine.active_route.route('osc', None, '/pedalboard/button', list(m.pedalboard_buttons.keys())[:1])
 
-    def set_pitch(self, value):
+    def set_active_non_mixer(self, name):
 
-        strips = []
-        if self.get('pitch_voices') == 1:
-            strips.append('Vocals*')
-        if self.get('pitch_bass') == 1:
-            strips.append('Bass*')
-        if self.get('pitch_synths') == 1:
-            strips.append('Synths')
-        if self.get('pitch_samples') == 1:
-            strips.append('Samples*')
+        if self.active_non_mixer is not None:
+            self.engine.modules[self.active_non_mixer].disable_meters()
 
-        if strips:
-            self.engine.modules['PostProcess'].set_pitch(strips, value)
-
-
-    def set_filter(self, value):
-
-        strips = []
-        if self.get('filter_voices') == 1:
-            strips.append('Vocals*')
-        if self.get('filter_bass') == 1:
-            strips.append('Bass*')
-        if self.get('filter_synths') == 1:
-            strips.append('Synths')
-        if self.get('filter_samples') == 1:
-            strips.append('Samples*')
-
-        if strips:
-            self.engine.modules['PostProcess'].set_filter(strips, value)
+        if name is not None and name != '':
+            self.engine.modules[name].enable_meters()

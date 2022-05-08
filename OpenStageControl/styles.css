@@ -159,6 +159,18 @@
     padding: 0 4rem;
 }
 
+.strip .meter {
+    --alpha-fill-on:0.75;
+    --line-width: 0;
+    --widget-padding: 0;
+    position: absolute;
+    top:18rem;bottom:12rem;
+    height: auto;
+    left: 42rem;
+    z-index: 10;
+    width: 8rem;
+}
+
 
 .route-buttons .widget {
     max-height: 50rem;
