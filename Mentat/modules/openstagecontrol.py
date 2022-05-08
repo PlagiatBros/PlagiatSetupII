@@ -16,10 +16,7 @@ class OpenStageControl(Module):
 
         self.osc_state = {}
 
-        self.non_gui = {}
-        self.ray_gui = {}
-
-        self.active_non_mixer = None
+        self.add_parameter('active_non_mixer', None, types='s', default='')
 
         self.add_parameter('session_loaded', None, types='i', default=0)
         self.add_parameter('session_populated', None, types='i', default=0)
@@ -32,15 +29,9 @@ class OpenStageControl(Module):
         self.add_parameter('route_methods', '/route_methods', types='s', default='')
         self.add_parameter('rolling', '/rolling', types='i', default=0)
 
-        for post_process in ['pitch', 'filter']:
-            for strip_type in ['voices', 'bass', 'synths', 'samples']:
-                self.add_parameter('%s_%s' % (post_process, strip_type), None, types='i', default=1)
-
         self.add_event_callback('parameter_changed', self.parameter_changed)
         self.add_event_callback('client_started', self.client_started)
-        self.add_event_callback('engine_started', lambda:
-            self.set('routes', ','.join(self.engine.routes.keys()))
-        )
+        self.add_event_callback('engine_started', lambda: self.set('routes', ','.join(self.engine.routes.keys())) )
         self.add_event_callback('engine_route_changed', self.engine_route_changed)
 
         self.start_scene('cycle_watch', self.cycle_watch)
@@ -194,17 +185,18 @@ class OpenStageControl(Module):
 
     def populate_gui(self):
         """
-        Here be dragons.
-
-        Generates a gui for all non mixers instance.
-
-        Maybe this could be extended to all modules.
-        Maybe this is overkill.
+        Generates a gui for:
+            - non mixers instances
+            - ray session
         """
 
         while self.get('session_loaded') == 0:
             self.wait(2, 's')
 
+
+        """
+        Non mixer gui
+        """
         panel = {'tabs': [], 'verticalTabs': True, 'bypass': True, 'onValue': 'var name = getProp("non-mixer_tab_" + value, "label"); if (name) send("/OpenStageControl/call", "set_active_non_mixer", name)'}
 
         index = 0
@@ -355,7 +347,9 @@ class OpenStageControl(Module):
 
         self.edit_gui('non-mixers', panel)
 
-
+        """
+        Ray session gui
+        """
 
         ray = self.engine.modules['RaySession']
         panel = {'widgets': [], 'layout': 'vertical', 'padding': 1, 'innerPadding': False, 'contain': False}
@@ -401,6 +395,10 @@ class OpenStageControl(Module):
 
         self.edit_gui('ray-session', panel)
 
+        """
+        Misc
+        """
+
         self.set('session_populated', 1)
         self.send_state()
 
@@ -444,13 +442,19 @@ class OpenStageControl(Module):
         self.engine.active_route.pause_loopers()
 
     def panic(self):
+        """
+        Send panic to synths
+        TODO: carla panic not working over osc
+        """
         self.engine.modules['ZHiSynths'].send('/Panic')
         self.engine.modules['ZLowSynths'].send('/Panic')
         self.engine.modules['HiCSynths'].send('/panic')
         self.engine.modules['LowCSynths'].send('/panic')
 
     def route_method(self, name):
-
+        """
+        Call method in active route that's linked to a pedalboard or mk2 button
+        """
         if hasattr(self.engine.active_route, name):
             m = getattr(self.engine.active_route, name)
             if callable(m):
@@ -460,9 +464,14 @@ class OpenStageControl(Module):
                     self.engine.active_route.route('osc', None, '/pedalboard/button', list(m.pedalboard_buttons.keys())[:1])
 
     def set_active_non_mixer(self, name):
+        """
+        Switch on-demand non-mixer meter levels
+        """
+        prev_name = self.get('active_non_mixer')
+        if prev_name != '' and prev_name in self.engine.modules:
+            self.engine.modules[prev_name].disable_meters()
 
-        if self.active_non_mixer is not None:
-            self.engine.modules[self.active_non_mixer].disable_meters()
-
-        if name is not None and name != '':
+        if name != '' and name in self.engine.modules:
             self.engine.modules[name].enable_meters()
+
+        self.set('active_non_mixer', name)
