@@ -226,6 +226,7 @@ Non-Mixer.SamplesFX5TapeDelay (In):Samples4/out-2 |> Non-Mixer.SamplesFX5TapeDel
 Non-Mixer.SamplesFX5TapeDelay (In):Samples5/out-1 |> Non-Mixer.SamplesFX5TapeDelay (Process):SamplesFX5TapeDelay/in-1
 Non-Mixer.SamplesFX5TapeDelay (In):Samples5/out-2 |> Non-Mixer.SamplesFX5TapeDelay (Process):SamplesFX5TapeDelay/in-2
 Non-Mixer.SamplesFX5TapeDelay (Process):SamplesFX5TapeDelay/out-1 |> Non-Mixer.Samples (Out):SamplesOut/in-1
+Non-Mixer.SamplesFX5TapeDelay (Process):SamplesFX5TapeDelay/out-2 |> Non-Mixer.Samples (Out):SamplesOut/in-2
 Non-Mixer.SamplesFX6Scape (In):ConstantSampler/out-1 |> Non-Mixer.SamplesFX6Scape (Process):SamplesFX6Scape/in-1
 Non-Mixer.SamplesFX6Scape (In):ConstantSampler/out-2 |> Non-Mixer.SamplesFX6Scape (Process):SamplesFX6Scape/in-1
 Non-Mixer.SamplesFX6Scape (In):Samples1/out-1 |> Non-Mixer.SamplesFX6Scape (Process):SamplesFX6Scape/in-1
