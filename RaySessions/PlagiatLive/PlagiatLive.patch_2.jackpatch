@@ -1034,6 +1034,7 @@ sooperlooper:loop7_out_1                 |> Non-Mixer.MonitorsKesch (MonitorsKes
 sooperlooper:loop7_out_1                 |> Non-Mixer.MonitorsNano (MonitorsNano):VocalsKesch/in-1
 sooperlooper:loop7_out_1                 |> Non-Mixer.Outputs (Outputs):VocalsKesch/in-1
 system:capture_1                         |> Non-Mixer.Inputs (Inputs):Bass/in-1
+system:capture_1                         |> gxtuner:in_0
 system:capture_2                         |> Non-Mixer.Inputs (Inputs):VocalsKesch/in-1
 system:capture_3                         |> Non-Mixer.Inputs (Inputs):VocalsNano/in-1
 system:capture_5                         |> Non-Mixer.Inputs (Inputs):OH/in-1

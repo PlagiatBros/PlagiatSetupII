@@ -7539,6 +7539,26 @@
         2435
       ],
       "flags": 68
+    },
+    {
+      "port_types_view": 3,
+      "group_name": "gxtuner",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        -380,
+        -548
+      ],
+      "in_xy": [
+        400,
+        4549
+      ],
+      "out_xy": [
+        0,
+        4549
+      ],
+      "flags": 0
     }
   ]
 }
