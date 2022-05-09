@@ -893,6 +893,7 @@ Tap192.ConstantSampler:output-R          |> Non-Mixer.SamplesFX2Delay (In):Const
 Tap192.ConstantSampler:output-R          |> Non-Mixer.SamplesFX3Reverb (In):ConstantSampler/in-2
 Tap192.ConstantSampler:output-R          |> Non-Mixer.SamplesFX4Autofilter (In):ConstantSampler/in-2
 Tap192.ConstantSampler:output-R          |> Non-Mixer.SamplesFX5TapeDelay (In):ConstantSampler/in-2
+Tap192.ConstantSampler:output-R          |> Non-Mixer.SamplesFX6Scape (In):ConstantSampler/in-2
 Tap192.ConstantSampler:output-R          |> Non-Mixer.SamplesFX7Degrade (In):ConstantSampler/in-2
 Tap192.ProdSampler:Samples1-L            |> Non-Mixer.Samples (Main):Samples1/in-1
 Tap192.ProdSampler:Samples1-L            |> Non-Mixer.SamplesFX1Delay (In):Samples1/in-1
@@ -909,6 +910,7 @@ Tap192.ProdSampler:Samples1-R            |> Non-Mixer.SamplesFX2Delay (In):Sampl
 Tap192.ProdSampler:Samples1-R            |> Non-Mixer.SamplesFX3Reverb (In):Samples1/in-2
 Tap192.ProdSampler:Samples1-R            |> Non-Mixer.SamplesFX4Autofilter (In):Samples1/in-2
 Tap192.ProdSampler:Samples1-R            |> Non-Mixer.SamplesFX5TapeDelay (In):Samples1/in-2
+Tap192.ProdSampler:Samples1-R            |> Non-Mixer.SamplesFX6Scape (In):Samples1/in-2
 Tap192.ProdSampler:Samples1-R            |> Non-Mixer.SamplesFX7Degrade (In):Samples1/in-2
 Tap192.ProdSampler:Samples2-L            |> Non-Mixer.Samples (Main):Samples2/in-1
 Tap192.ProdSampler:Samples2-L            |> Non-Mixer.SamplesFX1Delay (In):Samples2/in-1
@@ -925,6 +927,7 @@ Tap192.ProdSampler:Samples2-R            |> Non-Mixer.SamplesFX2Delay (In):Sampl
 Tap192.ProdSampler:Samples2-R            |> Non-Mixer.SamplesFX3Reverb (In):Samples2/in-2
 Tap192.ProdSampler:Samples2-R            |> Non-Mixer.SamplesFX4Autofilter (In):Samples2/in-2
 Tap192.ProdSampler:Samples2-R            |> Non-Mixer.SamplesFX5TapeDelay (In):Samples2/in-2
+Tap192.ProdSampler:Samples2-R            |> Non-Mixer.SamplesFX6Scape (In):Samples2/in-2
 Tap192.ProdSampler:Samples2-R            |> Non-Mixer.SamplesFX7Degrade (In):Samples2/in-2
 Tap192.ProdSampler:Samples3-L            |> Non-Mixer.Samples (Main):Samples3/in-1
 Tap192.ProdSampler:Samples3-L            |> Non-Mixer.SamplesFX1Delay (In):Samples3/in-1
@@ -941,6 +944,7 @@ Tap192.ProdSampler:Samples3-R            |> Non-Mixer.SamplesFX2Delay (In):Sampl
 Tap192.ProdSampler:Samples3-R            |> Non-Mixer.SamplesFX3Reverb (In):Samples3/in-2
 Tap192.ProdSampler:Samples3-R            |> Non-Mixer.SamplesFX4Autofilter (In):Samples3/in-2
 Tap192.ProdSampler:Samples3-R            |> Non-Mixer.SamplesFX5TapeDelay (In):Samples3/in-2
+Tap192.ProdSampler:Samples3-R            |> Non-Mixer.SamplesFX6Scape (In):Samples3/in-2
 Tap192.ProdSampler:Samples3-R            |> Non-Mixer.SamplesFX7Degrade (In):Samples3/in-2
 Tap192.ProdSampler:Samples4-L            |> Non-Mixer.Samples (Main):Samples4/in-1
 Tap192.ProdSampler:Samples4-L            |> Non-Mixer.SamplesFX1Delay (In):Samples4/in-1
@@ -957,8 +961,8 @@ Tap192.ProdSampler:Samples4-R            |> Non-Mixer.SamplesFX2Delay (In):Sampl
 Tap192.ProdSampler:Samples4-R            |> Non-Mixer.SamplesFX3Reverb (In):Samples4/in-2
 Tap192.ProdSampler:Samples4-R            |> Non-Mixer.SamplesFX4Autofilter (In):Samples4/in-2
 Tap192.ProdSampler:Samples4-R            |> Non-Mixer.SamplesFX5TapeDelay (In):Samples4/in-2
+Tap192.ProdSampler:Samples4-R            |> Non-Mixer.SamplesFX6Scape (In):Samples4/in-2
 Tap192.ProdSampler:Samples4-R            |> Non-Mixer.SamplesFX7Degrade (In):Samples4/in-2
-Tap192.ProdSampler:Samples5-L            |> Non-Mixer.Samples (Main):ConstantSampler/in-1
 Tap192.ProdSampler:Samples5-L            |> Non-Mixer.Samples (Main):Samples5/in-1
 Tap192.ProdSampler:Samples5-L            |> Non-Mixer.SamplesFX1Delay (In):Samples5/in-1
 Tap192.ProdSampler:Samples5-L            |> Non-Mixer.SamplesFX2Delay (In):Samples5/in-1
@@ -968,12 +972,13 @@ Tap192.ProdSampler:Samples5-L            |> Non-Mixer.SamplesFX5TapeDelay (In):S
 Tap192.ProdSampler:Samples5-L            |> Non-Mixer.SamplesFX6Scape (In):Samples5/in-1
 Tap192.ProdSampler:Samples5-L            |> Non-Mixer.SamplesFX7Degrade (In):Samples5/in-1
 Tap192.ProdSampler:Samples5-L            |> Non-Mixer.SamplesWork (In):Samples5/in-1
-Tap192.ProdSampler:Samples5-R            |> Non-Mixer.Samples (Main):ConstantSampler/in-2
+Tap192.ProdSampler:Samples5-R            |> Non-Mixer.Samples (Main):Samples5/in-2
 Tap192.ProdSampler:Samples5-R            |> Non-Mixer.SamplesFX1Delay (In):Samples5/in-2
 Tap192.ProdSampler:Samples5-R            |> Non-Mixer.SamplesFX2Delay (In):Samples5/in-2
 Tap192.ProdSampler:Samples5-R            |> Non-Mixer.SamplesFX3Reverb (In):Samples5/in-2
 Tap192.ProdSampler:Samples5-R            |> Non-Mixer.SamplesFX4Autofilter (In):Samples5/in-2
 Tap192.ProdSampler:Samples5-R            |> Non-Mixer.SamplesFX5TapeDelay (In):Samples5/in-2
+Tap192.ProdSampler:Samples5-R            |> Non-Mixer.SamplesFX6Scape (In):Samples5/in-2
 Tap192.ProdSampler:Samples5-R            |> Non-Mixer.SamplesFX7Degrade (In):Samples5/in-2
 ZynAddSubFX.ZHiSynths:part0/out-L        |> Non-Mixer.Synths (Main):ZDupieux/in-1
 ZynAddSubFX.ZHiSynths:part1/out-L        |> Non-Mixer.Synths (Main):ZNotSoRhodes/in-1
