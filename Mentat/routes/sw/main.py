@@ -143,6 +143,7 @@ class SW(Video, Light, RouteBase):
                     vocalsKeschFX2Delay.set('KeschMeuf', 'Gain', 'Gain', 0.0),
 
                     # Samples
+                    samplesFX7Degrade.set('Samples2', 'Gain', 'Gain', -70.0),
                     prodSampler.send('/instrument/play', 's:Plagiat/SW/BregoLong')
                 ],
                 3: lambda: vocalsKeschFX2Delay.set('KeschMeuf', 'Gain', 'Gain', -70.0),

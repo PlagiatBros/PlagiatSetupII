@@ -21,6 +21,7 @@ from .tap192 import Tap192
 from .mk2minilab import Mk2Control, Mk2Keyboard
 from .jmjkeyboard import JmjKeyboard
 from .joystick import Joystick
+from .notes import Notes
 
 
 """
@@ -175,3 +176,4 @@ Miscellaneous
 microtonality = MicroTonality('MicroTonality')
 transport = Transport('Transport')
 postprocess = PostProcess('PostProcess')
+notes = Notes('Notes')

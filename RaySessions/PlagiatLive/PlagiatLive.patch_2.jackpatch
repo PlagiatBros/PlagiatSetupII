@@ -682,7 +682,8 @@ Non-Mixer.VocalsKesch (ArtificialBackings):KeschABNormo/out-1 |> Non-Mixer.Vocal
 Non-Mixer.VocalsKesch (ArtificialBackings):KeschABNormo/out-1 |> Non-Mixer.VocalsKeschFX7Slice (In):KeschAB/in-1
 Non-Mixer.VocalsKesch (ArtificialBackings):KeschABNormo/out-1 |> Non-Mixer.VocalsKeschFX8TapeDelay (In):KeschAB/in-1
 Non-Mixer.VocalsKesch (ArtificialBackings):KeschABNormo/out-1 |> Non-Mixer.VocalsKeschFX9Scape (In):KeschAB/in-1
-Non-Mixer.VocalsKesch (Gars):KeschGars/aux-A/out-1 |> Non-Mixer.VocalsKesch (ArtificialBackings):KeschABMeuf/in-1
+Non-Mixer.VocalsKesch (Gars):KeschGars/aux-A/out-1 |> Non-Mixer.VocalsKesch (ArtificialBackings):KeschABNormo/in-1
+Non-Mixer.VocalsKesch (Gars):KeschGars/aux-B/out-1 |> Non-Mixer.VocalsKesch (ArtificialBackings):KeschABMeuf/in-1
 Non-Mixer.VocalsKesch (Gars):KeschGars/aux-B/out-1 |> Non-Mixer.VocalsKesch (ArtificialBackings):KeschABNormo/in-1
 Non-Mixer.VocalsKesch (Gars):KeschGars/aux-C/out-1 |> Non-Mixer.VocalsKeschFX1Delay (In):KeschGars/in-1
 Non-Mixer.VocalsKesch (Gars):KeschGars/aux-C/out-1 |> Non-Mixer.VocalsKeschFX2Delay (In):KeschGars/in-1
@@ -697,8 +698,8 @@ Non-Mixer.VocalsKesch (Gars):KeschGars/out-1 |> Non-Mixer.VocalsKesch (Out):Kesc
 Non-Mixer.VocalsKesch (In):KeschIn/out-1 |> Autotune.KeschGars:in
 Non-Mixer.VocalsKesch (In):KeschIn/out-1 |> Autotune.KeschMeuf:in
 Non-Mixer.VocalsKesch (In):KeschIn/out-1 |> Autotune.KeschNormo:in
-Non-Mixer.VocalsKesch (Meuf):KeschMeuf/aux-A/out-1 |> Non-Mixer.VocalsKesch (ArtificialBackings):KeschABNormo/in-1
-Non-Mixer.VocalsKesch (Meuf):KeschMeuf/aux-B/out-1 |> Non-Mixer.VocalsKesch (ArtificialBackings):KeschABGars/in-1
+Non-Mixer.VocalsKesch (Meuf):KeschMeuf/aux-A/out-1 |> Non-Mixer.VocalsKesch (ArtificialBackings):KeschABGars/in-1
+Non-Mixer.VocalsKesch (Meuf):KeschMeuf/aux-B/out-1 |> Non-Mixer.VocalsKesch (ArtificialBackings):KeschABNormo/in-1
 Non-Mixer.VocalsKesch (Meuf):KeschMeuf/aux-C/out-1 |> Non-Mixer.VocalsKeschFX1Delay (In):KeschMeuf/in-1
 Non-Mixer.VocalsKesch (Meuf):KeschMeuf/aux-C/out-1 |> Non-Mixer.VocalsKeschFX2Delay (In):KeschMeuf/in-1
 Non-Mixer.VocalsKesch (Meuf):KeschMeuf/aux-C/out-1 |> Non-Mixer.VocalsKeschFX3TrapVerb (In):KeschMeuf/in-1

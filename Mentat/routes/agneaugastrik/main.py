@@ -215,7 +215,7 @@ class AgneauGastrik(Video, Light, RouteBase):
 
         # Vocals
         vocalsNano.set('gars_exclu', 'on')
-        vocalsKesch.set('normo_exclu', 'on')
+        vocalsKesch.set('gars_exclu', 'on')
 
 
         self.start_sequence('couplet2', [
