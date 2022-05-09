@@ -25,6 +25,11 @@ class SaperComJaja(Video, Light, RouteBase):
         microtonality.enable()
         microtonality.set_tuning(0, 0, 0, 0, 0, 0.35, 0, 0, 0.35, 0, 0.35, 0)
 
+        # Autotuner Notes
+        #                  c     d     e  f     g     a     b
+        autotune.set_notes(1, 0, 1, 1, 0, 1, 1, 1, 0, 1, 1, 0)
+
+
     def couplet_m(self):
         """
         Couplets M
@@ -121,7 +126,7 @@ class SaperComJaja(Video, Light, RouteBase):
         """
         Zynette Dre
         """
-        
+
         self.couplet_m1()
 
         # Sequences

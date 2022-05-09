@@ -26,6 +26,10 @@ class ViktorHuguau(Video, Light, RouteBase):
         # Microtonality
         microtonality.disable()
 
+        # Autotuner Notes
+        #                  c     d     e  f     g     a     b
+        autotune.set_notes(1, 0, 0, 1, 1, 0, 1, 1, 0, 1, 0, 1)
+
 
     @pedalboard_button(1)
     @mk2_button(1, 'blue')

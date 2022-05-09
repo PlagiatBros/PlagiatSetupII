@@ -24,6 +24,11 @@ class Snapshat(Video, Light, RouteBase):
         microtonality.enable()
         microtonality.set_tuning(0, 0, 0, 0.35, 0, 0, 0, 0, 0, 0, 0.35, 0)
 
+        # Autotuner Notes
+        #                  c     d     e  f     g     a     b
+        autotune.set_notes(1, 0, 1, 1, 0, 1, 1, 1, 0, 1, 1, 0)
+
+
     @pedalboard_button(1)
     @mk2_button(1, 'blue')
     def stop(self):
