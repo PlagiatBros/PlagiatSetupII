@@ -5,49 +5,49 @@
 	Chain 0x2 create :strip 0x1 :tab "chain"
 	JACK_Module 0x3 create :parameter_values "0.000000:1.000000" :is_default 1 :chain 0x2 :active 1
 	Gain_Module 0x4 create :parameter_values "0.000000:0.000000" :is_default 1 :chain 0x2 :active 1
-	Meter_Module 0x5 create :is_default 1 :chain 0x2 :active 1
+	Meter_Module 0x5 create :parameter_values "-inf" :is_default 1 :chain 0x2 :active 1
 	JACK_Module 0x6 create :parameter_values "1.000000:0.000000" :is_default 1 :chain 0x2 :active 1
 	Mixer_Strip 0x57 create :name "BassTrap2" :width "narrow" :tab "fader" :color 2006174270 :gain_mode 0 :mute_mode 0 :group 0x7 :auto_input "" :manual_connection 0
 	Chain 0x58 create :strip 0x57 :tab "chain"
 	JACK_Module 0x59 create :parameter_values "0.000000:1.000000" :is_default 1 :chain 0x58 :active 1
 	Gain_Module 0x5A create :parameter_values "0.000000:0.000000" :is_default 1 :chain 0x58 :active 1
-	Meter_Module 0x5B create :is_default 1 :chain 0x58 :active 1
+	Meter_Module 0x5B create :parameter_values "-inf" :is_default 1 :chain 0x58 :active 1
 	JACK_Module 0x5C create :parameter_values "1.000000:0.000000" :is_default 1 :chain 0x58 :active 1
 	Mixer_Strip 0xE create :name "BassBarkline" :width "narrow" :tab "fader" :color 1393241097 :gain_mode 0 :mute_mode 0 :group 0x7 :auto_input "" :manual_connection 0
 	Chain 0xF create :strip 0xE :tab "chain"
 	JACK_Module 0x10 create :parameter_values "0.000000:1.000000" :is_default 1 :chain 0xF :active 1
 	Gain_Module 0x11 create :parameter_values "0.000000:0.000000" :is_default 1 :chain 0xF :active 1
-	Meter_Module 0x12 create :is_default 1 :chain 0xF :active 1
+	Meter_Module 0x12 create :parameter_values "-inf" :is_default 1 :chain 0xF :active 1
 	JACK_Module 0x13 create :parameter_values "1.000000:0.000000" :is_default 1 :chain 0xF :active 1
 	Mixer_Strip 0x5D create :name "BassBoom" :width "narrow" :tab "fader" :color 338095104 :gain_mode 0 :mute_mode 0 :group 0x7 :auto_input "" :manual_connection 0
 	Chain 0x5E create :strip 0x5D :tab "chain"
 	JACK_Module 0x5F create :parameter_values "0.000000:1.000000" :is_default 1 :chain 0x5E :active 1
 	Gain_Module 0x60 create :parameter_values "0.000000:0.000000" :is_default 1 :chain 0x5E :active 1
-	Meter_Module 0x61 create :is_default 1 :chain 0x5E :active 1
+	Meter_Module 0x61 create :parameter_values "-inf" :is_default 1 :chain 0x5E :active 1
 	JACK_Module 0x62 create :parameter_values "1.000000:0.000000" :is_default 1 :chain 0x5E :active 1
 	Mixer_Strip 0x14 create :name "BassZDubstep" :width "narrow" :tab "fader" :color 119867176 :gain_mode 0 :mute_mode 0 :group 0x7 :auto_input "" :manual_connection 0
 	Chain 0x15 create :strip 0x14 :tab "chain"
 	JACK_Module 0x16 create :parameter_values "0.000000:1.000000" :is_default 1 :chain 0x15 :active 1
 	Gain_Module 0x17 create :parameter_values "0.000000:0.000000" :is_default 1 :chain 0x15 :active 1
-	Meter_Module 0x18 create :is_default 1 :chain 0x15 :active 1
+	Meter_Module 0x18 create :parameter_values "-302.497253" :is_default 1 :chain 0x15 :active 1
 	JACK_Module 0x19 create :parameter_values "1.000000:0.000000" :is_default 1 :chain 0x15 :active 1
 	Mixer_Strip 0x39 create :name "BassZDancestep" :width "narrow" :tab "fader" :color 1248636571 :gain_mode 0 :mute_mode 0 :group 0x7 :auto_input "" :manual_connection 0
 	Chain 0x3A create :strip 0x39 :tab "chain"
 	JACK_Module 0x3B create :parameter_values "0.000000:1.000000" :is_default 1 :chain 0x3A :active 1
 	Gain_Module 0x3C create :parameter_values "0.000000:0.000000" :is_default 1 :chain 0x3A :active 1
-	Meter_Module 0x3D create :is_default 1 :chain 0x3A :active 1
+	Meter_Module 0x3D create :parameter_values "-inf" :is_default 1 :chain 0x3A :active 1
 	JACK_Module 0x3E create :parameter_values "1.000000:0.000000" :is_default 1 :chain 0x3A :active 1
 	Mixer_Strip 0x3F create :name "BassZRagstep" :width "narrow" :tab "fader" :color 2103578018 :gain_mode 0 :mute_mode 0 :group 0x7 :auto_input "" :manual_connection 0
 	Chain 0x40 create :strip 0x3F :tab "chain"
 	JACK_Module 0x41 create :parameter_values "0.000000:1.000000" :is_default 1 :chain 0x40 :active 1
 	Gain_Module 0x42 create :parameter_values "0.000000:0.000000" :is_default 1 :chain 0x40 :active 1
-	Meter_Module 0x43 create :is_default 1 :chain 0x40 :active 1
+	Meter_Module 0x43 create :parameter_values "-inf" :is_default 1 :chain 0x40 :active 1
 	JACK_Module 0x44 create :parameter_values "1.000000:0.000000" :is_default 1 :chain 0x40 :active 1
 	Mixer_Strip 0x45 create :name "BassZDupieux" :width "narrow" :tab "fader" :color 2012867199 :gain_mode 0 :mute_mode 0 :group 0x7 :auto_input "" :manual_connection 0
 	Chain 0x46 create :strip 0x45 :tab "chain"
 	JACK_Module 0x47 create :parameter_values "0.000000:1.000000" :is_default 1 :chain 0x46 :active 1
 	Gain_Module 0x48 create :parameter_values "0.000000:0.000000" :is_default 1 :chain 0x46 :active 1
-	Meter_Module 0x49 create :is_default 1 :chain 0x46 :active 1
+	Meter_Module 0x49 create :parameter_values "-inf" :is_default 1 :chain 0x46 :active 1
 	JACK_Module 0x4A create :parameter_values "1.000000:0.000000" :is_default 1 :chain 0x46 :active 1
 	Mixer_Strip 0x4B create :name "BassZPhrampton" :width "narrow" :tab "fader" :color 81229859 :gain_mode 0 :mute_mode 0 :group 0x7 :auto_input "" :manual_connection 0
 	Chain 0x4C create :strip 0x4B :tab "chain"
@@ -55,39 +55,39 @@
 	Plugin_Module 0xA9 create :lv2_plugin_uri "urn:ardour:a-eq" :plugin_ins 1 :plugin_outs 1 :parameter_values "160.000000:4.500000:300.000000:0.000000:1.000000:550.000000:-8.000000:1.450000:2500.000000:0.000000:1.000000:6000.000000:0.000000:1.000000:1500.000000:10.500000:0.000000:1.000000:1.000000:1.000000:1.000000:1.000000:1.000000:1.000000" :is_default 0 :chain 0x4C :active 1
 	Plugin_Module 0xAA create :lv2_plugin_uri "http://invadarecords.com/plugins/lv2/compressor/mono" :plugin_ins 1 :plugin_outs 1 :parameter_values "0.000000:0.500000:0.015000:0.050000:-20.000000:5.400000:3.000000:1.000000" :is_default 0 :chain 0x4C :active 1
 	Gain_Module 0x4E create :parameter_values "0.000000:0.000000" :is_default 1 :chain 0x4C :active 1
-	Meter_Module 0x4F create :is_default 1 :chain 0x4C :active 1
+	Meter_Module 0x4F create :parameter_values "-301.406311" :is_default 1 :chain 0x4C :active 1
 	JACK_Module 0x50 create :parameter_values "1.000000:0.000000" :is_default 1 :chain 0x4C :active 1
 	Mixer_Strip 0x97 create :name "BassZSine" :width "narrow" :tab "fader" :color 410736840 :gain_mode 0 :mute_mode 0 :group 0x7 :auto_input "" :manual_connection 0
 	Chain 0x98 create :strip 0x97 :tab "chain"
 	JACK_Module 0x99 create :parameter_values "0.000000:1.000000" :is_default 1 :chain 0x98 :active 1
 	Gain_Module 0x9A create :parameter_values "0.000000:0.000000" :is_default 1 :chain 0x98 :active 1
-	Meter_Module 0x9B create :is_default 1 :chain 0x98 :active 1
+	Meter_Module 0x9B create :parameter_values "-inf" :is_default 1 :chain 0x98 :active 1
 	JACK_Module 0x9C create :parameter_values "1.000000:0.000000" :is_default 1 :chain 0x98 :active 1
 	Mixer_Strip 0x9D create :name "BassZ8bits" :width "narrow" :tab "fader" :color 928149158 :gain_mode 0 :mute_mode 0 :group 0x7 :auto_input "" :manual_connection 0
 	Chain 0x9E create :strip 0x9D :tab "chain"
 	JACK_Module 0x9F create :parameter_values "0.000000:1.000000" :is_default 1 :chain 0x9E :active 1
 	Plugin_Module 0xAB create :lv2_plugin_uri "http://invadarecords.com/plugins/lv2/compressor/mono" :plugin_ins 1 :plugin_outs 1 :parameter_values "0.000000:0.500000:0.015000:0.050000:-5.000000:3.200000:8.500000:1.000000" :is_default 0 :chain 0x9E :active 1
 	Gain_Module 0xA0 create :parameter_values "0.000000:0.000000" :is_default 1 :chain 0x9E :active 1
-	Meter_Module 0xA1 create :is_default 1 :chain 0x9E :active 1
+	Meter_Module 0xA1 create :parameter_values "-inf" :is_default 1 :chain 0x9E :active 1
 	JACK_Module 0xA2 create :parameter_values "1.000000:0.000000" :is_default 1 :chain 0x9E :active 1
 	Mixer_Strip 0xA3 create :name "BassZBoombaard" :width "narrow" :tab "fader" :color 1336245937 :gain_mode 0 :mute_mode 0 :group 0x7 :auto_input "" :manual_connection 0
 	Chain 0xA4 create :strip 0xA3 :tab "chain"
 	JACK_Module 0xA5 create :parameter_values "0.000000:1.000000" :is_default 1 :chain 0xA4 :active 1
 	Plugin_Module 0xAC create :lv2_plugin_uri "http://invadarecords.com/plugins/lv2/compressor/mono" :plugin_ins 1 :plugin_outs 1 :parameter_values "0.000000:0.000000:0.015000:0.050000:-13.500000:6.600000:0.000000:1.000000" :is_default 0 :chain 0xA4 :active 1
 	Gain_Module 0xA6 create :parameter_values "0.000000:0.000000" :is_default 1 :chain 0xA4 :active 1
-	Meter_Module 0xA7 create :is_default 1 :chain 0xA4 :active 1
+	Meter_Module 0xA7 create :parameter_values "-285.809082" :is_default 1 :chain 0xA4 :active 1
 	JACK_Module 0xA8 create :parameter_values "1.000000:0.000000" :is_default 1 :chain 0xA4 :active 1
 	Mixer_Strip 0x1A create :name "BassSynthsOut" :width "narrow" :tab "signal" :color 996678207 :gain_mode 0 :mute_mode 0 :group 0x20 :auto_input "" :manual_connection 0
 	Chain 0x1B create :strip 0x1A :tab "chain"
 	JACK_Module 0x1C create :parameter_values "0.000000:1.000000" :is_default 1 :chain 0x1B :active 1
 	Plugin_Module 0x8D create :lv2_plugin_uri "http://invadarecords.com/plugins/lv2/compressor/mono" :plugin_ins 1 :plugin_outs 1 :parameter_values "0.000000:0.500000:0.015000:0.050000:0.000000:1.000000:0.000000:1.000000" :is_default 0 :chain 0x1B :active 1
 	Gain_Module 0x1D create :parameter_values "0.000000:0.000000" :is_default 1 :chain 0x1B :active 1
-	Meter_Module 0x1E create :is_default 1 :chain 0x1B :active 1
+	Meter_Module 0x1E create :parameter_values "-284.489380" :is_default 1 :chain 0x1B :active 1
 	JACK_Module 0x1F create :parameter_values "1.000000:0.000000" :is_default 1 :chain 0x1B :active 1
 	Mixer_Strip 0x91 create :name "BassTest" :width "narrow" :tab "fader" :color 2079126010 :gain_mode 0 :mute_mode 0 :group 0x7 :auto_input "" :manual_connection 0
 	Chain 0x92 create :strip 0x91 :tab "chain"
 	JACK_Module 0x93 create :parameter_values "0.000000:1.000000" :is_default 1 :chain 0x92 :active 1
 	Gain_Module 0x94 create :parameter_values "0.000000:0.000000" :is_default 1 :chain 0x92 :active 1
-	Meter_Module 0x95 create :is_default 1 :chain 0x92 :active 1
+	Meter_Module 0x95 create :parameter_values "-inf" :is_default 1 :chain 0x92 :active 1
 	JACK_Module 0x96 create :parameter_values "1.000000:0.000000" :is_default 1 :chain 0x92 :active 1
 }
