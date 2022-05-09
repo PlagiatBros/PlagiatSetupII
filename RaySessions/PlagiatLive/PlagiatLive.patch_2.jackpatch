@@ -797,7 +797,8 @@ Non-Mixer.VocalsNano (ArtificialBackings):NanoABNormo/out-1 |> Non-Mixer.VocalsN
 Non-Mixer.VocalsNano (ArtificialBackings):NanoABNormo/out-1 |> Non-Mixer.VocalsNanoFX7Slice (In):NanoAB/in-1
 Non-Mixer.VocalsNano (ArtificialBackings):NanoABNormo/out-1 |> Non-Mixer.VocalsNanoFX9Scape (In):NanoAB/in-1
 Non-Mixer.VocalsNano (Gars):NanoGars/aux-A/out-1 |> Non-Mixer.VocalsNano (ArtificialBackings):NanoABMeuf/in-1
-Non-Mixer.VocalsNano (Gars):NanoGars/aux-B/out-1 |> Non-Mixer.VocalsNano (ArtificialBackings):NanoABNormo/in-1
+Non-Mixer.VocalsNano (Gars):NanoGars/aux-A/out-1 |> Non-Mixer.VocalsNano (ArtificialBackings):NanoABNormo/in-1
+Non-Mixer.VocalsNano (Gars):NanoGars/aux-B/out-1 |> Non-Mixer.VocalsNano (ArtificialBackings):NanoABMeuf/in-1
 Non-Mixer.VocalsNano (Gars):NanoGars/aux-C/out-1 |> Non-Mixer.VocalsNanoFX1Delay (In):NanoGars/in-1
 Non-Mixer.VocalsNano (Gars):NanoGars/aux-C/out-1 |> Non-Mixer.VocalsNanoFX2Delay (In):NanoGars/in-1
 Non-Mixer.VocalsNano (Gars):NanoGars/aux-C/out-1 |> Non-Mixer.VocalsNanoFX3TrapVerb (In):NanoGars/in-1
@@ -811,8 +812,8 @@ Non-Mixer.VocalsNano (Gars):NanoGars/out-1 |> Non-Mixer.VocalsNano (Out):NanoOut
 Non-Mixer.VocalsNano (In):NanoIn/out-1   |> Autotune.NanoGars:in
 Non-Mixer.VocalsNano (In):NanoIn/out-1   |> Autotune.NanoMeuf:in
 Non-Mixer.VocalsNano (In):NanoIn/out-1   |> Autotune.NanoNormo:in
-Non-Mixer.VocalsNano (Meuf):NanoMeuf/aux-A/out-1 |> Non-Mixer.VocalsNano (ArtificialBackings):NanoABNormo/in-1
-Non-Mixer.VocalsNano (Meuf):NanoMeuf/aux-B/out-1 |> Non-Mixer.VocalsNano (ArtificialBackings):NanoABGars/in-1
+Non-Mixer.VocalsNano (Meuf):NanoMeuf/aux-A/out-1 |> Non-Mixer.VocalsNano (ArtificialBackings):NanoABGars/in-1
+Non-Mixer.VocalsNano (Meuf):NanoMeuf/aux-B/out-1 |> Non-Mixer.VocalsNano (ArtificialBackings):NanoABNormo/in-1
 Non-Mixer.VocalsNano (Meuf):NanoMeuf/aux-C/out-1 |> Non-Mixer.VocalsNanoFX1Delay (In):NanoMeuf/in-1
 Non-Mixer.VocalsNano (Meuf):NanoMeuf/aux-C/out-1 |> Non-Mixer.VocalsNanoFX2Delay (In):NanoMeuf/in-1
 Non-Mixer.VocalsNano (Meuf):NanoMeuf/aux-C/out-1 |> Non-Mixer.VocalsNanoFX3TrapVerb (In):NanoMeuf/in-1
