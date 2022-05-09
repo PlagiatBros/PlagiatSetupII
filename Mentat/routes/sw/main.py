@@ -28,8 +28,10 @@ class SW(Video, Light, RouteBase):
         microtonality.set_tuning(0.35, 0, 0, 0, 0, 0.35, 0, 0, 0.35, 0, 0, 0)
 
         # Autotuner Notes
-        #                  c     d     e  f     g     a     b
-        autotune.set_notes(1, 0, 1, 1, 1, 1, 0, 0, 1, 1, 0, 1)
+        autotunes = ['NanoMeuf', 'NanoNormo', 'NanoGars', 'KeschMeuf', 'KeschNormo', 'KeschGars']
+        for at in autotunes:
+            #                     c     d     e  f     g     a     b
+            modules[at].set_notes(1, 0, 1, 1, 1, 1, 0, 0, 1, 1, 0, 1)
 
 
     @pedalboard_button(1)

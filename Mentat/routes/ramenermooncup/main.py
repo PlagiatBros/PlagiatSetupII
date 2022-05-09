@@ -25,10 +25,8 @@ class RamenerMooncup(Video, Light, RouteBase):
         microtonality.set_tuning(0, 0, 0, 0, 0, 0.35, 0, 0, -0.35, 0, 0.35, 0)
 
         # Autotuner Notes
-        autotunes = ['NanoMeuf', 'NanoNormo', 'NanoGars', 'KeschMeuf', 'KeschNormo', 'KeschGars']
-        for at in autotunes:
-            #            c     d     e  f     g     a     b
-            at.set_notes(1, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 0)
+        #               c     d     e  f     g     a     b
+        notes.set_notes(1, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 0)
 
 
     @pedalboard_button(1)
