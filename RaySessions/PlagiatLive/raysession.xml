@@ -77,7 +77,7 @@
   <client desktop_file="//not_found" jack_naming="1" wait_win="0" label="cHiBridge (a2j)" id="cHiBridge" executable="a2jmidi_bridge" launched="1" arguments="cHiBridge" config_file="" protocol="Ray-Hack" no_save_level="0" name="a2jmidi_bridge" stop_signal="15" prefix_mode="1" save_signal="0"/>
   <client desktop_file="//not_found" jack_naming="1" wait_win="0" label="cFluidBridge (a2j)" id="cFluidBridge" executable="a2jmidi_bridge" launched="1" arguments="cFluidBridge" config_file="" protocol="Ray-Hack" no_save_level="0" name="a2jmidi_bridge" stop_signal="15" prefix_mode="1" save_signal="0"/>
   <client desktop_file="//not_found" jack_naming="1" wait_win="0" label="PedalBoard [3001]" id="PedalBoard" executable="/home/plagiat/PlagiatSetup/bin/poly_pedalboard_rawhid" launched="1" arguments="-p 2001 -l 3001" config_file="" protocol="Ray-Hack" no_save_level="0" name="polypedalboard_rawhid" stop_signal="15" prefix_mode="1" save_signal="0"/>
-  <client jack_naming="1" wait_win="0" id="BassTuner" executable="gxtuner" launched="1" config_file="" protocol="Ray-Hack" no_save_level="0" name="gxtuner" stop_signal="15" prefix_mode="1" save_signal="0"/>
+  <client desktop_file="//not_found" jack_naming="1" wait_win="0" label="GxTuner [30000]" id="GxTuner" executable="bash" launched="1" arguments="/home/plagiat/PlagiatSetup/scripts/startGxTuner.sh" config_file="" protocol="Ray-Hack" no_save_level="0" name="bash" stop_signal="15" prefix_mode="1" save_signal="0"/>
  </Clients>
  <RemovedClients>
   <client template_origin="JACK Connections" id="patch" executable="ray-jackpatch" name="JACK Connections"/>
