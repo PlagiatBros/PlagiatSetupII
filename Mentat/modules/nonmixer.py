@@ -28,15 +28,23 @@ class NonMixer(Module):
 
         Module.__init__(self, *args, **kwargs)
 
-        self.signals = {}
         self.init_params = []
 
-        # get submodules
-        self.send('/non/hello', 'osc.udp://127.0.0.1:%i' % self.engine.port, '', '', self.engine.name)
-        self.send('/signal/list')
+        self.init_done = False
+        self.add_event_callback('client_started', self.client_started)
 
-        if self.name == 'Outputs':
-            self.enable_meters(True)
+
+
+    def client_started(self, name):
+
+        if name == self.name:
+            self.send('/non/hello', 'osc.udp://127.0.0.1:%i' % self.engine.port, '', '', self.engine.name)
+
+            if not self.init_done:
+                self.send('/signal/list')
+
+            if self.name == 'Outputs':
+                self.enable_meters(True)
 
     def update_meters(self, foh=False):
         if foh:
@@ -114,6 +122,7 @@ class NonMixer(Module):
                 """
                 All received, query current values and create meta parameters
                 """
+                self.init_done = True
                 for parameter_address in self.init_params:
                     self.send(parameter_address)
 

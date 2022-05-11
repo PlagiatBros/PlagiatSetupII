@@ -43,7 +43,7 @@ class RaySession(Module):
 
             self.register_client(name)
 
-            if event == 'ready' or event == 'started':
+            if event == 'ready':
                 if self.get('status_%s' % name) == 0:
                     self.client_started(name)
 
