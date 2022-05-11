@@ -4,6 +4,9 @@ from .alsapatch import AlsaPatcher
 
 import os
 import json
+from sys import argv
+
+DEV = '--dev' in argv:
 
 class RaySession(Module):
     """
@@ -85,7 +88,9 @@ class RaySession(Module):
             else:
                 # restart: send state
                 self.logger.info('client %s restarted, sending state' % name)
-                module.send_state()
+                if not DEV:
+                    module.send_state()
+
             self.engine.dispatch_event('client_started', name)
 
         self.alsa_patcher.connect()
