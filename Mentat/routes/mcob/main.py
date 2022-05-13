@@ -499,3 +499,6 @@ class Mcob(Video, Light, RouteBase):
         # Vocals
         vocalsKesch.set('meuf_exclu', 'on') # TODO delay
         vocalsNano.set('meuf_exclu', 'on')
+
+        # Keyboards
+        jmjKeyboard.set_sound('ZBombarde')

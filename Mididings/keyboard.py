@@ -79,7 +79,7 @@ def create_keyboard(name):
 
     # Samples
     prodSampler = generic_in >> Output('ProdSampler')
-    constantSampler = generic_in >> Output('ConstantSampler')
+    constantSampler = generic_in >> Output('ConstantSampler', 10)
 
     run(
         scenes = {

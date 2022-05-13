@@ -57,7 +57,7 @@ class Stagiaire(Video, Light, RouteBase):
         transport.start()
 
         # Samples
-        samplesFX2Delay.set('Samples2', 'Gain', 'Gain', -2.0) #### TODO FX Delay 2 = Munge ?
+        samplesFX2Delay.set('Samples2', 'Gain', 'Gain', -12.0) #### TODO FX Delay 2 = Munge ?
         samplesFX2Delay.set('SamplesFX2Delay', 'Gain', 'Mute', 0.0)
 
         samples.set('Samples1', 'Gain', 'Mute', 0.0)
@@ -93,7 +93,7 @@ class Stagiaire(Video, Light, RouteBase):
         transport.start()
 
         # Samples
-        samplesFX2Delay.set('Samples2', 'Gain', 'Gain', -2.0) #### TODO FX Delay 2 = Munge ?
+        samplesFX2Delay.set('Samples2', 'Gain', 'Gain', -12.0) #### TODO FX Delay 2 = Munge ?
         samplesFX2Delay.set('SamplesFX2Delay', 'Gain', 'Mute', 0.0)
 
         samples.set('Samples1', 'Gain', 'Mute', 0.0)
@@ -122,7 +122,7 @@ class Stagiaire(Video, Light, RouteBase):
         #### TODO Trapcut tempo 234
 
         # Samples
-        samplesFX2Delay.set('Samples2', 'Gain', 'Gain', -2.0) #### TODO FX Delay 2 = Munge ?
+        samplesFX2Delay.set('Samples2', 'Gain', 'Gain', -12.0) #### TODO FX Delay 2 = Munge ?
         samplesFX2Delay.set('SamplesFX2Delay', 'Gain', 'Mute', 0.0)
 
         samples.set('Samples2', 'Gain', 'Mute', 0.0) # flûte
@@ -216,7 +216,7 @@ class Stagiaire(Video, Light, RouteBase):
         samples.set('Samples2', 'Gain', 'Mute', 0.0) # flûte
         samples.set('Samples5', 'Gain', 'Mute', 0.0) # percu
 
-        samplesFX2Delay.set('Samples2', 'Gain', 'Gain', -2.0) #### TODO FX Delay 2 = Munge ?
+        samplesFX2Delay.set('Samples2', 'Gain', 'Gain', -12.0) #### TODO FX Delay 2 = Munge ?
         samplesFX2Delay.set('SamplesFX2Delay', 'Gain', 'Mute', 0.0)
 
         # Vocals
