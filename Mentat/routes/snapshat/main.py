@@ -87,6 +87,18 @@ class Snapshat(Video, Light, RouteBase):
         vocalsNano.set('meuf_exclu', 'on')
         vocalsKesch.set('meuf_exclu', 'on')
 
+    @mk2_button(2, 'purple')
+    def contrechant(self):
+        """
+        CONTRECHANT (couplet)
+        """
+        # Sequences
+        seq192.select('on', 'contrechant_*')
+
+        # Vocals
+        vocalsNanoFX3TrapVerb.set('NanoMeuf', 'Gain', 'Gain', -70.0) # en cas de sortie de Trap
+        vocalsNanoFX3TrapVerb.set('VocalsNanoFX3TrapVerb', 'Gain', 'Mute', 1.0)
+
 
     @pedalboard_button(4)
     def refrain(self):
@@ -122,18 +134,6 @@ class Snapshat(Video, Light, RouteBase):
             1: lambda: vocalsKesch.set('gars_exclu', 'on'),
             6: lambda: vocalsKesch.set('meuf_exclu', 'on'),
         })
-
-    @mk2_button(2, 'purple')
-    def contrechant(self):
-        """
-        CONTRECHANT (couplet)
-        """
-        # Sequences
-        seq192.select('on', 'contrechant_*')
-
-        # Vocals
-        vocalsNanoFX3TrapVerb.set('NanoMeuf', 'Gain', 'Gain', -70.0) # en cas de sortie de Trap
-        vocalsNanoFX3TrapVerb.set('VocalsNanoFX3TrapVerb', 'Gain', 'Mute', 1.0)
 
 
     @mk2_button(3, 'purple')
