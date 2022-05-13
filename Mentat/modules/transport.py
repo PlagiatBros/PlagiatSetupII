@@ -115,7 +115,7 @@ class Transport(Module):
                 ('BassFX', 'BassWobble')
             ]:
             if strip in self.engine.modules[mixer].submodules:
-                self.engine.modules[mixer].set(strip, 'MDA%20RezFilter', 'LFO%20rate', bpm/60.)
+                self.engine.modules[mixer].set(strip, 'MDA%20RezFilter', 'LFO%20Rate', bpm/60.)
             else:
                 # just in case non mixer infos are not loaded yet
                 self.start_scene(strip + '_bpm', lambda: [
