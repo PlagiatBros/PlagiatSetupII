@@ -16,6 +16,7 @@ JmjKeyboard : CHiSf         |> cFluidBridge : playback
 JmjKeyboard : CHi           |> MonoSynthMicroTonal : In
 
 JmjKeyboard : ConstantSampler |> Tap192.ConstantSampler : midi_in
+JmjKeyboard : ConstantSampler |> SPD-SX : SPD-SX Control
 JmjKeyboard : ProdSampler   |> Tap192.ProdSampler : midi_in
 
 Mentat : Mk2Control |>  Arturia MiniLab mkII : Arturia MiniLab mkII MIDI 1
@@ -34,6 +35,7 @@ Mk2Keyboard : CHiSf         |> cFluidBridge : playback
 Mk2Keyboard : CHi           |> MonoSynthMicroTonal : In
 
 Mk2Keyboard : ConstantSampler |> Tap192.ConstantSampler : midi_in
+Mk2Keyboard : ConstantSampler |> SPD-SX : SPD-SX Control
 Mk2Keyboard : ProdSampler   |> Tap192.ProdSampler : midi_in
 
 loop192.MidiLooper : Loop 0 |> ZynAddSubFX.ZLowSynths : ZynAddSubFX
