@@ -6,7 +6,7 @@ import os
 import json
 from sys import argv
 
-DEV = '--dev' in argv:
+DEV = '--dev' in argv
 
 class RaySession(Module):
     """
