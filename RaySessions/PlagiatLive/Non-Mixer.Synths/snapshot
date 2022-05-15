@@ -1,20 +1,20 @@
 {
 	Group 0x7 create :name "Main"
 	Group 0x4A create :name "Out"
-	Mixer_Strip 0x1 create :name "ZDupieux" :width "narrow" :tab "signal" :color 590665122 :gain_mode 0 :mute_mode 0 :group 0x7 :auto_input "" :manual_connection 0
+	Mixer_Strip 0x1 create :name "ZDupieux" :width "narrow" :tab "fader" :color 590665122 :gain_mode 0 :mute_mode 0 :group 0x7 :auto_input "" :manual_connection 0
 	Chain 0x2 create :strip 0x1 :tab "chain"
 	JACK_Module 0x3 create :parameter_values "0.000000:1.000000" :is_default 1 :chain 0x2 :active 1
 	Gain_Module 0x4 create :parameter_values "0.000000:0.000000" :is_default 1 :chain 0x2 :active 1
 	Plugin_Module 0x2CC create :lv2_plugin_uri "http://guitarix.sourceforge.net/plugins/gx_mbreverb_#_mbreverb_" :plugin_ins 1 :plugin_outs 1 :parameter_values "0.500000:0.500000:0.588652:0.652482:0.765957:80.000000:210.000000:1700.000000:5000.000000:0.500000:0.609929:0.560284:0.475177:0.432624:35.000000:43.000000:52.000000:57.000000:63.000000" :is_default 0 :chain 0x2 :active 1
-	Meter_Module 0x5 create :parameter_values "-41.803764" :is_default 1 :chain 0x2 :active 1
+	Meter_Module 0x5 create :parameter_values "-inf" :is_default 1 :chain 0x2 :active 1
 	Mono_Pan_Module 0x33E create :parameter_values "0.000000" :is_default 0 :chain 0x2 :active 1
 	JACK_Module 0x6 create :parameter_values "2.000000:0.000000" :is_default 1 :chain 0x2 :active 1
-	Mixer_Strip 0xE create :name "ZNotSoRhodes" :width "narrow" :tab "signal" :color 1393241097 :gain_mode 0 :mute_mode 0 :group 0x7 :auto_input "" :manual_connection 0
+	Mixer_Strip 0xE create :name "ZNotSoRhodes" :width "narrow" :tab "fader" :color 1393241097 :gain_mode 0 :mute_mode 0 :group 0x7 :auto_input "" :manual_connection 0
 	Chain 0xF create :strip 0xE :tab "chain"
 	JACK_Module 0x10 create :parameter_values "0.000000:1.000000" :is_default 1 :chain 0xF :active 1
 	Gain_Module 0x11 create :parameter_values "0.000000:0.000000" :is_default 1 :chain 0xF :active 1
 	Plugin_Module 0x3CA create :lv2_plugin_uri "http://guitarix.sourceforge.net/plugins/gx_mbreverb_#_mbreverb_" :plugin_ins 1 :plugin_outs 1 :parameter_values "0.500000:0.500000:0.588652:0.652482:0.765957:80.000000:210.000000:1700.000000:5000.000000:0.500000:0.609929:0.560284:0.475177:0.432624:35.000000:43.000000:52.000000:57.000000:63.000000" :is_default 0 :chain 0xF :active 1
-	Meter_Module 0x12 create :parameter_values "-40.531845" :is_default 1 :chain 0xF :active 1
+	Meter_Module 0x12 create :parameter_values "-inf" :is_default 1 :chain 0xF :active 1
 	Mono_Pan_Module 0x33F create :parameter_values "0.000000" :is_default 0 :chain 0xF :active 1
 	JACK_Module 0x13 create :parameter_values "2.000000:0.000000" :is_default 1 :chain 0xF :active 1
 	Mixer_Strip 0x14 create :name "Rhodes" :width "narrow" :tab "fader" :color 119867176 :gain_mode 0 :mute_mode 0 :group 0x7 :auto_input "" :manual_connection 0
@@ -42,14 +42,14 @@
 	Chain 0x27 create :strip 0x26 :tab "chain"
 	JACK_Module 0x28 create :parameter_values "0.000000:1.000000" :is_default 1 :chain 0x27 :active 1
 	Gain_Module 0x29 create :parameter_values "0.000000:0.000000" :is_default 1 :chain 0x27 :active 1
-	Meter_Module 0x2A create :parameter_values "-284.130249" :is_default 1 :chain 0x27 :active 1
+	Meter_Module 0x2A create :parameter_values "-284.984650" :is_default 1 :chain 0x27 :active 1
 	Mono_Pan_Module 0x343 create :parameter_values "0.000000" :is_default 0 :chain 0x27 :active 1
 	JACK_Module 0x2B create :parameter_values "2.000000:0.000000" :is_default 1 :chain 0x27 :active 1
 	Mixer_Strip 0x20 create :name "ZTrumpets" :width "narrow" :tab "fader" :color 996678207 :gain_mode 0 :mute_mode 0 :group 0x7 :auto_input "" :manual_connection 0
 	Chain 0x21 create :strip 0x20 :tab "chain"
 	JACK_Module 0x22 create :parameter_values "0.000000:1.000000" :is_default 1 :chain 0x21 :active 1
 	Gain_Module 0x23 create :parameter_values "0.000000:0.000000" :is_default 1 :chain 0x21 :active 1
-	Meter_Module 0x24 create :parameter_values "-320.694092" :is_default 1 :chain 0x21 :active 1
+	Meter_Module 0x24 create :parameter_values "-320.369019" :is_default 1 :chain 0x21 :active 1
 	Mono_Pan_Module 0x344 create :parameter_values "0.000000" :is_default 0 :chain 0x21 :active 1
 	JACK_Module 0x25 create :parameter_values "2.000000:0.000000" :is_default 1 :chain 0x21 :active 1
 	Mixer_Strip 0x2C create :name "DubstepHorn" :width "narrow" :tab "fader" :color 1491534720 :gain_mode 0 :mute_mode 0 :group 0x7 :auto_input "" :manual_connection 0
@@ -65,7 +65,7 @@
 	Chain 0x33 create :strip 0x32 :tab "chain"
 	JACK_Module 0x34 create :parameter_values "0.000000:1.000000" :is_default 1 :chain 0x33 :active 1
 	Gain_Module 0x35 create :parameter_values "0.000000:0.000000" :is_default 1 :chain 0x33 :active 1
-	Meter_Module 0x36 create :parameter_values "-318.979767" :is_default 1 :chain 0x33 :active 1
+	Meter_Module 0x36 create :parameter_values "-317.914978" :is_default 1 :chain 0x33 :active 1
 	Mono_Pan_Module 0x346 create :parameter_values "0.000000" :is_default 0 :chain 0x33 :active 1
 	JACK_Module 0x37 create :parameter_values "2.000000:0.000000" :is_default 1 :chain 0x33 :active 1
 	Mixer_Strip 0x38 create :name "Trap" :width "narrow" :tab "fader" :color 1068287111 :gain_mode 0 :mute_mode 0 :group 0x7 :auto_input "" :manual_connection 0
@@ -81,7 +81,7 @@
 	Chain 0x3F create :strip 0x3E :tab "chain"
 	JACK_Module 0x40 create :parameter_values "0.000000:1.000000" :is_default 1 :chain 0x3F :active 1
 	Gain_Module 0x41 create :parameter_values "0.000000:0.000000" :is_default 1 :chain 0x3F :active 1
-	Meter_Module 0x42 create :parameter_values "-318.692566" :is_default 1 :chain 0x3F :active 1
+	Meter_Module 0x42 create :parameter_values "-318.937317" :is_default 1 :chain 0x3F :active 1
 	Mono_Pan_Module 0x348 create :parameter_values "0.000000" :is_default 0 :chain 0x3F :active 1
 	JACK_Module 0x43 create :parameter_values "2.000000:0.000000" :is_default 1 :chain 0x3F :active 1
 	Mixer_Strip 0x9F create :name "ZDiploLike" :width "narrow" :tab "fader" :color 162971469 :gain_mode 0 :mute_mode 0 :group 0x7 :auto_input "" :manual_connection 0
@@ -90,7 +90,7 @@
 	Plugin_Module 0x2B8 create :plugin_id 2608 :plugin_ins 1 :plugin_outs 1 :parameter_values "0.000000:85.000000:0.588652:-21.000000:1.000000:700.000000:0.723404:-13.000000:1.000000:1400.000000:0.858156:12.000000:2.000000:2721.782715:0.250000:-21.000000" :is_default 0 :chain 0xA0 :active 1
 	Plugin_Module 0x2BA create :lv2_plugin_uri "http://invadarecords.com/plugins/lv2/compressor/mono" :plugin_ins 1 :plugin_outs 1 :parameter_values "0.000000:0.500000:0.011030:0.050000:-21.000000:16.400000:5.000000:1.000000" :is_default 0 :chain 0xA0 :active 1
 	Gain_Module 0xA2 create :parameter_values "0.000000:0.000000" :is_default 1 :chain 0xA0 :active 1
-	Meter_Module 0xA3 create :parameter_values "-389.129456" :is_default 1 :chain 0xA0 :active 1
+	Meter_Module 0xA3 create :parameter_values "-389.129608" :is_default 1 :chain 0xA0 :active 1
 	Mono_Pan_Module 0x349 create :parameter_values "0.000000" :is_default 0 :chain 0xA0 :active 1
 	JACK_Module 0xA4 create :parameter_values "2.000000:0.000000" :is_default 1 :chain 0xA0 :active 1
 	Mixer_Strip 0x2BB create :name "ZDiploLikeWide" :width "narrow" :tab "fader" :color 1075698360 :gain_mode 0 :mute_mode 0 :group 0x7 :auto_input "" :manual_connection 0
@@ -105,7 +105,7 @@
 	Chain 0x8E create :strip 0x8D :tab "chain"
 	JACK_Module 0x8F create :parameter_values "0.000000:1.000000" :is_default 1 :chain 0x8E :active 1
 	Gain_Module 0x90 create :parameter_values "0.000000:0.000000" :is_default 1 :chain 0x8E :active 1
-	Meter_Module 0x91 create :parameter_values "-324.240662" :is_default 1 :chain 0x8E :active 1
+	Meter_Module 0x91 create :parameter_values "-315.125458" :is_default 1 :chain 0x8E :active 1
 	Mono_Pan_Module 0x34B create :parameter_values "0.000000" :is_default 0 :chain 0x8E :active 1
 	JACK_Module 0x92 create :parameter_values "2.000000:0.000000" :is_default 1 :chain 0x8E :active 1
 	Mixer_Strip 0x93 create :name "Z8bits" :width "narrow" :tab "fader" :color 165783135 :gain_mode 0 :mute_mode 0 :group 0x7 :auto_input "" :manual_connection 0
@@ -134,6 +134,6 @@
 	JACK_Module 0x46 create :parameter_values "0.000000:2.000000" :is_default 1 :chain 0x45 :active 1
 	Plugin_Module 0x3C6 create :plugin_id 1882 :plugin_ins 2 :plugin_outs 2 :parameter_values "0.500000:10.000000:90.000000:-6.000000:5.000000:3.250000:6.000000" :is_default 0 :chain 0x45 :active 1
 	Gain_Module 0x47 create :parameter_values "0.000000:0.000000" :is_default 1 :chain 0x45 :active 1
-	Meter_Module 0x48 create :parameter_values "-41.277370" :is_default 1 :chain 0x45 :active 1
+	Meter_Module 0x48 create :parameter_values "-284.818085" :is_default 1 :chain 0x45 :active 1
 	JACK_Module 0x49 create :parameter_values "2.000000:0.000000" :is_default 1 :chain 0x45 :active 1
 }
