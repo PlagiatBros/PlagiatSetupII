@@ -71,7 +71,9 @@ class RamenerMooncup(Video, Light, RouteBase):
         # Samples
         samples.set('Samples1', 'Gain', 'Mute', 0.0)
         samples.set('Samples[1-5]', 'Gain', 'Gain', -9.0)
-        samplesFX2Delay.set('Samples[1-5]', 'Gain', 'Gain', -9.0)
+        samplesFX3Reverb.set('Samples[1-5]', 'Gain', 'Gain', -12.0)
+        samplesFX3Reverb.set('SamplesFX3Reverb', 'Gain', 'Mute', 0.0)
+        samplesFX2Delay.set('Samples[2-4]', 'Gain', 'Gain', -16.0)
         samplesFX2Delay.set('SamplesFX2Delay', 'Gain', 'Mute', 0.0)
         postprocess.animate_pitch('*', 1, 0.25, 0.75)
 
@@ -97,13 +99,13 @@ class RamenerMooncup(Video, Light, RouteBase):
                     2: lambda: seq192.select('solo', 'dummy'),
                     2 + 0.4: lambda: postprocess.animate_pitch(['Samples', 'Synths'], None, 1, 0.1),
                     2 + 1/2. : lambda: [
-                        samples.set('Samples[1-5]', 'Gain', 'Gain', 0.0),
-                        samplesFX1Delay.set('Samples[1-5]', 'Gain', 'Gain', 0.0),
-                        samplesFX6Scape.set('Samples[1-5]', 'Gain', 'Gain', 0.0),
-                        samplesFX5TapeDelay.set('Samples[1-5]', 'Gain', 'Gain', 0.0),
-                        samplesFX1Delay.set('SamplesFX1Delay', 'Gain', 'Mute', 0.0),
+                        samples.set('Samples[1-5]', 'Gain', 'Gain', -9.0),
+                        samplesFX2Delay.set('Samples[2-4]', 'Gain', 'Gain', -16.0),
+                        samplesFX6Scape.set('Samples1', 'Gain', 'Gain', -12.0),
+                        samplesFX5TapeDelay.set('Samples[1-5]', 'Gain', 'Gain', -18.0),
+                        samplesFX2Delay.set('SamplesFX2Delay', 'Gain', 'Mute', 0.0),
                         samplesFX6Scape.set('SamplesFX6Scape', 'Gain', 'Mute', 0.0),
-                        samplesFX5TapeDelay.set('SamplesFX5TapeDelay', 'Gain', 'Gain', 0.0),
+                        samplesFX5TapeDelay.set('SamplesFX5TapeDelay', 'Gain', 'Mute', 0.0),
 
                         # Sequences
                         seq192.select('solo', 'couplet1_*'),
@@ -134,14 +136,24 @@ class RamenerMooncup(Video, Light, RouteBase):
         transport.start()
 
         # Samples
+        samples.set('Samples1', 'Gain', 'Gain', 0.0)
         samples.set('Samples1', 'Gain', 'Mute', 0.0)
-        samplesFX1Delay.set('Samples1', 'Gain', 'Gain', 0.0),
-        samplesFX6Scape.set('Samples1', 'Gain', 'Gain', 0.0),
-        samplesFX5TapeDelay.set('Samples1', 'Gain', 'Gain', 0.0),
-        samplesFX1Delay.set('SamplesFX1Delay', 'Gain', 'Mute', 0.0),
+        samplesFX2Delay.set('Samples1', 'Gain', 'Gain', -6.0),
+        samplesFX6Scape.set('Samples1', 'Gain', 'Gain', -18.0),
+        samplesFX5TapeDelay.set('Samples1', 'Gain', 'Gain', -9.0),
+        samplesFX2Delay.set('SamplesFX2Delay', 'Gain', 'Mute', 0.0),
+        samplesFX2Delay.set('SamplesFX2Delay', 'Invada%20Delay%20Munge%20(mono%20in)', 'Delay%201', 0.17)
+        samplesFX2Delay.set('SamplesFX2Delay', 'Invada%20Delay%20Munge%20(mono%20in)', 'Delay%202', 0.5)
         samplesFX6Scape.set('SamplesFX6Scape', 'Gain', 'Mute', 0.0),
-        samplesFX5TapeDelay.set('SamplesFX5TapeDelay', 'Gain', 'Gain', 0.0),
+        samplesFX5TapeDelay.set('SamplesFX5TapeDelay', 'Gain', 'Mute', 0.0),
 
+        # Sequences (Mentat)
+        self.start_sequence('delays', [
+            { 'signature': '25/4', # bar 1
+                1: lambda: samplesFX5TapeDelay.animate('SamplesFX5TapeDelay', 'Tape%20Delay%20Simulation', 'Tape%20speed%20(inches/sec%2C%201=normal)', 1.0, 0.3, 14),
+                14: lambda: samplesFX5TapeDelay.animate('SamplesFX5TapeDelay', 'Tape%20Delay%20Simulation', 'Tape%20speed%20(inches/sec%2C%201=normal)', 0.3, 1.0, 9)
+            }
+        ], loop=True)
 
         # Vocals
         vocalsNano.set('normo_exclu', 'on')

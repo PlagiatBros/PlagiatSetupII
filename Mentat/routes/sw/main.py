@@ -29,9 +29,7 @@ class SW(Video, Light, RouteBase):
 
         # Autotuner Notes
         autotunes = ['NanoMeuf', 'NanoNormo', 'NanoGars', 'KeschMeuf', 'KeschNormo', 'KeschGars']
-        for at in autotunes:
-            #                     c     d     e  f     g     a     b
-            modules[at].set_notes(1, 0, 1, 1, 1, 1, 0, 0, 1, 1, 0, 1)
+        notes.set_notes(1, 0, 1, 1, 1, 1, 0, 0, 1, 1, 0, 1)
 
 
     @pedalboard_button(1)
@@ -144,7 +142,7 @@ class SW(Video, Light, RouteBase):
 
                     # Samples
                     samplesFX7Degrade.set('Samples2', 'Gain', 'Gain', -70.0),
-                    prodSampler.send('/instrument/play', 's:Plagiat/SW/BregoLong')
+                    prodSampler.send('/instrument/play', 's:Plagiat/SW/BregoLong', 100)
                 ],
                 3: lambda: vocalsKeschFX2Delay.set('KeschMeuf', 'Gain', 'Gain', -70.0),
                 4: lambda: vocalsKesch.set('normo_exclu', 'on')
@@ -319,6 +317,14 @@ class SW(Video, Light, RouteBase):
         samples.set('Samples2', 'Gain', 'Mute', 0.0)
         samplesFX6Scape.set('Samples1', 'Gain', 'Gain', -6.0)
         samplesFX6Scape.set('SamplesFX6Scape', 'Gain', 'Mute', 0.0)
+
+        # Synths
+        synthsFX1Reverb.set('EasyClassical', 'Gain', 'Gain', -12.0)
+        synthsFX1Reverb.set('SynthsFX1Reverb', 'Gain', 'Mute', 0.0)
+        synthsFX2Delay.set('EasyClassical', 'Gain', 'Gain', -9.0)
+        synthsFX2Delay.set('SynthsFX2Delay', 'Gain', 'Mute', 0.0)
+        synths.set('EasyClassical', 'Mono%20Pan', 'Pan', -0.5)
+        synths.set('Trap', 'Mono%20Pan', 'Pan', 0.5)
 
         # Vocals
         vocalsNano.set('normo_exclu', 'on')

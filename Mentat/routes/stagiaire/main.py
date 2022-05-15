@@ -128,6 +128,12 @@ class Stagiaire(Video, Light, RouteBase):
         samples.set('Samples2', 'Gain', 'Mute', 0.0) # flûte
         samples.set('Samples5', 'Gain', 'Mute', 0.0) # percu
 
+        # Synths
+        synthsFX1Reverb.set('EasyClassical', 'Gain', 'Gain', -9.0)
+        synthsFX1Reverb.set('SynthsFX1Reverb', 'Gain', 'Mute', 0.0)
+        synthsFX2Delay.set('EasyClassical', 'Gain', 'Gain', -9.0)
+        synthsFX2Delay.set('SynthsFX2Delay', 'Gain', 'Mute', 0.0)
+
         # Vocals
         vocalsNano.set('gars_exclu', 'on')
         vocalsKesch.set('gars_exclu', 'on')

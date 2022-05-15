@@ -77,10 +77,45 @@ class AgneauGastrik(Video, Light, RouteBase):
         samples.set('Samples4', 'Gain', 'Mute', 0.0)
         samples.set('Samples5', 'Gain', 'Mute', 0.0)
 
+        samplesFX2Delay.set('Samples3', 'Gain', 'Gain', -3.0)
+        samplesFX2Delay.set('SamplesFX2Delay', 'Gain', 'Mute', 0.0)
+        samplesFX5TapeDelay.set('Samples4', 'Gain', 'Gain', -4.0)
+        samplesFX5TapeDelay.set('SamplesFX5TapeDelay', 'Gain', 'Mute', 0.0)
+
+        # Synths
+        synths.set('ZTrumpets', 'Mono%20Pan', 'Pan', -0.7)
+        synths.set('ZDiploLike', 'Mono%20Pan', 'Pan', 0.7)
+        synthsFX2Delay.set('ZDiploLike', 'Gain', 'Gain', -6.0)
+        synthsFX2Delay.set('DubstepHorn', 'Gain', 'Gain', -3.0)
+        synthsFX2Delay.set('SynthsFX2Delay', 'Gain', 'Mute', 0.0)
 
         # Vocals
         vocalsNano.set('gars_exclu', 'on')
         vocalsKesch.set('gars_exclu', 'on')
+
+        # Sequences (Mentat)
+        self.start_sequence('Yep!', [
+            {'signature': '37/4', # bar 1
+            18:  lambda: samplesFX5TapeDelay.set('SamplesFX5TapeDelay', 'Tape%20Delay%20Simulation', 'Tape%20speed%20(inches/sec%2C%201=normal)', 0.9),
+            19.1: lambda: samplesFX5TapeDelay.animate('SamplesFX5TapeDelay', 'Tape%20Delay%20Simulation', 'Tape%20speed%20(inches/sec%2C%201=normal)', 0.9, 0.5, 3, easing='exponential'),
+            35:  lambda: samplesFX5TapeDelay.set('SamplesFX5TapeDelay', 'Tape%20Delay%20Simulation', 'Tape%20speed%20(inches/sec%2C%201=normal)', 1.0),
+            37.5: lambda: samplesFX5TapeDelay.animate('SamplesFX5TapeDelay', 'Tape%20Delay%20Simulation', 'Tape%20speed%20(inches/sec%2C%201=normal)', 1.0, 1.5, 3, easing='exponential')
+            }
+        ], loop=True)
+        self.start_sequence('SynthsPan', [
+            {'signature': '43/4', # bar 1
+            1: lambda: [
+                synths.animate('ZTrumpets', 'Mono%20Pan', 'Pan', -0.7, 0.7, 43),
+                synths.animate('ZDiploLike', 'Mono%20Pan', 'Pan', 0.7, -0.7, 43)
+                ]
+            },
+            {'signature': '43/4', # bar 1
+            1: lambda: [
+                synths.animate('ZTrumpets', 'Mono%20Pan', 'Pan', 0.7, -0.7, 43),
+                synths.animate('ZDiploLike', 'Mono%20Pan', 'Pan', -0.7, 0.7, 43)
+                ]
+            }
+        ], loop=True)
 
 
     @mk2_button(2, 'purple')
@@ -133,12 +168,16 @@ class AgneauGastrik(Video, Light, RouteBase):
         samples.set('Samples3', 'Gain', 'Mute', 0.0)
         samples.set('Samples4', 'Gain', 'Mute', 0.0)
         samples.set('Samples5', 'Gain', 'Mute', 0.0)
+        samplesFX2Delay.set('Samples3', 'Gain', 'Gain', -3.0)
+        samplesFX2Delay.set('SamplesFX2Delay', 'Gain', 'Mute', 0.0)
+        samplesFX5TapeDelay.set('Samples4', 'Gain', 'Gain', -4.0)
+        samplesFX5TapeDelay.set('SamplesFX5TapeDelay', 'Gain', 'Mute', 0.0)
 
         # Vocals
         vocalsNano.set('normo_exclu', 'on')
         vocalsKesch.set('gars_exclu', 'on')
 
-
+        # Sequences (Mentat)
         self.start_sequence('couplet1', [
             {}, # smell it quick
             {   # kind of mate
@@ -159,6 +198,14 @@ class AgneauGastrik(Video, Light, RouteBase):
                 1: lambda: seq192.select('solo', 'couplet1_*')
             },
         ], loop=False)
+        self.start_sequence('Yep!', [
+            {'signature': '37/4', # bar 1
+            18:  lambda: samplesFX5TapeDelay.set('SamplesFX5TapeDelay', 'Tape%20Delay%20Simulation', 'Tape%20speed%20(inches/sec%2C%201=normal)', 0.9),
+            19.1: lambda: samplesFX5TapeDelay.animate('SamplesFX5TapeDelay', 'Tape%20Delay%20Simulation', 'Tape%20speed%20(inches/sec%2C%201=normal)', 0.9, 0.5, 3, easing='exponential'),
+            35:  lambda: samplesFX5TapeDelay.set('SamplesFX5TapeDelay', 'Tape%20Delay%20Simulation', 'Tape%20speed%20(inches/sec%2C%201=normal)', 1.0),
+            37.5: lambda: samplesFX5TapeDelay.animate('SamplesFX5TapeDelay', 'Tape%20Delay%20Simulation', 'Tape%20speed%20(inches/sec%2C%201=normal)', 1.0, 1.5, 3, easing='exponential')
+            }
+        ], loop=True)
 
 
     @mk2_button(4, 'purple')
@@ -184,10 +231,30 @@ class AgneauGastrik(Video, Light, RouteBase):
         samples.set('Samples3', 'Gain', 'Mute', 0.0)
         samples.set('Samples4', 'Gain', 'Mute', 0.0)
         samples.set('Samples5', 'Gain', 'Mute', 0.0)
+        samplesFX5TapeDelay.set('Samples4', 'Gain', 'Gain', -12.0)
+        samplesFX5TapeDelay.set('SamplesFX5TapeDelay', 'Gain', 'Mute', 0.0)
+
+        # Synths
+        synths.set('ZTrumpets', 'Mono%20Pan', 'Pan', -0.7)
+        synths.set('ZDiploLike', 'Mono%20Pan', 'Pan', 0.7)
+        synthsFX2Delay.set('ZDiploLikeWide', 'Gain', 'Gain', -6.0)
+        synthsFX2Delay.set('DubstepHorn', 'Gain', 'Gain', -3.0)
+        synthsFX2Delay.set('SynthsFX2Delay', 'Gain', 'Mute', 0.0)
+
 
         # Vocals
         vocalsNano.set('gars_exclu', 'on')
         vocalsKesch.set('normo_exclu', 'on')
+
+        # Sequences Mentat
+        self.start_sequence('Yep!', [
+            {'signature': '37/4', # bar 1
+            18:  lambda: samplesFX5TapeDelay.animate('SamplesFX5TapeDelay', 'Tape%20Delay%20Simulation', 'Tape%20speed%20(inches/sec%2C%201=normal)', None, 0.9, 1),
+            19.1: lambda: samplesFX5TapeDelay.animate('SamplesFX5TapeDelay', 'Tape%20Delay%20Simulation', 'Tape%20speed%20(inches/sec%2C%201=normal)', 0.9, 0.5, 3, easing='exponential'),
+            35:  lambda: samplesFX5TapeDelay.animate('SamplesFX5TapeDelay', 'Tape%20Delay%20Simulation', 'Tape%20speed%20(inches/sec%2C%201=normal)', None, 1.0, 1),
+            37.5: lambda: samplesFX5TapeDelay.animate('SamplesFX5TapeDelay', 'Tape%20Delay%20Simulation', 'Tape%20speed%20(inches/sec%2C%201=normal)', 1.0, 1.5, 3, easing='exponential')
+            }
+        ], loop=True)
 
 
     @pedalboard_button(4)
@@ -206,18 +273,22 @@ class AgneauGastrik(Video, Light, RouteBase):
         # Transport
         transport.start()
 
+        ### TODO Filtrage Synths
+
         # Samples
         samples.set('Samples1', 'Gain', 'Mute', 0.0)
         samples.set('Samples2', 'Gain', 'Mute', 0.0)
         samples.set('Samples3', 'Gain', 'Mute', 0.0)
         samples.set('Samples4', 'Gain', 'Mute', 0.0)
         samples.set('Samples5', 'Gain', 'Mute', 0.0)
+        samplesFX5TapeDelay.set('Samples4', 'Gain', 'Gain', -12.0)
+        samplesFX5TapeDelay.set('SamplesFX5TapeDelay', 'Gain', 'Mute', 0.0)
 
         # Vocals
         vocalsNano.set('gars_exclu', 'on')
         vocalsKesch.set('gars_exclu', 'on')
 
-
+        # Sequences (Mentat)
         self.start_sequence('couplet2', [
             {    # me grow i warn ya
                 'signature': '39/8',
@@ -240,3 +311,11 @@ class AgneauGastrik(Video, Light, RouteBase):
                 16.5: lambda: self.start_scene('stop', lambda: self.stop())
             },
         ], loop=False)
+        self.start_sequence('Yep!', [
+            {'signature': '37/4', # bar 1
+            18:  lambda: samplesFX5TapeDelay.animate('SamplesFX5TapeDelay', 'Tape%20Delay%20Simulation', 'Tape%20speed%20(inches/sec%2C%201=normal)', None, 0.9, 1),
+            19.1: lambda: samplesFX5TapeDelay.animate('SamplesFX5TapeDelay', 'Tape%20Delay%20Simulation', 'Tape%20speed%20(inches/sec%2C%201=normal)', 0.9, 0.5, 3, easing='exponential'),
+            35:  lambda: samplesFX5TapeDelay.animate('SamplesFX5TapeDelay', 'Tape%20Delay%20Simulation', 'Tape%20speed%20(inches/sec%2C%201=normal)', None, 1.0, 1),
+            37.5: lambda: samplesFX5TapeDelay.animate('SamplesFX5TapeDelay', 'Tape%20Delay%20Simulation', 'Tape%20speed%20(inches/sec%2C%201=normal)', 1.0, 1.5, 3, easing='exponential')
+            }
+        ], loop=True)
