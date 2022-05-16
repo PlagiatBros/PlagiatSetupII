@@ -4,7 +4,9 @@ from .alsapatch import AlsaPatcher
 
 import os
 import json
+import pyudev
 from sys import argv
+
 
 DEV = '--dev' in argv
 
@@ -24,10 +26,29 @@ class RaySession(Module):
         self.alsa_patcher.load('%s/RaySessions/PlagiatLive/PlagiatLive.alsapatch' % os.getenv('PLAGIAT_SETUP_DIR'))
         self.alsa_patcher.connect()
 
-        self.send('/ray/server/monitor_quit')
-        self.send('/ray/server/monitor_announce')
+        # bind usb connections to alsa patch
+        context = pyudev.Context()
+        monitor = pyudev.Monitor.from_netlink(context)
+        monitor.filter_by(subsystem='usb')
+        def usb_device_event(action, device):
+            if action == 'bind':
+                self.alsa_patcher.connect()
+        observer = pyudev.MonitorObserver(monitor, usb_device_event, name='monitor-observer')
+        observer.start()
+
+        self.ready = False
+        self.start_scene('init', self.raysession_subscribe)
+
+    def raysession_subscribe(self):
+
+        while not self.ready:
+            self.send('/ray/server/monitor_quit')
+            self.send('/ray/server/monitor_announce')
+            self.wait(0.1, 's')
 
     def route(self, address, args):
+
+        self.ready = True
 
         if address == '/ray/monitor/client_state':
             name = args[0]

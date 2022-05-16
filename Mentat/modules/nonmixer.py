@@ -31,6 +31,9 @@ class NonMixer(Module):
         self.init_params = []
 
         self.init_done = False
+
+        self.pending_set_calls = []
+
         self.add_event_callback('client_started', self.client_started)
 
 
@@ -63,6 +66,12 @@ class NonMixer(Module):
     def disable_meters(self):
         self.start_scene('meter_levels', self.update_meters)
 
+
+    def set(self, *args, **kwargs):
+        if not self.init_done:
+            self.pending_set_calls.append((args, kwargs))
+        else:
+            super().set(*args, **kwargs)
 
     def route(self, address, args):
         """
@@ -125,6 +134,8 @@ class NonMixer(Module):
                 self.init_done = True
                 for parameter_address in self.init_params:
                     self.send(parameter_address)
+                for args, kwargs in self.pending_set_calls:
+                    self.set(*args, **kwargs)
 
 
                 self.create_meta_parameters()

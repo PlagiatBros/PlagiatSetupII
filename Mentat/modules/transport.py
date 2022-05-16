@@ -36,22 +36,12 @@ class Transport(Module):
                 ('VocalsNanoFX1Delay', 'VocalsNanoFX1Delay'),
                 ('VocalsKeschFX1Delay', 'VocalsKeschFX1Delay')
                 ]:
-            if strip in self.engine.modules[mixer].submodules:
-                self.engine.modules[mixer].set(strip, 'GxMultiBandDelay', 'DELAY1', bpm)
-                self.engine.modules[mixer].set(strip, 'GxMultiBandDelay', 'DELAY2', bpm)
-                self.engine.modules[mixer].set(strip, 'GxMultiBandDelay', 'DELAY3', bpm)
-                self.engine.modules[mixer].set(strip, 'GxMultiBandDelay', 'DELAY4', bpm)
-                self.engine.modules[mixer].set(strip, 'GxMultiBandDelay', 'DELAY5', bpm)
-            else:
-                # just in case non mixer infos are not loaded yet
-                self.start_scene(strip + '_bpm', lambda: [
-                    self.wait(1, 's'),
-                    self.engine.modules[mixer].set(strip, 'GxMultiBandDelay', 'DELAY1', bpm),
-                    self.engine.modules[mixer].set(strip, 'GxMultiBandDelay', 'DELAY2', bpm),
-                    self.engine.modules[mixer].set(strip, 'GxMultiBandDelay', 'DELAY3', bpm),
-                    self.engine.modules[mixer].set(strip, 'GxMultiBandDelay', 'DELAY4', bpm),
-                    self.engine.modules[mixer].set(strip, 'GxMultiBandDelay', 'DELAY5', bpm)
-                ])
+
+            self.engine.modules[mixer].set(strip, 'GxMultiBandDelay', 'DELAY1', bpm)
+            self.engine.modules[mixer].set(strip, 'GxMultiBandDelay', 'DELAY2', bpm)
+            self.engine.modules[mixer].set(strip, 'GxMultiBandDelay', 'DELAY3', bpm)
+            self.engine.modules[mixer].set(strip, 'GxMultiBandDelay', 'DELAY4', bpm)
+            self.engine.modules[mixer].set(strip, 'GxMultiBandDelay', 'DELAY5', bpm)
 
         # Invada Delay + Munge (Mono In)
         for mixer, strip in [
@@ -60,16 +50,8 @@ class Transport(Module):
                 ('VocalsNanoFX2Delay', 'VocalsNanoFX2Delay'),
                 ('VocalsKeschFX2Delay', 'VocalsKeschFX2Delay')
                 ]:
-            if strip in self.engine.modules[mixer].submodules:
-                self.engine.modules[mixer].set(strip, 'Invada%20Delay%20Munge%20(mono%20in)', 'Delay%201', 60./bpm)
-                self.engine.modules[mixer].set(strip, 'Invada%20Delay%20Munge%20(mono%20in)', 'Delay%202', 60./bpm)
-            else:
-                # just in case non mixer infos are not loaded yet
-                self.start_scene(strip + '_bpm', lambda: [
-                    self.wait(1, 's'),
-                    self.engine.modules[mixer].set(strip, 'Invada%20Delay%20Munge%20(mono%20in)', 'Delay%201', 60./bpm),
-                    self.engine.modules[mixer].set(strip, 'Invada%20Delay%20Munge%20(mono%20in)', 'Delay%202', 60./bpm)
-                ])
+            self.engine.modules[mixer].set(strip, 'Invada%20Delay%20Munge%20(mono%20in)', 'Delay%201', 60./bpm)
+            self.engine.modules[mixer].set(strip, 'Invada%20Delay%20Munge%20(mono%20in)', 'Delay%202', 60./bpm)
 
         # Tape Delay Simulator
         for mixer, strip in [
@@ -79,20 +61,10 @@ class Transport(Module):
                 ('VocalsNanoFX8TapeDelay', 'VocalsNanoFX8TapeDelay'),
                 ('VocalsKeschFX8TapeDelay', 'VocalsKeschFX8TapeDelay')
                 ]:
-            if strip in self.engine.modules[mixer].submodules:
-                self.engine.modules[mixer].set(strip, 'Tape%20Delay%20Simulation', 'Tap%201%20distance%20(inches)', 60./bpm)
-                self.engine.modules[mixer].set(strip, 'Tape%20Delay%20Simulation', 'Tap%202%20distance%20(inches)', 2*60./bpm)
-                self.engine.modules[mixer].set(strip, 'Tape%20Delay%20Simulation', 'Tap%203%20distance%20(inches)', 3*60./bpm)
-                self.engine.modules[mixer].set(strip, 'Tape%20Delay%20Simulation', 'Tap%204%20distance%20(inches)', 4*60./bpm)
-            else:
-                # just in case non mixer infos are not loaded yet
-                self.start_scene(strip + '_bpm', lambda: [
-                    self.wait(1, 's'),
-                self.engine.modules[mixer].set(strip, 'Tape%20Delay%20Simulation', 'Tap%201%20distance%20(inches)', 60./bpm),
-                self.engine.modules[mixer].set(strip, 'Tape%20Delay%20Simulation', 'Tap%202%20distance%20(inches)', 2*60./bpm),
-                self.engine.modules[mixer].set(strip, 'Tape%20Delay%20Simulation', 'Tap%203%20distance%20(inches)', 3*60./bpm),
-                self.engine.modules[mixer].set(strip, 'Tape%20Delay%20Simulation', 'Tap%204%20distance%20(inches)', 4*60./bpm)
-                ])
+            self.engine.modules[mixer].set(strip, 'Tape%20Delay%20Simulation', 'Tap%201%20distance%20(inches)', 60./bpm)
+            self.engine.modules[mixer].set(strip, 'Tape%20Delay%20Simulation', 'Tap%202%20distance%20(inches)', 2*60./bpm)
+            self.engine.modules[mixer].set(strip, 'Tape%20Delay%20Simulation', 'Tap%203%20distance%20(inches)', 3*60./bpm)
+            self.engine.modules[mixer].set(strip, 'Tape%20Delay%20Simulation', 'Tap%204%20distance%20(inches)', 4*60./bpm)
 
         # Scape Delay
         for mixer, strip in [
@@ -102,67 +74,34 @@ class Transport(Module):
                 ('VocalsNanoFX9Scape', 'VocalsNanoFX9Scape'),
                 ('VocalsKeschFX9Scape', 'VocalsKeschFX9Scape')
                 ]:
-            if strip in self.engine.modules[mixer].submodules:
-                self.engine.modules[mixer].set(strip, 'Scape', 'bpm', bpm)
-            else:
-                # just in case non mixer infos are not loaded yet
-                self.start_scene(strip + '_bpm', lambda: [
-                    self.wait(1, 's'), self.engine.modules[mixer].set(strip, 'Scape', 'bpm', bpm)
-                ])
+            self.engine.modules[mixer].set(strip, 'Scape', 'bpm', bpm)
 
         # Wobble
         for mixer, strip in [
                 ('BassFX', 'BassWobble')
             ]:
-            if strip in self.engine.modules[mixer].submodules:
-                self.engine.modules[mixer].set(strip, 'MDA%20RezFilter', 'LFO%20Rate', bpm/60.)
-            else:
-                # just in case non mixer infos are not loaded yet
-                self.start_scene(strip + '_bpm', lambda: [
-                    self.wait(1, 's'), self.engine.modules[mixer].set(strip, 'MDA%20RezFilter', 'LFO%20rate', bpm/60.)
-                ])
+            self.engine.modules[mixer].set(strip, 'MDA%20RezFilter', 'LFO%20Rate', bpm/60.)
 
         # Zam Grains
         for mixer, strip in [
                 ('VocalsNanoFX6Granular', 'VocalsNanoFX6Granular'),
                 ('VocalsKeschFX6Granular', 'VocalsKeschFX6Granular')
             ]:
-            if strip in self.engine.modules[mixer].submodules:
-                self.engine.modules[mixer].set(strip, 'ZamGrains', 'Grain%20Speed', bpm/120.)
-                self.engine.modules[mixer].set(strip, 'ZamGrains', 'Play%20Speed', bpm/120.)
-            else:
-                # just in case non mixer infos are not loaded yet
-                self.start_scene(strip + '_bpm', lambda: [
-                    self.wait(1, 's'),
-                    self.engine.modules[mixer].set(strip, 'ZamGrains', 'Grain%20Speed', bpm/120.),
-                    self.engine.modules[mixer].set(strip, 'ZamGrains', 'Play%20Speed', bpm/120.)
-                ])
+            self.engine.modules[mixer].set(strip, 'ZamGrains', 'Grain%20Speed', bpm/120.)
+            self.engine.modules[mixer].set(strip, 'ZamGrains', 'Play%20Speed', bpm/120.)
 
         # Bitrot Repeater
         for mixer, strip in [
                 ('VocalsNanoFX7Slice', 'VocalsNanoFX7Slice'),
                 ('VocalsKeschFX7Slice', 'VocalsKeschFX7Slice')
             ]:
-            if strip in self.engine.modules[mixer].submodules:
-                self.engine.modules[mixer].set(strip, 'Bitrot%20Repeat', 'BPM', bpm)
-            else:
-                # just in case non mixer infos are not loaded yet
-                self.start_scene(strip + '_bpm', lambda: [
-                    self.wait(1, 's'), self.engine.modules[mixer].set(strip, 'Bitrot%20Repeat', 'BPM', bpm)
-                ])
-
+            self.engine.modules[mixer].set(strip, 'Bitrot%20Repeat', 'BPM', bpm)
 
         # Autofilter
         for mixer, strip in [
                 ('SamplesFX4Autofilter', 'SamplesFX4Autofilter')
             ]:
-            if strip in self.engine.modules[mixer].submodules:
-                self.engine.modules[mixer].set(strip, 'C%2A%20AutoFilter%20-%20Self-modulating%20resonant%20filter', 'rate', 60./bpm)
-            else:
-                # just in case non mixer infos are not loaded yet
-                self.start_scene(strip + '_bpm', lambda: [
-                    self.wait(1, 's'), self.engine.modules[mixer].set(strip, 'C%2A%20AutoFilter%20-%20Self-modulating%20resonant%20filter', 'rate', 60./bpm)
-                ])
+            self.engine.modules[mixer].set(strip, 'C%2A%20AutoFilter%20-%20Self-modulating%20resonant%20filter', 'rate', 60./bpm)
 
 
     def set_cycle(self, signature, pattern=None):

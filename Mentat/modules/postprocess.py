@@ -126,9 +126,9 @@ class PostProcess(Module):
         root = self.engine.root_module
 
         if strip == '*':
-            root.animate('pitch', pitch)
+            root.animate('pitch', start, end, duration, mode, easing)
         else:
-            root.animate('pitch_%s' % strip.lower(), pitch)
+            root.animate('pitch_%s' % strip.lower(), start, end, duration, mode, easing)
 
 
     def set_filter(self, strip, freq):
@@ -173,9 +173,9 @@ class PostProcess(Module):
         root = self.engine.root_module
 
         if strip == '*':
-            root.animate('filter', pitch)
+            root.animate('filter', start, end, duration, mode, easing)
         else:
-            root.animate('filter_%s' % strip.lower(), pitch)
+            root.animate('filter_%s' % strip.lower(), start, end, duration, mode, easing)
 
 
     def slice(self):

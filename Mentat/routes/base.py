@@ -53,7 +53,7 @@ class RouteBase(Route):
         super().__init__(*args, **kwargs)
 
         self.direct_routing = {
-            '/pedalboard/button': {},
+            '/pedalBoard/button': {},
             '/mk2/button': {},
         }
         self.mk2_lights = {}
@@ -62,9 +62,9 @@ class RouteBase(Route):
 
             if hasattr(method, 'pedalboard_buttons'):
                 for button in method.pedalboard_buttons:
-                    if button not in self.direct_routing['/pedalboard/button']:
-                        self.direct_routing['/pedalboard/button'][button] = []
-                    self.direct_routing['/pedalboard/button'][button].insert(0, method)
+                    if button not in self.direct_routing['/pedalBoard/button']:
+                        self.direct_routing['/pedalBoard/button'][button] = []
+                    self.direct_routing['/pedalBoard/button'][button].insert(0, method)
 
             if hasattr(method, 'mk2_buttons'):
                 for button in method.mk2_buttons:

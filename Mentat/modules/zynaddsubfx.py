@@ -10,7 +10,7 @@ class ZynAddSubFx(Module):
         super().__init__(*args, **kwargs)
 
         self.add_parameter('microtonality', '/microtonal/Penabled', '*', default=False)
-        self.add_parameter('tuning', '/microtonal/tuning', 's', default="\n".join([str(100.0 + i * 100) for i in range(12)]).replace('1200.0', '2/1'))
+        self.add_parameter('tuning', '/microtonal/tunings', 's', default="\n".join([str(100.0 + i * 100) for i in range(12)]).replace('1200.0', '2/1'))
 
     def route(self, address, args):
 

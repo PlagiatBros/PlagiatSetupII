@@ -70,6 +70,12 @@ class OpenStageControl(Module):
         # send state changes to OSC
         # /module_name param_name value
         address = '/' + '/'.join(module.module_path)
+
+        if module == self.engine.root_module:
+            address = '/Root'
+        elif module == self.engine:
+            address = '/Engine'
+
         if type(value) is not list:
             value = [value]
 
@@ -136,6 +142,8 @@ class OpenStageControl(Module):
 
         if module_name == 'Engine':
             return self.engine
+        elif module_name == 'Root':
+            return self.engine.root_module
         elif module_name in self.engine.modules:
             mod = self.engine.modules[module_name]
             for n in path[1:]:
@@ -461,7 +469,7 @@ class OpenStageControl(Module):
                 if hasattr(m, 'mk2_buttons'):
                     self.engine.active_route.route('osc', None, '/mk2/button', list(m.mk2_buttons.keys())[:1])
                 elif hasattr(m, 'pedalboard_buttons'):
-                    self.engine.active_route.route('osc', None, '/pedalboard/button', list(m.pedalboard_buttons.keys())[:1])
+                    self.engine.active_route.route('osc', None, '/pedalBoard/button', list(m.pedalboard_buttons.keys())[:1])
 
     def set_active_non_mixer(self, name):
         """

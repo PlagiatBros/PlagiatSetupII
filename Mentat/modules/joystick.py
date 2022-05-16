@@ -11,7 +11,8 @@ class Joystick(Module):
         super().__init__(*args, **kwargs)
 
     def toggle_tuner(self):
-        os.system('i3-msg scratchpad show')
+        pass
+        #os.system('i3-msg scratchpad show')
 
 
     def route(self, address, args):
@@ -20,8 +21,9 @@ class Joystick(Module):
             pass
 
         elif address == '/button':
-            if arg[0] == 'tr' and arg[1]:
-                toggle_tuner()
+            pass
+            #if args[0] == 'tr' and args[1]:
+            #    toggle_tuner()
 
         elif address == '/status':
             pass
