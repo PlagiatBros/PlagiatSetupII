@@ -2498,7 +2498,7 @@
                             "lineWidth": "auto",
                             "padding": 1,
                             "html": "",
-                            "css": "class: locked;\nmargin-left: 1rem",
+                            "css": "#{!@{routes_unlock}?'class:locked':''}\nmargin-left: 1rem",
                             "colorBg": "auto",
                             "layout": "vertical",
                             "justify": "start",
