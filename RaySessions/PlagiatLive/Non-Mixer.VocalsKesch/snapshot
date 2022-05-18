@@ -8,11 +8,11 @@
 	Mixer_Strip 0x1 create :name "KeschIn" :width "narrow" :tab "signal" :color 1879485370 :gain_mode 0 :mute_mode 0 :group 0x3D :auto_input "" :manual_connection 0
 	Chain 0x2 create :strip 0x1 :tab "chain"
 	JACK_Module 0x3 create :parameter_values "0.000000:1.000000" :is_default 1 :chain 0x2 :active 1
-	Plugin_Module 0xA4 create :plugin_id 1410 :plugin_ins 1 :plugin_outs 1 :parameter_values "197.664001:501.600006:-57.700001:49.999599:360.000000:900.000000:-90.000000:0.000000" :is_default 0 :chain 0x2 :active 1
+	Plugin_Module 0xA4 create :plugin_id 1410 :plugin_ins 1 :plugin_outs 1 :parameter_values "197.664001:501.600006:-57.700001:49.999599:360.000000:900.000000:-90.000000:0.000000" :is_default 0 :chain 0x2 :active 0
 	Plugin_Module 0xA3 create :lv2_plugin_uri "urn:ardour:a-eq" :plugin_ins 1 :plugin_outs 1 :parameter_values "100.000000:-20.000000:300.000000:0.000000:1.000000:1000.000000:0.000000:1.000000:2500.000000:0.000000:1.000000:6000.000000:0.000000:1.000000:6500.000000:-20.000000:0.000000:1.000000:1.000000:1.000000:1.000000:1.000000:1.000000:1.000000" :is_default 0 :chain 0x2 :active 1
 	Plugin_Module 0xE9 create :plugin_id 1916 :plugin_ins 1 :plugin_outs 1 :parameter_values "1.000000:10.000000:270.000000:-23.500000:10.200000:3.250000:6.000000" :is_default 0 :chain 0x2 :active 1
 	Gain_Module 0x4 create :parameter_values "0.000000:0.000000" :is_default 1 :chain 0x2 :active 1
-	Meter_Module 0x5 create :parameter_values "-10.886335" :is_default 1 :chain 0x2 :active 1
+	Meter_Module 0x5 create :parameter_values "-72.841553" :is_default 1 :chain 0x2 :active 1
 	JACK_Module 0x6 create :parameter_values "1.000000:0.000000" :is_default 1 :chain 0x2 :active 1
 	Mixer_Strip 0x16 create :name "KeschMeuf" :width "narrow" :tab "signal" :color 828296856 :gain_mode 0 :mute_mode 0 :group 0x3F :auto_input "" :manual_connection 0
 	Chain 0x17 create :strip 0x16 :tab "chain"
@@ -22,8 +22,9 @@
 	AUX_Module 0x42 create :number 0 :parameter_values "0.000000" :is_default 0 :chain 0x17 :active 1
 	AUX_Module 0x43 create :number 1 :parameter_values "-70.000000" :is_default 0 :chain 0x17 :active 1
 	AUX_Module 0x78 create :number 2 :parameter_values "0.000000" :is_default 0 :chain 0x17 :active 1
-	Gain_Module 0x19 create :parameter_values "0.000000:1.000000" :is_default 1 :chain 0x17 :active 1
-	Meter_Module 0x1A create :parameter_values "-inf" :is_default 1 :chain 0x17 :active 1
+	Gain_Module 0x19 create :parameter_values "0.000000:0.000000" :is_default 1 :chain 0x17 :active 1
+	Plugin_Module 0x158 create :plugin_id 1515013196 :plugin_ins 1 :plugin_outs 1 :parameter_values "0.000000:2000.000000:0.000000:5800.000000:1.000000:0.000000:0.007092:0.000000" :is_default 0 :chain 0x17 :active 1
+	Meter_Module 0x1A create :parameter_values "-68.030289" :is_default 1 :chain 0x17 :active 1
 	JACK_Module 0x1B create :parameter_values "1.000000:0.000000" :is_default 1 :chain 0x17 :active 1
 	Mixer_Strip 0x1C create :name "KeschNormo" :width "narrow" :tab "signal" :color 1073111549 :gain_mode 0 :mute_mode 0 :group 0x40 :auto_input "" :manual_connection 0
 	Chain 0x1D create :strip 0x1C :tab "chain"
@@ -34,7 +35,8 @@
 	AUX_Module 0x45 create :number 1 :parameter_values "-70.000000" :is_default 0 :chain 0x1D :active 1
 	AUX_Module 0x7A create :number 2 :parameter_values "0.000000" :is_default 0 :chain 0x1D :active 1
 	Gain_Module 0x1F create :parameter_values "0.000000:1.000000" :is_default 1 :chain 0x1D :active 1
-	Meter_Module 0x20 create :parameter_values "-inf" :is_default 1 :chain 0x1D :active 1
+	Plugin_Module 0x159 create :plugin_id 1515013196 :plugin_ins 1 :plugin_outs 1 :parameter_values "0.000000:2166.666748:0.000000:5015.000000:3.000000:0.000000:0.500000:0.000000" :is_default 0 :chain 0x1D :active 1
+	Meter_Module 0x20 create :parameter_values "-235.279358" :is_default 1 :chain 0x1D :active 1
 	JACK_Module 0x21 create :parameter_values "1.000000:0.000000" :is_default 1 :chain 0x1D :active 1
 	Mixer_Strip 0x22 create :name "KeschGars" :width "narrow" :tab "signal" :color 153870459 :gain_mode 0 :mute_mode 0 :group 0x41 :auto_input "" :manual_connection 0
 	Chain 0x23 create :strip 0x22 :tab "chain"
@@ -44,8 +46,9 @@
 	AUX_Module 0x46 create :number 0 :parameter_values "0.000000" :is_default 0 :chain 0x23 :active 1
 	AUX_Module 0x47 create :number 1 :parameter_values "-70.000000" :is_default 0 :chain 0x23 :active 1
 	AUX_Module 0x7C create :number 2 :parameter_values "0.000000" :is_default 0 :chain 0x23 :active 1
-	Gain_Module 0x25 create :parameter_values "0.000000:0.000000" :is_default 1 :chain 0x23 :active 1
-	Meter_Module 0x26 create :parameter_values "-11.723126" :is_default 1 :chain 0x23 :active 1
+	Gain_Module 0x25 create :parameter_values "0.000000:1.000000" :is_default 1 :chain 0x23 :active 1
+	Plugin_Module 0x15B create :plugin_id 1515013196 :plugin_ins 1 :plugin_outs 1 :parameter_values "0.000000:2166.666748:0.000000:5015.000000:3.000000:0.000000:0.500000:0.000000" :is_default 0 :chain 0x23 :active 1
+	Meter_Module 0x26 create :parameter_values "-235.279358" :is_default 1 :chain 0x23 :active 1
 	JACK_Module 0x27 create :parameter_values "1.000000:0.000000" :is_default 1 :chain 0x23 :active 1
 	Mixer_Strip 0x29 create :name "KeschABMeuf" :width "narrow" :tab "signal" :color 232590811 :gain_mode 0 :mute_mode 0 :group 0x3C :auto_input "" :manual_connection 0
 	Chain 0x2A create :strip 0x29 :tab "chain"
@@ -53,7 +56,7 @@
 	Plugin_Module 0x12D create :plugin_id 1052 :plugin_ins 1 :plugin_outs 1 :parameter_values "200.000000" :is_default 0 :chain 0x2A :active 1
 	Plugin_Module 0xF6 create :plugin_id 1410 :plugin_ins 1 :plugin_outs 1 :parameter_values "100.000000:1200.000000:-24.000000:10.000000:440.000000:50.000000:-90.000000:0.000000" :is_default 0 :chain 0x2A :active 1
 	Plugin_Module 0xEF create :plugin_id 1054 :plugin_ins 1 :plugin_outs 1 :parameter_values "0.020000:1.000000" :is_default 0 :chain 0x2A :active 1
-	Gain_Module 0x2C create :parameter_values "-4.750000:1.000000" :is_default 1 :chain 0x2A :active 1
+	Gain_Module 0x2C create :parameter_values "-4.750000:0.000000" :is_default 1 :chain 0x2A :active 1
 	Meter_Module 0x2D create :parameter_values "-inf" :is_default 1 :chain 0x2A :active 1
 	JACK_Module 0x2E create :parameter_values "1.000000:0.000000" :is_default 1 :chain 0x2A :active 1
 	Mixer_Strip 0x2F create :name "KeschABNormo" :width "narrow" :tab "signal" :color 1394305445 :gain_mode 0 :mute_mode 0 :group 0x3C :auto_input "" :manual_connection 0
@@ -71,7 +74,7 @@
 	Plugin_Module 0x12F create :plugin_id 1052 :plugin_ins 1 :plugin_outs 1 :parameter_values "200.000000" :is_default 0 :chain 0x36 :active 1
 	Plugin_Module 0xF8 create :plugin_id 1410 :plugin_ins 1 :plugin_outs 1 :parameter_values "100.000000:1200.000000:-24.000000:10.000000:440.000000:50.000000:-90.000000:0.000000" :is_default 0 :chain 0x36 :active 1
 	Plugin_Module 0xF0 create :plugin_id 1054 :plugin_ins 1 :plugin_outs 1 :parameter_values "0.020000:1.000000" :is_default 0 :chain 0x36 :active 1
-	Gain_Module 0x38 create :parameter_values "-4.750000:0.000000" :is_default 1 :chain 0x36 :active 1
+	Gain_Module 0x38 create :parameter_values "-4.750000:1.000000" :is_default 1 :chain 0x36 :active 1
 	Meter_Module 0x39 create :parameter_values "-inf" :is_default 1 :chain 0x36 :active 1
 	JACK_Module 0x3A create :parameter_values "1.000000:0.000000" :is_default 1 :chain 0x36 :active 1
 	Mixer_Strip 0xF create :name "KeschOut" :width "narrow" :tab "signal" :color 463642946 :gain_mode 0 :mute_mode 0 :group 0x3E :auto_input "" :manual_connection 0
@@ -79,6 +82,6 @@
 	JACK_Module 0x11 create :parameter_values "0.000000:1.000000" :is_default 1 :chain 0x10 :active 1
 	Plugin_Module 0x14F create :plugin_id 1515015491 :plugin_ins 1 :plugin_outs 1 :parameter_values "25.080000:25.075001:25.075001:125.750000:125.750000:125.750000:0.000000:6.000000:6.000000:2.114743:2.114743:3.000000:-15.000000:-9.500000:-28.000000:0.000000:0.000000:3.125000:165.000000:4000.000000:0.000000:1.000000:1.000000:0.000000:0.000000:0.000000:0.000000" :is_default 0 :chain 0x10 :active 1
 	Gain_Module 0x12 create :parameter_values "0.000000:0.000000" :is_default 1 :chain 0x10 :active 1
-	Meter_Module 0x13 create :parameter_values "-13.294315" :is_default 1 :chain 0x10 :active 1
+	Meter_Module 0x13 create :parameter_values "-67.492203" :is_default 1 :chain 0x10 :active 1
 	JACK_Module 0x14 create :parameter_values "1.000000:0.000000" :is_default 1 :chain 0x10 :active 1
 }

@@ -103,6 +103,17 @@ class Transport(Module):
             ]:
             self.engine.modules[mixer].set(strip, 'C%2A%20AutoFilter%20-%20Self-modulating%20resonant%20filter', 'rate', 60./bpm)
 
+        # Zam Delay
+        for mixer, strip in [
+            ('VocalsNano', 'NanoMeuf'),
+            ('VocalsNano', 'NanoNormo'),
+            ('VocalsNano', 'NanoGars'),
+            ('VocalsKesch', 'KeschMeuf'),
+            ('VocalsKesch', 'KeschNormo'),
+            ('VocalsKesch', 'KeschGars'),
+            ]:
+            self.engine.modules[mixer].set(strip, 'ZamDelay', 'Time', bpm/60.*250)
+
 
     def set_cycle(self, signature, pattern=None):
         """
