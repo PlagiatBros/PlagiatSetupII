@@ -126,8 +126,14 @@ class RouteBase(Route):
 
         for name, mod in engine.modules.items():
 
+            # Synths Pan
+            if name == 'Synths':
+                for name in mod.submodules:
+                    if 'Pan' in mod.submodules[name].submodules:
+                        mod.submodules[name].set('Pan', 'Pan', 0.0)
+
             # SynthsFX
-            if 'SynthsFX' in name:
+            elif 'SynthsFX' in name:
 
                 for name in mod.submodules:
                     # Ins

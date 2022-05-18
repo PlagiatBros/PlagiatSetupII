@@ -177,7 +177,7 @@ class Stagiaire(Video, Light, RouteBase):
         vocalsKesch.set('gars_exclu', 'on')
 
         # Keyboards
-        jmjKeyboard.set_sound('ZCosma')
+        jmjKeyboard.set_sound('ZCosma', jmjBoost=True)
 
     @mk2_button(2, 'purple')
     def afro2(self):

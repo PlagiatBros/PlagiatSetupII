@@ -83,8 +83,8 @@ class AgneauGastrik(Video, Light, RouteBase):
         samplesFX5TapeDelay.set('SamplesFX5TapeDelay', 'Gain', 'Mute', 0.0)
 
         # Synths
-        synths.set('ZTrumpets', 'Mono%20Pan', 'Pan', -0.7)
-        synths.set('ZDiploLike', 'Mono%20Pan', 'Pan', 0.7)
+        synths.set('ZTrumpets', 'Pan', 'Pan', -0.7)
+        synths.set('ZDiploLike', 'Pan', 'Pan', 0.7)
         synthsFX2Delay.set('ZDiploLike', 'Gain', 'Gain', -6.0)
         synthsFX2Delay.set('DubstepHorn', 'Gain', 'Gain', -3.0)
         synthsFX2Delay.set('SynthsFX2Delay', 'Gain', 'Mute', 0.0)
@@ -105,14 +105,14 @@ class AgneauGastrik(Video, Light, RouteBase):
         self.start_sequence('SynthsPan', [
             {'signature': '43/4', # bar 1
             1: lambda: [
-                synths.animate('ZTrumpets', 'Mono%20Pan', 'Pan', -0.7, 0.7, 43),
-                synths.animate('ZDiploLike', 'Mono%20Pan', 'Pan', 0.7, -0.7, 43)
+                synths.animate('ZTrumpets', 'Pan', 'Pan', -0.7, 0.7, 43),
+                synths.animate('ZDiploLike', 'Pan', 'Pan', 0.7, -0.7, 43)
                 ]
             },
             {'signature': '43/4', # bar 1
             1: lambda: [
-                synths.animate('ZTrumpets', 'Mono%20Pan', 'Pan', 0.7, -0.7, 43),
-                synths.animate('ZDiploLike', 'Mono%20Pan', 'Pan', -0.7, 0.7, 43)
+                synths.animate('ZTrumpets', 'Pan', 'Pan', 0.7, -0.7, 43),
+                synths.animate('ZDiploLike', 'Pan', 'Pan', -0.7, 0.7, 43)
                 ]
             }
         ], loop=True)
@@ -235,8 +235,8 @@ class AgneauGastrik(Video, Light, RouteBase):
         samplesFX5TapeDelay.set('SamplesFX5TapeDelay', 'Gain', 'Mute', 0.0)
 
         # Synths
-        synths.set('ZTrumpets', 'Mono%20Pan', 'Pan', -0.7)
-        synths.set('ZDiploLike', 'Mono%20Pan', 'Pan', 0.7)
+        synths.set('ZTrumpets', 'Pan', 'Pan', -0.7)
+        synths.set('ZDiploLike', 'Pan', 'Pan', 0.7)
         synthsFX2Delay.set('ZDiploLikeWide', 'Gain', 'Gain', -6.0)
         synthsFX2Delay.set('DubstepHorn', 'Gain', 'Gain', -3.0)
         synthsFX2Delay.set('SynthsFX2Delay', 'Gain', 'Mute', 0.0)

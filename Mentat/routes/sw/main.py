@@ -323,8 +323,8 @@ class SW(Video, Light, RouteBase):
         synthsFX1Reverb.set('SynthsFX1Reverb', 'Gain', 'Mute', 0.0)
         synthsFX2Delay.set('EasyClassical', 'Gain', 'Gain', -9.0)
         synthsFX2Delay.set('SynthsFX2Delay', 'Gain', 'Mute', 0.0)
-        synths.set('EasyClassical', 'Mono%20Pan', 'Pan', -0.5)
-        synths.set('Trap', 'Mono%20Pan', 'Pan', 0.5)
+        synths.set('EasyClassical', 'Pan', 'Pan', -0.5)
+        synths.set('Trap', 'Pan', 'Pan', 0.5)
 
         # Vocals
         vocalsNano.set('normo_exclu', 'on')
@@ -354,7 +354,7 @@ class SW(Video, Light, RouteBase):
         transport.stop()
 
         # keyboards
-        jmjKeyboard.set_sound('ZTrumpets')
+        jmjKeyboard.set_sound('ZTrumpets', jmjBoost=True)
 
 
     @pedalboard_button(8)

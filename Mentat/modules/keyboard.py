@@ -21,6 +21,7 @@ class Keyboard(Module):
         self.scenes = {}
         self.pending_scene = None
 
+
     def route(self, address, args):
         """
         Retrieve available sounds from mididings
@@ -47,7 +48,7 @@ class Keyboard(Module):
 
         return False
 
-    def set_sound(self, name):
+    def set_sound(self, name, jmjBoost=False, mk2Boost=False):
         """
         Set sound by name
 
@@ -59,10 +60,21 @@ class Keyboard(Module):
             self.pending_scene = name
         else:
             for scene in self.scenes:
+                for subs in self.scenes[scene]['subscenes']:
+                    if subs.startswith('C'):
+                        subs = subs[1:]
+                    self.engine.modules['Synths'].set(subs, 'Aux', 'Gain', -70.0)
                 if name in self.scenes[scene]['subscenes']:
                     self.set('scene', self.scenes[scene]['number'])
                     self.set('subscene', self.scenes[scene]['subscenes'].index(name) + 1)
                     self.set('current_sound', name)
                     self.logger.info('switched to sound "%s"' % name)
+                    if jmjBoost: ### TODO : voir pour gérer quand c'est un synthé basse ?
+                        if name.startswith('C'): # Les synthés Carla ne sont pas nommés pareil dans non et dans mididings
+                            name = name[1:]
+                        self.logger.info('|-> boost on "%s" sound' % name)
+                        self.engine.modules['Synths'].set(name, 'Aux', 'Gain', 0.0)
+                    elif mk2Boost:
+                        pass
                     return
             self.logger.error('sound "%s" not found' % name)
