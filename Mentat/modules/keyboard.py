@@ -74,11 +74,12 @@ class Keyboard(Module):
 
     def set_boost(self, boost=False):
 
-        for subs in self.scenes[scene]['subscenes']:
-            if subs.startswith('C'):
-                subs = subs[1:]
-            if not subs.startswith('Low'):
-                self.engine.modules['Synths'].set(subs, 'Aux', 'Gain', -70.0)
+        for scene in self.scenes:
+            for subs in self.scenes[scene]['subscenes']:
+                if subs.startswith('C'):
+                    subs = subs[1:]
+                if not subs.startswith('Low'):
+                    self.engine.modules['Synths'].set(subs, 'Aux', 'Gain', -70.0)
 
         name = self.get('current_sound')
         if boost and not name.startswith('Low'): ### TODO : voir pour gérer quand c'est un synthé basse ?
