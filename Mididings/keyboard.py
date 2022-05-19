@@ -102,7 +102,7 @@ def create_keyboard(name):
                 Scene('LowZSine',
                     lowZSine
                 ),
-                Scene('LowZ8bit',
+                Scene('LowZ8bits',
                     lowZ8bit
                 ),
                 Scene('LowCTrap1',
@@ -156,7 +156,7 @@ def create_keyboard(name):
                 Scene('ZJestoProunk',
                     zJestoProunk
                 ),
-                Scene('Z8Bits',
+                Scene('Z8bits',
                     z8bits
                 ),
                 Scene('CRhodes',
