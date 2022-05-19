@@ -78,14 +78,15 @@ class Keyboard(Module):
             for subs in self.scenes[scene]['subscenes']:
                 if subs.startswith('C') and 'Sampler' not in subs:
                     subs = subs[1:]
-                if not subs.startswith('Low'):
+                if not subs.startswith('Low') and subs in self.engine.modules['Synths'].submodules:
                     self.engine.modules['Synths'].set(subs, 'Aux-A', 'Gain', -70.0)
 
         name = self.get('current_sound')
         if boost and not name.startswith('Low'): ### TODO : voir pour gérer quand c'est un synthé basse ?
             if name.startswith('C') and 'Sampler' not in name: # Les synthés Carla ne sont pas nommés pareil dans non et dans mididings
                 name = name[1:]
-            self.logger.info('|-> boost on "%s" sound' % name)
-            self.engine.modules['Synths'].set(name, 'Aux-A', 'Gain', 0.0)
-
+            if name in self.engine.modules['Synths'].submodules:
+                self.logger.info('|-> boost on "%s" sound' % name)
+                self.engine.modules['Synths'].set(name, 'Aux-A', 'Gain', 0.0)
+                
         self.set('boost', int(boost))
