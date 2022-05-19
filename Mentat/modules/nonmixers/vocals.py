@@ -28,8 +28,8 @@ class Vocals(NonMixer):
                         for vx in ['normo', 'gars', 'meuf']:
                             if vx != name:
                                 vx_strip_name = strip_prefix + vx.capitalize()
-                                self.set(vx_strip_name, 'Aux%20(A)', 'Gain', 0)
-                                self.set(vx_strip_name, 'Aux%20(B)', 'Gain', -70)
+                                self.set(vx_strip_name, 'Aux-A', 'Gain', 0)
+                                self.set(vx_strip_name, 'Aux-B', 'Gain', -70)
 
                     elif state == 'off':
                         self.set(strip_name, 'Gain', 'Mute', 1.0)

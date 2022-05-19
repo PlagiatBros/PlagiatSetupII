@@ -173,7 +173,11 @@ class NonMixer(Module):
 
         '4%20Pole%20Low-Pass%20Filter%20with%20Resonance%20(FCRCIA)': 'Lowpass',
         'AM%20pitchshifter': 'Pitchshifter',
-        'Mono%20Pan': 'Pan'
+        'Mono%20Pan': 'Pan',
+        'Aux%20(A)': 'Aux-A',
+        'Aux%20(B)': 'Aux-B',
+        'Aux%20(C)': 'Aux-C',
+        'Aux%20(D)': 'Aux-D',
     }
 
     parameter_aliases = {
