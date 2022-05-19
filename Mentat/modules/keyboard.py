@@ -48,7 +48,7 @@ class Keyboard(Module):
 
         return False
 
-    def set_sound(self, name, jmjBoost=False, mk2Boost=False):
+    def set_sound(self, name, boost=False):
         """
         Set sound by name
 
@@ -60,22 +60,27 @@ class Keyboard(Module):
             self.pending_scene = name
         else:
             for scene in self.scenes:
-                for subs in self.scenes[scene]['subscenes']:
-                    if subs.startswith('C'):
-                        subs = subs[1:]
-                    if not subs.startswith('Low'):
-                        self.engine.modules['Synths'].set(subs, 'Aux', 'Gain', -70.0)
                 if name in self.scenes[scene]['subscenes']:
                     self.set('scene', self.scenes[scene]['number'])
                     self.set('subscene', self.scenes[scene]['subscenes'].index(name) + 1)
                     self.set('current_sound', name)
                     self.logger.info('switched to sound "%s"' % name)
-                    if jmjBoost and not name.startswith('Low'): ### TODO : voir pour gérer quand c'est un synthé basse ?
-                        if name.startswith('C'): # Les synthés Carla ne sont pas nommés pareil dans non et dans mididings
-                            name = name[1:]
-                        self.logger.info('|-> boost on "%s" sound' % name)
-                        self.engine.modules['Synths'].set(name, 'Aux', 'Gain', 0.0)
-                    elif mk2Boost:
-                        pass
+                    self.set_boost(boost)
                     return
             self.logger.error('sound "%s" not found' % name)
+
+
+    def set_boost(self, boost=False):
+
+        for subs in self.scenes[scene]['subscenes']:
+            if subs.startswith('C'):
+                subs = subs[1:]
+            if not subs.startswith('Low'):
+                self.engine.modules['Synths'].set(subs, 'Aux', 'Gain', -70.0)
+
+        name = self.get('current_sound')
+        if boost and not name.startswith('Low'): ### TODO : voir pour gérer quand c'est un synthé basse ?
+            if name.startswith('C'): # Les synthés Carla ne sont pas nommés pareil dans non et dans mididings
+                name = name[1:]
+            self.logger.info('|-> boost on "%s" sound' % name)
+            self.engine.modules['Synths'].set(name, 'Aux', 'Gain', 0.0)

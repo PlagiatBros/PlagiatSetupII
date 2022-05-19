@@ -82,7 +82,7 @@ class SaperComJaja(Video, Light, RouteBase):
         vocalsKesch.set('normo_exclu', 'on')
 
         # Keyboards
-        jmjKeyboard.set_sound('CTrap', jmjBoost=True)
+        jmjKeyboard.set_sound('CTrap', boost=True)
         #### TODO mk2Keyboard ?
 
     @pedalboard_button(3) # bouton 6 à l'origine
@@ -181,7 +181,7 @@ class SaperComJaja(Video, Light, RouteBase):
         vocalsNanoFX4Disint.set('NanoNormo', 'Gain', 'Mute', 0.0)
 
         # Keyboards
-        jmjKeyboard.set_sound('CDubstepHorn', jmjBoost=True)
+        jmjKeyboard.set_sound('CDubstepHorn', boost=True)
 
     @pedalboard_button(8) # bouton 11 à l'origine
     def mandelaaa_final(self):
@@ -205,6 +205,6 @@ class SaperComJaja(Video, Light, RouteBase):
         vocalsKesch.set('meuf_exclu', 'on')
 
         # Keyboards
-        jmjKeyboard.set_sound('CDubstepHorn', jmjBoost=True)
+        jmjKeyboard.set_sound('CDubstepHorn', boost=True)
 
     #### TODO Méthodes boutons 7 & 8 Jeannot Cock your butter gun?

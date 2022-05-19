@@ -58,7 +58,7 @@ class ViktorHuguau(Video, Light, RouteBase):
         vocalsKesch.set('meuf_exclu', 'on')
 
         # Keyboard
-        jmjKeyboard.set_sound('ZDupieux', jmjBoost=True)
+        jmjKeyboard.set_sound('ZDupieux', boost=True)
 
         # Bass
         bassFX.set('basscape','on')

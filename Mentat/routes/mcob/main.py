@@ -501,4 +501,4 @@ class Mcob(Video, Light, RouteBase):
         vocalsNano.set('meuf_exclu', 'on')
 
         # Keyboards
-        jmjKeyboard.set_sound('ZBombarde', jmjBoost=True)
+        jmjKeyboard.set_sound('ZBombarde', boost=True)

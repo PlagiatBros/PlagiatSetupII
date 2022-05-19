@@ -354,7 +354,7 @@ class SW(Video, Light, RouteBase):
         transport.stop()
 
         # keyboards
-        jmjKeyboard.set_sound('ZTrumpets', jmjBoost=True)
+        jmjKeyboard.set_sound('ZTrumpets', boost=True)
 
 
     @pedalboard_button(8)
