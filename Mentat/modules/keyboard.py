@@ -16,6 +16,8 @@ class Keyboard(Module):
 
         self.add_parameter('sounds', None, 's', default='')
         self.add_parameter('current_sound', None, 's', default='')
+        self.add_parameter('boost', None, 'i', default=0)
+
         self.sounds = []
 
         self.scenes = {}
@@ -84,3 +86,5 @@ class Keyboard(Module):
                 name = name[1:]
             self.logger.info('|-> boost on "%s" sound' % name)
             self.engine.modules['Synths'].set(name, 'Aux', 'Gain', 0.0)
+
+        self.set('boost', int(boost))
