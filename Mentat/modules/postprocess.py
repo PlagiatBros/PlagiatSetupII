@@ -16,6 +16,10 @@ class PostProcess(Module):
 
         autotunes = ['NanoMeuf', 'NanoNormo', 'NanoGars', 'KeschMeuf', 'KeschNormo', 'KeschGars']
         basses = ['Bass', 'BassSynths']
+
+        """
+        Pitch shifter
+        """
         root.add_meta_parameter(
             'pitch_vocals',
             [[autotune, 'pitch'] for autotune in autotunes],
@@ -52,6 +56,9 @@ class PostProcess(Module):
             setter= lambda p: [root.set('pitch_%s' % pitch, p) for pitch in pitches]
         )
 
+        """
+        Lowpass filter
+        """
         root.add_meta_parameter(
             'filter_bass',
             [['Outputs', bass, 'Lowpass', 'Cutoff'] for bass in basses],

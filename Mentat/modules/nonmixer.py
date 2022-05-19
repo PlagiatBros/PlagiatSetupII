@@ -148,7 +148,6 @@ class NonMixer(Module):
                     self.set(*args, **kwargs)
 
 
-                self.create_meta_parameters()
 
         elif address == '/reply':
             if args[0] in self.init_params:
@@ -165,8 +164,12 @@ class NonMixer(Module):
                 if plugin_name == 'Meter':
                     if args[1] < -70:
                         args[1] = -70
-                else:
-                    self.init_params.remove(args[0])
+
+                self.init_params.remove(args[0])
+                if not self.init_params:
+                    self.logger.info(' is ready')
+                    self.create_meta_parameters()
+
 
                 if plugin_name in ['Pan', 'Gain', 'Meter']:
                     self.set(strip, param_shortname, args[1])
