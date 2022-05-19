@@ -45,7 +45,7 @@ class SaperComJaja(Video, Light, RouteBase):
         transport.start()
 
         # Samples
-        samples.set('Samples4', 'Gain', 'Mute', 0.0)
+        samples.set('Samples4', 'Mute', 0.0)
 
         # Keyboards
         jmjKeyboard.set_sound('CLowBoomTrapLine')
@@ -75,7 +75,7 @@ class SaperComJaja(Video, Light, RouteBase):
         transport.start()
 
         # Samples
-        samples.set('Samples4', 'Gain', 'Mute', 0.0)
+        samples.set('Samples4', 'Mute', 0.0)
 
         # Vocals
         vocalsNano.set('gars_exclu', 'on')
@@ -101,7 +101,7 @@ class SaperComJaja(Video, Light, RouteBase):
         transport.start()
 
         # Samples
-        samples.set('Samples4', 'Gain', 'Mute', 0.0)
+        samples.set('Samples4', 'Mute', 0.0)
 
         # Vocals
         vocalsNano.set('normo_exclu', 'on')
@@ -178,7 +178,7 @@ class SaperComJaja(Video, Light, RouteBase):
 
         # Vocals
         vocalsNano.set('normo_exclu', 'on')
-        vocalsNanoFX4Disint.set('NanoNormo', 'Gain', 'Mute', 0.0)
+        vocalsNanoFX4Disint.set('NanoNormo', 'Mute', 0.0)
 
         # Keyboards
         jmjKeyboard.set_sound('CDubstepHorn', boost=True)
@@ -198,7 +198,7 @@ class SaperComJaja(Video, Light, RouteBase):
         transport.start()
 
         # Samples
-        samples.set('Samples4', 'Gain', 'Mute', 0.0)
+        samples.set('Samples4', 'Mute', 0.0)
 
         # Vocals
         vocalsNano.set('normo_exclu', 'on')

@@ -23,8 +23,8 @@ class Vocals(NonMixer):
 
                 def setter(state):
                     if state == 'on':
-                        self.set(strip_name, 'Gain', 'Mute', 0.0)
-                        self.set(ab_strip_name, 'Gain', 'Mute', 0.0)
+                        self.set(strip_name, 'Mute', 0.0)
+                        self.set(ab_strip_name, 'Mute', 0.0)
                         for vx in ['normo', 'gars', 'meuf']:
                             if vx != name:
                                 vx_strip_name = strip_prefix + vx.capitalize()
@@ -32,12 +32,12 @@ class Vocals(NonMixer):
                                 self.set(vx_strip_name, 'Aux-B', 'Gain', -70)
 
                     elif state == 'off':
-                        self.set(strip_name, 'Gain', 'Mute', 1.0)
-                        self.set(ab_strip_name, 'Gain', 'Mute', 1.0)
+                        self.set(strip_name, 'Mute', 1.0)
+                        self.set(ab_strip_name, 'Mute', 1.0)
 
                 self.add_meta_parameter(
                     name,
-                    [[strip_name, 'Gain', 'Mute'], [ab_strip_name, 'Gain', 'Mute']],
+                    [[strip_name, 'Mute'], [ab_strip_name, 'Mute']],
                     getter,
                     setter
                 )

@@ -110,17 +110,27 @@ class NonMixer(Module):
                         if param_shortname in NonMixer.parameter_aliases:
                             param_shortname = NonMixer.parameter_aliases[param_shortname]
 
-                        if plugin_name not in strip_mod.submodules:
-                            strip_mod.add_submodule(Plugin(plugin_name, parent=strip_mod))
+                        if plugin_name in ['Gain', 'Pan', 'Meter']:
+                            # add gain / pan / level params directly to the strip module
+                            strip_mod.add_parameter(param_shortname, parameter_address if plugin_name != 'Meter' else None, 'f', default=None)
+                            strip_mod.parameters[param_shortname].range = args[3:5]
 
-                        plugin_mod = strip_mod.submodules[plugin_name]
-
-                        if plugin_name == 'Meter':
-                            plugin_mod.add_parameter(param_shortname, None, 'f', default=None)
                         else:
-                            plugin_mod.add_parameter(param_shortname, parameter_address, 'f', default=None)
 
-                        plugin_mod.parameters[param_shortname].range = args[3:5]
+                            if plugin_name not in strip_mod.submodules:
+                                strip_mod.add_submodule(Plugin(plugin_name, parent=strip_mod))
+
+                            plugin_mod = strip_mod.submodules[plugin_name]
+
+                            if plugin_name == 'Meter':
+                                # meter is read only
+                                plugin_mod.add_parameter(param_shortname, None, 'f', default=None)
+
+                            else:
+                                plugin_mod.add_parameter(param_shortname, parameter_address, 'f', default=None)
+
+
+                            plugin_mod.parameters[param_shortname].range = args[3:5]
 
                         self.init_params.append(parameter_address)
 
@@ -158,7 +168,10 @@ class NonMixer(Module):
                 else:
                     self.init_params.remove(args[0])
 
-                self.set(strip, plugin_name, param_shortname, args[1])
+                if plugin_name in ['Pan', 'Gain', 'Meter']:
+                    self.set(strip, param_shortname, args[1])
+                else:
+                    self.set(strip, plugin_name, param_shortname, args[1])
 
         return False
 

@@ -53,9 +53,9 @@ class Snapshat(Video, Light, RouteBase):
         transport.start()
 
         # Samples
-        samplesFX6Scape.set('Samples1', 'Gain', 'Gain', -6.0)
-        samplesFX6Scape.set('SamplesFX6Scape', 'Gain', 'Mute', 0.0)
-        samples.set('Samples1', 'Gain', 'Mute', 0.0)
+        samplesFX6Scape.set('Samples1', 'Gain', -6.0)
+        samplesFX6Scape.set('SamplesFX6Scape', 'Mute', 0.0)
+        samples.set('Samples1', 'Mute', 0.0)
 
         prodSampler.send("/instrument/stop", "s:Plagiat/Snapshat/Koto0")
         constantSampler.send("/instrument/stop", "s:BoringBloke")
@@ -79,9 +79,9 @@ class Snapshat(Video, Light, RouteBase):
         transport.start()
 
         # Samples
-        samplesFX6Scape.set('Samples1', 'Gain', 'Gain', -6.0)
-        samplesFX6Scape.set('SamplesFX6Scape', 'Gain', 'Mute', 0.0)
-        samples.set('Samples1', 'Gain', 'Mute', 0.0)
+        samplesFX6Scape.set('Samples1', 'Gain', -6.0)
+        samplesFX6Scape.set('SamplesFX6Scape', 'Mute', 0.0)
+        samples.set('Samples1', 'Mute', 0.0)
 
         # Vocals
         vocalsNano.set('meuf_exclu', 'on')
@@ -96,8 +96,8 @@ class Snapshat(Video, Light, RouteBase):
         seq192.select('on', 'contrechant_*')
 
         # Vocals
-        vocalsNanoFX3TrapVerb.set('NanoMeuf', 'Gain', 'Gain', -70.0) # en cas de sortie de Trap
-        vocalsNanoFX3TrapVerb.set('VocalsNanoFX3TrapVerb', 'Gain', 'Mute', 1.0)
+        vocalsNanoFX3TrapVerb.set('NanoMeuf', 'Gain', -70.0) # en cas de sortie de Trap
+        vocalsNanoFX3TrapVerb.set('VocalsNanoFX3TrapVerb', 'Mute', 1.0)
 
 
     @pedalboard_button(4)
@@ -115,18 +115,18 @@ class Snapshat(Video, Light, RouteBase):
         transport.start()
 
         # Samples
-        samplesFX6Scape.set('Samples1', 'Gain', 'Gain', -6.0)
-        samplesFX6Scape.set('SamplesFX6Scape', 'Gain', 'Mute', 0.0)
-        samples.set('Samples1', 'Gain', 'Mute', 0.0)
-        samples.set('Samples2', 'Gain', 'Mute', 0.0)
+        samplesFX6Scape.set('Samples1', 'Gain', -6.0)
+        samplesFX6Scape.set('SamplesFX6Scape', 'Mute', 0.0)
+        samples.set('Samples1', 'Mute', 0.0)
+        samples.set('Samples2', 'Mute', 0.0)
 
         # Vocals
         vocalsNano.set('meuf_exclu', 'on')
-        vocalsNanoFX2Delay.set('NanoMeuf', 'Gain', 'Gain', 0.0)
-        vocalsNanoFX2Delay.set('VocalsNanoFX2Delay', 'Gain', 'Mute', 0.0)
+        vocalsNanoFX2Delay.set('NanoMeuf', 'Gain', 0.0)
+        vocalsNanoFX2Delay.set('VocalsNanoFX2Delay', 'Mute', 0.0)
         vocalsKesch.set('gars_exclu', 'on')
-        vocalsKeschFX2Delay.set('KeschMeuf', 'Gain', 'Gain', 0.0)
-        vocalsKeschFX2Delay.set('VocalsKeschFX2Delay', 'Gain', 'Mute', 0.0)
+        vocalsKeschFX2Delay.set('KeschMeuf', 'Gain', 0.0)
+        vocalsKeschFX2Delay.set('VocalsKeschFX2Delay', 'Mute', 0.0)
 
         # Sequences (Mentat)
         self.start_sequence('refrain', {
@@ -142,8 +142,8 @@ class Snapshat(Video, Light, RouteBase):
         TRAP (couplet)
         """
         # Vocals
-        vocalsNanoFX3TrapVerb.set('NanoMeuf', 'Gain', 'Gain', 0.0)
-        vocalsNanoFX3TrapVerb.set('VocalsNanoFX3TrapVerb', 'Gain', 'Mute', 0.0)
+        vocalsNanoFX3TrapVerb.set('NanoMeuf', 'Gain', 0.0)
+        vocalsNanoFX3TrapVerb.set('VocalsNanoFX3TrapVerb', 'Mute', 0.0)
 
         # Samples
         postprocess.animate_filter('Samples', None, 1000, 1)

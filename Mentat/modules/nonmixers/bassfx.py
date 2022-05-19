@@ -26,21 +26,21 @@ class BassFX(NonMixer):
 
                     def setter(state):
                         if state == 'on':
-                            self.set(strip_name + 'In', 'Gain', 'Mute', 0.0)
-                            self.set(strip_name, 'Gain', 'Mute', 0.0)
+                            self.set(strip_name + 'In', 'Mute', 0.0)
+                            self.set(strip_name, 'Mute', 0.0)
                         elif state ==  'off':
-                            self.set(strip_name + 'In', 'Gain', 'Mute', 1.0)
-                            self.set(strip_name, 'Gain', 'Mute', 1.0)
+                            self.set(strip_name + 'In', 'Mute', 1.0)
+                            self.set(strip_name, 'Mute', 1.0)
                         elif state == 'preon':
-                            self.set(strip_name + 'In', 'Gain', 'Mute', 0.0)
-                            self.set(strip_name, 'Gain', 'Mute', 1.0)
+                            self.set(strip_name + 'In', 'Mute', 0.0)
+                            self.set(strip_name, 'Mute', 1.0)
                         elif state == 'poston':
-                            self.set(strip_name + 'In', 'Gain', 'Mute', 1.0)
-                            self.set(strip_name, 'Gain', 'Mute', 0.0)
+                            self.set(strip_name + 'In', 'Mute', 1.0)
+                            self.set(strip_name, 'Mute', 0.0)
 
                     self.add_meta_parameter(
                         metaparam_name,
-                        [[strip_name + 'In', 'Gain', 'Mute'], [strip_name, 'Gain', 'Mute']],                                                   # params
+                        [[strip_name + 'In', 'Mute'], [strip_name, 'Mute']],                                                   # params
                         getter, setter
                     )
 

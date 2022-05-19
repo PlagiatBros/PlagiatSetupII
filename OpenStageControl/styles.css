@@ -72,6 +72,28 @@
     display: flex;
     align-items: center;
 }
+
+.fader-container.design-compact .value {
+    position: absolute;
+    pointer-events: none;
+    bottom: 0;
+    left:0;
+    right: 0;
+    width: 100%;
+    text-align: center;
+}
+.fader-container.design-compact.horizontal .label {
+    transform: none;
+    text-overflow: ellipsis;
+    -webkit-writing-mode:  initial;
+    writing-mode: initial;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    align-content: center;
+    margin:0;
+}
+
 .strip {
     --color-background: var(--strip-bg);
     --widget-padding: 10rem;

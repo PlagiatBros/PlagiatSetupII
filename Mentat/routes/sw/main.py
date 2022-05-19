@@ -57,7 +57,7 @@ class SW(Video, Light, RouteBase):
         transport.start()
 
         # Samples
-        samples.set('Samples2', 'Gain', 'Mute', 0.0)
+        samples.set('Samples2', 'Mute', 0.0)
 
         # Vocals
         vocalsNano.set('meuf_exclu', 'on')
@@ -82,7 +82,7 @@ class SW(Video, Light, RouteBase):
         transport.start()
 
         # Samples
-        samples.set('Samples2', 'Gain', 'Mute', 0.0)
+        samples.set('Samples2', 'Mute', 0.0)
 
         # Vocals
         vocalsNano.set('meuf_exclu', 'on')
@@ -95,7 +95,7 @@ class SW(Video, Light, RouteBase):
         self.start_sequence('couplet1', [
             {}, # bar 1
             { # bar 2
-                4 + 1/2. : lambda: samples.set('Samples2', 'Gain', 'Mute', 1.0)
+                4 + 1/2. : lambda: samples.set('Samples2', 'Mute', 1.0)
             },
             { # bar 3 ("Once")
                 1 : lambda: [
@@ -106,14 +106,14 @@ class SW(Video, Light, RouteBase):
                     transport.set_cycle('4/4', 'Xxxx'),
 
                     # Samples
-                    samples.set('Samples2', 'Gain', 'Mute', 0.0),
-                    samplesFX7Degrade.set('Samples2', 'Gain', 'Gain', -3.0),
-                    samplesFX7Degrade.set('SamplesFX7Degrade', 'Gain', 'Mute', 0.0),
-                    samplesFX6Scape.set('SamplesFX7Degrade', 'Gain', 'Gain', -18.0),
-                    samplesFX6Scape.set('SamplesFX6Scape', 'Gain', 'Mute', 0.0),
+                    samples.set('Samples2', 'Mute', 0.0),
+                    samplesFX7Degrade.set('Samples2', 'Gain', -3.0),
+                    samplesFX7Degrade.set('SamplesFX7Degrade', 'Mute', 0.0),
+                    samplesFX6Scape.set('SamplesFX7Degrade', 'Gain', -18.0),
+                    samplesFX6Scape.set('SamplesFX6Scape', 'Mute', 0.0),
 
                     # Vocals
-                    vocalsKeschFX2Delay.set('VocalsKeschFX2Delay', 'Gain', 'Mute', 0.0),
+                    vocalsKeschFX2Delay.set('VocalsKeschFX2Delay', 'Mute', 0.0),
                 ]
             },
             {},{},{},{},{}, # bars 2 - 6
@@ -123,9 +123,9 @@ class SW(Video, Light, RouteBase):
                     seq192.select('solo', 'couplet1-2_*'),
 
                     # Vocals
-                    vocalsKeschFX2Delay.set('KeschMeuf', 'Gain', 'Gain', 0.0)
+                    vocalsKeschFX2Delay.set('KeschMeuf', 'Gain', 0.0)
                 ],
-                3: lambda: vocalsKeschFX2Delay.set('KeschMeuf', 'Gain', 'Gain', -70.0),
+                3: lambda: vocalsKeschFX2Delay.set('KeschMeuf', 'Gain', -70.0),
             },
             {}, # bar 8
             { # bar 9 ("Two two two two")
@@ -138,13 +138,13 @@ class SW(Video, Light, RouteBase):
                     seq192.select('solo', 'couplet1-2_*'),
 
                     # Vocals
-                    vocalsKeschFX2Delay.set('KeschMeuf', 'Gain', 'Gain', 0.0),
+                    vocalsKeschFX2Delay.set('KeschMeuf', 'Gain', 0.0),
 
                     # Samples
-                    samplesFX7Degrade.set('Samples2', 'Gain', 'Gain', -70.0),
+                    samplesFX7Degrade.set('Samples2', 'Gain', -70.0),
                     prodSampler.send('/instrument/play', 's:Plagiat/SW/BregoLong', 100)
                 ],
-                3: lambda: vocalsKeschFX2Delay.set('KeschMeuf', 'Gain', 'Gain', -70.0),
+                3: lambda: vocalsKeschFX2Delay.set('KeschMeuf', 'Gain', -70.0),
                 4: lambda: vocalsKesch.set('normo_exclu', 'on')
             },
             {}, # bar 22
@@ -169,21 +169,21 @@ class SW(Video, Light, RouteBase):
         transport.start()
 
         # Samples
-        samples.set('Samples1', 'Gain', 'Mute', 0.0)
-        samples.set('Samples2', 'Gain', 'Mute', 0.0)
-        samplesFX7Degrade.set('Samples2', 'Gain', 'Gain', -3.0)
-        samplesFX7Degrade.set('SamplesFX7Degrade', 'Gain', 'Mute', 0.0)
-        samplesFX6Scape.set('Samples1', 'Gain', 'Gain', -4.5)
-        samplesFX6Scape.set('SamplesFX7Degrade', 'Gain', 'Gain', 0.0)
-        samplesFX6Scape.set('SamplesFX6Scape', 'Gain', 'Mute', 0.0)
+        samples.set('Samples1', 'Mute', 0.0)
+        samples.set('Samples2', 'Mute', 0.0)
+        samplesFX7Degrade.set('Samples2', 'Gain', -3.0)
+        samplesFX7Degrade.set('SamplesFX7Degrade', 'Mute', 0.0)
+        samplesFX6Scape.set('Samples1', 'Gain', -4.5)
+        samplesFX6Scape.set('SamplesFX7Degrade', 'Gain', 0.0)
+        samplesFX6Scape.set('SamplesFX6Scape', 'Mute', 0.0)
 
         # Vocals
         vocalsNano.set('meuf_exclu', 'on')
         vocalsNano.set('normo', 'on')
         vocalsNano.set('gars', 'on')
         vocalsKesch.set('meuf_exclu', 'on')
-        vocalsKeschFX2Delay.set('KeschMeuf', 'Gain', 'Gain', 0.0)
-        vocalsKeschFX2Delay.set('VocalsKeschFX2Delay', 'Gain', 'Mute', 0.0)
+        vocalsKeschFX2Delay.set('KeschMeuf', 'Gain', 0.0)
+        vocalsKeschFX2Delay.set('VocalsKeschFX2Delay', 'Mute', 0.0)
 
         # Bass
         bassFX.set('distohi', 'on')
@@ -206,28 +206,28 @@ class SW(Video, Light, RouteBase):
         transport.start()
 
         # Samples
-        samples.set('Samples1', 'Gain', 'Mute', 0.0)
-        samples.set('Samples2', 'Gain', 'Mute', 0.0)
-        samplesFX6Scape.set('Samples1', 'Gain', 'Gain', -4.5)
-        samplesFX6Scape.set('SamplesFX6Scape', 'Gain', 'Mute', 0.0)
+        samples.set('Samples1', 'Mute', 0.0)
+        samples.set('Samples2', 'Mute', 0.0)
+        samplesFX6Scape.set('Samples1', 'Gain', -4.5)
+        samplesFX6Scape.set('SamplesFX6Scape', 'Mute', 0.0)
 
         # Keyboards
-        synthsFX2Delay.set('ZDiploLikeWide', 'Gain', 'Gain', -6.0)
-        synthsFX2Delay.set('SynthsFX2Delay', 'Gain', 'Mute', 0.0)
+        synthsFX2Delay.set('ZDiploLikeWide', 'Gain', -6.0)
+        synthsFX2Delay.set('SynthsFX2Delay', 'Mute', 0.0)
 
 
         # Vocals
         vocalsNano.set('meuf_exclu', 'on')
-        vocalsNanoFX2Delay.set('NanoMeuf', 'Gain', 'Gain', 0.0)
-        vocalsNanoFX2Delay.set('VocalsNanoFX2Delay', 'Gain', 'Mute', 0.0)
-        vocalsNanoFX4Disint.set('NanoMeuf', 'Gain', 'Gain', 0.0)
-        vocalsNanoFX4Disint.set('VocalsNanoFX4Disint', 'Gain', 'Mute', 0.0)
+        vocalsNanoFX2Delay.set('NanoMeuf', 'Gain', 0.0)
+        vocalsNanoFX2Delay.set('VocalsNanoFX2Delay', 'Mute', 0.0)
+        vocalsNanoFX4Disint.set('NanoMeuf', 'Gain', 0.0)
+        vocalsNanoFX4Disint.set('VocalsNanoFX4Disint', 'Mute', 0.0)
 
         vocalsKesch.set('meuf_exclu', 'on')
-        vocalsKeschFX2Delay.set('KeschMeuf', 'Gain', 'Gain', 0.0)
-        vocalsKeschFX2Delay.set('VocalsKeschFX2Delay', 'Gain', 'Mute', 0.0)
-        vocalsKeschFX4Disint.set('KeschMeuf', 'Gain', 'Gain', 0.0)
-        vocalsKeschFX4Disint.set('VocalsKeschFX4Disint', 'Gain', 'Mute', 0.0)
+        vocalsKeschFX2Delay.set('KeschMeuf', 'Gain', 0.0)
+        vocalsKeschFX2Delay.set('VocalsKeschFX2Delay', 'Mute', 0.0)
+        vocalsKeschFX4Disint.set('KeschMeuf', 'Gain', 0.0)
+        vocalsKeschFX4Disint.set('VocalsKeschFX4Disint', 'Mute', 0.0)
 
         # Bass
         bassFX.set('distohi', 'on')
@@ -247,12 +247,12 @@ class SW(Video, Light, RouteBase):
         transport.start()
 
         # Samples
-        samples.set('Samples1', 'Gain', 'Mute', 0.0)
-        samples.set('Samples2', 'Gain', 'Mute', 0.0)
-        samplesFX6Scape.set('Samples1', 'Gain', 'Gain', -4.5)
-        samplesFX7Degrade.set('SamplesFX7Degrade', 'Gain', 'Mute', 0.0),
-        samplesFX6Scape.set('SamplesFX7Degrade', 'Gain', 'Gain', -18.0),
-        samplesFX6Scape.set('SamplesFX6Scape', 'Gain', 'Mute', 0.0)
+        samples.set('Samples1', 'Mute', 0.0)
+        samples.set('Samples2', 'Mute', 0.0)
+        samplesFX6Scape.set('Samples1', 'Gain', -4.5)
+        samplesFX7Degrade.set('SamplesFX7Degrade', 'Mute', 0.0),
+        samplesFX6Scape.set('SamplesFX7Degrade', 'Gain', -18.0),
+        samplesFX6Scape.set('SamplesFX6Scape', 'Mute', 0.0)
 
         # Vocals
         vocalsNano.set('meuf_exclu', 'on')
@@ -285,17 +285,17 @@ class SW(Video, Light, RouteBase):
         transport.start()
 
         # Samples
-        samples.set('Samples1', 'Gain', 'Mute', 0.0)
-        samples.set('Samples2', 'Gain', 'Mute', 0.0)
-        samplesFX6Scape.set('Samples1', 'Gain', 'Gain', -4.5)
-        samplesFX7Degrade.set('SamplesFX7Degrade', 'Gain', 'Mute', 0.0),
-        samplesFX6Scape.set('SamplesFX7Degrade', 'Gain', 'Gain', -18.0),
-        samplesFX6Scape.set('SamplesFX6Scape', 'Gain', 'Mute', 0.0)
+        samples.set('Samples1', 'Mute', 0.0)
+        samples.set('Samples2', 'Mute', 0.0)
+        samplesFX6Scape.set('Samples1', 'Gain', -4.5)
+        samplesFX7Degrade.set('SamplesFX7Degrade', 'Mute', 0.0),
+        samplesFX6Scape.set('SamplesFX7Degrade', 'Gain', -18.0),
+        samplesFX6Scape.set('SamplesFX6Scape', 'Mute', 0.0)
 
         # Vocals
         vocalsNano.set('meuf_exclu', 'on')
-        vocalsNanoFX2Delay.set('NanoMeuf', 'Gain', 'Gain', 0.0)
-        vocalsNanoFX4Disint.set('NanoMeuf', 'Gain', 'Gain', 0.0)
+        vocalsNanoFX2Delay.set('NanoMeuf', 'Gain', 0.0)
+        vocalsNanoFX4Disint.set('NanoMeuf', 'Gain', 0.0)
         vocalsKesch.set('meuf_exclu', 'on')
 
     @pedalboard_button(7)
@@ -313,18 +313,18 @@ class SW(Video, Light, RouteBase):
         transport.start()
 
         # Samples
-        samples.set('Samples1', 'Gain', 'Mute', 0.0)
-        samples.set('Samples2', 'Gain', 'Mute', 0.0)
-        samplesFX6Scape.set('Samples1', 'Gain', 'Gain', -6.0)
-        samplesFX6Scape.set('SamplesFX6Scape', 'Gain', 'Mute', 0.0)
+        samples.set('Samples1', 'Mute', 0.0)
+        samples.set('Samples2', 'Mute', 0.0)
+        samplesFX6Scape.set('Samples1', 'Gain', -6.0)
+        samplesFX6Scape.set('SamplesFX6Scape', 'Mute', 0.0)
 
         # Synths
-        synthsFX1Reverb.set('EasyClassical', 'Gain', 'Gain', -12.0)
-        synthsFX1Reverb.set('SynthsFX1Reverb', 'Gain', 'Mute', 0.0)
-        synthsFX2Delay.set('EasyClassical', 'Gain', 'Gain', -9.0)
-        synthsFX2Delay.set('SynthsFX2Delay', 'Gain', 'Mute', 0.0)
-        synths.set('EasyClassical', 'Pan', 'Pan', -0.5)
-        synths.set('Trap', 'Pan', 'Pan', 0.5)
+        synthsFX1Reverb.set('EasyClassical', 'Gain', -12.0)
+        synthsFX1Reverb.set('SynthsFX1Reverb', 'Mute', 0.0)
+        synthsFX2Delay.set('EasyClassical', 'Gain', -9.0)
+        synthsFX2Delay.set('SynthsFX2Delay', 'Mute', 0.0)
+        synths.set('EasyClassical', 'Pan', -0.5)
+        synths.set('Trap', 'Pan', 0.5)
 
         # Vocals
         vocalsNano.set('normo_exclu', 'on')
@@ -377,12 +377,12 @@ class SW(Video, Light, RouteBase):
         transport.stop()
 
         # Samples
-        samples.set('Samples1', 'Gain', 'Mute', 0.0)
-        samples.set('Samples2', 'Gain', 'Mute', 0.0)
-        samplesFX6Scape.set('Samples1', 'Gain', 'Gain', -4.5)
-        samplesFX7Degrade.set('SamplesFX7Degrade', 'Gain', 'Mute', 0.0),
-        samplesFX6Scape.set('SamplesFX7Degrade', 'Gain', 'Gain', -18.0),
-        samplesFX6Scape.set('SamplesFX6Scape', 'Gain', 'Mute', 0.0)
+        samples.set('Samples1', 'Mute', 0.0)
+        samples.set('Samples2', 'Mute', 0.0)
+        samplesFX6Scape.set('Samples1', 'Gain', -4.5)
+        samplesFX7Degrade.set('SamplesFX7Degrade', 'Mute', 0.0),
+        samplesFX6Scape.set('SamplesFX7Degrade', 'Gain', -18.0),
+        samplesFX6Scape.set('SamplesFX6Scape', 'Mute', 0.0)
 
 
     @pedalboard_button(4)

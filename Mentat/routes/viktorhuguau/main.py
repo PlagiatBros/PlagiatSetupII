@@ -84,7 +84,7 @@ class ViktorHuguau(Video, Light, RouteBase):
         self.reset()
 
         # Samples
-        samples.set('Samples1', 'Gain', 'Mute', 0.0)
+        samples.set('Samples1', 'Mute', 0.0)
         prodSampler.send('/instrument/play', 's:Plagiat/ViktorHuguau/blast')
 
     @mk2_button(4, 'purple')
@@ -96,5 +96,5 @@ class ViktorHuguau(Video, Light, RouteBase):
         self.reset()
 
         # Samples
-        samples.set('Samples1', 'Gain', 'Mute', 0.0)
+        samples.set('Samples1', 'Mute', 0.0)
         prodSampler.send('/instrument/play', 's:Plagiat/ViktorHuguau/Sax')

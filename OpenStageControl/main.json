@@ -496,7 +496,7 @@
                     "value": "",
                     "default": "",
                     "linkId": "",
-                    "address": "/Outputs/FOH/Meter",
+                    "address": "/Outputs/FOH",
                     "preArgs": "Level",
                     "typeTags": "",
                     "decimals": 2,

@@ -53,11 +53,11 @@ class RamenerMooncup(Video, Light, RouteBase):
         transport.start()
 
         # Samples
-        samples.set('Samples1', 'Gain', 'Mute', 0.0)
-        samples.set('Samples2', 'Gain', 'Mute', 0.0)
-        samples.set('Samples3', 'Gain', 'Mute', 0.0)
-        samples.set('Samples4', 'Gain', 'Mute', 0.0)
-        samples.set('Samples5', 'Gain', 'Mute', 0.0)
+        samples.set('Samples1', 'Mute', 0.0)
+        samples.set('Samples2', 'Mute', 0.0)
+        samples.set('Samples3', 'Mute', 0.0)
+        samples.set('Samples4', 'Mute', 0.0)
+        samples.set('Samples5', 'Mute', 0.0)
 
         # Vocals
         vocalsNano.set('gars_exclu', 'on')
@@ -69,12 +69,12 @@ class RamenerMooncup(Video, Light, RouteBase):
         COUPLET 1
         """
         # Samples
-        samples.set('Samples1', 'Gain', 'Mute', 0.0)
-        samples.set('Samples[1-5]', 'Gain', 'Gain', -9.0)
-        samplesFX3Reverb.set('Samples[1-5]', 'Gain', 'Gain', -12.0)
-        samplesFX3Reverb.set('SamplesFX3Reverb', 'Gain', 'Mute', 0.0)
-        samplesFX2Delay.set('Samples[2-4]', 'Gain', 'Gain', -16.0)
-        samplesFX2Delay.set('SamplesFX2Delay', 'Gain', 'Mute', 0.0)
+        samples.set('Samples1', 'Mute', 0.0)
+        samples.set('Samples[1-5]', 'Gain', -9.0)
+        samplesFX3Reverb.set('Samples[1-5]', 'Gain', -12.0)
+        samplesFX3Reverb.set('SamplesFX3Reverb', 'Mute', 0.0)
+        samplesFX2Delay.set('Samples[2-4]', 'Gain', -16.0)
+        samplesFX2Delay.set('SamplesFX2Delay', 'Mute', 0.0)
         postprocess.animate_pitch('*', 1, 0.25, 0.75)
 
         # TODO ???: envoyer samples dans la reverb
@@ -99,13 +99,13 @@ class RamenerMooncup(Video, Light, RouteBase):
                     2: lambda: seq192.select('solo', 'dummy'),
                     2 + 0.4: lambda: postprocess.animate_pitch(['Samples', 'Synths'], None, 1, 0.1),
                     2 + 1/2. : lambda: [
-                        samples.set('Samples[1-5]', 'Gain', 'Gain', -9.0),
-                        samplesFX2Delay.set('Samples[2-4]', 'Gain', 'Gain', -16.0),
-                        samplesFX6Scape.set('Samples1', 'Gain', 'Gain', -12.0),
-                        samplesFX5TapeDelay.set('Samples[1-5]', 'Gain', 'Gain', -18.0),
-                        samplesFX2Delay.set('SamplesFX2Delay', 'Gain', 'Mute', 0.0),
-                        samplesFX6Scape.set('SamplesFX6Scape', 'Gain', 'Mute', 0.0),
-                        samplesFX5TapeDelay.set('SamplesFX5TapeDelay', 'Gain', 'Mute', 0.0),
+                        samples.set('Samples[1-5]', 'Gain', -9.0),
+                        samplesFX2Delay.set('Samples[2-4]', 'Gain', -16.0),
+                        samplesFX6Scape.set('Samples1', 'Gain', -12.0),
+                        samplesFX5TapeDelay.set('Samples[1-5]', 'Gain', -18.0),
+                        samplesFX2Delay.set('SamplesFX2Delay', 'Mute', 0.0),
+                        samplesFX6Scape.set('SamplesFX6Scape', 'Mute', 0.0),
+                        samplesFX5TapeDelay.set('SamplesFX5TapeDelay', 'Mute', 0.0),
 
                         # Sequences
                         seq192.select('solo', 'couplet1_*'),
@@ -136,16 +136,16 @@ class RamenerMooncup(Video, Light, RouteBase):
         transport.start()
 
         # Samples
-        samples.set('Samples1', 'Gain', 'Gain', 0.0)
-        samples.set('Samples1', 'Gain', 'Mute', 0.0)
-        samplesFX2Delay.set('Samples1', 'Gain', 'Gain', -6.0),
-        samplesFX6Scape.set('Samples1', 'Gain', 'Gain', -18.0),
-        samplesFX5TapeDelay.set('Samples1', 'Gain', 'Gain', -9.0),
-        samplesFX2Delay.set('SamplesFX2Delay', 'Gain', 'Mute', 0.0),
+        samples.set('Samples1', 'Gain', 0.0)
+        samples.set('Samples1', 'Mute', 0.0)
+        samplesFX2Delay.set('Samples1', 'Gain', -6.0),
+        samplesFX6Scape.set('Samples1', 'Gain', -18.0),
+        samplesFX5TapeDelay.set('Samples1', 'Gain', -9.0),
+        samplesFX2Delay.set('SamplesFX2Delay', 'Mute', 0.0),
         samplesFX2Delay.set('SamplesFX2Delay', 'Invada%20Delay%20Munge%20(mono%20in)', 'Delay%201', 0.17)
         samplesFX2Delay.set('SamplesFX2Delay', 'Invada%20Delay%20Munge%20(mono%20in)', 'Delay%202', 0.5)
-        samplesFX6Scape.set('SamplesFX6Scape', 'Gain', 'Mute', 0.0),
-        samplesFX5TapeDelay.set('SamplesFX5TapeDelay', 'Gain', 'Mute', 0.0),
+        samplesFX6Scape.set('SamplesFX6Scape', 'Mute', 0.0),
+        samplesFX5TapeDelay.set('SamplesFX5TapeDelay', 'Mute', 0.0),
 
         # Sequences (Mentat)
         self.start_sequence('delays', [
@@ -174,7 +174,7 @@ class RamenerMooncup(Video, Light, RouteBase):
         transport.start()
 
         # Samples
-        samples.set('Samples[1-5]', 'Gain', 'Mute', 0.0)
+        samples.set('Samples[1-5]', 'Mute', 0.0)
 
         # Keyboards
         jmjKeyboard.set_sound('LowZDancestep')
@@ -199,13 +199,13 @@ class RamenerMooncup(Video, Light, RouteBase):
         transport.start()
 
         # Samples
-        samples.set('Samples1', 'Gain', 'Mute', 0.0)
-        samplesFX1Delay.set('Samples1', 'Gain', 'Gain', 0.0),
-        samplesFX6Scape.set('Samples1', 'Gain', 'Gain', 0.0),
-        samplesFX5TapeDelay.set('Samples1', 'Gain', 'Gain', 0.0),
-        samplesFX1Delay.set('SamplesFX1Delay', 'Gain', 'Mute', 0.0),
-        samplesFX6Scape.set('SamplesFX6Scape', 'Gain', 'Mute', 0.0),
-        samplesFX5TapeDelay.set('SamplesFX5TapeDelay', 'Gain', 'Gain', 0.0),
+        samples.set('Samples1', 'Mute', 0.0)
+        samplesFX1Delay.set('Samples1', 'Gain', 0.0),
+        samplesFX6Scape.set('Samples1', 'Gain', 0.0),
+        samplesFX5TapeDelay.set('Samples1', 'Gain', 0.0),
+        samplesFX1Delay.set('SamplesFX1Delay', 'Mute', 0.0),
+        samplesFX6Scape.set('SamplesFX6Scape', 'Mute', 0.0),
+        samplesFX5TapeDelay.set('SamplesFX5TapeDelay', 'Gain', 0.0),
 
 
         # Keyboards
@@ -230,7 +230,7 @@ class RamenerMooncup(Video, Light, RouteBase):
             { # bar 17
                 1: lambda: [
                     # Samples
-                    samples.set('Samples[1-5]', 'Gain', 'Mute', 0.0),
+                    samples.set('Samples[1-5]', 'Mute', 0.0),
 
                     # Sequences
                     seq192.set('on', 'couplet2-3'),
@@ -282,7 +282,7 @@ class RamenerMooncup(Video, Light, RouteBase):
         transport.start()
 
         # Samples
-        samples.set('Samples1', 'Gain', 'Mute', 0.0)
+        samples.set('Samples1', 'Mute', 0.0)
 
         # Keyboards
         jmjKeyboard.set_sound('LowZDubstep')
@@ -306,7 +306,7 @@ class RamenerMooncup(Video, Light, RouteBase):
         transport.start()
 
         # Samples
-        samples.set('Samples1', 'Gain', 'Mute', 0.0)
+        samples.set('Samples1', 'Mute', 0.0)
 
         # Keyboards
         jmjKeyboard.set_sound('LowZDancestep')
@@ -342,20 +342,20 @@ class RamenerMooncup(Video, Light, RouteBase):
         transport.stop()
 
         # Samples
-        samples.set('Samples1', 'Gain', 'Mute', 0.0)
+        samples.set('Samples1', 'Mute', 0.0)
         #### TODO constantSampler.send('/instrument/play', 's:Plagiat/RamenerMooncup/') #### METTRE LE SAMPLE DANS CONSTANTSAMPLER
 
         # Vocals
         vocalsNano.set('meuf_exclu', 'on')
         vocalsNano.set('normo', 'on')
         vocalsNano.set('gars', 'on')
-        vocalsNanoFX2Delay.set('Nano*', 'Gain', 'Gain', 0.0)
-        vocalsNanoFX2Delay.set('VocalsNanoFX2Delay', 'Gain', 'Mute', 0.0)
+        vocalsNanoFX2Delay.set('Nano*', 'Gain', 0.0)
+        vocalsNanoFX2Delay.set('VocalsNanoFX2Delay', 'Mute', 0.0)
         vocalsKesch.set('meuf_exclu', 'on')
         vocalsKesch.set('normo', 'on')
         vocalsKesch.set('gars', 'on')
-        vocalsKeschFX2Delay.set('Kesch*', 'Gain', 'Gain', 0.0)
-        vocalsKeschFX2Delay.set('VocalsKeschFX2Delay', 'Gain', 'Mute', 0.0)
+        vocalsKeschFX2Delay.set('Kesch*', 'Gain', 0.0)
+        vocalsKeschFX2Delay.set('VocalsKeschFX2Delay', 'Mute', 0.0)
 
 
         self.start_sequence('ramener', [
@@ -371,7 +371,7 @@ class RamenerMooncup(Video, Light, RouteBase):
                 transport.start(),
 
                 # Samples
-                samples.set('Samples1', 'Gain', 'Mute', 0.0)
+                samples.set('Samples1', 'Mute', 0.0)
             }
         ], loop=False)
 
@@ -390,7 +390,7 @@ class RamenerMooncup(Video, Light, RouteBase):
         transport.start()
 
         # Samples
-        samples.set('Samples1', 'Gain', 'Mute', 0.0)
+        samples.set('Samples1', 'Mute', 0.0)
 
 
         # Vocals

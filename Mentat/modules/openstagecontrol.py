@@ -249,68 +249,82 @@ class OpenStageControl(Module):
                     strip['widgets'].append(plugins)
                     plugs = {}
                     for plugname, plugmod in smod.submodules.items():
-                        if plugname != 'Gain' and plugname != 'Meter':
-                            if plugname not in plugs:
-                                modal = {
-                                    'type': 'modal',
-                                    'label': urllib.parse.unquote(plugname),
-                                    'popupLabel': '%s > %s' % (urllib.parse.unquote(sname), urllib.parse.unquote(plugname)),
-                                    'layout': 'horizontal',
-                                    'height': 30,
-                                    'css': 'class: plugin-modal',
-                                    'popupPadding': 1,
-                                    'innerPadding': True,
-                                    'popupHeight': 400,
-                                    'popupWidth': 800,
-                                    'widgets': []
-                                }
-                                plugs[plugname] = modal
-                                plugins['widgets'].append(modal)
+                        if plugname not in plugs:
+                            modal = {
+                                'type': 'modal',
+                                'label': urllib.parse.unquote(plugname),
+                                'popupLabel': '%s > %s' % (urllib.parse.unquote(sname), urllib.parse.unquote(plugname)),
+                                'layout': 'horizontal',
+                                'height': 30,
+                                'css': 'class: plugin-modal',
+                                'popupPadding': 1,
+                                'innerPadding': True,
+                                'popupHeight': 400,
+                                'popupWidth': 800,
+                                'widgets': []
+                            }
+                            plugs[plugname] = modal
+                            plugins['widgets'].append(modal)
 
-                            for pname in plugmod.parameters:
+                        for pname in plugmod.parameters:
 
-                                param = plugmod.parameters[pname]
-                                modal['widgets'].append({
-                                    'type': 'panel',
-                                    'layout': 'vertical',
-                                    'css': 'class: strip',
-                                    'html': '<div class="label center">%s</div>' % urllib.parse.unquote(pname),
-                                    'width': 120,
-                                    'widgets': [
-                                        {
-                                            'type': 'knob',
-                                            'horizontal': True,
-                                            'pips': True,
-                                            'range': {'min': {'%.1f' % param.range[0]: param.range[0]}, 'max': {'%.1f' % param.range[1]: param.range[1]}},
-                                            'value': param.args[0],
-                                            'default': param.args[0],
-                                            'doubleTap': True,
-                                            'linkId': param.address,
-                                            'address': '/%s/%s/%s' % (name, sname, plugname),
-                                            'preArgs': pname,
-                                            'decimals': 5,
-                                            'pips': True,
-                                            'expand': True,
-                                            'design': 'solid'
-                                        },
-                                        {
-                                            'type': 'input',
-                                            'width': 120,
-                                            'decimals': 5,
-                                            'linkId': param.address,
-                                            'bypass': True
-                                        }
-                                    ]
-                                })
+                            param = plugmod.parameters[pname]
+                            modal['widgets'].append({
+                                'type': 'panel',
+                                'layout': 'vertical',
+                                'css': 'class: strip',
+                                'html': '<div class="label center">%s</div>' % urllib.parse.unquote(pname),
+                                'width': 120,
+                                'widgets': [
+                                    {
+                                        'type': 'knob',
+                                        'horizontal': True,
+                                        'pips': True,
+                                        'range': {'min': {'%.1f' % param.range[0]: param.range[0]}, 'max': {'%.1f' % param.range[1]: param.range[1]}},
+                                        'value': param.args[0],
+                                        'default': param.args[0],
+                                        'doubleTap': True,
+                                        'linkId': param.address,
+                                        'address': '/%s/%s/%s' % (name, sname, plugname),
+                                        'preArgs': pname,
+                                        'decimals': 5,
+                                        'pips': True,
+                                        'expand': True,
+                                        'design': 'solid'
+                                    },
+                                    {
+                                        'type': 'input',
+                                        'width': 120,
+                                        'decimals': 5,
+                                        'linkId': param.address,
+                                        'bypass': True
+                                    }
+                                ]
+                            })
 
                     strip['widgets'].append({
-                    'type': 'button',
-                    'label': 'Mute',
-                    'colorWidget': 'var(--yellow)',
-                    'css': 'class: discrete;',
-                    'value': smod.get('Gain', 'Mute'),
-                    'address': '/%s/%s/Gain' % (name, sname),
-                    'preArgs': 'Mute'
+                        'type': 'button',
+                        'label': 'Mute',
+                        'colorWidget': 'var(--yellow)',
+                        'css': 'class: discrete;',
+                        'value': smod.get('Mute'),
+                        'address': '/%s/%s' % (name, sname),
+                        'preArgs': 'Mute'
+                    })
+
+                    strip['widgets'].append({
+                        'type': 'fader',
+                        'range': {'min': -1, 'max': 1},
+                        'horizontal': True,
+                        'design': 'compact',
+                        'height': 30,
+                        'origin': 0,
+                        'dashed': [2,2],
+                        'css': 'class: locked;' if not 'Pan' in smod.parameters else '',
+                        'doubleTap': True,
+                        'value': smod.get('Pan') if 'Pan' in smod.parameters else 0,
+                        'address': '/%s/%s' % (name, sname),
+                        'preArgs': 'Pan'
                     })
                     strip['widgets'].append({
                         'type': 'panel',
@@ -325,10 +339,10 @@ class OpenStageControl(Module):
                                 'doubleTap': True,
                                 'pips': True,
                                 'design': 'round',
-                                'value': smod.get('Gain', 'Gain'),
-                                'default': smod.get('Gain', 'Gain'),
-                                'address': '/%s/%s/Gain' % (name, sname),
-                                'linkId': '/%s/%s/Gain/Gain' % (name, sname),
+                                'value': smod.get('Gain'),
+                                'default': smod.get('Gain'),
+                                'address': '/%s/%s' % (name, sname),
+                                'linkId': '/%s/%s/Gain' % (name, sname),
                                 'preArgs': 'Gain'
                             },
                             {
@@ -340,7 +354,7 @@ class OpenStageControl(Module):
                                 'design': 'compact',
                                 'dashed': [2,2],
                                 'default': -70,
-                                'address': '/%s/%s/Meter' % (name, sname),
+                                'address': '/%s/%s' % (name, sname),
                                 'preArgs': 'Level'
                             }
                         ]
@@ -349,7 +363,7 @@ class OpenStageControl(Module):
                         'type': 'input',
                         'width': 120,
                         'decimals': 5,
-                        'linkId': '/%s/%s/Gain/Gain' % (name, sname),
+                        'linkId': '/%s/%s/Gain' % (name, sname),
                         'bypass': True
                     })
 
@@ -365,13 +379,6 @@ class OpenStageControl(Module):
             if 'status_' in p:
                 name = p[7:]
                 strip = {'type': 'panel', 'layout': 'horizontal', 'css': 'class: strip;', 'height': 40, 'padding': 4,'widgets' : [
-                    {
-                        'type': 'text',
-                        'align': 'left',
-                        'address': '/RaySession',
-                        'preArgs': 'label_%s' % name,
-                        'expand': True
-                    },
                     {
                         'type': 'button',
                         'label': '^play',
@@ -394,8 +401,14 @@ class OpenStageControl(Module):
                         'colorWidget': 'var(--red)',
                         'address': '/RaySession/call',
                         'preArgs': ['send', '/ray/client/stop', name]
+                    },
+                    {
+                        'type': 'text',
+                        'align': 'left',
+                        'address': '/RaySession',
+                        'preArgs': 'label_%s' % name,
+                        'expand': True
                     }
-
                 ]}
                 panel['widgets'].append(strip)
 

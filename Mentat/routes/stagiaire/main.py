@@ -57,13 +57,13 @@ class Stagiaire(Video, Light, RouteBase):
         transport.start()
 
         # Samples
-        samplesFX2Delay.set('Samples2', 'Gain', 'Gain', -12.0) #### TODO FX Delay 2 = Munge ?
-        samplesFX2Delay.set('SamplesFX2Delay', 'Gain', 'Mute', 0.0)
+        samplesFX2Delay.set('Samples2', 'Gain', -12.0) #### TODO FX Delay 2 = Munge ?
+        samplesFX2Delay.set('SamplesFX2Delay', 'Mute', 0.0)
 
-        samples.set('Samples1', 'Gain', 'Mute', 0.0)
-        samples.set('Samples2', 'Gain', 'Mute', 0.0)
-        samples.set('Samples4', 'Gain', 'Mute', 0.0)
-        samples.set('Samples5', 'Gain', 'Mute', 0.0)
+        samples.set('Samples1', 'Mute', 0.0)
+        samples.set('Samples2', 'Mute', 0.0)
+        samples.set('Samples4', 'Mute', 0.0)
+        samples.set('Samples5', 'Mute', 0.0)
 
         # Vocals
         vocalsNano.set('gars_exclu', 'on')
@@ -93,13 +93,13 @@ class Stagiaire(Video, Light, RouteBase):
         transport.start()
 
         # Samples
-        samplesFX2Delay.set('Samples2', 'Gain', 'Gain', -12.0) #### TODO FX Delay 2 = Munge ?
-        samplesFX2Delay.set('SamplesFX2Delay', 'Gain', 'Mute', 0.0)
+        samplesFX2Delay.set('Samples2', 'Gain', -12.0) #### TODO FX Delay 2 = Munge ?
+        samplesFX2Delay.set('SamplesFX2Delay', 'Mute', 0.0)
 
-        samples.set('Samples1', 'Gain', 'Mute', 0.0)
-        samples.set('Samples2', 'Gain', 'Mute', 0.0)
-        samples.set('Samples4', 'Gain', 'Mute', 0.0)
-        samples.set('Samples5', 'Gain', 'Mute', 0.0)
+        samples.set('Samples1', 'Mute', 0.0)
+        samples.set('Samples2', 'Mute', 0.0)
+        samples.set('Samples4', 'Mute', 0.0)
+        samples.set('Samples5', 'Mute', 0.0)
 
         # Vocals
         vocalsNano.set('gars_exclu', 'on')
@@ -122,17 +122,17 @@ class Stagiaire(Video, Light, RouteBase):
         #### TODO Trapcut tempo 234
 
         # Samples
-        samplesFX2Delay.set('Samples2', 'Gain', 'Gain', -12.0) #### TODO FX Delay 2 = Munge ?
-        samplesFX2Delay.set('SamplesFX2Delay', 'Gain', 'Mute', 0.0)
+        samplesFX2Delay.set('Samples2', 'Gain', -12.0) #### TODO FX Delay 2 = Munge ?
+        samplesFX2Delay.set('SamplesFX2Delay', 'Mute', 0.0)
 
-        samples.set('Samples2', 'Gain', 'Mute', 0.0) # flûte
-        samples.set('Samples5', 'Gain', 'Mute', 0.0) # percu
+        samples.set('Samples2', 'Mute', 0.0) # flûte
+        samples.set('Samples5', 'Mute', 0.0) # percu
 
         # Synths
-        synthsFX1Reverb.set('EasyClassical', 'Gain', 'Gain', -9.0)
-        synthsFX1Reverb.set('SynthsFX1Reverb', 'Gain', 'Mute', 0.0)
-        synthsFX2Delay.set('EasyClassical', 'Gain', 'Gain', -9.0)
-        synthsFX2Delay.set('SynthsFX2Delay', 'Gain', 'Mute', 0.0)
+        synthsFX1Reverb.set('EasyClassical', 'Gain', -9.0)
+        synthsFX1Reverb.set('SynthsFX1Reverb', 'Mute', 0.0)
+        synthsFX2Delay.set('EasyClassical', 'Gain', -9.0)
+        synthsFX2Delay.set('SynthsFX2Delay', 'Mute', 0.0)
 
         # Vocals
         vocalsNano.set('gars_exclu', 'on')
@@ -218,12 +218,12 @@ class Stagiaire(Video, Light, RouteBase):
         transport.start()
 
         # Samples
-        samples.set('Samples1', 'Gain', 'Mute', 0.0) # gtr
-        samples.set('Samples2', 'Gain', 'Mute', 0.0) # flûte
-        samples.set('Samples5', 'Gain', 'Mute', 0.0) # percu
+        samples.set('Samples1', 'Mute', 0.0) # gtr
+        samples.set('Samples2', 'Mute', 0.0) # flûte
+        samples.set('Samples5', 'Mute', 0.0) # percu
 
-        samplesFX2Delay.set('Samples2', 'Gain', 'Gain', -12.0) #### TODO FX Delay 2 = Munge ?
-        samplesFX2Delay.set('SamplesFX2Delay', 'Gain', 'Mute', 0.0)
+        samplesFX2Delay.set('Samples2', 'Gain', -12.0) #### TODO FX Delay 2 = Munge ?
+        samplesFX2Delay.set('SamplesFX2Delay', 'Mute', 0.0)
 
         # Vocals
         vocalsNano.set('normo_exclu', 'on')
@@ -235,10 +235,10 @@ class Stagiaire(Video, Light, RouteBase):
             {'signature': '4/4'}, # bar 1
             { # bar 2
                 4: lambda: [
-                    vocalsKeschFX2Delay.set('KeschMeuf', 'Gain', 'Gain', 0.0),
-                    vocalsKeschFX2Delay.set('KeschGars', 'Gain', 'Gain', 0.0),
-                    vocalsNanoFX2Delay.set('NanoMeuf', 'Gain', 'Gain', 0.0),
-                    vocalsNanoFX2Delay.set('NanoGars', 'Gain', 'Gain', 0.0)
+                    vocalsKeschFX2Delay.set('KeschMeuf', 'Gain', 0.0),
+                    vocalsKeschFX2Delay.set('KeschGars', 'Gain', 0.0),
+                    vocalsNanoFX2Delay.set('NanoMeuf', 'Gain', 0.0),
+                    vocalsNanoFX2Delay.set('NanoGars', 'Gain', 0.0)
                     ]
             },
             { # bar 3
@@ -249,35 +249,35 @@ class Stagiaire(Video, Light, RouteBase):
             },
             { # bar 5
                 2: lambda: [
-                    vocalsKeschFX2Delay.set('KeschMeuf', 'Gain', 'Mute', 1.0),
-                    vocalsKeschFX2Delay.set('KeschGars', 'Gain', 'Mute', 1.0),
-                    vocalsNanoFX2Delay.set('NanoMeuf', 'Gain', 'Mute', 0.0),
-                    vocalsNanoFX2Delay.set('NanoGars', 'Gain', 'Mute', 0.0)
+                    vocalsKeschFX2Delay.set('KeschMeuf', 'Mute', 1.0),
+                    vocalsKeschFX2Delay.set('KeschGars', 'Mute', 1.0),
+                    vocalsNanoFX2Delay.set('NanoMeuf', 'Mute', 0.0),
+                    vocalsNanoFX2Delay.set('NanoGars', 'Mute', 0.0)
                     ]
             },
             { # bar 6
                 4: lambda: [
-                    vocalsKeschFX2Delay.set('KeschMeuf', 'Gain', 'Mute', 0.0),
-                    vocalsKeschFX2Delay.set('KeschGars', 'Gain', 'Mute', 0.0),
-                    vocalsNanoFX2Delay.set('NanoMeuf', 'Gain', 'Mute', 0.0),
-                    vocalsNanoFX2Delay.set('NanoGars', 'Gain', 'Mute', 0.0)
+                    vocalsKeschFX2Delay.set('KeschMeuf', 'Mute', 0.0),
+                    vocalsKeschFX2Delay.set('KeschGars', 'Mute', 0.0),
+                    vocalsNanoFX2Delay.set('NanoMeuf', 'Mute', 0.0),
+                    vocalsNanoFX2Delay.set('NanoGars', 'Mute', 0.0)
                     ]
             },
             { # bar 7
                 2: lambda: [
-                    vocalsKeschFX2Delay.set('KeschMeuf', 'Gain', 'Mute', 1.0),
-                    vocalsKeschFX2Delay.set('KeschGars', 'Gain', 'Mute', 1.0),
-                    vocalsNanoFX2Delay.set('NanoMeuf', 'Gain', 'Mute', 0.0),
-                    vocalsNanoFX2Delay.set('NanoGars', 'Gain', 'Mute', 0.0)
+                    vocalsKeschFX2Delay.set('KeschMeuf', 'Mute', 1.0),
+                    vocalsKeschFX2Delay.set('KeschGars', 'Mute', 1.0),
+                    vocalsNanoFX2Delay.set('NanoMeuf', 'Mute', 0.0),
+                    vocalsNanoFX2Delay.set('NanoGars', 'Mute', 0.0)
                     ]
 
             },
             { # bar 8
                 4: lambda: [
-                    vocalsKeschFX2Delay.set('KeschMeuf', 'Gain', 'Mute', 0.0),
-                    vocalsKeschFX2Delay.set('KeschGars', 'Gain', 'Mute', 0.0),
-                    vocalsNanoFX2Delay.set('NanoMeuf', 'Gain', 'Mute', 0.0),
-                    vocalsNanoFX2Delay.set('NanoGars', 'Gain', 'Mute', 0.0)
+                    vocalsKeschFX2Delay.set('KeschMeuf', 'Mute', 0.0),
+                    vocalsKeschFX2Delay.set('KeschGars', 'Mute', 0.0),
+                    vocalsNanoFX2Delay.set('NanoMeuf', 'Mute', 0.0),
+                    vocalsNanoFX2Delay.set('NanoGars', 'Mute', 0.0)
                     ]
             },
 

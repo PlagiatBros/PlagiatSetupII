@@ -71,23 +71,23 @@ class AgneauGastrik(Video, Light, RouteBase):
         transport.start()
 
         # Samples
-        samples.set('Samples1', 'Gain', 'Mute', 0.0)
-        samples.set('Samples2', 'Gain', 'Mute', 0.0)
-        samples.set('Samples3', 'Gain', 'Mute', 0.0)
-        samples.set('Samples4', 'Gain', 'Mute', 0.0)
-        samples.set('Samples5', 'Gain', 'Mute', 0.0)
+        samples.set('Samples1', 'Mute', 0.0)
+        samples.set('Samples2', 'Mute', 0.0)
+        samples.set('Samples3', 'Mute', 0.0)
+        samples.set('Samples4', 'Mute', 0.0)
+        samples.set('Samples5', 'Mute', 0.0)
 
-        samplesFX2Delay.set('Samples3', 'Gain', 'Gain', -3.0)
-        samplesFX2Delay.set('SamplesFX2Delay', 'Gain', 'Mute', 0.0)
-        samplesFX5TapeDelay.set('Samples4', 'Gain', 'Gain', -4.0)
-        samplesFX5TapeDelay.set('SamplesFX5TapeDelay', 'Gain', 'Mute', 0.0)
+        samplesFX2Delay.set('Samples3', 'Gain', -3.0)
+        samplesFX2Delay.set('SamplesFX2Delay', 'Mute', 0.0)
+        samplesFX5TapeDelay.set('Samples4', 'Gain', -4.0)
+        samplesFX5TapeDelay.set('SamplesFX5TapeDelay', 'Mute', 0.0)
 
         # Synths
-        synths.set('ZTrumpets', 'Pan', 'Pan', -0.7)
-        synths.set('ZDiploLike', 'Pan', 'Pan', 0.7)
-        synthsFX2Delay.set('ZDiploLike', 'Gain', 'Gain', -6.0)
-        synthsFX2Delay.set('DubstepHorn', 'Gain', 'Gain', -3.0)
-        synthsFX2Delay.set('SynthsFX2Delay', 'Gain', 'Mute', 0.0)
+        synths.set('ZTrumpets', 'Pan', -0.7)
+        synths.set('ZDiploLike', 'Pan', 0.7)
+        synthsFX2Delay.set('ZDiploLike', 'Gain', -6.0)
+        synthsFX2Delay.set('DubstepHorn', 'Gain', -3.0)
+        synthsFX2Delay.set('SynthsFX2Delay', 'Mute', 0.0)
 
         # Vocals
         vocalsNano.set('gars_exclu', 'on')
@@ -105,14 +105,14 @@ class AgneauGastrik(Video, Light, RouteBase):
         self.start_sequence('SynthsPan', [
             {'signature': '43/4', # bar 1
             1: lambda: [
-                synths.animate('ZTrumpets', 'Pan', 'Pan', -0.7, 0.7, 43),
-                synths.animate('ZDiploLike', 'Pan', 'Pan', 0.7, -0.7, 43)
+                synths.animate('ZTrumpets', 'Pan', -0.7, 0.7, 43),
+                synths.animate('ZDiploLike', 'Pan', 0.7, -0.7, 43)
                 ]
             },
             {'signature': '43/4', # bar 1
             1: lambda: [
-                synths.animate('ZTrumpets', 'Pan', 'Pan', 0.7, -0.7, 43),
-                synths.animate('ZDiploLike', 'Pan', 'Pan', -0.7, 0.7, 43)
+                synths.animate('ZTrumpets', 'Pan', 0.7, -0.7, 43),
+                synths.animate('ZDiploLike', 'Pan', -0.7, 0.7, 43)
                 ]
             }
         ], loop=True)
@@ -163,15 +163,15 @@ class AgneauGastrik(Video, Light, RouteBase):
         transport.start()
 
         # Samples
-        samples.set('Samples1', 'Gain', 'Mute', 0.0)
-        samples.set('Samples2', 'Gain', 'Mute', 0.0)
-        samples.set('Samples3', 'Gain', 'Mute', 0.0)
-        samples.set('Samples4', 'Gain', 'Mute', 0.0)
-        samples.set('Samples5', 'Gain', 'Mute', 0.0)
-        samplesFX2Delay.set('Samples3', 'Gain', 'Gain', -3.0)
-        samplesFX2Delay.set('SamplesFX2Delay', 'Gain', 'Mute', 0.0)
-        samplesFX5TapeDelay.set('Samples4', 'Gain', 'Gain', -4.0)
-        samplesFX5TapeDelay.set('SamplesFX5TapeDelay', 'Gain', 'Mute', 0.0)
+        samples.set('Samples1', 'Mute', 0.0)
+        samples.set('Samples2', 'Mute', 0.0)
+        samples.set('Samples3', 'Mute', 0.0)
+        samples.set('Samples4', 'Mute', 0.0)
+        samples.set('Samples5', 'Mute', 0.0)
+        samplesFX2Delay.set('Samples3', 'Gain', -3.0)
+        samplesFX2Delay.set('SamplesFX2Delay', 'Mute', 0.0)
+        samplesFX5TapeDelay.set('Samples4', 'Gain', -4.0)
+        samplesFX5TapeDelay.set('SamplesFX5TapeDelay', 'Mute', 0.0)
 
         # Vocals
         vocalsNano.set('normo_exclu', 'on')
@@ -183,12 +183,12 @@ class AgneauGastrik(Video, Light, RouteBase):
             {   # kind of mate
                 8: lambda: [
                     # nano: « frisco »
-                    outputs.set('Synths', 'Gain', 'Mute', 1),
-                    outputs.set('Samples', 'Gain', 'Mute', 1),
+                    outputs.set('Synths', 'Mute', 1),
+                    outputs.set('Samples', 'Mute', 1),
                 ],
                 9.5: lambda: [
-                    outputs.set('Synths', 'Gain', 'Mute', 0),
-                    outputs.set('Samples', 'Gain', 'Mute', 0),
+                    outputs.set('Synths', 'Mute', 0),
+                    outputs.set('Samples', 'Mute', 0),
                 ],
             },
             {   # see it's easy
@@ -226,20 +226,20 @@ class AgneauGastrik(Video, Light, RouteBase):
         transport.start()
 
         # Samples
-        samples.set('Samples1', 'Gain', 'Mute', 0.0)
-        samples.set('Samples2', 'Gain', 'Mute', 0.0)
-        samples.set('Samples3', 'Gain', 'Mute', 0.0)
-        samples.set('Samples4', 'Gain', 'Mute', 0.0)
-        samples.set('Samples5', 'Gain', 'Mute', 0.0)
-        samplesFX5TapeDelay.set('Samples4', 'Gain', 'Gain', -12.0)
-        samplesFX5TapeDelay.set('SamplesFX5TapeDelay', 'Gain', 'Mute', 0.0)
+        samples.set('Samples1', 'Mute', 0.0)
+        samples.set('Samples2', 'Mute', 0.0)
+        samples.set('Samples3', 'Mute', 0.0)
+        samples.set('Samples4', 'Mute', 0.0)
+        samples.set('Samples5', 'Mute', 0.0)
+        samplesFX5TapeDelay.set('Samples4', 'Gain', -12.0)
+        samplesFX5TapeDelay.set('SamplesFX5TapeDelay', 'Mute', 0.0)
 
         # Synths
-        synths.set('ZTrumpets', 'Pan', 'Pan', -0.7)
-        synths.set('ZDiploLike', 'Pan', 'Pan', 0.7)
-        synthsFX2Delay.set('ZDiploLikeWide', 'Gain', 'Gain', -6.0)
-        synthsFX2Delay.set('DubstepHorn', 'Gain', 'Gain', -3.0)
-        synthsFX2Delay.set('SynthsFX2Delay', 'Gain', 'Mute', 0.0)
+        synths.set('ZTrumpets', 'Pan', -0.7)
+        synths.set('ZDiploLike', 'Pan', 0.7)
+        synthsFX2Delay.set('ZDiploLikeWide', 'Gain', -6.0)
+        synthsFX2Delay.set('DubstepHorn', 'Gain', -3.0)
+        synthsFX2Delay.set('SynthsFX2Delay', 'Mute', 0.0)
 
 
         # Vocals
@@ -276,13 +276,13 @@ class AgneauGastrik(Video, Light, RouteBase):
         ### TODO Filtrage Synths
 
         # Samples
-        samples.set('Samples1', 'Gain', 'Mute', 0.0)
-        samples.set('Samples2', 'Gain', 'Mute', 0.0)
-        samples.set('Samples3', 'Gain', 'Mute', 0.0)
-        samples.set('Samples4', 'Gain', 'Mute', 0.0)
-        samples.set('Samples5', 'Gain', 'Mute', 0.0)
-        samplesFX5TapeDelay.set('Samples4', 'Gain', 'Gain', -12.0)
-        samplesFX5TapeDelay.set('SamplesFX5TapeDelay', 'Gain', 'Mute', 0.0)
+        samples.set('Samples1', 'Mute', 0.0)
+        samples.set('Samples2', 'Mute', 0.0)
+        samples.set('Samples3', 'Mute', 0.0)
+        samples.set('Samples4', 'Mute', 0.0)
+        samples.set('Samples5', 'Mute', 0.0)
+        samplesFX5TapeDelay.set('Samples4', 'Gain', -12.0)
+        samplesFX5TapeDelay.set('SamplesFX5TapeDelay', 'Mute', 0.0)
 
         # Vocals
         vocalsNano.set('gars_exclu', 'on')

@@ -130,7 +130,7 @@ class RouteBase(Route):
             if name == 'Synths':
                 for name in mod.submodules:
                     if 'Pan' in mod.submodules[name].submodules:
-                        mod.submodules[name].set('Pan', 'Pan', 0.0)
+                        mod.submodules[name].set('Pan', 0.0)
 
             # SynthsFX
             elif 'SynthsFX' in name:
@@ -138,29 +138,29 @@ class RouteBase(Route):
                 for name in mod.submodules:
                     # Ins
                     if name not in mod.name:
-                        mod.set(name, 'Gain', 'Gain', -70.0)
+                        mod.set(name, 'Gain', -70.0)
 
                 # Outs
-                mod.set(mod.name, 'Gain', 'Mute', 1.0)
+                mod.set(mod.name, 'Mute', 1.0)
 
 
             # SamplesFX
             elif 'SamplesFX' in name:
                 for i in range(1,6):
                     # Ins
-                    mod.set('Samples' + str(i), 'Gain', 'Gain', -70.0)
+                    mod.set('Samples' + str(i), 'Gain', -70.0)
 
                 # Outs
-                mod.set(name, 'Gain', 'Mute', 1.0)
+                mod.set(name, 'Mute', 1.0)
 
             # VocalsFX
             elif 'VocalsNanoFX' in name or 'VocalsKeschFX' in name:
                 for name in mod.submodules:
                     # Ins
                     if name not in mod.name:
-                        mod.set(name, 'Gain', 'Gain', -70.0)
+                        mod.set(name, 'Gain', -70.0)
                 # Outs
-                mod.set(name, 'Gain', 'Mute', 1.0)
+                mod.set(name, 'Mute', 1.0)
 
 
         postprocess.set_filter('*', 24000)
@@ -171,7 +171,7 @@ class RouteBase(Route):
         Reset (mute) all samples
         """
         for i in range (1,6):
-            samples.set('Samples' + str(i), 'Gain', 'Mute', 1.0)
+            samples.set('Samples' + str(i), 'Mute', 1.0)
 
     def pause_loopers(self):
         """
@@ -190,4 +190,4 @@ class RouteBase(Route):
         self.resetSamples()
 
         for name in outputs.submodules:
-            outputs.submodules[name].set('Gain', 'Mute', 0)
+            outputs.submodules[name].set('Mute', 0)

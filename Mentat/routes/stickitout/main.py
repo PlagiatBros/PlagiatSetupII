@@ -74,10 +74,10 @@ class StickItOut(Video, Light, RouteBase):
         vocalsKesch.set('meuf_exclu', 'on')
 
         # Synths
-        synthsFX2Delay.set('Rhodes', 'Gain', 'Gain', -9.0)
-        synthsFX2Delay.set('EasyClassical', 'Gain', 'Gain', -9.0)
-        synthsFX2Delay.set('TrapFifth', 'Gain', 'Gain', -9.0)
-        synthsFX2Delay.set('SynthsFX2Delay', 'Gain', 'Mute', 0.0)
+        synthsFX2Delay.set('Rhodes', 'Gain', -9.0)
+        synthsFX2Delay.set('EasyClassical', 'Gain', -9.0)
+        synthsFX2Delay.set('TrapFifth', 'Gain', -9.0)
+        synthsFX2Delay.set('SynthsFX2Delay', 'Mute', 0.0)
 
         self.start_sequence('couplet1-1', [
             *[{} for i in range(12)], # bars 1 - 12
@@ -125,7 +125,7 @@ class StickItOut(Video, Light, RouteBase):
         vocalsKesch.set('meuf_exclu', 'on')
 
         # Synths
-        synthsFX2Delay.set('Rhodes', 'Gain', 'Gain', -9.0)
-        synthsFX2Delay.set('EasyClassical', 'Gain', 'Gain', -9.0)
-        synthsFX2Delay.set('TrapFifth', 'Gain', 'Gain', -9.0)
-        synthsFX2Delay.set('SynthsFX2Delay', 'Gain', 'Mute', 0.0)
+        synthsFX2Delay.set('Rhodes', 'Gain', -9.0)
+        synthsFX2Delay.set('EasyClassical', 'Gain', -9.0)
+        synthsFX2Delay.set('TrapFifth', 'Gain', -9.0)
+        synthsFX2Delay.set('SynthsFX2Delay', 'Mute', 0.0)
