@@ -114,7 +114,7 @@ class StickItOut(Video, Light, RouteBase):
 
 
         # Sequences
-        seq192.select('solo', 'refrain_*')
+        seq192.select('solo', '2ref_*')
 
         # Transport
         transport.start()
@@ -125,7 +125,17 @@ class StickItOut(Video, Light, RouteBase):
         vocalsKesch.set('meuf_exclu', 'on')
 
         # Synths
-        synthsFX2Delay.set('Rhodes', 'Gain', -9.0)
-        synthsFX2Delay.set('EasyClassical', 'Gain', -9.0)
-        synthsFX2Delay.set('TrapFifth', 'Gain', -9.0)
-        synthsFX2Delay.set('SynthsFX2Delay', 'Mute', 0.0)
+
+        # Sequences (Mentat)
+        self.start_sequence('2ref_depitch', [
+            { # bar 1
+                4.4: lambda: postprocess.animate_pitch('Synths', 1.0, 0.75, 0.5, easing="exponential")
+            },
+            { # bar 2
+                1: lambda: [
+                    postprocess.set_pitch('Synths', 1.0),
+                    seq192.select('solo', 'refrain_*'),
+                    transport.start()
+                ]
+            }
+        ], loop=False)
