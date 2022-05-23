@@ -1156,11 +1156,8 @@
                         "value": "",
                         "default": "",
                         "linkId": "",
-                        "address": "/PostProcess/call",
-                        "preArgs": [
-                          "set_pitch",
-                          "Vocals"
-                        ],
+                        "address": "/Root",
+                        "preArgs": "pitch_vocals",
                         "typeTags": "",
                         "decimals": 2,
                         "target": "",
@@ -1217,11 +1214,8 @@
                         "value": "",
                         "default": "",
                         "linkId": "",
-                        "address": "/PostProcess/call",
-                        "preArgs": [
-                          "set_pitch",
-                          "Bass"
-                        ],
+                        "address": "/Root",
+                        "preArgs": "pitch_bass",
                         "typeTags": "",
                         "decimals": 2,
                         "target": "",
@@ -1278,11 +1272,8 @@
                         "value": "",
                         "default": "",
                         "linkId": "",
-                        "address": "/PostProcess/call",
-                        "preArgs": [
-                          "set_pitch",
-                          "Synths"
-                        ],
+                        "address": "/Root",
+                        "preArgs": "pitch_synths",
                         "typeTags": "",
                         "decimals": 2,
                         "target": "",
@@ -1339,11 +1330,8 @@
                         "value": "",
                         "default": "",
                         "linkId": "",
-                        "address": "/PostProcess/call",
-                        "preArgs": [
-                          "set_pitch",
-                          "Samples"
-                        ],
+                        "address": "/Root",
+                        "preArgs": "pitch_samples",
                         "typeTags": "",
                         "decimals": 2,
                         "target": "",
@@ -1585,18 +1573,15 @@
                         "value": "",
                         "default": "",
                         "linkId": "",
-                        "address": "/PostProcess/call",
-                        "preArgs": [
-                          "set_filter",
-                          "Bass"
-                        ],
+                        "address": "/Root",
+                        "preArgs": "filter_bass",
                         "typeTags": "",
                         "decimals": 2,
                         "target": "",
                         "ignoreDefaults": false,
                         "bypass": false,
                         "onCreate": "locals.touched = false",
-                        "onValue": "if (get('filter_link') && locals.touched) {\n  set('filter_fader_*', value, {sync:false}) \n}",
+                        "onValue": "if (get('filter_link') && locals.touched) {\n  set('filter_fader_*', value, {sync:false}) \n}\n",
                         "onTouch": "locals.touched = event.type == 'start'"
                       },
                       {
@@ -1645,11 +1630,8 @@
                         "value": "",
                         "default": "",
                         "linkId": "",
-                        "address": "/PostProcess/call",
-                        "preArgs": [
-                          "set_filter",
-                          "Synths"
-                        ],
+                        "address": "/Root",
+                        "preArgs": "filter_synths",
                         "typeTags": "",
                         "decimals": 2,
                         "target": "",
@@ -1705,11 +1687,8 @@
                         "value": "",
                         "default": "",
                         "linkId": "",
-                        "address": "/PostProcess/call",
-                        "preArgs": [
-                          "set_filter",
-                          "Samples"
-                        ],
+                        "address": "/Root",
+                        "preArgs": "filter_samples",
                         "typeTags": "",
                         "decimals": 2,
                         "target": "",
@@ -2361,7 +2340,10 @@
                                     "html": "",
                                     "css": "",
                                     "doubleTap": false,
-                                    "range": "{\n  \"min\": 0,\n  \"max\": VAR{length, 1}\n}",
+                                    "range": {
+                                      "min": 0,
+                                      "max": 1
+                                    },
                                     "logScale": false,
                                     "origin": "auto",
                                     "spring": false,
@@ -2395,7 +2377,7 @@
                                     "ignoreDefaults": false,
                                     "bypass": false,
                                     "onCreate": "",
-                                    "onValue": "var [param, val] = value\nvar n = getProp('parent', 'variables').n\n\n\nif (param == 'length') {\n  setVar('sl_position_' + n, 'length', val)\n} else if (param == 'position') {\n  if (!getVar('sl_recording_' + n, 'active')) set('sl_position_' + n, val)\n} else {\n  setVar('sl_' + param + '_' + n, 'active', val)\n}\n\nif (param == 'recording' && val == 1) {\n  set('sl_position_' + n, 0)\n}",
+                                    "onValue": "var [param, val] = value\nvar n = getProp('parent', 'variables').n\n\n\nif (param == 'position') {\n  if (!getVar('sl_recording_' + n, 'active')) set('sl_position_' + n, val)\n} else {\n  setVar('sl_' + param + '_' + n, 'active', val)\n}\n\nif (param == 'recording') {\n  if (val === 1) set('sl_position_' + n, 0)\n}",
                                     "onKeyboard": "",
                                     "keyBinding": "",
                                     "keyRepeat": true,
@@ -2948,12 +2930,12 @@
                     "wrap": false,
                     "on": "on",
                     "off": "off",
-                    "mode": "toggle",
+                    "mode": "push",
                     "doubleTap": false,
                     "value": "",
                     "default": "",
                     "linkId": "",
-                    "address": "/VocalsKeschFX1Delay",
+                    "address": "/VocalsKeschFX2Delay",
                     "preArgs": "pre",
                     "typeTags": "",
                     "decimals": 2,
@@ -2997,15 +2979,15 @@
                     "value": "",
                     "default": "",
                     "linkId": "",
-                    "address": "/VocalsKeschFX1Delay",
+                    "address": "/VocalsKeschFX2Delay",
                     "preArgs": "post",
                     "typeTags": "",
                     "decimals": 2,
                     "target": "",
                     "ignoreDefaults": false,
-                    "bypass": false,
+                    "bypass": true,
                     "onCreate": "",
-                    "onValue": ""
+                    "onValue": "send('/VocalsKeschFX2Delay', 'active', value)"
                   }
                 ],
                 "tabs": []
