@@ -150,31 +150,32 @@ class NonMixer(Module):
 
 
         elif address == '/reply':
+            path = args[0].partition('/strip/')[2]
+            strip, _, pname = args[0].partition('/strip/')[2].partition('/')
+            if 'unscaled' in pname:
+                pname = pname[:-9]
+            plugin_name, _, param_shortname = pname.partition('/')
+            if plugin_name in NonMixer.plugin_aliases:
+                plugin_name = NonMixer.plugin_aliases[plugin_name]
+            if param_shortname in NonMixer.parameter_aliases:
+                param_shortname = NonMixer.parameter_aliases[param_shortname]
+
+            if plugin_name == 'Meter':
+                if args[1] < -70:
+                    args[1] = -70
+
+
             if args[0] in self.init_params:
-                path = args[0].partition('/strip/')[2]
-                strip, _, pname = args[0].partition('/strip/')[2].partition('/')
-                if 'unscaled' in pname:
-                    pname = pname[:-9]
-                plugin_name, _, param_shortname = pname.partition('/')
-                if plugin_name in NonMixer.plugin_aliases:
-                    plugin_name = NonMixer.plugin_aliases[plugin_name]
-                if param_shortname in NonMixer.parameter_aliases:
-                    param_shortname = NonMixer.parameter_aliases[param_shortname]
-
-                if plugin_name == 'Meter':
-                    if args[1] < -70:
-                        args[1] = -70
-
                 self.init_params.remove(args[0])
                 if not self.init_params:
                     self.logger.info(' is ready')
                     self.create_meta_parameters()
 
 
-                if plugin_name in ['Pan', 'Gain', 'Meter']:
-                    self.set(strip, param_shortname, args[1])
-                else:
-                    self.set(strip, plugin_name, param_shortname, args[1])
+            if plugin_name in ['Pan', 'Gain', 'Meter']:
+                self.set(strip, param_shortname, args[1])
+            else:
+                self.set(strip, plugin_name, param_shortname, args[1])
 
         return False
 
