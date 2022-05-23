@@ -23,3 +23,9 @@ class Loop192(Module):
         Stop playback
         """
         self.send('/stop')
+
+    def record(self):
+        """
+        Record
+        """
+        self.send('/record')
