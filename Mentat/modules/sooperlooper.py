@@ -76,8 +76,8 @@ class SooperLooper(Module):
                     self.set('loop_%i' % n, p, 1 if p in state else 0)
             elif param == 'loop_len':
                 self.set('loop_%i' % n, 'length', value)
-            elif param == 'loop_pos' and self.get('loop_%i' % n, 'recording') == 0:
-                self.set('loop_%i' % n, 'position', value)
+            elif param == 'loop_pos' and self.get('loop_%i' % n, 'recording') == 0 and self.get('loop_%i' % n, 'length') != 0:
+                self.set('loop_%i' % n, 'position', value / self.get('loop_%i' % n, 'length'))
 
 
         return False

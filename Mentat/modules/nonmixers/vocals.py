@@ -2,9 +2,16 @@ from ..nonmixer import NonMixer
 
 class Vocals(NonMixer):
 
+    def __init__(self, *args, **kwargs):
+
+        super().__init__(*args, **kwargs)
+
+
     def create_meta_parameters(self):
 
         strip_prefix = self.name[6:] # remove "Vocals" prefix
+
+        fxs = [self.engine.modules[name] for name in self.engine.modules if 'FX' in name and strip_prefix in name]
 
         for name in ['normo', 'gars', 'meuf']:
 
@@ -30,10 +37,14 @@ class Vocals(NonMixer):
                                 vx_strip_name = strip_prefix + vx.capitalize()
                                 self.set(vx_strip_name, 'Aux-A', 'Gain', 0)
                                 self.set(vx_strip_name, 'Aux-B', 'Gain', -70)
-
                     elif state == 'off':
                         self.set(strip_name, 'Mute', 1.0)
                         self.set(ab_strip_name, 'Mute', 1.0)
+
+                    for fx in fxs:
+                        if fx.get('active') == 'on':
+                            fx.set('%s%s' % (strip_prefix, name.capitalize()), 'Mute', 0 if state == 'on' else 1)
+
 
                 self.add_meta_parameter(
                     name,

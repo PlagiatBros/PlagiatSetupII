@@ -221,7 +221,7 @@ class RamenerMooncup(Video, Light, RouteBase):
                 3 + 1/2.: lambda: [
 
                     # Looper
-                    looper.trig(0),
+                    looper.unpause(0),
 
                     # Vocals
                     vocalsKesch.set('meuf_exclu', 'on')
@@ -307,6 +307,7 @@ class RamenerMooncup(Video, Light, RouteBase):
 
         # Samples
         samples.set('Samples1', 'Mute', 0.0)
+        samples.set('Samples2', 'Mute', 0.0)
 
         # Keyboards
         jmjKeyboard.set_sound('LowZDancestep')
@@ -318,11 +319,14 @@ class RamenerMooncup(Video, Light, RouteBase):
         self.start_sequence('ramener', [
             {}, {}, # bars 1-2
             {
-                3: lambda: postprocess.animate_pitch('Samples', 1, 0.25, 2),
-                4 + 1/2.: seq192.select('solo', 'dummy')
+                3: lambda: postprocess.animate_pitch('Samples', None, 0.25, 2),
+                4 + 1/2.: lambda: seq192.select('solo', 'dummy')
             },
             {
-                seq192.select('solo', 'ramener*') #### TODO : vérifier qu'il y a bien ça ???
+                1: lambda: [
+                    seq192.select('solo', 'ramener*'),
+                    postprocess.animate_pitch('Samples', None, 1, 0.1),
+                ]
             }
         ], loop=False)
 
@@ -336,14 +340,14 @@ class RamenerMooncup(Video, Light, RouteBase):
         self.reset()
 
         # Sequences
-        seq192.select('solo', 'ramener0_*')
+        seq192.select('solo', 'dummy')
 
         # Transport
-        transport.stop()
+        transport.start()
 
         # Samples
         samples.set('Samples1', 'Mute', 0.0)
-        #### TODO constantSampler.send('/instrument/play', 's:Plagiat/RamenerMooncup/') #### METTRE LE SAMPLE DANS CONSTANTSAMPLER
+        constantSampler.send('/instrument/play', 's:Plagiat/ConstantKit/AirHorn', 100)
 
         # Vocals
         vocalsNano.set('meuf_exclu', 'on')
@@ -361,17 +365,14 @@ class RamenerMooncup(Video, Light, RouteBase):
         self.start_sequence('ramener', [
             {
                 3: lambda: postprocess.animate_pitch('Samples', 1, 0.25, 2),
-                4 + 1/2.: seq192.select('solo', 'dummy')
+                4 + 1/2.: lambda: seq192.select('solo', 'dummy')
             },
             {
-                # Sequences
-                seq192.select('solo', 'ramener*'),
-
-                # Transport
-                transport.start(),
-
-                # Samples
-                samples.set('Samples1', 'Mute', 0.0)
+                1: lambda: [
+                    seq192.select('solo', 'ramener*'),
+                    samples.set('Samples1', 'Mute', 0.0),
+                    postprocess.animate_pitch('Samples', None, 1, 0.1)
+                ]
             }
         ], loop=False)
 
@@ -411,7 +412,7 @@ class RamenerMooncup(Video, Light, RouteBase):
         """
         vocalsNano.set('meuf_exclu', 'on')
 
-    @mk2_button(6, 'yellow')
+    @mk2_button(8, 'yellow')
     def nanonormo(self):
         """
         VOCALS NANO NORMO

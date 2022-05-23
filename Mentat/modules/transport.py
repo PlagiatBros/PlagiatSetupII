@@ -1,5 +1,7 @@
 from mentat import Module
 
+from math import log10
+
 class Transport(Module):
     """
     Transport manager (tempo, time signature, klick pattern, playback)
@@ -50,8 +52,8 @@ class Transport(Module):
                 ('VocalsNanoFX2Delay', 'VocalsNanoFX2Delay'),
                 ('VocalsKeschFX2Delay', 'VocalsKeschFX2Delay')
                 ]:
-            self.engine.modules[mixer].set(strip, 'Invada%20Delay%20Munge%20(mono%20in)', 'Delay%201', 60./bpm)
-            self.engine.modules[mixer].set(strip, 'Invada%20Delay%20Munge%20(mono%20in)', 'Delay%202', 60./bpm)
+            self.engine.modules[mixer].set(strip, 'Invada%20Delay%20Munge%20(mono%20in)', 'Delay%201', 60./bpm*2) # half notes
+            self.engine.modules[mixer].set(strip, 'Invada%20Delay%20Munge%20(mono%20in)', 'Delay%202', 60./bpm*2) # half notes
 
         # Tape Delay Simulator
         for mixer, strip in [
@@ -80,7 +82,10 @@ class Transport(Module):
         for mixer, strip in [
                 ('BassFX', 'BassWobble')
             ]:
-            self.engine.modules[mixer].set(strip, 'MDA%20RezFilter', 'LFO%20Rate', bpm/60.)
+            denom = 3
+            param = (log10((bpm/60.)*denom) + 1.5) / 3
+
+            self.engine.modules[mixer].set(strip, 'MDA%20RezFilter', 'LFO%20Rate', param)
 
         # Zam Grains
         for mixer, strip in [

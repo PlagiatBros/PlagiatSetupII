@@ -31,6 +31,9 @@ class AgneauGastrik(Video, Light, RouteBase):
         #               c     d     e  f     g     a     b
         notes.set_notes(1, 0, 1, 1, 0, 1, 1, 1, 0, 1, 1, 0)
 
+        # Mk2
+        mk2Control.set_mode('wobble')
+
     @pedalboard_button(1)
     @mk2_button(1, 'blue')
     def stop(self):

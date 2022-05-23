@@ -31,7 +31,8 @@ class Mcob(Video, Light, RouteBase):
         #               c     d     e  f     g     a     b
         notes.set_notes(1, 1, 1, 1, 0, 0, 1, 1, 1, 1, 1, 0) # Normalement g# uniquement sur "Yes I'm a cathedral"
 
-
+        # Mk2
+        mk2Control.set_mode('mute_samples')
 
     @pedalboard_button(1)
     @mk2_button(1, 'blue')
@@ -384,11 +385,21 @@ class Mcob(Video, Light, RouteBase):
             {
                 'signature': '32/4',
                 32: lambda: looper.record(0),
-                33: lambda: [
+            },
+            {
+                1: lambda: [
                         vocalsNano.set('gars_exclu', 'on'),
-                        vocalsNanoFX3TrapVerb.set('NanoGars', 'Gain', 0),
-                        vocalsNanoFX3TrapVerb.set('VocalsNanoFX3TrapVerb', 'Mute', 0)
+                        vocalsNanoFX2Delay.set('active', 'on'),
+                        vocalsNanoFX4Disint.set('active', 'on')
                 ]
+            },
+            {
+                1: lambda: [
+                    #  ready for my...
+                    transport.stop(),
+                    looper.pause(),
+                ],
+                2.5: lambda: jmjKeyboard.set_sound('LowZDubstep')
             }
         ], loop=False)
 
@@ -462,14 +473,14 @@ class Mcob(Video, Light, RouteBase):
         """
         RECORD SYNTH
         """
-        looper.record(7)
+        looper.record(3)
 
     @pedalboard_button(10)
     def loop_synth(self):
         """
         OVERDUB SYNTH
         """
-        looper.overdub(7)
+        looper.overdub(3)
 
     @mk2_button(5, 'purple')
     def relance_trance(self):
@@ -502,3 +513,24 @@ class Mcob(Video, Light, RouteBase):
 
         # Keyboards
         jmjKeyboard.set_sound('ZBombarde', boost=True)
+
+    @mk2_button(6, 'yellow')
+    def nanogars(self):
+        """
+        NANO GARS
+        """
+        vocalsNano.set('gars_exclu', 'on')
+
+    @mk2_button(7, 'yellow')
+    def nanomeuf(self):
+        """
+        NANO MEUF
+        """
+        vocalsNano.set('meuf_exclu', 'on')
+
+    @mk2_button(8, 'yellow')
+    def nanonormo(self):
+        """
+        NANO NORMO
+        """
+        vocalsNano.set('normo_exclu', 'on')

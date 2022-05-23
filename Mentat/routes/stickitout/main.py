@@ -125,6 +125,14 @@ class StickItOut(Video, Light, RouteBase):
         vocalsKesch.set('meuf_exclu', 'on')
 
         # Synths
+        synths.set('Trapfifth', 'Pan', -0.5)
+        synths.set('ZDiploLike', 'Pan', 0.5)
+        synths.set('Rhodes', 'Pan', 0.3)
+        synths.set('DubstepHorn', 'Pan', -0.3)
+        synthsFX2Delay.set('Trapfifth', 'Gain', -10.0)
+        synthsFX2Delay.set('DubstepHorn', 'Gain', -6.0)
+        synthsFX2Delay.set('ZDiploLike', 'Gain', -9.0)
+        synthsFX2Delay.set('SynthsFX2Delay', 'Mute', 0.0)
 
         # Sequences (Mentat)
         self.start_sequence('2ref_depitch', [
@@ -139,3 +147,82 @@ class StickItOut(Video, Light, RouteBase):
                 ]
             }
         ], loop=False)
+
+    def theme(self):
+        """
+        THÈME
+        """
+        self.pause_loopers()
+        self.reset()
+
+        # Sequences
+        seq192.select('solo', 'dummy')
+
+        # Transport
+        transport.start()
+
+
+        # Vocals
+        vocalsNano.set('gars_exclu', 'on')
+        vocalsKesch.set('meuf_exclu', 'on')
+
+        # Keyboards
+        jmjKeyboard.set_sound("ZDupieux")
+
+        # Samples
+        samples.set('Samples1', 'Mute', 0.0)
+        samples.set('Samples2', 'Mute', 0.0)
+        samples.set('Samples3', 'Mute', 0.0)
+        samples.set('Samples4', 'Mute', 0.0)
+        samplesFX3Reverb.set('Samples[1-4]', 'Gain', -16.0)
+        samplesFX3Reverb.set('SamplesFX3Reverb', 'Mute', 0.0)
+        samplesFX2Delay.set('Samples[1-4]', 'Gain', -24.0)
+        samplesFX2Delay.set('SamplesFX2Delay', 'Mute', 0.0)
+
+
+        # Sequences (Mentat)
+        self.start_sequence('theme', [
+            { # bar 1
+                1: lambda: [
+                    prodSampler.send('/instrument/play', 's:Plagiat/StickItOut/LobbyLobbyBoy', 50),
+                    prodSampler.send('/instrument/play', 's:Plagiat/StickItOut/LobbyLobbyPiano', 90),
+                    prodSampler.send('/instrument/play', 's:Plagiat/StickItOut/LobbyLobbyClarAigue', 85),
+                    prodSampler.send('/instrument/play', 's:Plagiat/StickItOut/LobbyLobbyClarGrave', 90)
+                ]
+            },
+            {}, {}, {} # bars 2 - 4
+
+        ], loop=True)
+
+
+
+    @pedalboard_button(5)
+    def theme_launcher(self):
+        """
+        THÈME (LAUNCHER)
+        """
+        self.pause_loopers()
+        self.reset()
+
+        # Sequence
+        seq192.select('on', 'theme_launcher')
+
+        # Samples
+        samples.set('Samples1', 'Mute', 0.0)
+        samples.set('Samples2', 'Mute', 0.0)
+        samples.set('Samples3', 'Mute', 0.0)
+        samples.set('Samples4', 'Mute', 0.0)
+        samplesFX3Reverb.set('Samples[1-4]', 'Gain', -16.0)
+        samplesFX3Reverb.set('SamplesFX3Reverb', 'Mute', 0.0)
+        samplesFX2Delay.set('Samples[1-4]', 'Gain', -24.0)
+        samplesFX2Delay.set('SamplesFX2Delay', 'Mute', 0.0)
+
+        # Keyboards
+        jmjKeyboard.set_sound("ZDupieux")
+
+        # Sequences (Mentat)
+        self.start_scene('theme_launcher',
+        lambda: [
+            self.wait_next_cycle(),
+            self.theme()
+        ])

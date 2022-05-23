@@ -17,7 +17,7 @@ class ViktorHuguau(Video, Light, RouteBase):
         super().activate()
 
         transport.set_tempo(75)
-        transport.set_cycle('4/4', 'xxxx')
+        transport.set_cycle('2/4', 'xx')
 
         # Setups, banks...
         seq192.set_screenset(self.name)
@@ -27,8 +27,8 @@ class ViktorHuguau(Video, Light, RouteBase):
         microtonality.disable()
 
         # Autotuner Notes
-        #                  c     d     e  f     g     a     b
-        autotune.set_notes(1, 0, 0, 1, 1, 0, 1, 1, 0, 1, 0, 1)
+        #    ]@           c     d     e  f     g     a     b
+        notes.set_notes(1, 0, 0, 1, 1, 0, 1, 1, 0, 1, 0, 1)
 
 
     @pedalboard_button(1)
@@ -49,6 +49,8 @@ class ViktorHuguau(Video, Light, RouteBase):
         self.pause_loopers()
         self.reset()
 
+        # Sequences
+        seq192.select('solo', 'dummy')
 
         # Transport
         transport.start()
@@ -61,15 +63,13 @@ class ViktorHuguau(Video, Light, RouteBase):
         jmjKeyboard.set_sound('ZDupieux', boost=True)
 
         # Bass
-        bassFX.set('basscape','on')
+        bassFX.set('scape','on')
 
     @mk2_button(2, 'blue')
     def stopsampmles(self):
         """
         STOP BLAST 'N' SAX
         """
-        self.pause_loopers()
-        self.reset()
 
         # Samples
         prodSampler.send('/instrument/stop', 's:Plagiat/ViktorHuguau/blast')
@@ -80,8 +80,6 @@ class ViktorHuguau(Video, Light, RouteBase):
         """
         BLAST
         """
-        self.pause_loopers()
-        self.reset()
 
         # Samples
         samples.set('Samples1', 'Mute', 0.0)
@@ -92,8 +90,6 @@ class ViktorHuguau(Video, Light, RouteBase):
         """
         SAX
         """
-        self.pause_loopers()
-        self.reset()
 
         # Samples
         samples.set('Samples1', 'Mute', 0.0)

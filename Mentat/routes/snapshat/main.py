@@ -28,6 +28,9 @@ class Snapshat(Video, Light, RouteBase):
         #               c     d     e  f     g     a     b
         notes.set_notes(1, 0, 1, 1, 0, 1, 1, 1, 0, 1, 1, 0)
 
+        # Mk2
+        mk2Control.set_mode('mute_samples')
+
 
     @pedalboard_button(1)
     @mk2_button(1, 'blue')
@@ -122,11 +125,9 @@ class Snapshat(Video, Light, RouteBase):
 
         # Vocals
         vocalsNano.set('meuf_exclu', 'on')
-        vocalsNanoFX2Delay.set('NanoMeuf', 'Gain', 0.0)
-        vocalsNanoFX2Delay.set('VocalsNanoFX2Delay', 'Mute', 0.0)
+        vocalsNanoFX2Delay.set('active', 'on')
         vocalsKesch.set('gars_exclu', 'on')
-        vocalsKeschFX2Delay.set('KeschMeuf', 'Gain', 0.0)
-        vocalsKeschFX2Delay.set('VocalsKeschFX2Delay', 'Mute', 0.0)
+        vocalsKeschFX2Delay.set('active', 'on')
 
         # Sequences (Mentat)
         self.start_sequence('refrain', {

@@ -8,17 +8,23 @@ class VocalsFX(NonMixer):
         prefix =  self.name[6:].partition('FX')[0] # Nano or Kesch
 
         def pre_getter(pre_m, pre_n, pre_g):
-            return 'off' if pre_m + pre_n + pre_g == -210  else 'on'# -70db * 3
+            return 'off' if pre_m + pre_n + pre_g == 3  else 'on'# 3 == all muted
 
         def pre_setter(state):
+
+            vx = self.engine.modules['Vocals%s' % prefix]
             for v in 'Meuf', 'Normo', 'Gars':
-                self.set(prefix + v, 'Gain', 0 if state == 'on' else -70)
+                if vx.get(v.lower()) == 'on' and state == 'on':
+                    self.set(prefix + v, 'Mute', 0)
+                else:
+                    self.set(prefix + v, 'Mute', 1)
+
             if state == 'on':
                 self.set('post', 'on')
 
         self.add_meta_parameter(
             'pre',
-            [['%s%s' % (prefix, v), 'Gain'] for v in ['Meuf', 'Normo', 'Gars']],
+            [['%s%s' % (prefix, v), 'Mute'] for v in ['Meuf', 'Normo', 'Gars']],
             pre_getter,
             pre_setter
         )
@@ -36,4 +42,20 @@ class VocalsFX(NonMixer):
             [[name, 'Mute']],
             post_getter,
             post_setter
+        )
+
+        def active_getter(pre, post):
+            return 'off' if pre == 'off' and post == 'off' else 'on'
+
+        def active_setter(state):
+            if state == 'on':
+                self.set('pre', 'on')
+            else:
+                self.set('post', 'off')
+
+        self.add_meta_parameter(
+            'active',
+            ['pre', 'post'],
+            active_getter,
+            active_setter
         )

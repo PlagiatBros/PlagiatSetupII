@@ -54,6 +54,7 @@ class SW(Video, Light, RouteBase):
         seq192.select('solo', 'intro_*')
 
         # Transport
+        transport.set_cycle('4/4', 'Xxxx')
         transport.start()
 
         # Samples
@@ -264,7 +265,6 @@ class SW(Video, Light, RouteBase):
             { # bar 2
                 4 + 1/2.: lambda: [
                     seq192.select('solo', 'couplet2*'),
-                    transport.start(),
                     vocalsNano.set('gars_exclu', 'on')
                     ]
             }

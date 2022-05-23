@@ -121,13 +121,16 @@ class SaperComJaja(Video, Light, RouteBase):
         vocalsNano.set('gars_exclu', 'on')
         vocalsKesch.set('normo_exclu', 'on')
 
+        # Keyboards
+        jmjKeyboard.set_sound('LowCBoomTrapline')
+
     @mk2_button(2, 'purple') # à l'origine bouton 6
     def zynette_dre(self):
         """
         Zynette Dre
         """
 
-        #self.couplet_m1()
+        self.couplet_m()
 
         # Sequences
         seq192.select('on', 'zynette_*')

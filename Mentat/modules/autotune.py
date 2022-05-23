@@ -50,7 +50,7 @@ class Autotune(Module):
         """
         i = 0
         for note in notes:
-            self.set('note_%i' % i, note)
+            self.set('note_%i' % ((i - self.base_offset) % 12), note)
             i += 1
 
     def set_tuning(self, *tunings):

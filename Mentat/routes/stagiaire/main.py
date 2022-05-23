@@ -30,6 +30,8 @@ class Stagiaire(Video, Light, RouteBase):
         #               c     d     e  f     g     a     b
         notes.set_notes(1, 1, 0, 0, 1, 1, 0, 1, 1, 0, 1, 0)
 
+        # Mk2
+        mk2Control.set_mode('mute_samples')
 
     @pedalboard_button(1)
     @mk2_button(1, 'blue')
@@ -229,17 +231,14 @@ class Stagiaire(Video, Light, RouteBase):
         vocalsNano.set('normo_exclu', 'on')
         vocalsKesch.set('gars_exclu', 'on')
 
+        vocalsKeschFX2Delay.set('active', 'on')
+        vocalsNanoFX2Delay.set('active', 'on')
+
         # TODO: c koi se bordél
         # Séquences (Mentat)
         self.start_sequence('refrain_stagiaire', [
             {'signature': '4/4'}, # bar 1
             { # bar 2
-                4: lambda: [
-                    vocalsKeschFX2Delay.set('KeschMeuf', 'Gain', 0.0),
-                    vocalsKeschFX2Delay.set('KeschGars', 'Gain', 0.0),
-                    vocalsNanoFX2Delay.set('NanoMeuf', 'Gain', 0.0),
-                    vocalsNanoFX2Delay.set('NanoGars', 'Gain', 0.0)
-                    ]
             },
             { # bar 3
                 2: lambda: vocalsKesch.set('meuf_exclu', 'on')
@@ -248,39 +247,13 @@ class Stagiaire(Video, Light, RouteBase):
                 3: lambda: vocalsKesch.set('gars_exclu', 'on')
             },
             { # bar 5
-                2: lambda: [
-                    vocalsKeschFX2Delay.set('KeschMeuf', 'Mute', 1.0),
-                    vocalsKeschFX2Delay.set('KeschGars', 'Mute', 1.0),
-                    vocalsNanoFX2Delay.set('NanoMeuf', 'Mute', 0.0),
-                    vocalsNanoFX2Delay.set('NanoGars', 'Mute', 0.0)
-                    ]
             },
             { # bar 6
-                4: lambda: [
-                    vocalsKeschFX2Delay.set('KeschMeuf', 'Mute', 0.0),
-                    vocalsKeschFX2Delay.set('KeschGars', 'Mute', 0.0),
-                    vocalsNanoFX2Delay.set('NanoMeuf', 'Mute', 0.0),
-                    vocalsNanoFX2Delay.set('NanoGars', 'Mute', 0.0)
-                    ]
             },
             { # bar 7
-                2: lambda: [
-                    vocalsKeschFX2Delay.set('KeschMeuf', 'Mute', 1.0),
-                    vocalsKeschFX2Delay.set('KeschGars', 'Mute', 1.0),
-                    vocalsNanoFX2Delay.set('NanoMeuf', 'Mute', 0.0),
-                    vocalsNanoFX2Delay.set('NanoGars', 'Mute', 0.0)
-                    ]
-
             },
             { # bar 8
-                4: lambda: [
-                    vocalsKeschFX2Delay.set('KeschMeuf', 'Mute', 0.0),
-                    vocalsKeschFX2Delay.set('KeschGars', 'Mute', 0.0),
-                    vocalsNanoFX2Delay.set('NanoMeuf', 'Mute', 0.0),
-                    vocalsNanoFX2Delay.set('NanoGars', 'Mute', 0.0)
-                    ]
             },
-
         ], loop=True)
 
 
