@@ -333,8 +333,35 @@
         </instrument>
       </kit>
       <kit name="StickItOut" volume="1.000000">
-        <instrument name="Dummy" minnote="60" maxnote="60" rootnote="60" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples1" volume="1.000000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
+        <instrument name="Dummy" minnote="1" maxnote="1" rootnote="1" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples1" volume="1.000000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
           <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2021/StickItOut/Fire.wav" sampleRelative="../../../../Samples/So2021/StickItOut/Fire.wav"/>
+        </instrument>
+        <instrument name="LobbyLobbyClarAigue_levee" minnote="56" maxnote="56" rootnote="56" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples3" volume="0.500000" pan="0.300000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
+          <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2021/StickItOut/LobbyLobbyClarAigue_levee.flac" sampleRelative="../../../../Samples/So2021/StickItOut/LobbyLobbyClarAigue_levee_full.flac"/>
+        </instrument>
+        <instrument name="LobbyLobbyClarGrave_levee" minnote="57" maxnote="57" rootnote="57" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples3" volume="0.300000" pan="0.300000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
+          <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2021/StickItOut/LobbyLobbyClarGrave_levee.flac" sampleRelative="../../../../Samples/So2021/StickItOut/LobbyLobbyClarGrave_levee_full.flac"/>
+        </instrument>
+        <instrument name="LobbyLobbyPiano_levee" minnote="58" maxnote="58" rootnote="58" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples2" volume="0.400000" pan="-0.300000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
+          <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2021/StickItOut/LobbyLobbyPiano_levee.flac" sampleRelative="../../../../Samples/So2021/StickItOut/LobbyLobbyPiano_levee.flac"/>
+        </instrument>
+        <instrument name="LobbyLobbyBoy_levee" minnote="59" maxnote="59" rootnote="59" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples1" volume="0.400000" pan="-0.300000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
+          <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2021/StickItOut/LobbyLobbyBoy_levee.flac" sampleRelative="../../../../Samples/So2021/StickItOut/LobbyLobbyBoy_levee.flac"/>
+        </instrument>
+        <instrument name="LobbyLobbyBoy" minnote="60" maxnote="60" rootnote="60" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples1" volume="0.400000" pan="-0.300000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
+          <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2021/StickItOut/LobbyLobbyBoy_full.flac" sampleRelative="../../../../Samples/So2021/StickItOut/LobbyLobbyBoy_full.flac"/>
+        </instrument>
+        <instrument name="LobbyLobbyPiano" minnote="61" maxnote="61" rootnote="61" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples2" volume="0.400000" pan="-0.300000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
+          <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2021/StickItOut/LobbyLobbyPiano_full.flac" sampleRelative="../../../../Samples/So2021/StickItOut/LobbyLobbyPiano_full.flac"/>
+        </instrument>
+        <instrument name="LobbyLobbyClarGrave" minnote="62" maxnote="62" rootnote="62" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples3" volume="0.300000" pan="0.300000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
+          <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2021/StickItOut/LobbyLobbyClarGrave_full.flac" sampleRelative="../../../../Samples/So2021/StickItOut/LobbyLobbyClarGrave_full.flac"/>
+        </instrument>
+        <instrument name="LobbyLobbyClarAigue" minnote="63" maxnote="63" rootnote="63" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples3" volume="0.500000" pan="0.300000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
+          <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2021/StickItOut/LobbyLobbyClarAigue_full.flac" sampleRelative="../../../../Samples/So2021/StickItOut/LobbyLobbyClarAigue_full.flac"/>
+        </instrument>
+        <instrument name="Hink" minnote="55" maxnote="55" rootnote="55" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples4" volume="0.400000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
+          <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2021/StickItOut/Hink.flac" sampleRelative="../../../../Samples/So2021/StickItOut/LobbyLobbyHink.flac"/>
         </instrument>
       </kit>
     </setup>

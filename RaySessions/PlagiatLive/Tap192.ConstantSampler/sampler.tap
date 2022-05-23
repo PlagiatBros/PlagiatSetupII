@@ -6,8 +6,11 @@
   <creation>
     <setup name="Plagiat" channel="1" cc="-1">
       <kit name="ConstantKit" volume="1.000000">
-        <instrument name="BoringBloke" minnote="60" maxnote="60" rootnote="60" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="output" volume="1.000000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
+        <instrument name="BoringBloke" minnote="1" maxnote="1" rootnote="1" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="output" volume="1.000000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
           <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/Constant/BoringBloke/BoringBloke.wav" sampleRelative="../../../../Samples/Constant/BoringBloke/BoringBloke.wav"/>
+        </instrument>
+        <instrument name="AirHorn" minnote="2" maxnote="2" rootnote="2" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="output" volume="1.000000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
+          <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/Constant/AirHorn.wav" sampleRelative="../../../../Samples/Constant/AirHorn.wav"/>
         </instrument>
       </kit>
     </setup>
