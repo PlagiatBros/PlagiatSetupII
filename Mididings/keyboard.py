@@ -176,15 +176,17 @@ def create_keyboard(name):
                 ),
 
             ]),
-            3: SceneGroup('Samples', [
+            3: SceneGroup('Misc', [
                 Scene('ProdSampler',
                     prodSampler
                 ),
                 Scene('ConstantSampler',
                     constantSampler
                 ),
-
-            ]),
+                Scene('Mute',
+                    Discard()
+                ),
+            ])
         }
 
     )
