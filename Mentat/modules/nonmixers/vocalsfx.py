@@ -8,7 +8,7 @@ class VocalsFX(NonMixer):
         prefix =  self.name[6:].partition('FX')[0] # Nano or Kesch
 
         def pre_getter(pre_m, pre_n, pre_g):
-            return 'off' if pre_m + pre_n + pre_g == 3  else 'on'# 3 == all muted
+            return 'off' if pre_m == 1 and pre_n == 1 and pre_g == 1  else 'on'# 3 == all muted
 
         def pre_setter(state):
 

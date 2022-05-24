@@ -42,7 +42,7 @@ class Vocals(NonMixer):
                         self.set(ab_strip_name, 'Mute', 1.0)
 
                     for fx in fxs:
-                        if fx.get('active') == 'on':
+                        if fx.get('pre') == 'on' and fx.get('post') == 'on':
                             fx.set('%s%s' % (strip_prefix, name.capitalize()), 'Mute', 0 if state == 'on' else 1)
 
 

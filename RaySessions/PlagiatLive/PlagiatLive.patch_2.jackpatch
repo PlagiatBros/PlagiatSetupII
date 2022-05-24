@@ -275,6 +275,8 @@ Non-Mixer.SamplesWork (In):Samples4/out-1 |> Non-Mixer.SamplesWork (Process):Sam
 Non-Mixer.SamplesWork (In):Samples5/out-1 |> Non-Mixer.SamplesWork (Process):SamplesWork/in-1
 Non-Mixer.SamplesWork (Process):SamplesWork/out-1 |> Non-Mixer.Samples (Out):SamplesOut/in-1
 Non-Mixer.Synths (Main):DubstepHorn/aux-A/out-1 |> Non-Mixer.MonitorsKesch (MonitorsKesch):SynthsBoost/in-1
+Non-Mixer.Synths (Main):DubstepHorn/aux-B/out-1 |> Non-Mixer.Synths (Main):MainReverb/in-1
+Non-Mixer.Synths (Main):DubstepHorn/aux-B/out-2 |> Non-Mixer.Synths (Main):MainReverb/in-2
 Non-Mixer.Synths (Main):DubstepHorn/out-1 |> Non-Mixer.Synths (Out):SynthsOut/in-1
 Non-Mixer.Synths (Main):DubstepHorn/out-1 |> Non-Mixer.SynthsFX1Reverb (In):DubstepHorn/in-1
 Non-Mixer.Synths (Main):DubstepHorn/out-1 |> Non-Mixer.SynthsFX2Delay (In):DubstepHorn/in-1
@@ -288,6 +290,8 @@ Non-Mixer.Synths (Main):DubstepHorn/out-2 |> Non-Mixer.SynthsFX3Delay (In):Dubst
 Non-Mixer.Synths (Main):DubstepHorn/out-2 |> Non-Mixer.SynthsFX4TapeDelay (In):DubstepHorn/in-2
 Non-Mixer.Synths (Main):DubstepHorn/out-2 |> Non-Mixer.SynthsFX5Scape (In):DubstepHorn/in-2
 Non-Mixer.Synths (Main):EasyClassical/aux-A/out-1 |> Non-Mixer.MonitorsKesch (MonitorsKesch):SynthsBoost/in-1
+Non-Mixer.Synths (Main):EasyClassical/aux-B/out-1 |> Non-Mixer.Synths (Main):MainReverb/in-1
+Non-Mixer.Synths (Main):EasyClassical/aux-B/out-2 |> Non-Mixer.Synths (Main):MainReverb/in-2
 Non-Mixer.Synths (Main):EasyClassical/out-1 |> Non-Mixer.Synths (Out):SynthsOut/in-1
 Non-Mixer.Synths (Main):EasyClassical/out-1 |> Non-Mixer.SynthsFX1Reverb (In):EasyClassical/in-1
 Non-Mixer.Synths (Main):EasyClassical/out-1 |> Non-Mixer.SynthsFX2Delay (In):EasyClassical/in-1
@@ -300,6 +304,8 @@ Non-Mixer.Synths (Main):EasyClassical/out-2 |> Non-Mixer.SynthsFX2Delay (In):Eas
 Non-Mixer.Synths (Main):EasyClassical/out-2 |> Non-Mixer.SynthsFX3Delay (In):EasyClassical/in-2
 Non-Mixer.Synths (Main):EasyClassical/out-2 |> Non-Mixer.SynthsFX4TapeDelay (In):EasyClassical/in-2
 Non-Mixer.Synths (Main):EasyClassical/out-2 |> Non-Mixer.SynthsFX5Scape (In):EasyClassical/in-2
+Non-Mixer.Synths (Main):MainReverb/out-1 |> Non-Mixer.Synths (Out):SynthsOut/in-1
+Non-Mixer.Synths (Main):MainReverb/out-2 |> Non-Mixer.Synths (Out):SynthsOut/in-2
 Non-Mixer.Synths (Main):Rhodes/aux-A/out-1 |> Non-Mixer.MonitorsKesch (MonitorsKesch):SynthsBoost/in-1
 Non-Mixer.Synths (Main):Rhodes/out-1     |> Non-Mixer.Synths (Out):SynthsOut/in-1
 Non-Mixer.Synths (Main):Rhodes/out-1     |> Non-Mixer.SynthsFX1Reverb (In):Rhodes/in-1
@@ -314,6 +320,8 @@ Non-Mixer.Synths (Main):Rhodes/out-2     |> Non-Mixer.SynthsFX3Delay (In):Rhodes
 Non-Mixer.Synths (Main):Rhodes/out-2     |> Non-Mixer.SynthsFX4TapeDelay (In):Rhodes/in-2
 Non-Mixer.Synths (Main):Rhodes/out-2     |> Non-Mixer.SynthsFX5Scape (In):Rhodes/in-2
 Non-Mixer.Synths (Main):Trap/aux-A/out-1 |> Non-Mixer.MonitorsKesch (MonitorsKesch):SynthsBoost/in-1
+Non-Mixer.Synths (Main):Trap/aux-B/out-1 |> Non-Mixer.Synths (Main):MainReverb/in-1
+Non-Mixer.Synths (Main):Trap/aux-B/out-2 |> Non-Mixer.Synths (Main):MainReverb/in-2
 Non-Mixer.Synths (Main):Trap/out-1       |> Non-Mixer.Synths (Out):SynthsOut/in-1
 Non-Mixer.Synths (Main):Trap/out-1       |> Non-Mixer.SynthsFX1Reverb (In):Trap/in-1
 Non-Mixer.Synths (Main):Trap/out-1       |> Non-Mixer.SynthsFX2Delay (In):Trap/in-1
@@ -327,6 +335,8 @@ Non-Mixer.Synths (Main):Trap/out-2       |> Non-Mixer.SynthsFX3Delay (In):Trap/i
 Non-Mixer.Synths (Main):Trap/out-2       |> Non-Mixer.SynthsFX4TapeDelay (In):Trap/in-2
 Non-Mixer.Synths (Main):Trap/out-2       |> Non-Mixer.SynthsFX5Scape (In):Trap/in-2
 Non-Mixer.Synths (Main):TrapFifth/aux-A/out-1 |> Non-Mixer.MonitorsKesch (MonitorsKesch):SynthsBoost/in-1
+Non-Mixer.Synths (Main):TrapFifth/aux-B/out-1 |> Non-Mixer.Synths (Main):MainReverb/in-1
+Non-Mixer.Synths (Main):TrapFifth/aux-B/out-2 |> Non-Mixer.Synths (Main):MainReverb/in-2
 Non-Mixer.Synths (Main):TrapFifth/out-1  |> Non-Mixer.Synths (Out):SynthsOut/in-1
 Non-Mixer.Synths (Main):TrapFifth/out-1  |> Non-Mixer.SynthsFX1Reverb (In):TrapFifth/in-1
 Non-Mixer.Synths (Main):TrapFifth/out-1  |> Non-Mixer.SynthsFX2Delay (In):TrapFifth/in-1
@@ -340,6 +350,8 @@ Non-Mixer.Synths (Main):TrapFifth/out-2  |> Non-Mixer.SynthsFX3Delay (In):TrapFi
 Non-Mixer.Synths (Main):TrapFifth/out-2  |> Non-Mixer.SynthsFX4TapeDelay (In):TrapFifth/in-2
 Non-Mixer.Synths (Main):TrapFifth/out-2  |> Non-Mixer.SynthsFX5Scape (In):TrapFifth/in-2
 Non-Mixer.Synths (Main):Z8bits/aux-A/out-1 |> Non-Mixer.MonitorsKesch (MonitorsKesch):SynthsBoost/in-1
+Non-Mixer.Synths (Main):Z8bits/aux-B/out-1 |> Non-Mixer.Synths (Main):MainReverb/in-1
+Non-Mixer.Synths (Main):Z8bits/aux-B/out-2 |> Non-Mixer.Synths (Main):MainReverb/in-2
 Non-Mixer.Synths (Main):Z8bits/out-1     |> Non-Mixer.Synths (Out):SynthsOut/in-1
 Non-Mixer.Synths (Main):Z8bits/out-1     |> Non-Mixer.SynthsFX1Reverb (In):Z8bits/in-1
 Non-Mixer.Synths (Main):Z8bits/out-1     |> Non-Mixer.SynthsFX2Delay (In):Z8bits/in-1
@@ -353,6 +365,8 @@ Non-Mixer.Synths (Main):Z8bits/out-2     |> Non-Mixer.SynthsFX3Delay (In):Z8bits
 Non-Mixer.Synths (Main):Z8bits/out-2     |> Non-Mixer.SynthsFX4TapeDelay (In):Z8bits/in-2
 Non-Mixer.Synths (Main):Z8bits/out-2     |> Non-Mixer.SynthsFX5Scape (In):Z8bits/in-2
 Non-Mixer.Synths (Main):ZBombarde/aux-A/out-1 |> Non-Mixer.MonitorsKesch (MonitorsKesch):SynthsBoost/in-1
+Non-Mixer.Synths (Main):ZBombarde/aux-B/out-1 |> Non-Mixer.Synths (Main):MainReverb/in-1
+Non-Mixer.Synths (Main):ZBombarde/aux-B/out-2 |> Non-Mixer.Synths (Main):MainReverb/in-2
 Non-Mixer.Synths (Main):ZBombarde/out-1  |> Non-Mixer.Synths (Out):SynthsOut/in-1
 Non-Mixer.Synths (Main):ZBombarde/out-1  |> Non-Mixer.SynthsFX1Reverb (In):ZBombarde/in-1
 Non-Mixer.Synths (Main):ZBombarde/out-1  |> Non-Mixer.SynthsFX2Delay (In):ZBombarde/in-1
@@ -366,6 +380,8 @@ Non-Mixer.Synths (Main):ZBombarde/out-2  |> Non-Mixer.SynthsFX3Delay (In):ZBomba
 Non-Mixer.Synths (Main):ZBombarde/out-2  |> Non-Mixer.SynthsFX4TapeDelay (In):ZBombarde/in-2
 Non-Mixer.Synths (Main):ZBombarde/out-2  |> Non-Mixer.SynthsFX5Scape (In):ZBombarde/in-2
 Non-Mixer.Synths (Main):ZCosma/aux-A/out-1 |> Non-Mixer.MonitorsKesch (MonitorsKesch):SynthsBoost/in-1
+Non-Mixer.Synths (Main):ZCosma/aux-B/out-1 |> Non-Mixer.Synths (Main):MainReverb/in-1
+Non-Mixer.Synths (Main):ZCosma/aux-B/out-2 |> Non-Mixer.Synths (Main):MainReverb/in-2
 Non-Mixer.Synths (Main):ZCosma/out-1     |> Non-Mixer.Synths (Out):SynthsOut/in-1
 Non-Mixer.Synths (Main):ZCosma/out-1     |> Non-Mixer.SynthsFX1Reverb (In):ZCosma/in-1
 Non-Mixer.Synths (Main):ZCosma/out-1     |> Non-Mixer.SynthsFX2Delay (In):ZCosma/in-1
@@ -379,6 +395,8 @@ Non-Mixer.Synths (Main):ZCosma/out-2     |> Non-Mixer.SynthsFX3Delay (In):ZCosma
 Non-Mixer.Synths (Main):ZCosma/out-2     |> Non-Mixer.SynthsFX4TapeDelay (In):ZCosma/in-2
 Non-Mixer.Synths (Main):ZCosma/out-2     |> Non-Mixer.SynthsFX5Scape (In):ZCosma/in-2
 Non-Mixer.Synths (Main):ZDiploLike/aux-A/out-1 |> Non-Mixer.MonitorsKesch (MonitorsKesch):SynthsBoost/in-1
+Non-Mixer.Synths (Main):ZDiploLike/aux-B/out-1 |> Non-Mixer.Synths (Main):MainReverb/in-1
+Non-Mixer.Synths (Main):ZDiploLike/aux-B/out-2 |> Non-Mixer.Synths (Main):MainReverb/in-2
 Non-Mixer.Synths (Main):ZDiploLike/out-1 |> Non-Mixer.Synths (Out):SynthsOut/in-1
 Non-Mixer.Synths (Main):ZDiploLike/out-1 |> Non-Mixer.SynthsFX1Reverb (In):ZDiploLike/in-1
 Non-Mixer.Synths (Main):ZDiploLike/out-1 |> Non-Mixer.SynthsFX2Delay (In):ZDiploLike/in-1
@@ -392,6 +410,8 @@ Non-Mixer.Synths (Main):ZDiploLike/out-2 |> Non-Mixer.SynthsFX3Delay (In):ZDiplo
 Non-Mixer.Synths (Main):ZDiploLike/out-2 |> Non-Mixer.SynthsFX4TapeDelay (In):ZDiploLike/in-2
 Non-Mixer.Synths (Main):ZDiploLike/out-2 |> Non-Mixer.SynthsFX5Scape (In):ZDiploLike/in-2
 Non-Mixer.Synths (Main):ZDiploLikeWide/aux-A/out-1 |> Non-Mixer.MonitorsKesch (MonitorsKesch):SynthsBoost/in-1
+Non-Mixer.Synths (Main):ZDiploLikeWide/aux-B/out-1 |> Non-Mixer.Synths (Main):MainReverb/in-1
+Non-Mixer.Synths (Main):ZDiploLikeWide/aux-B/out-2 |> Non-Mixer.Synths (Main):MainReverb/in-2
 Non-Mixer.Synths (Main):ZDiploLikeWide/out-1 |> Non-Mixer.Synths (Out):SynthsOut/in-1
 Non-Mixer.Synths (Main):ZDiploLikeWide/out-1 |> Non-Mixer.SynthsFX1Reverb (In):ZDiploLikeWide/in-1
 Non-Mixer.Synths (Main):ZDiploLikeWide/out-1 |> Non-Mixer.SynthsFX2Delay (In):ZDiploLikeWide/in-1
@@ -405,6 +425,8 @@ Non-Mixer.Synths (Main):ZDiploLikeWide/out-2 |> Non-Mixer.SynthsFX3Delay (In):ZD
 Non-Mixer.Synths (Main):ZDiploLikeWide/out-2 |> Non-Mixer.SynthsFX4TapeDelay (In):ZDiploLikeWide/in-2
 Non-Mixer.Synths (Main):ZDiploLikeWide/out-2 |> Non-Mixer.SynthsFX5Scape (In):ZDiploLikeWide/in-2
 Non-Mixer.Synths (Main):ZDre/aux-A/out-1 |> Non-Mixer.MonitorsKesch (MonitorsKesch):SynthsBoost/in-1
+Non-Mixer.Synths (Main):ZDre/aux-B/out-1 |> Non-Mixer.Synths (Main):MainReverb/in-1
+Non-Mixer.Synths (Main):ZDre/aux-B/out-2 |> Non-Mixer.Synths (Main):MainReverb/in-2
 Non-Mixer.Synths (Main):ZDre/out-1       |> Non-Mixer.Synths (Out):SynthsOut/in-1
 Non-Mixer.Synths (Main):ZDre/out-1       |> Non-Mixer.SynthsFX1Reverb (In):ZDre/in-1
 Non-Mixer.Synths (Main):ZDre/out-1       |> Non-Mixer.SynthsFX2Delay (In):ZDre/in-1
@@ -418,6 +440,8 @@ Non-Mixer.Synths (Main):ZDre/out-2       |> Non-Mixer.SynthsFX3Delay (In):ZDre/i
 Non-Mixer.Synths (Main):ZDre/out-2       |> Non-Mixer.SynthsFX4TapeDelay (In):ZDre/in-2
 Non-Mixer.Synths (Main):ZDre/out-2       |> Non-Mixer.SynthsFX5Scape (In):ZDre/in-2
 Non-Mixer.Synths (Main):ZDupieux/aux-A/out-1 |> Non-Mixer.MonitorsKesch (MonitorsKesch):SynthsBoost/in-1
+Non-Mixer.Synths (Main):ZDupieux/aux-B/out-1 |> Non-Mixer.Synths (Main):MainReverb/in-1
+Non-Mixer.Synths (Main):ZDupieux/aux-B/out-2 |> Non-Mixer.Synths (Main):MainReverb/in-2
 Non-Mixer.Synths (Main):ZDupieux/out-1   |> Non-Mixer.Synths (Out):SynthsOut/in-1
 Non-Mixer.Synths (Main):ZDupieux/out-1   |> Non-Mixer.SynthsFX1Reverb (In):ZDupieux/in-1
 Non-Mixer.Synths (Main):ZDupieux/out-1   |> Non-Mixer.SynthsFX2Delay (In):ZDupieux/in-1
@@ -431,6 +455,8 @@ Non-Mixer.Synths (Main):ZDupieux/out-2   |> Non-Mixer.SynthsFX3Delay (In):ZDupie
 Non-Mixer.Synths (Main):ZDupieux/out-2   |> Non-Mixer.SynthsFX4TapeDelay (In):ZDupieux/in-2
 Non-Mixer.Synths (Main):ZDupieux/out-2   |> Non-Mixer.SynthsFX5Scape (In):ZDupieux/in-2
 Non-Mixer.Synths (Main):ZJestoProunk/aux-A/out-1 |> Non-Mixer.MonitorsKesch (MonitorsKesch):SynthsBoost/in-1
+Non-Mixer.Synths (Main):ZJestoProunk/aux-B/out-1 |> Non-Mixer.Synths (Main):MainReverb/in-1
+Non-Mixer.Synths (Main):ZJestoProunk/aux-B/out-2 |> Non-Mixer.Synths (Main):MainReverb/in-2
 Non-Mixer.Synths (Main):ZJestoProunk/out-1 |> Non-Mixer.Synths (Out):SynthsOut/in-1
 Non-Mixer.Synths (Main):ZJestoProunk/out-1 |> Non-Mixer.SynthsFX1Reverb (In):ZJestoProunk/in-1
 Non-Mixer.Synths (Main):ZJestoProunk/out-1 |> Non-Mixer.SynthsFX2Delay (In):ZJestoProunk/in-1
@@ -444,6 +470,8 @@ Non-Mixer.Synths (Main):ZJestoProunk/out-2 |> Non-Mixer.SynthsFX3Delay (In):ZJes
 Non-Mixer.Synths (Main):ZJestoProunk/out-2 |> Non-Mixer.SynthsFX4TapeDelay (In):ZJestoProunk/in-2
 Non-Mixer.Synths (Main):ZJestoProunk/out-2 |> Non-Mixer.SynthsFX5Scape (In):ZJestoProunk/in-2
 Non-Mixer.Synths (Main):ZNotSoRhodes/aux-A/out-1 |> Non-Mixer.MonitorsKesch (MonitorsKesch):SynthsBoost/in-1
+Non-Mixer.Synths (Main):ZNotSoRhodes/aux-B/out-1 |> Non-Mixer.Synths (Main):MainReverb/in-1
+Non-Mixer.Synths (Main):ZNotSoRhodes/aux-B/out-2 |> Non-Mixer.Synths (Main):MainReverb/in-2
 Non-Mixer.Synths (Main):ZNotSoRhodes/out-1 |> Non-Mixer.Synths (Out):SynthsOut/in-1
 Non-Mixer.Synths (Main):ZNotSoRhodes/out-1 |> Non-Mixer.SynthsFX1Reverb (In):ZNotSoRhodes/in-1
 Non-Mixer.Synths (Main):ZNotSoRhodes/out-1 |> Non-Mixer.SynthsFX2Delay (In):ZNotSoRhodes/in-1
@@ -457,6 +485,8 @@ Non-Mixer.Synths (Main):ZNotSoRhodes/out-2 |> Non-Mixer.SynthsFX3Delay (In):ZNot
 Non-Mixer.Synths (Main):ZNotSoRhodes/out-2 |> Non-Mixer.SynthsFX4TapeDelay (In):ZNotSoRhodes/in-2
 Non-Mixer.Synths (Main):ZNotSoRhodes/out-2 |> Non-Mixer.SynthsFX5Scape (In):ZNotSoRhodes/in-2
 Non-Mixer.Synths (Main):ZOrgan/aux-A/out-1 |> Non-Mixer.MonitorsKesch (MonitorsKesch):SynthsBoost/in-1
+Non-Mixer.Synths (Main):ZOrgan/aux-B/out-1 |> Non-Mixer.Synths (Main):MainReverb/in-1
+Non-Mixer.Synths (Main):ZOrgan/aux-B/out-2 |> Non-Mixer.Synths (Main):MainReverb/in-2
 Non-Mixer.Synths (Main):ZOrgan/out-1     |> Non-Mixer.Synths (Out):SynthsOut/in-1
 Non-Mixer.Synths (Main):ZOrgan/out-1     |> Non-Mixer.SynthsFX1Reverb (In):ZOrgan/in-1
 Non-Mixer.Synths (Main):ZOrgan/out-1     |> Non-Mixer.SynthsFX2Delay (In):ZOrgan/in-1
@@ -470,6 +500,8 @@ Non-Mixer.Synths (Main):ZOrgan/out-2     |> Non-Mixer.SynthsFX3Delay (In):ZOrgan
 Non-Mixer.Synths (Main):ZOrgan/out-2     |> Non-Mixer.SynthsFX4TapeDelay (In):ZOrgan/in-2
 Non-Mixer.Synths (Main):ZOrgan/out-2     |> Non-Mixer.SynthsFX5Scape (In):ZOrgan/in-2
 Non-Mixer.Synths (Main):ZStambul/aux-A/out-1 |> Non-Mixer.MonitorsKesch (MonitorsKesch):SynthsBoost/in-1
+Non-Mixer.Synths (Main):ZStambul/aux-B/out-1 |> Non-Mixer.Synths (Main):MainReverb/in-1
+Non-Mixer.Synths (Main):ZStambul/aux-B/out-2 |> Non-Mixer.Synths (Main):MainReverb/in-2
 Non-Mixer.Synths (Main):ZStambul/out-1   |> Non-Mixer.Synths (Out):SynthsOut/in-1
 Non-Mixer.Synths (Main):ZStambul/out-1   |> Non-Mixer.SynthsFX1Reverb (In):ZStambul/in-1
 Non-Mixer.Synths (Main):ZStambul/out-1   |> Non-Mixer.SynthsFX2Delay (In):ZStambul/in-1
@@ -483,6 +515,8 @@ Non-Mixer.Synths (Main):ZStambul/out-2   |> Non-Mixer.SynthsFX3Delay (In):ZStamb
 Non-Mixer.Synths (Main):ZStambul/out-2   |> Non-Mixer.SynthsFX4TapeDelay (In):ZStambul/in-2
 Non-Mixer.Synths (Main):ZStambul/out-2   |> Non-Mixer.SynthsFX5Scape (In):ZStambul/in-2
 Non-Mixer.Synths (Main):ZTrumpets/aux-A/out-1 |> Non-Mixer.MonitorsKesch (MonitorsKesch):SynthsBoost/in-1
+Non-Mixer.Synths (Main):ZTrumpets/aux-B/out-1 |> Non-Mixer.Synths (Main):MainReverb/in-1
+Non-Mixer.Synths (Main):ZTrumpets/aux-B/out-2 |> Non-Mixer.Synths (Main):MainReverb/in-2
 Non-Mixer.Synths (Main):ZTrumpets/out-1  |> Non-Mixer.Synths (Out):SynthsOut/in-1
 Non-Mixer.Synths (Main):ZTrumpets/out-1  |> Non-Mixer.SynthsFX1Reverb (In):ZTrumpets/in-1
 Non-Mixer.Synths (Main):ZTrumpets/out-1  |> Non-Mixer.SynthsFX2Delay (In):ZTrumpets/in-1

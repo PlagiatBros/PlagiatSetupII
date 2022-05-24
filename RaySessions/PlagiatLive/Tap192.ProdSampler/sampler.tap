@@ -27,43 +27,43 @@
         <instrument name="Anoushka" minnote="62" maxnote="62" rootnote="62" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples2" volume="0.460000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
           <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2020/AgnoGastrik/48k_AnoushkaSHankar.5@169.wav" sampleRelative="../../../../Samples/So2020/AgnoGastrik/48k_AnoushkaSHankar.5@169.wav"/>
         </instrument>
-        <instrument name="Morricone1" minnote="0" maxnote="72" rootnote="72" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples3" volume="0.170000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
+        <instrument name="Morricone1" minnote="0" maxnote="72" rootnote="72" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples3" volume="0.080000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
           <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2020/AgnoGastrik/48k_morricone.4@141.wav" sampleRelative="../../../../Samples/So2020/AgnoGastrik/48k_morricone.4@141.wav"/>
         </instrument>
-        <instrument name="Morricone2" minnote="73" maxnote="127" rootnote="74" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples3" volume="0.310000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
+        <instrument name="Morricone2" minnote="73" maxnote="127" rootnote="74" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples3" volume="0.200000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
           <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2020/AgnoGastrik/48k_morricone.5.wav" sampleRelative="../../../../Samples/So2020/AgnoGastrik/48k_morricone.5.wav"/>
         </instrument>
-        <instrument name="Mandela" minnote="48" maxnote="48" rootnote="48" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples4" volume="0.330000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
+        <instrument name="Mandela" minnote="48" maxnote="48" rootnote="48" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples4" volume="0.630000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
           <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2020/AgnoGastrik/48k_mandela.2.wav" sampleRelative="../../../../Samples/So2020/AgnoGastrik/48k_mandela.2.wav"/>
         </instrument>
-        <instrument name="Mandela2" minnote="50" maxnote="50" rootnote="50" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples4" volume="0.330000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
+        <instrument name="Mandela2" minnote="50" maxnote="50" rootnote="50" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples4" volume="0.630000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
           <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2020/AgnoGastrik/48k_mandela.13.wav" sampleRelative="../../../../Samples/So2020/AgnoGastrik/48k_mandela.13.wav"/>
         </instrument>
-        <instrument name="Mandela3" minnote="52" maxnote="52" rootnote="52" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples4" volume="1.000000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
+        <instrument name="Mandela3" minnote="52" maxnote="52" rootnote="52" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples4" volume="1.200000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
           <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2020/AgnoGastrik/48k_mandela.4.wav" sampleRelative="../../../../Samples/So2020/AgnoGastrik/48k_mandela.4.wav"/>
         </instrument>
-        <instrument name="Morricone3" minnote="76" maxnote="76" rootnote="76" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples3" volume="0.260000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
+        <instrument name="Morricone3" minnote="76" maxnote="76" rootnote="76" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples3" volume="0.16000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
           <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2020/AgnoGastrik/48k_morricone.3@133.wav" sampleRelative="../../../../Samples/So2020/AgnoGastrik/48k_morricone.3@133.wav"/>
         </instrument>
         <instrument name="AnoushkaSpeed" minnote="64" maxnote="64" rootnote="64" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples2" volume="0.510000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
           <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2020/AgnoGastrik/48k_AnoushkaSHankar.3@84.wav" sampleRelative="../../../../Samples/So2020/AgnoGastrik/48k_AnoushkaSHankar.3@84.wav"/>
         </instrument>
-        <instrument name="Mandela4" minnote="53" maxnote="53" rootnote="53" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples5" volume="1.000000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
+        <instrument name="Mandela4" minnote="53" maxnote="53" rootnote="53" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples5" volume="1.500000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
           <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2020/AgnoGastrik/48k_mandela.4.wav" sampleRelative="../../../../Samples/So2020/AgnoGastrik/48k_mandela.4.wav"/>
         </instrument>
-        <instrument name="Mandela5" minnote="55" maxnote="55" rootnote="55" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples5" volume="1.000000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
+        <instrument name="Mandela5" minnote="55" maxnote="55" rootnote="55" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples5" volume="1.500000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
           <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2020/AgnoGastrik/48k_mandela.121.wav" sampleRelative="../../../../Samples/So2020/AgnoGastrik/48k_mandela.121.wav"/>
         </instrument>
-        <instrument name="Mandela6" minnote="57" maxnote="57" rootnote="57" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples5" volume="1.000000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
+        <instrument name="Mandela6" minnote="57" maxnote="57" rootnote="57" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples5" volume="1.500000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
           <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2020/AgnoGastrik/48k_mandela.128.wav" sampleRelative="../../../../Samples/So2020/AgnoGastrik/48k_mandela.128.wav"/>
         </instrument>
-        <instrument name="MandelaDist1" minnote="54" maxnote="54" rootnote="54" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples4" volume="0.527778" pan="0.306122" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
+        <instrument name="MandelaDist1" minnote="54" maxnote="54" rootnote="54" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples4" volume="0.827778" pan="0.306122" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
           <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2020/AgnoGastrik/48k_Processed_mandela108.wav" sampleRelative="../../../../Samples/So2020/AgnoGastrik/48k_Processed_mandela108.wav"/>
         </instrument>
-        <instrument name="MandelaDist2" minnote="56" maxnote="56" rootnote="56" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples4" volume="0.527778" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
+        <instrument name="MandelaDist2" minnote="56" maxnote="56" rootnote="56" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples4" volume="0.827778" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
           <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2020/AgnoGastrik/48k_Processed_mandela121.wav" sampleRelative="../../../../Samples/So2020/AgnoGastrik/48k_Processed_mandela121.wav"/>
         </instrument>
-        <instrument name="MandelaDist3" minnote="58" maxnote="58" rootnote="58" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples4" volume="0.527778" pan="-0.285714" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
+        <instrument name="MandelaDist3" minnote="58" maxnote="58" rootnote="58" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples4" volume="0.827778" pan="-0.285714" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
           <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2020/AgnoGastrik/48k_Processed_mandela128.wav" sampleRelative="../../../../Samples/So2020/AgnoGastrik/48k_Processed_mandela128.wav"/>
         </instrument>
         <instrument name="Mandelouille_1" minnote="12" maxnote="12" rootnote="12" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples4" volume="1.000000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
@@ -79,7 +79,7 @@
           <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2020/AgnoGastrik/RosaLia_raw.flac" sampleRelative="../../../../Samples/So2020/AgnoGastrik/RosaLia_raw.flac"/>
         </instrument>
       </kit>
-      <kit name="Stagiaire" volume="1.000000">
+      <kit name="Stagiaire" volume="1.500000">
         <instrument name="LoveBuzz" minnote="60" maxnote="60" rootnote="60" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples1" volume="0.666667" pan="-0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
           <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2020/Stagiaire/48k_loveBuzz.4.wav" sampleRelative="../../../../Samples/So2020/Stagiaire/48k_loveBuzz.4.wav"/>
         </instrument>
@@ -122,7 +122,7 @@
           <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2020/RespekLaPuissance/Le5_5.flac" sampleRelative="../../../../Samples/So2020/RespekLaPuissance/Le5_5.flac"/>
         </instrument>
       </kit>
-      <kit name="SW" volume="1.000000">
+      <kit name="SW" volume="1.7000">
         <instrument name="FiatLux" minnote="60" maxnote="60" rootnote="60" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples1" volume="0.480000" pan="0.000000" pitch_over_range="true" play_mode="trigger" play_loop="no" play_reverse="no">
           <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2020/SW/48k_FiatLux.6@112.wav" sampleRelative="../../../../Samples/So2020/SW/48k_FiatLux.6@112.wav"/>
         </instrument>
@@ -138,16 +138,16 @@
         <instrument name="Lycopter2" minnote="38" maxnote="38" rootnote="38" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples2" volume="0.150000" pan="0.000000" pitch_over_range="true" play_mode="trigger" play_loop="no" play_reverse="no">
           <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2020/SW/chopper2.wav" sampleRelative="../../../../Samples/So2020/SW/chopper2.wav"/>
         </instrument>
-        <instrument name="SWscream" minnote="9" maxnote="33" rootnote="21" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples2" volume="0.170000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
+        <instrument name="SWscream" minnote="9" maxnote="33" rootnote="21" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples4" volume="0.170000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
           <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2020/SW/SW_scream.wav" sampleRelative="../../../../Samples/So2020/SW/SW_scream.wav"/>
         </instrument>
-        <instrument name="Trumpet1" minnote="96" maxnote="96" rootnote="96" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples2" volume="0.500000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
+        <instrument name="Trumpet1" minnote="96" maxnote="96" rootnote="96" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples3" volume="0.500000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
           <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2020/SW/TocarDelDiablo1_Tape.flac" sampleRelative="../../../../Samples/So2020/SW/TocarDelDiablo1_Tape.flac"/>
         </instrument>
-        <instrument name="Trumpet2" minnote="105" maxnote="115" rootnote="110" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples2" volume="0.400000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
+        <instrument name="Trumpet2" minnote="105" maxnote="115" rootnote="110" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples3" volume="0.400000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
           <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2020/SW/TocarDelDiablo2_Tape.flac" sampleRelative="../../../../Samples/So2020/SW/TocarDelDiablo2_Tape.flac"/>
         </instrument>
-        <instrument name="Trumpet3" minnote="98" maxnote="98" rootnote="98" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples2" volume="0.500000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
+        <instrument name="Trumpet3" minnote="98" maxnote="98" rootnote="98" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples3" volume="0.500000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
           <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2020/SW/TocarDelDiablo3_Tape.flac" sampleRelative="../../../../Samples/So2020/SW/TocarDelDiablo3_Tape.flac"/>
         </instrument>
         <instrument name="MopedFonda" minnote="120" maxnote="120" rootnote="120" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples1" volume="0.300000" pan="0.000000" pitch_over_range="true" play_mode="trigger" play_loop="no" play_reverse="no">
@@ -159,15 +159,15 @@
         <instrument name="MopedOctave" minnote="124" maxnote="124" rootnote="124" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples1" volume="0.240000" pan="0.270000" pitch_over_range="true" play_mode="trigger" play_loop="no" play_reverse="no">
           <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2020/SW/Moped_Octave.flac" sampleRelative="../../../../Samples/So2020/SW/Moped_Octave.flac"/>
         </instrument>
-        <instrument name="BregoLong" minnote="40" maxnote="40" rootnote="40" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples2" volume="0.500000" pan="0.000000" pitch_over_range="true" play_mode="trigger" play_loop="no" play_reverse="no">
+        <instrument name="BregoLong" minnote="40" maxnote="40" rootnote="40" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples3" volume="0.500000" pan="0.000000" pitch_over_range="true" play_mode="trigger" play_loop="no" play_reverse="no">
           <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2020/SW/BregoLong_Tape.flac" sampleRelative="../../../../Samples/So2020/SW/BregoLong_Tape.flac"/>
         </instrument>
-        <instrument name="BregoNote" minnote="83" maxnote="93" rootnote="88" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples2" volume="0.500000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
+        <instrument name="BregoNote" minnote="83" maxnote="93" rootnote="88" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples3" volume="0.500000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
           <variation minveloc="0" maxveloc="112" sample="/home/plagiat/PlagiatSetup/Samples/So2020/SW/BregoNote_Tape.flac" sampleRelative="../../../../Samples/So2020/SW/BregoNote_Tape.flac"/>
           <variation minveloc="111" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2020/SW/BregoNote_Fla_Tape.flac" sampleRelative="../../../../Samples/So2020/SW/BregoNote_Fla_Tape.flac"/>
         </instrument>
       </kit>
-      <kit name="Snapshat" volume="0.330000">
+      <kit name="Snapshat" volume="0.50000">
         <instrument name="Koto" minnote="60" maxnote="60" rootnote="60" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples1" volume="1.000000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
           <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2020/SnapchatAuHarem/WholeWorldCymb1_0dB.wav" sampleRelative="../../../../Samples/So2020/SnapchatAuHarem/WholeWorldCymb1_0dB.wav"/>
         </instrument>
@@ -187,7 +187,7 @@
           <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2020/SnapchatAuHarem/Intro1.wav" sampleRelative="../../../../Samples/So2020/SnapchatAuHarem/Intro1.wav"/>
         </instrument>
       </kit>
-      <kit name="Mcob" volume="1.000000">
+      <kit name="Mcob" volume="1.700000">
         <instrument name="BAM" minnote="60" maxnote="60" rootnote="60" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples1" volume="0.250000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
           <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2020/MCOB/48k_BAM_8.2.flac" sampleRelative="../../../../Samples/So2020/MCOB/48k_BAM_8.2.flac"/>
         </instrument>
@@ -215,7 +215,7 @@
         <instrument name="psychoseinstru" minnote="84" maxnote="100" rootnote="79" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples2" volume="0.270000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
           <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2020/MCOB/48k_psychose.5@112.wav" sampleRelative="../../../../Samples/So2020/MCOB/48k_psychose.5@112.wav"/>
         </instrument>
-        <instrument name="derbouka" minnote="36" maxnote="36" rootnote="36" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples5" volume="0.500000" pan="0.000000" pitch_over_range="true" play_mode="trigger" play_loop="no" play_reverse="no">
+        <instrument name="derbouka" minnote="36" maxnote="36" rootnote="36" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples5" volume="0.600000" pan="0.000000" pitch_over_range="true" play_mode="trigger" play_loop="no" play_reverse="no">
           <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2020/MCOB/48k_derbouka.2@133.wav" sampleRelative="../../../../Samples/So2020/MCOB/48k_derbouka.2@133.wav"/>
         </instrument>
         <instrument name="haendel" minnote="24" maxnote="24" rootnote="24" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples4" volume="0.500000" pan="0.000000" pitch_over_range="true" play_mode="trigger" play_loop="no" play_reverse="no">
@@ -236,7 +236,7 @@
         <instrument name="Muezzin" minnote="114" maxnote="114" rootnote="114" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples1" volume="0.500000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
           <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2020/MCOB/muezzin.wav" sampleRelative="../../../../Samples/So2020/MCOB/muezzin.wav"/>
         </instrument>
-        <instrument name="GtrPrince" minnote="117" maxnote="117" rootnote="117" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples1" volume="1.600000" pan="-0.230000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
+        <instrument name="GtrPrince" minnote="117" maxnote="117" rootnote="117" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples1" volume="1.300000" pan="-0.230000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
           <variation minveloc="0" maxveloc="19" sample="/home/plagiat/PlagiatSetup/Samples/So2020/MCOB/PrinceGtr-2.10.wav" sampleRelative="../../../../Samples/So2020/MCOB/PrinceGtr-2.10.wav"/>
           <variation minveloc="20" maxveloc="38" sample="/home/plagiat/PlagiatSetup/Samples/So2020/MCOB/PrinceGtr-2.12.wav" sampleRelative="../../../../Samples/So2020/MCOB/PrinceGtr-2.12.wav"/>
           <variation minveloc="39" maxveloc="57" sample="/home/plagiat/PlagiatSetup/Samples/So2020/MCOB/PrinceGtr-2.14.wav" sampleRelative="../../../../Samples/So2020/MCOB/PrinceGtr-2.14.wav"/>
@@ -279,10 +279,10 @@
         <instrument name="Ambre" minnote="72" maxnote="72" rootnote="72" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples3" volume="0.160000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
           <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2020/RamenerMooncup/Horrocore_Ambre.flac" sampleRelative="../../../../Samples/So2020/RamenerMooncup/Horrocore_Ambre.flac"/>
         </instrument>
-        <instrument name="Cri1" minnote="35" maxnote="36" rootnote="36" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples1" volume="0.600000" pan="0.670000" pitch_over_range="false" play_mode="normal" play_loop="no" play_reverse="no">
+        <instrument name="Cri1" minnote="35" maxnote="36" rootnote="36" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples1" volume="0.750000" pan="0.670000" pitch_over_range="false" play_mode="normal" play_loop="no" play_reverse="no">
           <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2020/RamenerMooncup/Horrocore_Cri1.flac" sampleRelative="../../../../Samples/So2020/RamenerMooncup/Horrocore_Cri1.flac"/>
         </instrument>
-        <instrument name="Cri2" minnote="38" maxnote="38" rootnote="38" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples1" volume="0.600000" pan="0.710000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
+        <instrument name="Cri2" minnote="38" maxnote="38" rootnote="38" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples1" volume="0.75000" pan="-0.710000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
           <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2020/RamenerMooncup/Horrocore_Cri2.flac" sampleRelative="../../../../Samples/So2020/RamenerMooncup/Horrocore_Cri2.flac"/>
         </instrument>
         <instrument name="Shamisen" minnote="39" maxnote="39" rootnote="39" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples1" volume="1.000000" pan="0.320000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">

@@ -187,8 +187,8 @@ class NonMixer(Module):
 
     plugin_aliases = {
         'C%2A%20Scape%20-%20Stereo%20delay%20with%20chromatic%20resonances': 'Scape',
-
-        '4%20Pole%20Low-Pass%20Filter%20with%20Resonance%20(FCRCIA)': 'Lowpass',
+        'Reverse%20Delay%20(5s%20max)': 'ReverseDelay',
+        'Glame%20Lowpass%20Filter': 'Lowpass',
         'AM%20pitchshifter': 'Pitchshifter',
         'Mono%20Pan': 'Pan',
         'Aux%20(A)': 'Aux-A',
@@ -200,7 +200,8 @@ class NonMixer(Module):
     parameter_aliases = {
         'Gain%20(dB)': 'Gain',
         'dB%20level': 'Level',
+        'Wet%20Level%20(dB)': 'Wet',
 
-        'Cutoff%20Frequency': 'Cutoff', # 4 poles lowpass
+        'Cutoff%20Frequency': 'Cutoff',
         'Pitch%20shift': 'Pitch',
     }

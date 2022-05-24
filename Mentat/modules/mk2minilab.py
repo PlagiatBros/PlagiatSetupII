@@ -27,8 +27,7 @@ class Mk2Control(Module):
 
         self.shift_key = False
         self.pressed_notes = 0
-
-        self.add_parameter('mode', None, types='s', default='mute_samples')
+        self.modes = 'mute_samples'
 
     def set_lights(self, lights):
         """
@@ -67,43 +66,39 @@ class Mk2Control(Module):
             self.send('/sysex', *s)
 
 
-    def set_mode(self, mode):
+    def set_mode(self, *modes):
 
-        self.set('mode', mode)
+        self.modes = modes
 
-        if mode != 'synth':
+        if 'keyboard' not in self.modes:
 
             self.engine.modules['Mk2Keyboard'].set_sound('Mute')
 
+
     def parse_controls(self, address, args):
 
-        mode = self.get('mode')
+        if '/note' in address:
 
-        old_pressed_notes = self.pressed_notes
-        if address == '/note_on':
-            self.pressed_notes += 1
-        elif address == '/note_off':
-            self.pressed_notes -= 1
-            if self.pressed_notes < 0:
-                self.pressed_notes = 0
+            old_pressed_notes = self.pressed_notes
+            if address == '/note_on':
+                self.pressed_notes += 1
+            elif address == '/note_off':
+                self.pressed_notes -= 1
+                if self.pressed_notes < 0:
+                    self.pressed_notes = 0
 
-        if 'mute' in mode:
-            strips = [s.capitalize() for s in mode.split('_')[1:]]
-            outputs = self.engine.modules['Outputs']
-            for s in strips:
-                stripmod = outputs.submodules[s]
-                stripmod.set('Mute', 1 if self.pressed_notes != 0 else 0)
-                for plug in stripmod.submodules:
-                    if 'Aux' in plug:
-                        stripmod.submodules[plug].set('Gain', -70 if self.pressed_notes != 0 else 0)
+            for mode in self.modes:
 
-        if mode == 'wobble':
+                if 'cut' in mode:
+                    self.engine.root_module.set(mode, 'on' if self.pressed_notes else 'off')
 
-            self.engine.modules['BassFX'].set('wobble', 'on' if self.pressed_notes != 0 else 'off')
+                if mode == 'wobble':
+
+                    self.engine.modules['BassFX'].set('wobble', 'on' if self.pressed_notes != 0 else 'off')
 
         if address == '/pitch_bend':
 
-            if mode != 'synth' or self.shift_key:
+            if 'keyboard' in self.modes or self.shift_key:
 
                 p = 1.0 + args[1] / 8192 * 0.75
 

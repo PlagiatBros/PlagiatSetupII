@@ -31,7 +31,7 @@ class Stagiaire(Video, Light, RouteBase):
         notes.set_notes(1, 1, 0, 0, 1, 1, 0, 1, 1, 0, 1, 0)
 
         # Mk2
-        mk2Control.set_mode('mute_samples')
+        mk2Control.set_mode('cut_samples', 'cut_synths')
 
     @pedalboard_button(1)
     @mk2_button(1, 'blue')

@@ -29,6 +29,10 @@ class SaperComJaja(Video, Light, RouteBase):
         #               c     d     e  f     g     a     b
         notes.set_notes(1, 0, 1, 1, 0, 1, 1, 1, 0, 1, 1, 0)
 
+        # Mk2
+        mk2Control.set_mode('cut_samples', 'cut_synths')
+
+
 
     def couplet_m(self):
         """

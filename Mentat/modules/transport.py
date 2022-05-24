@@ -67,6 +67,7 @@ class Transport(Module):
             self.engine.modules[mixer].set(strip, 'Tape%20Delay%20Simulation', 'Tap%202%20distance%20(inches)', 2*60./bpm)
             self.engine.modules[mixer].set(strip, 'Tape%20Delay%20Simulation', 'Tap%203%20distance%20(inches)', 3*60./bpm)
             self.engine.modules[mixer].set(strip, 'Tape%20Delay%20Simulation', 'Tap%204%20distance%20(inches)', 4*60./bpm)
+            self.engine.modules[mixer].set(strip, 'Tape%20Delay%20Simulation', 'Tape%20speed%20(inches/sec%2C%201=normal)', 1.0)
 
         # Scape Delay
         for mixer, strip in [

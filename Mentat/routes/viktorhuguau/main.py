@@ -30,6 +30,10 @@ class ViktorHuguau(Video, Light, RouteBase):
         #    ]@           c     d     e  f     g     a     b
         notes.set_notes(1, 0, 0, 1, 1, 0, 1, 1, 0, 1, 0, 1)
 
+        # Mk2
+        mk2Control.set_mode('keyboard')
+        mk2Keyboard.set_sound('CRhodes')
+
 
     @pedalboard_button(1)
     @mk2_button(1, 'blue')

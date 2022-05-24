@@ -246,8 +246,8 @@ class AgneauGastrik(Video, Light, RouteBase):
 
 
         # Vocals
-        vocalsNano.set('gars_exclu', 'on')
-        vocalsKesch.set('normo_exclu', 'on')
+        vocalsNano.set('normo_exclu', 'on')
+        vocalsKesch.set('gars_exclu', 'on')
 
         # Sequences Mentat
         self.start_sequence('Yep!', [
@@ -275,6 +275,9 @@ class AgneauGastrik(Video, Light, RouteBase):
 
         # Transport
         transport.start()
+
+        # Loopers
+        looper.trigger(0)
 
         ### TODO Filtrage Synths
 

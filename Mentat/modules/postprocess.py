@@ -88,6 +88,41 @@ class PostProcess(Module):
             setter= lambda f: [root.set('filter_%s' % filter, f) for filter in filters]
         )
 
+        """
+        Cut
+        """
+        for strip in ['Bass', 'BassSynths', 'Synths', 'Samples']:
+            def closure(strip):
+                params = [['Outputs', strip, 'Mute'], ['Outputs', strip, 'Aux-A', 'Gain'], ['Outputs', strip, 'Aux-B', 'Gain'], ['Outputs', strip, 'Aux-C', 'Gain']]
+                def getter(mute, auxa, auxb, auxc):
+                    if mute == 1 and auxa == -70 and auxb == -70 and auxc == -70:
+                        return 'on'
+                    else:
+                        return 'off'
+                def setter(state):
+                    for p in params:
+                        if state == 'on':
+                            root.set(*p, -70 if p[-1] == 'Gain' else 1)
+                        if state == 'off':
+                            root.set(*p, 0 if p[-1] == 'Gain' else 0)
+                root.add_meta_parameter(
+                    'cut_%s' % strip.lower(),
+                    params,
+                    getter,
+                    setter
+                )
+
+            closure(strip)
+
+        cuts = ['cut_bass', 'cut_basssynths', 'cut_synths', 'cut_samples']
+        root.add_meta_parameter(
+            'cut',
+            cuts,
+            getter= lambda *states: 'off' if 'on' not in states else 'on',
+            setter= lambda state: [root.set('%s' % cut, state) for cut in cuts]
+        )
+
+
 
     def set_pitch(self, strip, pitch):
         """
@@ -184,6 +219,17 @@ class PostProcess(Module):
         else:
             root.animate('filter_%s' % strip.lower(), start, end, duration, mode, easing)
 
+
+    def trap_cut(self, duration):
+        root = self.engine.root_module
+        def scene():
+            for i in range(int(duration)):
+                root.set('cut', 'on')
+                self.wait(0.5, 'beat')
+                root.set('cut', 'off')
+                self.wait(0.5, 'beat')
+
+        self.start_scene('trap_cut', scene)
 
     def slice(self):
         pass

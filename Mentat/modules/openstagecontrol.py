@@ -374,11 +374,11 @@ class OpenStageControl(Module):
         """
 
         ray = self.engine.modules['RaySession']
-        panel = {'widgets': [], 'layout': 'vertical', 'padding': 1, 'innerPadding': False, 'contain': False}
+        panel = {'widgets': [], 'layout': 'vertical', 'padding': 1, 'innerPadding': False, 'contain': False, 'id': 'raysession_status_panel'}
         for p in ray.parameters:
             if 'status_' in p:
                 name = p[7:]
-                strip = {'type': 'panel', 'layout': 'horizontal', 'css': 'class: strip;', 'height': 40, 'padding': 4,'widgets' : [
+                strip = {'type': 'panel', 'layout': 'horizontal', 'css': 'class: strip;', 'height': 50, 'padding': 4,'widgets' : [
                     {
                         'type': 'button',
                         'label': '^play',
@@ -401,6 +401,14 @@ class OpenStageControl(Module):
                         'colorWidget': 'var(--red)',
                         'address': '/RaySession/call',
                         'preArgs': ['send', '/ray/client/stop', name]
+                    },
+                    {
+                        'type': 'button',
+                        'label': '^save',
+                        'mode': 'momentary',
+                        'colorWidget': 'var(--blue-green)',
+                        'address': '/RaySession/call',
+                        'preArgs': ['send', '/ray/client/save', name]
                     },
                     {
                         'type': 'text',

@@ -129,7 +129,7 @@ class RouteBase(Route):
             # Synths Pan
             if name == 'Synths':
                 for name in mod.submodules:
-                    if 'Pan' in mod.submodules[name].submodules:
+                    if 'Pan' in mod.submodules[name].parameters:
                         mod.submodules[name].set('Pan', 0.0)
 
             # SynthsFX
@@ -139,6 +139,7 @@ class RouteBase(Route):
                     # Ins
                     if name not in mod.name:
                         mod.set(name, 'Gain', -70.0)
+
 
                 # Outs
                 mod.set(mod.name, 'Mute', 1.0)
@@ -159,7 +160,10 @@ class RouteBase(Route):
                 v = 'Nano' if 'Nano' in name else 'Kesch'
                 mod.set('%sAB' % v, 'Mute', 1)
 
-        postprocess.set_filter('*', 24000)
+
+        samplesFX2Delay.set('SamplesFX2Delay', 'ReverseDelay', 'Wet', -70)
+
+        postprocess.set_filter('*', 21600)
         postprocess.set_pitch('*', 1)
 
     def resetSamples(self):
@@ -168,6 +172,7 @@ class RouteBase(Route):
         """
         for i in range (1,6):
             samples.set('Samples' + str(i), 'Mute', 1.0)
+            samples.set('Samples' + str(i), 'Gain', 0)
 
     def pause_loopers(self):
         """
@@ -185,8 +190,4 @@ class RouteBase(Route):
         self.resetFX()
         self.resetSamples()
 
-        for name in outputs.submodules:
-            outputs.submodules[name].set('Mute', 0)
-            for plug in outputs.submodules[name].submodules:
-                if 'Aux' in plug:
-                    outputs.submodules[name].submodules[plug].set('Gain', 0)
+        self.engine.root_module.set('cut', 'off')

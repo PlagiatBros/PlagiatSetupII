@@ -98,6 +98,9 @@ class RaySession(Module):
 
     def client_started(self, name):
 
+        if self.get('status_%s' % name) == 1:
+            return
+
         self.set('status_%s' % name, 1)
 
         if name in self.engine.modules:
@@ -105,6 +108,7 @@ class RaySession(Module):
             if name not in self.client_init:
                 # first start: load default state if any
                 # module.load('default')
+                self.logger.info('client %s started' % name)
                 self.client_init.append(name)
             else:
                 # restart: send state
