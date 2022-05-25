@@ -46,8 +46,13 @@ class StickItOut(Video, Light, RouteBase):
         self.pause_loopers()
         self.reset()
 
+        # Séquences
+        seq192.select('solo', 'dummy')
+
         # Transport
         transport.start()
+
+
 
         # Vocals
         vocalsNano.set('gars_exclu', 'on')

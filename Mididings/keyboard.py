@@ -27,7 +27,8 @@ def create_keyboard(name):
     generic_in = Transpose(-12) >> ~ChannelFilter(16) >> [
         Filter(NOTE),
         Filter(CTRL) >> [
-            CtrlFilter(1) >> SendOSC(mentatPort, '/pedalVolume', lambda ev: ev.value) >> Discard(), # Pédale de volume
+            CtrlFilter(1), # Modulation
+            CtrlFilter(7) >> SendOSC(mentatPort, '/pedalVolume', lambda ev: ev.value) >> Discard(), # Pédale de volume
             CtrlFilter(64), # Pédale de sustain
             Discard()
             ],

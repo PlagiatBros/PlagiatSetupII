@@ -98,7 +98,7 @@ class Mk2Control(Module):
 
         if address == '/pitch_bend':
 
-            if 'keyboard' in self.modes or self.shift_key:
+            if 'keyboard' not in self.modes or self.shift_key:
 
                 p = 1.0 + args[1] / 8192 * 0.75
 

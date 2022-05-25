@@ -22,7 +22,7 @@ from .mk2minilab import Mk2Control, Mk2Keyboard
 from .jmjkeyboard import JmjKeyboard
 from .joystick import Joystick
 from .notes import Notes
-
+from .midipanic import MidiPanic
 
 """
 Engine
@@ -177,3 +177,4 @@ microtonality = MicroTonality('MicroTonality')
 transport = Transport('Transport')
 postprocess = PostProcess('PostProcess')
 notes = Notes('Notes')
+midipanic = MidiPanic('MidiPanic', 'midi')

@@ -147,7 +147,7 @@ class RamenerMooncup(Video, Light, RouteBase):
         samplesFX2Delay.set('SamplesFX2Delay', 'Mute', 0.0),
         samplesFX2Delay.set('SamplesFX2Delay', 'Invada%20Delay%20Munge%20(mono%20in)', 'Delay%201', 0.342)
         samplesFX2Delay.set('SamplesFX2Delay', 'Invada%20Delay%20Munge%20(mono%20in)', 'Delay%202', 1.09)
-        samplesFX2Delay.set('ReverseDelay', 'Wet', -5)
+        samplesFX2Delay.set('SamplesFX2Delay', 'ReverseDelay', 'Wet', -5)
         samplesFX6Scape.set('SamplesFX6Scape', 'Mute', 0.0),
         samplesFX5TapeDelay.set('SamplesFX5TapeDelay', 'Mute', 0.0),
 
