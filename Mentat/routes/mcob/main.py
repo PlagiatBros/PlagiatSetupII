@@ -243,7 +243,11 @@ class Mcob(Video, Light, RouteBase):
                 3 + 2/3: lambda: vocalsKesch.set('gars_exclu', 'on'),
             },
             {  # bar 3
-                1: lambda: seq192.select('on', 'couplet1-2_cLow_*')
+                1: lambda:
+                [
+                    seq192.select('on', 'couplet1-2_cLow_*'),
+                    transport.start()
+                ]
             }, {}, # bar 4
             {   # bar 5
                 1: lambda: vocalsKesch.set('gars_exclu', 'on')
@@ -513,6 +517,14 @@ class Mcob(Video, Light, RouteBase):
 
         # Keyboards
         jmjKeyboard.set_sound('ZBombarde', boost=True)
+
+    @pedalboard_button(11)
+    def goto_stagiaire(self):
+        """
+        GOTO STAGIAIRE
+        """
+        engine.set_route('Stagiaire')
+        engine.active_route.intro()
 
     @mk2_button(6, 'yellow')
     def nanogars(self):

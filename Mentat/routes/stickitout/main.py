@@ -180,6 +180,9 @@ class StickItOut(Video, Light, RouteBase):
         # Keyboards
         jmjKeyboard.set_sound("ZDupieux")
 
+        # Vocals
+        vocalsKesch.set('gars_exclu', 'on')
+
         # Sequences (Mentat)
         self.start_scene('theme_launcher',
         lambda: [
@@ -210,18 +213,23 @@ class StickItOut(Video, Light, RouteBase):
         synthsFX2Delay.set('TrapFifth', 'Gain', -16.0)
         synthsFX2Delay.set('SynthsFX2Delay', 'Mute', 0.0)
 
+        # Keyboards
+        jmjKeyboard.set_sound('ZJestoProunk')
+
         self.start_sequence('couplet1-1', [
             *[{} for i in range(12)], # bars 1 - 12
             { # bar 13
                 1: lambda: [
                     vocalsKesch.set('normo_exclu', 'on'),
+                    vocalsKesch.set('gars', 'on'),
                     vocalsNano.set('normo_exclu', 'on'),
-                    seq192.select('off', 'couplet2_*Low*')
+                    seq192.select('off', 'couplet2_*')
                 ]
             },
-            *[{} for i in range(8)], # bars 13 - 20
+            *[{} for i in range(7)], # bars 14 - 20
             { # bar 21
                 1: lambda: [
+                    vocalsKesch.set('gars', 'off'),
                     seq192.select('on', 'couplet2-2_*'),
                     seq192.select('on', 'couplet2_cLow_trap1'),
                     seq192.select('on', 'couplet2_cHi_trap'),
