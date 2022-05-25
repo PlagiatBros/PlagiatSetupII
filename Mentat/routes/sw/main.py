@@ -119,29 +119,26 @@ class SW(Video, Light, RouteBase):
 
                 ]
             },
-            {},{},{},{},{}, # bars 2 - 6
-            { # bar 7 ("Moroness")
-                1: lambda: [
-                    # Sequences
-                    seq192.select('solo', 'couplet1-2_*'),
-
-                    # Vocals
-                    vocalsKeschFX2Delay.set('active', 'on')
-                ],
+            {},{},{},{}, # bars 2 - 5
+            { # bar 6 ("Moroness")
+                4.5: lambda: vocalsKeschFX2Delay.set('active', 'on')
+            },
+            { # bar 7 Pont
+                1: lambda: seq192.select('solo', 'couplet1-2_*'),
                 3: lambda: vocalsKeschFX2Delay.set('pre', 'off'),
             },
             {}, # bar 8
             { # bar 9 ("Two two two two")
                 1: lambda: seq192.select('on', 'couplet1-1_*')
             },
-            {},{},{},{},{},{},{},{},{},{},{}, # bars 10 - 20
-        { # bar 21 ("Alone")
+            {},{},{},{},{},{},{},{},{},{}, # bar 10 - 19
+            { # bar 20 ("Alone")
+                4.5: lambda: vocalsKeschFX2Delay.set('active', 'on')
+            },
+            { # bar 21 Pont
                 1: lambda: [
                     # Sequences
                     seq192.select('solo', 'couplet1-2_*'),
-
-                    # Vocals
-                    vocalsKeschFX2Delay.set('active', 'on'),
 
                     # Samples
                     samplesFX7Degrade.set('Samples2', 'Gain', -70.0),
@@ -224,10 +221,14 @@ class SW(Video, Light, RouteBase):
 
         # Vocals
         vocalsNano.set('meuf_exclu', 'on')
+        vocalsNano.set('gars', 'on')
+        vocalsNano.set('normo', 'on')
         vocalsNanoFX2Delay.set('active', 'on')
         vocalsNanoFX4Disint.set('active', 'on')
 
         vocalsKesch.set('meuf_exclu', 'on')
+        vocalsKesch.set('gars', 'on')
+        vocalsKesch.set('normo', 'on')                
         vocalsKeschFX2Delay.set('active', 'on')
         vocalsKeschFX4Disint.set('active', 'on')
 
