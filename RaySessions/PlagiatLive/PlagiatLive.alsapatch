@@ -19,6 +19,8 @@ JmjKeyboard : ConstantSampler |> Tap192.ConstantSampler : midi_in
 JmjKeyboard : ConstantSampler |> SPD-SX : SPD-SX Control
 JmjKeyboard : ProdSampler   |> Tap192.ProdSampler : midi_in
 
+JmjKeyboard : Mentat   |> Mentat : JmjKeyboardMidi
+
 Mentat : Mk2Control |>  Arturia MiniLab mkII : Arturia MiniLab mkII MIDI 1
 Arturia MiniLab mkII : Arturia MiniLab mkII MIDI 1  |> Mentat : Mk2Control
 Arturia MiniLab mkII : Arturia MiniLab mkII MIDI 1  |>  Mk2Keyboard : in

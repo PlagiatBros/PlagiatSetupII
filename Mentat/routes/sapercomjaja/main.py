@@ -82,8 +82,8 @@ class SaperComJaja(Video, Light, RouteBase):
         samples.set('Samples4', 'Mute', 0.0)
 
         # Vocals
-        vocalsNano.set('gars_exclu', 'on')
-        vocalsKesch.set('normo_exclu', 'on')
+        vocalsNano.set('normo_exclu', 'on')
+        vocalsKesch.set('meuf_exclu', 'on')
 
         # Keyboards
         jmjKeyboard.set_sound('CTrap', boost=True)
@@ -212,6 +212,6 @@ class SaperComJaja(Video, Light, RouteBase):
         vocalsKesch.set('meuf_exclu', 'on')
 
         # Keyboards
-        jmjKeyboard.set_sound('CDubstepHorn', boost=True)
+        jmjKeyboard.set_sound('ZTrumpets', boost=True)
 
     #### TODO Méthodes boutons 7 & 8 Jeannot Cock your butter gun?

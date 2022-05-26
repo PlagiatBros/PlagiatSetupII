@@ -19,7 +19,7 @@ from .nonmixers import *
 from .zynaddsubfx import ZynAddSubFx, ZynPart
 from .tap192 import Tap192
 from .mk2minilab import Mk2Control, Mk2Keyboard
-from .jmjkeyboard import JmjKeyboard
+from .jmjkeyboard import JmjKeyboard, JmjKeyboardMidi
 from .joystick import Joystick
 from .notes import Notes
 from .midipanic import MidiPanic
@@ -37,6 +37,7 @@ Controllers
 openstagecontrol = OpenStageControl('OpenStageControl', 'osc', 3000)
 openstagecontrolKeyboardOut = Module('OpenStageControlKeyboardOut', 'midi')
 pedalboard = PedalBoard('PedalBoard', 'osc', 3001)
+jmjKeyboardMidi = JmjKeyboardMidi('JmjKeyboardMidi', 'midi')
 jmjKeyboard = JmjKeyboard('JmjKeyboard', 'osc', 3002)
 mk2Keyboard = Mk2Keyboard('Mk2Keyboard', 'osc', 3003)
 mk2Control = Mk2Control('Mk2Control', 'midi')

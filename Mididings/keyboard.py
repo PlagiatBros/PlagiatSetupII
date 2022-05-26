@@ -15,7 +15,7 @@ def create_keyboard(name):
     config(
         backend='alsa',
         client_name=name,
-        out_ports=['ZLow', 'CLow', 'ZHi', 'CHiSf', 'CHi', 'ProdSampler', 'ConstantSampler'],
+        out_ports=['ZLow', 'CLow', 'ZHi', 'CHiSf', 'CHi', 'ProdSampler', 'ConstantSampler', 'Mentat'],
         in_ports=['in']
     )
 
@@ -28,7 +28,6 @@ def create_keyboard(name):
         Filter(NOTE),
         Filter(CTRL) >> [
             CtrlFilter(1), # Modulation
-            CtrlFilter(7) >> SendOSC(mentatPort, '/pedalVolume', lambda ev: ev.value) >> Discard(), # Pédale de volume
             CtrlFilter(64), # Pédale de sustain
             Discard()
             ],
@@ -188,6 +187,6 @@ def create_keyboard(name):
                     Discard()
                 ),
             ])
-        }
-
+        },
+        control =  CtrlFilter(7) >> Output('Mentat', 1), # Pédale de volume (-> filtre par mentat)
     )

@@ -125,10 +125,27 @@ class Mk2Control(Module):
                         # pads 1-8
                         self.engine.route('osc', 'mk2', '/mk2/button', [cc - 100])
                     else:
-                        pass
+                        if cc == 109:
+                            self.engine.modules['AudioLooper'].record(4)
+                        elif cc == 110:
+                            self.engine.modules['AudioLooper'].overdub(4)
+                        elif cc == 111:
+                            self.engine.modules['AudioLooper'].pause(4)
+                        elif cc == 112:
+                            self.engine.modules['AudioLooper'].record(5)
+                        elif cc == 113:
+                            self.engine.modules['AudioLooper'].overdub(5)
+                        elif cc == 114:
+                            self.engine.modules['AudioLooper'].pause(5)
+                        elif cc == 116:
+                            self.engine.modules['Transport'].trigger()
 
                 if args[2] == 0:
                     self.resend_lights()
+
+            if cc == 41:
+                self.engine.modules['VocalsNano'].set('NanoIn', 'Gate', 'Range%20(dB)', -90 if args[2] == 0 else 0)
+
 
         elif address == '/sysex':
 

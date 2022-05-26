@@ -495,9 +495,10 @@ class Mcob(Video, Light, RouteBase):
         self.reset()
 
         seq192.select('off', '*')
+    
 
         # Looper
-        looper.trigger('[0,3,7]')
+        looper.trigger('[0,3]')
 
         # Transport
         transport.set_tempo(130)

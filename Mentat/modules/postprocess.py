@@ -224,10 +224,10 @@ class PostProcess(Module):
         root = self.engine.root_module
         def scene():
             for i in range(int(duration)):
+                self.wait(0.5, 'beat')
                 root.set('cut', 'on')
                 self.wait(0.5, 'beat')
                 root.set('cut', 'off')
-                self.wait(0.5, 'beat')
 
         self.start_scene('trap_cut', scene)
 

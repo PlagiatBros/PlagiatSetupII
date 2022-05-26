@@ -183,7 +183,7 @@ class SW(Video, Light, RouteBase):
         vocalsNano.set('normo', 'on')
         vocalsNano.set('gars', 'on')
         vocalsKesch.set('meuf_exclu', 'on')
-        vocalsKeschFX2Delay.set('KeschMeuf', 'Gain', 0.0)
+        #vocalsKeschFX2Delay.set('KeschMeuf', 'Gain', 0.0)
         vocalsKeschFX2Delay.set('VocalsKeschFX2Delay', 'Mute', 0.0)
 
         # Bass
@@ -220,15 +220,15 @@ class SW(Video, Light, RouteBase):
 
 
         # Vocals
-        vocalsNano.set('meuf_exclu', 'on')
-        vocalsNano.set('gars', 'on')
-        vocalsNano.set('normo', 'on')
+        vocalsNano.set('normo_exclu', 'on')
+        #vocalsNano.set('gars', 'on')
+        #vocalsNano.set('normo', 'on')
         vocalsNanoFX2Delay.set('active', 'on')
         vocalsNanoFX4Disint.set('active', 'on')
 
-        vocalsKesch.set('meuf_exclu', 'on')
-        vocalsKesch.set('gars', 'on')
-        vocalsKesch.set('normo', 'on')                
+        vocalsKesch.set('normo_exclu', 'on')
+        #vocalsKesch.set('gars', 'on')
+        #vocalsKesch.set('normo', 'on')
         vocalsKeschFX2Delay.set('active', 'on')
         vocalsKeschFX4Disint.set('active', 'on')
 
@@ -299,7 +299,7 @@ class SW(Video, Light, RouteBase):
 
         # Vocals
         vocalsNano.set('meuf_exclu', 'on')
-        vocalsNanoFX2Delay.set('NanoMeuf', 'Gain', 0.0)
+        #vocalsNanoFX2Delay.set('NanoMeuf', 'Gain', 0.0)
         vocalsNanoFX4Disint.set('NanoMeuf', 'Gain', 0.0)
         vocalsKesch.set('meuf_exclu', 'on')
 
@@ -349,7 +349,7 @@ class SW(Video, Light, RouteBase):
         # Sequences
         seq192.select('on', 'lambout')
 
-    @mk2_button(4, 'purple')
+    @mk2_button(4, 'blue')
     def vanhalen(self):
         """
         VAN HALEN BRIDGE
@@ -358,7 +358,8 @@ class SW(Video, Light, RouteBase):
         self.reset()
 
         # Transport
-        transport.stop()
+        transport.start()
+        seq192.select('solo', 'dummy')
 
         # keyboards
         jmjKeyboard.set_sound('ZTrumpets', boost=True)

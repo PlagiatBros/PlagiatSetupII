@@ -5,3 +5,4 @@ RaySessions/PlagiatLive/.ray-snapshots
 .#snapshot
 session.slsess_loop_*.wav
 session.slsess.bak
+*.pyc

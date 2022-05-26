@@ -1085,7 +1085,7 @@
                     "lineWidth": "auto",
                     "padding": 0,
                     "html": "",
-                    "css": "canvas:not(first-child) {\n  margin-left: 1rem;\n}",
+                    "css": "canvas:not(first-child) {\n  border-left: 1rem solid var(--color-background);\n}",
                     "value": "",
                     "default": "",
                     "linkId": "",
@@ -2465,7 +2465,7 @@
                             "lock": false,
                             "id": "sooperlooper_locked_strips",
                             "visible": true,
-                            "interaction": false,
+                            "interaction": true,
                             "comments": "",
                             "width": 375,
                             "height": "30%",
@@ -4081,7 +4081,7 @@
                 "gridTemplate": "",
                 "contain": true,
                 "scroll": true,
-                "innerPadding": true,
+                "innerPadding": false,
                 "verticalTabs": false,
                 "variables": "@{parent.variables}",
                 "traversing": false,
@@ -4278,7 +4278,7 @@
                     "ignoreDefaults": false,
                     "bypass": false,
                     "onCreate": "",
-                    "onValue": "set('keyboard_keys/*', 0)"
+                    "onValue": ""
                   },
                   {
                     "type": "button",
@@ -4322,7 +4322,7 @@
                     "ignoreDefaults": false,
                     "bypass": false,
                     "onCreate": "",
-                    "onValue": "set('keyboard_keys/*', 0)"
+                    "onValue": "set('keyboard_keys/*', 0, {send: false})"
                   }
                 ],
                 "tabs": []

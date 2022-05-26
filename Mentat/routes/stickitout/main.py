@@ -41,7 +41,7 @@ class StickItOut(Video, Light, RouteBase):
     @pedalboard_button(2)
     def intro(self):
         """
-        INTRO (BASSE)
+        INTRO (KEY)
         """
         self.pause_loopers()
         self.reset()
@@ -52,11 +52,20 @@ class StickItOut(Video, Light, RouteBase):
         # Transport
         transport.start()
 
-
+        # Keyboards
+        jmjKeyboard.set_sound('ZJestoProunk')
 
         # Vocals
         vocalsNano.set('gars_exclu', 'on')
         vocalsKesch.set('meuf_exclu', 'on')
+
+    @pedalboard_button(11)
+    def intro_autoto(self):
+        """
+        INTRO (KEY AUTO)
+        """
+
+        looper.record(3)
 
     @pedalboard_button(3)
     def couplet1(self):
@@ -108,6 +117,53 @@ class StickItOut(Video, Light, RouteBase):
 
 
         ], loop=False)
+
+    @pedalboard_button(10)
+    def couplet1_2(self):
+        """
+        COUPLET 1 (Part 2)
+        """
+        self.pause_loopers()
+        self.reset()
+
+        # Sequences
+        seq192.select('solo', 'allo_zLow_ragstep')
+
+        # Transport
+        transport.start()
+
+
+
+        # Vocals
+        vocalsNano.set('gars_exclu', 'on')
+        vocalsKesch.set('normo_exclu', 'on')
+
+        # Synths
+        synthsFX2Delay.set('Rhodes', 'Gain', -9.0)
+        synthsFX2Delay.set('EasyClassical', 'Gain', -9.0)
+        synthsFX2Delay.set('TrapFifth', 'Gain', -9.0)
+        synthsFX2Delay.set('SynthsFX2Delay', 'Mute', 0.0)
+
+        self.start_sequence('couplet1-2', [
+            { # bar 13
+            },
+            { # bar 14
+                2: lambda: seq192.select('on', 'allo_cHi_trapfifth')
+            },
+            { # bar 15
+                1: lambda: seq192.select('off', 'allo_zLow_ragstep'),
+                2: lambda: seq192.select('off', 'allo_cHi_trapfifth'),
+                3 + 3/4. : lambda: seq192.select('on', 'couplet1-2_cHi_dubstephorn')
+            },
+            {
+                # bar 16
+                1: lambda: seq192.select('solo', 'couplet1-2_*')
+
+            }
+
+
+        ], loop=False)
+
 
     @pedalboard_button(4)
     def refrain(self):
@@ -181,7 +237,7 @@ class StickItOut(Video, Light, RouteBase):
         jmjKeyboard.set_sound("ZDupieux")
 
         # Vocals
-        vocalsKesch.set('gars_exclu', 'on')
+#        vocalsKesch.set('_exclu', 'on')
 
         # Sequences (Mentat)
         self.start_scene('theme_launcher',
@@ -329,6 +385,9 @@ class StickItOut(Video, Light, RouteBase):
         self.start_sequence('theme_on_demand', [
             {}, {}, {}, {}, # bars 1 - 4
             {
-                1: lambda: seq192.select('solo', 'theme_*')
+                1: lambda: [
+                    seq192.select('solo', 'theme_*'),
+                    vocalsKesch.set('normo_exclu', 'on')
+                ]
             }
         ], loop=False)

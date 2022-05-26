@@ -455,13 +455,7 @@ class OpenStageControl(Module):
         """
         Start transport and trigger rolling loops
         """
-        if self.get('rolling'):
-            for loop in self.engine.modules['AudioLooper'].submodules.values():
-                if loop.get('playing'):
-                    self.engine.modules['AudioLooper'].trigger(loop.get('n'))
-
-
-        self.engine.modules['Transport'].start()
+        self.engine.modules['Transport'].trigger()
 
     def transport_stop(self):
         """

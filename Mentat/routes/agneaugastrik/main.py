@@ -149,7 +149,7 @@ class AgneauGastrik(Video, Light, RouteBase):
             }
         ])
 
-    @mk2_button(3, 'purple')
+    @mk2_button(3, 'cyan')
     def couplet_1(self):
         """
         COUPLET 1
@@ -186,12 +186,12 @@ class AgneauGastrik(Video, Light, RouteBase):
             {   # kind of mate
                 8: lambda: [
                     # nano: « frisco »
-                    outputs.set('Synths', 'Mute', 1),
-                    outputs.set('Samples', 'Mute', 1),
+                    self.engine.root_module.set('cut_samples', 'on'),
+                    self.engine.root_module.set('cut_synths', 'on'),
                 ],
                 9.5: lambda: [
-                    outputs.set('Synths', 'Mute', 0),
-                    outputs.set('Samples', 'Mute', 0),
+                    self.engine.root_module.set('cut_samples', 'off'),
+                    self.engine.root_module.set('cut_synths', 'off'),
                 ],
             },
             {   # see it's easy
@@ -247,7 +247,9 @@ class AgneauGastrik(Video, Light, RouteBase):
 
         # Vocals
         vocalsNano.set('normo_exclu', 'on')
+        vocalsNanoFX2Delay.set('active', 'on')
         vocalsKesch.set('gars_exclu', 'on')
+        vocalsKeschFX2Delay.set('active', 'on')
 
         # Sequences Mentat
         self.start_sequence('Yep!', [
@@ -301,8 +303,7 @@ class AgneauGastrik(Video, Light, RouteBase):
             },
             {   # boutros boutros boutros
                 'signature': '35/8',
-                1: lambda: [
-                ],
+                1: lambda: postprocess.trap_cut(4),
             },
             {    # go get
                 'signature': '39/8',

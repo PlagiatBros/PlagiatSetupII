@@ -24,6 +24,8 @@ class Transport(Module):
 
         self.engine.set_tempo(bpm)
 
+        self.rolling = False
+
         self.engine.modules['Seq192'].set('tempo', bpm)
         self.engine.modules['AudioLooper'].set('tempo', bpm)
         self.engine.modules['Klick'].set('tempo', bpm)
@@ -176,6 +178,7 @@ class Transport(Module):
         self.engine.modules['Klick'].start()
 
         self.engine.modules['OpenStageControl'].set('rolling', 1)
+        self.rolling = True
 
     def stop(self):
         """
@@ -189,3 +192,16 @@ class Transport(Module):
         self.engine.modules['Klick'].stop()
 
         self.engine.modules['OpenStageControl'].set('rolling', 0)
+        self.rolling = False
+
+    def trigger(self):
+        """
+        Start transport and trigger rolling loops
+        """
+        if self.rolling:
+            for loop in self.engine.modules['AudioLooper'].submodules.values():
+                if loop.get('playing'):
+                    self.engine.modules['AudioLooper'].trigger(loop.get('n'))
+
+
+        self.start()
