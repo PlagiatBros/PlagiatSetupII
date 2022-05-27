@@ -334,12 +334,12 @@ class StickItOut(Video, Light, RouteBase):
         samplesFX2Delay.set('Samples[1-4]', 'Gain', -24.0)
         samplesFX2Delay.set('SamplesFX2Delay', 'Mute', 0.0)
 
+        midipanic.reset()
 
         # Sequences (Mentat)
         self.start_sequence('theme', [
             { # bar 1
                 1: lambda: [
-                    midipanic.reset(),
 #                    loop192.send('loop/2/hit', 'record'),
                     prodSampler.send('/instrument/play', 's:Plagiat/StickItOut/LobbyLobbyBoy', 50),
                     prodSampler.send('/instrument/play', 's:Plagiat/StickItOut/LobbyLobbyPiano', 90),
@@ -351,13 +351,11 @@ class StickItOut(Video, Light, RouteBase):
             }, {}, {} # bars 2 - 4
         ], loop=True)
 
-        if auto:
-            self.start_sequence('theme_on_demand', [
-                {}, {}, {}, {}, # bars 1 - 4
-                {
-                    1: lambda: self.theme_mesh(pitch=True)
-                }
-            ], loop=False)
+
+        self.start_scene('theme_on_demand', lambda: [
+            self.wait(16),
+            self.theme_mesh(pitch=True)
+        ])
 
     @pedalboard_button(9)
     def theme_launcher_2(self):
@@ -390,8 +388,58 @@ class StickItOut(Video, Light, RouteBase):
         self.start_scene('theme_launcher',
         lambda: [
             self.wait_next_cycle(),
-            self.theme(auto=False)
+            self.theme2()
         ])
+
+
+    def theme2(self):
+        """
+        THÈME
+        """
+        self.pause_loopers()
+        self.reset()
+
+        # Sequences
+        seq192.select('solo', 'dummy')
+
+        # Transport
+        transport.start()
+
+
+        # Vocals
+        vocalsNano.set('gars_exclu', 'on')
+        vocalsKesch.set('meuf_exclu', 'on')
+
+        # Keyboards
+        jmjKeyboard.set_sound("ZDupieux")
+
+        # Samples
+        samples.set('Samples1', 'Mute', 0.0)
+        samples.set('Samples2', 'Mute', 0.0)
+        samples.set('Samples3', 'Mute', 0.0)
+        samples.set('Samples4', 'Mute', 0.0)
+        samplesFX3Reverb.set('Samples[1-4]', 'Gain', -16.0)
+        samplesFX3Reverb.set('SamplesFX3Reverb', 'Mute', 0.0)
+        samplesFX2Delay.set('Samples[1-4]', 'Gain', -24.0)
+        samplesFX2Delay.set('SamplesFX2Delay', 'Mute', 0.0)
+
+
+        # Sequences (Mentat)
+        self.start_sequence('theme', [
+            { # bar 1
+                1: lambda: [
+                    midipanic.reset(),
+#                    loop192.send('loop/2/hit', 'record'),
+                    prodSampler.send('/instrument/play', 's:Plagiat/StickItOut/LobbyLobbyBoy', 50),
+                    prodSampler.send('/instrument/play', 's:Plagiat/StickItOut/LobbyLobbyPiano', 90),
+                    prodSampler.send('/instrument/play', 's:Plagiat/StickItOut/LobbyLobbyClarAigue', 85),
+                    prodSampler.send('/instrument/play', 's:Plagiat/StickItOut/LobbyLobbyClarGrave', 90)
+                ]
+            },
+            { # bar 2
+            }, {}, {} # bars 2 - 4
+        ], loop=True)
+
 
     @pedalboard_button(10)
     def theme_mesh(self, pitch=False):
@@ -436,7 +484,7 @@ class StickItOut(Video, Light, RouteBase):
             { # bar 2
             }, {}, {} # bars 2 - 4
         ], loop=True)
-        
+
         if pitch:
             self.start_sequence('pitchdown', [
                 {
