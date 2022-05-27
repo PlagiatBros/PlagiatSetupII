@@ -68,57 +68,6 @@ class StickItOut(Video, Light, RouteBase):
         looper.record(3)
 
     @pedalboard_button(3)
-    def couplet1(self):
-        """
-        COUPLET 1 (HERE WE GO)
-        """
-        self.pause_loopers()
-        self.reset()
-
-        # Sequences
-        seq192.select('solo', 'couplet1-1_*')
-
-        # Transport
-        transport.start()
-
-
-
-        # Vocals
-        vocalsNano.set('gars_exclu', 'on')
-        vocalsKesch.set('meuf_exclu', 'on')
-
-        # Synths
-        synthsFX2Delay.set('Rhodes', 'Gain', -9.0)
-        synthsFX2Delay.set('EasyClassical', 'Gain', -9.0)
-        synthsFX2Delay.set('TrapFifth', 'Gain', -9.0)
-        synthsFX2Delay.set('SynthsFX2Delay', 'Mute', 0.0)
-
-        self.start_sequence('couplet1-1', [
-            *[{} for i in range(12)], # bars 1 - 12
-            { # bar 13
-                1: lambda: [
-                    vocalsKesch.set('normo_exclu', 'on'),
-                    seq192.select('solo', 'allo_zLow_ragstep')
-                    ]
-            },
-            { # bar 14
-                2: lambda: seq192.select('on', 'allo_cHi_trapfifth')
-            },
-            { # bar 15
-                1: lambda: seq192.select('off', 'allo_zLow_ragstep'),
-                2: lambda: seq192.select('off', 'allo_cHi_trapfifth'),
-                3 + 3/4. : lambda: seq192.select('on', 'couplet1-2_cHi_dubstephorn')
-            },
-            {
-                # bar 16
-                1: lambda: seq192.select('solo', 'couplet1-2_*')
-
-            }
-
-
-        ], loop=False)
-
-    @pedalboard_button(10)
     def couplet1_2(self):
         """
         COUPLET 1 (Part 2)
@@ -296,7 +245,7 @@ class StickItOut(Video, Light, RouteBase):
     @pedalboard_button(7)
     def pontcouplet2(self):
         """
-        PONT COUPLET 2
+        LOUNGE COUPLET 2
         """
         self.pause_loopers()
         self.reset()
@@ -320,12 +269,32 @@ class StickItOut(Video, Light, RouteBase):
             }
         ], loop=False)
 
-    @pedalboard_button(3)
+    @pedalboard_button(8)
     def couplet2_final(self):
         """
         COUPLET 2 FINAL (cf. COUPLET 1)
         """
-        pass
+        self.pause_loopers()
+        self.reset()
+
+        # Sequences
+        seq192.select('solo', 'couplet1-1_*')
+
+        # Transport
+        transport.start()
+
+
+
+        # Vocals
+        vocalsNano.set('gars_exclu', 'on')
+        vocalsKesch.set('meuf_exclu', 'on')
+
+        # Synths
+        synthsFX2Delay.set('Rhodes', 'Gain', -9.0)
+        synthsFX2Delay.set('EasyClassical', 'Gain', -9.0)
+        synthsFX2Delay.set('TrapFifth', 'Gain', -9.0)
+        synthsFX2Delay.set('SynthsFX2Delay', 'Mute', 0.0)
+
 
     @pedalboard_button(4)
     def refrain2(self):
@@ -334,8 +303,7 @@ class StickItOut(Video, Light, RouteBase):
         """
         pass
 
-    @pedalboard_button(9)
-    def theme(self):
+    def theme(self, auto=True):
         """
         THÈME
         """
@@ -371,7 +339,8 @@ class StickItOut(Video, Light, RouteBase):
         self.start_sequence('theme', [
             { # bar 1
                 1: lambda: [
-                    loop192.send('loop/2/hit', 'record'),
+                    midipanic.reset(),
+#                    loop192.send('loop/2/hit', 'record'),
                     prodSampler.send('/instrument/play', 's:Plagiat/StickItOut/LobbyLobbyBoy', 50),
                     prodSampler.send('/instrument/play', 's:Plagiat/StickItOut/LobbyLobbyPiano', 90),
                     prodSampler.send('/instrument/play', 's:Plagiat/StickItOut/LobbyLobbyClarAigue', 85),
@@ -382,12 +351,100 @@ class StickItOut(Video, Light, RouteBase):
             }, {}, {} # bars 2 - 4
         ], loop=True)
 
-        self.start_sequence('theme_on_demand', [
-            {}, {}, {}, {}, # bars 1 - 4
-            {
+        if auto:
+            self.start_sequence('theme_on_demand', [
+                {}, {}, {}, {}, # bars 1 - 4
+                {
+                    1: lambda: self.theme_mesh(pitch=True)
+                }
+            ], loop=False)
+
+    @pedalboard_button(9)
+    def theme_launcher_2(self):
+        """
+        THÈME (LAUNCHER)
+        """
+        self.pause_loopers()
+        self.reset()
+
+        # Sequence
+        seq192.select('on', 'theme0_samples_launcher')
+
+        # Samples
+        samples.set('Samples1', 'Mute', 0.0)
+        samples.set('Samples2', 'Mute', 0.0)
+        samples.set('Samples3', 'Mute', 0.0)
+        samples.set('Samples4', 'Mute', 0.0)
+        samplesFX3Reverb.set('Samples[1-4]', 'Gain', -16.0)
+        samplesFX3Reverb.set('SamplesFX3Reverb', 'Mute', 0.0)
+        samplesFX2Delay.set('Samples[1-4]', 'Gain', -24.0)
+        samplesFX2Delay.set('SamplesFX2Delay', 'Mute', 0.0)
+
+        # Keyboards
+        jmjKeyboard.set_sound("ZDupieux")
+
+        # Vocals
+#        vocalsKesch.set('_exclu', 'on')
+
+        # Sequences (Mentat)
+        self.start_scene('theme_launcher',
+        lambda: [
+            self.wait_next_cycle(),
+            self.theme(auto=False)
+        ])
+
+    @pedalboard_button(10)
+    def theme_mesh(self, pitch=False):
+        self.pause_loopers()
+        self.reset()
+
+        # Sequences
+        seq192.select('on', 'theme_*')
+
+        # Transport
+        transport.start()
+
+
+        # Vocals
+        vocalsNano.set('gars_exclu', 'on')
+        vocalsKesch.set('meuf_exclu', 'on')
+
+        # Keyboards
+        jmjKeyboard.set_sound("ZDupieux")
+
+        # Samples
+        samples.set('Samples1', 'Mute', 0.0)
+        samples.set('Samples2', 'Mute', 0.0)
+        samples.set('Samples3', 'Mute', 0.0)
+        samples.set('Samples4', 'Mute', 0.0)
+        samplesFX3Reverb.set('Samples[1-4]', 'Gain', -16.0)
+        samplesFX3Reverb.set('SamplesFX3Reverb', 'Mute', 0.0)
+        samplesFX2Delay.set('Samples[1-4]', 'Gain', -24.0)
+        samplesFX2Delay.set('SamplesFX2Delay', 'Mute', 0.0)
+
+        self.start_sequence('theme', [
+            { # bar 1
                 1: lambda: [
-                    seq192.select('solo', 'theme_*'),
-                    vocalsKesch.set('normo_exclu', 'on')
+                    midipanic.reset(),
+#                    loop192.send('loop/2/hit', 'record'),
+                    prodSampler.send('/instrument/play', 's:Plagiat/StickItOut/LobbyLobbyBoy', 50),
+                    prodSampler.send('/instrument/play', 's:Plagiat/StickItOut/LobbyLobbyPiano', 90),
+                    prodSampler.send('/instrument/play', 's:Plagiat/StickItOut/LobbyLobbyClarAigue', 85),
+                    prodSampler.send('/instrument/play', 's:Plagiat/StickItOut/LobbyLobbyClarGrave', 90)
                 ]
-            }
-        ], loop=False)
+            },
+            { # bar 2
+            }, {}, {} # bars 2 - 4
+        ], loop=True)
+        
+        if pitch:
+            self.start_sequence('pitchdown', [
+                {
+                    1: lambda: postprocess.animate_pitch('*', 1.0, 0.25, 0.4),
+                    1.65: lambda: postprocess.animate_pitch('*', 0.25, 1.0, 0.1)
+                },
+                {},{},{},
+                {},{},{},{},
+            ], loop=True)
+        else:
+            bassfx.set('distohi', 'on')
