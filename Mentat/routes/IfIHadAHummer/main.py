@@ -85,7 +85,7 @@ class IfIHadAHummer(Video, Light, RouteBase):
             {}, {}, {}, {}, # bars 1 - 4
             {}, {}, {}, # bars 5 - 7
             { # bar 8
-                3.2: lambda: [ # "My rhymes are on my double sworded tongua"
+                3.8: lambda: [ # "My rhymes are on my double sworded tongua"
                     vocalsNano.set('normo_exclu', 'on'),
                     vocalsKesch.set('normo', 'on')
                 ]
@@ -128,9 +128,68 @@ class IfIHadAHummer(Video, Light, RouteBase):
         vocalsNano.set('meuf_exclu', 'on')
         vocalsKesch.set('gars_exclu', 'on')
 
-    pedalboard_button(2)
+    @pedalboard_button(2)
     def refrain2(self):
         """
         REFRAIN 2 (cf. REFRAIN)
         """
         pass
+
+    @pedalboardd_button(6)
+    def couplet2(self):
+        """
+        COUPLET 2
+        """
+
+        self.pause_loopers()
+        self.reset()
+
+        # Séquences
+        seq192.select('solo', 'couplet2_*')
+
+        # Transport
+        transport.set_cycle('7/8', 'XxXxXxx')
+        transport.start()
+
+        # Vocals
+        vocalsNano.set('gars_exclu', 'on')
+        vocalsKesch.set('meuf_exclu', 'on')
+
+        self.start_sequence('couplet2',[
+            *[{} for i in range(8)], # bars 1 - 8
+            { # bar 9
+                1: lambda: vocalsNano.set('meuf_exclu', 'on')
+            },
+            {}, {}, {} # bars 10 - 12
+            {}, # bar 13
+            { # bar 14
+                3.5: lambda: vocalsKesch.set('gars_exclu', 'on')
+            }
+        ], loop=False)
+        
+    @pedalboard_button(2)
+    def refrain3(self):
+        """
+        REFRAIN 3 (cf. REFRAIN)
+        """
+        #### TODO : pitchdown auto sur fin de refrain ?
+        pass
+
+    @pedalboard_button(7)
+    def transe(self):
+        """
+        TRANSE
+        """
+        self.pause_loopers()
+        self.reset()
+
+        # Séquences
+        seq192.select('solo', 'transe_*')
+
+        # Transport
+        transport.set_cycle('4/4', 'Xxxx')
+        transport.start()
+
+        # Basses
+        bassfx.set('distohi', 'on')
+        bassfx.set('scape', 'on')
