@@ -107,3 +107,30 @@ class IfIHadAHummer(Video, Light, RouteBase):
             }
         ], loop=False)
         
+
+    @pedalboard_button(4)
+    def prerefrain(self):
+        """
+        PRÉ-REFRAIN
+        """
+
+        self.pause_loopers()
+        self.reset()
+
+        # Séquences
+        seq192.select('solo', 'prerefrain_*')
+
+        # Transport
+        transport.set_cycle('4/4', 'Xxxx')
+        transport.start()
+
+        # Vocals
+        vocalsNano.set('meuf_exclu', 'on')
+        vocalsKesch.set('gars_exclu', 'on')
+
+    pedalboard_button(2)
+    def refrain2(self):
+        """
+        REFRAIN 2 (cf. REFRAIN)
+        """
+        pass
