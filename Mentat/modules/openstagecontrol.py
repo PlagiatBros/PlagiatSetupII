@@ -366,17 +366,19 @@ class OpenStageControl(Module):
                         'linkId': '/%s/%s/Gain' % (name, sname),
                         'bypass': True
                     })
-        panel['variables'] = {'names': tab_names}
-        frag = {
-            'type': 'fragment',
-            'version': '1.16.3',
-            'content': panel
-        }
-        file = open(self.session_dir + '/non-mixers.json', 'w+')
-        data = json.dumps(frag)
-        if data != file.read():
-            file.write(data)
-        file.close()
+
+        if not self.engine.restarted:
+            panel['variables'] = {'names': tab_names}
+            frag = {
+                'type': 'fragment',
+                'version': '1.16.3',
+                'content': panel
+            }
+            file = open(self.session_dir + '/non-mixers.json', 'w+')
+            data = json.dumps(frag)
+            if data != file.read():
+                file.write(data)
+            file.close()
 
         """
         Ray session gui
@@ -430,16 +432,17 @@ class OpenStageControl(Module):
                 panel['widgets'].append(strip)
 
 
-        frag = {
-            'type': 'fragment',
-            'version': '1.16.3',
-            'content': panel
-        }
-        file = open(self.session_dir + '/ray-session.json', 'w+')
-        data = json.dumps(frag)
-        if data != file.read():
-            file.write(data)
-        file.close()
+        if not self.engine.restarted:
+            frag = {
+                'type': 'fragment',
+                'version': '1.16.3',
+                'content': panel
+            }
+            file = open(self.session_dir + '/ray-session.json', 'w+')
+            data = json.dumps(frag)
+            if data != file.read():
+                file.write(data)
+            file.close()
 
         """
         Misc
