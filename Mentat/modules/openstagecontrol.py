@@ -1,6 +1,7 @@
 from mentat import Module
 from .nonmixer import NonMixer
 
+import os
 import json
 import urllib.parse
 from inspect import getmembers, getdoc
@@ -14,12 +15,13 @@ class OpenStageControl(Module):
 
         super().__init__(*args, **kwargs)
 
+        self.session_dir = os.path.dirname(__file__) + '/../../OpenStageControl'
+
         self.osc_state = {}
 
-        self.add_parameter('active_non_mixer', None, types='s', default='')
+        self.plugin_modals = {}
 
-        self.add_parameter('session_loaded', None, types='i', default=0)
-        self.add_parameter('session_populated', None, types='i', default=0)
+        self.add_parameter('active_non_mixer', None, types='s', default='')
 
         self.add_parameter('signature', '/signature', types='s', default='4/4')
         self.add_parameter('tempo', '/tempo', types='f', default=120)
@@ -33,6 +35,8 @@ class OpenStageControl(Module):
         self.add_event_callback('client_started', self.client_started)
         self.add_event_callback('engine_started', lambda: self.set('routes', ','.join(self.engine.routes.keys())) )
         self.add_event_callback('engine_route_changed', self.engine_route_changed)
+        self.add_event_callback('nonmixer_ready', lambda name: self.start_scene('populate_gui', self.populate_gui))
+
 
         self.start_scene('cycle_watch', self.cycle_watch)
 
@@ -61,12 +65,6 @@ class OpenStageControl(Module):
 
         and store that state locally.
         """
-        if module == self:
-            if name == 'session_loaded':
-                self.set('session_populated', 0)
-                if value == 1:
-                    self.start_scene('populate_gui', self.populate_gui)
-
         # send state changes to OSC
         # /module_name param_name value
         address = '/' + '/'.join(module.module_path)
@@ -114,10 +112,6 @@ class OpenStageControl(Module):
 
 
     def client_started(self, name):
-
-        if self.get('session_loaded'):
-            if self.get('session_populated') == 0:
-                self.start_scene('populate_gui', self.populate_gui)
 
         self.send_state()
 
@@ -198,21 +192,19 @@ class OpenStageControl(Module):
             - ray session
         """
 
-        while self.get('session_loaded') == 0:
-            self.wait(2, 's')
+        self.wait(2, 's')
 
 
         """
         Non mixer gui
         """
-        panel = {'tabs': [], 'verticalTabs': True, 'bypass': True, 'onValue': 'var name = getProp("non-mixer_tab_" + value, "label"); if (name) send("/OpenStageControl/call", "set_active_non_mixer", name)'}
-
-        index = 0
+        panel = {'type': 'panel', 'tabs': [], 'verticalTabs': True, 'bypass': True, 'onValue': 'var name = getProp(this, "variables").names[value]; if (name) send("/OpenStageControl/call", "set_active_non_mixer", name)'}
+        tab_names = []
         for name, mod in self.engine.modules.items():
             if isinstance(mod, NonMixer):
                 tab = {
                     'type': 'tab',
-                    'id': 'non-mixer_tab_%i' % index,
+                    'id': name,
                     'label': name,
                     'layout': 'horizontal',
                     'innerPadding': False,
@@ -220,10 +212,12 @@ class OpenStageControl(Module):
                     'padding': 1,
                     'contain': False
                 }
-                index += 1
+                tab_names.append(name)
                 panel['tabs'].append(tab)
                 for sname, smod in mod.submodules.items():
+                    id = '%s/%s' % (name, sname)
                     strip = {
+                        'id': id,
                         'type': 'panel',
                         'layout': 'vertical',
                         'width': 120,
@@ -250,7 +244,11 @@ class OpenStageControl(Module):
                     plugs = {}
                     for plugname, plugmod in smod.submodules.items():
                         if plugname not in plugs:
+                            id = '%s/%s/%s' % (name, sname, plugname)
                             modal = {
+                                'id': id,
+                                'address': '/OpenStageControl/call',
+                                'preArgs': '["display_modal", "%s"]' % id,
                                 'type': 'modal',
                                 'label': urllib.parse.unquote(plugname),
                                 'popupLabel': '%s > %s' % (urllib.parse.unquote(sname), urllib.parse.unquote(plugname)),
@@ -266,10 +264,12 @@ class OpenStageControl(Module):
                             plugs[plugname] = modal
                             plugins['widgets'].append(modal)
 
+                            self.plugin_modals[id] = []
+
                         for pname in plugmod.parameters:
 
                             param = plugmod.parameters[pname]
-                            modal['widgets'].append({
+                            self.plugin_modals[id].append({
                                 'type': 'panel',
                                 'layout': 'vertical',
                                 'css': 'class: strip',
@@ -366,15 +366,24 @@ class OpenStageControl(Module):
                         'linkId': '/%s/%s/Gain' % (name, sname),
                         'bypass': True
                     })
-
-        self.edit_gui('non-mixers', panel)
+        panel['variables'] = {'names': tab_names}
+        frag = {
+            'type': 'fragment',
+            'version': '1.16.3',
+            'content': panel
+        }
+        file = open(self.session_dir + '/non-mixers.json', 'w+')
+        data = json.dumps(frag)
+        if data != file.read():
+            file.write(data)
+        file.close()
 
         """
         Ray session gui
         """
 
         ray = self.engine.modules['RaySession']
-        panel = {'widgets': [], 'layout': 'vertical', 'padding': 1, 'innerPadding': False, 'contain': False, 'id': 'raysession_status_panel'}
+        panel = {'type': 'panel', 'widgets': [], 'layout': 'vertical', 'padding': 1, 'innerPadding': False, 'contain': False, 'id': 'raysession_status_panel'}
         for p in ray.parameters:
             if 'status_' in p:
                 name = p[7:]
@@ -421,14 +430,22 @@ class OpenStageControl(Module):
                 panel['widgets'].append(strip)
 
 
-
-        self.edit_gui('ray-session', panel)
+        frag = {
+            'type': 'fragment',
+            'version': '1.16.3',
+            'content': panel
+        }
+        file = open(self.session_dir + '/ray-session.json', 'w+')
+        data = json.dumps(frag)
+        if data != file.read():
+            file.write(data)
+        file.close()
 
         """
         Misc
         """
 
-        self.set('session_populated', 1)
+        self.wait(2, 's')
         self.send_state()
 
     def edit_gui(self, widget, data):
@@ -464,16 +481,6 @@ class OpenStageControl(Module):
         self.engine.modules['Transport'].stop()
         self.engine.active_route.pause_loopers()
 
-    def panic(self):
-        """
-        Send panic to synths
-        TODO: carla panic not working over osc
-        """
-        self.engine.modules['ZHiSynths'].send('/Panic')
-        self.engine.modules['ZLowSynths'].send('/Panic')
-        self.engine.modules['HiCSynths'].send('/panic')
-        self.engine.modules['LowCSynths'].send('/panic')
-
     def route_method(self, name):
         """
         Call method in active route that's linked to a pedalboard or mk2 button
@@ -498,3 +505,9 @@ class OpenStageControl(Module):
             self.engine.modules[name].enable_meters()
 
         self.set('active_non_mixer', name)
+
+
+    def display_modal(self, id, state):
+        if state == 1:
+            if id in self.plugin_modals:
+                self.send('/EDIT/MERGE', id, json.dumps({'widgets': self.plugin_modals[id]}), '{"noWarning": true}')

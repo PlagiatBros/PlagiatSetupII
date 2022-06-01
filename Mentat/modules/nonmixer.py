@@ -64,7 +64,7 @@ class NonMixer(Module):
         self.start_scene('meter_levels' if not foh else 'foh_meter_levels', self.update_meters, foh)
 
     def disable_meters(self):
-        self.start_scene('meter_levels', self.update_meters)
+        self.stop_scene('meter_levels')
 
 
     def set(self, *args, **kwargs):
@@ -84,7 +84,6 @@ class NonMixer(Module):
                 """
                 Populating
                 """
-
                 path = args[1].split('/')
 
                 if path[1] == 'strip':
@@ -169,6 +168,7 @@ class NonMixer(Module):
                 self.init_params.remove(args[0])
                 if not self.init_params:
                     self.logger.info(' is ready')
+                    self.engine.dispatch_event('nonmixer_ready', self.name)
                     self.create_meta_parameters()
 
 

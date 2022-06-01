@@ -6,17 +6,35 @@ function send_mentat(address, ...args){
 }
 
 app.on('open', (data, client)=>{
-    send_mentat('/OpenStageControl', 'session_loaded', 0)
+    // send_mentat('/OpenStageControl', 'session_loaded', 0)
 })
 
 app.on('sessionOpened', (data, client)=>{
-    send_mentat('/OpenStageControl', 'session_loaded', 1)
-    //for (var k in EDIT_QUEUE) {
-    //    receive('/EDIT', k, EDIT_QUEUE[k], {clientId: client.id})
-    //}
+
+    if (data.path.includes('hub.json')) {
+        if (client.id == 'nano') {
+            receive('/SESSION/OPEN', __dirname + '/nano.json', {clientId: client.id})
+        } else if (client.id == 'regie') {
+            receive('/SESSION/OPEN', __dirname + '/regie.json', {clientId: client.id})
+        } else if (client.id == 'main') {
+            receive('/SESSION/OPEN', __dirname + '/main.json', {clientId: client.id})
+        }
+    } else {
+        send_mentat('/OpenStageControl/call', 'send_state')
+    }
 })
 
 module.exports = {
+
+    oscOutFilter: function(data) {
+
+        if (data.address == '/LOAD') {
+            return receive('/SESSION/OPEN', __dirname + '/' + data.args[0].value + '.json', {clientId: data.clientId})
+        }
+
+        return data
+
+    },
 
     oscInFilter: function(data) {
         if (data.address === '/EDIT_QUEUE/START') {

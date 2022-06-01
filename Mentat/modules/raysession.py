@@ -6,7 +6,7 @@ import os
 import json
 import pyudev
 from sys import argv
-
+from xml.dom import minidom
 
 DEV = '--dev' in argv
 
@@ -20,10 +20,19 @@ class RaySession(Module):
 
         super().__init__(*args, **kwargs)
 
+        setup_dir = os.path.dirname(__file__) + '/../../'
+        session_dir = setup_dir + '/RaySessions/PlagiatLive'
+        session_file = minidom.parse('%s/raysession.xml' % session_dir)
+        self.clients = {}
+        for client in session_file.getElementsByTagName('client'):
+            self.clients[client.getAttribute('id')] = {
+                'hack': client.getAttribute('protocol') == 'Ray-Hack'
+            }
+
         self.client_init = []
 
         self.alsa_patcher = AlsaPatcher('AlsaPatcher')
-        self.alsa_patcher.load('%s/RaySessions/PlagiatLive/PlagiatLive.alsapatch' % os.getenv('PLAGIAT_SETUP_DIR'))
+        self.alsa_patcher.load('%s/PlagiatLive.alsapatch' % session_dir)
         self.alsa_patcher.connect()
 
         # bind usb connections to alsa patch
@@ -67,12 +76,13 @@ class RaySession(Module):
 
             self.register_client(name)
 
-            if event == 'ready':
+            if event == 'ready' or (event == 'started' and name in self.clients and self.clients[name]['hack']): # ray-hack only emit started
                 if self.get('status_%s' % name) == 0:
                     self.client_started(name)
 
             elif event == 'stopped_by_server' or event == 'client_stopped_by_server':
                 self.client_stopped(name)
+
             elif event == 'stopped_by_itself' or event == 'client_stopped_by_itself':
                 self.client_stopped(name)
                 self.logger.info('module %s crashed')
