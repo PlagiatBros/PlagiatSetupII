@@ -17,6 +17,34 @@ class Plugin(Module):
 
         super().__init__(*args, **kwargs)
 
+        self.feedback_parameters = []
+
+    def add_parameter(self, *args, direction='in', **kwargs):
+
+        super().add_parameter(*args, **kwargs)
+
+        p = self.parameters[args[0]]
+
+        p.feedback_only = False
+        if direction == 'out' and p not in self.feedback_parameters and p.name not in ['latency']:
+            self.feedback_parameters.append(p)
+            p.feedback_only = True
+
+    def query_feedback(self):
+        while True:
+            self.wait(1/10, 'sec')
+            for p in self.feedback_parameters:
+                # print('query %s' % p.address)
+                self.send(p.address)
+
+    def enable_feedback(self, foh=False):
+        self.start_scene('feedback_levels', self.query_feedback)
+
+    def disable_feedback(self):
+        self.stop_scene('feedback_levels')
+
+
+
 class NonMixer(Module):
     """
     Base module for NonMixer instances.
@@ -35,8 +63,6 @@ class NonMixer(Module):
         self.pending_set_calls = []
 
         self.add_event_callback('client_started', self.client_started)
-
-
 
     def client_started(self, name):
 
@@ -77,7 +103,6 @@ class NonMixer(Module):
         """
         Populate submodules and parameters from non's response
         """
-
         if address == '/reply' and args[0] == '/signal/list':
 
             if len(args) > 1:
@@ -121,19 +146,12 @@ class NonMixer(Module):
 
                             plugin_mod = strip_mod.submodules[plugin_name]
 
-                            if plugin_name == 'Meter':
-                                # meter is read only
-                                plugin_mod.add_parameter(param_shortname, None, 'f', default=None)
-
-                            else:
-                                plugin_mod.add_parameter(param_shortname, parameter_address, 'f', default=None)
+                            plugin_mod.add_parameter(param_shortname, parameter_address, 'f', default=None, direction=args[2])
 
 
                             plugin_mod.parameters[param_shortname].range = args[3:5]
 
                         self.init_params.append(parameter_address)
-
-                        # self.submodules[strip_name].add_alias_parameter(NonMixer.plugin_aliases[plugin_name] + '/' + param_shortname , parameter_name)
 
 
             else: # only 1 arg: list end
@@ -158,11 +176,6 @@ class NonMixer(Module):
                 plugin_name = NonMixer.plugin_aliases[plugin_name]
             if param_shortname in NonMixer.parameter_aliases:
                 param_shortname = NonMixer.parameter_aliases[param_shortname]
-
-            if plugin_name == 'Meter':
-                if args[1] < -70:
-                    args[1] = -70
-
 
             if args[0] in self.init_params:
                 self.init_params.remove(args[0])

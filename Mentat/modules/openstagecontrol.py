@@ -6,6 +6,8 @@ import json
 import urllib.parse
 from inspect import getmembers, getdoc
 
+from .plugins import osc_plugin
+
 class OpenStageControl(Module):
     """
     Open Stage Control touch interface.
@@ -241,66 +243,11 @@ class OpenStageControl(Module):
                         'contain': False
                     }
                     strip['widgets'].append(plugins)
-                    plugs = {}
+
                     for plugname, plugmod in smod.submodules.items():
-                        if plugname not in plugs:
-                            id = '%s/%s/%s' % (name, sname, plugname)
-                            modal = {
-                                'id': id,
-                                'address': '/OpenStageControl/call',
-                                'preArgs': '["display_modal", "%s"]' % id,
-                                'type': 'modal',
-                                'label': urllib.parse.unquote(plugname),
-                                'popupLabel': '%s > %s' % (urllib.parse.unquote(sname), urllib.parse.unquote(plugname)),
-                                'layout': 'horizontal',
-                                'height': 30,
-                                'css': 'class: plugin-modal',
-                                'popupPadding': 1,
-                                'innerPadding': True,
-                                'popupHeight': 400,
-                                'popupWidth': 800,
-                                'widgets': []
-                            }
-                            plugs[plugname] = modal
-                            plugins['widgets'].append(modal)
-
-                            self.plugin_modals[id] = []
-
-                        for pname in plugmod.parameters:
-
-                            param = plugmod.parameters[pname]
-                            self.plugin_modals[id].append({
-                                'type': 'panel',
-                                'layout': 'vertical',
-                                'css': 'class: strip',
-                                'html': '<div class="label center">%s</div>' % urllib.parse.unquote(pname),
-                                'width': 120,
-                                'widgets': [
-                                    {
-                                        'type': 'knob',
-                                        'horizontal': True,
-                                        'pips': True,
-                                        'range': {'min': {'%.1f' % param.range[0]: param.range[0]}, 'max': {'%.1f' % param.range[1]: param.range[1]}},
-                                        'value': param.args[0],
-                                        'default': param.args[0],
-                                        'doubleTap': True,
-                                        'linkId': param.address,
-                                        'address': '/%s/%s/%s' % (name, sname, plugname),
-                                        'preArgs': pname,
-                                        'decimals': 5,
-                                        'pips': True,
-                                        'expand': True,
-                                        'design': 'solid'
-                                    },
-                                    {
-                                        'type': 'input',
-                                        'width': 120,
-                                        'decimals': 5,
-                                        'linkId': param.address,
-                                        'bypass': True
-                                    }
-                                ]
-                            })
+                        oscplug = osc_plugin(plugmod)
+                        plugins['widgets'].append(oscplug.modal)
+                        self.plugin_modals[oscplug.id] = oscplug
 
                     strip['widgets'].append({
                         'type': 'button',
@@ -511,6 +458,10 @@ class OpenStageControl(Module):
 
 
     def display_modal(self, id, state):
-        if state == 1:
-            if id in self.plugin_modals:
-                self.send('/EDIT/MERGE', id, json.dumps({'widgets': self.plugin_modals[id]}), '{"noWarning": true}')
+        if id in self.plugin_modals:
+            if state == 1:
+                self.send('/EDIT/MERGE', id, json.dumps({'widgets': self.plugin_modals[id].widgets}), '{"noWarning": true}')
+                self.send_state()
+                self.plugin_modals[id].plugin.enable_feedback()
+            else:
+                self.plugin_modals[id].plugin.disable_feedback()

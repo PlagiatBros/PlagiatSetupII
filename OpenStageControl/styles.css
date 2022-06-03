@@ -48,7 +48,10 @@
 }
 
 .fader-container.design-compact {
-    --color-text: var(--color-widget);
+    --line-width: 0rem;
+    --widget-padding: 0;
+    --alpha-fill-on: 0.5;
+    --alpha-fill-off: 0.05;
     /*filter:drop-shadow(0 0 2px);*/
 }
 .fader-container.design-compact .label {
@@ -61,7 +64,7 @@
     -webkit-writing-mode:vertical-rl;
     writing-mode:vertical-rl;
     text-transform: uppercase;
-    height: 100rem;
+    height: 90%;
     font-size: 140%;
     font-weight: 100;
     width: 100%;
@@ -76,7 +79,8 @@
 .fader-container.design-compact .value {
     position: absolute;
     pointer-events: none;
-    bottom: 0;
+    opacity: 0.8;
+    top: 0;
     left:0;
     right: 0;
     width: 100%;
@@ -173,7 +177,6 @@
     box-shadow: 0 0 20rem 0 rgba(0,0,0,0.3);
     border-radius: 4rem;
 }
-
 
 .plugin-modal > label {
     display: block;
