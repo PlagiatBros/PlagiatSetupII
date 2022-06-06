@@ -29,6 +29,9 @@ class Mk2Control(Module):
         self.pressed_notes = 0
         self.modes = 'mute_samples'
 
+        self.voices = ['gars_exclu', 'meuf_exclu', 'normo_exclu']
+        self.current_voice = 0
+
     def set_lights(self, lights):
         """
         Generates sysex messages for setting colors on pads
@@ -111,7 +114,6 @@ class Mk2Control(Module):
         """
         #self.logger.info('%s %s' %(address, args))
 
-
         self.parse_controls(address, args)
 
         if address == '/control_change':
@@ -146,6 +148,17 @@ class Mk2Control(Module):
             if cc == 41:
                 self.engine.modules['VocalsNano'].set('NanoIn', 'Gate', 'Range%20(dB)', -90 if args[2] == 0 else 0)
 
+            if cc == 19:
+                # vx roll
+                self.engine.modules['VocalsNano'].set(self.voices[args[2] % 3], 'on')
+
+            if cc == 42:
+                # tmp vx pitch reset
+                for at in ['NanoMeuf', 'NanoNormo', 'NanoGars']:
+                    if args[2] == 0:
+                        self.engine.modules[at].reset('offset')
+                    else:
+                        self.engine.modules[at].set('offset', 0)
 
         elif address == '/sysex':
 

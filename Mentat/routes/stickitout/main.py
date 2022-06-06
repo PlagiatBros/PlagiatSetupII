@@ -319,7 +319,7 @@ class StickItOut(Video, Light, RouteBase):
 
         # Vocals
         vocalsNano.set('gars_exclu', 'on')
-        vocalsKesch.set('meuf_exclu', 'on')
+        vocalsKesch.set('normo_exclu', 'on')
 
         # Keyboards
         jmjKeyboard.set_sound("ZDupieux")
