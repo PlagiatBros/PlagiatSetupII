@@ -1,6 +1,6 @@
 {
   "createdWith": "Open Stage Control",
-  "version": "1.16.3",
+  "version": "1.16.5",
   "type": "session",
   "content": {
     "type": "root",
@@ -16,7 +16,7 @@
     "alphaFillOn": "auto",
     "padding": "auto",
     "html": "",
-    "css": "",
+    "css": ":host {\n  filter: brightness(2);\n\n}\n.navigation {\n  width:100px!important;\n}",
     "colorBg": "auto",
     "layout": "vertical",
     "justify": "start",
