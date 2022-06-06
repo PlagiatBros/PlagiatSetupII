@@ -10,6 +10,8 @@ class MidiPanic(Module):
 
         super().__init__(*args, **kwargs)
 
+    # def route(self, address, args):
+    #     print(address, args)
 
     def reset(self):
 
