@@ -189,11 +189,11 @@ class Mcob(Video, Light, RouteBase):
                 {   # bar 7
                     1: lambda: [vocalsKesch.set('gars', 'on'), vocalsKesch.set('normo', 'on')]
                 },
-                {},# {}, # bars 8, 9
-                {   # bar 10
+                {}, # bars 8
+                {   # bar 9
                     1: lambda: vocalsKesch.set('normo_exclu', 'on')
                 },
-                {}, {}, # bars 11, 12
+                {}, {}, {},# bars 10, 11, 12
                 {   # bar 13
                     2: lambda: vocalsKesch.set('meuf', 'on'),
                     3: lambda: vocalsKesch.set('meuf', 'off'),
