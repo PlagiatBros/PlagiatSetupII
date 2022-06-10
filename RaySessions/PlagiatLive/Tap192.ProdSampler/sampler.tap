@@ -159,10 +159,10 @@
         <instrument name="MopedOctave" minnote="124" maxnote="124" rootnote="124" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples1" volume="0.240000" pan="0.270000" pitch_over_range="true" play_mode="trigger" play_loop="no" play_reverse="no">
           <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2020/SW/Moped_Octave.flac" sampleRelative="../../../../Samples/So2020/SW/Moped_Octave.flac"/>
         </instrument>
-        <instrument name="BregoLong" minnote="40" maxnote="40" rootnote="40" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples3" volume="0.350000" pan="0.000000" pitch_over_range="true" play_mode="trigger" play_loop="no" play_reverse="no">
+        <instrument name="BregoLong" minnote="40" maxnote="40" rootnote="40" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples3" volume="0.500000" pan="0.000000" pitch_over_range="true" play_mode="trigger" play_loop="no" play_reverse="no">
           <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2020/SW/BregoLong_Tape.flac" sampleRelative="../../../../Samples/So2020/SW/BregoLong_Tape.flac"/>
         </instrument>
-        <instrument name="BregoNote" minnote="83" maxnote="93" rootnote="88" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples3" volume="0.350000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
+        <instrument name="BregoNote" minnote="83" maxnote="93" rootnote="88" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples3" volume="0.500000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
           <variation minveloc="0" maxveloc="112" sample="/home/plagiat/PlagiatSetup/Samples/So2020/SW/BregoNote_Tape.flac" sampleRelative="../../../../Samples/So2020/SW/BregoNote_Tape.flac"/>
           <variation minveloc="111" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2020/SW/BregoNote_Fla_Tape.flac" sampleRelative="../../../../Samples/So2020/SW/BregoNote_Fla_Tape.flac"/>
         </instrument>
