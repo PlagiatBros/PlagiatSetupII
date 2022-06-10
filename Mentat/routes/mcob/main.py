@@ -220,9 +220,7 @@ class Mcob(Video, Light, RouteBase):
         COUPLET 1 - No Ambition
         """
         # Sequences
-        seq192.select('solo', 'couplet1-2_*')
-        seq192.select('off', 'couplet1-2_samples_princeguitar2')
-        seq192.select('off', 'couplet1-2_cLow_*')
+        seq192.select('solo', 'dummy')
 
         # Transport
         transport.set_tempo(120)
@@ -245,7 +243,8 @@ class Mcob(Video, Light, RouteBase):
             {  # bar 3
                 1: lambda:
                 [
-                    seq192.select('on', 'couplet1-2_cLow_*'),
+                    seq192.select('solo', 'couplet1-2_*'),
+                    seq192.select('off', 'couplet1-2_samples_princeguitar2'),
                     transport.start()
                 ]
             }, {}, # bar 4
@@ -495,7 +494,7 @@ class Mcob(Video, Light, RouteBase):
         self.reset()
 
         seq192.select('off', '*')
-    
+
 
         # Looper
         looper.trigger('[0,3]')
