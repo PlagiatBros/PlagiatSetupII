@@ -67,6 +67,33 @@ class StickItOut(Video, Light, RouteBase):
 
         looper.record(3)
 
+
+    @mk2_button(2)
+    def couplet1_1(self):
+        """
+        Couplet 1 (Part 1)
+        """
+        self.pause_loopers()
+        self.reset()
+
+        # Loopers
+        looper.trigger(0)
+
+        # Séquences
+        seq192.select('solo', 'couplet1-0_*')
+
+        # Transport
+        transport.start()
+
+        # Keyboards
+        jmjKeyboard.set_sound('ZJestoProunk')
+
+        # Vocals
+        vocalsNano.set('gars_exclu', 'on')
+        vocalsKesch.set('meuf_exclu', 'on')
+
+
+
     @pedalboard_button(3)
     def couplet1_2(self):
         """
