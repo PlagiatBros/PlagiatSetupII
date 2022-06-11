@@ -193,16 +193,16 @@ class Mcob(Video, Light, RouteBase):
                 {   # bar 9
                     1: lambda: vocalsKesch.set('normo_exclu', 'on')
                 },
-                {}, {}, {},# bars 10, 11, 12
-                {   # bar 13
+                {}, {}, # bars 10, 11
+                {   # bar 12
                     2: lambda: vocalsKesch.set('meuf', 'on'),
                     3: lambda: vocalsKesch.set('meuf', 'off'),
                     4: lambda: vocalsKesch.set('meuf', 'on'),
                 },
-                {   # bar 14
+                {   # bar 13
                     1: lambda: vocalsKesch.set('meuf', 'off'),
                 },
-                {}, # bar 15
+                {}, {}, # bars 14, 15
                 {   # bar 16
                     4: lambda: postprocess.animate_pitch('*', 1, 0.25, 0.5, 'beat'),
                     4.95: lambda: postprocess.animate_pitch('*', 0.25, 1, 0.05, 'beat')
