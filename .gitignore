@@ -6,3 +6,4 @@ RaySessions/PlagiatLive/.ray-snapshots
 session.slsess_loop_*.wav
 session.slsess.bak
 *.pyc
+OpenStageControl/non-mixers.json
