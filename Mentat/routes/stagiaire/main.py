@@ -159,6 +159,9 @@ class Stagiaire(Video, Light, RouteBase):
         vocalsNano.set('gars_exclu', 'on')
         vocalsKesch.set('gars_exclu', 'on')
 
+        # Keyboards
+        jmjKeyboard.set_sound('ZCosma', boost=True)
+
     @pedalboard_button(6)
     def theme(self):
         """
