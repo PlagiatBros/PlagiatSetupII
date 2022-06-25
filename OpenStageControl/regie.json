@@ -16,7 +16,7 @@
     "alphaFillOn": "auto",
     "padding": "auto",
     "html": "",
-    "css": ":host {\n  filter: brightness(2);\n\n}\n.navigation {\n  width:100px!important;\n}",
+    "css": ".navigation {\n  display:none;\n}\n.tab-container:nth-child(8) .strip:last-child {\n  display:none;\n}\n.panel-container.carved {\n  display:none\n}\n.panel-container.carved + .button-container {\n  display:none\n}",
     "colorBg": "auto",
     "layout": "vertical",
     "justify": "start",
