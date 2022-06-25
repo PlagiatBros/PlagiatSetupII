@@ -38,6 +38,7 @@ class Plugin():
             'padding': 0,
             'layout': 'horizontal',
             'expand': True,
+            'contain': False,
             'widgets': []
         }
         feedback = {

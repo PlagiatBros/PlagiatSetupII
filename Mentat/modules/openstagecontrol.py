@@ -200,7 +200,7 @@ class OpenStageControl(Module):
         """
         Non mixer gui
         """
-        panel = {'type': 'panel', 'tabs': [], 'verticalTabs': True, 'bypass': True, 'onValue': 'var name = getProp(this, "variables").names[value]; if (name) send("/OpenStageControl/call", "set_active_non_mixer", name)'}
+        panel = {'id': 'non-mixer-gui-tabs', 'type': 'panel', 'default': 6, 'tabs': [], 'verticalTabs': True, 'bypass': True, 'onValue': 'var name = getProp(this, "variables").names[value]; if (name) send("/OpenStageControl/call", "set_active_non_mixer", name)'}
         tab_names = []
         for name, mod in self.engine.modules.items():
             if isinstance(mod, NonMixer):
@@ -260,19 +260,37 @@ class OpenStageControl(Module):
                     })
 
                     strip['widgets'].append({
-                        'type': 'fader',
-                        'range': {'min': -1, 'max': 1},
-                        'horizontal': True,
-                        'design': 'compact',
-                        'height': 30,
-                        'origin': 0,
-                        'dashed': [2,2],
-                        'css': 'class: locked;' if not 'Pan' in smod.parameters else '',
-                        'doubleTap': True,
-                        'value': smod.get('Pan') if 'Pan' in smod.parameters else 0,
-                        'address': '/%s/%s' % (name, sname),
-                        'preArgs': 'Pan'
+                        'type': 'panel',
+                        'height': 50,
+                        'layout': 'horizontal',
+                        'innerPadding': False,
+                        'padding': 10,
+                        'widgets': [
+                            {
+                                'type': 'knob',
+                                'range': {'min': -1, 'max': 1},
+                                'design': 'solid',
+                                'horizontal': True,
+                                'origin': 0,
+                                'css': 'class: locked;' if not 'Pan' in smod.parameters else '',
+                                'doubleTap': True,
+                                'value': smod.get('Pan') if 'Pan' in smod.parameters else 0,
+                                'address': '/%s/%s' % (name, sname),
+                                'preArgs': 'Pan',
+                                'linkId': '/%s/%s/Pan' % (name, sname),
+                                'sensitivity': 0.25
+                            },
+                            {
+                                'type': 'input',
+                                'css': ('class: locked;' if not 'Pan' in smod.parameters else '') + ';\nmargin: 7rem 0 8rem!important',
+                                'width': 120,
+                                'decimals': 2,
+                                'linkId': '/%s/%s/Pan' % (name, sname),
+                                'bypass': True
+                            }
+                        ]
                     })
+
                     strip['widgets'].append({
                         'type': 'panel',
                         'expand': True,
