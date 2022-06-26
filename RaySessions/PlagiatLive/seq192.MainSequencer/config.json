@@ -17,6 +17,9 @@
         },
         "9": {
             "name": "prodSampler"
+        },
+        "10": {
+            "name": "constantSampler"
         }
     }
 }

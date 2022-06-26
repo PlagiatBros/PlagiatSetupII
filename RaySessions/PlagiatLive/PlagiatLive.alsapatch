@@ -52,6 +52,8 @@ seq192.MainSequencer : zynHi |> ZynAddSubFX.ZHiSynths : ZynAddSubFX
 seq192.MainSequencer : carlaHi |> MonoSynthMicroTonal : In
 seq192.MainSequencer : carlaFluid |> cFluidBridge : playback
 seq192.MainSequencer : prodSampler |> Tap192.ProdSampler : midi_in
+seq192.MainSequencer : constantSampler |> Tap192.ConstantSampler : midi_in
+seq192.MainSequencer : constantSampler |> SPD-SX : SPD-SX Control
 
 MonoSynthMicroTonal : Out   |> cHiBridge : playback
 
