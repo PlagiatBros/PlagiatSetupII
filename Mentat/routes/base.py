@@ -131,6 +131,9 @@ class RouteBase(Route):
                 for name in mod.submodules:
                     if 'Pan' in mod.submodules[name].parameters:
                         mod.submodules[name].set('Pan', 0.0)
+                    if 'Amp' in mod.submodules[name].submodules:
+                        mod.submodules[name].set('Amp', 'Gain', 1.0)
+
 
             # SynthsFX
             elif 'SynthsFX' in name:

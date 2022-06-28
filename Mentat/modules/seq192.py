@@ -21,7 +21,9 @@ class Seq192(Module):
             'SW': 5,
             'ViktorHuguau' : 6,
             'RamenerMooncup': 7,
-            'StickItOut': 8
+            'StickItOut': 8,
+            'IfIHadAHummer': 9,
+
         }
 
     def start(self):

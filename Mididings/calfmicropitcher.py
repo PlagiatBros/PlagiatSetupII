@@ -25,11 +25,12 @@ manual_pitch = {
 }
 
 pb_factor = {
-    2: 1/12.,
-    3: 1/12.,
-    4: 1,
-    5: 1/12.
+    2: 2,
+    3: 2,
+    4: 24,
+    5: 2
 }
+
 note = 0
 
 def panic(path, args):
@@ -40,11 +41,11 @@ def panic(path, args):
 def pitch_panic(path, args):
     for channel in pb_factor:
         manual_pitch[channel] = 0
-        _engine.output_event(_event.PitchbendEvent(1, channel, int(monosynth_pitch[note] * pb_factor[channel] + manual_pitch[channel])))
+        _engine.output_event(_event.PitchbendEvent(1, channel, int(monosynth_pitch[note] / pb_factor[channel] + manual_pitch[channel])))
 
 def set_microtonal(path, args):
     global monosynth_pitch
-    monosynth_pitch = [8192. * t / 2 for t in args]
+    monosynth_pitch = [8192. * t for t in args]
     print('monosynth pitch: %s' % monosynth_pitch)
 
 
@@ -61,19 +62,25 @@ def applyMicrotonal(ev):
     port = ev.port - 1
     channel = ev.channel
 
-    _engine.output_event(PitchbendEvent(ev.port, ev.channel, int(monosynth_pitch[note] * pb_factor[channel] + manual_pitch[channel])))
+    pitch = int(monosynth_pitch[note] / pb_factor[channel] + manual_pitch[channel])
+    pitch = max(-8192,min(pitch,8191))
+
+    _engine.output_event(PitchbendEvent(ev.port, ev.channel, pitch))
     _engine.output_event(ev)
 
 def storePitchwheel(ev):
     port = ev.port - 1
     channel = ev.channel
-    manual_pitch[channel] = ev.value * pb_factor[channel]
+    manual_pitch[channel] = ev.value
 
-    ev.value =  int(ev.value * pb_factor[channel]) + int(monosynth_pitch[note] * pb_factor[channel])
+    pitch = ev.value + int(monosynth_pitch[note] / pb_factor[channel])
+    pitch = max(-8192,min(pitch,8191))
+    ev.value = pitch
 
     _engine.output_event(ev)
 
 run([
+    Filter(CTRL) >> CtrlFilter(1,64, 123, 122, 124),
     Filter(NOTEON) >> Call(applyMicrotonal),
     Filter(NOTEOFF),
     Filter(PITCHBEND) >> [

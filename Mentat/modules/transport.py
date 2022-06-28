@@ -153,8 +153,8 @@ class Transport(Module):
                     pattern += 'x'
 
         nom, denom = signature.split('/')
-        self.engine.modules['Klick'].set('cycle', int(nom), int(denom))
-        self.engine.modules['Klick'].set('pattern', pattern)
+        self.engine.modules['Klick'].set('cycle', int(nom), int(denom), force_send=True)
+        self.engine.modules['Klick'].set('pattern', pattern, force_send=True)
 
         self.engine.modules['Loop192'].set('cycle', eighths)
         self.engine.modules['AudioLooper'].set('cycle', eighths)

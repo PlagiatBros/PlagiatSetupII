@@ -208,6 +208,7 @@ class NonMixer(Module):
         'Aux%20(B)': 'Aux-B',
         'Aux%20(C)': 'Aux-C',
         'Aux%20(D)': 'Aux-D',
+        'Amplifier%20(Mono)': 'Amp'
     }
 
     parameter_aliases = {

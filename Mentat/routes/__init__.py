@@ -7,6 +7,7 @@ from .sw.main import SW
 from .viktorhuguau.main import ViktorHuguau
 from .ramenermooncup.main import RamenerMooncup
 from .stickitout.main import StickItOut
+from .IfIHadAHummer.main import IfIHadAHummer
 
 snapshat = Snapshat('Snapshat')
 mcob = Mcob('Mcob')
@@ -17,3 +18,4 @@ SW = SW('SW')
 viktorhuguau = ViktorHuguau('ViktorHuguau')
 RamenerMooncup = RamenerMooncup('RamenerMooncup')
 StickItOut = StickItOut('StickItOut')
+IfIHadAHummer = IfIHadAHummer('IfIHadAHummer')

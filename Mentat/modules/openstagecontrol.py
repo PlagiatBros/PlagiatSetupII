@@ -13,6 +13,8 @@ class OpenStageControl(Module):
     Open Stage Control touch interface.
     """
 
+    osc_version = '1.16.3'
+
     def __init__(self, *args, **kwargs):
 
         super().__init__(*args, **kwargs)
@@ -336,7 +338,7 @@ class OpenStageControl(Module):
             panel['variables'] = {'names': tab_names}
             frag = {
                 'type': 'fragment',
-                'version': '1.16.3',
+                'version': self.osc_version,
                 'content': panel
             }
             file = open(self.session_dir + '/non-mixers.json', 'w+')
@@ -387,6 +389,14 @@ class OpenStageControl(Module):
                         'preArgs': ['send', '/ray/client/save', name]
                     },
                     {
+                        'type': 'button',
+                        'label': '^eye',
+                        'mode': 'momentary',
+                        'colorWidget': 'white',
+                        'address': '/RaySession/call',
+                        'preArgs': ['send', '/ray/client/show_optional_gui', name]
+                    },
+                    {
                         'type': 'text',
                         'align': 'left',
                         'address': '/RaySession',
@@ -400,7 +410,7 @@ class OpenStageControl(Module):
         if not self.engine.restarted:
             frag = {
                 'type': 'fragment',
-                'version': '1.16.3',
+                'version': self.osc_version,
                 'content': panel
             }
             file = open(self.session_dir + '/ray-session.json', 'w+')

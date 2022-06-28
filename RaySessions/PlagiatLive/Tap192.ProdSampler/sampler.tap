@@ -364,6 +364,36 @@
           <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2021/StickItOut/Hink.flac" sampleRelative="../../../../Samples/So2021/StickItOut/LobbyLobbyHink.flac"/>
         </instrument>
       </kit>
+      <kit name="IfIHadAHummer" volume="1.000000">
+        <instrument name="Gtr_Refrain" minnote="60" maxnote="60" rootnote="60" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples1" volume="1.000000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
+          <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2021/IfIHadAHummer/GtrSample.flac" sampleRelative="../../../../Samples/So2021/IfIHadAHummer/GtrSample.flac"/>
+        </instrument>
+        <instrument name="Gtr_Couplet_A" minnote="62" maxnote="62" rootnote="62" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples1" volume="1.000000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
+          <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2021/IfIHadAHummer/GtrSample_couplet_A.flac" sampleRelative="../../../../Samples/So2021/IfIHadAHummer/GtrSample_couplet_A.flac"/>
+        </instrument>
+        <instrument name="Gtr_Couplet_B" minnote="63" maxnote="63" rootnote="63" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples1" volume="1.000000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
+          <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2021/IfIHadAHummer/GtrSample_couplet_B.flac" sampleRelative="../../../../Samples/So2021/IfIHadAHummer/GtrSample_couplet_B.flac"/>
+        </instrument>
+        <instrument name="Gtr_Couplet_C" minnote="64" maxnote="64" rootnote="64" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples1" volume="1.000000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
+          <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2021/IfIHadAHummer/GtrSample_couplet_C.flac" sampleRelative="../../../../Samples/So2021/IfIHadAHummer/GtrSample_couplet_C.flac"/>
+        </instrument>
+        <instrument name="Bass_Couplet_AA" minnote="72" maxnote="72" rootnote="72" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples2" volume="1.000000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
+          <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2021/IfIHadAHummer/BassSample_couplet_AA.flac" sampleRelative="../../../../Samples/So2021/IfIHadAHummer/BassSample_couplet_AA.flac"/>
+        </instrument>
+        <instrument name="Bass_Couplet_AB" minnote="73" maxnote="73" rootnote="73" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples2" volume="1.000000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
+          <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2021/IfIHadAHummer/BassSample_couplet_AB.flac" sampleRelative="../../../../Samples/So2021/IfIHadAHummer/BassSample_couplet_AB.flac"/>
+        </instrument>
+        <instrument name="Bass_Couplet_BA" minnote="74" maxnote="74" rootnote="74" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples2" volume="1.000000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
+          <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2021/IfIHadAHummer/BassSample_couplet_BA.flac" sampleRelative="../../../../Samples/So2021/IfIHadAHummer/BassSample_couplet_BA.flac"/>
+        </instrument>
+        <instrument name="Bass_Couplet_BB" minnote="75" maxnote="75" rootnote="75" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples2" volume="1.000000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
+          <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2021/IfIHadAHummer/BassSample_couplet_BB.flac" sampleRelative="../../../../Samples/So2021/IfIHadAHummer/BassSample_couplet_BB.flac"/>
+        </instrument>
+        <instrument name="Bass_Couplet_C" minnote="76" maxnote="76" rootnote="76" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples2" volume="1.000000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
+          <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2021/IfIHadAHummer/BassSample_couplet_C.flac" sampleRelative="../../../../Samples/So2021/IfIHadAHummer/BassSample_couplet_C.flac"/>
+        </instrument>
+
+      </kit>
     </setup>
   </creation>
 </tap192>

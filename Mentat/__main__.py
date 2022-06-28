@@ -26,7 +26,7 @@ for name, mod in getmembers(routes):
         engine.add_route(mod)
 
 # set default route
-engine.set_route('RamenerMooncup')
+engine.set_route('IfIHadAHummer')
 
 #################################################################
 #################################################################
