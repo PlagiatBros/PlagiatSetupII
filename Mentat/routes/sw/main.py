@@ -1,4 +1,4 @@
-from ..base import RouteBase, mk2_button, pedalboard_button
+from ..base import *
 from .video import Video
 from .light import Light
 
@@ -65,7 +65,9 @@ class SW(Video, Light, RouteBase):
         vocalsKesch.set('meuf_exclu', 'on')
 
         # Keyboard
-        jmjKeyboard.set_sound('ZNotSoRhodes')
+        jmjKeyboard.set_sound('ZTrumpets', boost=True)
+
+
 
     @mk2_button(2, 'purple')
     def couplet1(self):
@@ -302,6 +304,25 @@ class SW(Video, Light, RouteBase):
         #vocalsNanoFX2Delay.set('NanoMeuf', 'Gain', 0.0)
         vocalsNanoFX4Disint.set('NanoMeuf', 'Gain', 0.0)
         vocalsKesch.set('meuf_exclu', 'on')
+
+        # Keyboards
+        jmjKeyboard.set_sound('ZTrumpets', boost=True)
+
+    @gui_button()
+    def salsabass(self):
+        """
+        SALSA BASS
+        """
+        seq192.select('on', 'couplet1-3_cLowTrap*')
+
+    @gui_button()
+    def salsahigh(self):
+        """
+        SALSA High
+        """
+        seq192.select('on', 'couplet1-3_*')
+        seq192.select('on', 'couplet1-2_*')
+
 
     @pedalboard_button(7)
     def lambotrap(self):

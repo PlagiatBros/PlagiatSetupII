@@ -261,7 +261,7 @@ class Mcob(Video, Light, RouteBase):
             {
                 3.3: lambda: [
                     seq192.select('solo', 'couplet1-2_*'),
-                    seq192.select('off', 'couplet1-2_samples_princeguitar2')                
+                    seq192.select('off', 'couplet1-2_samples_princeguitar2')
                 ]
             }, # bar 10
             {   # bar 11
@@ -449,7 +449,10 @@ class Mcob(Video, Light, RouteBase):
         # Scenes
         self.start_sequence('delayed_blast', {
             'signature': '32/4',
-            33: lambda: seq192.select('solo', 'blast2_*'),
+            33: lambda: [
+                seq192.select('solo', 'blast2_*'),
+                bassFX.set('distohi', 'on')
+                ]
         })
 
 

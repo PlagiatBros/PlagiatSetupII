@@ -317,10 +317,9 @@ class RamenerMooncup(Video, Light, RouteBase):
         vocalsKesch.set('normo_exclu', 'on')
 
     @pedalboard_button(6)
-    @pedalboard_button(7)
     def disco(self):
         """
-        DISCO (6) / DROP THE BASS (7)
+        DISCO
         """
         self.pause_loopers()
         self.reset()
@@ -335,11 +334,42 @@ class RamenerMooncup(Video, Light, RouteBase):
         samples.set('Samples1', 'Mute', 0.0)
 
         # Keyboards
-        jmjKeyboard.set_sound('LowZDubstep')
+        jmjKeyboard.set_sound('ZTrumpets', boost=True)
 
         # Vocals
         vocalsNano.set('gars_exclu', 'on')
         vocalsKesch.set('gars_exclu', 'on')
+
+    @mk2_button(5)
+    def startingblocks(self):
+        """
+        RELANCE STARTING BLOCKS
+        """
+        self.pause_loopers()
+        self.reset()
+
+        # Looper
+        looper.trigger('0')
+
+        # Séquences
+        seq192.select('solo', 'disco_*')
+
+        # Samples
+        samples.set('Samples1', 'Mute', 0.0)
+
+        # Transport
+        transport.start()
+
+
+    @pedalboard_button(7)
+    def disco2(self):
+        """
+        DISCO 2 DROP THE BASS
+        """
+        self.disco()
+        # Keyboards
+        jmjKeyboard.set_sound('LowZDubstep')
+
 
     @pedalboard_button(8)
     def ramener_launcher(self):

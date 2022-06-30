@@ -46,6 +46,20 @@ class mk2_button():
             method.mk2_buttons[self.button] = self.color
         return method
 
+class gui_button():
+    """
+    Decorator for route methods that can be called directly
+    from gui buttons
+    """
+    def __call__(self, method):
+        if not hasattr(method, 'index'):
+            global method_index
+            method.index = method_index
+            method_index += 1
+        method.gui_button = True
+        return method
+
+
 class RouteBase(Route):
 
     def __init__(self, *args, **kwargs):

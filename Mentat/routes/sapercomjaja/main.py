@@ -52,7 +52,7 @@ class SaperComJaja(Video, Light, RouteBase):
         samples.set('Samples4', 'Mute', 0.0)
 
         # Keyboards
-        jmjKeyboard.set_sound('CLowBoomTrapline')
+        jmjKeyboard.set_sound('LowCBoomTrapline')
         #### TODO mk2Keyboard ?
 
     @pedalboard_button(1)

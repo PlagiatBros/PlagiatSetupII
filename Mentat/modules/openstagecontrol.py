@@ -33,6 +33,7 @@ class OpenStageControl(Module):
         self.add_parameter('routes', '/routes', types='s', default='Loading')
         self.add_parameter('active_route', '/active_route', types='s', default='')
         self.add_parameter('route_methods', '/route_methods', types='s', default='')
+        self.add_parameter('miniroute_methods', '/miniroute_methods', types='s', default='')
         self.add_parameter('rolling', '/rolling', types='i', default=0)
 
         self.add_event_callback('parameter_changed', self.parameter_changed)
@@ -92,27 +93,34 @@ class OpenStageControl(Module):
 
         self.set('active_route', name)
         route = self.engine.active_route
-        methods = [x for n,x in getmembers(route) if callable(x) and (hasattr(x, 'mk2_buttons') or hasattr(x, 'pedalboard_buttons'))]
+        methods = [x for n,x in getmembers(route) if callable(x) and (hasattr(x, 'mk2_buttons') or hasattr(x, 'pedalboard_buttons') or hasattr(x, 'gui_button'))]
         methods = sorted(methods, key=lambda m: m.index)
 
         data = []
+        subroute_data = []
         for m in methods:
             if route.name in m.__qualname__:
-                btns = ''
-                if hasattr(m, 'mk2_buttons'):
-                    btns += ''.join(['<div class="mk2">%s</div>' % x for x in m.mk2_buttons])
-                if hasattr(m, 'pedalboard_buttons'):
-                    btns += ''.join(['<div class="pb">%s</div>' % x for x in m.pedalboard_buttons])
+                if hasattr(m, 'gui_button'):
+                    subroute_data.append({
+                        'method': m.__name__,
+                        'label': getdoc(m).split('\n')[0] if getdoc(m) else m.__name__,
+                    })
+                else:
+                    btns = ''
+                    if hasattr(m, 'mk2_buttons'):
+                        btns += ''.join(['<div class="mk2">%s</div>' % x for x in m.mk2_buttons])
+                    if hasattr(m, 'pedalboard_buttons'):
+                        btns += ''.join(['<div class="pb">%s</div>' % x for x in m.pedalboard_buttons])
 
-                data.append({
-                    'method': m.__name__,
-                    'label': getdoc(m).split('\n')[0] if getdoc(m) else m.__name__,
-                    'html': '%s' % btns
-                })
+                    data.append({
+                        'method': m.__name__,
+                        'label': getdoc(m).split('\n')[0] if getdoc(m) else m.__name__,
+                        'html': '%s' % btns
+                    })
+
 
         self.set('route_methods', json.dumps(data))
-
-
+        self.set('miniroute_methods', json.dumps(subroute_data))
 
 
     def client_started(self, name):
@@ -470,6 +478,8 @@ class OpenStageControl(Module):
                     self.engine.active_route.route('osc', None, '/mk2/button', list(m.mk2_buttons.keys())[:1])
                 elif hasattr(m, 'pedalboard_buttons'):
                     self.engine.active_route.route('osc', None, '/pedalBoard/button', list(m.pedalboard_buttons.keys())[:1])
+                elif hasattr(m, 'gui_button'):
+                    m()
 
     def set_active_non_mixer(self, name):
         """

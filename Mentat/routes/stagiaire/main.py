@@ -269,13 +269,13 @@ class Stagiaire(Video, Light, RouteBase):
         # méthode vide juste pour que le déroulé du morceau appairaisse de façon linéaire
         pass
 
-    @mk2_button(2, 'purple')
+    @mk2_button(3, 'purple')
     def afro3(self):
         """
         AFRO 3 (BUTTER cf. AFRO)
         """
-        # méthode vide juste pour que le déroulé du morceau appairaisse de façon linéaire
-        pass
+        self.afro2()
+        vocalsKesch.set('gars_exclu', 'on')
 
     @pedalboard_button(7)
     def refrain2(self):

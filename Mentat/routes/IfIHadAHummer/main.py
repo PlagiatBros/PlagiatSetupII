@@ -1,5 +1,5 @@
 
-from ..base import RouteBase, mk2_button, pedalboard_button
+from ..base import *
 from .video import Video
 from .light import Light
 
@@ -368,3 +368,31 @@ class IfIHadAHummer(Video, Light, RouteBase):
 
         # Samples
         samples.set('Samples2', 'Mute', 0.0)
+
+    @gui_button()
+    def do_synth(self):
+        """
+        DO
+        """
+        seq192.select('on', '//refrainUp_cHi_easy*')
+
+    @gui_button()
+    def domin_synth(self):
+        """
+        DO MIN
+        """
+        seq192.select('on', '//refrainUp*')
+
+    @gui_button()
+    def bdelay_off(self):
+        """
+        BASS DELAY OFF
+        """
+        bassfx.set('tapedelay', 'off')
+
+    @gui_button()
+    def bdelay_on(self):
+        """
+        BASS DELAY ON
+        """
+        bassfx.set('tapedelay', 'on')

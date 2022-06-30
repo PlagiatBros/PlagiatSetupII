@@ -32,7 +32,7 @@ class Plugin(Module):
 
     def query_feedback(self):
         while True:
-            self.wait(1/10, 'sec')
+            self.wait(1/5, 'sec')
             for p in self.feedback_parameters:
                 # print('query %s' % p.address)
                 self.send(p.address)
