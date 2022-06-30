@@ -255,7 +255,15 @@ class Mcob(Video, Light, RouteBase):
             {   # bar 8
                 4 + 2/3: lambda: vocalsKesch.set('normo', 'on')
             },
-            {}, {}, # bar 9, 10
+            { # bar 9 - we not getting it woking
+                1: lambda: seq192.select('solo', 'fummy')
+            },
+            {
+                3.3: lambda: [
+                    seq192.select('solo', 'couplet1-2_*'),
+                    seq192.select('off', 'couplet1-2_samples_princeguitar2')                
+                ]
+            }, # bar 10
             {   # bar 11
                 1: lambda: vocalsKesch.set('normo_exclu', 'on'),
             },
