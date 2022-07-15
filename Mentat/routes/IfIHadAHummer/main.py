@@ -152,7 +152,7 @@ class IfIHadAHummer(Video, Light, RouteBase):
             {}, {}, {}, # bars 5 - 7
             { # bar 8
                 2.75: lambda: postprocess.animate_pitch('*', 1, 0.25, 1.5),
-                4.75: lambda : postprocess.animate_pitch('*', None, 1, 0.23)
+                4.35: lambda : postprocess.animate_pitch('*', None, 1, 0.15)
             },
             { # bar 9
                 1: lambda: [seq192.select('on', 'refrain_*'), samples.set('Samples1', 'Mute', 0.0)]
