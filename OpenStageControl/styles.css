@@ -244,7 +244,8 @@
 
 
 .locked {
-    filter: grayscale(1) sepia(0.5) hue-rotate(190deg);
+  filter: grayscale(0.5);
+    _filter: grayscale(1) sepia(0.5) hue-rotate(190deg);
     opacity: 0.75;
     pointer-events: none;
 }
