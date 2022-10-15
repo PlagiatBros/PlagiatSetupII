@@ -15,6 +15,7 @@ Carla.LowCSynths/Trap1:Out L             |> Non-Mixer.BassSynths (Main):BassTrap
 Carla.LowCSynths/Trap2:Out L             |> Non-Mixer.BassSynths (Main):BassTrap2/in-1
 Non-Mixer.Bass (In):BassIn/out-1         |> Non-Mixer.Bass (Main):BassDry/in-1
 Non-Mixer.Bass (In):BassIn/out-1         |> Non-Mixer.Bass (Main):BassSub/in-1
+Non-Mixer.Bass (In):BassIn/out-1         |> Non-Mixer.Bass (Main):FBassDry/in-1
 Non-Mixer.Bass (In):BassIn/out-1         |> Non-Mixer.BassFX (In):BassDegradeIn/in-1
 Non-Mixer.Bass (In):BassIn/out-1         |> Non-Mixer.BassFX (In):BassDistoHiIn/in-1
 Non-Mixer.Bass (In):BassIn/out-1         |> Non-Mixer.BassFX (In):BassScapeIn/in-1
@@ -23,6 +24,7 @@ Non-Mixer.Bass (In):BassIn/out-1         |> Non-Mixer.BassFX (In):BassWobbleIn/i
 Non-Mixer.Bass (In):BassIn/out-1         |> Non-Mixer.BassFX (In):BassZynWahIn/in-1
 Non-Mixer.Bass (Main):BassDry/out-1      |> Non-Mixer.Bass (Out):BassOut/in-1
 Non-Mixer.Bass (Main):BassSub/out-1      |> Non-Mixer.Bass (Out):BassOut/in-1
+Non-Mixer.Bass (Main):FBassDry/out-1     |> Non-Mixer.Bass (Out):BassOut/in-1
 Non-Mixer.Bass (Out):BassOut/out-1       |> sooperlooper:loop1_in_1
 Non-Mixer.BassFX (In):BassDegradeIn/out-1 |> Non-Mixer.BassFX (Process):BassDegrade/in-1
 Non-Mixer.BassFX (In):BassDistoHiIn/out-1 |> Non-Mixer.BassFX (Process):BassDistoHi/in-1
@@ -1103,3 +1105,5 @@ system:capture_4                         |> Non-Mixer.Inputs (Inputs):Kick/in-1
 system:capture_6                         |> Non-Mixer.Inputs (Inputs):Ambiance/in-1
 system:capture_7                         |> Non-Mixer.Inputs (Inputs):OH-L/in-1
 system:capture_8                         |> Non-Mixer.Inputs (Inputs):OH-R/in-1
+system:capture_9                         |> Non-Mixer.Inputs (Inputs):Bass/in-1
+system:capture_9                         |> gxtuner:in_0
