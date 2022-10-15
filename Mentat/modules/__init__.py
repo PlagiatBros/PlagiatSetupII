@@ -64,7 +64,7 @@ outputs = NonMixer('Outputs', 'osc', 10001)
 monitorsNano = NonMixer('MonitorsNano', 'osc', 10002)
 monitorsKesch = NonMixer('MonitorsKesch', 'osc', 10003)
 
-bass = NonMixer('Bass', 'osc', 10010)
+bass = Bass('Bass', 'osc', 10010)
 bassFX = bassfx = BassFX('BassFX', 'osc', 10011)
 
 bassSynths = NonMixer('BassSynths', 'osc', 10020)

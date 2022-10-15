@@ -253,7 +253,7 @@ class StickItOut(Video, Light, RouteBase):
             { # bar 13
                 1: lambda: [
                     vocalsKesch.set('normo_exclu', 'on'),
-                    vocalsKesch.set('gars', 'on'),
+#                    vocalsKesch.set('gars', 'on'),
                     vocalsNano.set('normo_exclu', 'on'),
                     seq192.select('off', 'couplet2_*')
                 ]

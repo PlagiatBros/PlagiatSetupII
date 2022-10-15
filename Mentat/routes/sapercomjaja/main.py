@@ -179,9 +179,13 @@ class SaperComJaja(Video, Light, RouteBase):
         """
         RimDoooooooooged
         """
+        # Séquences
+        seq192.select('solo', 'dumby')
 
         # Transport
-        transport.stop()
+        transport.set_cycle('4/4', pattern="Xxxx")
+        transport.start()
+
 
         # Vocals
         vocalsNano.set('normo_exclu', 'on')
