@@ -392,7 +392,11 @@
         <instrument name="Bass_Couplet_C" minnote="76" maxnote="76" rootnote="76" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples2" volume="1.000000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
           <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2021/IfIHadAHummer/BassSample_couplet_C.flac" sampleRelative="../../../../Samples/So2021/IfIHadAHummer/BassSample_couplet_C.flac"/>
         </instrument>
-
+      </kit>
+      <kit name="ClashDesCoaches" volume="1.000000">
+        <instrument name="SaperComJaja" minnote="61" maxnote="61" rootnote="61" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples1" volume="0.5" pan="0" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
+          <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2020/ClashDesCoaches/SaperComJaja.wav" sampleRelative="../../../../Samples/So2020/ClashDesCoaches/SaperComJaja.wav"/>
+        </instrument>
       </kit>
     </setup>
   </creation>

@@ -23,6 +23,7 @@ class Seq192(Module):
             'RamenerMooncup': 7,
             'StickItOut': 8,
             'IfIHadAHummer': 9,
+            'ClashDesCoaches': 10,
 
         }
 

@@ -31,6 +31,8 @@ class SW(Video, Light, RouteBase):
         autotunes = ['NanoMeuf', 'NanoNormo', 'NanoGars', 'KeschMeuf', 'KeschNormo', 'KeschGars']
         notes.set_notes(1, 0, 1, 1, 1, 1, 0, 0, 1, 1, 0, 1)
 
+        # Mk2
+        mk2Control.set_mode('cut_samples', 'cut_synths')
 
     @pedalboard_button(1)
     @mk2_button(1, 'blue')

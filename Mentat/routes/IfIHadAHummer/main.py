@@ -29,6 +29,8 @@ class IfIHadAHummer(Video, Light, RouteBase):
         #               c     d     e  f     g     a     b
         notes.set_notes(1, 0, 1, 1, 0, 1, 0, 1, 1, 0, 1, 1)
 
+        # Mk2
+        mk2Control.set_mode('cut_samples', 'cut_synths')
 
     @pedalboard_button(1)
     @mk2_button(1, 'blue')
@@ -204,6 +206,7 @@ class IfIHadAHummer(Video, Light, RouteBase):
         synthsFX2Delay.set('ZTrumpets', 'Gain', -9.0)
         synthsFX2Delay.set('SynthsFX2Delay', 'Mute', 0.0)
 
+        jmjKeyboard.set_sound('LowZDancestep')
 
         # Vocals
         vocalsNano.set('meuf_exclu', 'on')
@@ -289,10 +292,11 @@ class IfIHadAHummer(Video, Light, RouteBase):
             { # bar 13
                 4: lambda: vocalsKeschFX2Delay.set('active', 'on')
             },
-            { # bar 14
-                3.5: lambda: vocalsKesch.set('normo_exclu', 'on')
+            {}, # bar 14
+            {}, # bars 15
+            {   # bars 16
+                1: lambda: vocalsKesch.set('normo_exclu', 'on')
             },
-            {}, {}, # bars 15 - 16
             { # bar 17
                 1: lambda: [vocalsKeschFX2Delay.set('pre', 'off'), seq192.select('solo', 'coupletR_*')]
             }
@@ -328,13 +332,21 @@ class IfIHadAHummer(Video, Light, RouteBase):
                 4: lambda: vocalsKesch.set('normo_exclu', 'on')
             },
             { # bar 3
-                1: lambda: [vocalsKeschFX2Delay.set('active', 'off'), seq192.select('on', 'refrain_*'), samples.set('Samples1', 'Mute', 0.0), transport.start()]
+                1: lambda: [
+                    vocalsKeschFX2Delay.set('active', 'off'),
+                    seq192.select('solo', 'refrainPP_*'),
+                    seq192.select('on', 'refrain_*'),
+                    samples.set('Samples1', 'Mute', 0.0), transport.start()
+                ]
             }
             ], loop=False
         )
 
     @pedalboard_button(5)
     def stopadisto(self):
+        """
+        DISTO OFF
+        """
         bassfx.set('distohi', 'on')
 
     @pedalboard_button(2)
@@ -368,6 +380,20 @@ class IfIHadAHummer(Video, Light, RouteBase):
 
         # Samples
         samples.set('Samples2', 'Mute', 0.0)
+
+    @pedalboard_button(7)
+    def transe_loop_basssynth(self):
+        """
+        LOOP BASS SYNTH
+        """
+        looper.record(2)
+
+    @pedalboard_button(8)
+    def transe_loop_synth(self):
+        """
+        LOOP SYNTH
+        """
+        looper.record(3)
 
     @gui_button()
     def do_synth(self):

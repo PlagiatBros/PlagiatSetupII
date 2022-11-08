@@ -8,6 +8,7 @@ from .viktorhuguau.main import ViktorHuguau
 from .ramenermooncup.main import RamenerMooncup
 from .stickitout.main import StickItOut
 from .IfIHadAHummer.main import IfIHadAHummer
+from .clashdescoaches.main import ClashDesCoaches
 
 snapshat = Snapshat('Snapshat')
 mcob = Mcob('Mcob')
@@ -19,3 +20,4 @@ viktorhuguau = ViktorHuguau('ViktorHuguau')
 RamenerMooncup = RamenerMooncup('RamenerMooncup')
 StickItOut = StickItOut('StickItOut')
 IfIHadAHummer = IfIHadAHummer('IfIHadAHummer')
+ClashDesCoaches = ClashDesCoaches('ClashDesCoaches')

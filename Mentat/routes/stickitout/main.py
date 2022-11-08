@@ -28,6 +28,8 @@ class StickItOut(Video, Light, RouteBase):
         #               c     d     e  f     g     a     b
         notes.set_notes(0, 0, 1, 1, 1, 1, 0, 0, 0, 1, 1, 1)
 
+        # Mk2
+        mk2Control.set_mode('cut_samples', 'cut_synths')
 
     @pedalboard_button(1)
     @mk2_button(1, 'blue')
@@ -482,7 +484,7 @@ class StickItOut(Video, Light, RouteBase):
 
         # Vocals
         vocalsNano.set('gars_exclu', 'on')
-        vocalsKesch.set('meuf_exclu', 'on')
+        vocalsKesch.set('normo_exclu', 'on')
 
         # Keyboards
         jmjKeyboard.set_sound("ZDupieux")

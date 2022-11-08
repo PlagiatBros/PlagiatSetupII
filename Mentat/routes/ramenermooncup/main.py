@@ -1,4 +1,4 @@
-from ..base import RouteBase, mk2_button, pedalboard_button
+from ..base import *
 from .video import Video
 from .light import Light
 
@@ -477,6 +477,21 @@ class RamenerMooncup(Video, Light, RouteBase):
         # Vocals
         vocalsNano.set('gars_exclu', 'on')
         vocalsKesch.set('gars_exclu', 'on')
+
+    @gui_button()
+    def ramener_synth_on(self):
+        """
+        TRANSE SYNTH ON
+        """
+        seq192.select('on', 'ramener1*')
+
+    @gui_button()
+    def ramener_synth_off(self):
+        """
+        TRANSE SYNTH OFF
+        """
+        seq192.select('off', 'ramener1*')
+
 
     @mk2_button(6, 'yellow')
     def nanogars(self):
