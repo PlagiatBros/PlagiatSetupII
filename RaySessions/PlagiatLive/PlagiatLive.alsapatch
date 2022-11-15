@@ -14,6 +14,10 @@ JmjKeyboard : CLow          |> cLowBridge : playback
 JmjKeyboard : ZHi           |> ZynAddSubFX.ZHiSynths : ZynAddSubFX
 JmjKeyboard : CHiSf         |> cFluidBridge : playback
 JmjKeyboard : CHi           |> MonoSynthMicroTonal : In
+JmjKeyboard : Fluid_TenorSax           |> Fluid_TenorSax : Fluid_TenorSax
+JmjKeyboard : Fluid_Charrang           |> Fluid_Charrang : Fluid_Charrang
+JmjKeyboard : Fluid_OrchestraHit       |> Fluid_OrchestraHit : Fluid_OrchestraHit
+JmjKeyboard : Fluid_SteelDrum          |> Fluid_SteelDrum : Fluid_SteelDrum
 
 JmjKeyboard : ConstantSampler |> Tap192.ConstantSampler : midi_in
 #JmjKeyboard : ConstantSampler |> SPD-SX : SPD-SX Control
@@ -37,6 +41,10 @@ Mk2Keyboard : CLow          |> cLowBridge : playback
 Mk2Keyboard : ZHi           |> ZynAddSubFX.ZHiSynths : ZynAddSubFX
 Mk2Keyboard : CHiSf         |> cFluidBridge : playback
 Mk2Keyboard : CHi           |> MonoSynthMicroTonal : In
+Mk2Keyboard : Fluid_TenorSax           |> Fluid_TenorSax : Fluid_TenorSax
+Mk2Keyboard : Fluid_Charrang           |> Fluid_Charrang : Fluid_Charrang
+Mk2Keyboard : Fluid_OrchestraHit       |> Fluid_OrchestraHit : Fluid_OrchestraHit
+Mk2Keyboard : Fluid_SteelDrum          |> Fluid_SteelDrum : Fluid_SteelDrum
 
 Mk2Keyboard : ConstantSampler |> Tap192.ConstantSampler : midi_in
 #Mk2Keyboard : ConstantSampler |> SPD-SX : SPD-SX Control
@@ -59,6 +67,11 @@ seq192.MainSequencer : constantSampler |> Tap192.ConstantSampler : midi_in
 #seq192.MainSequencer : constantSampler |> SPD-SX : SPD-SX Control
 seq192.MainSequencer : constantSampler |> Hammerfall DSP : HDSP MIDI 1
 
+seq192.MainSequencer : TenorSax        |> Fluid_TenorSax : Fluid_TenorSax
+seq192.MainSequencer : Charrang        |> Fluid_Charrang : Fluid_Charrang
+seq192.MainSequencer : OrchestraHit    |> Fluid_OrchestraHit : Fluid_OrchestraHit
+seq192.MainSequencer : SteelDrum       |> Fluid_SteelDrum : Fluid_SteelDrum
+
 MonoSynthMicroTonal : Out   |> cHiBridge : playback
 
 Mentat : MidiPanic |> ZynAddSubFX.ZLowSynths : ZynAddSubFX
@@ -67,3 +80,7 @@ Mentat : MidiPanic |> ZynAddSubFX.ZHiSynths : ZynAddSubFX
 Mentat : MidiPanic |> MonoSynthMicroTonal : In
 Mentat : MidiPanic |> cFluidBridge : playback
 Mentat : MidiPanic |> Tap192.ProdSampler : midi_in
+Mentat : MidiPanic |> Fluid_TenorSax : Fluid_TenorSax
+Mentat : MidiPanic |> Fluid_Charrang : Fluid_Charrang
+Mentat : MidiPanic |> Fluid_OrchestraHit : Fluid_OrchestraHit
+Mentat : MidiPanic |> Fluid_SteelDrum : Fluid_SteelDrum
