@@ -13,6 +13,7 @@ Carla.LowCSynths/Barkline:Out L          |> Non-Mixer.BassSynths (Main):BassBark
 Carla.LowCSynths/Boom:Out L              |> Non-Mixer.BassSynths (Main):BassBoom/in-1
 Carla.LowCSynths/Trap1:Out L             |> Non-Mixer.BassSynths (Main):BassTrap1/in-1
 Carla.LowCSynths/Trap2:Out L             |> Non-Mixer.BassSynths (Main):BassTrap2/in-1
+Carla.LowCSynths/Trap3:Out L             |> Non-Mixer.BassSynths (Main):BassTrap3/in-1
 Non-Mixer.Bass (In):BassIn/out-1         |> Non-Mixer.Bass (Main):BassDry/in-1
 Non-Mixer.Bass (In):BassIn/out-1         |> Non-Mixer.Bass (Main):BassSub/in-1
 Non-Mixer.Bass (In):BassIn/out-1         |> Non-Mixer.Bass (Main):FBassDry/in-1
@@ -43,6 +44,7 @@ Non-Mixer.BassSynths (Main):BassBoom/out-1 |> Non-Mixer.BassSynths (Out):BassSyn
 Non-Mixer.BassSynths (Main):BassTest/out-1 |> Non-Mixer.BassSynths (Out):BassSynthsOut/in-1
 Non-Mixer.BassSynths (Main):BassTrap1/out-1 |> Non-Mixer.BassSynths (Out):BassSynthsOut/in-1
 Non-Mixer.BassSynths (Main):BassTrap2/out-1 |> Non-Mixer.BassSynths (Out):BassSynthsOut/in-1
+Non-Mixer.BassSynths (Main):BassTrap3/out-1 |> Non-Mixer.BassSynths (Out):BassSynthsOut/in-1
 Non-Mixer.BassSynths (Main):BassZ8bits/out-1 |> Non-Mixer.BassSynths (Out):BassSynthsOut/in-1
 Non-Mixer.BassSynths (Main):BassZBoombaard/out-1 |> Non-Mixer.BassSynths (Out):BassSynthsOut/in-1
 Non-Mixer.BassSynths (Main):BassZDancestep/out-1 |> Non-Mixer.BassSynths (Out):BassSynthsOut/in-1
@@ -1082,6 +1084,7 @@ cLowRouter:Barkline                      |> Carla.LowCSynths/Barkline:events-in
 cLowRouter:Boom                          |> Carla.LowCSynths/Boom:events-in
 cLowRouter:Trap1                         |> Carla.LowCSynths/Trap1:events-in
 cLowRouter:Trap2                         |> Carla.LowCSynths/Trap2:events-in
+cLowRouter:Trap3                         |> Carla.LowCSynths/Trap3:events-in
 klick:out                                |> Non-Mixer.MonitorsKesch (MonitorsKesch):Klick/in-1
 klick:out                                |> Non-Mixer.MonitorsNano (MonitorsNano):Klick/in-1
 sooperlooper:loop0_out_1                 |> Non-Mixer.Bass (In):BassIn/in-1
