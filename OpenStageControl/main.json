@@ -1,6 +1,6 @@
 {
   "createdWith": "Open Stage Control",
-  "version": "1.16.5",
+  "version": "1.20.0",
   "type": "session",
   "content": {
     "type": "root",
@@ -96,7 +96,7 @@
             "visible": true,
             "interaction": true,
             "comments": "",
-            "width": 770,
+            "width": 701,
             "height": 110,
             "expand": "false",
             "colorText": "auto",
@@ -234,10 +234,12 @@
                     "bypass": false,
                     "onCreate": "",
                     "onValue": "",
-                    "onTouch": ""
+                    "onTouch": "",
+                    "borderRadius": "auto"
                   }
                 ],
-                "tabs": []
+                "tabs": [],
+                "borderRadius": "auto"
               },
               {
                 "type": "panel",
@@ -318,10 +320,12 @@
                     "onValue": "",
                     "align": "center",
                     "vertical": false,
-                    "wrap": false
+                    "wrap": false,
+                    "borderRadius": "auto"
                   }
                 ],
-                "tabs": []
+                "tabs": [],
+                "borderRadius": "auto"
               },
               {
                 "type": "panel",
@@ -402,10 +406,12 @@
                     "onValue": "",
                     "vertical": false,
                     "wrap": false,
-                    "align": "center"
+                    "align": "center",
+                    "borderRadius": "auto"
                   }
                 ],
-                "tabs": []
+                "tabs": [],
+                "borderRadius": "auto"
               },
               {
                 "type": "panel",
@@ -505,21 +511,23 @@
                     "bypass": true,
                     "onCreate": "",
                     "onValue": "",
-                    "onTouch": ""
+                    "onTouch": "",
+                    "borderRadius": "auto"
                   }
                 ],
-                "tabs": []
+                "tabs": [],
+                "borderRadius": "auto"
               },
               {
                 "type": "panel",
-                "top": 20,
+                "top": "auto",
                 "left": 550,
                 "lock": false,
                 "id": "transport_btns",
                 "visible": true,
                 "interaction": true,
                 "comments": "",
-                "width": "auto",
+                "width": 142,
                 "height": "auto",
                 "expand": true,
                 "colorText": "auto",
@@ -598,7 +606,9 @@
                     "ignoreDefaults": false,
                     "bypass": false,
                     "onCreate": "",
-                    "onValue": ""
+                    "onValue": "",
+                    "borderRadius": "auto",
+                    "decoupled": false
                   },
                   {
                     "type": "button",
@@ -642,57 +652,113 @@
                     "ignoreDefaults": false,
                     "bypass": false,
                     "onCreate": "",
-                    "onValue": ""
-                  },
-                  {
-                    "type": "button",
-                    "top": 30,
-                    "left": 200,
-                    "lock": false,
-                    "id": "transport_unlock",
-                    "visible": true,
-                    "interaction": true,
-                    "comments": "",
-                    "width": "auto",
-                    "height": "auto",
-                    "expand": true,
-                    "colorText": "auto",
-                    "colorWidget": "var(--yellow)",
-                    "colorStroke": "auto",
-                    "colorFill": "auto",
-                    "alphaStroke": "auto",
-                    "alphaFillOff": "auto",
-                    "alphaFillOn": "auto",
-                    "lineWidth": "auto",
-                    "padding": "auto",
-                    "html": "",
-                    "css": "",
-                    "colorTextOn": "auto",
-                    "label": "#{@{this}?\"^unlock\":\"^lock\"}",
-                    "vertical": false,
-                    "wrap": false,
-                    "on": 1,
-                    "off": 0,
-                    "mode": "toggle",
-                    "doubleTap": false,
-                    "value": "",
-                    "default": "",
-                    "linkId": "",
-                    "address": "auto",
-                    "preArgs": "",
-                    "typeTags": "",
-                    "decimals": 2,
-                    "target": "",
-                    "ignoreDefaults": false,
-                    "bypass": false,
-                    "onCreate": "",
-                    "onValue": ""
+                    "onValue": "",
+                    "borderRadius": "auto",
+                    "decoupled": false
                   }
                 ],
-                "tabs": []
+                "tabs": [],
+                "borderRadius": "auto"
               }
             ],
-            "tabs": []
+            "tabs": [],
+            "borderRadius": "auto"
+          },
+          {
+            "type": "panel",
+            "top": 24,
+            "left": 190,
+            "lock": false,
+            "id": "lock_panel_1",
+            "visible": true,
+            "interaction": true,
+            "comments": "",
+            "width": 75,
+            "height": "auto",
+            "expand": false,
+            "colorText": "auto",
+            "colorWidget": "auto",
+            "colorStroke": "auto",
+            "colorFill": "auto",
+            "alphaStroke": "auto",
+            "alphaFillOff": "auto",
+            "alphaFillOn": "auto",
+            "lineWidth": "auto",
+            "padding": 4,
+            "html": "<div class=\"label center\">Lock 1</div>",
+            "css": "class: strip;",
+            "colorBg": "auto",
+            "layout": "horizontal",
+            "justify": "start",
+            "gridTemplate": "",
+            "contain": true,
+            "scroll": true,
+            "innerPadding": true,
+            "verticalTabs": false,
+            "variables": "@{parent.variables}",
+            "traversing": false,
+            "value": "",
+            "default": "",
+            "linkId": "",
+            "address": "auto",
+            "preArgs": "",
+            "typeTags": "",
+            "decimals": 2,
+            "target": "",
+            "ignoreDefaults": false,
+            "bypass": false,
+            "onCreate": "",
+            "onValue": "",
+            "widgets": [
+              {
+                "type": "button",
+                "top": 30,
+                "left": 200,
+                "lock": false,
+                "id": "transport_unlock",
+                "visible": true,
+                "interaction": true,
+                "comments": "",
+                "width": "auto",
+                "height": "auto",
+                "expand": true,
+                "colorText": "auto",
+                "colorWidget": "var(--yellow)",
+                "colorStroke": "auto",
+                "colorFill": "auto",
+                "alphaStroke": "auto",
+                "alphaFillOff": "auto",
+                "alphaFillOn": "auto",
+                "lineWidth": "auto",
+                "padding": "auto",
+                "html": "",
+                "css": "",
+                "colorTextOn": "auto",
+                "label": "#{@{this}?\"^unlock\":\"^lock\"}",
+                "vertical": false,
+                "wrap": false,
+                "on": 1,
+                "off": 0,
+                "mode": "toggle",
+                "doubleTap": false,
+                "value": "",
+                "default": "",
+                "linkId": "",
+                "address": "auto",
+                "preArgs": "",
+                "typeTags": "",
+                "decimals": 2,
+                "target": "",
+                "ignoreDefaults": false,
+                "bypass": false,
+                "onCreate": "",
+                "onValue": "",
+                "borderRadius": "auto",
+                "decoupled": false
+              }
+            ],
+            "tabs": [],
+            "borderRadius": "auto"
           },
           {
             "type": "panel",
@@ -787,77 +853,46 @@
                 "onValue": "",
                 "widgets": [
                   {
-                    "type": "switch",
-                    "top": "auto",
-                    "left": "auto",
+                    "type": "modal",
+                    "top": 20,
+                    "left": 60,
                     "lock": false,
-                    "id": "routes_switch",
+                    "id": "routes_modal",
                     "visible": true,
                     "interaction": true,
                     "comments": "",
-                    "width": "auto",
+                    "width": 211,
                     "height": "auto",
                     "expand": true,
+                    "popupWidth": "80%",
+                    "popupHeight": "80%",
+                    "popupLeft": "auto",
+                    "popupTop": "auto",
+                    "relative": false,
+                    "ignoreTabs": false,
                     "colorText": "auto",
                     "colorWidget": "var(--blue)",
                     "colorStroke": "auto",
                     "colorFill": "auto",
                     "alphaStroke": "auto",
-                    "alphaFillOff": "auto",
+                    "alphaFillOff": 0.05,
                     "alphaFillOn": "auto",
                     "lineWidth": "auto",
+                    "borderRadius": "auto",
                     "padding": "auto",
-                    "html": "",
-                    "css": "#{!@{routes_unlock}?'class:locked':''}",
-                    "colorTextOn": "auto",
-                    "layout": "horizontal",
-                    "gridTemplate": "",
-                    "wrap": false,
-                    "values": "#{OSC{/routes, Loading, false}.split(',')}",
-                    "mode": "tap",
-                    "value": "OSC{/active_route, '', false}",
-                    "default": "",
-                    "linkId": "",
-                    "address": "/Engine/call",
-                    "preArgs": "set_route",
-                    "typeTags": "",
-                    "decimals": 2,
-                    "target": "",
-                    "ignoreDefaults": false,
-                    "bypass": false,
-                    "onCreate": "",
-                    "onValue": ""
-                  },
-                  {
-                    "type": "button",
-                    "top": "auto",
-                    "left": "auto",
-                    "lock": false,
-                    "id": "routes_unlock",
-                    "visible": true,
-                    "interaction": true,
-                    "comments": "",
-                    "width": "auto",
-                    "height": "auto",
-                    "expand": false,
-                    "colorText": "auto",
-                    "colorWidget": "var(--yellow)",
-                    "colorStroke": "auto",
-                    "colorFill": "auto",
-                    "alphaStroke": "auto",
-                    "alphaFillOff": "auto",
-                    "alphaFillOn": "auto",
-                    "lineWidth": "auto",
-                    "padding": "auto",
-                    "html": "",
                     "css": "",
-                    "colorTextOn": "auto",
-                    "label": "#{@{this}?\"^unlock\":\"^lock\"}",
-                    "vertical": false,
-                    "wrap": false,
-                    "on": 1,
-                    "off": 0,
-                    "mode": "toggle",
+                    "colorBg": "auto",
+                    "layout": "vertical",
+                    "justify": "start",
+                    "gridTemplate": "",
+                    "contain": true,
+                    "scroll": true,
+                    "innerPadding": false,
+                    "label": "@{routes_switch}",
+                    "popupLabel": "Route selection",
+                    "popupPadding": "auto",
+                    "variables": "@{parent.variables}",
+                    "traversing": false,
                     "doubleTap": false,
                     "value": "",
                     "default": "",
@@ -870,12 +905,58 @@
                     "ignoreDefaults": false,
                     "bypass": false,
                     "onCreate": "",
-                    "onValue": ""
+                    "onValue": "",
+                    "widgets": [
+                      {
+                        "type": "switch",
+                        "top": "auto",
+                        "left": "auto",
+                        "lock": false,
+                        "id": "routes_switch",
+                        "visible": true,
+                        "interaction": true,
+                        "comments": "",
+                        "width": "auto",
+                        "height": "auto",
+                        "expand": true,
+                        "colorText": "auto",
+                        "colorWidget": "var(--blue)",
+                        "colorStroke": "auto",
+                        "colorFill": "auto",
+                        "alphaStroke": "auto",
+                        "alphaFillOff": "auto",
+                        "alphaFillOn": "auto",
+                        "lineWidth": 0,
+                        "padding": "auto",
+                        "html": "",
+                        "css": "",
+                        "colorTextOn": "auto",
+                        "layout": "vertical",
+                        "gridTemplate": "",
+                        "wrap": false,
+                        "values": "#{OSC{/routes, Loading, false}.split(',')}",
+                        "mode": "tap",
+                        "value": "OSC{/active_route, '', false}",
+                        "default": "",
+                        "linkId": "",
+                        "address": "/Engine/call",
+                        "preArgs": "set_route",
+                        "typeTags": "",
+                        "decimals": 2,
+                        "target": "",
+                        "ignoreDefaults": false,
+                        "bypass": false,
+                        "onCreate": "",
+                        "onValue": "set('routes_modal', 0)",
+                        "borderRadius": "auto"
+                      }
+                    ],
+                    "tabs": []
                   },
                   {
                     "type": "button",
-                    "top": "auto-Infinity-Infinity",
-                    "left": "auto-Infinity-Infinity",
+                    "top": "auto",
+                    "left": "auto",
                     "lock": false,
                     "id": "subroutes_unlock",
                     "visible": true,
@@ -914,16 +995,117 @@
                     "ignoreDefaults": false,
                     "bypass": false,
                     "onCreate": "",
-                    "onValue": ""
+                    "onValue": "",
+                    "borderRadius": "auto",
+                    "decoupled": false
                   }
                 ],
-                "tabs": []
+                "tabs": [],
+                "borderRadius": "auto"
               }
             ],
-            "tabs": []
+            "tabs": [],
+            "borderRadius": "auto"
+          },
+          {
+            "type": "panel",
+            "top": 46,
+            "left": 314,
+            "lock": false,
+            "id": "lock_panel_2",
+            "visible": true,
+            "interaction": true,
+            "comments": "",
+            "width": 75,
+            "height": "auto",
+            "expand": false,
+            "colorText": "auto",
+            "colorWidget": "auto",
+            "colorStroke": "auto",
+            "colorFill": "auto",
+            "alphaStroke": "auto",
+            "alphaFillOff": "auto",
+            "alphaFillOn": "auto",
+            "lineWidth": "auto",
+            "padding": 4,
+            "html": "<div class=\"label center\">Lock 2</div>",
+            "css": "class: strip;",
+            "colorBg": "auto",
+            "layout": "horizontal",
+            "justify": "start",
+            "gridTemplate": "",
+            "contain": true,
+            "scroll": true,
+            "innerPadding": true,
+            "verticalTabs": false,
+            "variables": "@{parent.variables}",
+            "traversing": false,
+            "value": "",
+            "default": "",
+            "linkId": "",
+            "address": "auto",
+            "preArgs": "",
+            "typeTags": "",
+            "decimals": 2,
+            "target": "",
+            "ignoreDefaults": false,
+            "bypass": false,
+            "onCreate": "",
+            "onValue": "",
+            "widgets": [
+              {
+                "type": "button",
+                "top": 30,
+                "left": 200,
+                "lock": false,
+                "id": "loops2_unlock",
+                "visible": true,
+                "interaction": true,
+                "comments": "",
+                "width": "auto",
+                "height": "auto",
+                "expand": true,
+                "colorText": "auto",
+                "colorWidget": "var(--yellow)",
+                "colorStroke": "auto",
+                "colorFill": "auto",
+                "alphaStroke": "auto",
+                "alphaFillOff": "auto",
+                "alphaFillOn": "auto",
+                "lineWidth": "auto",
+                "padding": "auto",
+                "html": "",
+                "css": "",
+                "colorTextOn": "auto",
+                "label": "#{@{this}?\"^unlock\":\"^lock\"}",
+                "vertical": false,
+                "wrap": false,
+                "on": 1,
+                "off": 0,
+                "mode": "toggle",
+                "doubleTap": false,
+                "value": "",
+                "default": "",
+                "linkId": "",
+                "address": "auto",
+                "preArgs": "",
+                "typeTags": "",
+                "decimals": 2,
+                "target": "",
+                "ignoreDefaults": false,
+                "bypass": false,
+                "onCreate": "",
+                "onValue": "",
+                "borderRadius": "auto",
+                "decoupled": false
+              }
+            ],
+            "tabs": [],
+            "borderRadius": "auto"
           }
         ],
-        "tabs": []
+        "tabs": [],
+        "borderRadius": "auto"
       },
       {
         "type": "panel",
@@ -1105,7 +1287,9 @@
                     "on": 1,
                     "off": 0,
                     "mode": "momentary",
-                    "doubleTap": false
+                    "doubleTap": false,
+                    "borderRadius": "auto",
+                    "decoupled": false
                   },
                   {
                     "type": "button",
@@ -1149,7 +1333,9 @@
                     "on": 1,
                     "off": 0,
                     "mode": "momentary",
-                    "doubleTap": false
+                    "doubleTap": false,
+                    "borderRadius": "auto",
+                    "decoupled": false
                   },
                   {
                     "type": "panel",
@@ -1253,7 +1439,8 @@
                         "bypass": false,
                         "onCreate": "locals.touched = false",
                         "onValue": "if (get('pitch_link') && locals.touched) {\n  set('pitch_fader_*', value, {sync:false}) \n}\nif (value === 1) setVar('pitch_semitone', 'pitch', 0)",
-                        "onTouch": "if (event.type == 'start') {\n  locals.touched = true\n}\n\nif (event.type == 'stop') {\n  set(this, 1.0)\n  locals.touched = false\n}"
+                        "onTouch": "if (event.type == 'start') {\n  locals.touched = true\n}\n\nif (event.type == 'stop') {\n  set(this, 1.0)\n  locals.touched = false\n}",
+                        "borderRadius": "auto"
                       },
                       {
                         "type": "fader",
@@ -1311,7 +1498,8 @@
                         "bypass": false,
                         "onCreate": "locals.touched = false",
                         "onValue": "if (get('pitch_link') && locals.touched) {\n  set('pitch_fader_*', value, {sync:false}) \n}\nif (value === 1) setVar('pitch_semitone', 'pitch', 0)",
-                        "onTouch": "if (event.type == 'start') {\n  locals.touched = true\n}\n\nif (event.type == 'stop') {\n  set(this, 1.0)\n  locals.touched = false\n}"
+                        "onTouch": "if (event.type == 'start') {\n  locals.touched = true\n}\n\nif (event.type == 'stop') {\n  set(this, 1.0)\n  locals.touched = false\n}",
+                        "borderRadius": "auto"
                       },
                       {
                         "type": "fader",
@@ -1369,7 +1557,8 @@
                         "bypass": false,
                         "onCreate": "locals.touched = false",
                         "onValue": "if (get('pitch_link') && locals.touched) {\n  set('pitch_fader_*', value, {sync:false}) \n}\nif (value === 1) setVar('pitch_semitone', 'pitch', 0)",
-                        "onTouch": "if (event.type == 'start') {\n  locals.touched = true\n}\n\nif (event.type == 'stop') {\n  set(this, 1.0)\n  locals.touched = false\n}"
+                        "onTouch": "if (event.type == 'start') {\n  locals.touched = true\n}\n\nif (event.type == 'stop') {\n  set(this, 1.0)\n  locals.touched = false\n}",
+                        "borderRadius": "auto"
                       },
                       {
                         "type": "fader",
@@ -1427,10 +1616,12 @@
                         "bypass": false,
                         "onCreate": "locals.touched = false",
                         "onValue": "if (get('pitch_link') && locals.touched) {\n  set('pitch_fader_*', value, {sync:false}) \n}\nif (value === 1) setVar('pitch_semitone', 'pitch', 0)",
-                        "onTouch": "if (event.type == 'start') {\n  locals.touched = true\n}\n\nif (event.type == 'stop') {\n  set(this, 1.0)\n  locals.touched = false\n}"
+                        "onTouch": "if (event.type == 'start') {\n  locals.touched = true\n}\n\nif (event.type == 'stop') {\n  set(this, 1.0)\n  locals.touched = false\n}",
+                        "borderRadius": "auto"
                       }
                     ],
-                    "tabs": []
+                    "tabs": [],
+                    "borderRadius": "auto"
                   },
                   {
                     "type": "button",
@@ -1474,10 +1665,13 @@
                     "ignoreDefaults": false,
                     "bypass": true,
                     "onCreate": "",
-                    "onValue": ""
+                    "onValue": "",
+                    "borderRadius": "auto",
+                    "decoupled": false
                   }
                 ],
-                "tabs": []
+                "tabs": [],
+                "borderRadius": "auto"
               },
               {
                 "type": "panel",
@@ -1567,7 +1761,9 @@
                     "on": 1,
                     "off": 0,
                     "mode": "momentary",
-                    "doubleTap": false
+                    "doubleTap": false,
+                    "borderRadius": "auto",
+                    "decoupled": false
                   },
                   {
                     "type": "panel",
@@ -1670,7 +1866,8 @@
                         "bypass": false,
                         "onCreate": "locals.touched = false",
                         "onValue": "if (get('filter_link') && locals.touched) {\n  set('filter_fader_*', value, {sync:false}) \n}\n",
-                        "onTouch": "locals.touched = event.type == 'start'"
+                        "onTouch": "locals.touched = event.type == 'start'",
+                        "borderRadius": "auto"
                       },
                       {
                         "type": "fader",
@@ -1727,7 +1924,8 @@
                         "bypass": false,
                         "onCreate": "locals.touched = false",
                         "onValue": "if (get('filter_link') && locals.touched) {\n  set('filter_fader_*', value, {sync:false}) \n}",
-                        "onTouch": "locals.touched = event.type == 'start'"
+                        "onTouch": "locals.touched = event.type == 'start'",
+                        "borderRadius": "auto"
                       },
                       {
                         "type": "fader",
@@ -1784,10 +1982,12 @@
                         "bypass": false,
                         "onCreate": "locals.touched = false",
                         "onValue": "if (get('filter_link') && locals.touched) {\n  set('filter_fader_*', value, {sync:false}) \n}",
-                        "onTouch": "locals.touched = event.type == 'start'"
+                        "onTouch": "locals.touched = event.type == 'start'",
+                        "borderRadius": "auto"
                       }
                     ],
-                    "tabs": []
+                    "tabs": [],
+                    "borderRadius": "auto"
                   },
                   {
                     "type": "button",
@@ -1831,13 +2031,17 @@
                     "ignoreDefaults": false,
                     "bypass": true,
                     "onCreate": "",
-                    "onValue": ""
+                    "onValue": "",
+                    "borderRadius": "auto",
+                    "decoupled": false
                   }
                 ],
-                "tabs": []
+                "tabs": [],
+                "borderRadius": "auto"
               }
             ],
-            "tabs": []
+            "tabs": [],
+            "borderRadius": "auto"
           },
           {
             "type": "panel",
@@ -2156,7 +2360,9 @@
                                     "comments": "",
                                     "onValue": "",
                                     "lock": false,
-                                    "onCreate": ""
+                                    "onCreate": "",
+                                    "borderRadius": "auto",
+                                    "decoupled": false
                                   },
                                   {
                                     "type": "button",
@@ -2200,7 +2406,9 @@
                                     "comments": "",
                                     "onValue": "",
                                     "lock": false,
-                                    "onCreate": ""
+                                    "onCreate": "",
+                                    "borderRadius": "auto",
+                                    "decoupled": false
                                   },
                                   {
                                     "type": "button",
@@ -2247,7 +2455,9 @@
                                     "comments": "",
                                     "onValue": "",
                                     "lock": false,
-                                    "onCreate": ""
+                                    "onCreate": "",
+                                    "borderRadius": "auto",
+                                    "decoupled": false
                                   },
                                   {
                                     "type": "panel",
@@ -2340,7 +2550,9 @@
                                         "mode": "momentary",
                                         "vertical": false,
                                         "wrap": false,
-                                        "colorTextOn": "auto"
+                                        "colorTextOn": "auto",
+                                        "borderRadius": "auto",
+                                        "decoupled": false
                                       },
                                       {
                                         "type": "button",
@@ -2387,10 +2599,13 @@
                                         "mode": "momentary",
                                         "vertical": false,
                                         "wrap": false,
-                                        "colorTextOn": "auto"
+                                        "colorTextOn": "auto",
+                                        "borderRadius": "auto",
+                                        "decoupled": false
                                       }
                                     ],
-                                    "tabs": []
+                                    "tabs": [],
+                                    "borderRadius": "auto"
                                   },
                                   {
                                     "type": "fader",
@@ -2447,7 +2662,8 @@
                                     "horizontal": true,
                                     "gradient": [],
                                     "snap": false,
-                                    "onTouch": ""
+                                    "onTouch": "",
+                                    "borderRadius": "auto"
                                   },
                                   {
                                     "type": "script",
@@ -2472,7 +2688,8 @@
                                     "keyType": "keydown"
                                   }
                                 ],
-                                "tabs": []
+                                "tabs": [],
+                                "borderRadius": "auto"
                               },
                               {
                                 "type": "clone",
@@ -2544,7 +2761,8 @@
                                 "variables": "@{parent.variables}"
                               }
                             ],
-                            "tabs": []
+                            "tabs": [],
+                            "borderRadius": "auto"
                           },
                           {
                             "type": "panel",
@@ -2568,7 +2786,7 @@
                             "lineWidth": "auto",
                             "padding": 1,
                             "html": "",
-                            "css": "#{!@{routes_unlock}?'class:locked':''}\nmargin-left: 1rem",
+                            "css": "#{!@{loops2_unlock}?'class:locked':''}\nmargin-left: 1rem",
                             "colorBg": "auto",
                             "layout": "vertical",
                             "justify": "start",
@@ -2685,13 +2903,16 @@
                                 "variables": "@{parent.variables}"
                               }
                             ],
-                            "tabs": []
+                            "tabs": [],
+                            "borderRadius": "auto"
                           }
                         ],
-                        "tabs": []
+                        "tabs": [],
+                        "borderRadius": "auto"
                       }
                     ],
-                    "tabs": []
+                    "tabs": [],
+                    "borderRadius": "auto"
                   },
                   {
                     "type": "tab",
@@ -2745,11 +2966,13 @@
                         "css": "",
                         "file": "non-mixers.json",
                         "props": {},
+                        "fallback": "",
                         "address": "auto",
                         "variables": "@{parent.variables}"
                       }
                     ],
-                    "tabs": []
+                    "tabs": [],
+                    "borderRadius": "auto"
                   },
                   {
                     "type": "tab",
@@ -2803,13 +3026,16 @@
                         "css": "",
                         "file": "ray-session.json",
                         "props": {},
+                        "fallback": "",
                         "address": "auto",
                         "variables": "@{parent.variables}"
                       }
                     ],
-                    "tabs": []
+                    "tabs": [],
+                    "borderRadius": "auto"
                   }
-                ]
+                ],
+                "borderRadius": "auto"
               },
               {
                 "type": "panel",
@@ -2899,7 +3125,9 @@
                     "ignoreDefaults": false,
                     "bypass": false,
                     "onCreate": "",
-                    "onValue": ""
+                    "onValue": "",
+                    "borderRadius": "auto",
+                    "decoupled": false
                   },
                   {
                     "type": "button",
@@ -2943,7 +3171,9 @@
                     "ignoreDefaults": false,
                     "bypass": false,
                     "onCreate": "",
-                    "onValue": ""
+                    "onValue": "",
+                    "borderRadius": "auto",
+                    "decoupled": false
                   },
                   {
                     "type": "button",
@@ -2987,7 +3217,9 @@
                     "ignoreDefaults": false,
                     "bypass": false,
                     "onCreate": "",
-                    "onValue": ""
+                    "onValue": "",
+                    "borderRadius": "auto",
+                    "decoupled": false
                   },
                   {
                     "type": "button",
@@ -3031,7 +3263,9 @@
                     "ignoreDefaults": false,
                     "bypass": false,
                     "onCreate": "",
-                    "onValue": ""
+                    "onValue": "",
+                    "borderRadius": "auto",
+                    "decoupled": false
                   },
                   {
                     "type": "button",
@@ -3075,13 +3309,17 @@
                     "ignoreDefaults": false,
                     "bypass": true,
                     "onCreate": "",
-                    "onValue": "send('/VocalsKeschFX2Delay', 'active', value)"
+                    "onValue": "send('/VocalsKeschFX2Delay', 'active', value)",
+                    "borderRadius": "auto",
+                    "decoupled": false
                   }
                 ],
-                "tabs": []
+                "tabs": [],
+                "borderRadius": "auto"
               }
             ],
-            "tabs": []
+            "tabs": [],
+            "borderRadius": "auto"
           },
           {
             "type": "panel",
@@ -3223,10 +3461,12 @@
                     "onCreate": "",
                     "onValue": "",
                     "widgets": [],
-                    "tabs": []
+                    "tabs": [],
+                    "borderRadius": "auto"
                   }
                 ],
-                "tabs": []
+                "tabs": [],
+                "borderRadius": "auto"
               },
               {
                 "type": "panel",
@@ -3334,7 +3574,8 @@
                     "bypass": false,
                     "onCreate": "",
                     "onValue": "",
-                    "onTouch": ""
+                    "onTouch": "",
+                    "borderRadius": "auto"
                   },
                   {
                     "type": "panel",
@@ -3425,16 +3666,20 @@
                         "ignoreDefaults": false,
                         "bypass": false,
                         "onCreate": "",
-                        "onValue": ""
+                        "onValue": "",
+                        "borderRadius": "auto"
                       }
                     ],
-                    "tabs": []
+                    "tabs": [],
+                    "borderRadius": "auto"
                   }
                 ],
-                "tabs": []
+                "tabs": [],
+                "borderRadius": "auto"
               }
             ],
-            "tabs": []
+            "tabs": [],
+            "borderRadius": "auto"
           },
           {
             "type": "panel",
@@ -3530,13 +3775,16 @@
                 "onCreate": "",
                 "onValue": "",
                 "widgets": [],
-                "tabs": []
+                "tabs": [],
+                "borderRadius": "auto"
               }
             ],
-            "tabs": []
+            "tabs": [],
+            "borderRadius": "auto"
           }
         ],
-        "tabs": []
+        "tabs": [],
+        "borderRadius": "auto"
       },
       {
         "type": "panel",
@@ -3699,7 +3947,7 @@
                     "colorStroke": "auto",
                     "colorFill": "auto",
                     "alphaStroke": "auto",
-                    "alphaFillOff": "auto",
+                    "alphaFillOff": 0.05,
                     "alphaFillOn": "auto",
                     "lineWidth": "auto",
                     "padding": "auto",
@@ -3806,7 +4054,8 @@
                         "values": "#{VAR{values}||['Loading']}",
                         "colorTextOn": "auto",
                         "wrap": "soft",
-                        "mode": "tap"
+                        "mode": "tap",
+                        "borderRadius": "auto"
                       },
                       {
                         "type": "switch",
@@ -3848,13 +4097,16 @@
                         "onValue": "if (value) {\n  send('/JmjKeyboard/call', 'set_sound', value)\n  set('parent', 0)\n}\n",
                         "colorTextOn": "auto",
                         "wrap": "soft",
-                        "mode": "tap"
+                        "mode": "tap",
+                        "borderRadius": "auto"
                       }
                     ],
-                    "tabs": []
+                    "tabs": [],
+                    "borderRadius": "auto"
                   }
                 ],
-                "tabs": []
+                "tabs": [],
+                "borderRadius": "auto"
               },
               {
                 "type": "panel",
@@ -3948,10 +4200,12 @@
                     "ignoreDefaults": false,
                     "bypass": false,
                     "onCreate": "",
-                    "onValue": ""
+                    "onValue": "",
+                    "borderRadius": "auto"
                   }
                 ],
-                "tabs": []
+                "tabs": [],
+                "borderRadius": "auto"
               },
               {
                 "type": "panel",
@@ -4054,10 +4308,12 @@
                     "sensitivity": 1,
                     "steps": "",
                     "origin": 1,
-                    "onTouch": ""
+                    "onTouch": "",
+                    "borderRadius": "auto"
                   }
                 ],
-                "tabs": []
+                "tabs": [],
+                "borderRadius": "auto"
               },
               {
                 "type": "panel",
@@ -4147,7 +4403,9 @@
                     "ignoreDefaults": false,
                     "bypass": false,
                     "onCreate": "",
-                    "onValue": "set('octave', get('octave') + 1)"
+                    "onValue": "set('octave', get('octave') + 1)",
+                    "borderRadius": "auto",
+                    "decoupled": false
                   },
                   {
                     "type": "button",
@@ -4191,7 +4449,9 @@
                     "ignoreDefaults": false,
                     "bypass": false,
                     "onCreate": "",
-                    "onValue": "set('octave', 0)"
+                    "onValue": "set('octave', 0)",
+                    "borderRadius": "auto",
+                    "decoupled": false
                   },
                   {
                     "type": "button",
@@ -4235,7 +4495,9 @@
                     "ignoreDefaults": false,
                     "bypass": false,
                     "onCreate": "",
-                    "onValue": "set('octave', get('octave') - 1)"
+                    "onValue": "set('octave', get('octave') - 1)",
+                    "borderRadius": "auto",
+                    "decoupled": false
                   },
                   {
                     "type": "variable",
@@ -4256,7 +4518,8 @@
                     "onValue": ""
                   }
                 ],
-                "tabs": []
+                "tabs": [],
+                "borderRadius": "auto"
               },
               {
                 "type": "panel",
@@ -4346,7 +4609,9 @@
                     "ignoreDefaults": false,
                     "bypass": false,
                     "onCreate": "",
-                    "onValue": "set('keyboard_keys/*', 0)"
+                    "onValue": "set('keyboard_keys/*', 0)",
+                    "borderRadius": "auto",
+                    "decoupled": false
                   },
                   {
                     "type": "button",
@@ -4390,13 +4655,17 @@
                     "ignoreDefaults": false,
                     "bypass": true,
                     "onCreate": "",
-                    "onValue": "send('/JmjKeyboard/call', 'set_boost', value)"
+                    "onValue": "send('/JmjKeyboard/call', 'set_boost', value)",
+                    "borderRadius": "auto",
+                    "decoupled": false
                   }
                 ],
-                "tabs": []
+                "tabs": [],
+                "borderRadius": "auto"
               }
             ],
-            "tabs": []
+            "tabs": [],
+            "borderRadius": "auto"
           },
           {
             "type": "panel",
@@ -4574,10 +4843,12 @@
                         "preArgs": "",
                         "target": "",
                         "onCreate": "",
-                        "onValue": ""
+                        "onValue": "",
+                        "borderRadius": "auto"
                       }
                     ],
-                    "tabs": []
+                    "tabs": [],
+                    "borderRadius": "auto"
                   },
                   {
                     "type": "button",
@@ -4621,10 +4892,13 @@
                     "wrap": false,
                     "on": "on",
                     "off": "off",
-                    "mode": "toggle"
+                    "mode": "toggle",
+                    "borderRadius": "auto",
+                    "decoupled": false
                   }
                 ],
-                "tabs": []
+                "tabs": [],
+                "borderRadius": "auto"
               },
               {
                 "type": "panel",
@@ -4714,7 +4988,9 @@
                     "ignoreDefaults": false,
                     "bypass": false,
                     "onCreate": "",
-                    "onValue": ""
+                    "onValue": "",
+                    "borderRadius": "auto",
+                    "decoupled": false
                   },
                   {
                     "type": "button",
@@ -4758,18 +5034,24 @@
                     "ignoreDefaults": false,
                     "bypass": false,
                     "onCreate": "",
-                    "onValue": "set('keyboard_keys/*', 0, {send: false})"
+                    "onValue": "set('keyboard_keys/*', 0, {send: false})",
+                    "borderRadius": "auto",
+                    "decoupled": false
                   }
                 ],
-                "tabs": []
+                "tabs": [],
+                "borderRadius": "auto"
               }
             ],
-            "tabs": []
+            "tabs": [],
+            "borderRadius": "auto"
           }
         ],
-        "tabs": []
+        "tabs": [],
+        "borderRadius": "auto"
       }
     ],
-    "tabs": []
+    "tabs": [],
+    "borderRadius": "auto"
   }
 }
