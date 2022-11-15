@@ -28,7 +28,6 @@ class SW(Video, Light, RouteBase):
         microtonality.set_tuning(0.35, 0, 0, 0, 0, 0.35, 0, 0, 0.35, 0, 0, 0)
 
         # Autotuner Notes
-        autotunes = ['NanoMeuf', 'NanoNormo', 'NanoGars', 'KeschMeuf', 'KeschNormo', 'KeschGars']
         notes.set_notes(1, 0, 1, 1, 1, 1, 0, 0, 1, 1, 0, 1)
 
         # Mk2

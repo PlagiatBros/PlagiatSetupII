@@ -53,6 +53,7 @@ def create_keyboard(name):
         Output('CLow', 3),
         Output('CLow', 4),
         ]
+    lowCTrap3 = generic_in >> Output('CLow', 5)
 
     # Zyn HiSynths
     zDupieux = generic_in >> Output('ZHi', 1)
@@ -110,6 +111,9 @@ def create_keyboard(name):
                 ),
                 Scene('LowCTrap2',
                     lowCTrap2
+                ),
+                Scene('LowCTrap3',
+                    lowCTrap3
                 ),
                 Scene('LowCBarkline',
                     lowCBarkline
