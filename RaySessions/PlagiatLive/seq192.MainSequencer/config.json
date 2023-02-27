@@ -2,87 +2,98 @@
     "buses": {
         "0": {
             "name": "zynBass",
+            "color": "#720ae8",
             "channels": {
-                    "0": "DubStep",
-                    "1": "DanceStep",
-                    "2": "RagStep",
-                    "3": "Dupieux",
-                    "4": "Phrampton",
-                    "5": "Sine",
-                    "7": "8bit",
+                    "0": {"name": "DubStep"},
+                    "1": {"name": "DanceStep"},
+                    "2": {"name": "RagStep"},
+                    "3": {"name": "Dupieux"},
+                    "4": {"name": "Phrampton"},
+                    "5": {"name": "Sine"},
+                    "7": {"name": "8bit"}
             }
         },
         "1": {
             "name": "carlaBass",
+            "color": "#720ae8",
             "channels": {
-                    "0": "Trap1",
-                    "1": "Trap2",
-                    "2": "Barkline",
-                    "3": "Boom",
-                    "4": "Trap3",
+                    "0": {"name": "Trap1"},
+                    "1": {"name": "Trap2"},
+                    "2": {"name": "Barkline"},
+                    "3": {"name": "Boom"},
+                    "4": {"name": "Trap3"}
             }
         },
         "2": {
             "name": "zynHi",
+            "color": "#0ec7a9",
             "channels": {
-                    "0": "Dupieux",
-                    "1": "NotSoRhodes",
-                    "2": "Organ",
-                    "4": "Cosma",
-                    "5": "Bombarde",
-                    "6": "Trumpts",
-                    "7": "Stambul",
-                    "8": "Dre",
-                    "10": "DiploLike",
-                    "11": "JestoProunk",
-                    "12": "8bits",
+                    "0": {"name": "Dupieux"},
+                    "1": {"name": "NotSoRhodes"},
+                    "2": {"name": "Organ"},
+                    "4": {"name": "Cosma"},
+                    "5": {"name": "Bombarde"},
+                    "6": {"name": "Trumpts"},
+                    "7": {"name": "Stambul"},
+                    "8": {"name": "Dre"},
+                    "10": {"name": "DiploLike"},
+                    "11": {"name": "JestoProunk"},
+                    "12": {"name": "8bits"}
             }
         },
         "3": {
             "name": "carlaHi",
+            "color": "#0ec7a9",
             "channels": {
-                    "0": "Rhodes",
-                    "1": "Trap",
-                    "2": "EasyClassical",
-                    "3": "DubstepHorn",
-                    "4": "TrapFifth",
+                    "0": {"name": "Rhodes"},
+                    "1": {"name": "Trap"},
+                    "2": {"name": "EasyClassical"},
+                    "3": {"name": "DubstepHorn"},
+                    "4": {"name": "TrapFifth"}
             }
         },
         "4": {
-            "name": "carlaFluid"
+            "name": "Rhodes",
+            "color": "#c77217",
+            "channels": {
+                    "0": {"name": "Rhodes"}
+            }
+        },
+        "5": {
+            "name": "TenorSax",
+            "color": "#c77217",
+            "channels": {
+                    "0": {"name": "TenorSax"}
+            }
+        },
+        "6": {
+            "name": "Charrang",
+            "color": "#c77217",
+            "channels": {
+                    "0": {"name": "Charrang"}
+            }
+        },
+        "7": {
+            "name": "OrchestraHit",
+            "color": "#c77217",
+            "channels": {
+                    "0": {"name": "OrchestraHit"}
+            }
+        },
+        "8": {
+            "name": "SteelDrum",
+            "color": "#c77217",
+            "channels": {
+                    "0": {"name": "SteelDrum"}
+            }
         },
         "9": {
-            "name": "prodSampler"
+            "name": "prodSampler",
+            "color": "#c71775"
         },
         "10": {
-            "name": "constantSampler"
-        },
-        "11": {
-            "name": "TenorSax",
-            "channels": {
-                    "0": "TenorSax"
-            }
-        },
-        "12": {
-            "name": "Charrang",
-            "channels": {
-                    "0": "Charrang"
-            }
-        },
-        },
-        "13": {
-            "name": "OrchestraHit",
-            "channels": {
-                    "0": "OrchestraHit"
-            }
-        },
-        },
-        "14": {
-            "name": "SteelDrum",
-            "channels": {
-                    "0": "SteelDrum"
-            }
-        },
+            "name": "constantSampler",
+            "color": "#c71775"
         }
     }
 }

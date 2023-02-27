@@ -1,6 +1,6 @@
 {
   "createdWith": "Open Stage Control",
-  "version": "1.20.0",
+  "version": "1.16.5",
   "type": "session",
   "content": {
     "type": "root",
@@ -234,12 +234,10 @@
                     "bypass": false,
                     "onCreate": "",
                     "onValue": "",
-                    "onTouch": "",
-                    "borderRadius": "auto"
+                    "onTouch": ""
                   }
                 ],
-                "tabs": [],
-                "borderRadius": "auto"
+                "tabs": []
               },
               {
                 "type": "panel",
@@ -320,12 +318,10 @@
                     "onValue": "",
                     "align": "center",
                     "vertical": false,
-                    "wrap": false,
-                    "borderRadius": "auto"
+                    "wrap": false
                   }
                 ],
-                "tabs": [],
-                "borderRadius": "auto"
+                "tabs": []
               },
               {
                 "type": "panel",
@@ -406,12 +402,10 @@
                     "onValue": "",
                     "vertical": false,
                     "wrap": false,
-                    "align": "center",
-                    "borderRadius": "auto"
+                    "align": "center"
                   }
                 ],
-                "tabs": [],
-                "borderRadius": "auto"
+                "tabs": []
               },
               {
                 "type": "panel",
@@ -511,12 +505,10 @@
                     "bypass": true,
                     "onCreate": "",
                     "onValue": "",
-                    "onTouch": "",
-                    "borderRadius": "auto"
+                    "onTouch": ""
                   }
                 ],
-                "tabs": [],
-                "borderRadius": "auto"
+                "tabs": []
               },
               {
                 "type": "panel",
@@ -606,9 +598,7 @@
                     "ignoreDefaults": false,
                     "bypass": false,
                     "onCreate": "",
-                    "onValue": "",
-                    "borderRadius": "auto",
-                    "decoupled": false
+                    "onValue": ""
                   },
                   {
                     "type": "button",
@@ -652,17 +642,13 @@
                     "ignoreDefaults": false,
                     "bypass": false,
                     "onCreate": "",
-                    "onValue": "",
-                    "borderRadius": "auto",
-                    "decoupled": false
+                    "onValue": ""
                   }
                 ],
-                "tabs": [],
-                "borderRadius": "auto"
+                "tabs": []
               }
             ],
-            "tabs": [],
-            "borderRadius": "auto"
+            "tabs": []
           },
           {
             "type": "panel",
@@ -752,13 +738,10 @@
                 "ignoreDefaults": false,
                 "bypass": false,
                 "onCreate": "",
-                "onValue": "",
-                "borderRadius": "auto",
-                "decoupled": false
+                "onValue": ""
               }
             ],
-            "tabs": [],
-            "borderRadius": "auto"
+            "tabs": []
           },
           {
             "type": "panel",
@@ -878,7 +861,6 @@
                     "alphaFillOff": 0.05,
                     "alphaFillOn": "auto",
                     "lineWidth": "auto",
-                    "borderRadius": "auto",
                     "padding": "auto",
                     "css": "",
                     "colorBg": "auto",
@@ -939,7 +921,7 @@
                         "value": "OSC{/active_route, '', false}",
                         "default": "",
                         "linkId": "",
-                        "address": "/Engine/call",
+                        "address": "/Mentat/call",
                         "preArgs": "set_route",
                         "typeTags": "",
                         "decimals": 2,
@@ -947,8 +929,7 @@
                         "ignoreDefaults": false,
                         "bypass": false,
                         "onCreate": "",
-                        "onValue": "set('routes_modal', 0)",
-                        "borderRadius": "auto"
+                        "onValue": "set('routes_modal', 0)"
                       }
                     ],
                     "tabs": []
@@ -995,17 +976,13 @@
                     "ignoreDefaults": false,
                     "bypass": false,
                     "onCreate": "",
-                    "onValue": "",
-                    "borderRadius": "auto",
-                    "decoupled": false
+                    "onValue": ""
                   }
                 ],
-                "tabs": [],
-                "borderRadius": "auto"
+                "tabs": []
               }
             ],
-            "tabs": [],
-            "borderRadius": "auto"
+            "tabs": []
           },
           {
             "type": "panel",
@@ -1095,17 +1072,13 @@
                 "ignoreDefaults": false,
                 "bypass": false,
                 "onCreate": "",
-                "onValue": "",
-                "borderRadius": "auto",
-                "decoupled": false
+                "onValue": ""
               }
             ],
-            "tabs": [],
-            "borderRadius": "auto"
+            "tabs": []
           }
         ],
-        "tabs": [],
-        "borderRadius": "auto"
+        "tabs": []
       },
       {
         "type": "panel",
@@ -1287,9 +1260,7 @@
                     "on": 1,
                     "off": 0,
                     "mode": "momentary",
-                    "doubleTap": false,
-                    "borderRadius": "auto",
-                    "decoupled": false
+                    "doubleTap": false
                   },
                   {
                     "type": "button",
@@ -1333,9 +1304,7 @@
                     "on": 1,
                     "off": 0,
                     "mode": "momentary",
-                    "doubleTap": false,
-                    "borderRadius": "auto",
-                    "decoupled": false
+                    "doubleTap": false
                   },
                   {
                     "type": "panel",
@@ -1430,7 +1399,7 @@
                         "value": "",
                         "default": "",
                         "linkId": "",
-                        "address": "/Root",
+                        "address": "/Mentat",
                         "preArgs": "pitch_vocals",
                         "typeTags": "",
                         "decimals": 2,
@@ -1439,8 +1408,7 @@
                         "bypass": false,
                         "onCreate": "locals.touched = false",
                         "onValue": "if (get('pitch_link') && locals.touched) {\n  set('pitch_fader_*', value, {sync:false}) \n}\nif (value === 1) setVar('pitch_semitone', 'pitch', 0)",
-                        "onTouch": "if (event.type == 'start') {\n  locals.touched = true\n}\n\nif (event.type == 'stop') {\n  set(this, 1.0)\n  locals.touched = false\n}",
-                        "borderRadius": "auto"
+                        "onTouch": "if (event.type == 'start') {\n  locals.touched = true\n}\n\nif (event.type == 'stop') {\n  set(this, 1.0)\n  locals.touched = false\n}"
                       },
                       {
                         "type": "fader",
@@ -1489,7 +1457,7 @@
                         "value": "",
                         "default": "",
                         "linkId": "",
-                        "address": "/Root",
+                        "address": "/Mentat",
                         "preArgs": "pitch_bass",
                         "typeTags": "",
                         "decimals": 2,
@@ -1498,8 +1466,7 @@
                         "bypass": false,
                         "onCreate": "locals.touched = false",
                         "onValue": "if (get('pitch_link') && locals.touched) {\n  set('pitch_fader_*', value, {sync:false}) \n}\nif (value === 1) setVar('pitch_semitone', 'pitch', 0)",
-                        "onTouch": "if (event.type == 'start') {\n  locals.touched = true\n}\n\nif (event.type == 'stop') {\n  set(this, 1.0)\n  locals.touched = false\n}",
-                        "borderRadius": "auto"
+                        "onTouch": "if (event.type == 'start') {\n  locals.touched = true\n}\n\nif (event.type == 'stop') {\n  set(this, 1.0)\n  locals.touched = false\n}"
                       },
                       {
                         "type": "fader",
@@ -1548,7 +1515,7 @@
                         "value": "",
                         "default": "",
                         "linkId": "",
-                        "address": "/Root",
+                        "address": "/Mentat",
                         "preArgs": "pitch_synths",
                         "typeTags": "",
                         "decimals": 2,
@@ -1557,8 +1524,7 @@
                         "bypass": false,
                         "onCreate": "locals.touched = false",
                         "onValue": "if (get('pitch_link') && locals.touched) {\n  set('pitch_fader_*', value, {sync:false}) \n}\nif (value === 1) setVar('pitch_semitone', 'pitch', 0)",
-                        "onTouch": "if (event.type == 'start') {\n  locals.touched = true\n}\n\nif (event.type == 'stop') {\n  set(this, 1.0)\n  locals.touched = false\n}",
-                        "borderRadius": "auto"
+                        "onTouch": "if (event.type == 'start') {\n  locals.touched = true\n}\n\nif (event.type == 'stop') {\n  set(this, 1.0)\n  locals.touched = false\n}"
                       },
                       {
                         "type": "fader",
@@ -1607,7 +1573,7 @@
                         "value": "",
                         "default": "",
                         "linkId": "",
-                        "address": "/Root",
+                        "address": "/Mentat",
                         "preArgs": "pitch_samples",
                         "typeTags": "",
                         "decimals": 2,
@@ -1616,12 +1582,10 @@
                         "bypass": false,
                         "onCreate": "locals.touched = false",
                         "onValue": "if (get('pitch_link') && locals.touched) {\n  set('pitch_fader_*', value, {sync:false}) \n}\nif (value === 1) setVar('pitch_semitone', 'pitch', 0)",
-                        "onTouch": "if (event.type == 'start') {\n  locals.touched = true\n}\n\nif (event.type == 'stop') {\n  set(this, 1.0)\n  locals.touched = false\n}",
-                        "borderRadius": "auto"
+                        "onTouch": "if (event.type == 'start') {\n  locals.touched = true\n}\n\nif (event.type == 'stop') {\n  set(this, 1.0)\n  locals.touched = false\n}"
                       }
                     ],
-                    "tabs": [],
-                    "borderRadius": "auto"
+                    "tabs": []
                   },
                   {
                     "type": "button",
@@ -1665,13 +1629,10 @@
                     "ignoreDefaults": false,
                     "bypass": true,
                     "onCreate": "",
-                    "onValue": "",
-                    "borderRadius": "auto",
-                    "decoupled": false
+                    "onValue": ""
                   }
                 ],
-                "tabs": [],
-                "borderRadius": "auto"
+                "tabs": []
               },
               {
                 "type": "panel",
@@ -1761,9 +1722,7 @@
                     "on": 1,
                     "off": 0,
                     "mode": "momentary",
-                    "doubleTap": false,
-                    "borderRadius": "auto",
-                    "decoupled": false
+                    "doubleTap": false
                   },
                   {
                     "type": "panel",
@@ -1857,7 +1816,7 @@
                         "value": "",
                         "default": "",
                         "linkId": "",
-                        "address": "/Root",
+                        "address": "/Mentat",
                         "preArgs": "filter_bass",
                         "typeTags": "",
                         "decimals": 2,
@@ -1866,8 +1825,7 @@
                         "bypass": false,
                         "onCreate": "locals.touched = false",
                         "onValue": "if (get('filter_link') && locals.touched) {\n  set('filter_fader_*', value, {sync:false}) \n}\n",
-                        "onTouch": "locals.touched = event.type == 'start'",
-                        "borderRadius": "auto"
+                        "onTouch": "locals.touched = event.type == 'start'"
                       },
                       {
                         "type": "fader",
@@ -1915,7 +1873,7 @@
                         "value": "",
                         "default": "",
                         "linkId": "",
-                        "address": "/Root",
+                        "address": "/Mentat",
                         "preArgs": "filter_synths",
                         "typeTags": "",
                         "decimals": 2,
@@ -1924,8 +1882,7 @@
                         "bypass": false,
                         "onCreate": "locals.touched = false",
                         "onValue": "if (get('filter_link') && locals.touched) {\n  set('filter_fader_*', value, {sync:false}) \n}",
-                        "onTouch": "locals.touched = event.type == 'start'",
-                        "borderRadius": "auto"
+                        "onTouch": "locals.touched = event.type == 'start'"
                       },
                       {
                         "type": "fader",
@@ -1973,7 +1930,7 @@
                         "value": "",
                         "default": "",
                         "linkId": "",
-                        "address": "/Root",
+                        "address": "/Mentat",
                         "preArgs": "filter_samples",
                         "typeTags": "",
                         "decimals": 2,
@@ -1982,12 +1939,10 @@
                         "bypass": false,
                         "onCreate": "locals.touched = false",
                         "onValue": "if (get('filter_link') && locals.touched) {\n  set('filter_fader_*', value, {sync:false}) \n}",
-                        "onTouch": "locals.touched = event.type == 'start'",
-                        "borderRadius": "auto"
+                        "onTouch": "locals.touched = event.type == 'start'"
                       }
                     ],
-                    "tabs": [],
-                    "borderRadius": "auto"
+                    "tabs": []
                   },
                   {
                     "type": "button",
@@ -2031,17 +1986,13 @@
                     "ignoreDefaults": false,
                     "bypass": true,
                     "onCreate": "",
-                    "onValue": "",
-                    "borderRadius": "auto",
-                    "decoupled": false
+                    "onValue": ""
                   }
                 ],
-                "tabs": [],
-                "borderRadius": "auto"
+                "tabs": []
               }
             ],
-            "tabs": [],
-            "borderRadius": "auto"
+            "tabs": []
           },
           {
             "type": "panel",
@@ -2360,9 +2311,7 @@
                                     "comments": "",
                                     "onValue": "",
                                     "lock": false,
-                                    "onCreate": "",
-                                    "borderRadius": "auto",
-                                    "decoupled": false
+                                    "onCreate": ""
                                   },
                                   {
                                     "type": "button",
@@ -2406,9 +2355,7 @@
                                     "comments": "",
                                     "onValue": "",
                                     "lock": false,
-                                    "onCreate": "",
-                                    "borderRadius": "auto",
-                                    "decoupled": false
+                                    "onCreate": ""
                                   },
                                   {
                                     "type": "button",
@@ -2455,9 +2402,7 @@
                                     "comments": "",
                                     "onValue": "",
                                     "lock": false,
-                                    "onCreate": "",
-                                    "borderRadius": "auto",
-                                    "decoupled": false
+                                    "onCreate": ""
                                   },
                                   {
                                     "type": "panel",
@@ -2550,9 +2495,7 @@
                                         "mode": "momentary",
                                         "vertical": false,
                                         "wrap": false,
-                                        "colorTextOn": "auto",
-                                        "borderRadius": "auto",
-                                        "decoupled": false
+                                        "colorTextOn": "auto"
                                       },
                                       {
                                         "type": "button",
@@ -2599,13 +2542,10 @@
                                         "mode": "momentary",
                                         "vertical": false,
                                         "wrap": false,
-                                        "colorTextOn": "auto",
-                                        "borderRadius": "auto",
-                                        "decoupled": false
+                                        "colorTextOn": "auto"
                                       }
                                     ],
-                                    "tabs": [],
-                                    "borderRadius": "auto"
+                                    "tabs": []
                                   },
                                   {
                                     "type": "fader",
@@ -2662,8 +2602,7 @@
                                     "horizontal": true,
                                     "gradient": [],
                                     "snap": false,
-                                    "onTouch": "",
-                                    "borderRadius": "auto"
+                                    "onTouch": ""
                                   },
                                   {
                                     "type": "script",
@@ -2688,8 +2627,7 @@
                                     "keyType": "keydown"
                                   }
                                 ],
-                                "tabs": [],
-                                "borderRadius": "auto"
+                                "tabs": []
                               },
                               {
                                 "type": "clone",
@@ -2761,8 +2699,7 @@
                                 "variables": "@{parent.variables}"
                               }
                             ],
-                            "tabs": [],
-                            "borderRadius": "auto"
+                            "tabs": []
                           },
                           {
                             "type": "panel",
@@ -2903,16 +2840,13 @@
                                 "variables": "@{parent.variables}"
                               }
                             ],
-                            "tabs": [],
-                            "borderRadius": "auto"
+                            "tabs": []
                           }
                         ],
-                        "tabs": [],
-                        "borderRadius": "auto"
+                        "tabs": []
                       }
                     ],
-                    "tabs": [],
-                    "borderRadius": "auto"
+                    "tabs": []
                   },
                   {
                     "type": "tab",
@@ -2966,13 +2900,11 @@
                         "css": "",
                         "file": "non-mixers.json",
                         "props": {},
-                        "fallback": "",
                         "address": "auto",
                         "variables": "@{parent.variables}"
                       }
                     ],
-                    "tabs": [],
-                    "borderRadius": "auto"
+                    "tabs": []
                   },
                   {
                     "type": "tab",
@@ -3026,16 +2958,13 @@
                         "css": "",
                         "file": "ray-session.json",
                         "props": {},
-                        "fallback": "",
                         "address": "auto",
                         "variables": "@{parent.variables}"
                       }
                     ],
-                    "tabs": [],
-                    "borderRadius": "auto"
+                    "tabs": []
                   }
-                ],
-                "borderRadius": "auto"
+                ]
               },
               {
                 "type": "panel",
@@ -3125,9 +3054,7 @@
                     "ignoreDefaults": false,
                     "bypass": false,
                     "onCreate": "",
-                    "onValue": "",
-                    "borderRadius": "auto",
-                    "decoupled": false
+                    "onValue": ""
                   },
                   {
                     "type": "button",
@@ -3171,9 +3098,7 @@
                     "ignoreDefaults": false,
                     "bypass": false,
                     "onCreate": "",
-                    "onValue": "",
-                    "borderRadius": "auto",
-                    "decoupled": false
+                    "onValue": ""
                   },
                   {
                     "type": "button",
@@ -3217,9 +3142,7 @@
                     "ignoreDefaults": false,
                     "bypass": false,
                     "onCreate": "",
-                    "onValue": "",
-                    "borderRadius": "auto",
-                    "decoupled": false
+                    "onValue": ""
                   },
                   {
                     "type": "button",
@@ -3263,9 +3186,7 @@
                     "ignoreDefaults": false,
                     "bypass": false,
                     "onCreate": "",
-                    "onValue": "",
-                    "borderRadius": "auto",
-                    "decoupled": false
+                    "onValue": ""
                   },
                   {
                     "type": "button",
@@ -3309,17 +3230,13 @@
                     "ignoreDefaults": false,
                     "bypass": true,
                     "onCreate": "",
-                    "onValue": "send('/VocalsKeschFX2Delay', 'active', value)",
-                    "borderRadius": "auto",
-                    "decoupled": false
+                    "onValue": "send('/VocalsKeschFX2Delay', 'active', value)"
                   }
                 ],
-                "tabs": [],
-                "borderRadius": "auto"
+                "tabs": []
               }
             ],
-            "tabs": [],
-            "borderRadius": "auto"
+            "tabs": []
           },
           {
             "type": "panel",
@@ -3461,12 +3378,10 @@
                     "onCreate": "",
                     "onValue": "",
                     "widgets": [],
-                    "tabs": [],
-                    "borderRadius": "auto"
+                    "tabs": []
                   }
                 ],
-                "tabs": [],
-                "borderRadius": "auto"
+                "tabs": []
               },
               {
                 "type": "panel",
@@ -3574,8 +3489,7 @@
                     "bypass": false,
                     "onCreate": "",
                     "onValue": "",
-                    "onTouch": "",
-                    "borderRadius": "auto"
+                    "onTouch": ""
                   },
                   {
                     "type": "panel",
@@ -3666,20 +3580,16 @@
                         "ignoreDefaults": false,
                         "bypass": false,
                         "onCreate": "",
-                        "onValue": "",
-                        "borderRadius": "auto"
+                        "onValue": ""
                       }
                     ],
-                    "tabs": [],
-                    "borderRadius": "auto"
+                    "tabs": []
                   }
                 ],
-                "tabs": [],
-                "borderRadius": "auto"
+                "tabs": []
               }
             ],
-            "tabs": [],
-            "borderRadius": "auto"
+            "tabs": []
           },
           {
             "type": "panel",
@@ -3775,16 +3685,13 @@
                 "onCreate": "",
                 "onValue": "",
                 "widgets": [],
-                "tabs": [],
-                "borderRadius": "auto"
+                "tabs": []
               }
             ],
-            "tabs": [],
-            "borderRadius": "auto"
+            "tabs": []
           }
         ],
-        "tabs": [],
-        "borderRadius": "auto"
+        "tabs": []
       },
       {
         "type": "panel",
@@ -4012,7 +3919,7 @@
                         "ignoreDefaults": false,
                         "bypass": true,
                         "onCreate": "",
-                        "onValue": "var bass = value.filter(x=>x.indexOf('Low')===0||x.includes('Sampler')),\n    bvals = {}\nfor (var s of bass) {\n  var label = s.includes('Sampler') ? s : s.substr(4)\n  label = label.replace(/([A-Z])/g, ' $1').trim()\n  bvals[label] = s\n}\nsetVar('keyboard_low_switch', 'values', bvals)\n\n\nvar high = value.filter(x=>x[0] === 'Z' || x[0] === 'C' && !x.includes('Sampler')),\n    hvals = {}\nfor (var s of high) {\n  var label = s.substr(1).replace(/([A-Z])/g, ' $1').trim()\n  hvals[label] = s\n}\nsetVar('keyboard_hi_switch', 'values', hvals)\n\nset('keyboard_low_switch', get('keyboard_current_sound'))\nset('keyboard_hi_switch', get('keyboard_current_sound'))"
+                        "onValue": "var bass = value.filter(x=>x.indexOf('Low')===0||x.includes('Sampler')),\n    bvals = {}\nfor (var s of bass) {\n  var label = s.includes('Sampler') ? s : s.substr(4)\n  label = label.replace(/([A-Z])/g, ' $1').trim()\n  bvals[label] = s\n}\nsetVar('keyboard_low_switch', 'values', bvals)\n\n\nvar high = value.filter(x=>x.indexOf('Low') !== 0),\n    hvals = {}\nfor (var s of high) {\n  var label = s.substr(1).replace(/([A-Z])/g, ' $1').trim()\n  hvals[label] = s\n}\nsetVar('keyboard_hi_switch', 'values', hvals)\n\nset('keyboard_low_switch', get('keyboard_current_sound'))\nset('keyboard_hi_switch', get('keyboard_current_sound'))"
                       },
                       {
                         "type": "switch",
@@ -4054,8 +3961,7 @@
                         "values": "#{VAR{values}||['Loading']}",
                         "colorTextOn": "auto",
                         "wrap": "soft",
-                        "mode": "tap",
-                        "borderRadius": "auto"
+                        "mode": "tap"
                       },
                       {
                         "type": "switch",
@@ -4097,16 +4003,13 @@
                         "onValue": "if (value) {\n  send('/JmjKeyboard/call', 'set_sound', value)\n  set('parent', 0)\n}\n",
                         "colorTextOn": "auto",
                         "wrap": "soft",
-                        "mode": "tap",
-                        "borderRadius": "auto"
+                        "mode": "tap"
                       }
                     ],
-                    "tabs": [],
-                    "borderRadius": "auto"
+                    "tabs": []
                   }
                 ],
-                "tabs": [],
-                "borderRadius": "auto"
+                "tabs": []
               },
               {
                 "type": "panel",
@@ -4200,12 +4103,10 @@
                     "ignoreDefaults": false,
                     "bypass": false,
                     "onCreate": "",
-                    "onValue": "",
-                    "borderRadius": "auto"
+                    "onValue": ""
                   }
                 ],
-                "tabs": [],
-                "borderRadius": "auto"
+                "tabs": []
               },
               {
                 "type": "panel",
@@ -4308,12 +4209,10 @@
                     "sensitivity": 1,
                     "steps": "",
                     "origin": 1,
-                    "onTouch": "",
-                    "borderRadius": "auto"
+                    "onTouch": ""
                   }
                 ],
-                "tabs": [],
-                "borderRadius": "auto"
+                "tabs": []
               },
               {
                 "type": "panel",
@@ -4403,9 +4302,7 @@
                     "ignoreDefaults": false,
                     "bypass": false,
                     "onCreate": "",
-                    "onValue": "set('octave', get('octave') + 1)",
-                    "borderRadius": "auto",
-                    "decoupled": false
+                    "onValue": "set('octave', get('octave') + 1)"
                   },
                   {
                     "type": "button",
@@ -4449,9 +4346,7 @@
                     "ignoreDefaults": false,
                     "bypass": false,
                     "onCreate": "",
-                    "onValue": "set('octave', 0)",
-                    "borderRadius": "auto",
-                    "decoupled": false
+                    "onValue": "set('octave', 0)"
                   },
                   {
                     "type": "button",
@@ -4495,9 +4390,7 @@
                     "ignoreDefaults": false,
                     "bypass": false,
                     "onCreate": "",
-                    "onValue": "set('octave', get('octave') - 1)",
-                    "borderRadius": "auto",
-                    "decoupled": false
+                    "onValue": "set('octave', get('octave') - 1)"
                   },
                   {
                     "type": "variable",
@@ -4518,8 +4411,7 @@
                     "onValue": ""
                   }
                 ],
-                "tabs": [],
-                "borderRadius": "auto"
+                "tabs": []
               },
               {
                 "type": "panel",
@@ -4609,9 +4501,7 @@
                     "ignoreDefaults": false,
                     "bypass": false,
                     "onCreate": "",
-                    "onValue": "set('keyboard_keys/*', 0)",
-                    "borderRadius": "auto",
-                    "decoupled": false
+                    "onValue": "set('keyboard_keys/*', 0)"
                   },
                   {
                     "type": "button",
@@ -4655,17 +4545,13 @@
                     "ignoreDefaults": false,
                     "bypass": true,
                     "onCreate": "",
-                    "onValue": "send('/JmjKeyboard/call', 'set_boost', value)",
-                    "borderRadius": "auto",
-                    "decoupled": false
+                    "onValue": "send('/JmjKeyboard/call', 'set_boost', value)"
                   }
                 ],
-                "tabs": [],
-                "borderRadius": "auto"
+                "tabs": []
               }
             ],
-            "tabs": [],
-            "borderRadius": "auto"
+            "tabs": []
           },
           {
             "type": "panel",
@@ -4843,12 +4729,10 @@
                         "preArgs": "",
                         "target": "",
                         "onCreate": "",
-                        "onValue": "",
-                        "borderRadius": "auto"
+                        "onValue": ""
                       }
                     ],
-                    "tabs": [],
-                    "borderRadius": "auto"
+                    "tabs": []
                   },
                   {
                     "type": "button",
@@ -4892,13 +4776,10 @@
                     "wrap": false,
                     "on": "on",
                     "off": "off",
-                    "mode": "toggle",
-                    "borderRadius": "auto",
-                    "decoupled": false
+                    "mode": "toggle"
                   }
                 ],
-                "tabs": [],
-                "borderRadius": "auto"
+                "tabs": []
               },
               {
                 "type": "panel",
@@ -4988,9 +4869,7 @@
                     "ignoreDefaults": false,
                     "bypass": false,
                     "onCreate": "",
-                    "onValue": "",
-                    "borderRadius": "auto",
-                    "decoupled": false
+                    "onValue": ""
                   },
                   {
                     "type": "button",
@@ -5034,24 +4913,18 @@
                     "ignoreDefaults": false,
                     "bypass": false,
                     "onCreate": "",
-                    "onValue": "set('keyboard_keys/*', 0, {send: false})",
-                    "borderRadius": "auto",
-                    "decoupled": false
+                    "onValue": "set('keyboard_keys/*', 0, {send: false})"
                   }
                 ],
-                "tabs": [],
-                "borderRadius": "auto"
+                "tabs": []
               }
             ],
-            "tabs": [],
-            "borderRadius": "auto"
+            "tabs": []
           }
         ],
-        "tabs": [],
-        "borderRadius": "auto"
+        "tabs": []
       }
     ],
-    "tabs": [],
-    "borderRadius": "auto"
+    "tabs": []
   }
 }

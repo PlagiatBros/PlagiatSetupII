@@ -12,7 +12,7 @@ class PostProcess(Module):
 
         super().__init__(*args, **kwargs)
 
-        root = self.engine.root_module
+        root = self.engine
 
         autotunes = ['NanoMeuf', 'NanoNormo', 'NanoGars', 'KeschMeuf', 'KeschNormo', 'KeschGars']
         basses = ['Bass', 'BassSynths']
@@ -139,7 +139,7 @@ class PostProcess(Module):
                 self.set_pitch(n, pitch)
             return
 
-        root = self.engine.root_module
+        root = self.engine
 
         if strip == '*':
             root.set('pitch', pitch)
@@ -165,7 +165,7 @@ class PostProcess(Module):
                 self.animate_pitch(n, start, end, duration, mode, easing)
             return
 
-        root = self.engine.root_module
+        root = self.engine
 
         if strip == '*':
             root.animate('pitch', start, end, duration, mode, easing)
@@ -187,7 +187,7 @@ class PostProcess(Module):
                 self.set_filter(n, freq)
             return
 
-        root = self.engine.root_module
+        root = self.engine
 
         if strip == '*':
             root.set('filter', freq)
@@ -212,7 +212,7 @@ class PostProcess(Module):
                 self.animate_filter(n, start, end, duration, mode, easing)
             return
 
-        root = self.engine.root_module
+        root = self.engine
 
         if strip == '*':
             root.animate('filter', start, end, duration, mode, easing)
@@ -221,7 +221,7 @@ class PostProcess(Module):
 
 
     def trap_cut(self, duration):
-        root = self.engine.root_module
+        root = self.engine
         def scene():
             for i in range(int(duration)):
                 self.wait(0.5, 'beat')

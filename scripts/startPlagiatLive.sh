@@ -1,6 +1,6 @@
 #!/bin/bash
 killall -9 jackd ray-daemon raysession pulseaudio pipewire*
-jack_control stop
+#jack_control stop
 
 if [ "$1" = "debug" ]
 then

@@ -207,4 +207,4 @@ class RouteBase(Route):
         self.resetFX()
         self.resetSamples()
 
-        self.engine.root_module.set('cut', 'off')
+        self.engine.set('cut', 'off')

@@ -41,8 +41,8 @@ class IfIHadAHummer(Video, Light, RouteBase):
         self.pause_loopers()
         transport.stop()
 
-    @pedalboard_button(2)
     @mk2_button(2)
+    @pedalboard_button(2)
     def refrain(self):
         """
         REFRAIN
@@ -64,6 +64,9 @@ class IfIHadAHummer(Video, Light, RouteBase):
         # Vocals
         vocalsNano.set('meuf_exclu', 'on')
         vocalsKesch.set('meuf_exclu', 'on')
+
+        # Keyboards
+        jmjKeyboard.set_sound('LowZDancestep')
 
         #### TODO : autom pitchdown au bout de 4 tours ?
 
