@@ -15,7 +15,7 @@ JmjKeyboard : ZHi           |> ZynAddSubFX.ZHiSynths : ZynAddSubFX
 JmjKeyboard : CHi           |> MonoSynthMicroTonal : In
 JmjKeyboard : Fluid_Rhodes         |> Fluid_Rhodes : Fluid_Rhodes
 JmjKeyboard : Fluid_TenorSax           |> Fluid_TenorSax : Fluid_TenorSax
-JmjKeyboard : Fluid_Charrang           |> Fluid_Charrang : Fluid_Charrang
+JmjKeyboard : Fluid_Charang           |> Fluid_Charang : Fluid_Charang
 JmjKeyboard : Fluid_OrchestraHit       |> Fluid_OrchestraHit : Fluid_OrchestraHit
 JmjKeyboard : Fluid_SteelDrum          |> Fluid_SteelDrum : Fluid_SteelDrum
 
@@ -42,7 +42,7 @@ Mk2Keyboard : ZHi           |> ZynAddSubFX.ZHiSynths : ZynAddSubFX
 Mk2Keyboard : CHi           |> MonoSynthMicroTonal : In
 Mk2Keyboard : Fluid_Rhodes           |> Fluid_Rhodes : Fluid_Rhodes
 Mk2Keyboard : Fluid_TenorSax           |> Fluid_TenorSax : Fluid_TenorSax
-Mk2Keyboard : Fluid_Charrang           |> Fluid_Charrang : Fluid_Charrang
+Mk2Keyboard : Fluid_Charang           |> Fluid_Charang : Fluid_Charang
 Mk2Keyboard : Fluid_OrchestraHit       |> Fluid_OrchestraHit : Fluid_OrchestraHit
 Mk2Keyboard : Fluid_SteelDrum          |> Fluid_SteelDrum : Fluid_SteelDrum
 
@@ -67,7 +67,7 @@ seq192.MainSequencer : constantSampler |> Hammerfall DSP : HDSP MIDI 1
 
 seq192.MainSequencer : Rhodes          |> Fluid_Rhodes : Fluid_Rhodes
 seq192.MainSequencer : TenorSax        |> Fluid_TenorSax : Fluid_TenorSax
-seq192.MainSequencer : Charrang        |> Fluid_Charrang : Fluid_Charrang
+seq192.MainSequencer : Charang        |> Fluid_Charang : Fluid_Charang
 seq192.MainSequencer : OrchestraHit    |> Fluid_OrchestraHit : Fluid_OrchestraHit
 seq192.MainSequencer : SteelDrum       |> Fluid_SteelDrum : Fluid_SteelDrum
 
@@ -80,6 +80,6 @@ Mentat : MidiPanic |> MonoSynthMicroTonal : In
 Mentat : MidiPanic |> Tap192.ProdSampler : midi_in
 Mentat : MidiPanic |> Fluid_Rhodes : Fluid_Rhodes
 Mentat : MidiPanic |> Fluid_TenorSax : Fluid_TenorSax
-Mentat : MidiPanic |> Fluid_Charrang : Fluid_Charrang
+Mentat : MidiPanic |> Fluid_Charang : Fluid_Charang
 Mentat : MidiPanic |> Fluid_OrchestraHit : Fluid_OrchestraHit
 Mentat : MidiPanic |> Fluid_SteelDrum : Fluid_SteelDrum

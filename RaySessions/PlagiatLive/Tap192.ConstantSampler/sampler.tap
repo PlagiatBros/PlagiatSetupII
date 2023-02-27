@@ -18,6 +18,9 @@
         <instrument name="FunkyHit2" minnote="42" maxnote="53" rootnote="48" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="output" volume="1.000000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
           <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/Constant/FunkyHit2.wav" sampleRelative="../../../../Samples/Constant/FunkyHit2.wav"/>
         </instrument>
+        <instrument name="TimboYeah" minnote="30" maxnote="41" rootnote="36" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="output" volume="1.000000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
+          <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/Constant/TimboYeah.wav" sampleRelative="../../../../Samples/Constant/TimboYeah.wav"/>
+        </instrument>
       </kit>
     </setup>
   </creation>

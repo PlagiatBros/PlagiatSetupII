@@ -15,7 +15,7 @@ def create_keyboard(name):
     config(
         backend='alsa',
         client_name=name,
-        out_ports=['ZLow', 'CLow', 'ZHi', 'CHiSf', 'CHi', 'ProdSampler', 'ConstantSampler', 'Fluid_TenorSax', 'Fluid_Charrang', 'Fluid_OrchestraHit', 'Fluid_SteelDrum', 'Fluid_Rhodes', 'Mentat'],
+        out_ports=['ZLow', 'CLow', 'ZHi', 'CHiSf', 'CHi', 'ProdSampler', 'ConstantSampler', 'Fluid_TenorSax', 'Fluid_Charang', 'Fluid_OrchestraHit', 'Fluid_SteelDrum', 'Fluid_Rhodes', 'Mentat'],
         in_ports=['in']
     )
 
@@ -84,7 +84,7 @@ def create_keyboard(name):
     # SoundFonts
     rhodes = generic_in >> Output('Fluid_Rhodes')
     tenorSax = generic_in >> Output('Fluid_TenorSax')
-    charrang = generic_in >> Output('Fluid_Charrang')
+    charang = generic_in >> Output('Fluid_Charang')
     orchestraHit = generic_in >> Output('Fluid_OrchestraHit')
     steelDrum = generic_in >> Output('Fluid_SteelDrum')
 
@@ -187,8 +187,8 @@ def create_keyboard(name):
                 Scene('TenorSax',
                     tenorSax
                 ),
-                Scene('Charrang',
-                    charrang
+                Scene('Charang',
+                    charang
                 ),
                 Scene('OrchestraHit',
                     orchestraHit

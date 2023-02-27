@@ -13,7 +13,7 @@ Carla.LowCSynths/Boom:Out L              |> Non-Mixer.BassSynths (Main):BassBoom
 Carla.LowCSynths/Trap1:Out L             |> Non-Mixer.BassSynths (Main):BassTrap1/in-1
 Carla.LowCSynths/Trap2:Out L             |> Non-Mixer.BassSynths (Main):BassTrap2/in-1
 Carla.LowCSynths/Trap3:Out L             |> Non-Mixer.BassSynths (Main):BassTrap3/in-1
-Fluid_Charrang:left                      |> Non-Mixer.Synths (Main):Charang/in-1
+Fluid_Charang:left                       |> Non-Mixer.Synths (Main):Charang/in-1
 Fluid_OrchestraHit:left                  |> Non-Mixer.Synths (Main):OrchestraHit/in-1
 Fluid_Rhodes:left                        |> Non-Mixer.Synths (Main):Rhodes/in-1
 Fluid_SteelDrum:left                     |> Non-Mixer.Synths (Main):SteelDrums/in-1
