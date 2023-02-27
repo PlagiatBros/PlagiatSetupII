@@ -30,9 +30,10 @@
     --alpha-fill-on: 0.65
 }
 
+.modal-container.on > .toggle,
 .button-container.on inner {
     /* box-shadow: 0 0 4rem 0 var(--color-widget) inset; */
-    box-shadow: 0 0 2rem 0 var(--color-widget);
+    /* box-shadow: 0 0 2rem 0 var(--color-widget); */
 }
 
 .button-container.discrete:not(.on){

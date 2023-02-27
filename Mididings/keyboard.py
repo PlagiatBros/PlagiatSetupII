@@ -15,7 +15,7 @@ def create_keyboard(name):
     config(
         backend='alsa',
         client_name=name,
-        out_ports=['ZLow', 'CLow', 'ZHi', 'CHiSf', 'CHi', 'ProdSampler', 'ConstantSampler', 'Mentat'],
+        out_ports=['ZLow', 'CLow', 'ZHi', 'CHiSf', 'CHi', 'ProdSampler', 'ConstantSampler', 'Fluid_TenorSax', 'Fluid_Charrang', 'Fluid_OrchestraHit', 'Fluid_SteelDrum', 'Mentat'],
         in_ports=['in']
     )
 
@@ -53,6 +53,7 @@ def create_keyboard(name):
         Output('CLow', 3),
         Output('CLow', 4),
         ]
+    lowCTrap3 = generic_in >> Output('CLow', 5)
 
     # Zyn HiSynths
     zDupieux = generic_in >> Output('ZHi', 1)
@@ -80,6 +81,12 @@ def create_keyboard(name):
     # Samples
     prodSampler = generic_in >> Output('ProdSampler')
     constantSampler = generic_in >> Output('ConstantSampler', 10)
+
+    # SoundFonts
+    tenorSax = generic_in >> Output('Fluid_TenorSax')
+    charrang = generic_in >> Output('Fluid_Charrang')
+    orchestraHit = generic_in >> Output('Fluid_OrchestraHit')
+    steelDrum = generic_in >> Output('Fluid_SteelDrum')
 
     run(
         scenes = {
@@ -110,6 +117,9 @@ def create_keyboard(name):
                 ),
                 Scene('LowCTrap2',
                     lowCTrap2
+                ),
+                Scene('LowCTrap3',
+                    lowCTrap3
                 ),
                 Scene('LowCBarkline',
                     lowCBarkline
@@ -173,6 +183,18 @@ def create_keyboard(name):
                 ),
                 Scene('CTrapFifth',
                     cTrapFifth
+                ),
+                Scene('TenorSax',
+                    tenorSax
+                ),
+                Scene('Charrang',
+                    charrang
+                ),
+                Scene('OrchestraHit',
+                    orchestraHit
+                ),
+                Scene('SteelDrum',
+                    steelDrum
                 ),
 
             ]),

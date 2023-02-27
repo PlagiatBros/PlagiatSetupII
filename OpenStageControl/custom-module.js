@@ -12,11 +12,14 @@ app.on('open', (data, client)=>{
 app.on('sessionOpened', (data, client)=>{
 
     if (data.path.includes('hub.json')) {
-        if (client.id == 'nano') {
+
+        if (client.id.includes('nano')) {
             receive('/SESSION/OPEN', __dirname + '/nano.json', {clientId: client.id})
-        } else if (client.id == 'regie') {
+        } else if (client.id.includes('regie')) {
             receive('/SESSION/OPEN', __dirname + '/regie.json', {clientId: client.id})
-        } else if (client.id == 'main') {
+        } else if (client.id.includes('main')) {
+            receive('/SESSION/OPEN', __dirname + '/main.json', {clientId: client.id})
+        } else if (client.address === '127.0.0.1') {
             receive('/SESSION/OPEN', __dirname + '/main.json', {clientId: client.id})
         }
     } else {

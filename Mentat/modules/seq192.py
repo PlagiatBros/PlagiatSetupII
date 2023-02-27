@@ -24,6 +24,7 @@ class Seq192(Module):
             'StickItOut': 8,
             'IfIHadAHummer': 9,
             'ClashDesCoaches': 10,
+            'BX': 11,
 
         }
 

@@ -12,6 +12,12 @@
         <instrument name="AirHorn" minnote="2" maxnote="2" rootnote="2" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="output" volume="1.000000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
           <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/Constant/AirHorn.wav" sampleRelative="../../../../Samples/Constant/AirHorn.wav"/>
         </instrument>
+        <instrument name="FunkyHit1" minnote="54" maxnote="66" rootnote="60" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="output" volume="1.000000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
+          <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/Constant/FunkyHit1.wav" sampleRelative="../../../../Samples/Constant/FunkyHit1.wav"/>
+        </instrument>
+        <instrument name="FunkyHit2" minnote="42" maxnote="53" rootnote="48" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="output" volume="1.000000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
+          <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/Constant/FunkyHit2.wav" sampleRelative="../../../../Samples/Constant/FunkyHit2.wav"/>
+        </instrument>
       </kit>
     </setup>
   </creation>

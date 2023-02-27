@@ -42,7 +42,7 @@
         <instrument name="Mandela3" minnote="52" maxnote="52" rootnote="52" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples4" volume="1.200000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
           <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2020/AgnoGastrik/48k_mandela.4.wav" sampleRelative="../../../../Samples/So2020/AgnoGastrik/48k_mandela.4.wav"/>
         </instrument>
-        <instrument name="Morricone3" minnote="76" maxnote="76" rootnote="76" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples3" volume="0.16000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
+        <instrument name="Morricone3" minnote="76" maxnote="76" rootnote="76" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples3" volume="0.160000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
           <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2020/AgnoGastrik/48k_morricone.3@133.wav" sampleRelative="../../../../Samples/So2020/AgnoGastrik/48k_morricone.3@133.wav"/>
         </instrument>
         <instrument name="AnoushkaSpeed" minnote="64" maxnote="64" rootnote="64" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples2" volume="0.510000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
@@ -122,7 +122,7 @@
           <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2020/RespekLaPuissance/Le5_5.flac" sampleRelative="../../../../Samples/So2020/RespekLaPuissance/Le5_5.flac"/>
         </instrument>
       </kit>
-      <kit name="SW" volume="1.7000">
+      <kit name="SW" volume="1.700000">
         <instrument name="FiatLux" minnote="60" maxnote="60" rootnote="60" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples1" volume="0.480000" pan="0.000000" pitch_over_range="true" play_mode="trigger" play_loop="no" play_reverse="no">
           <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2020/SW/48k_FiatLux.6@112.wav" sampleRelative="../../../../Samples/So2020/SW/48k_FiatLux.6@112.wav"/>
         </instrument>
@@ -167,7 +167,7 @@
           <variation minveloc="111" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2020/SW/BregoNote_Fla_Tape.flac" sampleRelative="../../../../Samples/So2020/SW/BregoNote_Fla_Tape.flac"/>
         </instrument>
       </kit>
-      <kit name="Snapshat" volume="0.50000">
+      <kit name="Snapshat" volume="0.500000">
         <instrument name="Koto" minnote="60" maxnote="60" rootnote="60" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples1" volume="1.000000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
           <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2020/SnapchatAuHarem/WholeWorldCymb1_0dB.wav" sampleRelative="../../../../Samples/So2020/SnapchatAuHarem/WholeWorldCymb1_0dB.wav"/>
         </instrument>
@@ -282,7 +282,7 @@
         <instrument name="Cri1" minnote="35" maxnote="36" rootnote="36" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples1" volume="0.750000" pan="0.670000" pitch_over_range="false" play_mode="normal" play_loop="no" play_reverse="no">
           <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2020/RamenerMooncup/Horrocore_Cri1.flac" sampleRelative="../../../../Samples/So2020/RamenerMooncup/Horrocore_Cri1.flac"/>
         </instrument>
-        <instrument name="Cri2" minnote="38" maxnote="38" rootnote="38" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples1" volume="0.75000" pan="-0.710000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
+        <instrument name="Cri2" minnote="38" maxnote="38" rootnote="38" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples1" volume="0.750000" pan="-0.710000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
           <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2020/RamenerMooncup/Horrocore_Cri2.flac" sampleRelative="../../../../Samples/So2020/RamenerMooncup/Horrocore_Cri2.flac"/>
         </instrument>
         <instrument name="Shamisen" minnote="39" maxnote="39" rootnote="39" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples1" volume="1.000000" pan="0.320000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
@@ -337,10 +337,10 @@
           <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2021/StickItOut/Fire.wav" sampleRelative="../../../../Samples/So2021/StickItOut/Fire.wav"/>
         </instrument>
         <instrument name="LobbyLobbyClarAigue_levee" minnote="56" maxnote="56" rootnote="56" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples3" volume="0.500000" pan="0.300000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
-          <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2021/StickItOut/LobbyLobbyClarAigue_levee.flac" sampleRelative="../../../../Samples/So2021/StickItOut/LobbyLobbyClarAigue_levee_full.flac"/>
+          <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2021/StickItOut/LobbyLobbyClarAigue_levee.flac" sampleRelative="../../../../Samples/So2021/StickItOut/LobbyLobbyClarAigue_levee.flac"/>
         </instrument>
         <instrument name="LobbyLobbyClarGrave_levee" minnote="57" maxnote="57" rootnote="57" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples3" volume="0.300000" pan="0.300000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
-          <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2021/StickItOut/LobbyLobbyClarGrave_levee.flac" sampleRelative="../../../../Samples/So2021/StickItOut/LobbyLobbyClarGrave_levee_full.flac"/>
+          <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2021/StickItOut/LobbyLobbyClarGrave_levee.flac" sampleRelative="../../../../Samples/So2021/StickItOut/LobbyLobbyClarGrave_levee.flac"/>
         </instrument>
         <instrument name="LobbyLobbyPiano_levee" minnote="58" maxnote="58" rootnote="58" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples2" volume="0.400000" pan="-0.300000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
           <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2021/StickItOut/LobbyLobbyPiano_levee.flac" sampleRelative="../../../../Samples/So2021/StickItOut/LobbyLobbyPiano_levee.flac"/>
@@ -361,7 +361,7 @@
           <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2021/StickItOut/LobbyLobbyClarAigue_full.flac" sampleRelative="../../../../Samples/So2021/StickItOut/LobbyLobbyClarAigue_full.flac"/>
         </instrument>
         <instrument name="Hink" minnote="55" maxnote="55" rootnote="55" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples4" volume="0.400000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
-          <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2021/StickItOut/Hink.flac" sampleRelative="../../../../Samples/So2021/StickItOut/LobbyLobbyHink.flac"/>
+          <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2021/StickItOut/Hink.flac" sampleRelative="../../../../Samples/So2021/StickItOut/Hink.flac"/>
         </instrument>
       </kit>
       <kit name="IfIHadAHummer" volume="1.000000">
@@ -394,7 +394,12 @@
         </instrument>
       </kit>
       <kit name="ClashDesCoaches" volume="1.000000">
-        <instrument name="SaperComJaja" minnote="61" maxnote="61" rootnote="61" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples1" volume="0.5" pan="0" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
+        <instrument name="SaperComJaja" minnote="61" maxnote="61" rootnote="61" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples1" volume="0.500000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
+          <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2020/ClashDesCoaches/SaperComJaja.wav" sampleRelative="../../../../Samples/So2020/ClashDesCoaches/SaperComJaja.wav"/>
+        </instrument>
+      </kit>
+      <kit name="BX" volume="1.000000">
+        <instrument name="SaperComJaja" minnote="61" maxnote="61" rootnote="61" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples1" volume="0.500000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
           <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2020/ClashDesCoaches/SaperComJaja.wav" sampleRelative="../../../../Samples/So2020/ClashDesCoaches/SaperComJaja.wav"/>
         </instrument>
       </kit>

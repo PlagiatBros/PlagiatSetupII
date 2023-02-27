@@ -9,6 +9,7 @@ from .ramenermooncup.main import RamenerMooncup
 from .stickitout.main import StickItOut
 from .IfIHadAHummer.main import IfIHadAHummer
 from .clashdescoaches.main import ClashDesCoaches
+from .bx.main import BX
 
 snapshat = Snapshat('Snapshat')
 mcob = Mcob('Mcob')
@@ -18,6 +19,7 @@ stagiaire = Stagiaire('Stagiaire')
 SW = SW('SW')
 viktorhuguau = ViktorHuguau('ViktorHuguau')
 RamenerMooncup = RamenerMooncup('RamenerMooncup')
-StickItOut = StickItOut('StickItOut')
-IfIHadAHummer = IfIHadAHummer('IfIHadAHummer')
-ClashDesCoaches = ClashDesCoaches('ClashDesCoaches')
+stickItOut = StickItOut('StickItOut')
+ifIHadAHummer = IfIHadAHummer('IfIHadAHummer')
+clashDesCoaches = ClashDesCoaches('ClashDesCoaches')
+bx = BX('BX')
