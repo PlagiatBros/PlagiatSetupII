@@ -32,7 +32,7 @@ class ViktorHuguau(Video, Light, RouteBase):
 
         # Mk2
         mk2Control.set_mode('keyboard')
-        mk2Keyboard.set_sound('CRhodes')
+        mk2Keyboard.set_sound('Rhodes')
 
 
     @pedalboard_button(1)

@@ -15,7 +15,7 @@ def create_keyboard(name):
     config(
         backend='alsa',
         client_name=name,
-        out_ports=['ZLow', 'CLow', 'ZHi', 'CHiSf', 'CHi', 'ProdSampler', 'ConstantSampler', 'Fluid_TenorSax', 'Fluid_Charrang', 'Fluid_OrchestraHit', 'Fluid_SteelDrum', 'Mentat'],
+        out_ports=['ZLow', 'CLow', 'ZHi', 'CHiSf', 'CHi', 'ProdSampler', 'ConstantSampler', 'Fluid_TenorSax', 'Fluid_Charrang', 'Fluid_OrchestraHit', 'Fluid_SteelDrum', 'Fluid_Rhodes', 'Mentat'],
         in_ports=['in']
     )
 
@@ -72,7 +72,6 @@ def create_keyboard(name):
     zDiploLikeWide = generic_in >> Output('ZHi', 14)
 
     # Carla HiSynths
-    cRhodes = generic_in >> Output('CHiSf')
     cDubstepHorn = generic_in >> Output('CHi', 4)
     cTrap = generic_in >> Output('CHi', 2)
     cEasyClassical = generic_in >> Output('CHi', 3)
@@ -83,6 +82,7 @@ def create_keyboard(name):
     constantSampler = generic_in >> Output('ConstantSampler', 10)
 
     # SoundFonts
+    rhodes = generic_in >> Output('Fluid_Rhodes')
     tenorSax = generic_in >> Output('Fluid_TenorSax')
     charrang = generic_in >> Output('Fluid_Charrang')
     orchestraHit = generic_in >> Output('Fluid_OrchestraHit')
@@ -169,9 +169,6 @@ def create_keyboard(name):
                 Scene('Z8bits',
                     z8bits
                 ),
-                Scene('CRhodes',
-                    cRhodes
-                ),
                 Scene('CDubstepHorn',
                     cDubstepHorn
                 ),
@@ -183,6 +180,9 @@ def create_keyboard(name):
                 ),
                 Scene('CTrapFifth',
                     cTrapFifth
+                ),
+                Scene('Rhodes',
+                    rhodes
                 ),
                 Scene('TenorSax',
                     tenorSax

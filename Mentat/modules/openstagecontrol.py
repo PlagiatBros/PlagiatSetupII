@@ -32,14 +32,15 @@ class OpenStageControl(Module):
         self.add_parameter('cursor', '/cursor', types='f', default=0)
         self.add_parameter('routes', '/routes', types='s', default='Loading')
         self.add_parameter('active_route', '/active_route', types='s', default='')
+        self.add_parameter('active_route_name', '/active_route_name', types='s', default='')
         self.add_parameter('route_methods', '/route_methods', types='s', default='')
         self.add_parameter('miniroute_methods', '/miniroute_methods', types='s', default='')
         self.add_parameter('rolling', '/rolling', types='i', default=0)
 
         self.add_event_callback('parameter_changed', self.parameter_changed)
         self.add_event_callback('client_started', self.client_started)
-        self.add_event_callback('engine_started', lambda: self.set('routes', ','.join(self.engine.routes.keys())) )
-        self.add_event_callback('engine_route_changed', self.engine_route_changed)
+        self.add_event_callback('started', lambda: self.set('routes', ','.join(self.engine.routes.keys())) )
+        self.add_event_callback('route_changed', self.engine_route_changed)
         self.add_event_callback('nonmixer_ready', lambda name: self.start_scene('populate_gui', self.populate_gui))
 
 
@@ -74,10 +75,10 @@ class OpenStageControl(Module):
         # /module_name param_name value
         address = '/' + '/'.join(module.module_path)
 
-        if module == self.engine.root_module:
-            address = '/Root'
-        elif module == self.engine:
-            address = '/Engine'
+        if module == self.engine:
+            address = '/Mentat'
+        else:
+            address = '/' + '/'.join(module.module_path[1:])
 
         if type(value) is not list:
             value = [value]
@@ -89,10 +90,9 @@ class OpenStageControl(Module):
             self.osc_state[address] = {}
         self.osc_state[address][name] = value
 
-    def engine_route_changed(self, name):
+    def engine_route_changed(self, route):
 
-        self.set('active_route', name)
-        route = self.engine.active_route
+        self.set('active_route', route.name)
         methods = [x for n,x in getmembers(route) if callable(x) and (hasattr(x, 'mk2_buttons') or hasattr(x, 'pedalboard_buttons') or hasattr(x, 'gui_button'))]
         methods = sorted(methods, key=lambda m: m.index)
 
@@ -146,10 +146,8 @@ class OpenStageControl(Module):
         """
         module_name = path[0]
 
-        if module_name == 'Engine':
+        if module_name == 'Mentat':
             return self.engine
-        elif module_name == 'Root':
-            return self.engine.root_module
         elif module_name in self.engine.modules:
             mod = self.engine.modules[module_name]
             for n in path[1:]:

@@ -186,12 +186,12 @@ class AgneauGastrik(Video, Light, RouteBase):
             {   # kind of mate
                 8: lambda: [
                     # nano: « frisco »
-                    self.engine.root_module.set('cut_samples', 'on'),
-                    self.engine.root_module.set('cut_synths', 'on'),
+                    self.engine.set('cut_samples', 'on'),
+                    self.engine.set('cut_synths', 'on'),
                 ],
                 9.5: lambda: [
-                    self.engine.root_module.set('cut_samples', 'off'),
-                    self.engine.root_module.set('cut_synths', 'off'),
+                    self.engine.set('cut_samples', 'off'),
+                    self.engine.set('cut_synths', 'off'),
                 ],
             },
             {   # see it's easy

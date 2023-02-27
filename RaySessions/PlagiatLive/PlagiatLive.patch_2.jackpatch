@@ -6,7 +6,6 @@ Autotune.NanoMeuf:out                    |> Non-Mixer.VocalsNano (Meuf):NanoMeuf
 Autotune.NanoNormo:out                   |> Non-Mixer.VocalsNano (Normo):NanoNormo/in-1
 Carla.HiCSynths/DubstepHorn:Out L        |> Non-Mixer.Synths (Main):DubstepHorn/in-1
 Carla.HiCSynths/EasyClassical:Out L      |> Non-Mixer.Synths (Main):EasyClassical/in-1
-Carla.HiCSynths/Rhodes:Out L             |> Non-Mixer.Synths (Main):Rhodes/in-1
 Carla.HiCSynths/Trap:Out L               |> Non-Mixer.Synths (Main):Trap/in-1
 Carla.HiCSynths/TrapFifth:Out L          |> Non-Mixer.Synths (Main):TrapFifth/in-1
 Carla.LowCSynths/Barkline:Out L          |> Non-Mixer.BassSynths (Main):BassBarkline/in-1
@@ -14,6 +13,11 @@ Carla.LowCSynths/Boom:Out L              |> Non-Mixer.BassSynths (Main):BassBoom
 Carla.LowCSynths/Trap1:Out L             |> Non-Mixer.BassSynths (Main):BassTrap1/in-1
 Carla.LowCSynths/Trap2:Out L             |> Non-Mixer.BassSynths (Main):BassTrap2/in-1
 Carla.LowCSynths/Trap3:Out L             |> Non-Mixer.BassSynths (Main):BassTrap3/in-1
+Fluid_Charrang:left                      |> Non-Mixer.Synths (Main):Charang/in-1
+Fluid_OrchestraHit:left                  |> Non-Mixer.Synths (Main):OrchestraHit/in-1
+Fluid_Rhodes:left                        |> Non-Mixer.Synths (Main):Rhodes/in-1
+Fluid_SteelDrum:left                     |> Non-Mixer.Synths (Main):SteelDrums/in-1
+Fluid_TenorSax:left                      |> Non-Mixer.Synths (Main):TenorSax/in-1
 Non-Mixer.Bass (In):BassIn/out-1         |> Non-Mixer.Bass (Main):BassDry/in-1
 Non-Mixer.Bass (In):BassIn/out-1         |> Non-Mixer.Bass (Main):BassSub/in-1
 Non-Mixer.Bass (In):BassIn/out-1         |> Non-Mixer.Bass (Main):FBassDry/in-1
@@ -1172,11 +1176,9 @@ ZynAddSubFX.ZLowSynths:part5/out-L       |> Non-Mixer.BassSynths (Main):BassZSin
 ZynAddSubFX.ZLowSynths:part7/out-L       |> Non-Mixer.BassSynths (Main):BassZ8bits/in-1
 ZynAddSubFX.ZLowSynths:part8/out-L       |> Non-Mixer.BassSynths (Main):BassZ8bits/in-1
 ZynAddSubFX.ZLowSynths:part9/out-L       |> Non-Mixer.BassSynths (Main):BassZBoombaard/in-1
-cFluidBridge:capture                     |> cHiRouter:RhodesIn
 cHiBridge:capture                        |> cHiRouter:MainIn
 cHiRouter:DubstepHorn                    |> Carla.HiCSynths/DubstepHorn:events-in
 cHiRouter:EasyClassical                  |> Carla.HiCSynths/EasyClassical:events-in
-cHiRouter:Rhodes                         |> Carla.HiCSynths/Rhodes:events-in
 cHiRouter:Trap                           |> Carla.HiCSynths/Trap:events-in
 cHiRouter:TrapFifth                      |> Carla.HiCSynths/TrapFifth:events-in
 cLowBridge:capture                       |> cLowRouter:In

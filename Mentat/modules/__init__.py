@@ -126,7 +126,6 @@ carlabass.add_submodule(
 
 carlatreble = Module('HiCSynths', 'osc', 9730)
 carlatreble.add_submodule(
-    CalfMonoSynth('CRhodes', parent=carlatreble),
     CalfMonoSynth('CDubstepHorn', parent=carlatreble),
     CalfMonoSynth('CTrap', parent=carlatreble),
     CalfMonoSynth('CEasyClassical', parent=carlatreble),

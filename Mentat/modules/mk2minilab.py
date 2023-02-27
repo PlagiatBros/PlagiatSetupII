@@ -93,7 +93,7 @@ class Mk2Control(Module):
             for mode in self.modes:
 
                 if 'cut' in mode:
-                    self.engine.root_module.set(mode, 'on' if self.pressed_notes else 'off')
+                    self.engine.set(mode, 'on' if self.pressed_notes else 'off')
 
                 if mode == 'wobble':
 
