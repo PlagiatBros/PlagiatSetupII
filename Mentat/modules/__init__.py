@@ -126,7 +126,6 @@ carlabass.add_submodule(
 
 carlatreble = Module('HiCSynths', 'osc', 9730)
 carlatreble.add_submodule(
-    CalfMonoSynth('CRhodes', parent=carlatreble),
     CalfMonoSynth('CDubstepHorn', parent=carlatreble),
     CalfMonoSynth('CTrap', parent=carlatreble),
     CalfMonoSynth('CEasyClassical', parent=carlatreble),
@@ -157,6 +156,14 @@ zyntreble.add_submodule(
     ZynPart('ZJestoProunk', parent=zyntreble, parts=[12]),
     ZynPart('Z8bits', parent=zyntreble, parts=[13, 14])
 )
+
+"""
+Fluid synths
+"""
+rhodes = Module('Rhodes', 'midi')
+tenorsax = Module('TenorSax', 'midi')
+charang = Module('Charang', 'midi')
+orchestrahit = Module('OrchestraHit', 'midi')
 
 
 """

@@ -54,3 +54,26 @@ class MicroTonality(Module):
         # autotuner
         for at in self.autotunes:
             modules[at].set_tuning(*tuning)
+
+        # fluid : midi tuning (MTS)
+        mts = [
+            0xF0, # sysex
+            0x7F, # realtime sysex
+            0x7F, # device id (any)
+            0x08, # tuning request
+            0x09, # octave tuning
+            0x7F, # channels (whatever)
+            0x7F, # channels (whatever)
+            0x7F, # channels (whatever)
+        ]
+        for t in tuning:
+            cents = int((t + 1) / 2 * 16383) # -1,1 range to 0,16383
+            mts += [
+                (cents  >> 7) & 0x7F, # note tuning lsb
+                cents & 0x7F,         # note tuning msb
+            ]
+
+        mtc.append(0xF7) # sysex end
+
+        for fluid in ['Rhodes', 'Charang', 'TenorSax', 'OrchestraHit']:
+            modules[fluid].send('/sysex', *mts)
