@@ -67,7 +67,7 @@ class MicroTonality(Module):
             0x7F, # channels (whatever)
         ]
         for t in tuning:
-            cents = int((t + 1) / 2 * 16383) # -1,1 range to 0,16383
+            cents = int(round((t + 1) / 2 * 16383)) # -1,1 range to 0,16383
             mts += [
                 (cents  >> 7) & 0x7F, # note tuning lsb
                 cents & 0x7F,         # note tuning msb
