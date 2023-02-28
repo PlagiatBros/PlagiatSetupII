@@ -73,7 +73,7 @@ class MicroTonality(Module):
                 cents & 0x7F,         # note tuning msb
             ]
 
-        mtc.append(0xF7) # sysex end
+        mts.append(0xF7) # sysex end
 
         for fluid in ['Rhodes', 'Charang', 'TenorSax', 'OrchestraHit']:
             modules[fluid].send('/sysex', *mts)
