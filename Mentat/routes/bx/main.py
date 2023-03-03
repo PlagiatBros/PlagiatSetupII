@@ -24,12 +24,12 @@ class BX(Video, Light, RouteBase):
         prodSampler.set_kit(self.name)
 
         # Microtonality
-        microtonality.disable()
-        # microtonality.enable()
-        # microtonality.set_tuning(0.35, 0, 0, 0, 0, 0.35, 0, 0, 0.35, 0, 0, 0)
+        # microtonality.disable()
+        microtonality.enable()
+        microtonality.set_tuning(0.35, 0, 0, 0, 0, 0.35, 0, 0, 0.35, 0, 0, 0)
 
         # Autotuner Notes
-        notes.set_notes(1, 0, 1, 1, 1, 1, 0, 0, 1, 1, 0, 1)
+        notes.set_notes(1, 0, 1, 0, 1, 1, 0, 1, 1, 1, 0, 1)
 
         # Mk2
         mk2Control.set_mode('cut_samples', 'cut_synths')
@@ -62,8 +62,8 @@ class BX(Video, Light, RouteBase):
         # samples.set('Samples2', 'Mute', 0.0)
 
         # Vocals
-        vocalsNano.set('meuf_exclu', 'on')
-        vocalsKesch.set('meuf_exclu', 'on')
+        vocalsNano.set('normo_exclu', 'on')
+        vocalsKesch.set('normo_exclu', 'on')
 
         # Keyboard
         jmjKeyboard.set_sound('ZTrumpets', boost=True)
@@ -72,16 +72,139 @@ class BX(Video, Light, RouteBase):
         synthsFX2Delay.set('SynthsFX2Delay', 'Mute', 0.0)
 
 
-    @pedalboard_button(2)
+    @pedalboard_button(3)
     def couplet(self):
         """
         COUPLET
         """
-        pass
+        self.pause_loopers()
+        self.reset()
 
-    @pedalboard_button(2)
+        # Sequences
+        seq192.select('solo', 'couplet_*')
+
+        # Transport
+        transport.start()
+
+        # Samples
+        # samples.set('Samples2', 'Mute', 0.0)
+
+        # Vocals
+        vocalsNano.set('normo_exclu', 'on')
+        vocalsKesch.set('normo_exclu', 'on')
+
+        # Keyboard
+        jmjKeyboard.set_sound('ZTrumpets', boost=True)
+
+        synthsFX2Delay.set('Trap', 'Gain', -14.0)
+        synthsFX2Delay.set('SynthsFX2Delay', 'Mute', 0.0)
+
+
+    @pedalboard_button(4)
+    def trap(self):
+        """
+        TRAP
+        """
+        self.pause_loopers()
+        self.reset()
+
+        # Sequences
+        seq192.select('solo', 'trap_*')
+
+        # Transport
+        transport.start()
+
+        # Samples
+        # samples.set('Samples2', 'Mute', 0.0)
+
+        # Vocals
+        vocalsNano.set('normo_exclu', 'on')
+        vocalsKesch.set('normo_exclu', 'on')
+
+        # Keyboard
+        jmjKeyboard.set_sound('ZTrumpets', boost=True)
+
+        synthsFX2Delay.set('Trap', 'Gain', -14.0)
+        synthsFX2Delay.set('SynthsFX2Delay', 'Mute', 0.0)
+
+    @pedalboard_button(5)
     def refrain(self):
         """
         REFRAIN
         """
-        pass
+        self.pause_loopers()
+        self.reset()
+
+        # Sequences
+        seq192.select('solo', 'refrain_*')
+
+        # Transport
+        transport.start()
+
+        # Samples
+        # samples.set('Samples2', 'Mute', 0.0)
+
+        # Vocals
+        vocalsNano.set('normo_exclu', 'on')
+        vocalsKesch.set('normo_exclu', 'on')
+
+        # Keyboard
+        jmjKeyboard.set_sound('ZTrumpets', boost=True)
+
+        synthsFX2Delay.set('Trap', 'Gain', -14.0)
+        synthsFX2Delay.set('SynthsFX2Delay', 'Mute', 0.0)
+
+    @pedalboard_button(6)
+    def theme(self):
+        """
+        THEME
+        """
+        self.pause_loopers()
+        self.reset()
+
+        # Sequences
+        seq192.select('solo', 'theme_*')
+        # seq192.select('on', 'intro_*')
+
+        # Transport
+        transport.start()
+
+        # Samples
+        # samples.set('Samples2', 'Mute', 0.0)
+
+        # Vocals
+        vocalsNano.set('normo_exclu', 'on')
+        vocalsKesch.set('normo_exclu', 'on')
+
+        # Keyboard
+        jmjKeyboard.set_sound('ZTrumpets', boost=True)
+
+        synthsFX2Delay.set('Trap', 'Gain', -14.0)
+        synthsFX2Delay.set('SynthsFX2Delay', 'Mute', 0.0)
+
+    @pedalboard_button(7)
+    def afro(self):
+        """
+        AFRO
+        """
+        self.pause_loopers()
+        self.reset()
+
+        # Sequences
+        seq192.select('solo', 'afro_*')
+
+        # Transport
+        transport.start()
+
+        # Samples
+        # samples.set('Samples2', 'Mute', 0.0)
+
+        # Vocals
+        vocalsNano.set('normo_exclu', 'on')
+        vocalsKesch.set('normo_exclu', 'on')
+
+        # Keyboard
+        jmjKeyboard.set_sound('ZTrumpets', boost=True)
+
+        synthsFX2Delay.set('Trap', 'Gain', -14.0)
+        synthsFX2Delay.set('SynthsFX2Delay', 'Mute', 0.0)
