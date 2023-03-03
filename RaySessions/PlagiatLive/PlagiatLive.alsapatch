@@ -83,3 +83,8 @@ Mentat : MidiPanic |> Fluid_TenorSax : Fluid_TenorSax
 Mentat : MidiPanic |> Fluid_Charang : Fluid_Charang
 Mentat : MidiPanic |> Fluid_OrchestraHit : Fluid_OrchestraHit
 Mentat : MidiPanic |> Fluid_SteelDrum : Fluid_SteelDrum
+
+Mentat : Charang |> Fluid_Charang : Fluid_Charang
+Mentat : TenorSax |> Fluid_TenorSax : Fluid_TenorSax
+Mentat : SteelDrum |> Fluid_SteelDrum : Fluid_SteelDrum
+Mentat : OrchestraHit |> Fluid_OrchestraHit : Fluid_OrchestraHit

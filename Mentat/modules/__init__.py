@@ -163,6 +163,7 @@ Fluid synths
 rhodes = Module('Rhodes', 'midi')
 tenorsax = Module('TenorSax', 'midi')
 charang = Module('Charang', 'midi')
+stteldrum = Module('SteelDrum', 'midi')
 orchestrahit = Module('OrchestraHit', 'midi')
 
 

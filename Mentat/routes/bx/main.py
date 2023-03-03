@@ -172,6 +172,10 @@ class BX(Video, Light, RouteBase):
         # Samples
         # samples.set('Samples2', 'Mute', 0.0)
 
+        # Bass
+        bassFX.set('distohi', 'on')
+        bassFX.set('degrade', 'on')
+
         # Vocals
         vocalsNano.set('normo_exclu', 'on')
         vocalsKesch.set('normo_exclu', 'on')

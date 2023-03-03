@@ -22,6 +22,6 @@ class Bass(NonMixer):
 
         self.add_meta_parameter(
             'source',
-            [['BassDry' 'Mute'], ['FBassDry', 'Mute']],                                                   # params
+            [['BassDry', 'Mute'], ['FBassDry', 'Mute']],                                                   # params
             getter, setter
         )
