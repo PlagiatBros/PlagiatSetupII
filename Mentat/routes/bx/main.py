@@ -183,8 +183,48 @@ class BX(Video, Light, RouteBase):
         # Keyboard
         jmjKeyboard.set_sound('ZTrumpets', boost=True)
 
+        # Synths
         synthsFX2Delay.set('Trap', 'Gain', -14.0)
         synthsFX2Delay.set('SynthsFX2Delay', 'Mute', 0.0)
+
+        # Bass
+        bassfx.set('scape', 'poston')
+        bassfx.set('wobble', 'poston')
+
+        # Séquences
+        self.start_sequence('sequence/bx_theme_hiSynths', [
+        { # bar 1
+            1: lambda: [
+                synthsFX2Delay.set('EasyClassical', 'Gain', -70.0),
+                synthsFX2Delay.set('TrapFifth', 'Gain', -70.0),
+
+                bassFX.set('BassScapeIn', 'Mute', 1.0),
+                bassFX.set('BassWobbleIn', 'Mute', 1.0),
+                ],
+            4: lambda: self.engine.animate('pitch_synths', 1, 0.8, 0.95, 'b', easing='cubic-in')
+        },
+        {
+            1: lambda: self.engine.set('pitch_synths', 1)
+        },# bars 2
+        {  # bars 3
+            4.5: lambda: [
+                bassFX.set('BassScapeIn', 'Mute', 0.0),
+                bassFX.set('BassWobbleIn', 'Mute', 0.0),
+                ],
+        },
+        { # bar 4
+            1: lambda: [
+                bassFX.set('BassScapeIn', 'Mute', 1.0),
+                bassFX.set('BassWobbleIn', 'Mute', 1.0),
+                ],
+            3.5: lambda: [
+                synthsFX2Delay.set('EasyClassical', 'Gain', -3.0),
+                synthsFX2Delay.set('TrapFifth', 'Gain', -3.0),
+                bassFX.set('BassWobbleIn', 'Mute', 0.0),
+                bassFX.set('BassScapeIn', 'Mute', 0.0),
+                ],
+        },
+        ], loop=True)
 
     @pedalboard_button(7)
     def afro(self):
