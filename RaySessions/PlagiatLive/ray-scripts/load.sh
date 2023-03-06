@@ -52,4 +52,4 @@ fi
 ray_control run_step
 
 # script here some actions to run once the session is loaded.
-$PLAGIAT_SETUP_DIR/scripts/startOSC.sh
+$PLAGIAT_SETUP_DIR/scripts/startOSC.sh&
