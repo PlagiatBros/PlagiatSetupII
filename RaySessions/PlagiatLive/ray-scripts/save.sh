@@ -22,6 +22,6 @@
 
 # This command orders to ray-daemon to save the session
 # If you don't run it, session won't be saved
-ray_control run_step
+ray_control run_step without_clients
 
 # script here some actions to run after saving the session
