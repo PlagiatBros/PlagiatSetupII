@@ -57,6 +57,7 @@ class NonMixer(Module):
         Module.__init__(self, *args, **kwargs)
 
         self.init_params = []
+        self.pending_params_labels = 0
 
         self.init_done = False
 
@@ -150,6 +151,8 @@ class NonMixer(Module):
                             plugin_mod.parameters[param_shortname].range = args[3:5]
 
                             self.send('/signal/infos', parameter_address)
+                            self.pending_params_labels += 1
+
 
                         self.init_params.append(parameter_address)
 
@@ -158,13 +161,9 @@ class NonMixer(Module):
                 """
                 All received, query current values and create meta parameters
                 """
-                self.init_done = True
-                for parameter_address in self.init_params:
-                    self.send(parameter_address)
-                for args, kwargs in self.pending_set_calls:
-                    self.set(*args, **kwargs)
+                self.check_init_done()
 
-        elif address == '/reply' and args[0] == '/signal/infos' and len:
+        elif address == '/reply' and args[0] == '/signal/infos':
             if len(args) > 2:
                 path = args[1].split('/')
                 parameter_name = '/'.join(path[3:-1])
@@ -176,11 +175,15 @@ class NonMixer(Module):
                 strip_mod = self.submodules[strip_name]
 
                 plugin_mod = strip_mod.submodules[plugin_name]
-                # if args[3] != param_shortname:
-                #     if args[3] in NonMixer.parameter_aliases:
-                #         args[3] = NonMixer.parameter_aliases[args[3]]
-                #     plugin_mod.add_alias_parameter(args[3].replace(' ', '%20'), param_shortname)
+                args[3] = args[3].replace(' ', '%20')
+                if args[3] != param_shortname and '[' not in args[3] and args[3] not in plugin_mod.parameters:
+                    if args[3] in NonMixer.parameter_aliases:
+                        args[3] = NonMixer.parameter_aliases[args[3]]
 
+                    plugin_mod.add_alias_parameter(args[3], param_shortname)
+            else:
+                self.pending_params_labels -= 1
+                self.check_init_done()
 
         elif address == '/reply':
             path = args[0].partition('/strip/')[2]
@@ -213,6 +216,14 @@ class NonMixer(Module):
         For specific instances we'll create meta parameters
         """
         pass
+
+    def check_init_done(self):
+        if self.pending_params_labels == 0 and not self.init_done:
+            self.init_done = True
+            for parameter_address in self.init_params:
+                self.send(parameter_address)
+            for args, kwargs in self.pending_set_calls:
+                self.set(*args, **kwargs)
 
     plugin_aliases = {
         'C%2A%20Scape%20-%20Stereo%20delay%20with%20chromatic%20resonances': 'Scape',
