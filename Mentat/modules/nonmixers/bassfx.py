@@ -45,3 +45,19 @@ class BassFX(NonMixer):
                     )
 
                 closure(strip_name)
+
+
+
+        # wobble bpm / subdiv
+        self.add_parameter('wobble_bpm', None, types='f', default=120)
+        self.add_parameter('wobble_subdivision', None, types='f', default=3)
+        def getter(bpm, div):
+            return [bpm, div]
+        def setter(bpm, div):
+            self.set('BassWobble', 'MDA%20RezFilter', 'LFO%20Rate', (log10((bpm/60.)*div) + 1.5) / 3)
+        self.add_meta_parameter('wobble_bpm_division',
+            ['wobble_bpm', 'wobble_subdivision'],
+            getter,
+            setter
+
+        )

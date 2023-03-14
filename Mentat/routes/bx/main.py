@@ -190,6 +190,7 @@ class BX(Video, Light, RouteBase):
         # Bass
         bassfx.set('scape', 'poston')
         bassfx.set('wobble', 'poston')
+        bassfx.set('wobble_subdivision', 6)
 
         # Séquences
         self.start_sequence('sequence/bx_theme_hiSynths', [

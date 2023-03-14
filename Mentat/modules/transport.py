@@ -82,13 +82,15 @@ class Transport(Module):
             self.engine.modules[mixer].set(strip, 'Scape', 'bpm', bpm)
 
         # Wobble
-        for mixer, strip in [
-                ('BassFX', 'BassWobble')
-            ]:
-            denom = 3
-            param = (log10((bpm/60.)*denom) + 1.5) / 3
-
-            self.engine.modules[mixer].set(strip, 'MDA%20RezFilter', 'LFO%20Rate', param)
+        self.engine.modules['BassFX'].set('wobble_bpm', bpm)
+        self.engine.modules['BassFX'].set('wobble_subdivision', 3)
+        # for mixer, strip in [
+        #         ('BassFX', 'BassWobble')
+        #     ]:
+        #     denom = 3
+        #     param = (log10((bpm/60.)*denom) + 1.5) / 3
+        #
+        #     self.engine.modules[mixer].set(strip, 'MDA%20RezFilter', 'LFO%20Rate', param)
 
         # Zam Grains
         for mixer, strip in [
