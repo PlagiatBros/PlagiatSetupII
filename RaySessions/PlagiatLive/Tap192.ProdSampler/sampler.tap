@@ -363,6 +363,15 @@
         <instrument name="Hink" minnote="55" maxnote="55" rootnote="55" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples4" volume="0.400000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
           <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2021/StickItOut/Hink.flac" sampleRelative="../../../../Samples/So2021/StickItOut/Hink.flac"/>
         </instrument>
+        <instrument name="Jajaja_Intro" minnote="12" maxnote="12" rootnote="12" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples5" volume="0.400000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
+          <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2021/StickItOut/jajaja_b_intro.flac" sampleRelative="../../../../Samples/So2021/StickItOut/jajaja_b_intro.flac"/>
+        </instrument>
+        <instrument name="Jajaja_Bourvil" minnote="13" maxnote="13" rootnote="13" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples5" volume="0.400000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
+          <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2021/StickItOut/jajaja_b.flac" sampleRelative="../../../../Samples/So2021/StickItOut/jajaja_b.flac"/>
+        </instrument>
+        <instrument name="Jajaja_Busta" minnote="14" maxnote="14" rootnote="14" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples5" volume="0.400000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
+          <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2021/StickItOut/jajaja_br.flac" sampleRelative="../../../../Samples/So2021/StickItOut/jajaja_br.flac"/>
+        </instrument>
       </kit>
       <kit name="IfIHadAHummer" volume="1.000000">
         <instrument name="Gtr_Refrain" minnote="60" maxnote="60" rootnote="60" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples1" volume="1.000000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
@@ -406,7 +415,7 @@
 	    <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2021/BxMillezim/ArpegesGuitare_Natural.wav" sampleRelative="../../../../Samples/So2021/BxMillezim/ArpegesGuitare_Natural.wav"/>
         </instrument>
         <instrument name="Gtr_CocotteNatural" minnote="63" maxnote="63" rootnote="63" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples2" volume="0.500000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
-	    <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2021/BxMillezim/CoccoteGuitare_Natural_16th.wav" sampleRelative="../../../../Samples/So2021/BxMillezim/CocotteGuitare_Natural_16th.wav"/>
+	    <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2021/BxMillezim/CocotteGuitare_Natural_16th.wav" sampleRelative="../../../../Samples/So2021/BxMillezim/CocotteGuitare_Natural_16th.wav"/>
         </instrument>
         <instrument name="Gtr_CocotteCrunch" minnote="64" maxnote="64" rootnote="64" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples1" volume="0.500000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
 	    <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2021/BxMillezim/CocotteGuitare_Crunch.wav" sampleRelative="../../../../Samples/So2021/BxMillezim/CocotteGuitare_Crunch.wav"/>
@@ -415,37 +424,37 @@
 	    <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2021/BxMillezim/CocotteGuitare_FlangeChorus.wav" sampleRelative="../../../../Samples/So2021/BxMillezim/CocotteGuitare_FlangeChorus.wav"/>
         </instrument>
         <instrument name="Gtr_MacroCocotteCrunch" minnote="66" maxnote="66" rootnote="66" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples1" volume="0.500000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
-	    <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2021/BxMillezim/MacroGuitare_Crunch.wav" sampleRelative="../../../../Samples/So2021/BxMillezim/MacroCocotteGuitare_Crunch.wav"/>
+	    <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2021/BxMillezim/MacroCocotteGuitare_Crunch.wav" sampleRelative="../../../../Samples/So2021/BxMillezim/MacroCocotteGuitare_Crunch.wav"/>
         </instrument>
         <instrument name="Gtr_MicroCocotteNatural" minnote="67" maxnote="67" rootnote="67" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples2" volume="0.500000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
 	    <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2021/BxMillezim/MicroCocotteGuitare_Natural.wav" sampleRelative="../../../../Samples/So2021/BxMillezim/MicroCocotteGuitare_Natural.wav"/>
         </instrument>
         <instrument name="Tpt_Phrase1" minnote="50" maxnote="50" rootnote="50" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples4" volume="0.500000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
-	    <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2021/BxMillezim/Bx_Trumpet_Boucle_Phrase_1.wav" sampleRelative="../../../../Samples/So2021/BxMillezim/BxTrumpet_Boucle_Phrase_1.wav"/>
+	    <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2021/BxMillezim/BxTrumpet_Boucle_Phrase_1.wav" sampleRelative="../../../../Samples/So2021/BxMillezim/BxTrumpet_Boucle_Phrase_1.wav"/>
         </instrument>
         <instrument name="Tpt_Phrase2" minnote="51" maxnote="51" rootnote="51" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples4" volume="0.500000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
 	    <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2021/BxMillezim/BxTrumpet_Boucle_Phrase_2.wav" sampleRelative="../../../../Samples/So2021/BxMillezim/BxTrumpet_Boucle_Phrase_2.wav"/>
         </instrument>
         <instrument name="Tpt_Phrase3" minnote="52" maxnote="52" rootnote="52" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples4" volume="0.500000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
-	    <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2021/BxMillezim/Bx_Trumpet_Boucle_Phrase_3.wav" sampleRelative="../../../../Samples/So2021/BxMillezim/BxTrumpet_Boucle_Phrase_3.wav"/>
+	    <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2021/BxMillezim/BxTrumpet_Boucle_Phrase_3.wav" sampleRelative="../../../../Samples/So2021/BxMillezim/BxTrumpet_Boucle_Phrase_3.wav"/>
         </instrument>
         <instrument name="Tpt_Phrase4" minnote="53" maxnote="53" rootnote="53" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples4" volume="0.500000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
 	    <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2021/BxMillezim/BxTrumpet_Boucle_Phrase_4.wav" sampleRelative="../../../../Samples/So2021/BxMillezim/BxTrumpet_Boucle_Phrase_4.wav"/>
         </instrument>
         <instrument name="Tpt_Long1" minnote="38" maxnote="38" rootnote="38" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples4" volume="0.500000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
-	    <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2021/BxMillezim/Bx_Trumpet_Boucle_Long_1.wav" sampleRelative="../../../../Samples/So2021/BxMillezim/BxTrumpet_Boucle_Long_1.wav"/>
+	    <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2021/BxMillezim/BxTrumpet_Boucle_Long_1.wav" sampleRelative="../../../../Samples/So2021/BxMillezim/BxTrumpet_Boucle_Long_1.wav"/>
         </instrument>
         <instrument name="Tpt_Long2" minnote="39" maxnote="39" rootnote="39" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples4" volume="0.500000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
-	    <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2021/BxMillezim/Bx_Trumpet_Boucle_Long_2.wav" sampleRelative="../../../../Samples/So2021/BxMillezim/BxTrumpet_Boucle_Long_2.wav"/>
+	    <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2021/BxMillezim/BxTrumpet_Boucle_Long_2.wav" sampleRelative="../../../../Samples/So2021/BxMillezim/BxTrumpet_Boucle_Long_2.wav"/>
         </instrument>
         <instrument name="Tpt_Long3" minnote="40" maxnote="40" rootnote="40" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples4" volume="0.500000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
-	    <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2021/BxMillezim/Bx_Trumpet_Boucle_Long_3.wav" sampleRelative="../../../../Samples/So2021/BxMillezim/BxTrumpet_Boucle_Long_3.wav"/>
+	    <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2021/BxMillezim/BxTrumpet_Boucle_Long_3.wav" sampleRelative="../../../../Samples/So2021/BxMillezim/BxTrumpet_Boucle_Long_3.wav"/>
         </instrument>
         <instrument name="Tpt_Long4" minnote="41" maxnote="41" rootnote="41" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples4" volume="0.500000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
-	    <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2021/BxMillezim/Bx_Trumpet_Boucle_Long_4.wav" sampleRelative="../../../../Samples/So2021/BxMillezim/BxTrumpet_Boucle_Long_4.wav"/>
+	    <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2021/BxMillezim/BxTrumpet_Boucle_Long_4.wav" sampleRelative="../../../../Samples/So2021/BxMillezim/BxTrumpet_Boucle_Long_4.wav"/>
         </instrument>
         <instrument name="Tpt_Long5" minnote="42" maxnote="42" rootnote="42" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples4" volume="0.500000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
-	    <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2021/BxMillezim/Bx_Trumpet_Boucle_Long_5.wav" sampleRelative="../../../../Samples/So2021/BxMillezim/BxTrumpet_Boucle_Long_5.wav"/>
+	    <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2021/BxMillezim/BxTrumpet_Boucle_Long_5.wav" sampleRelative="../../../../Samples/So2021/BxMillezim/BxTrumpet_Boucle_Long_5.wav"/>
         </instrument>
       </kit>
     </setup>

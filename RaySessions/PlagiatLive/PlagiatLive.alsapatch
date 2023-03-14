@@ -1,4 +1,5 @@
 Hammerfall DSP : HDSP MIDI 1 |> JmjKeyboard : in
+Hammerfall DSP : HDSP MIDI 1 |> seq192.MainSequencer : seq192 in
 Joystick : out              |> JmjKeyboard : in
 
 Mentat : OpenStageControlKeyboardOut              |> JmjKeyboard : in

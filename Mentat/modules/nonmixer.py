@@ -79,12 +79,12 @@ class NonMixer(Module):
         if foh:
             while True:
                 self.wait(1/30, 'sec')
-                self.send('Non-Mixer.'+self.name+'/strip/FOH/Meter/dB%20level/unscaled')
+                self.send('Non-Mixer-XT.'+self.name+'/strip/FOH/Meter/dB%20level/unscaled')
         else:
             while True:
                 self.wait(1/30, 'sec')
                 for strip in self.submodules:
-                    self.send('Non-Mixer.'+self.name+'/strip/'+strip+'/Meter/dB%20level/unscaled')
+                    self.send('Non-Mixer-XT.'+self.name+'/strip/'+strip+'/Meter/dB%20level/unscaled')
 
     def enable_meters(self, foh=False):
         self.start_scene('meter_levels' if not foh else 'foh_meter_levels', self.update_meters, foh)
@@ -125,7 +125,7 @@ class NonMixer(Module):
                     if path[-1] == 'unscaled':
 
                         parameter_name = '/'.join(path[3:-1])
-                        parameter_address = ('Non-Mixer.%s' % self.name) + '/' + '/'.join(path[1:])
+                        parameter_address = ('Non-Mixer-XT.%s' % self.name) + '/' + '/'.join(path[1:])
 
                         plugin_name, _, param_shortname = parameter_name.partition('/')
 
@@ -147,9 +147,9 @@ class NonMixer(Module):
                             plugin_mod = strip_mod.submodules[plugin_name]
 
                             plugin_mod.add_parameter(param_shortname, parameter_address, 'f', default=None, direction=args[2])
-
-
                             plugin_mod.parameters[param_shortname].range = args[3:5]
+
+                            self.send('/signal/infos', parameter_address)
 
                         self.init_params.append(parameter_address)
 
@@ -164,6 +164,22 @@ class NonMixer(Module):
                 for args, kwargs in self.pending_set_calls:
                     self.set(*args, **kwargs)
 
+        elif address == '/reply' and args[0] == '/signal/infos' and len:
+            if len(args) > 2:
+                path = args[1].split('/')
+                parameter_name = '/'.join(path[3:-1])
+                parameter_address = ('Non-Mixer-XT.%s' % self.name) + '/' + '/'.join(path[1:])
+                plugin_name, _, param_shortname = parameter_name.partition('/')
+                if plugin_name in NonMixer.plugin_aliases:
+                    plugin_name = NonMixer.plugin_aliases[plugin_name]
+                strip_name = path[2]
+                strip_mod = self.submodules[strip_name]
+
+                plugin_mod = strip_mod.submodules[plugin_name]
+                # if args[3] != param_shortname:
+                #     if args[3] in NonMixer.parameter_aliases:
+                #         args[3] = NonMixer.parameter_aliases[args[3]]
+                #     plugin_mod.add_alias_parameter(args[3].replace(' ', '%20'), param_shortname)
 
 
         elif address == '/reply':
@@ -213,7 +229,7 @@ class NonMixer(Module):
 
     parameter_aliases = {
         'Gain%20(dB)': 'Gain',
-        'dB%20level': 'Level',
+        'Level%20(dB)': 'Level',
         'Wet%20Level%20(dB)': 'Wet',
 
         'Cutoff%20Frequency': 'Cutoff',

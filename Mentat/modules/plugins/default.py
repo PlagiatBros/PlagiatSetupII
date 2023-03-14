@@ -58,6 +58,10 @@ class Plugin():
 
         for pname in self.plugin.parameters:
 
+            if pname in self.plugin.meta_parameters:
+                # hide meta parameters
+                continue
+
             param = self.plugin.parameters[pname]
 
             if param.feedback_only:
