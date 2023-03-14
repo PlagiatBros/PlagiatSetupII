@@ -152,9 +152,13 @@ class Mk2Control(Module):
                 # vx roll
                 self.engine.modules['VocalsNano'].set(self.voices[args[2] % 3], 'on')
 
+            if cc == 25:
+                self.engine.modules['BassFX'].set('BassDegrade', 'MDA%20Degrade', 'Rate',  args[2] / 127)
+                self.logger.info('BassFX degrade %f' % (args[2] / 127))
+
             if cc == 26:
-                # vx roll
-                self.engine.modules['BassFx'].set('wobble_subdivision', 1 + args[2] % 8])
+                self.engine.modules['BassFX'].set('wobble_subdivision', 1 + args[2] % 8)
+                self.logger.info('BassFX wobble div %d' % (1+args[2]%8))
 
 
 

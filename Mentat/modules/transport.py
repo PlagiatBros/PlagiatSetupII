@@ -82,8 +82,9 @@ class Transport(Module):
             self.engine.modules[mixer].set(strip, 'Scape', 'bpm', bpm)
 
         # Wobble
-        self.engine.modules['BassFX'].set('wobble_bpm', bpm)
-        self.engine.modules['BassFX'].set('wobble_subdivision', 3)
+        if self.engine.modules['BassFX'].has('wobble_bpm'):
+            self.engine.modules['BassFX'].set('wobble_bpm', bpm)
+            self.engine.modules['BassFX'].set('wobble_subdivision', 3)
         # for mixer, strip in [
         #         ('BassFX', 'BassWobble')
         #     ]:

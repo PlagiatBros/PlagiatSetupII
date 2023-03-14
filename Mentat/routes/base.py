@@ -208,3 +208,9 @@ class RouteBase(Route):
         self.resetSamples()
 
         self.engine.set('cut', 'off')
+
+
+    def set_samples_aliases(self, aliases):
+        for name, mod in engine.modules.items():
+            if name == 'Samples' or 'SamplesFX' in name:
+                mod.set_aliases(aliases)

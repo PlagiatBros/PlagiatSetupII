@@ -34,6 +34,23 @@ class BX(Video, Light, RouteBase):
         # Mk2
         mk2Control.set_mode('cut_samples', 'cut_synths')
 
+        # Sample
+        self.set_samples_aliases({
+            'Samples1': 'GuitarCrunch',
+            'Samples2': 'GuitarNatural',
+            'Samples3': 'GuitarChorus',
+            'Samples4': 'Trumpets',
+        })
+
+    def open_samples(self):
+        samples.set('GuitarCrunch', 'Mute', 0.0)
+        samples.set('GuitarNatural', 'Mute', 0.0)
+        samples.set('GuitarChorus', 'Mute', 0.0)
+        samples.set('Trumpets', 'Mute', 0.0)
+        samplesFX3Reverb.set('Trumpets', 'Gain', -10.0)
+        samplesFX3Reverb.set('SamplesFX3Reverb', 'Mute', 0.0)
+
+
     @pedalboard_button(1)
     @mk2_button(1, 'blue')
     def stop(self):
@@ -59,7 +76,7 @@ class BX(Video, Light, RouteBase):
         transport.start()
 
         # Samples
-        # samples.set('Samples2', 'Mute', 0.0)
+        self.open_samples()
 
         # Vocals
         vocalsNano.set('normo_exclu', 'on')
@@ -70,7 +87,6 @@ class BX(Video, Light, RouteBase):
 
         synthsFX2Delay.set('Trap', 'Gain', -14.0)
         synthsFX2Delay.set('SynthsFX2Delay', 'Mute', 0.0)
-
 
     @pedalboard_button(3)
     def couplet(self):
@@ -87,7 +103,7 @@ class BX(Video, Light, RouteBase):
         transport.start()
 
         # Samples
-        # samples.set('Samples2', 'Mute', 0.0)
+        self.open_samples()
 
         # Vocals
         vocalsNano.set('normo_exclu', 'on')
@@ -115,7 +131,7 @@ class BX(Video, Light, RouteBase):
         transport.start()
 
         # Samples
-        # samples.set('Samples2', 'Mute', 0.0)
+        self.open_samples()
 
         # Vocals
         vocalsNano.set('normo_exclu', 'on')
@@ -142,7 +158,7 @@ class BX(Video, Light, RouteBase):
         transport.start()
 
         # Samples
-        # samples.set('Samples2', 'Mute', 0.0)
+        self.open_samples()
 
         # Vocals
         vocalsNano.set('normo_exclu', 'on')
@@ -170,7 +186,7 @@ class BX(Video, Light, RouteBase):
         transport.start()
 
         # Samples
-        # samples.set('Samples2', 'Mute', 0.0)
+        self.open_samples()
 
         # Bass
         bassFX.set('distohi', 'on')
@@ -242,7 +258,7 @@ class BX(Video, Light, RouteBase):
         transport.start()
 
         # Samples
-        # samples.set('Samples2', 'Mute', 0.0)
+        self.open_samples()
 
         # Vocals
         vocalsNano.set('normo_exclu', 'on')
