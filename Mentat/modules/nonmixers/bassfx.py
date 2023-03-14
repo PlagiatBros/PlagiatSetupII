@@ -50,10 +50,9 @@ class BassFX(NonMixer):
 
 
         # wobble bpm / subdiv
-        self.add_parameter('wobble_bpm', None, types='f', default=120)
-        self.add_parameter('wobble_subdivision', None, types='f', default=3)
+        self.add_parameter('wobble_bpm', '/x', types='f', default=120)
+        self.add_parameter('wobble_subdivision', '/y', types='f', default=3)
         self.add_event_callback('parameter_changed', self.parameter_changed)
-
     def parameter_changed(self, module, name, value):
         if module == self and 'wobble' in name:
             bpm = self.get('wobble_bpm')

@@ -104,6 +104,8 @@ class NonMixer(Module):
         """
         Populate submodules and parameters from non's response
         """
+        # print(self.name, len(self.init_params))
+
         if address == '/reply' and args[0] == '/signal/list':
 
             if len(args) > 1:
@@ -161,9 +163,13 @@ class NonMixer(Module):
                 """
                 All received, query current values and create meta parameters
                 """
+                for parameter_address in self.init_params:
+                    self.send(parameter_address)
                 self.check_init_done()
 
         elif address == '/reply' and args[0] == '/signal/infos':
+            # print(self.name, args)
+
             if len(args) > 2:
                 path = args[1].split('/')
                 parameter_name = '/'.join(path[3:-1])
@@ -181,7 +187,7 @@ class NonMixer(Module):
                         args[3] = NonMixer.parameter_aliases[args[3]]
 
                     plugin_mod.add_alias_parameter(args[3], param_shortname)
-            else:
+
                 self.pending_params_labels -= 1
                 self.check_init_done()
 
@@ -218,10 +224,9 @@ class NonMixer(Module):
         pass
 
     def check_init_done(self):
+
         if self.pending_params_labels == 0 and not self.init_done:
             self.init_done = True
-            for parameter_address in self.init_params:
-                self.send(parameter_address)
             for args, kwargs in self.pending_set_calls:
                 self.set(*args, **kwargs)
 
