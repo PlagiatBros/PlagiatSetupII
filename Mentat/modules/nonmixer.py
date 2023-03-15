@@ -1,5 +1,7 @@
 from mentat import Module
 
+NMPREFIX = 'Non-Mixer-XT.'
+
 class Strip(Module):
     """
     NonMixer Strip
@@ -68,7 +70,7 @@ class NonMixer(Module):
     def client_started(self, name):
 
         if name == self.name:
-            self.send('/non/hello', 'osc.udp://127.0.0.1:%i' % self.engine.port, '', '', self.engine.name)
+            # self.send('/non/hello', 'osc.udp://127.0.0.1:%i' % self.engine.port, '', '', self.engine.name)
 
             if not self.init_done:
                 self.send('/signal/list')
@@ -80,12 +82,12 @@ class NonMixer(Module):
         if foh:
             while True:
                 self.wait(1/30, 'sec')
-                self.send('Non-Mixer-XT.'+self.name+'/strip/FOH/Meter/dB%20level/unscaled')
+                self.send(NMPREFIX + self.name + '/strip/FOH/Meter/Level%20(dB)/unscaled')
         else:
             while True:
                 self.wait(1/30, 'sec')
                 for strip in self.submodules:
-                    self.send('Non-Mixer-XT.'+self.name+'/strip/'+strip+'/Meter/dB%20level/unscaled')
+                    self.send(NMPREFIX + self.name + '/strip/'+strip+'/Meter/Level%20(dB)/unscaled')
 
     def enable_meters(self, foh=False):
         self.start_scene('meter_levels' if not foh else 'foh_meter_levels', self.update_meters, foh)
@@ -128,7 +130,7 @@ class NonMixer(Module):
                     if path[-1] == 'unscaled':
 
                         parameter_name = '/'.join(path[3:-1])
-                        parameter_address = ('Non-Mixer-XT.%s' % self.name) + '/' + '/'.join(path[1:])
+                        parameter_address = ('%s%s' % (NMPREFIX, self.name)) + '/' + '/'.join(path[1:])
 
                         plugin_name, _, param_shortname = parameter_name.partition('/')
 
@@ -173,7 +175,7 @@ class NonMixer(Module):
             if len(args) > 2:
                 path = args[1].split('/')
                 parameter_name = '/'.join(path[3:-1])
-                parameter_address = ('Non-Mixer-XT.%s' % self.name) + '/' + '/'.join(path[1:])
+                parameter_address = ('%s%s' % (NMPREFIX, self.name)) + '/' + '/'.join(path[1:])
                 plugin_name, _, param_shortname = parameter_name.partition('/')
                 if plugin_name in NonMixer.plugin_aliases:
                     plugin_name = NonMixer.plugin_aliases[plugin_name]
