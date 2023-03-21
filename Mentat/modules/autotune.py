@@ -37,7 +37,7 @@ class Autotune(Module):
             self.pitch_value = pitch
             self.set('offset', val + self.base_offset)
 
-        self.add_meta_parameter('pitch',  ['offset'], pitch_getter, pitch_setter)
+        self.add_meta_parameter('pitch',  'offset', pitch_getter, pitch_setter)
 
 
     def set_notes(self, *notes):

@@ -48,7 +48,7 @@ class Vocals(NonMixer):
 
                 self.add_meta_parameter(
                     name,
-                    [[strip_name, 'Mute'], [ab_strip_name, 'Mute']],
+                    [(strip_name, 'Mute'), (ab_strip_name, 'Mute')],
                     getter,
                     setter
                 )

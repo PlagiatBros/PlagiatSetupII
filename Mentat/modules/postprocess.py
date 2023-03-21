@@ -22,28 +22,28 @@ class PostProcess(Module):
         """
         root.add_meta_parameter(
             'pitch_vocals',
-            [[autotune, 'pitch'] for autotune in autotunes],
+            [(autotune, 'pitch') for autotune in autotunes],
             getter= lambda *p: p[0],
             setter= lambda p: [root.set(autotune, 'pitch', p) for autotune in autotunes]
         )
 
         root.add_meta_parameter(
             'pitch_bass',
-            [['Outputs', bass, 'Pitchshifter', 'Pitch'] for bass in basses],
+            [('Outputs', bass, 'Pitchshifter', 'Pitch') for bass in basses],
             getter= lambda *p: p[0],
             setter= lambda p: [root.set('Outputs', bass, 'Pitchshifter', 'Pitch', p) for bass in basses]
         )
 
         root.add_meta_parameter(
             'pitch_synths',
-            [['Outputs', 'Synths', 'Pitchshifter', 'Pitch']],
+            [('Outputs', 'Synths', 'Pitchshifter', 'Pitch')],
             getter= lambda p: p,
             setter= lambda p: root.set('Outputs', 'Synths', 'Pitchshifter', 'Pitch', p)
         )
 
         root.add_meta_parameter(
             'pitch_samples',
-            [['Outputs', 'Samples', 'Pitchshifter', 'Pitch']],
+            [('Outputs', 'Samples', 'Pitchshifter', 'Pitch')],
             getter= lambda p: p,
             setter= lambda p: root.set('Outputs', 'Samples', 'Pitchshifter', 'Pitch', p)
         )
@@ -61,21 +61,21 @@ class PostProcess(Module):
         """
         root.add_meta_parameter(
             'filter_bass',
-            [['Outputs', bass, 'Lowpass', 'Cutoff'] for bass in basses],
+            [('Outputs', bass, 'Lowpass', 'Cutoff') for bass in basses],
             getter= lambda *f: f[0],
             setter= lambda f: [root.set('Outputs', bass, 'Lowpass', 'Cutoff', f) for bass in basses]
         )
 
         root.add_meta_parameter(
             'filter_synths',
-            [['Outputs', 'Synths', 'Lowpass', 'Cutoff']],
+            [('Outputs', 'Synths', 'Lowpass', 'Cutoff')],
             getter= lambda f: f,
             setter= lambda f: [root.set('Outputs', 'Synths', 'Lowpass', 'Cutoff', f)]
         )
 
         root.add_meta_parameter(
             'filter_samples',
-            [['Outputs', 'Samples', 'Lowpass', 'Cutoff']],
+            [('Outputs', 'Samples', 'Lowpass', 'Cutoff')],
             getter= lambda f: f,
             setter= lambda f: [root.set('Outputs', 'Samples', 'Lowpass', 'Cutoff', f)]
         )
@@ -93,7 +93,7 @@ class PostProcess(Module):
         """
         for strip in ['Bass', 'BassSynths', 'Synths', 'Samples']:
             def closure(strip):
-                params = [['Outputs', strip, 'Mute'], ['Outputs', strip, 'Aux-A', 'Gain'], ['Outputs', strip, 'Aux-B', 'Gain'], ['Outputs', strip, 'Aux-C', 'Gain']]
+                params = [('Outputs', strip, 'Mute'), ('Outputs', strip, 'Aux-A', 'Gain'), ('Outputs', strip, 'Aux-B', 'Gain'), ('Outputs', strip, 'Aux-C', 'Gain')]
                 def getter(mute, auxa, auxb, auxc):
                     if mute == 1 and auxa == -70 and auxb == -70 and auxc == -70:
                         return 'on'

@@ -24,7 +24,7 @@ class VocalsFX(NonMixer):
 
         self.add_meta_parameter(
             'pre',
-            [['%s%s' % (prefix, v), 'Mute'] for v in ['Meuf', 'Normo', 'Gars']],
+            [('%s%s' % (prefix, v), 'Mute') for v in ['Meuf', 'Normo', 'Gars']],
             pre_getter,
             pre_setter
         )
@@ -39,7 +39,7 @@ class VocalsFX(NonMixer):
 
         self.add_meta_parameter(
             'post',
-            [[name, 'Mute']],
+            [(name, 'Mute')],
             post_getter,
             post_setter
         )
