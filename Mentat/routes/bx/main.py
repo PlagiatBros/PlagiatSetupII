@@ -115,6 +115,33 @@ class BX(Video, Light, RouteBase):
         synthsFX2Delay.set('Trap', 'Gain', -14.0)
         synthsFX2Delay.set('SynthsFX2Delay', 'Mute', 0.0)
 
+    @mk2_button(2)
+    def stop_basses(self):
+        """
+        STOP BASSES
+        """
+        # Séquences
+        seq192.select('off', 'couplet_*Low*')
+
+        self.start_scene('sequence/bx_heeee', lambda: [
+            self.wait(3.5, 'beat'),
+            prodSampler.send('/instrument/play', 's:bx_heee'),
+            self.wait(1.5, 'beat'),
+            self.pretrap()
+        ])
+
+    @mk2_button(3)
+    def pretrap(self):
+        """
+        PRE-TRAP
+        """
+        # Séquences
+        seq192.select('solo', 'couplet_*')
+
+        # Vocals
+        vocalsNano.set('normo_exclu', 'on')
+        vocalsKesch.set('normo_exclu', 'on')
+
 
     @pedalboard_button(4)
     def trap(self):
@@ -163,7 +190,7 @@ class BX(Video, Light, RouteBase):
         samplesFX2Delay.set('SamplesFX2Delay', 'Mute', 0.0)
 
         # Vocals
-        vocalsNano.set('normo_exclu', 'on')
+        vocalsNano.set('meuf_exclu', 'on')
         vocalsKesch.set('normo_exclu', 'on')
 
         # Keyboard
@@ -254,6 +281,95 @@ class BX(Video, Light, RouteBase):
         ], loop=True)
 
     @pedalboard_button(7)
+    def pont_afrotrap(self):
+        """
+        PONT AFRO TRAP
+        """
+        self.pause_loopers()
+        self.reset()
+
+        # Sequences
+        seq192.select('solo', 'pont_afro_trap_*')
+
+        # Transport
+        transport.start()
+
+        # Samples
+        self.open_samples()
+
+        # Vocals
+        vocalsNano.set('normo_exclu', 'on')
+        vocalsKesch.set('gars_exclu', 'on')
+
+        # Keyboard
+        jmjKeyboard.set_sound('ZTrumpets', boost=True)
+
+        synthsFX2Delay.set('Trap', 'Gain', -14.0)
+        synthsFX2Delay.set('SynthsFX2Delay', 'Mute', 0.0)
+
+        # Séquences
+        self.start_scene('sequence/bx_whatif', lambda: [
+            self.wait(4, 'beat'), #bar 1
+            self.wait(4, 'beat'), #bar 2
+            self.wait(3.51, 'beat'), #bar 3
+            vocalsKesch.set('normo_exclu', 'on'),
+            self.wait(0.49, 'beat'),
+            self.wait(4, 'beat'), #bar 4
+            self.couplet_2_1()
+        ])
+
+    def couplet_2_1(self):
+        """
+        COUPLET 2 PART 1 (ain't no suv...)
+        """
+        self.couplet()
+
+        # Vocals
+        vocalsKesch.set('meuf', 'on')
+
+        # Séquence
+        self.start_scene('sequence/couplet_2_1', lambda: [
+            self.wait(4, 'beat'), #bar 1
+            self.wait(4, 'beat'), #bar 2
+            self.wait(4, 'beat'), #bar 3
+            self.wait(3, 'beat'), #bar 4
+            # Alternate trap
+            vocalsKesch.set('meuf_exclu', 'on'),
+            vocalsNano.set('meuf_exclu', 'on'),
+            self.wait(1, 'beat'),
+            seq192.select('solo', 'trap_*')
+            self.wait(4, 'beat'), # bar 1
+            self.wait(4, 'beat'), # bar 2
+            self.wait(4, 'beat'), # bar 3
+            self.wait(0.5, 'beat'), # bar 4
+            prodSampler.send('/instrument/play', 's:bx_youwontraise'),
+            self.wait(3.5, 'beat'),
+            self.trap()
+        ])
+
+    @mk2_button(5)
+    def trap_stop_basses(self):
+        """
+        TRAP STOP BASSES
+        """
+        # Séquences
+        seq192.select('off', 'trap_*Low*')
+
+        # Vocals
+        vocalsNano.set('normo_exclu', 'on')
+        vocalsKesch.set('normo_exclu', 'on')
+
+    @mk2_button(6)
+    def trap_stop_manhooky(self):
+        """
+        TRAP STOP MANHOOKY (& du 4)
+        """
+        self.start_sequence('sequence/trap_stop_manhooky', lambda: [
+            prodSampler.send('/instrument/play', 's:bx_youwontraise'),
+            self.wait(0.5, 'beat'),
+            seq192.select('off', '*')
+        ])
+
     def afro(self):
         """
         AFRO
