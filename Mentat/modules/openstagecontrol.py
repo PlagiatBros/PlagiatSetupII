@@ -55,7 +55,7 @@ class OpenStageControl(Module):
         transport = self.engine.modules['Transport']
         while True:
 
-            cursor = 0
+            cursor = 0.0
             if self.get('rolling'):
                 cycle_duration = 1000000000 * engine.cycle_length * 60 / engine.tempo
                 cursor = ((engine.current_time - engine.cycle_start_time) % cycle_duration) / cycle_duration

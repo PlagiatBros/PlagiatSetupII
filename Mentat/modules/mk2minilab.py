@@ -27,7 +27,7 @@ class Mk2Control(Module):
 
         self.shift_key = False
         self.pressed_notes = 0
-        self.modes = 'mute_samples'
+        self.modes = ['mute_samples']
 
         self.voices = ['gars_exclu', 'meuf_exclu', 'normo_exclu']
         self.current_voice = 0
