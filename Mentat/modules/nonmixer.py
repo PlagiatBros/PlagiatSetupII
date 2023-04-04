@@ -190,7 +190,7 @@ class NonMixer(Module):
 
                     plugin_mod.add_alias_parameter(args[3], param_shortname)
                     plugin_mod.parameters[args[3]].range = plugin_mod.parameters[param_shortname].range
-                    plugin_mod.parameters[args[3]].feedback_only = plugin_mod.parameters[param_shortname].feedback_only 
+                    plugin_mod.parameters[args[3]].feedback_only = plugin_mod.parameters[param_shortname].feedback_only
 
                 self.pending_params_labels -= 1
                 self.check_init_done()

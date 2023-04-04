@@ -288,7 +288,7 @@ class BX(Video, Light, RouteBase):
             1: lambda: [
                 synthsFX2Delay.set('EasyClassical', 'Gain', -70.0),
                 synthsFX2Delay.set('TrapFifth', 'Gain', -70.0),
-
+                bassFX.reset('BassDegrade', 'MDA%20Degrade', 'rate'),
                 bassFX.set('BassScapeIn', 'Mute', 1.0),
                 bassFX.set('BassWobbleIn', 'Mute', 1.0),
                 ],
@@ -301,6 +301,7 @@ class BX(Video, Light, RouteBase):
             4.5: lambda: [
                 bassFX.set('BassScapeIn', 'Mute', 0.0),
                 bassFX.set('BassWobbleIn', 'Mute', 0.0),
+                bassFX.animate('BassDegrade', 'MDA%20Degrade', 'rate', None, 0.71, 1, 'beat'),
                 ],
         },
         { # bar 4
@@ -308,11 +309,16 @@ class BX(Video, Light, RouteBase):
                 bassFX.set('BassScapeIn', 'Mute', 1.0),
                 bassFX.set('BassWobbleIn', 'Mute', 1.0),
                 ],
+            1.2: lambda: [
+                bassFX.reset('BassDegrade', 'MDA%20Degrade', 'rate')
+            ],
             3.5: lambda: [
                 synthsFX2Delay.set('EasyClassical', 'Gain', -3.0),
                 synthsFX2Delay.set('TrapFifth', 'Gain', -3.0),
                 bassFX.set('BassWobbleIn', 'Mute', 0.0),
                 bassFX.set('BassScapeIn', 'Mute', 0.0),
+                bassFX.animate('BassDegrade', 'MDA%20Degrade', 'rate', None, 0.68, 1, 'beat'),
+
                 ],
         },
         ], loop=True)
@@ -411,7 +417,7 @@ class BX(Video, Light, RouteBase):
         """
         TRAP STOP MANHOOKY (& du 4)
         """
-        self.start_sequence('sequence/trap_stop_manhooky', lambda: [
+        self.start_scene('sequence/trap_stop_manhooky', lambda: [
             prodSampler.send('/instrument/play', 's:Bx_YouWontRaise'),
             self.wait(0.5, 'beat'),
             seq192.select('off', '*')

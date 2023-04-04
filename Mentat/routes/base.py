@@ -134,6 +134,7 @@ class RouteBase(Route):
         Reset effects
         """
         # BassFX
+        bassFX.reset('BassDegrade', 'MDA%20Degrade', 'rate')
         for name in bassFX.meta_parameters:
             bassFX.set(name, 'off')
 
