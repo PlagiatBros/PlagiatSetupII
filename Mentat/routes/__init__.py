@@ -10,16 +10,18 @@ from .stickitout.main import StickItOut
 from .IfIHadAHummer.main import IfIHadAHummer
 from .clashdescoaches.main import ClashDesCoaches
 from .bx.main import BX
+from .ddd.main import DDD
 
 snapshat = Snapshat('Snapshat')
 mcob = Mcob('Mcob')
 agneaugastrik = AgneauGastrik('AgneauGastrik')
 sapercomjaja = SaperComJaja('SaperComJaja')
 stagiaire = Stagiaire('Stagiaire')
-sW = SW('SW')
+SW = SW('SW')
 viktorhuguau = ViktorHuguau('ViktorHuguau')
-ramenerMooncup = RamenerMooncup('RamenerMooncup')
+RamenerMooncup = RamenerMooncup('RamenerMooncup')
 stickItOut = StickItOut('StickItOut')
 ifIHadAHummer = IfIHadAHummer('IfIHadAHummer')
 clashDesCoaches = ClashDesCoaches('ClashDesCoaches')
 bx = BX('BX')
+ddd = DDD('DDD')
