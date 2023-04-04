@@ -170,42 +170,42 @@ class BX(Video, Light, RouteBase):
         synthsFX2Delay.set('Trap', 'Gain', -14.0)
         synthsFX2Delay.set('SynthsFX2Delay', 'Mute', 0.0)
 
-    @mk2_button(4)
-    def prerefrain(self):
-        """
-        PREREFRAIN
-        """
-        self.pause_loopers()
-        self.reset()
-
-        # Sequences
-        seq192.select('solo', 'prerefrain_*')
-
-        # Transport
-        transport.start()
-
-        # Samples
-        self.open_samples()
-        samplesFX2Delay.set('GuitarCrunch', 'Gain', -18.0)
-        samplesFX2Delay.set('SamplesFX2Delay', 'Mute', 0.0)
-
-        # Vocals
-        vocalsNano.set('meuf_exclu', 'on')
-        vocalsKesch.set('normo_exclu', 'on')
-
-        # Keyboard
-        jmjKeyboard.set_sound('ZTrumpets', boost=False)
-
-        synths.set('TrapFifth', 'Amp', 'Gain', 0.35)
-        synths.set('TrapFifth', 'Pan', -0.33)
-        synths.set('ZTrumpets', 'Pan', 0.33)
-
-        synthsFX2Delay.set('TrapFifth', 'Gain', -18.0)
-        synthsFX2Delay.set('ZTrumpets', 'Gain', -18.0)
-        synthsFX2Delay.set('SynthsFX2Delay', 'Mute', 0.0)
-
-        self.engine.animate('filter_synths', 20, 22000, 64, 'b', 'exponential')
-        # self.engine.animate('GuitarCrunch', None, -, 64, 'b', 'exponential')
+    # @mk2_button(4)
+    # def prerefrain(self):
+    #     """
+    #     PREREFRAIN
+    #     """
+    #     self.pause_loopers()
+    #     self.reset()
+    #
+    #     # Sequences
+    #     seq192.select('solo', 'prerefrain_*')
+    #
+    #     # Transport
+    #     transport.start()
+    #
+    #     # Samples
+    #     self.open_samples()
+    #     samplesFX2Delay.set('GuitarCrunch', 'Gain', -18.0)
+    #     samplesFX2Delay.set('SamplesFX2Delay', 'Mute', 0.0)
+    #
+    #     # Vocals
+    #     vocalsNano.set('meuf_exclu', 'on')
+    #     vocalsKesch.set('normo_exclu', 'on')
+    #
+    #     # Keyboard
+    #     jmjKeyboard.set_sound('ZTrumpets', boost=False)
+    #
+    #     synths.set('TrapFifth', 'Amp', 'Gain', 0.35)
+    #     synths.set('TrapFifth', 'Pan', -0.33)
+    #     synths.set('ZTrumpets', 'Pan', 0.33)
+    #
+    #     synthsFX2Delay.set('TrapFifth', 'Gain', -18.0)
+    #     synthsFX2Delay.set('ZTrumpets', 'Gain', -18.0)
+    #     synthsFX2Delay.set('SynthsFX2Delay', 'Mute', 0.0)
+    #
+    #     self.engine.animate('filter_synths', 20, 22000, 64, 'b', 'exponential')
+    #     # self.engine.animate('GuitarCrunch', None, -, 64, 'b', 'exponential')
 
     @pedalboard_button(5)
     def refrain(self):
