@@ -125,7 +125,7 @@ class BX(Video, Light, RouteBase):
 
         self.start_scene('sequence/bx_heeee', lambda: [
             self.wait(3.5, 'beat'),
-            prodSampler.send('/instrument/play', 's:bx_heee'),
+            prodSampler.send('/instrument/play', 's:Bx_Heee'),
             self.wait(1.5, 'beat'),
             self.pretrap()
         ])
@@ -309,6 +309,7 @@ class BX(Video, Light, RouteBase):
 
         # Séquences
         self.start_scene('sequence/bx_whatif', lambda: [
+            prodSampler.send('/instrument/play', 's:Bx_WhatIf'),
             self.wait(4, 'beat'), #bar 1
             self.wait(4, 'beat'), #bar 2
             self.wait(3.51, 'beat'), #bar 3
@@ -342,7 +343,7 @@ class BX(Video, Light, RouteBase):
             self.wait(4, 'beat'), # bar 2
             self.wait(4, 'beat'), # bar 3
             self.wait(0.5, 'beat'), # bar 4
-            prodSampler.send('/instrument/play', 's:bx_youwontraise'),
+            prodSampler.send('/instrument/play', 's:Bx_YouWontRaise'),
             self.wait(3.5, 'beat'),
             self.trap()
         ])
@@ -365,7 +366,7 @@ class BX(Video, Light, RouteBase):
         TRAP STOP MANHOOKY (& du 4)
         """
         self.start_sequence('sequence/trap_stop_manhooky', lambda: [
-            prodSampler.send('/instrument/play', 's:bx_youwontraise'),
+            prodSampler.send('/instrument/play', 's:Bx_YouWontRaise'),
             self.wait(0.5, 'beat'),
             seq192.select('off', '*')
         ])
