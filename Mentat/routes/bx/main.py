@@ -124,13 +124,13 @@ class BX(Video, Light, RouteBase):
         seq192.select('off', 'couplet_*Low*')
 
         self.start_scene('sequence/bx_heeee', lambda: [
-            self.wait(3.5, 'beat'),
+            self.wait(3.6, 'beat'),
             prodSampler.send('/instrument/play', 's:Bx_Heee'),
-            self.wait(1.5, 'beat'),
+            self.wait(1.4, 'beat'),
             self.pretrap()
         ])
 
-    @mk2_button(3)
+    # @mk2_button(3)
     def pretrap(self):
         """
         PRE-TRAP
@@ -169,6 +169,43 @@ class BX(Video, Light, RouteBase):
 
         synthsFX2Delay.set('Trap', 'Gain', -14.0)
         synthsFX2Delay.set('SynthsFX2Delay', 'Mute', 0.0)
+
+    @mk2_button(4)
+    def prerefrain(self):
+        """
+        PREREFRAIN
+        """
+        self.pause_loopers()
+        self.reset()
+
+        # Sequences
+        seq192.select('solo', 'prerefrain_*')
+
+        # Transport
+        transport.start()
+
+        # Samples
+        self.open_samples()
+        samplesFX2Delay.set('GuitarCrunch', 'Gain', -18.0)
+        samplesFX2Delay.set('SamplesFX2Delay', 'Mute', 0.0)
+
+        # Vocals
+        vocalsNano.set('meuf_exclu', 'on')
+        vocalsKesch.set('normo_exclu', 'on')
+
+        # Keyboard
+        jmjKeyboard.set_sound('ZTrumpets', boost=False)
+
+        synths.set('TrapFifth', 'Amp', 'Gain', 0.35)
+        synths.set('TrapFifth', 'Pan', -0.33)
+        synths.set('ZTrumpets', 'Pan', 0.33)
+
+        synthsFX2Delay.set('TrapFifth', 'Gain', -18.0)
+        synthsFX2Delay.set('ZTrumpets', 'Gain', -18.0)
+        synthsFX2Delay.set('SynthsFX2Delay', 'Mute', 0.0)
+
+        self.engine.animate('filter_synths', 20, 22000, 64, 'b', 'exponential')
+        # self.engine.animate('GuitarCrunch', None, -, 64, 'b', 'exponential')
 
     @pedalboard_button(5)
     def refrain(self):
@@ -329,24 +366,33 @@ class BX(Video, Light, RouteBase):
         vocalsKesch.set('meuf', 'on')
 
         # Séquence
-        self.start_scene('sequence/couplet_2_1', lambda: [
-            self.wait(4, 'beat'), #bar 1
-            self.wait(4, 'beat'), #bar 2
-            self.wait(4, 'beat'), #bar 3
-            self.wait(3, 'beat'), #bar 4
-            # Alternate trap
-            vocalsKesch.set('meuf_exclu', 'on'),
-            vocalsNano.set('meuf_exclu', 'on'),
-            self.wait(1, 'beat'),
-            seq192.select('solo', 'trap_*'),
-            self.wait(4, 'beat'), # bar 1
-            self.wait(4, 'beat'), # bar 2
-            self.wait(4, 'beat'), # bar 3
-            self.wait(0.5, 'beat'), # bar 4
-            prodSampler.send('/instrument/play', 's:Bx_YouWontRaise'),
-            self.wait(3.5, 'beat'),
-            self.trap()
-        ])
+        self.start_sequence('couplet_2_1', {
+            {}, # bar 1
+            {}, # bar 2
+            {}, # bar 3
+            {   # bar 4
+                1: lambda: seq192.select('off', '*'),
+                3: lambda: [
+                    vocalsKesch.set('meuf_exclu', 'on'),
+                    vocalsNano.set('meuf_exclu', 'on'),
+                ]
+            },
+            {   # bar 5: Alternate trap
+                1: lambda: seq192.select('solo', 'trap_*')
+            },
+            {}, # bar 6
+            {}, # bar 7
+            {   # bar 8
+                1.5: lambda: prodSampler.send('/instrument/play', 's:Bx_YouWontRaise')
+            },
+            {}, # bar 9
+            {}, # bar 10
+            {}, # bar 11
+            {}, # bar 12
+            {   # bar 13
+                1: lambda: self.trap_stop_basses()
+            },
+        }, loop=False)
 
     @mk2_button(5)
     def trap_stop_basses(self):
@@ -360,7 +406,7 @@ class BX(Video, Light, RouteBase):
         vocalsNano.set('normo_exclu', 'on')
         vocalsKesch.set('normo_exclu', 'on')
 
-    @mk2_button(6)
+    @mk2_button(6, 'orange')
     def trap_stop_manhooky(self):
         """
         TRAP STOP MANHOOKY (& du 4)
