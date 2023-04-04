@@ -60,6 +60,14 @@ class AlsaPatcher(Module):
                 self.logger.warning('port "%s" not found in client "%s"' % (port_name, client.name))
 
 
+    reads = alsaseq.SEQ_PORT_CAP_WRITE | alsaseq.SEQ_PORT_CAP_SUBS_WRITE
+    writes = alsaseq.SEQ_PORT_CAP_READ | alsaseq.SEQ_PORT_CAP_SUBS_READ
+    def is_valid_port(self, client_id, port_id):
+        caps = self.seq.get_port_info(port_id, client_id)['capability']
+        return (not caps & alsaseq.SEQ_PORT_CAP_NO_EXPORT
+                and (caps & self.writes == self.writes
+                or caps & self.reads == self.reads))
+
     def get_alsa_connections(self):
         """
         connection_list(...) method of alsaseq.Sequencer instance
@@ -95,13 +103,15 @@ class AlsaPatcher(Module):
 
             self.clients_names[client_id] = client_name
 
+            valid_ports = [p for p in port_list if self.is_valid_port(client_id, p[1])]
+
             self.clients[client_name] = AlsaClient(
                 name=client_name,
                 id=client_id,
-                ports=port_list
+                ports=valid_ports
             )
 
-            for port in port_list:
+            for port in valid_ports:
                 port_name, port_id, connection_list = port
                 connections = connection_list[0]
                 for connection in connections:
@@ -147,7 +157,7 @@ class AlsaPatcher(Module):
         Apply patch : attempt to make very connection in memory and ignore reconnection errors.
         """
 
-        self.get_alsa_connections(),
+        self.get_alsa_connections()
 
         for connection in self.connections:
 
