@@ -65,7 +65,7 @@ class NonMixer(Module):
 
         self.pending_set_calls = []
 
-        self.add_event_callback('client_started', self.client_started)
+        self.engine.add_event_callback('client_started', self.client_started)
 
     def client_started(self, name):
 
@@ -189,6 +189,8 @@ class NonMixer(Module):
                         args[3] = NonMixer.parameter_aliases[args[3]]
 
                     plugin_mod.add_alias_parameter(args[3], param_shortname)
+                    plugin_mod.parameters[args[3]].range = plugin_mod.parameters[param_shortname].range
+                    plugin_mod.parameters[args[3]].feedback_only = plugin_mod.parameters[param_shortname].feedback_only 
 
                 self.pending_params_labels -= 1
                 self.check_init_done()

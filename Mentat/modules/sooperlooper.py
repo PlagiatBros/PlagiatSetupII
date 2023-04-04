@@ -40,7 +40,7 @@ class SooperLooper(Module):
 
         self.pending_record = None
 
-        self.add_event_callback('client_started', self.client_started)
+        self.engine.add_event_callback('client_started', self.client_started)
 
     def client_started(self, name):
         """

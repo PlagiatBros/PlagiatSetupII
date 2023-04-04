@@ -37,11 +37,11 @@ class OpenStageControl(Module):
         self.add_parameter('miniroute_methods', '/miniroute_methods', types='s', default='')
         self.add_parameter('rolling', '/rolling', types='i', default=0)
 
-        self.add_event_callback('parameter_changed', self.parameter_changed)
-        self.add_event_callback('client_started', self.client_started)
-        self.add_event_callback('started', lambda: self.set('routes', ','.join(self.engine.routes.keys())) )
-        self.add_event_callback('route_changed', self.engine_route_changed)
-        self.add_event_callback('nonmixer_ready', lambda name: self.start_scene('populate_gui', self.populate_gui))
+        self.engine.add_event_callback('parameter_changed', self.parameter_changed)
+        self.engine.add_event_callback('client_started', self.client_started)
+        self.engine.add_event_callback('started', lambda: self.set('routes', ','.join(self.engine.routes.keys())) )
+        self.engine.add_event_callback('route_changed', self.engine_route_changed)
+        self.engine.add_event_callback('nonmixer_ready', lambda name: self.start_scene('populate_gui', self.populate_gui))
 
 
         self.start_scene('cycle_watch', self.cycle_watch)
