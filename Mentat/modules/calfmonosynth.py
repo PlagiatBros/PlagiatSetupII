@@ -70,7 +70,7 @@ class CalfMonoSynth(Module):
         if legatomode in self.legatomodes:
             self.set('LegatoMode', self.legatomodes[legatomode])
 
-    def set_lfotriggermode(self, triggermode, lof):
+    def set_lfotriggermode(self, triggermode, lfo):
         """
         Set lfo trigger mode.
 

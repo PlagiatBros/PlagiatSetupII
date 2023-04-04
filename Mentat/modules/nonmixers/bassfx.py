@@ -55,5 +55,5 @@ class BassFX(NonMixer):
         self.add_mapping(
             ['wobble_bpm', 'wobble_subdivision'],
             ('BassWobble', 'MDA%20RezFilter', 'LFO%20Rate'),
-            lambda bpm, div: (log10((bpm/60.)*div) + 1.5) / 3)
+            lambda bpm, div: (log10((bpm/60.)*div) + 1.5) / 3
         )

@@ -86,20 +86,20 @@ def print_routes():
             if hasattr(part, 'pedalboard_buttons'):
                 print('  Pedalboard button: %s' % ', '.join([str(x) for x in part.pedalboard_buttons.keys()]))
             if getdoc(part):
-                print(indent(getdoc(part), '    '), '\n')
+                print(indent(str(getdoc(part)), '    '), '\n')
             else:
                 print(indent(part.__name__, '    '), '\n')
 
 
 def docs():
-    engine.root_module.wait(2,'s')
-    print_params(engine.root_module, 0)
+    engine.wait(2,'s')
+    print_params(engine, 0)
     f = open('docs.txt', 'w')
     f.write(_docs)
     f.close()
 
 if '--docs' in argv:
-    engine.root_module.start_scene('docs', docs)
+    engine.start_scene('docs', docs)
     engine.stop_scene('*')
     exit(0)
 

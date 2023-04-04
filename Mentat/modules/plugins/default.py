@@ -112,7 +112,7 @@ class Plugin():
                     ]
                 })
 
-        if len(feedback['widgets']):
+        if feedback['widgets']:
             panel['widgets'].append(feedback)
             feedback['width'] = 50 * len(feedback['widgets'])
 
