@@ -16,7 +16,7 @@ class DDD(Video, Light, RouteBase):
 
         super().activate()
 
-        transport.set_tempo(120)
+        transport.set_tempo(80)
         transport.set_cycle('4/4')
 
         # Setups, banks...

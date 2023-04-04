@@ -406,7 +406,7 @@ class BX(Video, Light, RouteBase):
         vocalsNano.set('normo_exclu', 'on')
         vocalsKesch.set('normo_exclu', 'on')
 
-    @mk2_button(6, 'orange')
+    @mk2_button(6, 'yellow')
     def trap_stop_manhooky(self):
         """
         TRAP STOP MANHOOKY (& du 4)
