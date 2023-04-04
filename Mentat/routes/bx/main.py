@@ -337,7 +337,7 @@ class BX(Video, Light, RouteBase):
             vocalsKesch.set('meuf_exclu', 'on'),
             vocalsNano.set('meuf_exclu', 'on'),
             self.wait(1, 'beat'),
-            seq192.select('solo', 'trap_*')
+            seq192.select('solo', 'trap_*'),
             self.wait(4, 'beat'), # bar 1
             self.wait(4, 'beat'), # bar 2
             self.wait(4, 'beat'), # bar 3
