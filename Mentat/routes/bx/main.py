@@ -136,7 +136,7 @@ class BX(Video, Light, RouteBase):
         PRE-TRAP
         """
         # Séquences
-        seq192.select('solo', 'couplet_*')
+        seq192.select('solo', 'pretrap_*')
 
         # Vocals
         vocalsNano.set('normo_exclu', 'on')
@@ -169,6 +169,17 @@ class BX(Video, Light, RouteBase):
 
         synthsFX2Delay.set('Trap', 'Gain', -14.0)
         synthsFX2Delay.set('SynthsFX2Delay', 'Mute', 0.0)
+
+        # Séquences
+        self.start_sequence('sequence/trap', [
+            {},
+            {
+                3: lambda: self.engine.animate('pitch_samples', 1, 0.6, 1.95, 'b', easing='cubic-in'),
+                4.95: lambda: self.engine.animate('pitch_samples', None, 1, 0.05, 'b', easing='cubic-in')
+            },
+            {},
+            {}
+        ], loop=True)
 
     # @mk2_button(4)
     # def prerefrain(self):
