@@ -85,6 +85,14 @@ class BX(Video, Light, RouteBase):
         # Keyboard
         jmjKeyboard.set_sound('ZTrumpets', boost=True)
 
+
+        # Synths
+        synths.set('Trap', 'Pan', -0.7)
+        synths.set('ZStambul', 'Pan', 0.5)
+        synths.set('EasyClassical', 'Pan', 0.3)
+
+        synths.set('Trap', 'Amp', 'Gain', 0.35)
+
         synthsFX2Delay.set('Trap', 'Gain', -14.0)
         synthsFX2Delay.set('SynthsFX2Delay', 'Mute', 0.0)
 
@@ -98,6 +106,9 @@ class BX(Video, Light, RouteBase):
 
         # Sequences
         seq192.select('solo', 'couplet_*')
+        seq192.select('off', 'couplet_*guitar*')
+        # seq192.select('off', 'couplet_*cHi_easyClassical')
+
 
         # Transport
         transport.start()
@@ -112,10 +123,47 @@ class BX(Video, Light, RouteBase):
         # Keyboard
         jmjKeyboard.set_sound('ZTrumpets', boost=True)
 
+        # Synths
+        synths.set('Trap', 'Pan', -0.7)
+        synths.set('ZStambul', 'Pan', 0.5)
+        synths.set('EasyClassical', 'Pan', 0.3)
+
+
+        synths.set('Trap', 'Amp', 'Gain', 0.35)
         # synthsFX2Delay.set('Trap', 'Gain', -14.0)
         # synthsFX2Delay.set('SynthsFX2Delay', 'Mute', 0.0)
 
+        self.start_sequence('couplet_1_p1', [
+            {},
+            {},
+            {},
+            {
+                3.5: lambda: self.couplet_1_p2()
+            }
+        ])
+
     @mk2_button(2)
+    def couplet_1_p2(self):
+        # Séquences
+        seq192.select('off', 'couplet*Hi_*')
+        seq192.select('on', 'couplet_*samples_guitar*')
+
+        # Samples
+        self.open_samples()
+        samplesFX2Delay.set('ConstantSampler', 'Gain', -18.0)
+        samplesFX2Delay.set('SamplesFX2Delay', 'Mute', 0.0)
+        samplesFX3Reverb.set('GuitarCrunch', 'Gain', -42.0)
+        samplesFX3Reverb.set('SamplesFX3Reverb', 'Mute', 0.0)
+        samplesFX6Scape.set('GuitarCrunch', 'Gain', -26.67)
+        samplesFX6Scape.set('SamplesFX6Scape', 'Mute', 0.0)
+
+
+    @mk2_button(3)
+    def couplet_1_p3(self):
+        # Séquences
+        seq192.select('on', 'couplet_*Hi*')
+
+    @mk2_button(4)
     def stop_basses(self):
         """
         STOP BASSES
