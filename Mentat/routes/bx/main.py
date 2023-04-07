@@ -112,8 +112,8 @@ class BX(Video, Light, RouteBase):
         # Keyboard
         jmjKeyboard.set_sound('ZTrumpets', boost=True)
 
-        synthsFX2Delay.set('Trap', 'Gain', -14.0)
-        synthsFX2Delay.set('SynthsFX2Delay', 'Mute', 0.0)
+        # synthsFX2Delay.set('Trap', 'Gain', -14.0)
+        # synthsFX2Delay.set('SynthsFX2Delay', 'Mute', 0.0)
 
     @mk2_button(2)
     def stop_basses(self):
