@@ -456,6 +456,15 @@
         <instrument name="Tpt_Long5" minnote="42" maxnote="42" rootnote="42" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples4" volume="0.500000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
 	    <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2021/BxMillezim/BxTrumpet_Boucle_Long_5.wav" sampleRelative="../../../../Samples/So2021/BxMillezim/BxTrumpet_Boucle_Long_5.wav"/>
         </instrument>
+        <instrument name="Bx_YouWontRaise" minnote="42" maxnote="42" rootnote="42" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples4" volume="0.500000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
+	    <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2021/BxMillezim/Bx_YouWontRaise.wav" sampleRelative="../../../../Samples/So2021/BxMillezim/Bx_YouWontRaise.wav"/>
+        </instrument>
+        <instrument name="Bx_WhatIf" minnote="42" maxnote="42" rootnote="42" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples4" volume="0.500000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
+	    <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2021/BxMillezim/Bx_WhatIf.wav" sampleRelative="../../../../Samples/So2021/BxMillezim/Bx_WhatIf.wav"/>
+        </instrument>
+        <instrument name="Bx_Heee" minnote="42" maxnote="42" rootnote="42" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples4" volume="0.500000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
+	    <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2021/BxMillezim/Bx_Heee.wav" sampleRelative="../../../../Samples/So2021/BxMillezim/Bx_Heee.wav"/>
+        </instrument>                        
       </kit>
     </setup>
   </creation>
