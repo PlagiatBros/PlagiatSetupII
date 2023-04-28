@@ -133,14 +133,14 @@ class BX(Video, Light, RouteBase):
         # synthsFX2Delay.set('Trap', 'Gain', -14.0)
         # synthsFX2Delay.set('SynthsFX2Delay', 'Mute', 0.0)
 
-        self.start_sequence('couplet_1_p1', [
-            {},
-            {},
-            {},
-            {
-                3.5: lambda: self.couplet_1_p2()
-            }
-        ])
+        # self.start_sequence('couplet_1_p1', [
+        #     {},
+        #     {},
+        #     {},
+        #     {
+        #         3.5: lambda: self.couplet_1_p2()
+        #     }
+        # ], loop=False)
 
     @mk2_button(2)
     def couplet_1_p2(self):
@@ -170,6 +170,8 @@ class BX(Video, Light, RouteBase):
         """
         # Séquences
         seq192.select('off', 'couplet_*Low*')
+        seq192.select('off', 'couplet_*samples*')
+
 
         self.start_scene('sequence/bx_heeee', lambda: [
             self.wait(3.6, 'beat'),
@@ -184,11 +186,19 @@ class BX(Video, Light, RouteBase):
         PRE-TRAP
         """
         # Séquences
-        seq192.select('solo', 'pretrap_*')
+        seq192.select('solo', 'pretrap_cHi_trap')
 
         # Vocals
         vocalsNano.set('normo_exclu', 'on')
         vocalsKesch.set('normo_exclu', 'on')
+
+        # self.start_scene('sequence/bestplace', lambda: [
+        #     self.wait(16, 'beat'),
+        #     seq192.select('on', 'pretrap_*')
+        # ])
+
+        synthsFX2Delay.set('Trap', 'Gain', -14.0)
+        synthsFX2Delay.set('SynthsFX2Delay', 'Mute', 0.0)
 
 
     @pedalboard_button(4)

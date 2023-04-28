@@ -119,6 +119,9 @@ class Mcob(Video, Light, RouteBase):
         # Keyboards
         jmjKeyboard.set_sound('LowZDubstep')
 
+        # Mk2
+        mk2Control.set_mode('cut_samples', 'cut_synths', 'wobble')
+
     @pedalboard_button(3)
     def couplet1_1(self):
         """
@@ -153,6 +156,10 @@ class Mcob(Video, Light, RouteBase):
         vocalsNanoFX3TrapVerb.set('NanoMeuf', 'Gain', 0.0)
         vocalsNanoFX3TrapVerb.set('VocalsNanoFX3TrapVerb', 'Mute', 0.0)
 
+
+        # Mk2
+        mk2Control.set_mode('cut_samples', 'cut_synths')
+
     @pedalboard_button(4)
     def couplet1_2(self):
         """
@@ -176,6 +183,9 @@ class Mcob(Video, Light, RouteBase):
         # Vocals
         vocalsNano.set('meuf_exclu', 'on')
         vocalsKesch.set('gars_exclu', 'on')
+
+        # Mk2
+        mk2Control.set_mode('cut_samples', 'cut_synths')
 
         # Sequences (Mentat)
         self.start_scene('prince2pac_launcher', lambda: [
@@ -230,6 +240,9 @@ class Mcob(Video, Light, RouteBase):
         vocalsNano.set('gars', 'on')
         vocalsNano.set('normo', 'on')
         vocalsKesch.set('gars_exclu', 'on')
+
+        # Mk2
+        mk2Control.set_mode('cut_samples', 'cut_synths')
 
         # Sequences (Mentat)
         self.start_sequence('prince2pac_b', [
@@ -318,6 +331,9 @@ class Mcob(Video, Light, RouteBase):
         vocalsKesch.set('meuf_exclu', 'on')
         vocalsNano.set('gars_exclu', 'on')
 
+        # Mk2
+        mk2Control.set_mode('cut_samples', 'cut_synths')
+
     @pedalboard_button(5)
     def prerefrain(self):
         """
@@ -348,6 +364,10 @@ class Mcob(Video, Light, RouteBase):
 
         # Keyboards
         jmjKeyboard.set_sound('ConstantSampler')
+
+
+        # Mk2
+        mk2Control.set_mode('cut_samples', 'cut_synths')
 
     @mk2_button(2)
     def refrain2(self):
@@ -391,6 +411,9 @@ class Mcob(Video, Light, RouteBase):
 
         # Keyboards
         jmjKeyboard.set_sound('ZNotSoRhodes')
+
+        # Mk2
+        mk2Control.set_mode('cut_samples', 'cut_synths')
 
         self.start_sequence('stop_looping', [
             {
@@ -446,6 +469,9 @@ class Mcob(Video, Light, RouteBase):
         samples.set('Samples3', 'Mute', 0.0)
         samples.set('Samples5', 'Mute', 0.0)
 
+        # Mk2
+        mk2Control.set_mode('cut_samples', 'cut_synths')
+
         # Scenes
         self.start_sequence('delayed_blast', {
             'signature': '32/4',
@@ -482,6 +508,9 @@ class Mcob(Video, Light, RouteBase):
         # Keyboards
         jmjKeyboard.set_sound('ZNotSoRhodes')
 
+        # Mk2
+        mk2Control.set_mode('cut_samples', 'cut_synths')
+        
     @pedalboard_button(9)
     def rec_synth(self):
         """
