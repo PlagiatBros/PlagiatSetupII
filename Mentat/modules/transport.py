@@ -122,6 +122,9 @@ class Transport(Module):
             ('VocalsKesch', 'KeschMeuf'),
             ('VocalsKesch', 'KeschNormo'),
             ('VocalsKesch', 'KeschGars'),
+            ('VocalsFeat', 'FeatMeuf'),
+            ('VocalsFeat', 'FeatNormo'),
+            ('VocalsFeat', 'FeatGars'),
             ]:
             self.engine.modules[mixer].set(strip, 'ZamDelay', 'Time', bpm/60.*250)
 

@@ -1,3 +1,6 @@
+Autotune.FeatGars:out                    |> Non-Mixer-XT.VocalsFeat (Gars):FeatGars/in-1
+Autotune.FeatMeuf:out                    |> Non-Mixer-XT.VocalsFeat (Meuf):FeatMeuf/in-1
+Autotune.FeatNormo:out                   |> Non-Mixer-XT.VocalsFeat (Normo):FeatNormo/in-1
 Autotune.KeschGars:out                   |> Non-Mixer-XT.VocalsKesch (Gars):KeschGars/in-1
 Autotune.KeschMeuf:out                   |> Non-Mixer-XT.VocalsKesch (Meuf):KeschMeuf/in-1
 Autotune.KeschNormo:out                  |> Non-Mixer-XT.VocalsKesch (Normo):KeschNormo/in-1
@@ -18,22 +21,22 @@ Fluid_OrchestraHit:left                  |> Non-Mixer-XT.Synths (Main):Orchestra
 Fluid_Rhodes:left                        |> Non-Mixer-XT.Synths (Main):Rhodes/in-1
 Fluid_SteelDrum:left                     |> Non-Mixer-XT.Synths (Main):SteelDrums/in-1
 Fluid_TenorSax:left                      |> Non-Mixer-XT.Synths (Main):TenorSax/in-1
-Non-Mixer-XT.Bass (In):BassIn/out-1         |> Non-Mixer-XT.Bass (Main):BassDry/in-1
-Non-Mixer-XT.Bass (In):BassIn/out-1         |> Non-Mixer-XT.Bass (Main):BassSub/in-1
-Non-Mixer-XT.Bass (In):BassIn/out-1         |> Non-Mixer-XT.Bass (Main):FBassDry/in-1
-Non-Mixer-XT.Bass (In):BassIn/out-1         |> Non-Mixer-XT.BassFX (In):BassDegradeIn/in-1
-Non-Mixer-XT.Bass (In):BassIn/out-1         |> Non-Mixer-XT.BassFX (In):BassDistoHiIn/in-1
-Non-Mixer-XT.Bass (In):BassIn/out-1         |> Non-Mixer-XT.BassFX (In):BassScapeIn/in-1
-Non-Mixer-XT.Bass (In):BassIn/out-1         |> Non-Mixer-XT.BassFX (In):BassTapeDelayIn/in-1
-Non-Mixer-XT.Bass (In):BassIn/out-1         |> Non-Mixer-XT.BassFX (In):BassWobbleIn/in-1
-Non-Mixer-XT.Bass (In):BassIn/out-1         |> Non-Mixer-XT.BassFX (In):BassZynWahIn/in-1
-Non-Mixer-XT.Bass (Main):BassDry/out-1      |> Non-Mixer-XT.Bass (Out):BassOut/in-1
-Non-Mixer-XT.Bass (Main):BassSub/out-1      |> Non-Mixer-XT.Bass (Out):BassOut/in-1
-Non-Mixer-XT.Bass (Main):FBassDry/out-1     |> Non-Mixer-XT.Bass (Out):BassOut/in-1
-Non-Mixer-XT.Bass (Out):BassOut/out-1       |> sooperlooper:loop1_in_1
+Non-Mixer-XT.Bass (In):BassIn/out-1      |> Non-Mixer-XT.Bass (Main):BassDry/in-1
+Non-Mixer-XT.Bass (In):BassIn/out-1      |> Non-Mixer-XT.Bass (Main):BassSub/in-1
+Non-Mixer-XT.Bass (In):BassIn/out-1      |> Non-Mixer-XT.Bass (Main):FBassDry/in-1
+Non-Mixer-XT.Bass (In):BassIn/out-1      |> Non-Mixer-XT.BassFX (In):BassDegradeIn/in-1
+Non-Mixer-XT.Bass (In):BassIn/out-1      |> Non-Mixer-XT.BassFX (In):BassDistoHiIn/in-1
+Non-Mixer-XT.Bass (In):BassIn/out-1      |> Non-Mixer-XT.BassFX (In):BassScapeIn/in-1
+Non-Mixer-XT.Bass (In):BassIn/out-1      |> Non-Mixer-XT.BassFX (In):BassTapeDelayIn/in-1
+Non-Mixer-XT.Bass (In):BassIn/out-1      |> Non-Mixer-XT.BassFX (In):BassWobbleIn/in-1
+Non-Mixer-XT.Bass (In):BassIn/out-1      |> Non-Mixer-XT.BassFX (In):BassZynWahIn/in-1
+Non-Mixer-XT.Bass (Main):BassDry/out-1   |> Non-Mixer-XT.Bass (Out):BassOut/in-1
+Non-Mixer-XT.Bass (Main):BassSub/out-1   |> Non-Mixer-XT.Bass (Out):BassOut/in-1
+Non-Mixer-XT.Bass (Main):FBassDry/out-1  |> Non-Mixer-XT.Bass (Out):BassOut/in-1
+Non-Mixer-XT.Bass (Out):BassOut/out-1    |> sooperlooper:loop1_in_1
 Non-Mixer-XT.BassFX (In):BassDegradeIn/out-1 |> Non-Mixer-XT.BassFX (Process):BassDegrade/in-1
 Non-Mixer-XT.BassFX (In):BassDistoHiIn/out-1 |> Non-Mixer-XT.BassFX (Process):BassDistoHi/in-1
-Non-Mixer-XT.BassFX (In):BassScapeIn/out-1  |> Non-Mixer-XT.BassFX (Process):BassScape/in-1
+Non-Mixer-XT.BassFX (In):BassScapeIn/out-1 |> Non-Mixer-XT.BassFX (Process):BassScape/in-1
 Non-Mixer-XT.BassFX (In):BassTapeDelayIn/out-1 |> Non-Mixer-XT.BassFX (Process):BassTapeDelay/in-1
 Non-Mixer-XT.BassFX (In):BassWobbleIn/out-1 |> Non-Mixer-XT.BassFX (Process):BassWobble/in-1
 Non-Mixer-XT.BassFX (In):BassZynWahIn/out-1 |> Non-Mixer-XT.BassFX (Process):BassZynWah/in-1
@@ -58,23 +61,51 @@ Non-Mixer-XT.BassSynths (Main):BassZPhrampton/out-1 |> Non-Mixer-XT.BassSynths (
 Non-Mixer-XT.BassSynths (Main):BassZRagstep/out-1 |> Non-Mixer-XT.BassSynths (Out):BassSynthsOut/in-1
 Non-Mixer-XT.BassSynths (Main):BassZSine/out-1 |> Non-Mixer-XT.BassSynths (Out):BassSynthsOut/in-1
 Non-Mixer-XT.BassSynths (Out):BassSynthsOut/out-1 |> sooperlooper:loop2_in_1
-Non-Mixer-XT.Drums (Main):Kick/out-1        |> Non-Mixer-XT.MonitorsKesch (MonitorsKesch):Kick/in-1
-Non-Mixer-XT.Drums (Main):Kick/out-1        |> Non-Mixer-XT.MonitorsNano (MonitorsNano):Kick/in-1
-Non-Mixer-XT.Drums (Main):Kick/out-1        |> Non-Mixer-XT.Outputs (Outputs):Kick/in-1
-Non-Mixer-XT.Drums (Main):OH-L/out-1        |> Non-Mixer-XT.MonitorsKesch (MonitorsKesch):OH-L/in-1
-Non-Mixer-XT.Drums (Main):OH-L/out-1        |> Non-Mixer-XT.MonitorsNano (MonitorsNano):OH-L/in-1
-Non-Mixer-XT.Drums (Main):OH-L/out-1        |> Non-Mixer-XT.Outputs (Outputs):OH-L/in-1
-Non-Mixer-XT.Drums (Main):OH-R/out-1        |> Non-Mixer-XT.MonitorsKesch (MonitorsKesch):OH-R/in-1
-Non-Mixer-XT.Drums (Main):OH-R/out-1        |> Non-Mixer-XT.MonitorsNano (MonitorsNano):OH-R/in-1
-Non-Mixer-XT.Drums (Main):OH-R/out-1        |> Non-Mixer-XT.Outputs (Outputs):OH-R/in-1
+Non-Mixer-XT.Drums (Main):Kick/out-1     |> Non-Mixer-XT.MonitorsFeat (MonitorsFeat):Kick/in-1
+Non-Mixer-XT.Drums (Main):Kick/out-1     |> Non-Mixer-XT.MonitorsKesch (MonitorsKesch):Kick/in-1
+Non-Mixer-XT.Drums (Main):Kick/out-1     |> Non-Mixer-XT.MonitorsNano (MonitorsNano):Kick/in-1
+Non-Mixer-XT.Drums (Main):Kick/out-1     |> Non-Mixer-XT.Outputs (Outputs):Kick/in-1
+Non-Mixer-XT.Drums (Main):OH-L/out-1     |> Non-Mixer-XT.MonitorsFeat (MonitorsFeat):OH-L/in-1
+Non-Mixer-XT.Drums (Main):OH-L/out-1     |> Non-Mixer-XT.MonitorsKesch (MonitorsKesch):OH-L/in-1
+Non-Mixer-XT.Drums (Main):OH-L/out-1     |> Non-Mixer-XT.MonitorsNano (MonitorsNano):OH-L/in-1
+Non-Mixer-XT.Drums (Main):OH-L/out-1     |> Non-Mixer-XT.Outputs (Outputs):OH-L/in-1
+Non-Mixer-XT.Drums (Main):OH-L/out-1     |> ardour:OH-L/audio_in 1
+Non-Mixer-XT.Drums (Main):OH-R/out-1     |> Non-Mixer-XT.MonitorsFeat (MonitorsFeat):OH-R/in-1
+Non-Mixer-XT.Drums (Main):OH-R/out-1     |> Non-Mixer-XT.MonitorsKesch (MonitorsKesch):OH-R/in-1
+Non-Mixer-XT.Drums (Main):OH-R/out-1     |> Non-Mixer-XT.MonitorsNano (MonitorsNano):OH-R/in-1
+Non-Mixer-XT.Drums (Main):OH-R/out-1     |> Non-Mixer-XT.Outputs (Outputs):OH-R/in-1
+Non-Mixer-XT.Drums (Main):OH-R/out-1     |> ardour:OH-R/audio_in 1
 Non-Mixer-XT.Inputs (Inputs):Ambiance/out-1 |> Non-Mixer-XT.MonitorsKesch (MonitorsKesch):Ambiance/in-1
 Non-Mixer-XT.Inputs (Inputs):Ambiance/out-1 |> Non-Mixer-XT.MonitorsNano (MonitorsNano):Ambiance/in-1
-Non-Mixer-XT.Inputs (Inputs):Bass/out-1     |> sooperlooper:loop0_in_1
-Non-Mixer-XT.Inputs (Inputs):Kick/out-1     |> Non-Mixer-XT.Drums (Main):Kick/in-1
-Non-Mixer-XT.Inputs (Inputs):OH-L/out-1     |> Non-Mixer-XT.Drums (Main):OH-L/in-1
-Non-Mixer-XT.Inputs (Inputs):OH-R/out-1     |> Non-Mixer-XT.Drums (Main):OH-R/in-1
+Non-Mixer-XT.Inputs (Inputs):Bass/out-1  |> sooperlooper:loop0_in_1
+Non-Mixer-XT.Inputs (Inputs):Feat/out-1  |> Non-Mixer-XT.VocalsFeat (In):FeatIn/in-1
+Non-Mixer-XT.Inputs (Inputs):Kick/out-1  |> Non-Mixer-XT.Drums (Main):Kick/in-1
+Non-Mixer-XT.Inputs (Inputs):OH-L/out-1  |> Non-Mixer-XT.Drums (Main):OH-L/in-1
+Non-Mixer-XT.Inputs (Inputs):OH-R/out-1  |> Non-Mixer-XT.Drums (Main):OH-R/in-1
 Non-Mixer-XT.Inputs (Inputs):VocalsKesch/out-1 |> sooperlooper:loop6_in_1
 Non-Mixer-XT.Inputs (Inputs):VocalsNano/out-1 |> sooperlooper:loop4_in_1
+Non-Mixer-XT.MonitorsFeat (MonitorsFeat):Bass/out-1 |> Non-Mixer-XT.MonitorsFeat (MonitorsFeat):MonitorsFeat/in-1
+Non-Mixer-XT.MonitorsFeat (MonitorsFeat):Bass/out-2 |> Non-Mixer-XT.MonitorsFeat (MonitorsFeat):MonitorsFeat/in-2
+Non-Mixer-XT.MonitorsFeat (MonitorsFeat):BassSynths/out-1 |> Non-Mixer-XT.MonitorsFeat (MonitorsFeat):MonitorsFeat/in-1
+Non-Mixer-XT.MonitorsFeat (MonitorsFeat):BassSynths/out-2 |> Non-Mixer-XT.MonitorsFeat (MonitorsFeat):MonitorsFeat/in-2
+Non-Mixer-XT.MonitorsFeat (MonitorsFeat):Kick/out-1 |> Non-Mixer-XT.MonitorsFeat (MonitorsFeat):MonitorsFeat/in-1
+Non-Mixer-XT.MonitorsFeat (MonitorsFeat):Kick/out-1 |> Non-Mixer-XT.MonitorsFeat (MonitorsFeat):MonitorsFeat/in-2
+Non-Mixer-XT.MonitorsFeat (MonitorsFeat):Klick/out-1 |> Non-Mixer-XT.MonitorsFeat (MonitorsFeat):MonitorsFeat/in-1
+Non-Mixer-XT.MonitorsFeat (MonitorsFeat):Klick/out-1 |> Non-Mixer-XT.MonitorsFeat (MonitorsFeat):MonitorsFeat/in-2
+Non-Mixer-XT.MonitorsFeat (MonitorsFeat):OH-L/out-1 |> Non-Mixer-XT.MonitorsFeat (MonitorsFeat):MonitorsFeat/in-1
+Non-Mixer-XT.MonitorsFeat (MonitorsFeat):OH-L/out-2 |> Non-Mixer-XT.MonitorsFeat (MonitorsFeat):MonitorsFeat/in-2
+Non-Mixer-XT.MonitorsFeat (MonitorsFeat):OH-R/out-1 |> Non-Mixer-XT.MonitorsFeat (MonitorsFeat):MonitorsFeat/in-1
+Non-Mixer-XT.MonitorsFeat (MonitorsFeat):OH-R/out-2 |> Non-Mixer-XT.MonitorsFeat (MonitorsFeat):MonitorsFeat/in-2
+Non-Mixer-XT.MonitorsFeat (MonitorsFeat):Samples/out-1 |> Non-Mixer-XT.MonitorsFeat (MonitorsFeat):MonitorsFeat/in-1
+Non-Mixer-XT.MonitorsFeat (MonitorsFeat):Samples/out-2 |> Non-Mixer-XT.MonitorsFeat (MonitorsFeat):MonitorsFeat/in-2
+Non-Mixer-XT.MonitorsFeat (MonitorsFeat):Synths/out-1 |> Non-Mixer-XT.MonitorsFeat (MonitorsFeat):MonitorsFeat/in-1
+Non-Mixer-XT.MonitorsFeat (MonitorsFeat):Synths/out-2 |> Non-Mixer-XT.MonitorsFeat (MonitorsFeat):MonitorsFeat/in-2
+Non-Mixer-XT.MonitorsFeat (MonitorsFeat):VocalsFeat/out-1 |> Non-Mixer-XT.MonitorsFeat (MonitorsFeat):MonitorsFeat/in-1
+Non-Mixer-XT.MonitorsFeat (MonitorsFeat):VocalsFeat/out-1 |> Non-Mixer-XT.MonitorsFeat (MonitorsFeat):MonitorsFeat/in-2
+Non-Mixer-XT.MonitorsFeat (MonitorsFeat):VocalsKesch/out-1 |> Non-Mixer-XT.MonitorsFeat (MonitorsFeat):MonitorsFeat/in-1
+Non-Mixer-XT.MonitorsFeat (MonitorsFeat):VocalsKesch/out-2 |> Non-Mixer-XT.MonitorsFeat (MonitorsFeat):MonitorsFeat/in-2
+Non-Mixer-XT.MonitorsFeat (MonitorsFeat):VocalsNano/out-1 |> Non-Mixer-XT.MonitorsFeat (MonitorsFeat):MonitorsFeat/in-1
+Non-Mixer-XT.MonitorsFeat (MonitorsFeat):VocalsNano/out-2 |> Non-Mixer-XT.MonitorsFeat (MonitorsFeat):MonitorsFeat/in-2
 Non-Mixer-XT.MonitorsKesch (MonitorsKesch):Ambiance/out-1 |> Non-Mixer-XT.MonitorsKesch (MonitorsKesch):MonitorsKesch/in-1
 Non-Mixer-XT.MonitorsKesch (MonitorsKesch):Ambiance/out-1 |> Non-Mixer-XT.MonitorsKesch (MonitorsKesch):MonitorsKesch/in-2
 Non-Mixer-XT.MonitorsKesch (MonitorsKesch):Bass/out-1 |> Non-Mixer-XT.MonitorsKesch (MonitorsKesch):MonitorsKesch/in-1
@@ -97,6 +128,8 @@ Non-Mixer-XT.MonitorsKesch (MonitorsKesch):Synths/out-1 |> Non-Mixer-XT.Monitors
 Non-Mixer-XT.MonitorsKesch (MonitorsKesch):Synths/out-2 |> Non-Mixer-XT.MonitorsKesch (MonitorsKesch):MonitorsKesch/in-2
 Non-Mixer-XT.MonitorsKesch (MonitorsKesch):SynthsBoost/out-1 |> Non-Mixer-XT.MonitorsKesch (MonitorsKesch):MonitorsKesch/in-1
 Non-Mixer-XT.MonitorsKesch (MonitorsKesch):SynthsBoost/out-1 |> Non-Mixer-XT.MonitorsKesch (MonitorsKesch):MonitorsKesch/in-2
+Non-Mixer-XT.MonitorsKesch (MonitorsKesch):VocalsFeat/out-1 |> Non-Mixer-XT.MonitorsKesch (MonitorsKesch):MonitorsKesch/in-1
+Non-Mixer-XT.MonitorsKesch (MonitorsKesch):VocalsFeat/out-1 |> Non-Mixer-XT.MonitorsKesch (MonitorsKesch):MonitorsKesch/in-2
 Non-Mixer-XT.MonitorsKesch (MonitorsKesch):VocalsKesch/out-1 |> Non-Mixer-XT.MonitorsKesch (MonitorsKesch):MonitorsKesch/in-1
 Non-Mixer-XT.MonitorsKesch (MonitorsKesch):VocalsKesch/out-2 |> Non-Mixer-XT.MonitorsKesch (MonitorsKesch):MonitorsKesch/in-2
 Non-Mixer-XT.MonitorsKesch (MonitorsKesch):VocalsNano/out-1 |> Non-Mixer-XT.MonitorsKesch (MonitorsKesch):MonitorsKesch/in-1
@@ -121,63 +154,83 @@ Non-Mixer-XT.MonitorsNano (MonitorsNano):Samples/out-1 |> Non-Mixer-XT.MonitorsN
 Non-Mixer-XT.MonitorsNano (MonitorsNano):Samples/out-2 |> Non-Mixer-XT.MonitorsNano (MonitorsNano):MonitorsNano/in-2
 Non-Mixer-XT.MonitorsNano (MonitorsNano):Synths/out-1 |> Non-Mixer-XT.MonitorsNano (MonitorsNano):MonitorsNano/in-1
 Non-Mixer-XT.MonitorsNano (MonitorsNano):Synths/out-2 |> Non-Mixer-XT.MonitorsNano (MonitorsNano):MonitorsNano/in-2
+Non-Mixer-XT.MonitorsNano (MonitorsNano):VocalsFeat/out-1 |> Non-Mixer-XT.MonitorsNano (MonitorsNano):MonitorsNano/in-1
+Non-Mixer-XT.MonitorsNano (MonitorsNano):VocalsFeat/out-1 |> Non-Mixer-XT.MonitorsNano (MonitorsNano):MonitorsNano/in-2
 Non-Mixer-XT.MonitorsNano (MonitorsNano):VocalsKesch/out-1 |> Non-Mixer-XT.MonitorsNano (MonitorsNano):MonitorsNano/in-1
 Non-Mixer-XT.MonitorsNano (MonitorsNano):VocalsKesch/out-2 |> Non-Mixer-XT.MonitorsNano (MonitorsNano):MonitorsNano/in-2
 Non-Mixer-XT.MonitorsNano (MonitorsNano):VocalsNano/out-1 |> Non-Mixer-XT.MonitorsNano (MonitorsNano):MonitorsNano/in-1
 Non-Mixer-XT.MonitorsNano (MonitorsNano):VocalsNano/out-2 |> Non-Mixer-XT.MonitorsNano (MonitorsNano):MonitorsNano/in-2
+Non-Mixer-XT.Outputs (Outputs):Bass/aux-A/out-1 |> ardour:Bass/audio_in 1
 Non-Mixer-XT.Outputs (Outputs):Bass/aux-A/out-1 |> system:playback_11
+Non-Mixer-XT.Outputs (Outputs):Bass/aux-B/out-1 |> Non-Mixer-XT.MonitorsFeat (MonitorsFeat):Bass/in-1
 Non-Mixer-XT.Outputs (Outputs):Bass/aux-B/out-1 |> Non-Mixer-XT.MonitorsNano (MonitorsNano):Bass/in-1
 Non-Mixer-XT.Outputs (Outputs):Bass/aux-C/out-1 |> Non-Mixer-XT.MonitorsKesch (MonitorsKesch):Bass/in-1
-Non-Mixer-XT.Outputs (Outputs):Bass/out-1   |> Non-Mixer-XT.Outputs (Outputs):FOH/in-1
-Non-Mixer-XT.Outputs (Outputs):Bass/out-2   |> Non-Mixer-XT.Outputs (Outputs):FOH/in-2
+Non-Mixer-XT.Outputs (Outputs):Bass/out-1 |> Non-Mixer-XT.Outputs (Outputs):FOH/in-1
+Non-Mixer-XT.Outputs (Outputs):Bass/out-2 |> Non-Mixer-XT.Outputs (Outputs):FOH/in-2
+Non-Mixer-XT.Outputs (Outputs):BassSynths/aux-A/out-1 |> ardour:BassSynth/audio_in 1
 Non-Mixer-XT.Outputs (Outputs):BassSynths/aux-A/out-1 |> system:playback_12
+Non-Mixer-XT.Outputs (Outputs):BassSynths/aux-B/out-1 |> Non-Mixer-XT.MonitorsFeat (MonitorsFeat):BassSynths/in-1
 Non-Mixer-XT.Outputs (Outputs):BassSynths/aux-B/out-1 |> Non-Mixer-XT.MonitorsNano (MonitorsNano):BassSynths/in-1
 Non-Mixer-XT.Outputs (Outputs):BassSynths/aux-C/out-1 |> Non-Mixer-XT.MonitorsKesch (MonitorsKesch):BassSynths/in-1
 Non-Mixer-XT.Outputs (Outputs):BassSynths/out-1 |> Non-Mixer-XT.Outputs (Outputs):FOH/in-1
 Non-Mixer-XT.Outputs (Outputs):BassSynths/out-2 |> Non-Mixer-XT.Outputs (Outputs):FOH/in-2
-Non-Mixer-XT.Outputs (Outputs):FOH/out-1    |> system:playback_15
-Non-Mixer-XT.Outputs (Outputs):FOH/out-2    |> system:playback_16
+Non-Mixer-XT.Outputs (Outputs):FOH/out-1 |> system:playback_15
+Non-Mixer-XT.Outputs (Outputs):FOH/out-2 |> system:playback_16
+Non-Mixer-XT.Outputs (Outputs):Kick/aux-A/out-1 |> ardour:Kick/audio_in 1
 Non-Mixer-XT.Outputs (Outputs):Kick/aux-A/out-1 |> system:playback_3
-Non-Mixer-XT.Outputs (Outputs):Kick/out-1   |> Non-Mixer-XT.Outputs (Outputs):FOH/in-1
-Non-Mixer-XT.Outputs (Outputs):Kick/out-2   |> Non-Mixer-XT.Outputs (Outputs):FOH/in-2
-Non-Mixer-XT.Outputs (Outputs):OH-L/out-1   |> Non-Mixer-XT.Outputs (Outputs):FOH/in-1
-Non-Mixer-XT.Outputs (Outputs):OH-L/out-2   |> Non-Mixer-XT.Outputs (Outputs):FOH/in-2
-Non-Mixer-XT.Outputs (Outputs):OH-R/out-1   |> Non-Mixer-XT.Outputs (Outputs):FOH/in-1
-Non-Mixer-XT.Outputs (Outputs):OH-R/out-2   |> Non-Mixer-XT.Outputs (Outputs):FOH/in-2
+Non-Mixer-XT.Outputs (Outputs):Kick/out-1 |> Non-Mixer-XT.Outputs (Outputs):FOH/in-1
+Non-Mixer-XT.Outputs (Outputs):Kick/out-2 |> Non-Mixer-XT.Outputs (Outputs):FOH/in-2
+Non-Mixer-XT.Outputs (Outputs):OH-L/out-1 |> Non-Mixer-XT.Outputs (Outputs):FOH/in-1
+Non-Mixer-XT.Outputs (Outputs):OH-L/out-2 |> Non-Mixer-XT.Outputs (Outputs):FOH/in-2
+Non-Mixer-XT.Outputs (Outputs):OH-R/out-1 |> Non-Mixer-XT.Outputs (Outputs):FOH/in-1
+Non-Mixer-XT.Outputs (Outputs):OH-R/out-2 |> Non-Mixer-XT.Outputs (Outputs):FOH/in-2
+Non-Mixer-XT.Outputs (Outputs):Samples/aux-A/out-1 |> ardour:Samples/audio_in 1
 Non-Mixer-XT.Outputs (Outputs):Samples/aux-A/out-1 |> system:playback_9
+Non-Mixer-XT.Outputs (Outputs):Samples/aux-A/out-2 |> ardour:Samples/audio_in 2
 Non-Mixer-XT.Outputs (Outputs):Samples/aux-A/out-2 |> system:playback_10
+Non-Mixer-XT.Outputs (Outputs):Samples/aux-B/out-1 |> Non-Mixer-XT.MonitorsFeat (MonitorsFeat):Samples/in-1
 Non-Mixer-XT.Outputs (Outputs):Samples/aux-B/out-1 |> Non-Mixer-XT.MonitorsNano (MonitorsNano):Samples/in-1
+Non-Mixer-XT.Outputs (Outputs):Samples/aux-B/out-2 |> Non-Mixer-XT.MonitorsFeat (MonitorsFeat):Samples/in-2
 Non-Mixer-XT.Outputs (Outputs):Samples/aux-B/out-2 |> Non-Mixer-XT.MonitorsNano (MonitorsNano):Samples/in-2
 Non-Mixer-XT.Outputs (Outputs):Samples/aux-C/out-1 |> Non-Mixer-XT.MonitorsKesch (MonitorsKesch):Samples/in-1
 Non-Mixer-XT.Outputs (Outputs):Samples/aux-C/out-2 |> Non-Mixer-XT.MonitorsKesch (MonitorsKesch):Samples/in-2
 Non-Mixer-XT.Outputs (Outputs):Samples/out-1 |> Non-Mixer-XT.Outputs (Outputs):FOH/in-1
 Non-Mixer-XT.Outputs (Outputs):Samples/out-2 |> Non-Mixer-XT.Outputs (Outputs):FOH/in-2
+Non-Mixer-XT.Outputs (Outputs):Synths/aux-A/out-1 |> ardour:Synths/audio_in 1
 Non-Mixer-XT.Outputs (Outputs):Synths/aux-A/out-1 |> system:playback_1
+Non-Mixer-XT.Outputs (Outputs):Synths/aux-A/out-2 |> ardour:Synths/audio_in 2
 Non-Mixer-XT.Outputs (Outputs):Synths/aux-A/out-2 |> system:playback_2
+Non-Mixer-XT.Outputs (Outputs):Synths/aux-B/out-1 |> Non-Mixer-XT.MonitorsFeat (MonitorsFeat):Synths/in-1
 Non-Mixer-XT.Outputs (Outputs):Synths/aux-B/out-1 |> Non-Mixer-XT.MonitorsNano (MonitorsNano):Synths/in-1
+Non-Mixer-XT.Outputs (Outputs):Synths/aux-B/out-2 |> Non-Mixer-XT.MonitorsFeat (MonitorsFeat):Synths/in-2
 Non-Mixer-XT.Outputs (Outputs):Synths/aux-B/out-2 |> Non-Mixer-XT.MonitorsNano (MonitorsNano):Synths/in-2
 Non-Mixer-XT.Outputs (Outputs):Synths/aux-C/out-1 |> Non-Mixer-XT.MonitorsKesch (MonitorsKesch):Synths/in-1
 Non-Mixer-XT.Outputs (Outputs):Synths/aux-C/out-2 |> Non-Mixer-XT.MonitorsKesch (MonitorsKesch):Synths/in-2
 Non-Mixer-XT.Outputs (Outputs):Synths/out-1 |> Non-Mixer-XT.Outputs (Outputs):FOH/in-1
 Non-Mixer-XT.Outputs (Outputs):Synths/out-2 |> Non-Mixer-XT.Outputs (Outputs):FOH/in-2
+Non-Mixer-XT.Outputs (Outputs):VocalsFeat/aux-A/out-1 |> ardour:VocalsPauline/audio_in 1
+Non-Mixer-XT.Outputs (Outputs):VocalsFeat/out-1 |> Non-Mixer-XT.Outputs (Outputs):FOH/in-1
+Non-Mixer-XT.Outputs (Outputs):VocalsFeat/out-2 |> Non-Mixer-XT.Outputs (Outputs):FOH/in-2
+Non-Mixer-XT.Outputs (Outputs):VocalsKesch/aux-A/out-1 |> ardour:VocalsKesch/audio_in 1
 Non-Mixer-XT.Outputs (Outputs):VocalsKesch/aux-A/out-1 |> system:playback_14
 Non-Mixer-XT.Outputs (Outputs):VocalsKesch/out-1 |> Non-Mixer-XT.Outputs (Outputs):FOH/in-1
 Non-Mixer-XT.Outputs (Outputs):VocalsKesch/out-2 |> Non-Mixer-XT.Outputs (Outputs):FOH/in-2
+Non-Mixer-XT.Outputs (Outputs):VocalsNano/aux-A/out-1 |> ardour:VocalsNano/audio_in 1
 Non-Mixer-XT.Outputs (Outputs):VocalsNano/aux-A/out-1 |> system:playback_13
 Non-Mixer-XT.Outputs (Outputs):VocalsNano/out-1 |> Non-Mixer-XT.Outputs (Outputs):FOH/in-1
 Non-Mixer-XT.Outputs (Outputs):VocalsNano/out-2 |> Non-Mixer-XT.Outputs (Outputs):FOH/in-2
 Non-Mixer-XT.Samples (Main):ConstantSampler/out-1 |> Non-Mixer-XT.Samples (Out):SamplesOut/in-1
 Non-Mixer-XT.Samples (Main):ConstantSampler/out-2 |> Non-Mixer-XT.Samples (Out):SamplesOut/in-2
-Non-Mixer-XT.Samples (Main):Samples1/out-1  |> Non-Mixer-XT.Samples (Out):SamplesOut/in-1
-Non-Mixer-XT.Samples (Main):Samples1/out-2  |> Non-Mixer-XT.Samples (Out):SamplesOut/in-2
-Non-Mixer-XT.Samples (Main):Samples2/out-1  |> Non-Mixer-XT.Samples (Out):SamplesOut/in-1
-Non-Mixer-XT.Samples (Main):Samples2/out-2  |> Non-Mixer-XT.Samples (Out):SamplesOut/in-2
-Non-Mixer-XT.Samples (Main):Samples3/out-1  |> Non-Mixer-XT.Samples (Out):SamplesOut/in-1
-Non-Mixer-XT.Samples (Main):Samples3/out-2  |> Non-Mixer-XT.Samples (Out):SamplesOut/in-2
-Non-Mixer-XT.Samples (Main):Samples4/out-1  |> Non-Mixer-XT.Samples (Out):SamplesOut/in-1
-Non-Mixer-XT.Samples (Main):Samples4/out-2  |> Non-Mixer-XT.Samples (Out):SamplesOut/in-2
-Non-Mixer-XT.Samples (Main):Samples5/out-1  |> Non-Mixer-XT.Samples (Out):SamplesOut/in-1
-Non-Mixer-XT.Samples (Main):Samples5/out-2  |> Non-Mixer-XT.Samples (Out):SamplesOut/in-2
+Non-Mixer-XT.Samples (Main):Samples1/out-1 |> Non-Mixer-XT.Samples (Out):SamplesOut/in-1
+Non-Mixer-XT.Samples (Main):Samples1/out-2 |> Non-Mixer-XT.Samples (Out):SamplesOut/in-2
+Non-Mixer-XT.Samples (Main):Samples2/out-1 |> Non-Mixer-XT.Samples (Out):SamplesOut/in-1
+Non-Mixer-XT.Samples (Main):Samples2/out-2 |> Non-Mixer-XT.Samples (Out):SamplesOut/in-2
+Non-Mixer-XT.Samples (Main):Samples3/out-1 |> Non-Mixer-XT.Samples (Out):SamplesOut/in-1
+Non-Mixer-XT.Samples (Main):Samples3/out-2 |> Non-Mixer-XT.Samples (Out):SamplesOut/in-2
+Non-Mixer-XT.Samples (Main):Samples4/out-1 |> Non-Mixer-XT.Samples (Out):SamplesOut/in-1
+Non-Mixer-XT.Samples (Main):Samples4/out-2 |> Non-Mixer-XT.Samples (Out):SamplesOut/in-2
+Non-Mixer-XT.Samples (Main):Samples5/out-1 |> Non-Mixer-XT.Samples (Out):SamplesOut/in-1
+Non-Mixer-XT.Samples (Main):Samples5/out-2 |> Non-Mixer-XT.Samples (Out):SamplesOut/in-2
 Non-Mixer-XT.Samples (Out):SamplesOut/out-1 |> Non-Mixer-XT.Outputs (Outputs):Samples/in-1
 Non-Mixer-XT.Samples (Out):SamplesOut/out-2 |> Non-Mixer-XT.Outputs (Outputs):Samples/in-2
 Non-Mixer-XT.SamplesFX1Delay (In):ConstantSampler/out-1 |> Non-Mixer-XT.SamplesFX1Delay (Process):SamplesFX1Delay/in-1
@@ -291,18 +344,18 @@ Non-Mixer-XT.SamplesWork (Process):SamplesWork/out-1 |> Non-Mixer-XT.Samples (Ou
 Non-Mixer-XT.Synths (Main):Charang/aux-A/out-1 |> Non-Mixer-XT.MonitorsKesch (MonitorsKesch):SynthsBoost/in-1
 Non-Mixer-XT.Synths (Main):Charang/aux-B/out-1 |> Non-Mixer-XT.Synths (Main):MainReverb/in-1
 Non-Mixer-XT.Synths (Main):Charang/aux-B/out-2 |> Non-Mixer-XT.Synths (Main):MainReverb/in-2
-Non-Mixer-XT.Synths (Main):Charang/out-1    |> Non-Mixer-XT.Synths (Out):SynthsOut/in-1
-Non-Mixer-XT.Synths (Main):Charang/out-1    |> Non-Mixer-XT.SynthsFX1Reverb (In):Charang/in-1
-Non-Mixer-XT.Synths (Main):Charang/out-1    |> Non-Mixer-XT.SynthsFX2Delay (In):Charang/in-1
-Non-Mixer-XT.Synths (Main):Charang/out-1    |> Non-Mixer-XT.SynthsFX3Delay (In):Charang/in-1
-Non-Mixer-XT.Synths (Main):Charang/out-1    |> Non-Mixer-XT.SynthsFX4TapeDelay (In):Charang/in-1
-Non-Mixer-XT.Synths (Main):Charang/out-1    |> Non-Mixer-XT.SynthsFX5Scape (In):Charang/in-1
-Non-Mixer-XT.Synths (Main):Charang/out-2    |> Non-Mixer-XT.Synths (Out):SynthsOut/in-2
-Non-Mixer-XT.Synths (Main):Charang/out-2    |> Non-Mixer-XT.SynthsFX1Reverb (In):Charang/in-2
-Non-Mixer-XT.Synths (Main):Charang/out-2    |> Non-Mixer-XT.SynthsFX2Delay (In):Charang/in-2
-Non-Mixer-XT.Synths (Main):Charang/out-2    |> Non-Mixer-XT.SynthsFX3Delay (In):Charang/in-2
-Non-Mixer-XT.Synths (Main):Charang/out-2    |> Non-Mixer-XT.SynthsFX4TapeDelay (In):Charang/in-2
-Non-Mixer-XT.Synths (Main):Charang/out-2    |> Non-Mixer-XT.SynthsFX5Scape (In):Charang/in-2
+Non-Mixer-XT.Synths (Main):Charang/out-1 |> Non-Mixer-XT.Synths (Out):SynthsOut/in-1
+Non-Mixer-XT.Synths (Main):Charang/out-1 |> Non-Mixer-XT.SynthsFX1Reverb (In):Charang/in-1
+Non-Mixer-XT.Synths (Main):Charang/out-1 |> Non-Mixer-XT.SynthsFX2Delay (In):Charang/in-1
+Non-Mixer-XT.Synths (Main):Charang/out-1 |> Non-Mixer-XT.SynthsFX3Delay (In):Charang/in-1
+Non-Mixer-XT.Synths (Main):Charang/out-1 |> Non-Mixer-XT.SynthsFX4TapeDelay (In):Charang/in-1
+Non-Mixer-XT.Synths (Main):Charang/out-1 |> Non-Mixer-XT.SynthsFX5Scape (In):Charang/in-1
+Non-Mixer-XT.Synths (Main):Charang/out-2 |> Non-Mixer-XT.Synths (Out):SynthsOut/in-2
+Non-Mixer-XT.Synths (Main):Charang/out-2 |> Non-Mixer-XT.SynthsFX1Reverb (In):Charang/in-2
+Non-Mixer-XT.Synths (Main):Charang/out-2 |> Non-Mixer-XT.SynthsFX2Delay (In):Charang/in-2
+Non-Mixer-XT.Synths (Main):Charang/out-2 |> Non-Mixer-XT.SynthsFX3Delay (In):Charang/in-2
+Non-Mixer-XT.Synths (Main):Charang/out-2 |> Non-Mixer-XT.SynthsFX4TapeDelay (In):Charang/in-2
+Non-Mixer-XT.Synths (Main):Charang/out-2 |> Non-Mixer-XT.SynthsFX5Scape (In):Charang/in-2
 Non-Mixer-XT.Synths (Main):DubstepHorn/aux-A/out-1 |> Non-Mixer-XT.MonitorsKesch (MonitorsKesch):SynthsBoost/in-1
 Non-Mixer-XT.Synths (Main):DubstepHorn/aux-B/out-1 |> Non-Mixer-XT.Synths (Main):MainReverb/in-1
 Non-Mixer-XT.Synths (Main):DubstepHorn/aux-B/out-2 |> Non-Mixer-XT.Synths (Main):MainReverb/in-2
@@ -353,18 +406,18 @@ Non-Mixer-XT.Synths (Main):OrchestraHit/out-2 |> Non-Mixer-XT.SynthsFX4TapeDelay
 Non-Mixer-XT.Synths (Main):OrchestraHit/out-2 |> Non-Mixer-XT.SynthsFX5Scape (In):OrchestraHit/in-2
 Non-Mixer-XT.Synths (Main):OrchestraHit/out-2 |> Non-Mixer-XT.SynthsFX5Scape (In):SteelDrums/in-2
 Non-Mixer-XT.Synths (Main):Rhodes/aux-A/out-1 |> Non-Mixer-XT.MonitorsKesch (MonitorsKesch):SynthsBoost/in-1
-Non-Mixer-XT.Synths (Main):Rhodes/out-1     |> Non-Mixer-XT.Synths (Out):SynthsOut/in-1
-Non-Mixer-XT.Synths (Main):Rhodes/out-1     |> Non-Mixer-XT.SynthsFX1Reverb (In):Rhodes/in-1
-Non-Mixer-XT.Synths (Main):Rhodes/out-1     |> Non-Mixer-XT.SynthsFX2Delay (In):Rhodes/in-1
-Non-Mixer-XT.Synths (Main):Rhodes/out-1     |> Non-Mixer-XT.SynthsFX3Delay (In):Rhodes/in-1
-Non-Mixer-XT.Synths (Main):Rhodes/out-1     |> Non-Mixer-XT.SynthsFX4TapeDelay (In):Rhodes/in-1
-Non-Mixer-XT.Synths (Main):Rhodes/out-1     |> Non-Mixer-XT.SynthsFX5Scape (In):Rhodes/in-1
-Non-Mixer-XT.Synths (Main):Rhodes/out-2     |> Non-Mixer-XT.Synths (Out):SynthsOut/in-2
-Non-Mixer-XT.Synths (Main):Rhodes/out-2     |> Non-Mixer-XT.SynthsFX1Reverb (In):Rhodes/in-2
-Non-Mixer-XT.Synths (Main):Rhodes/out-2     |> Non-Mixer-XT.SynthsFX2Delay (In):Rhodes/in-2
-Non-Mixer-XT.Synths (Main):Rhodes/out-2     |> Non-Mixer-XT.SynthsFX3Delay (In):Rhodes/in-2
-Non-Mixer-XT.Synths (Main):Rhodes/out-2     |> Non-Mixer-XT.SynthsFX4TapeDelay (In):Rhodes/in-2
-Non-Mixer-XT.Synths (Main):Rhodes/out-2     |> Non-Mixer-XT.SynthsFX5Scape (In):Rhodes/in-2
+Non-Mixer-XT.Synths (Main):Rhodes/out-1  |> Non-Mixer-XT.Synths (Out):SynthsOut/in-1
+Non-Mixer-XT.Synths (Main):Rhodes/out-1  |> Non-Mixer-XT.SynthsFX1Reverb (In):Rhodes/in-1
+Non-Mixer-XT.Synths (Main):Rhodes/out-1  |> Non-Mixer-XT.SynthsFX2Delay (In):Rhodes/in-1
+Non-Mixer-XT.Synths (Main):Rhodes/out-1  |> Non-Mixer-XT.SynthsFX3Delay (In):Rhodes/in-1
+Non-Mixer-XT.Synths (Main):Rhodes/out-1  |> Non-Mixer-XT.SynthsFX4TapeDelay (In):Rhodes/in-1
+Non-Mixer-XT.Synths (Main):Rhodes/out-1  |> Non-Mixer-XT.SynthsFX5Scape (In):Rhodes/in-1
+Non-Mixer-XT.Synths (Main):Rhodes/out-2  |> Non-Mixer-XT.Synths (Out):SynthsOut/in-2
+Non-Mixer-XT.Synths (Main):Rhodes/out-2  |> Non-Mixer-XT.SynthsFX1Reverb (In):Rhodes/in-2
+Non-Mixer-XT.Synths (Main):Rhodes/out-2  |> Non-Mixer-XT.SynthsFX2Delay (In):Rhodes/in-2
+Non-Mixer-XT.Synths (Main):Rhodes/out-2  |> Non-Mixer-XT.SynthsFX3Delay (In):Rhodes/in-2
+Non-Mixer-XT.Synths (Main):Rhodes/out-2  |> Non-Mixer-XT.SynthsFX4TapeDelay (In):Rhodes/in-2
+Non-Mixer-XT.Synths (Main):Rhodes/out-2  |> Non-Mixer-XT.SynthsFX5Scape (In):Rhodes/in-2
 Non-Mixer-XT.Synths (Main):SteelDrums/aux-A/out-1 |> Non-Mixer-XT.MonitorsKesch (MonitorsKesch):SynthsBoost/in-1
 Non-Mixer-XT.Synths (Main):SteelDrums/aux-B/out-1 |> Non-Mixer-XT.Synths (Main):MainReverb/in-1
 Non-Mixer-XT.Synths (Main):SteelDrums/aux-B/out-2 |> Non-Mixer-XT.Synths (Main):MainReverb/in-2
@@ -381,93 +434,93 @@ Non-Mixer-XT.Synths (Main):SteelDrums/out-2 |> Non-Mixer-XT.SynthsFX4TapeDelay (
 Non-Mixer-XT.Synths (Main):TenorSax/aux-A/out-1 |> Non-Mixer-XT.MonitorsKesch (MonitorsKesch):SynthsBoost/in-1
 Non-Mixer-XT.Synths (Main):TenorSax/aux-B/out-1 |> Non-Mixer-XT.Synths (Main):MainReverb/in-1
 Non-Mixer-XT.Synths (Main):TenorSax/aux-B/out-2 |> Non-Mixer-XT.Synths (Main):MainReverb/in-2
-Non-Mixer-XT.Synths (Main):TenorSax/out-1   |> Non-Mixer-XT.Synths (Out):SynthsOut/in-1
-Non-Mixer-XT.Synths (Main):TenorSax/out-1   |> Non-Mixer-XT.SynthsFX1Reverb (In):TenorSax/in-1
-Non-Mixer-XT.Synths (Main):TenorSax/out-1   |> Non-Mixer-XT.SynthsFX2Delay (In):TenorSax/in-1
-Non-Mixer-XT.Synths (Main):TenorSax/out-1   |> Non-Mixer-XT.SynthsFX3Delay (In):TenorSax/in-1
-Non-Mixer-XT.Synths (Main):TenorSax/out-1   |> Non-Mixer-XT.SynthsFX4TapeDelay (In):TenorSax/in-1
-Non-Mixer-XT.Synths (Main):TenorSax/out-1   |> Non-Mixer-XT.SynthsFX5Scape (In):TenorSax/in-1
-Non-Mixer-XT.Synths (Main):TenorSax/out-2   |> Non-Mixer-XT.Synths (Out):SynthsOut/in-2
-Non-Mixer-XT.Synths (Main):TenorSax/out-2   |> Non-Mixer-XT.SynthsFX1Reverb (In):TenorSax/in-2
-Non-Mixer-XT.Synths (Main):TenorSax/out-2   |> Non-Mixer-XT.SynthsFX2Delay (In):TenorSax/in-2
-Non-Mixer-XT.Synths (Main):TenorSax/out-2   |> Non-Mixer-XT.SynthsFX3Delay (In):TenorSax/in-2
-Non-Mixer-XT.Synths (Main):TenorSax/out-2   |> Non-Mixer-XT.SynthsFX4TapeDelay (In):TenorSax/in-2
-Non-Mixer-XT.Synths (Main):TenorSax/out-2   |> Non-Mixer-XT.SynthsFX5Scape (In):TenorSax/in-2
+Non-Mixer-XT.Synths (Main):TenorSax/out-1 |> Non-Mixer-XT.Synths (Out):SynthsOut/in-1
+Non-Mixer-XT.Synths (Main):TenorSax/out-1 |> Non-Mixer-XT.SynthsFX1Reverb (In):TenorSax/in-1
+Non-Mixer-XT.Synths (Main):TenorSax/out-1 |> Non-Mixer-XT.SynthsFX2Delay (In):TenorSax/in-1
+Non-Mixer-XT.Synths (Main):TenorSax/out-1 |> Non-Mixer-XT.SynthsFX3Delay (In):TenorSax/in-1
+Non-Mixer-XT.Synths (Main):TenorSax/out-1 |> Non-Mixer-XT.SynthsFX4TapeDelay (In):TenorSax/in-1
+Non-Mixer-XT.Synths (Main):TenorSax/out-1 |> Non-Mixer-XT.SynthsFX5Scape (In):TenorSax/in-1
+Non-Mixer-XT.Synths (Main):TenorSax/out-2 |> Non-Mixer-XT.Synths (Out):SynthsOut/in-2
+Non-Mixer-XT.Synths (Main):TenorSax/out-2 |> Non-Mixer-XT.SynthsFX1Reverb (In):TenorSax/in-2
+Non-Mixer-XT.Synths (Main):TenorSax/out-2 |> Non-Mixer-XT.SynthsFX2Delay (In):TenorSax/in-2
+Non-Mixer-XT.Synths (Main):TenorSax/out-2 |> Non-Mixer-XT.SynthsFX3Delay (In):TenorSax/in-2
+Non-Mixer-XT.Synths (Main):TenorSax/out-2 |> Non-Mixer-XT.SynthsFX4TapeDelay (In):TenorSax/in-2
+Non-Mixer-XT.Synths (Main):TenorSax/out-2 |> Non-Mixer-XT.SynthsFX5Scape (In):TenorSax/in-2
 Non-Mixer-XT.Synths (Main):Trap/aux-A/out-1 |> Non-Mixer-XT.MonitorsKesch (MonitorsKesch):SynthsBoost/in-1
 Non-Mixer-XT.Synths (Main):Trap/aux-B/out-1 |> Non-Mixer-XT.Synths (Main):MainReverb/in-1
 Non-Mixer-XT.Synths (Main):Trap/aux-B/out-2 |> Non-Mixer-XT.Synths (Main):MainReverb/in-2
-Non-Mixer-XT.Synths (Main):Trap/out-1       |> Non-Mixer-XT.Synths (Out):SynthsOut/in-1
-Non-Mixer-XT.Synths (Main):Trap/out-1       |> Non-Mixer-XT.SynthsFX1Reverb (In):Trap/in-1
-Non-Mixer-XT.Synths (Main):Trap/out-1       |> Non-Mixer-XT.SynthsFX2Delay (In):Trap/in-1
-Non-Mixer-XT.Synths (Main):Trap/out-1       |> Non-Mixer-XT.SynthsFX3Delay (In):Trap/in-1
-Non-Mixer-XT.Synths (Main):Trap/out-1       |> Non-Mixer-XT.SynthsFX4TapeDelay (In):Trap/in-1
-Non-Mixer-XT.Synths (Main):Trap/out-1       |> Non-Mixer-XT.SynthsFX5Scape (In):Trap/in-1
-Non-Mixer-XT.Synths (Main):Trap/out-2       |> Non-Mixer-XT.Synths (Out):SynthsOut/in-2
-Non-Mixer-XT.Synths (Main):Trap/out-2       |> Non-Mixer-XT.SynthsFX1Reverb (In):Trap/in-2
-Non-Mixer-XT.Synths (Main):Trap/out-2       |> Non-Mixer-XT.SynthsFX2Delay (In):Trap/in-2
-Non-Mixer-XT.Synths (Main):Trap/out-2       |> Non-Mixer-XT.SynthsFX3Delay (In):Trap/in-2
-Non-Mixer-XT.Synths (Main):Trap/out-2       |> Non-Mixer-XT.SynthsFX4TapeDelay (In):Trap/in-2
-Non-Mixer-XT.Synths (Main):Trap/out-2       |> Non-Mixer-XT.SynthsFX5Scape (In):Trap/in-2
+Non-Mixer-XT.Synths (Main):Trap/out-1    |> Non-Mixer-XT.Synths (Out):SynthsOut/in-1
+Non-Mixer-XT.Synths (Main):Trap/out-1    |> Non-Mixer-XT.SynthsFX1Reverb (In):Trap/in-1
+Non-Mixer-XT.Synths (Main):Trap/out-1    |> Non-Mixer-XT.SynthsFX2Delay (In):Trap/in-1
+Non-Mixer-XT.Synths (Main):Trap/out-1    |> Non-Mixer-XT.SynthsFX3Delay (In):Trap/in-1
+Non-Mixer-XT.Synths (Main):Trap/out-1    |> Non-Mixer-XT.SynthsFX4TapeDelay (In):Trap/in-1
+Non-Mixer-XT.Synths (Main):Trap/out-1    |> Non-Mixer-XT.SynthsFX5Scape (In):Trap/in-1
+Non-Mixer-XT.Synths (Main):Trap/out-2    |> Non-Mixer-XT.Synths (Out):SynthsOut/in-2
+Non-Mixer-XT.Synths (Main):Trap/out-2    |> Non-Mixer-XT.SynthsFX1Reverb (In):Trap/in-2
+Non-Mixer-XT.Synths (Main):Trap/out-2    |> Non-Mixer-XT.SynthsFX2Delay (In):Trap/in-2
+Non-Mixer-XT.Synths (Main):Trap/out-2    |> Non-Mixer-XT.SynthsFX3Delay (In):Trap/in-2
+Non-Mixer-XT.Synths (Main):Trap/out-2    |> Non-Mixer-XT.SynthsFX4TapeDelay (In):Trap/in-2
+Non-Mixer-XT.Synths (Main):Trap/out-2    |> Non-Mixer-XT.SynthsFX5Scape (In):Trap/in-2
 Non-Mixer-XT.Synths (Main):TrapFifth/aux-A/out-1 |> Non-Mixer-XT.MonitorsKesch (MonitorsKesch):SynthsBoost/in-1
 Non-Mixer-XT.Synths (Main):TrapFifth/aux-B/out-1 |> Non-Mixer-XT.Synths (Main):MainReverb/in-1
 Non-Mixer-XT.Synths (Main):TrapFifth/aux-B/out-2 |> Non-Mixer-XT.Synths (Main):MainReverb/in-2
-Non-Mixer-XT.Synths (Main):TrapFifth/out-1  |> Non-Mixer-XT.Synths (Out):SynthsOut/in-1
-Non-Mixer-XT.Synths (Main):TrapFifth/out-1  |> Non-Mixer-XT.SynthsFX1Reverb (In):TrapFifth/in-1
-Non-Mixer-XT.Synths (Main):TrapFifth/out-1  |> Non-Mixer-XT.SynthsFX2Delay (In):TrapFifth/in-1
-Non-Mixer-XT.Synths (Main):TrapFifth/out-1  |> Non-Mixer-XT.SynthsFX3Delay (In):TrapFifth/in-1
-Non-Mixer-XT.Synths (Main):TrapFifth/out-1  |> Non-Mixer-XT.SynthsFX4TapeDelay (In):TrapFifth/in-1
-Non-Mixer-XT.Synths (Main):TrapFifth/out-1  |> Non-Mixer-XT.SynthsFX5Scape (In):TrapFifth/in-1
-Non-Mixer-XT.Synths (Main):TrapFifth/out-2  |> Non-Mixer-XT.Synths (Out):SynthsOut/in-2
-Non-Mixer-XT.Synths (Main):TrapFifth/out-2  |> Non-Mixer-XT.SynthsFX1Reverb (In):TrapFifth/in-2
-Non-Mixer-XT.Synths (Main):TrapFifth/out-2  |> Non-Mixer-XT.SynthsFX2Delay (In):TrapFifth/in-2
-Non-Mixer-XT.Synths (Main):TrapFifth/out-2  |> Non-Mixer-XT.SynthsFX3Delay (In):TrapFifth/in-2
-Non-Mixer-XT.Synths (Main):TrapFifth/out-2  |> Non-Mixer-XT.SynthsFX4TapeDelay (In):TrapFifth/in-2
-Non-Mixer-XT.Synths (Main):TrapFifth/out-2  |> Non-Mixer-XT.SynthsFX5Scape (In):TrapFifth/in-2
+Non-Mixer-XT.Synths (Main):TrapFifth/out-1 |> Non-Mixer-XT.Synths (Out):SynthsOut/in-1
+Non-Mixer-XT.Synths (Main):TrapFifth/out-1 |> Non-Mixer-XT.SynthsFX1Reverb (In):TrapFifth/in-1
+Non-Mixer-XT.Synths (Main):TrapFifth/out-1 |> Non-Mixer-XT.SynthsFX2Delay (In):TrapFifth/in-1
+Non-Mixer-XT.Synths (Main):TrapFifth/out-1 |> Non-Mixer-XT.SynthsFX3Delay (In):TrapFifth/in-1
+Non-Mixer-XT.Synths (Main):TrapFifth/out-1 |> Non-Mixer-XT.SynthsFX4TapeDelay (In):TrapFifth/in-1
+Non-Mixer-XT.Synths (Main):TrapFifth/out-1 |> Non-Mixer-XT.SynthsFX5Scape (In):TrapFifth/in-1
+Non-Mixer-XT.Synths (Main):TrapFifth/out-2 |> Non-Mixer-XT.Synths (Out):SynthsOut/in-2
+Non-Mixer-XT.Synths (Main):TrapFifth/out-2 |> Non-Mixer-XT.SynthsFX1Reverb (In):TrapFifth/in-2
+Non-Mixer-XT.Synths (Main):TrapFifth/out-2 |> Non-Mixer-XT.SynthsFX2Delay (In):TrapFifth/in-2
+Non-Mixer-XT.Synths (Main):TrapFifth/out-2 |> Non-Mixer-XT.SynthsFX3Delay (In):TrapFifth/in-2
+Non-Mixer-XT.Synths (Main):TrapFifth/out-2 |> Non-Mixer-XT.SynthsFX4TapeDelay (In):TrapFifth/in-2
+Non-Mixer-XT.Synths (Main):TrapFifth/out-2 |> Non-Mixer-XT.SynthsFX5Scape (In):TrapFifth/in-2
 Non-Mixer-XT.Synths (Main):Z8bits/aux-A/out-1 |> Non-Mixer-XT.MonitorsKesch (MonitorsKesch):SynthsBoost/in-1
 Non-Mixer-XT.Synths (Main):Z8bits/aux-B/out-1 |> Non-Mixer-XT.Synths (Main):MainReverb/in-1
 Non-Mixer-XT.Synths (Main):Z8bits/aux-B/out-2 |> Non-Mixer-XT.Synths (Main):MainReverb/in-2
-Non-Mixer-XT.Synths (Main):Z8bits/out-1     |> Non-Mixer-XT.Synths (Out):SynthsOut/in-1
-Non-Mixer-XT.Synths (Main):Z8bits/out-1     |> Non-Mixer-XT.SynthsFX1Reverb (In):Z8bits/in-1
-Non-Mixer-XT.Synths (Main):Z8bits/out-1     |> Non-Mixer-XT.SynthsFX2Delay (In):Z8bits/in-1
-Non-Mixer-XT.Synths (Main):Z8bits/out-1     |> Non-Mixer-XT.SynthsFX3Delay (In):Z8bits/in-1
-Non-Mixer-XT.Synths (Main):Z8bits/out-1     |> Non-Mixer-XT.SynthsFX4TapeDelay (In):Z8bits/in-1
-Non-Mixer-XT.Synths (Main):Z8bits/out-1     |> Non-Mixer-XT.SynthsFX5Scape (In):Z8bits/in-1
-Non-Mixer-XT.Synths (Main):Z8bits/out-2     |> Non-Mixer-XT.Synths (Out):SynthsOut/in-2
-Non-Mixer-XT.Synths (Main):Z8bits/out-2     |> Non-Mixer-XT.SynthsFX1Reverb (In):Z8bits/in-2
-Non-Mixer-XT.Synths (Main):Z8bits/out-2     |> Non-Mixer-XT.SynthsFX2Delay (In):Z8bits/in-2
-Non-Mixer-XT.Synths (Main):Z8bits/out-2     |> Non-Mixer-XT.SynthsFX3Delay (In):Z8bits/in-2
-Non-Mixer-XT.Synths (Main):Z8bits/out-2     |> Non-Mixer-XT.SynthsFX4TapeDelay (In):Z8bits/in-2
-Non-Mixer-XT.Synths (Main):Z8bits/out-2     |> Non-Mixer-XT.SynthsFX5Scape (In):Z8bits/in-2
+Non-Mixer-XT.Synths (Main):Z8bits/out-1  |> Non-Mixer-XT.Synths (Out):SynthsOut/in-1
+Non-Mixer-XT.Synths (Main):Z8bits/out-1  |> Non-Mixer-XT.SynthsFX1Reverb (In):Z8bits/in-1
+Non-Mixer-XT.Synths (Main):Z8bits/out-1  |> Non-Mixer-XT.SynthsFX2Delay (In):Z8bits/in-1
+Non-Mixer-XT.Synths (Main):Z8bits/out-1  |> Non-Mixer-XT.SynthsFX3Delay (In):Z8bits/in-1
+Non-Mixer-XT.Synths (Main):Z8bits/out-1  |> Non-Mixer-XT.SynthsFX4TapeDelay (In):Z8bits/in-1
+Non-Mixer-XT.Synths (Main):Z8bits/out-1  |> Non-Mixer-XT.SynthsFX5Scape (In):Z8bits/in-1
+Non-Mixer-XT.Synths (Main):Z8bits/out-2  |> Non-Mixer-XT.Synths (Out):SynthsOut/in-2
+Non-Mixer-XT.Synths (Main):Z8bits/out-2  |> Non-Mixer-XT.SynthsFX1Reverb (In):Z8bits/in-2
+Non-Mixer-XT.Synths (Main):Z8bits/out-2  |> Non-Mixer-XT.SynthsFX2Delay (In):Z8bits/in-2
+Non-Mixer-XT.Synths (Main):Z8bits/out-2  |> Non-Mixer-XT.SynthsFX3Delay (In):Z8bits/in-2
+Non-Mixer-XT.Synths (Main):Z8bits/out-2  |> Non-Mixer-XT.SynthsFX4TapeDelay (In):Z8bits/in-2
+Non-Mixer-XT.Synths (Main):Z8bits/out-2  |> Non-Mixer-XT.SynthsFX5Scape (In):Z8bits/in-2
 Non-Mixer-XT.Synths (Main):ZBombarde/aux-A/out-1 |> Non-Mixer-XT.MonitorsKesch (MonitorsKesch):SynthsBoost/in-1
 Non-Mixer-XT.Synths (Main):ZBombarde/aux-B/out-1 |> Non-Mixer-XT.Synths (Main):MainReverb/in-1
 Non-Mixer-XT.Synths (Main):ZBombarde/aux-B/out-2 |> Non-Mixer-XT.Synths (Main):MainReverb/in-2
-Non-Mixer-XT.Synths (Main):ZBombarde/out-1  |> Non-Mixer-XT.Synths (Out):SynthsOut/in-1
-Non-Mixer-XT.Synths (Main):ZBombarde/out-1  |> Non-Mixer-XT.SynthsFX1Reverb (In):ZBombarde/in-1
-Non-Mixer-XT.Synths (Main):ZBombarde/out-1  |> Non-Mixer-XT.SynthsFX2Delay (In):ZBombarde/in-1
-Non-Mixer-XT.Synths (Main):ZBombarde/out-1  |> Non-Mixer-XT.SynthsFX3Delay (In):ZBombarde/in-1
-Non-Mixer-XT.Synths (Main):ZBombarde/out-1  |> Non-Mixer-XT.SynthsFX4TapeDelay (In):ZBombarde/in-1
-Non-Mixer-XT.Synths (Main):ZBombarde/out-1  |> Non-Mixer-XT.SynthsFX5Scape (In):ZBombarde/in-1
-Non-Mixer-XT.Synths (Main):ZBombarde/out-2  |> Non-Mixer-XT.Synths (Out):SynthsOut/in-2
-Non-Mixer-XT.Synths (Main):ZBombarde/out-2  |> Non-Mixer-XT.SynthsFX1Reverb (In):ZBombarde/in-2
-Non-Mixer-XT.Synths (Main):ZBombarde/out-2  |> Non-Mixer-XT.SynthsFX2Delay (In):ZBombarde/in-2
-Non-Mixer-XT.Synths (Main):ZBombarde/out-2  |> Non-Mixer-XT.SynthsFX3Delay (In):ZBombarde/in-2
-Non-Mixer-XT.Synths (Main):ZBombarde/out-2  |> Non-Mixer-XT.SynthsFX4TapeDelay (In):ZBombarde/in-2
-Non-Mixer-XT.Synths (Main):ZBombarde/out-2  |> Non-Mixer-XT.SynthsFX5Scape (In):ZBombarde/in-2
+Non-Mixer-XT.Synths (Main):ZBombarde/out-1 |> Non-Mixer-XT.Synths (Out):SynthsOut/in-1
+Non-Mixer-XT.Synths (Main):ZBombarde/out-1 |> Non-Mixer-XT.SynthsFX1Reverb (In):ZBombarde/in-1
+Non-Mixer-XT.Synths (Main):ZBombarde/out-1 |> Non-Mixer-XT.SynthsFX2Delay (In):ZBombarde/in-1
+Non-Mixer-XT.Synths (Main):ZBombarde/out-1 |> Non-Mixer-XT.SynthsFX3Delay (In):ZBombarde/in-1
+Non-Mixer-XT.Synths (Main):ZBombarde/out-1 |> Non-Mixer-XT.SynthsFX4TapeDelay (In):ZBombarde/in-1
+Non-Mixer-XT.Synths (Main):ZBombarde/out-1 |> Non-Mixer-XT.SynthsFX5Scape (In):ZBombarde/in-1
+Non-Mixer-XT.Synths (Main):ZBombarde/out-2 |> Non-Mixer-XT.Synths (Out):SynthsOut/in-2
+Non-Mixer-XT.Synths (Main):ZBombarde/out-2 |> Non-Mixer-XT.SynthsFX1Reverb (In):ZBombarde/in-2
+Non-Mixer-XT.Synths (Main):ZBombarde/out-2 |> Non-Mixer-XT.SynthsFX2Delay (In):ZBombarde/in-2
+Non-Mixer-XT.Synths (Main):ZBombarde/out-2 |> Non-Mixer-XT.SynthsFX3Delay (In):ZBombarde/in-2
+Non-Mixer-XT.Synths (Main):ZBombarde/out-2 |> Non-Mixer-XT.SynthsFX4TapeDelay (In):ZBombarde/in-2
+Non-Mixer-XT.Synths (Main):ZBombarde/out-2 |> Non-Mixer-XT.SynthsFX5Scape (In):ZBombarde/in-2
 Non-Mixer-XT.Synths (Main):ZCosma/aux-A/out-1 |> Non-Mixer-XT.MonitorsKesch (MonitorsKesch):SynthsBoost/in-1
 Non-Mixer-XT.Synths (Main):ZCosma/aux-B/out-1 |> Non-Mixer-XT.Synths (Main):MainReverb/in-1
 Non-Mixer-XT.Synths (Main):ZCosma/aux-B/out-2 |> Non-Mixer-XT.Synths (Main):MainReverb/in-2
-Non-Mixer-XT.Synths (Main):ZCosma/out-1     |> Non-Mixer-XT.Synths (Out):SynthsOut/in-1
-Non-Mixer-XT.Synths (Main):ZCosma/out-1     |> Non-Mixer-XT.SynthsFX1Reverb (In):ZCosma/in-1
-Non-Mixer-XT.Synths (Main):ZCosma/out-1     |> Non-Mixer-XT.SynthsFX2Delay (In):ZCosma/in-1
-Non-Mixer-XT.Synths (Main):ZCosma/out-1     |> Non-Mixer-XT.SynthsFX3Delay (In):ZCosma/in-1
-Non-Mixer-XT.Synths (Main):ZCosma/out-1     |> Non-Mixer-XT.SynthsFX4TapeDelay (In):ZCosma/in-1
-Non-Mixer-XT.Synths (Main):ZCosma/out-1     |> Non-Mixer-XT.SynthsFX5Scape (In):ZCosma/in-1
-Non-Mixer-XT.Synths (Main):ZCosma/out-2     |> Non-Mixer-XT.Synths (Out):SynthsOut/in-2
-Non-Mixer-XT.Synths (Main):ZCosma/out-2     |> Non-Mixer-XT.SynthsFX1Reverb (In):ZCosma/in-2
-Non-Mixer-XT.Synths (Main):ZCosma/out-2     |> Non-Mixer-XT.SynthsFX2Delay (In):ZCosma/in-2
-Non-Mixer-XT.Synths (Main):ZCosma/out-2     |> Non-Mixer-XT.SynthsFX3Delay (In):ZCosma/in-2
-Non-Mixer-XT.Synths (Main):ZCosma/out-2     |> Non-Mixer-XT.SynthsFX4TapeDelay (In):ZCosma/in-2
-Non-Mixer-XT.Synths (Main):ZCosma/out-2     |> Non-Mixer-XT.SynthsFX5Scape (In):ZCosma/in-2
+Non-Mixer-XT.Synths (Main):ZCosma/out-1  |> Non-Mixer-XT.Synths (Out):SynthsOut/in-1
+Non-Mixer-XT.Synths (Main):ZCosma/out-1  |> Non-Mixer-XT.SynthsFX1Reverb (In):ZCosma/in-1
+Non-Mixer-XT.Synths (Main):ZCosma/out-1  |> Non-Mixer-XT.SynthsFX2Delay (In):ZCosma/in-1
+Non-Mixer-XT.Synths (Main):ZCosma/out-1  |> Non-Mixer-XT.SynthsFX3Delay (In):ZCosma/in-1
+Non-Mixer-XT.Synths (Main):ZCosma/out-1  |> Non-Mixer-XT.SynthsFX4TapeDelay (In):ZCosma/in-1
+Non-Mixer-XT.Synths (Main):ZCosma/out-1  |> Non-Mixer-XT.SynthsFX5Scape (In):ZCosma/in-1
+Non-Mixer-XT.Synths (Main):ZCosma/out-2  |> Non-Mixer-XT.Synths (Out):SynthsOut/in-2
+Non-Mixer-XT.Synths (Main):ZCosma/out-2  |> Non-Mixer-XT.SynthsFX1Reverb (In):ZCosma/in-2
+Non-Mixer-XT.Synths (Main):ZCosma/out-2  |> Non-Mixer-XT.SynthsFX2Delay (In):ZCosma/in-2
+Non-Mixer-XT.Synths (Main):ZCosma/out-2  |> Non-Mixer-XT.SynthsFX3Delay (In):ZCosma/in-2
+Non-Mixer-XT.Synths (Main):ZCosma/out-2  |> Non-Mixer-XT.SynthsFX4TapeDelay (In):ZCosma/in-2
+Non-Mixer-XT.Synths (Main):ZCosma/out-2  |> Non-Mixer-XT.SynthsFX5Scape (In):ZCosma/in-2
 Non-Mixer-XT.Synths (Main):ZDiploLike/aux-A/out-1 |> Non-Mixer-XT.MonitorsKesch (MonitorsKesch):SynthsBoost/in-1
 Non-Mixer-XT.Synths (Main):ZDiploLike/aux-B/out-1 |> Non-Mixer-XT.Synths (Main):MainReverb/in-1
 Non-Mixer-XT.Synths (Main):ZDiploLike/aux-B/out-2 |> Non-Mixer-XT.Synths (Main):MainReverb/in-2
@@ -499,33 +552,33 @@ Non-Mixer-XT.Synths (Main):ZDiploLikeWide/out-2 |> Non-Mixer-XT.SynthsFX3Delay (
 Non-Mixer-XT.Synths (Main):ZDiploLikeWide/out-2 |> Non-Mixer-XT.SynthsFX4TapeDelay (In):ZDiploLikeWide/in-2
 Non-Mixer-XT.Synths (Main):ZDiploLikeWide/out-2 |> Non-Mixer-XT.SynthsFX5Scape (In):ZDiploLikeWide/in-2
 Non-Mixer-XT.Synths (Main):ZDre/aux-A/out-1 |> Non-Mixer-XT.MonitorsKesch (MonitorsKesch):SynthsBoost/in-1
-Non-Mixer-XT.Synths (Main):ZDre/out-1       |> Non-Mixer-XT.Synths (Out):SynthsOut/in-1
-Non-Mixer-XT.Synths (Main):ZDre/out-1       |> Non-Mixer-XT.SynthsFX1Reverb (In):ZDre/in-1
-Non-Mixer-XT.Synths (Main):ZDre/out-1       |> Non-Mixer-XT.SynthsFX2Delay (In):ZDre/in-1
-Non-Mixer-XT.Synths (Main):ZDre/out-1       |> Non-Mixer-XT.SynthsFX3Delay (In):ZDre/in-1
-Non-Mixer-XT.Synths (Main):ZDre/out-1       |> Non-Mixer-XT.SynthsFX4TapeDelay (In):ZDre/in-1
-Non-Mixer-XT.Synths (Main):ZDre/out-1       |> Non-Mixer-XT.SynthsFX5Scape (In):ZDre/in-1
-Non-Mixer-XT.Synths (Main):ZDre/out-2       |> Non-Mixer-XT.Synths (Out):SynthsOut/in-2
-Non-Mixer-XT.Synths (Main):ZDre/out-2       |> Non-Mixer-XT.SynthsFX1Reverb (In):ZDre/in-2
-Non-Mixer-XT.Synths (Main):ZDre/out-2       |> Non-Mixer-XT.SynthsFX2Delay (In):ZDre/in-2
-Non-Mixer-XT.Synths (Main):ZDre/out-2       |> Non-Mixer-XT.SynthsFX3Delay (In):ZDre/in-2
-Non-Mixer-XT.Synths (Main):ZDre/out-2       |> Non-Mixer-XT.SynthsFX4TapeDelay (In):ZDre/in-2
-Non-Mixer-XT.Synths (Main):ZDre/out-2       |> Non-Mixer-XT.SynthsFX5Scape (In):ZDre/in-2
+Non-Mixer-XT.Synths (Main):ZDre/out-1    |> Non-Mixer-XT.Synths (Out):SynthsOut/in-1
+Non-Mixer-XT.Synths (Main):ZDre/out-1    |> Non-Mixer-XT.SynthsFX1Reverb (In):ZDre/in-1
+Non-Mixer-XT.Synths (Main):ZDre/out-1    |> Non-Mixer-XT.SynthsFX2Delay (In):ZDre/in-1
+Non-Mixer-XT.Synths (Main):ZDre/out-1    |> Non-Mixer-XT.SynthsFX3Delay (In):ZDre/in-1
+Non-Mixer-XT.Synths (Main):ZDre/out-1    |> Non-Mixer-XT.SynthsFX4TapeDelay (In):ZDre/in-1
+Non-Mixer-XT.Synths (Main):ZDre/out-1    |> Non-Mixer-XT.SynthsFX5Scape (In):ZDre/in-1
+Non-Mixer-XT.Synths (Main):ZDre/out-2    |> Non-Mixer-XT.Synths (Out):SynthsOut/in-2
+Non-Mixer-XT.Synths (Main):ZDre/out-2    |> Non-Mixer-XT.SynthsFX1Reverb (In):ZDre/in-2
+Non-Mixer-XT.Synths (Main):ZDre/out-2    |> Non-Mixer-XT.SynthsFX2Delay (In):ZDre/in-2
+Non-Mixer-XT.Synths (Main):ZDre/out-2    |> Non-Mixer-XT.SynthsFX3Delay (In):ZDre/in-2
+Non-Mixer-XT.Synths (Main):ZDre/out-2    |> Non-Mixer-XT.SynthsFX4TapeDelay (In):ZDre/in-2
+Non-Mixer-XT.Synths (Main):ZDre/out-2    |> Non-Mixer-XT.SynthsFX5Scape (In):ZDre/in-2
 Non-Mixer-XT.Synths (Main):ZDupieux/aux-A/out-1 |> Non-Mixer-XT.MonitorsKesch (MonitorsKesch):SynthsBoost/in-1
 Non-Mixer-XT.Synths (Main):ZDupieux/aux-B/out-1 |> Non-Mixer-XT.Synths (Main):MainReverb/in-1
 Non-Mixer-XT.Synths (Main):ZDupieux/aux-B/out-2 |> Non-Mixer-XT.Synths (Main):MainReverb/in-2
-Non-Mixer-XT.Synths (Main):ZDupieux/out-1   |> Non-Mixer-XT.Synths (Out):SynthsOut/in-1
-Non-Mixer-XT.Synths (Main):ZDupieux/out-1   |> Non-Mixer-XT.SynthsFX1Reverb (In):ZDupieux/in-1
-Non-Mixer-XT.Synths (Main):ZDupieux/out-1   |> Non-Mixer-XT.SynthsFX2Delay (In):ZDupieux/in-1
-Non-Mixer-XT.Synths (Main):ZDupieux/out-1   |> Non-Mixer-XT.SynthsFX3Delay (In):ZDupieux/in-1
-Non-Mixer-XT.Synths (Main):ZDupieux/out-1   |> Non-Mixer-XT.SynthsFX4TapeDelay (In):ZDupieux/in-1
-Non-Mixer-XT.Synths (Main):ZDupieux/out-1   |> Non-Mixer-XT.SynthsFX5Scape (In):ZDupieux/in-1
-Non-Mixer-XT.Synths (Main):ZDupieux/out-2   |> Non-Mixer-XT.Synths (Out):SynthsOut/in-2
-Non-Mixer-XT.Synths (Main):ZDupieux/out-2   |> Non-Mixer-XT.SynthsFX1Reverb (In):ZDupieux/in-2
-Non-Mixer-XT.Synths (Main):ZDupieux/out-2   |> Non-Mixer-XT.SynthsFX2Delay (In):ZDupieux/in-2
-Non-Mixer-XT.Synths (Main):ZDupieux/out-2   |> Non-Mixer-XT.SynthsFX3Delay (In):ZDupieux/in-2
-Non-Mixer-XT.Synths (Main):ZDupieux/out-2   |> Non-Mixer-XT.SynthsFX4TapeDelay (In):ZDupieux/in-2
-Non-Mixer-XT.Synths (Main):ZDupieux/out-2   |> Non-Mixer-XT.SynthsFX5Scape (In):ZDupieux/in-2
+Non-Mixer-XT.Synths (Main):ZDupieux/out-1 |> Non-Mixer-XT.Synths (Out):SynthsOut/in-1
+Non-Mixer-XT.Synths (Main):ZDupieux/out-1 |> Non-Mixer-XT.SynthsFX1Reverb (In):ZDupieux/in-1
+Non-Mixer-XT.Synths (Main):ZDupieux/out-1 |> Non-Mixer-XT.SynthsFX2Delay (In):ZDupieux/in-1
+Non-Mixer-XT.Synths (Main):ZDupieux/out-1 |> Non-Mixer-XT.SynthsFX3Delay (In):ZDupieux/in-1
+Non-Mixer-XT.Synths (Main):ZDupieux/out-1 |> Non-Mixer-XT.SynthsFX4TapeDelay (In):ZDupieux/in-1
+Non-Mixer-XT.Synths (Main):ZDupieux/out-1 |> Non-Mixer-XT.SynthsFX5Scape (In):ZDupieux/in-1
+Non-Mixer-XT.Synths (Main):ZDupieux/out-2 |> Non-Mixer-XT.Synths (Out):SynthsOut/in-2
+Non-Mixer-XT.Synths (Main):ZDupieux/out-2 |> Non-Mixer-XT.SynthsFX1Reverb (In):ZDupieux/in-2
+Non-Mixer-XT.Synths (Main):ZDupieux/out-2 |> Non-Mixer-XT.SynthsFX2Delay (In):ZDupieux/in-2
+Non-Mixer-XT.Synths (Main):ZDupieux/out-2 |> Non-Mixer-XT.SynthsFX3Delay (In):ZDupieux/in-2
+Non-Mixer-XT.Synths (Main):ZDupieux/out-2 |> Non-Mixer-XT.SynthsFX4TapeDelay (In):ZDupieux/in-2
+Non-Mixer-XT.Synths (Main):ZDupieux/out-2 |> Non-Mixer-XT.SynthsFX5Scape (In):ZDupieux/in-2
 Non-Mixer-XT.Synths (Main):ZJestoProunk/aux-A/out-1 |> Non-Mixer-XT.MonitorsKesch (MonitorsKesch):SynthsBoost/in-1
 Non-Mixer-XT.Synths (Main):ZJestoProunk/aux-B/out-1 |> Non-Mixer-XT.Synths (Main):MainReverb/in-1
 Non-Mixer-XT.Synths (Main):ZJestoProunk/aux-B/out-2 |> Non-Mixer-XT.Synths (Main):MainReverb/in-2
@@ -559,46 +612,46 @@ Non-Mixer-XT.Synths (Main):ZNotSoRhodes/out-2 |> Non-Mixer-XT.SynthsFX5Scape (In
 Non-Mixer-XT.Synths (Main):ZOrgan/aux-A/out-1 |> Non-Mixer-XT.MonitorsKesch (MonitorsKesch):SynthsBoost/in-1
 Non-Mixer-XT.Synths (Main):ZOrgan/aux-B/out-1 |> Non-Mixer-XT.Synths (Main):MainReverb/in-1
 Non-Mixer-XT.Synths (Main):ZOrgan/aux-B/out-2 |> Non-Mixer-XT.Synths (Main):MainReverb/in-2
-Non-Mixer-XT.Synths (Main):ZOrgan/out-1     |> Non-Mixer-XT.Synths (Out):SynthsOut/in-1
-Non-Mixer-XT.Synths (Main):ZOrgan/out-1     |> Non-Mixer-XT.SynthsFX1Reverb (In):ZOrgan/in-1
-Non-Mixer-XT.Synths (Main):ZOrgan/out-1     |> Non-Mixer-XT.SynthsFX2Delay (In):ZOrgan/in-1
-Non-Mixer-XT.Synths (Main):ZOrgan/out-1     |> Non-Mixer-XT.SynthsFX3Delay (In):ZOrgan/in-1
-Non-Mixer-XT.Synths (Main):ZOrgan/out-1     |> Non-Mixer-XT.SynthsFX4TapeDelay (In):ZOrgan/in-1
-Non-Mixer-XT.Synths (Main):ZOrgan/out-1     |> Non-Mixer-XT.SynthsFX5Scape (In):ZOrgan/in-1
-Non-Mixer-XT.Synths (Main):ZOrgan/out-2     |> Non-Mixer-XT.Synths (Out):SynthsOut/in-2
-Non-Mixer-XT.Synths (Main):ZOrgan/out-2     |> Non-Mixer-XT.SynthsFX1Reverb (In):ZOrgan/in-2
-Non-Mixer-XT.Synths (Main):ZOrgan/out-2     |> Non-Mixer-XT.SynthsFX2Delay (In):ZOrgan/in-2
-Non-Mixer-XT.Synths (Main):ZOrgan/out-2     |> Non-Mixer-XT.SynthsFX3Delay (In):ZOrgan/in-2
-Non-Mixer-XT.Synths (Main):ZOrgan/out-2     |> Non-Mixer-XT.SynthsFX4TapeDelay (In):ZOrgan/in-2
-Non-Mixer-XT.Synths (Main):ZOrgan/out-2     |> Non-Mixer-XT.SynthsFX5Scape (In):ZOrgan/in-2
+Non-Mixer-XT.Synths (Main):ZOrgan/out-1  |> Non-Mixer-XT.Synths (Out):SynthsOut/in-1
+Non-Mixer-XT.Synths (Main):ZOrgan/out-1  |> Non-Mixer-XT.SynthsFX1Reverb (In):ZOrgan/in-1
+Non-Mixer-XT.Synths (Main):ZOrgan/out-1  |> Non-Mixer-XT.SynthsFX2Delay (In):ZOrgan/in-1
+Non-Mixer-XT.Synths (Main):ZOrgan/out-1  |> Non-Mixer-XT.SynthsFX3Delay (In):ZOrgan/in-1
+Non-Mixer-XT.Synths (Main):ZOrgan/out-1  |> Non-Mixer-XT.SynthsFX4TapeDelay (In):ZOrgan/in-1
+Non-Mixer-XT.Synths (Main):ZOrgan/out-1  |> Non-Mixer-XT.SynthsFX5Scape (In):ZOrgan/in-1
+Non-Mixer-XT.Synths (Main):ZOrgan/out-2  |> Non-Mixer-XT.Synths (Out):SynthsOut/in-2
+Non-Mixer-XT.Synths (Main):ZOrgan/out-2  |> Non-Mixer-XT.SynthsFX1Reverb (In):ZOrgan/in-2
+Non-Mixer-XT.Synths (Main):ZOrgan/out-2  |> Non-Mixer-XT.SynthsFX2Delay (In):ZOrgan/in-2
+Non-Mixer-XT.Synths (Main):ZOrgan/out-2  |> Non-Mixer-XT.SynthsFX3Delay (In):ZOrgan/in-2
+Non-Mixer-XT.Synths (Main):ZOrgan/out-2  |> Non-Mixer-XT.SynthsFX4TapeDelay (In):ZOrgan/in-2
+Non-Mixer-XT.Synths (Main):ZOrgan/out-2  |> Non-Mixer-XT.SynthsFX5Scape (In):ZOrgan/in-2
 Non-Mixer-XT.Synths (Main):ZStambul/aux-A/out-1 |> Non-Mixer-XT.MonitorsKesch (MonitorsKesch):SynthsBoost/in-1
-Non-Mixer-XT.Synths (Main):ZStambul/out-1   |> Non-Mixer-XT.Synths (Out):SynthsOut/in-1
-Non-Mixer-XT.Synths (Main):ZStambul/out-1   |> Non-Mixer-XT.SynthsFX1Reverb (In):ZStambul/in-1
-Non-Mixer-XT.Synths (Main):ZStambul/out-1   |> Non-Mixer-XT.SynthsFX2Delay (In):ZStambul/in-1
-Non-Mixer-XT.Synths (Main):ZStambul/out-1   |> Non-Mixer-XT.SynthsFX3Delay (In):ZStambul/in-1
-Non-Mixer-XT.Synths (Main):ZStambul/out-1   |> Non-Mixer-XT.SynthsFX4TapeDelay (In):ZStambul/in-1
-Non-Mixer-XT.Synths (Main):ZStambul/out-1   |> Non-Mixer-XT.SynthsFX5Scape (In):ZStambul/in-1
-Non-Mixer-XT.Synths (Main):ZStambul/out-2   |> Non-Mixer-XT.Synths (Out):SynthsOut/in-2
-Non-Mixer-XT.Synths (Main):ZStambul/out-2   |> Non-Mixer-XT.SynthsFX1Reverb (In):ZStambul/in-2
-Non-Mixer-XT.Synths (Main):ZStambul/out-2   |> Non-Mixer-XT.SynthsFX2Delay (In):ZStambul/in-2
-Non-Mixer-XT.Synths (Main):ZStambul/out-2   |> Non-Mixer-XT.SynthsFX3Delay (In):ZStambul/in-2
-Non-Mixer-XT.Synths (Main):ZStambul/out-2   |> Non-Mixer-XT.SynthsFX4TapeDelay (In):ZStambul/in-2
-Non-Mixer-XT.Synths (Main):ZStambul/out-2   |> Non-Mixer-XT.SynthsFX5Scape (In):ZStambul/in-2
+Non-Mixer-XT.Synths (Main):ZStambul/out-1 |> Non-Mixer-XT.Synths (Out):SynthsOut/in-1
+Non-Mixer-XT.Synths (Main):ZStambul/out-1 |> Non-Mixer-XT.SynthsFX1Reverb (In):ZStambul/in-1
+Non-Mixer-XT.Synths (Main):ZStambul/out-1 |> Non-Mixer-XT.SynthsFX2Delay (In):ZStambul/in-1
+Non-Mixer-XT.Synths (Main):ZStambul/out-1 |> Non-Mixer-XT.SynthsFX3Delay (In):ZStambul/in-1
+Non-Mixer-XT.Synths (Main):ZStambul/out-1 |> Non-Mixer-XT.SynthsFX4TapeDelay (In):ZStambul/in-1
+Non-Mixer-XT.Synths (Main):ZStambul/out-1 |> Non-Mixer-XT.SynthsFX5Scape (In):ZStambul/in-1
+Non-Mixer-XT.Synths (Main):ZStambul/out-2 |> Non-Mixer-XT.Synths (Out):SynthsOut/in-2
+Non-Mixer-XT.Synths (Main):ZStambul/out-2 |> Non-Mixer-XT.SynthsFX1Reverb (In):ZStambul/in-2
+Non-Mixer-XT.Synths (Main):ZStambul/out-2 |> Non-Mixer-XT.SynthsFX2Delay (In):ZStambul/in-2
+Non-Mixer-XT.Synths (Main):ZStambul/out-2 |> Non-Mixer-XT.SynthsFX3Delay (In):ZStambul/in-2
+Non-Mixer-XT.Synths (Main):ZStambul/out-2 |> Non-Mixer-XT.SynthsFX4TapeDelay (In):ZStambul/in-2
+Non-Mixer-XT.Synths (Main):ZStambul/out-2 |> Non-Mixer-XT.SynthsFX5Scape (In):ZStambul/in-2
 Non-Mixer-XT.Synths (Main):ZTrumpets/aux-A/out-1 |> Non-Mixer-XT.MonitorsKesch (MonitorsKesch):SynthsBoost/in-1
-Non-Mixer-XT.Synths (Main):ZTrumpets/out-1  |> Non-Mixer-XT.Synths (Out):SynthsOut/in-1
-Non-Mixer-XT.Synths (Main):ZTrumpets/out-1  |> Non-Mixer-XT.SynthsFX1Reverb (In):ZTrumpets/in-1
-Non-Mixer-XT.Synths (Main):ZTrumpets/out-1  |> Non-Mixer-XT.SynthsFX2Delay (In):ZTrumpets/in-1
-Non-Mixer-XT.Synths (Main):ZTrumpets/out-1  |> Non-Mixer-XT.SynthsFX3Delay (In):ZTrumpets/in-1
-Non-Mixer-XT.Synths (Main):ZTrumpets/out-1  |> Non-Mixer-XT.SynthsFX4TapeDelay (In):ZTrumpets/in-1
-Non-Mixer-XT.Synths (Main):ZTrumpets/out-1  |> Non-Mixer-XT.SynthsFX5Scape (In):ZTrumpets/in-1
-Non-Mixer-XT.Synths (Main):ZTrumpets/out-2  |> Non-Mixer-XT.Synths (Out):SynthsOut/in-2
-Non-Mixer-XT.Synths (Main):ZTrumpets/out-2  |> Non-Mixer-XT.SynthsFX1Reverb (In):ZTrumpets/in-2
-Non-Mixer-XT.Synths (Main):ZTrumpets/out-2  |> Non-Mixer-XT.SynthsFX2Delay (In):ZTrumpets/in-2
-Non-Mixer-XT.Synths (Main):ZTrumpets/out-2  |> Non-Mixer-XT.SynthsFX3Delay (In):ZTrumpets/in-2
-Non-Mixer-XT.Synths (Main):ZTrumpets/out-2  |> Non-Mixer-XT.SynthsFX4TapeDelay (In):ZTrumpets/in-2
-Non-Mixer-XT.Synths (Main):ZTrumpets/out-2  |> Non-Mixer-XT.SynthsFX5Scape (In):ZTrumpets/in-2
-Non-Mixer-XT.Synths (Out):SynthsOut/out-1   |> sooperlooper:loop3_in_1
-Non-Mixer-XT.Synths (Out):SynthsOut/out-2   |> sooperlooper:loop3_in_2
+Non-Mixer-XT.Synths (Main):ZTrumpets/out-1 |> Non-Mixer-XT.Synths (Out):SynthsOut/in-1
+Non-Mixer-XT.Synths (Main):ZTrumpets/out-1 |> Non-Mixer-XT.SynthsFX1Reverb (In):ZTrumpets/in-1
+Non-Mixer-XT.Synths (Main):ZTrumpets/out-1 |> Non-Mixer-XT.SynthsFX2Delay (In):ZTrumpets/in-1
+Non-Mixer-XT.Synths (Main):ZTrumpets/out-1 |> Non-Mixer-XT.SynthsFX3Delay (In):ZTrumpets/in-1
+Non-Mixer-XT.Synths (Main):ZTrumpets/out-1 |> Non-Mixer-XT.SynthsFX4TapeDelay (In):ZTrumpets/in-1
+Non-Mixer-XT.Synths (Main):ZTrumpets/out-1 |> Non-Mixer-XT.SynthsFX5Scape (In):ZTrumpets/in-1
+Non-Mixer-XT.Synths (Main):ZTrumpets/out-2 |> Non-Mixer-XT.Synths (Out):SynthsOut/in-2
+Non-Mixer-XT.Synths (Main):ZTrumpets/out-2 |> Non-Mixer-XT.SynthsFX1Reverb (In):ZTrumpets/in-2
+Non-Mixer-XT.Synths (Main):ZTrumpets/out-2 |> Non-Mixer-XT.SynthsFX2Delay (In):ZTrumpets/in-2
+Non-Mixer-XT.Synths (Main):ZTrumpets/out-2 |> Non-Mixer-XT.SynthsFX3Delay (In):ZTrumpets/in-2
+Non-Mixer-XT.Synths (Main):ZTrumpets/out-2 |> Non-Mixer-XT.SynthsFX4TapeDelay (In):ZTrumpets/in-2
+Non-Mixer-XT.Synths (Main):ZTrumpets/out-2 |> Non-Mixer-XT.SynthsFX5Scape (In):ZTrumpets/in-2
+Non-Mixer-XT.Synths (Out):SynthsOut/out-1 |> sooperlooper:loop3_in_1
+Non-Mixer-XT.Synths (Out):SynthsOut/out-2 |> sooperlooper:loop3_in_2
 Non-Mixer-XT.SynthsFX1Reverb (In):Charang/out-1 |> Non-Mixer-XT.SynthsFX1Reverb (Process):SynthsFX1Reverb/in-1
 Non-Mixer-XT.SynthsFX1Reverb (In):Charang/out-2 |> Non-Mixer-XT.SynthsFX1Reverb (Process):SynthsFX1Reverb/in-2
 Non-Mixer-XT.SynthsFX1Reverb (In):DubstepHorn/out-1 |> Non-Mixer-XT.SynthsFX1Reverb (Process):SynthsFX1Reverb/in-1
@@ -820,6 +873,15 @@ Non-Mixer-XT.SynthsFX5Scape (In):ZTrumpets/out-1 |> Non-Mixer-XT.SynthsFX5Scape 
 Non-Mixer-XT.SynthsFX5Scape (In):ZTrumpets/out-2 |> Non-Mixer-XT.SynthsFX5Scape (Process):SynthsFX5Scape/in-1
 Non-Mixer-XT.SynthsFX5Scape (Process):SynthsFX5Scape/out-1 |> Non-Mixer-XT.Synths (Out):SynthsOut/in-1
 Non-Mixer-XT.SynthsFX5Scape (Process):SynthsFX5Scape/out-2 |> Non-Mixer-XT.Synths (Out):SynthsOut/in-2
+Non-Mixer-XT.VocalsFeat (Gars):FeatGars/out-1 |> Non-Mixer-XT.VocalsFeat (Out):FeatOut/in-1
+Non-Mixer-XT.VocalsFeat (In):FeatIn/out-1 |> Autotune.FeatGars:in
+Non-Mixer-XT.VocalsFeat (In):FeatIn/out-1 |> Autotune.FeatMeuf:in
+Non-Mixer-XT.VocalsFeat (In):FeatIn/out-1 |> Autotune.FeatNormo:in
+Non-Mixer-XT.VocalsFeat (Meuf):FeatMeuf/out-1 |> Non-Mixer-XT.VocalsFeat (Out):FeatOut/in-1
+Non-Mixer-XT.VocalsFeat (Normo):FeatNormo/out-1 |> Non-Mixer-XT.VocalsFeat (Out):FeatOut/in-1
+Non-Mixer-XT.VocalsFeat (Out):FeatOut/out-1 |> Non-Mixer-XT.MonitorsKesch (MonitorsKesch):VocalsFeat/in-1
+Non-Mixer-XT.VocalsFeat (Out):FeatOut/out-1 |> Non-Mixer-XT.MonitorsNano (MonitorsNano):VocalsFeat/in-1
+Non-Mixer-XT.VocalsFeat (Out):FeatOut/out-1 |> Non-Mixer-XT.Outputs (Outputs):VocalsFeat/in-1
 Non-Mixer-XT.VocalsKesch (ArtificialBackings):KeschABGars/out-1 |> Non-Mixer-XT.VocalsKesch (Out):KeschOut/in-1
 Non-Mixer-XT.VocalsKesch (ArtificialBackings):KeschABGars/out-1 |> Non-Mixer-XT.VocalsKeschFX1Delay (In):KeschAB/in-1
 Non-Mixer-XT.VocalsKesch (ArtificialBackings):KeschABGars/out-1 |> Non-Mixer-XT.VocalsKeschFX2Delay (In):KeschAB/in-1
@@ -977,9 +1039,9 @@ Non-Mixer-XT.VocalsNano (Gars):NanoGars/aux-C/out-1 |> Non-Mixer-XT.VocalsNanoFX
 Non-Mixer-XT.VocalsNano (Gars):NanoGars/aux-C/out-1 |> Non-Mixer-XT.VocalsNanoFX8TapeDelay (In):NanoGars/in-1
 Non-Mixer-XT.VocalsNano (Gars):NanoGars/aux-C/out-1 |> Non-Mixer-XT.VocalsNanoFX9Scape (In):NanoGars/in-1
 Non-Mixer-XT.VocalsNano (Gars):NanoGars/out-1 |> Non-Mixer-XT.VocalsNano (Out):NanoOut/in-1
-Non-Mixer-XT.VocalsNano (In):NanoIn/out-1   |> Autotune.NanoGars:in
-Non-Mixer-XT.VocalsNano (In):NanoIn/out-1   |> Autotune.NanoMeuf:in
-Non-Mixer-XT.VocalsNano (In):NanoIn/out-1   |> Autotune.NanoNormo:in
+Non-Mixer-XT.VocalsNano (In):NanoIn/out-1 |> Autotune.NanoGars:in
+Non-Mixer-XT.VocalsNano (In):NanoIn/out-1 |> Autotune.NanoMeuf:in
+Non-Mixer-XT.VocalsNano (In):NanoIn/out-1 |> Autotune.NanoNormo:in
 Non-Mixer-XT.VocalsNano (Meuf):NanoMeuf/aux-A/out-1 |> Non-Mixer-XT.VocalsNano (ArtificialBackings):NanoABGars/in-1
 Non-Mixer-XT.VocalsNano (Meuf):NanoMeuf/aux-B/out-1 |> Non-Mixer-XT.VocalsNano (ArtificialBackings):NanoABNormo/in-1
 Non-Mixer-XT.VocalsNano (Meuf):NanoMeuf/aux-C/out-1 |> Non-Mixer-XT.VocalsNanoFX1Delay (In):NanoMeuf/in-1
@@ -1187,23 +1249,28 @@ cLowRouter:Boom                          |> Carla.LowCSynths/Boom:events-in
 cLowRouter:Trap1                         |> Carla.LowCSynths/Trap1:events-in
 cLowRouter:Trap2                         |> Carla.LowCSynths/Trap2:events-in
 cLowRouter:Trap3                         |> Carla.LowCSynths/Trap3:events-in
+klick:out                                |> Non-Mixer-XT.MonitorsFeat (MonitorsFeat):Klick/in-1
 klick:out                                |> Non-Mixer-XT.MonitorsKesch (MonitorsKesch):Klick/in-1
 klick:out                                |> Non-Mixer-XT.MonitorsNano (MonitorsNano):Klick/in-1
+klick:out                                |> ardour:Klick/audio_in 1
 sooperlooper:loop0_out_1                 |> Non-Mixer-XT.Bass (In):BassIn/in-1
 sooperlooper:loop1_out_1                 |> Non-Mixer-XT.Outputs (Outputs):Bass/in-1
 sooperlooper:loop2_out_1                 |> Non-Mixer-XT.Outputs (Outputs):BassSynths/in-1
 sooperlooper:loop3_out_1                 |> Non-Mixer-XT.Outputs (Outputs):Synths/in-1
 sooperlooper:loop3_out_2                 |> Non-Mixer-XT.Outputs (Outputs):Synths/in-2
 sooperlooper:loop4_out_1                 |> Non-Mixer-XT.VocalsNano (In):NanoIn/in-1
+sooperlooper:loop5_out_1                 |> Non-Mixer-XT.MonitorsFeat (MonitorsFeat):VocalsNano/in-1
 sooperlooper:loop5_out_1                 |> Non-Mixer-XT.MonitorsKesch (MonitorsKesch):VocalsNano/in-1
 sooperlooper:loop5_out_1                 |> Non-Mixer-XT.MonitorsNano (MonitorsNano):VocalsNano/in-1
 sooperlooper:loop5_out_1                 |> Non-Mixer-XT.Outputs (Outputs):VocalsNano/in-1
 sooperlooper:loop6_out_1                 |> Non-Mixer-XT.VocalsKesch (In):KeschIn/in-1
+sooperlooper:loop7_out_1                 |> Non-Mixer-XT.MonitorsFeat (MonitorsFeat):VocalsKesch/in-1
 sooperlooper:loop7_out_1                 |> Non-Mixer-XT.MonitorsKesch (MonitorsKesch):VocalsKesch/in-1
 sooperlooper:loop7_out_1                 |> Non-Mixer-XT.MonitorsNano (MonitorsNano):VocalsKesch/in-1
 sooperlooper:loop7_out_1                 |> Non-Mixer-XT.Outputs (Outputs):VocalsKesch/in-1
 system:capture_1                         |> Non-Mixer-XT.Inputs (Inputs):Bass/in-1
 system:capture_1                         |> gxtuner:in_0
+system:capture_10                        |> Non-Mixer-XT.Inputs (Inputs):Feat/in-1
 system:capture_2                         |> Non-Mixer-XT.Inputs (Inputs):VocalsKesch/in-1
 system:capture_3                         |> Non-Mixer-XT.Inputs (Inputs):VocalsNano/in-1
 system:capture_4                         |> Non-Mixer-XT.Inputs (Inputs):Kick/in-1

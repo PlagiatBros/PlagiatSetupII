@@ -63,6 +63,8 @@ inputs = NonMixer('Inputs', 'osc', 10000)
 outputs = NonMixer('Outputs', 'osc', 10001)
 monitorsNano = NonMixer('MonitorsNano', 'osc', 10002)
 monitorsKesch = NonMixer('MonitorsKesch', 'osc', 10003)
+# (drums) 10004
+monitorsFeat = NonMixer('MonitorsFeat', 'osc', 10005)
 
 bass = Bass('Bass', 'osc', 10010)
 bassFX = bassfx = BassFX('BassFX', 'osc', 10011)
@@ -106,6 +108,8 @@ vocalsKeschFX6Granular = VocalsFX('VocalsKeschFX6Granular', 'osc', 10066)
 vocalsKeschFX7Slice = VocalsFX('VocalsKeschFX7Slice', 'osc', 10067)
 vocalsKeschFX8TapeDelay = VocalsFX('VocalsKeschFX8TapeDelay', 'osc', 10068)
 vocalsKeschFX9Scape = VocalsFX('VocalsKeschFX9Scape', 'osc', 10069)
+
+vocalsFeat = Vocals('VocalsFeat', 'osc', 10070)
 
 """
 Samplers
@@ -177,6 +181,10 @@ autotuneNanoGars = Autotune('NanoGars', 'osc', 12052, offset=-4.0)
 autotuneKeschMeuf = Autotune('KeschMeuf', 'osc', 12060, offset=4.0)
 autotuneKeschNormo = Autotune('KeschNormo', 'osc', 12061, offset=0.0)
 autotuneKeschGars = Autotune('KeschGars', 'osc', 12062, offset=-4.0)
+
+autotuneFeatMeuf = Autotune('FeatMeuf', 'osc', 12070, offset=4.0)
+autotuneFeatNormo = Autotune('FeatNormo', 'osc', 12071, offset=0.0)
+autotuneFeatGars = Autotune('FeatGars', 'osc', 12072, offset=-4.0)
 
 
 """

@@ -164,11 +164,11 @@ class StickItOut(Video, Light, RouteBase):
         vocalsKesch.set('meuf_exclu', 'on')
 
         # Synths
-        synths.set('Trapfifth', 'Pan', -0.5)
+        synths.set('TrapFifth', 'Pan', -0.5)
         synths.set('ZDiploLike', 'Pan', 0.5)
         synths.set('Rhodes', 'Pan', 0.3)
         synths.set('DubstepHorn', 'Pan', -0.3)
-        synthsFX2Delay.set('Trapfifth', 'Gain', -10.0)
+        synthsFX2Delay.set('TrapFifth', 'Gain', -10.0)
         synthsFX2Delay.set('DubstepHorn', 'Gain', -6.0)
         synthsFX2Delay.set('ZDiploLike', 'Gain', -9.0)
         synthsFX2Delay.set('SynthsFX2Delay', 'Mute', 0.0)

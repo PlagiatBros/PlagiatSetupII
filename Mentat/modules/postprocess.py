@@ -14,7 +14,7 @@ class PostProcess(Module):
 
         root = self.engine
 
-        autotunes = ['NanoMeuf', 'NanoNormo', 'NanoGars', 'KeschMeuf', 'KeschNormo', 'KeschGars']
+        autotunes = ['NanoMeuf', 'NanoNormo', 'NanoGars', 'KeschMeuf', 'KeschNormo', 'KeschGars',  'FeatMeuf', 'FeatNormo', 'FeatGars']
         basses = ['Bass', 'BassSynths']
 
         """

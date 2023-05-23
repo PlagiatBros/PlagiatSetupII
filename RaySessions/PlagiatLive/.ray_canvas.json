@@ -12410,6 +12410,3009 @@
       ],
       "flags": 0,
       "layout_mode": 0
+    },
+    {
+      "port_types_view": 31,
+      "group_name": "system",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        200,
+        0
+      ],
+      "in_xy": [
+        629,
+        -46
+      ],
+      "out_xy": [
+        -25,
+        0
+      ],
+      "flags": 68,
+      "layout_mode": 0
+    },
+    {
+      "port_types_view": 31,
+      "group_name": "Non-Mixer-XT.Outputs (Outputs)",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        -311,
+        8363
+      ],
+      "in_xy": [
+        400,
+        26
+      ],
+      "out_xy": [
+        0,
+        26
+      ],
+      "flags": 0,
+      "layout_mode": 0
+    },
+    {
+      "port_types_view": 31,
+      "group_name": "Non-Mixer-XT.Inputs (Inputs)",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        165,
+        -381
+      ],
+      "in_xy": [
+        400,
+        26
+      ],
+      "out_xy": [
+        0,
+        26
+      ],
+      "flags": 0,
+      "layout_mode": 0
+    },
+    {
+      "port_types_view": 31,
+      "group_name": "Non-Mixer-XT.MonitorsNano (MonitorsNano)",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        165,
+        10249
+      ],
+      "in_xy": [
+        400,
+        26
+      ],
+      "out_xy": [
+        0,
+        26
+      ],
+      "flags": 0,
+      "layout_mode": 0
+    },
+    {
+      "port_types_view": 31,
+      "group_name": "Non-Mixer-XT.MonitorsKesch (MonitorsKesch)",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        165,
+        9459
+      ],
+      "in_xy": [
+        -171,
+        9499
+      ],
+      "out_xy": [
+        -600,
+        9693
+      ],
+      "flags": 68,
+      "layout_mode": 0
+    },
+    {
+      "port_types_view": 31,
+      "group_name": "Non-Mixer-XT.Drums (Main)",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        165,
+        -483
+      ],
+      "in_xy": [
+        400,
+        26
+      ],
+      "out_xy": [
+        0,
+        26
+      ],
+      "flags": 0,
+      "layout_mode": 0
+    },
+    {
+      "port_types_view": 31,
+      "group_name": "Non-Mixer-XT.MonitorsFeat (MonitorsFeat)",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        165,
+        10956
+      ],
+      "in_xy": [
+        400,
+        26
+      ],
+      "out_xy": [
+        0,
+        26
+      ],
+      "flags": 0,
+      "layout_mode": 0
+    },
+    {
+      "port_types_view": 31,
+      "group_name": "Non-Mixer-XT.Bass (In)",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        165,
+        -567
+      ],
+      "in_xy": [
+        400,
+        26
+      ],
+      "out_xy": [
+        0,
+        26
+      ],
+      "flags": 0,
+      "layout_mode": 0
+    },
+    {
+      "port_types_view": 31,
+      "group_name": "Non-Mixer-XT.Bass (Main)",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        165,
+        -189
+      ],
+      "in_xy": [
+        400,
+        26
+      ],
+      "out_xy": [
+        0,
+        26
+      ],
+      "flags": 0,
+      "layout_mode": 0
+    },
+    {
+      "port_types_view": 31,
+      "group_name": "Non-Mixer-XT.BassFX (In)",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        165,
+        12006
+      ],
+      "in_xy": [
+        400,
+        26
+      ],
+      "out_xy": [
+        0,
+        26
+      ],
+      "flags": 0,
+      "layout_mode": 0
+    },
+    {
+      "port_types_view": 31,
+      "group_name": "Non-Mixer-XT.BassFX (Process)",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        165,
+        11663
+      ],
+      "in_xy": [
+        400,
+        26
+      ],
+      "out_xy": [
+        0,
+        26
+      ],
+      "flags": 0,
+      "layout_mode": 0
+    },
+    {
+      "port_types_view": 31,
+      "group_name": "Non-Mixer-XT.BassSynths (Main)",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        165,
+        3989
+      ],
+      "in_xy": [
+        400,
+        26
+      ],
+      "out_xy": [
+        0,
+        26
+      ],
+      "flags": 0,
+      "layout_mode": 0
+    },
+    {
+      "port_types_view": 31,
+      "group_name": "Non-Mixer-XT.Synths (Main)",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        165,
+        6315
+      ],
+      "in_xy": [
+        400,
+        26
+      ],
+      "out_xy": [
+        0,
+        26
+      ],
+      "flags": 0,
+      "layout_mode": 0
+    },
+    {
+      "port_types_view": 31,
+      "group_name": "Non-Mixer-XT.SynthsFX1Reverb (In)",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        165,
+        -67
+      ],
+      "in_xy": [
+        400,
+        26
+      ],
+      "out_xy": [
+        0,
+        26
+      ],
+      "flags": 0,
+      "layout_mode": 0
+    },
+    {
+      "port_types_view": 31,
+      "group_name": "Non-Mixer-XT.Bass (Out)",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        165,
+        12352
+      ],
+      "in_xy": [
+        400,
+        26
+      ],
+      "out_xy": [
+        0,
+        26
+      ],
+      "flags": 0,
+      "layout_mode": 0
+    },
+    {
+      "port_types_view": 31,
+      "group_name": "Non-Mixer-XT.SynthsFX2Delay (In)",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        165,
+        690
+      ],
+      "in_xy": [
+        400,
+        26
+      ],
+      "out_xy": [
+        0,
+        26
+      ],
+      "flags": 0,
+      "layout_mode": 0
+    },
+    {
+      "port_types_view": 31,
+      "group_name": "Non-Mixer-XT.BassSynths (Out)",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        165,
+        12269
+      ],
+      "in_xy": [
+        400,
+        26
+      ],
+      "out_xy": [
+        0,
+        26
+      ],
+      "flags": 0,
+      "layout_mode": 0
+    },
+    {
+      "port_types_view": 31,
+      "group_name": "Non-Mixer-XT.SynthsFX3Delay (In)",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        165,
+        1721
+      ],
+      "in_xy": [
+        400,
+        26
+      ],
+      "out_xy": [
+        0,
+        26
+      ],
+      "flags": 0,
+      "layout_mode": 0
+    },
+    {
+      "port_types_view": 31,
+      "group_name": "Non-Mixer-XT.SynthsFX4TapeDelay (In)",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        165,
+        2477
+      ],
+      "in_xy": [
+        400,
+        26
+      ],
+      "out_xy": [
+        0,
+        26
+      ],
+      "flags": 0,
+      "layout_mode": 0
+    },
+    {
+      "port_types_view": 31,
+      "group_name": "Non-Mixer-XT.SynthsFX5Scape (In)",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        165,
+        3233
+      ],
+      "in_xy": [
+        400,
+        26
+      ],
+      "out_xy": [
+        0,
+        26
+      ],
+      "flags": 0,
+      "layout_mode": 0
+    },
+    {
+      "port_types_view": 31,
+      "group_name": "Non-Mixer-XT.Samples (Main)",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        165,
+        4288
+      ],
+      "in_xy": [
+        400,
+        26
+      ],
+      "out_xy": [
+        0,
+        26
+      ],
+      "flags": 0,
+      "layout_mode": 0
+    },
+    {
+      "port_types_view": 31,
+      "group_name": "Non-Mixer-XT.SamplesFX1Delay (In)",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        165,
+        4539
+      ],
+      "in_xy": [
+        400,
+        26
+      ],
+      "out_xy": [
+        0,
+        26
+      ],
+      "flags": 0,
+      "layout_mode": 0
+    },
+    {
+      "port_types_view": 31,
+      "group_name": "Non-Mixer-XT.SamplesFX2Delay (In)",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        165,
+        4790
+      ],
+      "in_xy": [
+        400,
+        26
+      ],
+      "out_xy": [
+        0,
+        26
+      ],
+      "flags": 0,
+      "layout_mode": 0
+    },
+    {
+      "port_types_view": 31,
+      "group_name": "Non-Mixer-XT.SamplesFX3Reverb (In)",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        165,
+        5041
+      ],
+      "in_xy": [
+        400,
+        26
+      ],
+      "out_xy": [
+        0,
+        26
+      ],
+      "flags": 0,
+      "layout_mode": 0
+    },
+    {
+      "port_types_view": 31,
+      "group_name": "Non-Mixer-XT.SamplesFX4Autofilter (In)",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        165,
+        5292
+      ],
+      "in_xy": [
+        400,
+        26
+      ],
+      "out_xy": [
+        0,
+        26
+      ],
+      "flags": 0,
+      "layout_mode": 0
+    },
+    {
+      "port_types_view": 31,
+      "group_name": "Non-Mixer-XT.Samples (Out)",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        165,
+        12435
+      ],
+      "in_xy": [
+        400,
+        26
+      ],
+      "out_xy": [
+        0,
+        26
+      ],
+      "flags": 0,
+      "layout_mode": 0
+    },
+    {
+      "port_types_view": 31,
+      "group_name": "Non-Mixer-XT.SynthsFX1Reverb (Process)",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        165,
+        12550
+      ],
+      "in_xy": [
+        400,
+        26
+      ],
+      "out_xy": [
+        0,
+        26
+      ],
+      "flags": 0,
+      "layout_mode": 0
+    },
+    {
+      "port_types_view": 31,
+      "group_name": "Non-Mixer-XT.SamplesFX5TapeDelay (In)",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        165,
+        5543
+      ],
+      "in_xy": [
+        400,
+        26
+      ],
+      "out_xy": [
+        0,
+        26
+      ],
+      "flags": 0,
+      "layout_mode": 0
+    },
+    {
+      "port_types_view": 31,
+      "group_name": "Non-Mixer-XT.SamplesFX1Delay (Process)",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        165,
+        12665
+      ],
+      "in_xy": [
+        400,
+        26
+      ],
+      "out_xy": [
+        0,
+        26
+      ],
+      "flags": 0,
+      "layout_mode": 0
+    },
+    {
+      "port_types_view": 31,
+      "group_name": "Non-Mixer-XT.SamplesFX6Scape (In)",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        165,
+        5789
+      ],
+      "in_xy": [
+        400,
+        26
+      ],
+      "out_xy": [
+        0,
+        26
+      ],
+      "flags": 0,
+      "layout_mode": 0
+    },
+    {
+      "port_types_view": 31,
+      "group_name": "Non-Mixer-XT.SamplesFX7Degrade (In)",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        165,
+        6069
+      ],
+      "in_xy": [
+        400,
+        26
+      ],
+      "out_xy": [
+        0,
+        26
+      ],
+      "flags": 0,
+      "layout_mode": 0
+    },
+    {
+      "port_types_view": 31,
+      "group_name": "Non-Mixer-XT.SamplesFX2Delay (Process)",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        165,
+        12780
+      ],
+      "in_xy": [
+        400,
+        26
+      ],
+      "out_xy": [
+        0,
+        26
+      ],
+      "flags": 0,
+      "layout_mode": 0
+    },
+    {
+      "port_types_view": 31,
+      "group_name": "Non-Mixer-XT.SynthsFX2Delay (Process)",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        165,
+        12895
+      ],
+      "in_xy": [
+        400,
+        26
+      ],
+      "out_xy": [
+        0,
+        26
+      ],
+      "flags": 0,
+      "layout_mode": 0
+    },
+    {
+      "port_types_view": 31,
+      "group_name": "Non-Mixer-XT.SamplesFX3Reverb (Process)",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        165,
+        13010
+      ],
+      "in_xy": [
+        400,
+        26
+      ],
+      "out_xy": [
+        0,
+        26
+      ],
+      "flags": 0,
+      "layout_mode": 0
+    },
+    {
+      "port_types_view": 31,
+      "group_name": "Non-Mixer-XT.SamplesWork (In)",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        165,
+        13125
+      ],
+      "in_xy": [
+        400,
+        26
+      ],
+      "out_xy": [
+        0,
+        26
+      ],
+      "flags": 0,
+      "layout_mode": 0
+    },
+    {
+      "port_types_view": 31,
+      "group_name": "Non-Mixer-XT.SamplesFX4Autofilter (Process)",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        165,
+        13262
+      ],
+      "in_xy": [
+        400,
+        26
+      ],
+      "out_xy": [
+        0,
+        26
+      ],
+      "flags": 0,
+      "layout_mode": 0
+    },
+    {
+      "port_types_view": 31,
+      "group_name": "Non-Mixer-XT.Synths (Out)",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        165,
+        13377
+      ],
+      "in_xy": [
+        400,
+        26
+      ],
+      "out_xy": [
+        0,
+        26
+      ],
+      "flags": 0,
+      "layout_mode": 0
+    },
+    {
+      "port_types_view": 31,
+      "group_name": "Non-Mixer-XT.VocalsNano (In)",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        165,
+        13492
+      ],
+      "in_xy": [
+        400,
+        26
+      ],
+      "out_xy": [
+        0,
+        26
+      ],
+      "flags": 0,
+      "layout_mode": 0
+    },
+    {
+      "port_types_view": 31,
+      "group_name": "Non-Mixer-XT.SynthsFX3Delay (Process)",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        165,
+        13575
+      ],
+      "in_xy": [
+        400,
+        26
+      ],
+      "out_xy": [
+        0,
+        26
+      ],
+      "flags": 0,
+      "layout_mode": 0
+    },
+    {
+      "port_types_view": 31,
+      "group_name": "Non-Mixer-XT.VocalsNanoFX1Delay (In)",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        165,
+        13690
+      ],
+      "in_xy": [
+        400,
+        26
+      ],
+      "out_xy": [
+        0,
+        26
+      ],
+      "flags": 0,
+      "layout_mode": 0
+    },
+    {
+      "port_types_view": 31,
+      "group_name": "Non-Mixer-XT.SamplesFX5TapeDelay (Process)",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        165,
+        13809
+      ],
+      "in_xy": [
+        400,
+        26
+      ],
+      "out_xy": [
+        0,
+        26
+      ],
+      "flags": 0,
+      "layout_mode": 0
+    },
+    {
+      "port_types_view": 31,
+      "group_name": "Non-Mixer-XT.VocalsNanoFX2Delay (In)",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        165,
+        13924
+      ],
+      "in_xy": [
+        400,
+        26
+      ],
+      "out_xy": [
+        0,
+        26
+      ],
+      "flags": 0,
+      "layout_mode": 0
+    },
+    {
+      "port_types_view": 31,
+      "group_name": "Non-Mixer-XT.SamplesFX6Scape (Process)",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        165,
+        14043
+      ],
+      "in_xy": [
+        400,
+        26
+      ],
+      "out_xy": [
+        0,
+        26
+      ],
+      "flags": 0,
+      "layout_mode": 0
+    },
+    {
+      "port_types_view": 31,
+      "group_name": "Non-Mixer-XT.SamplesWork (Process)",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        165,
+        14142
+      ],
+      "in_xy": [
+        400,
+        26
+      ],
+      "out_xy": [
+        0,
+        26
+      ],
+      "flags": 0,
+      "layout_mode": 0
+    },
+    {
+      "port_types_view": 31,
+      "group_name": "Non-Mixer-XT.VocalsNano (Meuf)",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        165,
+        14225
+      ],
+      "in_xy": [
+        400,
+        26
+      ],
+      "out_xy": [
+        0,
+        26
+      ],
+      "flags": 0,
+      "layout_mode": 0
+    },
+    {
+      "port_types_view": 31,
+      "group_name": "Non-Mixer-XT.VocalsNanoFX3TrapVerb (In)",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        165,
+        14362
+      ],
+      "in_xy": [
+        400,
+        26
+      ],
+      "out_xy": [
+        0,
+        26
+      ],
+      "flags": 0,
+      "layout_mode": 0
+    },
+    {
+      "port_types_view": 31,
+      "group_name": "Non-Mixer-XT.SamplesFX7Degrade (Process)",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        165,
+        14481
+      ],
+      "in_xy": [
+        400,
+        26
+      ],
+      "out_xy": [
+        0,
+        26
+      ],
+      "flags": 0,
+      "layout_mode": 0
+    },
+    {
+      "port_types_view": 31,
+      "group_name": "Non-Mixer-XT.SynthsFX4TapeDelay (Process)",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        165,
+        14596
+      ],
+      "in_xy": [
+        400,
+        26
+      ],
+      "out_xy": [
+        0,
+        26
+      ],
+      "flags": 0,
+      "layout_mode": 0
+    },
+    {
+      "port_types_view": 31,
+      "group_name": "Non-Mixer-XT.VocalsNanoFX4Disint (In)",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        165,
+        14711
+      ],
+      "in_xy": [
+        400,
+        26
+      ],
+      "out_xy": [
+        0,
+        26
+      ],
+      "flags": 0,
+      "layout_mode": 0
+    },
+    {
+      "port_types_view": 31,
+      "group_name": "Non-Mixer-XT.VocalsNanoFX1Delay (Process)",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        165,
+        14830
+      ],
+      "in_xy": [
+        400,
+        26
+      ],
+      "out_xy": [
+        0,
+        26
+      ],
+      "flags": 0,
+      "layout_mode": 0
+    },
+    {
+      "port_types_view": 31,
+      "group_name": "Non-Mixer-XT.VocalsNanoFX2Delay (Process)",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        165,
+        14913
+      ],
+      "in_xy": [
+        400,
+        26
+      ],
+      "out_xy": [
+        0,
+        26
+      ],
+      "flags": 0,
+      "layout_mode": 0
+    },
+    {
+      "port_types_view": 31,
+      "group_name": "Non-Mixer-XT.VocalsNanoFX5RingMod (In)",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        165,
+        15012
+      ],
+      "in_xy": [
+        400,
+        26
+      ],
+      "out_xy": [
+        0,
+        26
+      ],
+      "flags": 0,
+      "layout_mode": 0
+    },
+    {
+      "port_types_view": 31,
+      "group_name": "Non-Mixer-XT.SynthsFX5Scape (Process)",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        165,
+        15131
+      ],
+      "in_xy": [
+        400,
+        26
+      ],
+      "out_xy": [
+        0,
+        26
+      ],
+      "flags": 0,
+      "layout_mode": 0
+    },
+    {
+      "port_types_view": 31,
+      "group_name": "Non-Mixer-XT.VocalsNano (Normo)",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        165,
+        15230
+      ],
+      "in_xy": [
+        400,
+        26
+      ],
+      "out_xy": [
+        0,
+        26
+      ],
+      "flags": 0,
+      "layout_mode": 0
+    },
+    {
+      "port_types_view": 31,
+      "group_name": "Non-Mixer-XT.VocalsNanoFX6Granular (In)",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        165,
+        15367
+      ],
+      "in_xy": [
+        400,
+        26
+      ],
+      "out_xy": [
+        0,
+        26
+      ],
+      "flags": 0,
+      "layout_mode": 0
+    },
+    {
+      "port_types_view": 31,
+      "group_name": "Non-Mixer-XT.VocalsNanoFX3TrapVerb (Process)",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        165,
+        15486
+      ],
+      "in_xy": [
+        400,
+        26
+      ],
+      "out_xy": [
+        0,
+        26
+      ],
+      "flags": 0,
+      "layout_mode": 0
+    },
+    {
+      "port_types_view": 31,
+      "group_name": "Non-Mixer-XT.VocalsNanoFX7Slice (In)",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        165,
+        15569
+      ],
+      "in_xy": [
+        400,
+        26
+      ],
+      "out_xy": [
+        0,
+        26
+      ],
+      "flags": 0,
+      "layout_mode": 0
+    },
+    {
+      "port_types_view": 31,
+      "group_name": "Non-Mixer-XT.VocalsNanoFX4Disint (Process)",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        165,
+        15688
+      ],
+      "in_xy": [
+        400,
+        26
+      ],
+      "out_xy": [
+        0,
+        26
+      ],
+      "flags": 0,
+      "layout_mode": 0
+    },
+    {
+      "port_types_view": 31,
+      "group_name": "Non-Mixer-XT.VocalsNanoFX8TapeDelay (In)",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        165,
+        15771
+      ],
+      "in_xy": [
+        400,
+        26
+      ],
+      "out_xy": [
+        0,
+        26
+      ],
+      "flags": 0,
+      "layout_mode": 0
+    },
+    {
+      "port_types_view": 31,
+      "group_name": "Non-Mixer-XT.VocalsNanoFX5RingMod (Process)",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        165,
+        15890
+      ],
+      "in_xy": [
+        400,
+        26
+      ],
+      "out_xy": [
+        0,
+        26
+      ],
+      "flags": 0,
+      "layout_mode": 0
+    },
+    {
+      "port_types_view": 31,
+      "group_name": "Non-Mixer-XT.VocalsNano (Gars)",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        165,
+        15973
+      ],
+      "in_xy": [
+        400,
+        26
+      ],
+      "out_xy": [
+        0,
+        26
+      ],
+      "flags": 0,
+      "layout_mode": 0
+    },
+    {
+      "port_types_view": 31,
+      "group_name": "Non-Mixer-XT.VocalsNanoFX9Scape (In)",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        165,
+        16110
+      ],
+      "in_xy": [
+        400,
+        26
+      ],
+      "out_xy": [
+        0,
+        26
+      ],
+      "flags": 0,
+      "layout_mode": 0
+    },
+    {
+      "port_types_view": 31,
+      "group_name": "Non-Mixer-XT.VocalsNanoFX6Granular (Process)",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        165,
+        16229
+      ],
+      "in_xy": [
+        400,
+        26
+      ],
+      "out_xy": [
+        0,
+        26
+      ],
+      "flags": 0,
+      "layout_mode": 0
+    },
+    {
+      "port_types_view": 31,
+      "group_name": "Non-Mixer-XT.VocalsKesch (In)",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        165,
+        16312
+      ],
+      "in_xy": [
+        -339,
+        16367
+      ],
+      "out_xy": [
+        -362,
+        16086
+      ],
+      "flags": 68,
+      "layout_mode": 0
+    },
+    {
+      "port_types_view": 31,
+      "group_name": "Non-Mixer-XT.VocalsNanoFX7Slice (Process)",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        165,
+        16358
+      ],
+      "in_xy": [
+        400,
+        26
+      ],
+      "out_xy": [
+        0,
+        26
+      ],
+      "flags": 0,
+      "layout_mode": 0
+    },
+    {
+      "port_types_view": 31,
+      "group_name": "Non-Mixer-XT.VocalsNanoFX8TapeDelay (Process)",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        165,
+        16457
+      ],
+      "in_xy": [
+        400,
+        26
+      ],
+      "out_xy": [
+        0,
+        26
+      ],
+      "flags": 0,
+      "layout_mode": 0
+    },
+    {
+      "port_types_view": 31,
+      "group_name": "Non-Mixer-XT.VocalsKeschFX1Delay (In)",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        165,
+        16540
+      ],
+      "in_xy": [
+        400,
+        26
+      ],
+      "out_xy": [
+        0,
+        26
+      ],
+      "flags": 0,
+      "layout_mode": 0
+    },
+    {
+      "port_types_view": 31,
+      "group_name": "Non-Mixer-XT.VocalsNano (ArtificialBackings)",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        165,
+        16659
+      ],
+      "in_xy": [
+        400,
+        26
+      ],
+      "out_xy": [
+        0,
+        26
+      ],
+      "flags": 0,
+      "layout_mode": 0
+    },
+    {
+      "port_types_view": 31,
+      "group_name": "Non-Mixer-XT.VocalsKeschFX2Delay (In)",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        165,
+        16814
+      ],
+      "in_xy": [
+        400,
+        26
+      ],
+      "out_xy": [
+        0,
+        26
+      ],
+      "flags": 0,
+      "layout_mode": 0
+    },
+    {
+      "port_types_view": 31,
+      "group_name": "Non-Mixer-XT.VocalsNanoFX9Scape (Process)",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        165,
+        16933
+      ],
+      "in_xy": [
+        400,
+        26
+      ],
+      "out_xy": [
+        0,
+        26
+      ],
+      "flags": 0,
+      "layout_mode": 0
+    },
+    {
+      "port_types_view": 31,
+      "group_name": "Non-Mixer-XT.VocalsKesch (Meuf)",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        165,
+        17032
+      ],
+      "in_xy": [
+        -69,
+        16292
+      ],
+      "out_xy": [
+        -247,
+        16980
+      ],
+      "flags": 68,
+      "layout_mode": 0
+    },
+    {
+      "port_types_view": 31,
+      "group_name": "Non-Mixer-XT.VocalsKeschFX3TrapVerb (In)",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        165,
+        17188
+      ],
+      "in_xy": [
+        400,
+        26
+      ],
+      "out_xy": [
+        0,
+        26
+      ],
+      "flags": 0,
+      "layout_mode": 0
+    },
+    {
+      "port_types_view": 31,
+      "group_name": "Non-Mixer-XT.VocalsKeschFX1Delay (Process)",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        165,
+        17307
+      ],
+      "in_xy": [
+        400,
+        26
+      ],
+      "out_xy": [
+        0,
+        26
+      ],
+      "flags": 0,
+      "layout_mode": 0
+    },
+    {
+      "port_types_view": 31,
+      "group_name": "Non-Mixer-XT.VocalsNano (Out)",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        165,
+        17390
+      ],
+      "in_xy": [
+        400,
+        26
+      ],
+      "out_xy": [
+        0,
+        26
+      ],
+      "flags": 0,
+      "layout_mode": 0
+    },
+    {
+      "port_types_view": 31,
+      "group_name": "Non-Mixer-XT.VocalsKeschFX4Disint (In)",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        165,
+        17473
+      ],
+      "in_xy": [
+        400,
+        26
+      ],
+      "out_xy": [
+        0,
+        26
+      ],
+      "flags": 0,
+      "layout_mode": 0
+    },
+    {
+      "port_types_view": 31,
+      "group_name": "Non-Mixer-XT.VocalsKeschFX2Delay (Process)",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        165,
+        17592
+      ],
+      "in_xy": [
+        400,
+        26
+      ],
+      "out_xy": [
+        0,
+        26
+      ],
+      "flags": 0,
+      "layout_mode": 0
+    },
+    {
+      "port_types_view": 31,
+      "group_name": "Non-Mixer-XT.VocalsKeschFX5RingMod (In)",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        165,
+        17691
+      ],
+      "in_xy": [
+        400,
+        26
+      ],
+      "out_xy": [
+        0,
+        26
+      ],
+      "flags": 0,
+      "layout_mode": 0
+    },
+    {
+      "port_types_view": 31,
+      "group_name": "Non-Mixer-XT.VocalsKesch (Normo)",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        165,
+        17810
+      ],
+      "in_xy": [
+        400,
+        26
+      ],
+      "out_xy": [
+        0,
+        26
+      ],
+      "flags": 0,
+      "layout_mode": 0
+    },
+    {
+      "port_types_view": 31,
+      "group_name": "Non-Mixer-XT.VocalsKeschFX3TrapVerb (Process)",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        165,
+        17947
+      ],
+      "in_xy": [
+        400,
+        26
+      ],
+      "out_xy": [
+        0,
+        26
+      ],
+      "flags": 0,
+      "layout_mode": 0
+    },
+    {
+      "port_types_view": 31,
+      "group_name": "Non-Mixer-XT.VocalsKeschFX6Granular (In)",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        165,
+        18030
+      ],
+      "in_xy": [
+        400,
+        26
+      ],
+      "out_xy": [
+        0,
+        26
+      ],
+      "flags": 0,
+      "layout_mode": 0
+    },
+    {
+      "port_types_view": 31,
+      "group_name": "Non-Mixer-XT.VocalsKeschFX7Slice (In)",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        165,
+        18149
+      ],
+      "in_xy": [
+        400,
+        26
+      ],
+      "out_xy": [
+        0,
+        26
+      ],
+      "flags": 0,
+      "layout_mode": 0
+    },
+    {
+      "port_types_view": 31,
+      "group_name": "sooperlooper",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        165,
+        18268
+      ],
+      "in_xy": [
+        400,
+        26
+      ],
+      "out_xy": [
+        0,
+        26
+      ],
+      "flags": 0,
+      "layout_mode": 0
+    },
+    {
+      "port_types_view": 31,
+      "group_name": "Non-Mixer-XT.VocalsKeschFX4Disint (Process)",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        165,
+        18504
+      ],
+      "in_xy": [
+        400,
+        26
+      ],
+      "out_xy": [
+        0,
+        26
+      ],
+      "flags": 0,
+      "layout_mode": 0
+    },
+    {
+      "port_types_view": 31,
+      "group_name": "Non-Mixer-XT.VocalsKeschFX8TapeDelay (In)",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        165,
+        18587
+      ],
+      "in_xy": [
+        400,
+        26
+      ],
+      "out_xy": [
+        0,
+        26
+      ],
+      "flags": 0,
+      "layout_mode": 0
+    },
+    {
+      "port_types_view": 31,
+      "group_name": "Non-Mixer-XT.VocalsKesch (Gars)",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        165,
+        18706
+      ],
+      "in_xy": [
+        400,
+        26
+      ],
+      "out_xy": [
+        0,
+        26
+      ],
+      "flags": 0,
+      "layout_mode": 0
+    },
+    {
+      "port_types_view": 31,
+      "group_name": "Non-Mixer-XT.VocalsKeschFX5RingMod (Process)",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        165,
+        18843
+      ],
+      "in_xy": [
+        400,
+        26
+      ],
+      "out_xy": [
+        0,
+        26
+      ],
+      "flags": 0,
+      "layout_mode": 0
+    },
+    {
+      "port_types_view": 31,
+      "group_name": "Non-Mixer-XT.VocalsKeschFX6Granular (Process)",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        165,
+        18926
+      ],
+      "in_xy": [
+        400,
+        26
+      ],
+      "out_xy": [
+        0,
+        26
+      ],
+      "flags": 0,
+      "layout_mode": 0
+    },
+    {
+      "port_types_view": 31,
+      "group_name": "Non-Mixer-XT.VocalsKeschFX9Scape (In)",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        165,
+        19009
+      ],
+      "in_xy": [
+        400,
+        26
+      ],
+      "out_xy": [
+        0,
+        26
+      ],
+      "flags": 0,
+      "layout_mode": 0
+    },
+    {
+      "port_types_view": 31,
+      "group_name": "Non-Mixer-XT.VocalsKeschFX7Slice (Process)",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        165,
+        19128
+      ],
+      "in_xy": [
+        400,
+        26
+      ],
+      "out_xy": [
+        0,
+        26
+      ],
+      "flags": 0,
+      "layout_mode": 0
+    },
+    {
+      "port_types_view": 31,
+      "group_name": "Non-Mixer-XT.VocalsFeat (In)",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        165,
+        19227
+      ],
+      "in_xy": [
+        -91,
+        19224
+      ],
+      "out_xy": [
+        -241,
+        19722
+      ],
+      "flags": 68,
+      "layout_mode": 0
+    },
+    {
+      "port_types_view": 31,
+      "group_name": "Autotune.FeatMeuf",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        165,
+        19319
+      ],
+      "in_xy": [
+        -81,
+        19623
+      ],
+      "out_xy": [
+        -296,
+        19427
+      ],
+      "flags": 68,
+      "layout_mode": 0
+    },
+    {
+      "port_types_view": 31,
+      "group_name": "Non-Mixer-XT.VocalsFeat (ArtificialBackings)",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        -495,
+        19997
+      ],
+      "in_xy": [
+        400,
+        26
+      ],
+      "out_xy": [
+        0,
+        26
+      ],
+      "flags": 0,
+      "layout_mode": 0
+    },
+    {
+      "port_types_view": 31,
+      "group_name": "Autotune.FeatNormo",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        165,
+        19573
+      ],
+      "in_xy": [
+        -41,
+        19754
+      ],
+      "out_xy": [
+        -289,
+        19470
+      ],
+      "flags": 68,
+      "layout_mode": 0
+    },
+    {
+      "port_types_view": 31,
+      "group_name": "Non-Mixer-XT.VocalsKeschFX8TapeDelay (Process)",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        165,
+        19654
+      ],
+      "in_xy": [
+        400,
+        26
+      ],
+      "out_xy": [
+        0,
+        26
+      ],
+      "flags": 0,
+      "layout_mode": 0
+    },
+    {
+      "port_types_view": 31,
+      "group_name": "Autotune.FeatGars",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        165,
+        19765
+      ],
+      "in_xy": [
+        -100,
+        19870
+      ],
+      "out_xy": [
+        -285,
+        19511
+      ],
+      "flags": 68,
+      "layout_mode": 0
+    },
+    {
+      "port_types_view": 31,
+      "group_name": "Fluid_TenorSax",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        165,
+        19864
+      ],
+      "in_xy": [
+        400,
+        26
+      ],
+      "out_xy": [
+        0,
+        26
+      ],
+      "flags": 0,
+      "layout_mode": 0
+    },
+    {
+      "port_types_view": 31,
+      "group_name": "klick",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        165,
+        19908
+      ],
+      "in_xy": [
+        400,
+        26
+      ],
+      "out_xy": [
+        0,
+        26
+      ],
+      "flags": 0,
+      "layout_mode": 0
+    },
+    {
+      "port_types_view": 31,
+      "group_name": "cLowRouter",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        165,
+        19936
+      ],
+      "in_xy": [
+        400,
+        26
+      ],
+      "out_xy": [
+        0,
+        26
+      ],
+      "flags": 0,
+      "layout_mode": 0
+    },
+    {
+      "port_types_view": 31,
+      "group_name": "cHiRouter",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        165,
+        20071
+      ],
+      "in_xy": [
+        400,
+        26
+      ],
+      "out_xy": [
+        0,
+        26
+      ],
+      "flags": 0,
+      "layout_mode": 0
+    },
+    {
+      "port_types_view": 31,
+      "group_name": "Non-Mixer-XT.VocalsKesch (ArtificialBackings)",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        -112,
+        19938
+      ],
+      "in_xy": [
+        540,
+        17024
+      ],
+      "out_xy": [
+        -112,
+        20002
+      ],
+      "flags": 68,
+      "layout_mode": 0
+    },
+    {
+      "port_types_view": 31,
+      "group_name": "Fluid_Rhodes",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        165,
+        20379
+      ],
+      "in_xy": [
+        400,
+        26
+      ],
+      "out_xy": [
+        0,
+        26
+      ],
+      "flags": 0,
+      "layout_mode": 0
+    },
+    {
+      "port_types_view": 31,
+      "group_name": "cLowBridge",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        165,
+        20423
+      ],
+      "in_xy": [
+        400,
+        26
+      ],
+      "out_xy": [
+        0,
+        26
+      ],
+      "flags": 0,
+      "layout_mode": 0
+    },
+    {
+      "port_types_view": 31,
+      "group_name": "Fluid_OrchestraHit",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        165,
+        20451
+      ],
+      "in_xy": [
+        400,
+        26
+      ],
+      "out_xy": [
+        0,
+        26
+      ],
+      "flags": 0,
+      "layout_mode": 0
+    },
+    {
+      "port_types_view": 31,
+      "group_name": "cHiBridge",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        165,
+        20495
+      ],
+      "in_xy": [
+        400,
+        26
+      ],
+      "out_xy": [
+        0,
+        26
+      ],
+      "flags": 0,
+      "layout_mode": 0
+    },
+    {
+      "port_types_view": 31,
+      "group_name": "Fluid_SteelDrum",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        165,
+        20523
+      ],
+      "in_xy": [
+        400,
+        26
+      ],
+      "out_xy": [
+        0,
+        26
+      ],
+      "flags": 0,
+      "layout_mode": 0
+    },
+    {
+      "port_types_view": 31,
+      "group_name": "Non-Mixer-XT.VocalsFeat (Out)",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        -363,
+        19722
+      ],
+      "in_xy": [
+        400,
+        26
+      ],
+      "out_xy": [
+        0,
+        26
+      ],
+      "flags": 0,
+      "layout_mode": 0
+    },
+    {
+      "port_types_view": 31,
+      "group_name": "gxtuner",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        165,
+        20650
+      ],
+      "in_xy": [
+        400,
+        26
+      ],
+      "out_xy": [
+        0,
+        26
+      ],
+      "flags": 0,
+      "layout_mode": 0
+    },
+    {
+      "port_types_view": 31,
+      "group_name": "ZynAddSubFX.ZHiSynths",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        165,
+        20686
+      ],
+      "in_xy": [
+        400,
+        26
+      ],
+      "out_xy": [
+        0,
+        26
+      ],
+      "flags": 0,
+      "layout_mode": 0
+    },
+    {
+      "port_types_view": 31,
+      "group_name": "Non-Mixer-XT.VocalsKeschFX9Scape (Process)",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        165,
+        21302
+      ],
+      "in_xy": [
+        400,
+        26
+      ],
+      "out_xy": [
+        0,
+        26
+      ],
+      "flags": 0,
+      "layout_mode": 0
+    },
+    {
+      "port_types_view": 31,
+      "group_name": "Non-Mixer-XT.VocalsFeat (Meuf)",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        165,
+        21401
+      ],
+      "in_xy": [
+        -37,
+        19326
+      ],
+      "out_xy": [
+        -564,
+        19601
+      ],
+      "flags": 68,
+      "layout_mode": 0
+    },
+    {
+      "port_types_view": 31,
+      "group_name": "Fluid_Charang",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        165,
+        21557
+      ],
+      "in_xy": [
+        400,
+        26
+      ],
+      "out_xy": [
+        0,
+        26
+      ],
+      "flags": 0,
+      "layout_mode": 0
+    },
+    {
+      "port_types_view": 31,
+      "group_name": "ZynAddSubFX.ZLowSynths",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        165,
+        21601
+      ],
+      "in_xy": [
+        400,
+        26
+      ],
+      "out_xy": [
+        0,
+        26
+      ],
+      "flags": 0,
+      "layout_mode": 0
+    },
+    {
+      "port_types_view": 31,
+      "group_name": "Non-Mixer-XT.VocalsKesch (Out)",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        165,
+        22217
+      ],
+      "in_xy": [
+        400,
+        26
+      ],
+      "out_xy": [
+        0,
+        26
+      ],
+      "flags": 0,
+      "layout_mode": 0
+    },
+    {
+      "port_types_view": 31,
+      "group_name": "Non-Mixer-XT.VocalsFeat (Normo)",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        165,
+        22300
+      ],
+      "in_xy": [
+        -29,
+        19420
+      ],
+      "out_xy": [
+        -600,
+        19711
+      ],
+      "flags": 68,
+      "layout_mode": 0
+    },
+    {
+      "port_types_view": 31,
+      "group_name": "Tap192.ProdSampler",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        165,
+        22456
+      ],
+      "in_xy": [
+        400,
+        26
+      ],
+      "out_xy": [
+        0,
+        26
+      ],
+      "flags": 0,
+      "layout_mode": 0
+    },
+    {
+      "port_types_view": 31,
+      "group_name": "Tap192.ConstantSampler",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        165,
+        22673
+      ],
+      "in_xy": [
+        400,
+        26
+      ],
+      "out_xy": [
+        0,
+        26
+      ],
+      "flags": 0,
+      "layout_mode": 0
+    },
+    {
+      "port_types_view": 31,
+      "group_name": "Non-Mixer-XT.VocalsFeat (Gars)",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        165,
+        22718
+      ],
+      "in_xy": [
+        -53,
+        19508
+      ],
+      "out_xy": [
+        -641,
+        19827
+      ],
+      "flags": 68,
+      "layout_mode": 0
+    },
+    {
+      "port_types_view": 31,
+      "group_name": "Autotune.NanoMeuf",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        165,
+        22874
+      ],
+      "in_xy": [
+        400,
+        26
+      ],
+      "out_xy": [
+        0,
+        26
+      ],
+      "flags": 0,
+      "layout_mode": 0
+    },
+    {
+      "port_types_view": 31,
+      "group_name": "Autotune.NanoNormo",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        165,
+        22955
+      ],
+      "in_xy": [
+        400,
+        26
+      ],
+      "out_xy": [
+        0,
+        26
+      ],
+      "flags": 0,
+      "layout_mode": 0
+    },
+    {
+      "port_types_view": 31,
+      "group_name": "Autotune.NanoGars",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        165,
+        23036
+      ],
+      "in_xy": [
+        400,
+        26
+      ],
+      "out_xy": [
+        0,
+        26
+      ],
+      "flags": 0,
+      "layout_mode": 0
+    },
+    {
+      "port_types_view": 31,
+      "group_name": "Autotune.KeschMeuf",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        165,
+        23106
+      ],
+      "in_xy": [
+        -114,
+        16027
+      ],
+      "out_xy": [
+        -305,
+        16299
+      ],
+      "flags": 68,
+      "layout_mode": 0
+    },
+    {
+      "port_types_view": 31,
+      "group_name": "Autotune.KeschNormo",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        165,
+        23187
+      ],
+      "in_xy": [
+        -77,
+        16117
+      ],
+      "out_xy": [
+        -241,
+        17787
+      ],
+      "flags": 68,
+      "layout_mode": 0
+    },
+    {
+      "port_types_view": 31,
+      "group_name": "Autotune.KeschGars",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        165,
+        23268
+      ],
+      "in_xy": [
+        -123,
+        16219
+      ],
+      "out_xy": [
+        165,
+        23240
+      ],
+      "flags": 68,
+      "layout_mode": 0
+    },
+    {
+      "port_types_view": 31,
+      "group_name": "Carla.LowCSynths/Trap1",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        165,
+        23349
+      ],
+      "in_xy": [
+        400,
+        26
+      ],
+      "out_xy": [
+        0,
+        26
+      ],
+      "flags": 0,
+      "layout_mode": 0
+    },
+    {
+      "port_types_view": 31,
+      "group_name": "Carla.HiCSynths/DubstepHorn",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        165,
+        23484
+      ],
+      "in_xy": [
+        400,
+        26
+      ],
+      "out_xy": [
+        0,
+        26
+      ],
+      "flags": 0,
+      "layout_mode": 0
+    },
+    {
+      "port_types_view": 31,
+      "group_name": "Carla.LowCSynths/Trap2",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        165,
+        23585
+      ],
+      "in_xy": [
+        400,
+        26
+      ],
+      "out_xy": [
+        0,
+        26
+      ],
+      "flags": 0,
+      "layout_mode": 0
+    },
+    {
+      "port_types_view": 31,
+      "group_name": "Carla.HiCSynths/Trap",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        165,
+        23720
+      ],
+      "in_xy": [
+        400,
+        26
+      ],
+      "out_xy": [
+        0,
+        26
+      ],
+      "flags": 0,
+      "layout_mode": 0
+    },
+    {
+      "port_types_view": 31,
+      "group_name": "Carla.LowCSynths/Barkline",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        165,
+        23839
+      ],
+      "in_xy": [
+        400,
+        26
+      ],
+      "out_xy": [
+        0,
+        26
+      ],
+      "flags": 0,
+      "layout_mode": 0
+    },
+    {
+      "port_types_view": 31,
+      "group_name": "Carla.HiCSynths/EasyClassical",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        165,
+        23974
+      ],
+      "in_xy": [
+        400,
+        26
+      ],
+      "out_xy": [
+        0,
+        26
+      ],
+      "flags": 0,
+      "layout_mode": 0
+    },
+    {
+      "port_types_view": 31,
+      "group_name": "Carla.LowCSynths/Boom",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        165,
+        24075
+      ],
+      "in_xy": [
+        400,
+        26
+      ],
+      "out_xy": [
+        0,
+        26
+      ],
+      "flags": 0,
+      "layout_mode": 0
+    },
+    {
+      "port_types_view": 31,
+      "group_name": "Carla.HiCSynths/TrapFifth",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        165,
+        24210
+      ],
+      "in_xy": [
+        400,
+        26
+      ],
+      "out_xy": [
+        0,
+        26
+      ],
+      "flags": 0,
+      "layout_mode": 0
+    },
+    {
+      "port_types_view": 31,
+      "group_name": "Carla.LowCSynths/Trap3",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        165,
+        24329
+      ],
+      "in_xy": [
+        400,
+        26
+      ],
+      "out_xy": [
+        0,
+        26
+      ],
+      "flags": 0,
+      "layout_mode": 0
+    },
+    {
+      "port_types_view": 31,
+      "group_name": "Midi Through",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        165,
+        1446
+      ],
+      "in_xy": [
+        400,
+        26
+      ],
+      "out_xy": [
+        0,
+        26
+      ],
+      "flags": 4,
+      "layout_mode": 0
+    },
+    {
+      "port_types_view": 31,
+      "group_name": "Hammerfall DSP",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        165,
+        1446
+      ],
+      "in_xy": [
+        400,
+        52
+      ],
+      "out_xy": [
+        0,
+        52
+      ],
+      "flags": 4,
+      "layout_mode": 0
+    },
+    {
+      "port_types_view": 31,
+      "group_name": "Arturia MiniLab mkII",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        165,
+        1446
+      ],
+      "in_xy": [
+        400,
+        78
+      ],
+      "out_xy": [
+        0,
+        78
+      ],
+      "flags": 4,
+      "layout_mode": 0
+    },
+    {
+      "port_types_view": 31,
+      "group_name": "seq192.MainSequencer",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        165,
+        1446
+      ],
+      "in_xy": [
+        400,
+        104
+      ],
+      "out_xy": [
+        0,
+        104
+      ],
+      "flags": 0,
+      "layout_mode": 0
+    },
+    {
+      "port_types_view": 31,
+      "group_name": "loop192.MidiLooper",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        165,
+        1457
+      ],
+      "in_xy": [
+        400,
+        104
+      ],
+      "out_xy": [
+        0,
+        104
+      ],
+      "flags": 0,
+      "layout_mode": 0
+    },
+    {
+      "port_types_view": 31,
+      "group_name": "MonoSynthMicroTonal",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        165,
+        1468
+      ],
+      "in_xy": [
+        400,
+        104
+      ],
+      "out_xy": [
+        0,
+        104
+      ],
+      "flags": 0,
+      "layout_mode": 0
+    },
+    {
+      "port_types_view": 31,
+      "group_name": "JmjKeyboard",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        165,
+        1479
+      ],
+      "in_xy": [
+        400,
+        104
+      ],
+      "out_xy": [
+        0,
+        104
+      ],
+      "flags": 0,
+      "layout_mode": 0
+    },
+    {
+      "port_types_view": 31,
+      "group_name": "Mk2Keyboard",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        165,
+        1490
+      ],
+      "in_xy": [
+        400,
+        104
+      ],
+      "out_xy": [
+        0,
+        104
+      ],
+      "flags": 0,
+      "layout_mode": 0
+    },
+    {
+      "port_types_view": 31,
+      "group_name": "Joystick",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        165,
+        1501
+      ],
+      "in_xy": [
+        400,
+        104
+      ],
+      "out_xy": [
+        0,
+        104
+      ],
+      "flags": 0,
+      "layout_mode": 0
+    },
+    {
+      "port_types_view": 31,
+      "group_name": "Mentat",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        165,
+        1512
+      ],
+      "in_xy": [
+        400,
+        104
+      ],
+      "out_xy": [
+        0,
+        104
+      ],
+      "flags": 0,
+      "layout_mode": 0
+    },
+    {
+      "port_types_view": 31,
+      "group_name": "Non-Mixer-XT.Outputs/Unnamed",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        -6,
+        -557
+      ],
+      "in_xy": [
+        400,
+        24480
+      ],
+      "out_xy": [
+        0,
+        24480
+      ],
+      "flags": 0,
+      "layout_mode": 0
     }
   ],
   "version": "0.14.0"

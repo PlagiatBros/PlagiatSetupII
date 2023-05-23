@@ -27,7 +27,7 @@ class IfIHadAHummer(Video, Light, RouteBase):
 
         # Autotuner Notes
         #               c     d     e  f     g     a     b
-        notes.set_notes(1, 0, 1, 1, 0, 1, 0, 1, 1, 0, 1, 1)
+        notes.set_notes(1, 1, 1, 1, 0, 1, 1, 1, 1, 0, 1, 1)
 
         # Mk2
         mk2Control.set_mode('cut_samples', 'cut_synths')
