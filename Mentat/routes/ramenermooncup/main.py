@@ -456,6 +456,8 @@ class RamenerMooncup(Video, Light, RouteBase):
             }
         ], loop=False)
 
+        bassfx.set('distohi', 'on')
+
     @pedalboard_button(10)
     def ramener(self):
         """
