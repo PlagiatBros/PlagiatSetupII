@@ -214,7 +214,7 @@ class BX(Video, Light, RouteBase):
 
 
         # Séquences (Mentat)
-        self.start_scene('sequence/bx_heeee', lambda: [
+        self.start_scene('bx_heeee', lambda: [
             self.wait(3.6, 'beat'),
             prodSampler.send('/instrument/play', 's:Bx_Heee'),
             self.wait(0.4, 'b'),
@@ -239,7 +239,7 @@ class BX(Video, Light, RouteBase):
         vocalsKesch.set('normo_exclu', 'on')
         vocalsFeat.set('normo_exclu', 'on')
 
-        # self.start_scene('sequence/bestplace', lambda: [
+        # self.start_scene('bestplace', lambda: [
         #     self.wait(16, 'beat'),
         #     seq192.select('on', 'pretrap_*')
         # ])
@@ -273,15 +273,15 @@ class BX(Video, Light, RouteBase):
         vocalsKesch.set('normo_exclu', 'on')
         vocalsKesch.set('gars', 'on')
         self.start_sequence('sequence/bad_kiddybitch', [
-        {
-            1: lambda: vocalsFeat.set('normo_exclu', 'on')
-        }, {},
-        {
-            1: lambda: [
-                vocalsFeat.set('normo_exclu', 'on'),
-                vocalsFeat.set('meuf', 'on')
-                ]
-        }, {}
+            {
+                1: lambda: vocalsFeat.set('normo_exclu', 'on')
+            }, {},
+            {
+                1: lambda: [
+                    vocalsFeat.set('normo_exclu', 'on'),
+                    vocalsFeat.set('meuf', 'on')
+                    ]
+            }, {}
         ], loop=True)
 
 
@@ -525,11 +525,12 @@ class BX(Video, Light, RouteBase):
             {}, # bar 2
             {}, # bar 3
             {   # bar 4
-                1: lambda: seq192.select('off', '*'),
+                2: lambda: seq192.select('off', '*'), # stop drums
                 3: lambda: [
                     vocalsKesch.set('meuf_exclu', 'on'),
                     vocalsNano.set('meuf_exclu', 'on'),
-                ]
+                ],
+                4.5: lambda: constantSampler.send('/instrument/play', 's:FunkyHit1', 100)
             },
             {   # bar 5: Alternate trap
                 1: lambda: seq192.select('solo', 'trap_*')
@@ -546,32 +547,106 @@ class BX(Video, Light, RouteBase):
             {}, # bar 11
             {}, # bar 12
             {   # bar 13
-                1: lambda: self.trap_stop_basses()
+                1: lambda: [
+                    # Séquences
+                    seq192.select('solo', 'trap2_*'),
+                    # Vocals
+                    vocalsNano.set('normo_exclu', 'on'),
+                    vocalsKesch.set('normo_exclu', 'on'),
+                ]
             },
+            {}, # bar 14
+            {}, # bar 15
+            {}, # bar 16
+            {
+                1: lambda: self.start_scene('couplet 2 trap vers couplet 2 2', lambda: self.couplet_2_2())
+            }
+            
         ], loop=False)
 
-    @mk2_button(5)
-    def trap_stop_basses(self):
+    def couplet_2_2(self):
         """
-        TRAP STOP BASSES
+        COUPLET 2_2 (basse jouée)
         """
-        # Séquences
-        seq192.select('solo', 'trap2_*')
+        self.pause_loopers()
+        self.reset()
+
+        # Sequences
+        seq192.select('solo', 'couplet_*')
+        seq192.select('off', 'couplet_*guitar*')
+        seq192.select('off', 'couplet_cLow_b*')
+
+
+        # Transport
+        transport.start()
+
+        # Samples
+        self.open_samples()
 
         # Vocals
         vocalsNano.set('normo_exclu', 'on')
         vocalsKesch.set('normo_exclu', 'on')
+        vocalsFeat.set('gars_exclu', 'on')
 
-    @mk2_button(6, 'yellow')
-    def trap_stop_manhooky(self):
+        # Keyboard
+        jmjKeyboard.set_sound('ZDupieux')
+
+        # Bass
+        bassFX.set('zynwah', 'on')
+
+        # Synths
+        synths.set('Trap', 'Pan', -0.7)
+        synths.set('ZStambul', 'Pan', 0.5)
+        synths.set('EasyClassical', 'Pan', 0.3)
+        synths.set('Trap', 'Amp', 'Gain', 0.35)
+
+        # Séquence
+        self.start_sequence('couplet_2_1', [
+            {}, # bar 1
+            {   # bar 2
+                1.5: lambda: vocalsNanoFX2Delay.set('active', 'on'),
+                2.4: lambda: vocalsNanoFX2Delay.set('pre', 'off'),
+            }, 
+            {   # bar 3
+                1.5: lambda: vocalsNanoFX2Delay.set('active', 'on'),
+                2.4: lambda: vocalsKeschFX2Delay.set('pre', 'off'), 
+                4: lambda: seq192.select('off', '*')
+            },
+            {  # bar 4
+                1: lambda: seq192.select('off', '*'),
+                4.5: lambda: constantSampler.send('/instrument/play', 's:FunkyHit1', 100)
+            },
+            {  # bar 5
+                1: lambda: [
+                    seq192.select('solo', 'couplet_*')
+                    seq192.select('off', 'couplet_*guitar*')
+                    seq192.select('off', 'couplet_cLow_b*')
+                ]
+            },
+            {}, # bar 6
+            {}, # bar 7
+            {}, # bar 8
+            {
+                1: lambda: self.start_scene('couplet 2 2 vers trap', lambda: self.pretrap())
+            }
+
+        ], loop=False)
+
+
+    @mk2_button(5, 'yellow')
+    def pretrap_stop_manhooky(self):
         """
         TRAP STOP MANHOOKY (& du 4)
         """
-        self.start_scene('sequence/trap_stop_manhooky', lambda: [
+        self.start_scene('trap_stop_manhooky', lambda: [
             prodSampler.send('/instrument/play', 's:Bx_YouWontRaise'),
-            self.wait(0.5, 'beat'),
-            seq192.select('off', '*')
+            self.wait_next_cycle(),
+            seq192.select('off', '*'),
+            self.wait_next_cycle(),
+            self.trap()
         ])
+
+        jmjKeyboard.set_sound('ZDupieux')
 
     def afro(self):
         """
