@@ -11,6 +11,8 @@ from .IfIHadAHummer.main import IfIHadAHummer
 from .clashdescoaches.main import ClashDesCoaches
 from .bx.main import BX
 from .ddd.main import DDD
+from .aintintheway.main import AintInTheWay
+from .queencloclo.main import QueenCloclo
 
 snapshat = Snapshat('Snapshat')
 mcob = Mcob('Mcob')
@@ -25,3 +27,5 @@ ifIHadAHummer = IfIHadAHummer('IfIHadAHummer')
 clashDesCoaches = ClashDesCoaches('ClashDesCoaches')
 bx = BX('BX')
 ddd = DDD('DDD')
+aintintheway = AintInTheWay('AintInTheWay')
+queencloclo = QueenCloclo('QueenCloclo')

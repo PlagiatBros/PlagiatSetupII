@@ -561,7 +561,7 @@ class BX(Video, Light, RouteBase):
             {
                 1: lambda: self.start_scene('couplet 2 trap vers couplet 2 2', lambda: self.couplet_2_2())
             }
-            
+
         ], loop=False)
 
     def couplet_2_2(self):
@@ -606,10 +606,10 @@ class BX(Video, Light, RouteBase):
             {   # bar 2
                 1.5: lambda: vocalsNanoFX2Delay.set('active', 'on'),
                 2.4: lambda: vocalsNanoFX2Delay.set('pre', 'off'),
-            }, 
+            },
             {   # bar 3
                 1.5: lambda: vocalsNanoFX2Delay.set('active', 'on'),
-                2.4: lambda: vocalsKeschFX2Delay.set('pre', 'off'), 
+                2.4: lambda: vocalsKeschFX2Delay.set('pre', 'off'),
                 4: lambda: seq192.select('off', '*')
             },
             {  # bar 4
@@ -618,8 +618,8 @@ class BX(Video, Light, RouteBase):
             },
             {  # bar 5
                 1: lambda: [
-                    seq192.select('solo', 'couplet_*')
-                    seq192.select('off', 'couplet_*guitar*')
+                    seq192.select('solo', 'couplet_*'),
+                    seq192.select('off', 'couplet_*guitar*'),
                     seq192.select('off', 'couplet_cLow_b*')
                 ]
             },

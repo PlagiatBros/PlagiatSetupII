@@ -25,7 +25,9 @@ class Seq192(Module):
             'IfIHadAHummer': 9,
             'ClashDesCoaches': 10,
             'BX': 11,
-            'DDD': 12
+            'DDD': 12,
+            'AintInTheWay': 14,
+            'QueenCloclo': 15,
         }
 
     def start(self):

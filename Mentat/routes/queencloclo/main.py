@@ -4,9 +4,9 @@ from .light import Light
 
 from modules import *
 
-class AintInTheWay(Video, Light, RouteBase):
+class QueenCloclo(Video, Light, RouteBase):
     """
-    Ain't In The Way
+    Queen Cloclo
     """
 
     def activate(self):
@@ -16,7 +16,7 @@ class AintInTheWay(Video, Light, RouteBase):
 
         super().activate()
 
-        transport.set_tempo(120)
+        transport.set_tempo(110)
         transport.set_cycle('4/4')
 
         # Setups, banks...
@@ -113,36 +113,3 @@ class AintInTheWay(Video, Light, RouteBase):
 
         # Séquences
         seq192.select('solo', 'refrain_*')
-
-    @pedalboard_button(5)
-    @mk2_button(5, 'purple')
-    def refrain(self):
-        """
-        COUPLET PART 1
-        """
-        self.pause_loopers()
-        self.reset()
-
-
-        # Transport
-        transport.start()
-
-        # Séquences
-        seq192.select('solo', 'couplet_part1_*')
-
-    @pedalboard_button(6)
-    @mk2_button(6, 'purple')
-    def refrain(self):
-        """
-        COUPLET PART 2
-        """
-        self.pause_loopers()
-        self.reset()
-
-
-        # Transport
-        transport.set_tempo(90)
-        transport.start()
-
-        # Séquences
-        seq192.select('solo', 'couplet_part2_*')
