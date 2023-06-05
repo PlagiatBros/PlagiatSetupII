@@ -469,6 +469,38 @@
           <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2021/BxMillezim/Bx_Car.wav" sampleRelative="../../../../Samples/So2021/BxMillezim/Bx_Car.wav"/>
         </instrument>
       </kit>
+      <kit name="AintInTheWay" volume="1.000000">
+        <instrument name="Key_Cadence_Cm" minnote="61" maxnote="61" rootnote="61" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples1" volume="0.500000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
+          <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2021/AintInTheWay/Key_Cadence_Cm.wav" sampleRelative="../../../../Samples/So2021/AintInTheWay/Key_Cadence_Cm.wav"/>
+        </instrument>
+        <instrument name="Key_Cadence_C" minnote="62" maxnote="62" rootnote="62" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples1" volume="0.500000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
+          <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2021/AintInTheWay/Key_Cadence_C.wav" sampleRelative="../../../../Samples/So2021/AintInTheWay/Key_Cadence_C.wav"/>
+        </instrument>
+        <instrument name="Key_Reso_Cm" minnote="63" maxnote="63" rootnote="63" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples1" volume="0.500000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
+          <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2021/AintInTheWay/Key_Reso_Cm.wav" sampleRelative="../../../../Samples/So2021/AintInTheWay/Key_Reso_Cm.wav"/>
+        </instrument>
+        <instrument name="Key_Reso_C" minnote="64" maxnote="64" rootnote="64" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples1" volume="0.500000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
+          <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2021/AintInTheWay/Key_Reso_C.wav" sampleRelative="../../../../Samples/So2021/AintInTheWay/Key_Reso_C.wav"/>
+        </instrument>
+        <instrument name="Key_Couplet_Cm_A" minnote="65" maxnote="65" rootnote="65" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples1" volume="0.500000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
+          <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2021/AintInTheWay/Key_Couplet_Cm_A.wav" sampleRelative="../../../../Samples/So2021/AintInTheWay/Key_Couplet_Cm_A.wav"/>
+        </instrument>
+        <instrument name="Key_Couplet_Cm_B_levee" minnote="66" maxnote="66" rootnote="66" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples1" volume="0.500000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
+          <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2021/AintInTheWay/Key_Couplet_Cm_B_levee.wav" sampleRelative="../../../../Samples/So2021/AintInTheWay/Key_Couplet_Cm_B_levee.wav"/>
+        </instrument>
+        <instrument name="Key_Couplet_Cm_B_straight" minnote="67" maxnote="67" rootnote="67" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples1" volume="0.500000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
+          <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2021/AintInTheWay/Key_Couplet_Cm_B_straight.wav" sampleRelative="../../../../Samples/So2021/AintInTheWay/Key_Couplet_Cm_B_straight.wav"/>
+        </instrument>
+        <instrument name="Key_Couplet_Cm_C" minnote="68" maxnote="68" rootnote="68" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples1" volume="0.500000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
+          <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2021/AintInTheWay/Key_Couplet_Cm_C.wav" sampleRelative="../../../../Samples/So2021/AintInTheWay/Key_Couplet_Cm_C.wav"/>
+        </instrument>
+        <instrument name="Key_Cadence_Cm_Lento" minnote="73" maxnote="73" rootnote="73" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples1" volume="0.500000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
+          <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2021/AintInTheWay/Key_Cadence_Cm_Lento.wav" sampleRelative="../../../../Samples/So2021/AintInTheWay/Key_Cadence_Cm_Lento.wav"/>
+        </instrument>
+        <instrument name="Key_Reso_Cm_Lento" minnote="74" maxnote="74" rootnote="74" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples1" volume="0.500000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
+          <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2021/AintInTheWay/Key_Reso_Cm_Lento.wav" sampleRelative="../../../../Samples/So2021/AintInTheWay/Key_Reso_Cm_Lento.wav"/>
+        </instrument>
+      </kit>
     </setup>
   </creation>
 </tap192>
