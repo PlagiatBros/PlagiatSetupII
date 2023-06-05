@@ -60,3 +60,56 @@ class AintInTheWay(Video, Light, RouteBase):
         """
         self.pause_loopers()
         transport.stop()
+
+    @pedalboard_button(2)
+    @mk2_button(2, 'purple')
+    def intro(self):
+        """
+        INTRO
+        """
+        self.pause_loopers()
+        self.reset()
+
+
+        # Transport
+        transport.start()
+
+        # Séquences
+        seq192.select('solo', 'intro_*')
+
+    @pedalboard_button(3)
+    @mk2_button(3, 'purple')
+    def prerefrain(self):
+        """
+        PRÉ-REFRAIN
+        """
+        self.pause_loopers()
+        self.reset()
+
+
+        # Transport
+        transport.start()
+
+        # Séquences
+        seq192.select('solo', 'prerefrain_*')
+
+        self.start_scene('breakrefrain', lambda: [
+            self.wait(3*4, 'beat'),
+            seq192.select('on', 'break_prerefrain_*')
+        ])
+
+    @pedalboard_button(4)
+    @mk2_button(4, 'purple')
+    def refrain(self):
+        """
+        REFRAIN
+        """
+        self.pause_loopers()
+        self.reset()
+
+
+        # Transport
+        transport.start()
+
+        # Séquences
+        seq192.select('solo', 'refrain_*')
