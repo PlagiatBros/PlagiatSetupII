@@ -40,6 +40,7 @@ class DDD(Video, Light, RouteBase):
         })
 
     def open_samples(self):
+        samples.set('Samples1', 'Mute', 0.0)
         pass
         # samples.set('GuitarCrunch', 'Mute', 0.0)
         # samplesFX3Reverb.set('Trumpets', 'Gain', -10.0)
@@ -55,6 +56,7 @@ class DDD(Video, Light, RouteBase):
         transport.stop()
 
 
+    @mk2_button(2)
     @pedalboard_button(2)
     def intro(self):
         """
@@ -81,6 +83,31 @@ class DDD(Video, Light, RouteBase):
 
 
     @pedalboard_button(3)
+    def prerefrain(self):
+        """
+        PREREFRAIN MariLouiz
+        """
+        self.pause_loopers()
+        self.reset()
+
+        # Sequences
+        seq192.select('solo', 'prerefrain_*')
+
+        # Transport
+        transport.start()
+
+        # Samples
+        self.open_samples()
+
+        # Vocals
+        vocalsNano.set('normo_exclu', 'on')
+        vocalsKesch.set('meuf_exclu', 'on')
+
+        # Keyboard
+        jmjKeyboard.set_sound('ZTrumpets', boost=True)
+
+
+    @pedalboard_button(4)
     def refrain(self):
         """
         REFRAIN
@@ -96,6 +123,8 @@ class DDD(Video, Light, RouteBase):
 
         # Samples
         self.open_samples()
+        samplesFX1Delay.set('Samples1', 'Gain', -18.0)
+        samplesFX1Delay.set('SamplesFX1Delay', 'Mute', 0.0)
 
         # Vocals
         vocalsNano.set('meuf_exclu', 'on')
@@ -104,8 +133,11 @@ class DDD(Video, Light, RouteBase):
         # Keyboard
         jmjKeyboard.set_sound('ZTrumpets', boost=True)
 
+        # Bass FX
+        bassFX.set('distohi', 'on')
 
-    @pedalboard_button(4)
+
+    @pedalboard_button(5)
     def couplet(self):
         """
         COUPLET
@@ -129,7 +161,7 @@ class DDD(Video, Light, RouteBase):
         # Keyboard
         jmjKeyboard.set_sound('ZTrumpets', boost=True)
 
-    @mk2_button(2)
+    @mk2_button(3)
     def couplet_up(self):
         """
         COUPLET UP
@@ -138,7 +170,7 @@ class DDD(Video, Light, RouteBase):
         # Séquences
         seq192.select('solo', 'couplet_*_up*')
 
-    @mk2_button(3)
+    @mk2_button(4)
     def couplet_full(self):
         """
         COUPLET FULL
