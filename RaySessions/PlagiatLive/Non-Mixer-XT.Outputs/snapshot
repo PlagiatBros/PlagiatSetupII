@@ -13,14 +13,14 @@
 	Mixer_Strip 0x1D7 create :name "OH-L" :width "narrow" :tab "signal" :color 1771060174 :gain_mode 0 :mute_mode 0 :group 0x7 :auto_input "" :manual_connection 0
 	Chain 0x1D8 create :strip 0x1D7 :tab "chain"
 	JACK_Module 0x1D9 create :parameter_values "0.000000:1.000000" :is_default 1 :chain 0x1D8 :active 1
-	Gain_Module 0x1DA create :parameter_values "0.000000:0.000000:0.000000" :is_default 1 :chain 0x1D8 :active 1
+	Gain_Module 0x1DA create :parameter_values "-70.000000:0.000000:0.000000" :is_default 1 :chain 0x1D8 :active 1
 	Mono_Pan_Module 0x1E3 create :parameter_values "-1.000000" :is_default 0 :chain 0x1D8 :active 1
 	Meter_Module 0x1DB create :is_default 1 :chain 0x1D8 :active 1
 	JACK_Module 0x1DC create :parameter_values "2.000000:0.000000" :is_default 1 :chain 0x1D8 :active 1
 	Mixer_Strip 0x1DD create :name "OH-R" :width "narrow" :tab "signal" :color 610812082 :gain_mode 0 :mute_mode 0 :group 0x7 :auto_input "" :manual_connection 0
 	Chain 0x1DE create :strip 0x1DD :tab "chain"
 	JACK_Module 0x1DF create :parameter_values "0.000000:1.000000" :is_default 1 :chain 0x1DE :active 1
-	Gain_Module 0x1E0 create :parameter_values "0.000000:0.000000:0.000000" :is_default 1 :chain 0x1DE :active 1
+	Gain_Module 0x1E0 create :parameter_values "-70.000000:0.000000:0.000000" :is_default 1 :chain 0x1DE :active 1
 	Mono_Pan_Module 0x1E4 create :parameter_values "1.000000" :is_default 0 :chain 0x1DE :active 1
 	Meter_Module 0x1E1 create :is_default 1 :chain 0x1DE :active 1
 	JACK_Module 0x1E2 create :parameter_values "2.000000:0.000000" :is_default 1 :chain 0x1DE :active 1
@@ -56,7 +56,7 @@
 	AUX_Module 0x3B create :parameter_values "0.000000" :is_default 0 :chain 0x15 :active 1 :number 0
 	AUX_Module 0xFB create :parameter_values "0.000000" :is_default 0 :chain 0x15 :active 1 :number 1
 	AUX_Module 0xFC create :parameter_values "0.000000" :is_default 0 :chain 0x15 :active 1 :number 2
-	Gain_Module 0x17 create :parameter_values "0.000000:0.000000:0.000000" :is_default 1 :chain 0x15 :active 1
+	Gain_Module 0x17 create :parameter_values "-5.000000:0.000000:0.000000" :is_default 1 :chain 0x15 :active 1
 	Meter_Module 0x18 create :is_default 1 :chain 0x15 :active 1
 	JACK_Module 0x19 create :parameter_values "2.000000:0.000000" :is_default 1 :chain 0x15 :active 1
 	Mixer_Strip 0x1A create :name "Samples" :width "narrow" :tab "signal" :color 556762613 :gain_mode 0 :mute_mode 0 :group 0x7 :auto_input "" :manual_connection 0
@@ -67,7 +67,7 @@
 	AUX_Module 0x3C create :parameter_values "0.000000" :is_default 0 :chain 0x1B :active 1 :number 0
 	AUX_Module 0xFD create :parameter_values "0.000000" :is_default 0 :chain 0x1B :active 1 :number 1
 	AUX_Module 0xFE create :parameter_values "0.000000" :is_default 0 :chain 0x1B :active 1 :number 2
-	Gain_Module 0x1D create :parameter_values "0.000000:0.000000:0.000000" :is_default 1 :chain 0x1B :active 1
+	Gain_Module 0x1D create :parameter_values "-8.000000:0.000000:0.000000" :is_default 1 :chain 0x1B :active 1
 	Meter_Module 0x1E create :is_default 1 :chain 0x1B :active 1
 	JACK_Module 0x1F create :parameter_values "2.000000:0.000000" :is_default 1 :chain 0x1B :active 1
 	Mixer_Strip 0x20 create :name "VocalsNano" :width "narrow" :tab "signal" :color 595506625 :gain_mode 0 :mute_mode 0 :group 0x7 :auto_input "" :manual_connection 0
@@ -84,7 +84,7 @@
 	JACK_Module 0x28 create :parameter_values "0.000000:1.000000" :is_default 1 :chain 0x27 :active 1
 	LADSPA_Plugin 0x135 create :plugin_id 1916 :plugin_ins 1 :plugin_outs 1 :parameter_values "0.000000:101.125000:401.000000:-6.500000:3.200000:3.250000:3.000000:0.000000" :is_default 0 :chain 0x27 :active 1
 	AUX_Module 0x3E create :parameter_values "0.000000" :is_default 0 :chain 0x27 :active 1 :number 0
-	Gain_Module 0x29 create :parameter_values "0.000000:0.000000:0.000000" :is_default 1 :chain 0x27 :active 1
+	Gain_Module 0x29 create :parameter_values "5.500000:0.000000:0.000000" :is_default 1 :chain 0x27 :active 1
 	Mono_Pan_Module 0x46 create :parameter_values "0.000000" :is_default 0 :chain 0x27 :active 1
 	Meter_Module 0x2A create :is_default 1 :chain 0x27 :active 1
 	JACK_Module 0x2B create :parameter_values "2.000000:0.000000" :is_default 1 :chain 0x27 :active 1
@@ -93,7 +93,7 @@
 	JACK_Module 0x235 create :parameter_values "0.000000:1.000000" :is_default 1 :chain 0x234 :active 1
 	LADSPA_Plugin 0x239 create :plugin_id 1916 :plugin_ins 1 :plugin_outs 1 :parameter_values "0.000000:101.125000:401.000000:-6.500000:3.200000:3.250000:3.000000:0.000000" :is_default 0 :chain 0x234 :active 1 :number 0
 	AUX_Module 0x23D create :parameter_values "0.000000" :is_default 0 :chain 0x234 :active 1 :number 0
-	Gain_Module 0x236 create :parameter_values "3.000000:0.000000:0.000000" :is_default 1 :chain 0x234 :active 1
+	Gain_Module 0x236 create :parameter_values "6.000000:0.000000:0.000000" :is_default 1 :chain 0x234 :active 1
 	Mono_Pan_Module 0x23F create :parameter_values "0.000000" :is_default 0 :chain 0x234 :active 1 :number 0
 	Meter_Module 0x237 create :is_default 1 :chain 0x234 :active 1
 	JACK_Module 0x238 create :parameter_values "2.000000:0.000000" :is_default 1 :chain 0x234 :active 1

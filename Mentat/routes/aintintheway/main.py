@@ -26,30 +26,21 @@ class AintInTheWay(Video, Light, RouteBase):
         # Microtonality
         # microtonality.disable()
         microtonality.enable()
-        microtonality.set_tuning(0.35, 0, 0, 0, 0, 0.35, 0, 0, 0.35, 0, 0, 0)
+        microtonality.set_tuning(0, 0, 0, 0.35, 0, 0, 0, 0, 0, 0, 0.35, 0)
 
         # Autotuner Notes
-        notes.set_notes(1, 0, 1, 0, 1, 1, 0, 1, 1, 1, 0, 1)
+        notes.set_notes(1, 0, 1, 1, 1, 1, 0, 1, 0, 1, 1, 0)
 
         # Mk2
         mk2Control.set_mode('cut_samples', 'cut_synths')
 
         # Sample
-        # self.set_samples_aliases({
-        #     'GuitarCrunch': 'Samples1',
-        #     'GuitarNatural': 'Samples2',
-        #     'GuitarChorus': 'Samples3',
-        #     'Trumpets': 'Samples4',
-        # })
+        self.set_samples_aliases({
+            'Piano': 'Samples1',
+        })
 
     def open_samples(self):
-        pass
-        # samples.set('GuitarCrunch', 'Mute', 0.0)
-        # samples.set('GuitarNatural', 'Mute', 0.0)
-        # samples.set('GuitarChorus', 'Mute', 0.0)
-        # samples.set('Trumpets', 'Mute', 0.0)
-        # samplesFX3Reverb.set('Trumpets', 'Gain', -10.0)
-        # samplesFX3Reverb.set('SamplesFX3Reverb', 'Mute', 0.0)
+        samples.set('Piano', 'Mute', 0.0)
 
 
     @pedalboard_button(1)
@@ -71,11 +62,22 @@ class AintInTheWay(Video, Light, RouteBase):
         self.reset()
 
 
-        # Transport
-        transport.start()
 
         # Séquences
         seq192.select('solo', 'intro_*')
+
+
+        # Transport
+        transport.set_tempo(120)
+        transport.start()
+
+        # Samples
+        self.open_samples()
+
+        # Vocals
+        vocalsKesch.set('normo_exclu', 'on')
+        vocalsNano.set('normo_exclu', 'on')
+        vocalsFeat.set('normo_exclu', 'on')
 
     @pedalboard_button(3)
     @mk2_button(3, 'purple')
@@ -86,15 +88,29 @@ class AintInTheWay(Video, Light, RouteBase):
         self.pause_loopers()
         self.reset()
 
-
-        # Transport
-        transport.start()
-
         # Séquences
         seq192.select('solo', 'prerefrain_*')
 
+
+
+        # Samples
+        self.open_samples()
+
+        # Vocals
+        vocalsKesch.set('normo_exclu', 'on')
+        vocalsNano.set('normo_exclu', 'on')
+        vocalsFeat.set('normo_exclu', 'on')
+
+
+
+        # Transport
+        transport.set_tempo(120)
+
+        transport.start()
+
+
         self.start_scene('breakrefrain', lambda: [
-            self.wait(3*4, 'beat'),
+            self.wait(7*4, 'beat'),
             seq192.select('on', 'break_prerefrain_*')
         ])
 
@@ -107,42 +123,143 @@ class AintInTheWay(Video, Light, RouteBase):
         self.pause_loopers()
         self.reset()
 
-
-        # Transport
-        transport.start()
-
         # Séquences
         seq192.select('solo', 'refrain_*')
 
+
+        # Transport
+        transport.set_tempo(120)
+
+        transport.start()
+
+        # Samples
+        self.open_samples()
+
+        # Vocals
+        vocalsKesch.set('normo_exclu', 'on')
+        vocalsNano.set('normo_exclu', 'on')
+        vocalsFeat.set('normo_exclu', 'on')
+
+
+
     @pedalboard_button(5)
     @mk2_button(5, 'purple')
-    def refrain(self):
+    def couplet_part1(self):
         """
         COUPLET PART 1
         """
         self.pause_loopers()
         self.reset()
 
+        # Samples
+        self.open_samples()
 
-        # Transport
-        transport.start()
 
         # Séquences
         seq192.select('solo', 'couplet_part1_*')
 
+        # Transport
+        transport.set_tempo(120)
+
+        transport.start()
+
+        # jmjKeyboard
+        jmjKeyboard.set_sound('ZTrumpets')
+
+        # Vocals
+        vocalsKesch.set('normo_exclu', 'on')
+        vocalsNano.set('normo_exclu', 'on')
+        vocalsFeat.set('normo_exclu', 'on')
+
+
+
     @pedalboard_button(6)
     @mk2_button(6, 'purple')
-    def refrain(self):
+    def couplet_part2(self):
         """
         COUPLET PART 2
         """
         self.pause_loopers()
         self.reset()
 
-
-        # Transport
-        transport.set_tempo(90)
-        transport.start()
-
         # Séquences
         seq192.select('solo', 'couplet_part2_*')
+
+        # Samples
+        self.open_samples()
+
+        # Vocals
+        vocalsKesch.set('normo_exclu', 'on')
+        vocalsNano.set('normo_exclu', 'on')
+        vocalsFeat.set('normo_exclu', 'on')
+
+
+
+        # Transport
+        transport.set_tempo(180)
+        transport.start()
+
+    @pedalboard_button(7)
+    @mk2_button(7, 'purple')
+    def theme(self):
+        """
+        THÈME
+        """
+        self.pause_loopers()
+        self.reset()
+
+        # Séquences
+        seq192.select('solo', 'theme_*')
+
+        # Samples
+        self.open_samples()
+
+        # jmjKeyboard
+        jmjKeyboard.set_sound('LowZDancestep')
+
+
+        # Transport
+        transport.set_tempo(180)
+        transport.start()
+
+        # Vocals
+        vocalsKesch.set('gars_exclu', 'on')
+        vocalsNano.set('normo_exclu', 'on')
+        vocalsFeat.set('normo_exclu', 'on')
+
+    @pedalboard_button(8)
+    @mk2_button(8, 'purple')
+    def couplet2(self):
+        """
+        COUPLET 2
+        """
+        self.pause_loopers()
+        self.reset()
+
+        seq192.select('solo', 'dummy')
+
+        # Séquences
+        self.start_scene('salsa', lambda: [
+            self.wait(8*4, 'beat'),
+            seq192.select('solo', 'couplet2_*')
+            ]
+        )
+
+        # Samples
+        self.open_samples()
+
+
+        # Transport
+        transport.set_tempo(180)
+        transport.start()
+
+
+        # jmjKeyboard
+        jmjKeyboard.set_sound('SteelDrum')
+
+
+
+        # Vocals
+        vocalsKesch.set('normo_exclu', 'on')
+        vocalsNano.set('normo_exclu', 'on')
+        vocalsFeat.set('normo_exclu', 'on')

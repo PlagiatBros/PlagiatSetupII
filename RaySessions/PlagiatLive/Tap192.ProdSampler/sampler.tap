@@ -501,6 +501,32 @@
           <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2021/AintInTheWay/Key_Reso_Cm_Lento.wav" sampleRelative="../../../../Samples/So2021/AintInTheWay/Key_Reso_Cm_Lento.wav"/>
         </instrument>
       </kit>
+      <kit name="DDD" volume="1.000000">
+        <instrument name="DenisePrigenre_A" minnote="61" maxnote="61" rootnote="61" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples1" volume="1.500000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
+          <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2021/DDD/DenisePrigenre_A.wav" sampleRelative="../../../../Samples/So2021/DDD/DenisePrigenre_A.wav"/>
+        </instrument>
+        <instrument name="DenisePrigenre_B" minnote="62" maxnote="62" rootnote="62" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples1" volume="1.500000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
+          <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2021/DDD/DenisePrigenre_B.wav" sampleRelative="../../../../Samples/So2021/DDD/DenisePrigenre_B.wav"/>
+        </instrument>
+        <instrument name="DenisePrigenre_C" minnote="63" maxnote="63" rootnote="63" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples1" volume="1.500000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
+          <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2021/DDD/DenisePrigenre_C.wav" sampleRelative="../../../../Samples/So2021/DDD/DenisePrigenre_C.wav"/>
+        </instrument>
+        <instrument name="DenisePrigenre_D" minnote="64" maxnote="64" rootnote="64" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples1" volume="1.500000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
+          <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2021/DDD/DenisePrigenre_D.wav" sampleRelative="../../../../Samples/So2021/DDD/DenisePrigenre_D.wav"/>
+        </instrument>
+        <instrument name="DenisePrigenre_E" minnote="65" maxnote="65" rootnote="65" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples1" volume="1.500000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
+          <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2021/DDD/DenisePrigenre_E.wav" sampleRelative="../../../../Samples/So2021/DDD/DenisePrigenre_E.wav"/>
+        </instrument>
+        <instrument name="DenisePrigenre_F-1" minnote="66" maxnote="66" rootnote="66" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples1" volume="1.500000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
+          <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2021/DDD/DenisePrigenre_F-1.wav" sampleRelative="../../../../Samples/So2021/DDD/DenisePrigenre_F-1.wav"/>
+        </instrument>
+        <instrument name="DenisePrigenre_F-2" minnote="67" maxnote="67" rootnote="67" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples1" volume="1.500000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
+          <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2021/DDD/DenisePrigenre_F-2.wav" sampleRelative="../../../../Samples/So2021/DDD/DenisePrigenre_F-2.wav"/>
+        </instrument>
+        <instrument name="MariLouiz" minnote="68" maxnote="68" rootnote="68" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples1" volume="0.500000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
+          <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2021/DDD/MariLouiz.wav" sampleRelative="../../../../Samples/So2021/DDD/MariLouiz.wav"/>
+        </instrument>
+      </kit>
     </setup>
   </creation>
 </tap192>
