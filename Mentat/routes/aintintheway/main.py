@@ -105,13 +105,14 @@ class AintInTheWay(Video, Light, RouteBase):
 
         # Transport
         transport.set_tempo(120)
-
         transport.start()
 
 
         self.start_scene('breakrefrain', lambda: [
             self.wait(7*4, 'beat'),
-            seq192.select('on', 'break_prerefrain_*')
+            seq192.select('on', 'break_prerefrain_*'),
+            self.wait(4, 'beat'),
+            self.refrain()
         ])
 
     @pedalboard_button(4)
@@ -129,7 +130,6 @@ class AintInTheWay(Video, Light, RouteBase):
 
         # Transport
         transport.set_tempo(120)
-
         transport.start()
 
         # Samples
@@ -160,7 +160,6 @@ class AintInTheWay(Video, Light, RouteBase):
 
         # Transport
         transport.set_tempo(120)
-
         transport.start()
 
         # jmjKeyboard
@@ -263,3 +262,28 @@ class AintInTheWay(Video, Light, RouteBase):
         vocalsKesch.set('normo_exclu', 'on')
         vocalsNano.set('normo_exclu', 'on')
         vocalsFeat.set('normo_exclu', 'on')
+
+
+    @pedalboard_button(9)
+    @mk2_button(9, 'purple')
+    def savoir_aimer(self):
+        """
+        SAVOIR AIMÉ
+        """
+        self.pause_loopers()
+        self.reset()
+
+        seq192.select('solo', 'dummy')
+
+
+        # Samples
+        self.open_samples()
+
+
+        # Transport
+        transport.set_tempo(120)
+        transport.start()
+
+
+        # jmjKeyboard
+        jmjKeyboard.set_sound('SteelDrum')
