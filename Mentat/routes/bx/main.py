@@ -80,7 +80,7 @@ class BX(Video, Light, RouteBase):
 
         # Vocals
         vocalsNano.set('normo_exclu', 'on')
-        vocalsKesch.set('normo_exclu', 'on')
+        vocalsKesch.set('meuf_exclu', 'on')
 
         # Keyboard
         jmjKeyboard.set_sound('ZTrumpets', boost=True)
@@ -95,6 +95,8 @@ class BX(Video, Light, RouteBase):
 
         synthsFX2Delay.set('Trap', 'Gain', -14.0)
         synthsFX2Delay.set('SynthsFX2Delay', 'Mute', 0.0)
+
+
 
     @pedalboard_button(3)
     def couplet(self):
@@ -118,7 +120,7 @@ class BX(Video, Light, RouteBase):
 
         # Vocals
         vocalsNano.set('normo_exclu', 'on')
-        vocalsKesch.set('normo_exclu', 'on')
+        # vocalsKesch.set('meuf_exclu', 'on')
         vocalsFeat.set('gars_exclu', 'on')
 
 
@@ -143,6 +145,18 @@ class BX(Video, Light, RouteBase):
         #         3.5: lambda: self.couplet_1_p2()
         #     }
         # ], loop=False)
+        # Séquences
+
+        self.start_sequence('transitiondegenre', [
+        {}, # bar 1
+        {}, # bar 2
+        {}, # bar 3
+        {
+            4.5: lambda: vocalsKesch.set('normo_exclu', 'on')
+        } # bar 4
+        ])
+
+
 
     @mk2_button(2)
     def couplet_keeping(self):
@@ -496,13 +510,12 @@ class BX(Video, Light, RouteBase):
         synthsFX2Delay.set('SynthsFX2Delay', 'Mute', 0.0)
 
         # Séquences
-        self.start_scene('sequence/bx_whatif', lambda: [
+        self.start_scene('bx_whatif', lambda: [
             prodSampler.send('/instrument/play', 's:Bx_WhatIf'),
             self.wait(4, 'beat'), #bar 1
             self.wait(4, 'beat'), #bar 2
-            self.wait(3.51, 'beat'), #bar 3
+            self.wait(4, 'beat'), #bar 3
             vocalsKesch.set('normo_exclu', 'on'),
-            self.wait(0.49, 'beat'),
             self.wait(4, 'beat'), #bar 4
             self.couplet_2_1()
         ])
@@ -510,14 +523,42 @@ class BX(Video, Light, RouteBase):
     def couplet_2_1(self):
         """
         COUPLET 2 PART 1 (ain't no suv...)
+        + Transition auto vers Queen
         """
-        self.couplet()
+        self.pause_loopers()
+        self.reset()
 
+        # Sequences
+        seq192.select('solo', 'couplet_*')
+        seq192.select('off', 'couplet_*guitar*')
+        # seq192.select('off', 'couplet_*cHi_easyClassical')
+
+
+        # Transport
         transport.start()
+
+        # Samples
+        self.open_samples()
+
+        # Vocals
+        vocalsNano.set('normo_exclu', 'on')
+        # vocalsKesch.set('meuf_exclu', 'on')
+        vocalsFeat.set('gars_exclu', 'on')
+
+        # Synths
+        synths.set('Trap', 'Pan', -0.7)
+        synths.set('ZStambul', 'Pan', 0.5)
+        synths.set('EasyClassical', 'Pan', 0.3)
+
+
+        synths.set('Trap', 'Amp', 'Gain', 0.35)
+
 
         # Vocals
         # vocalsKesch.set('meuf', 'on')
         vocalsFeat.set('normo_exclu', 'on')
+        jmjKeyboard.set_sound('ZOrgan')
+
 
         # Séquence
         self.start_sequence('couplet_2_1', [
@@ -526,13 +567,13 @@ class BX(Video, Light, RouteBase):
             {}, # bar 3
             {   # bar 4
                 2: lambda: seq192.select('off', '*'), # stop drums
-                3: lambda: [
+                3.4: lambda: [
                     vocalsKesch.set('meuf_exclu', 'on'),
                     vocalsNano.set('meuf_exclu', 'on'),
                 ],
-                4.5: lambda: constantSampler.send('/instrument/play', 's:FunkyHit1', 100)
+                4.5: lambda: constantSampler.send('/instrument/play', 's:FunkyHit1', 100),
             },
-            {   # bar 5: Alternate trap
+            {   # bar 5: Alternate trap (be honest yo bum)
                 1: lambda: seq192.select('solo', 'trap_*')
             },
             {}, # bar 6
@@ -541,40 +582,84 @@ class BX(Video, Light, RouteBase):
                 1.5: lambda: prodSampler.send('/instrument/play', 's:Bx_YouWontRaise')
             },
             {
-                1: lambda: vocalsKesch.set('normo_exclu', 'on')
-            }, # bar 9
-            {}, # bar 10
-            {}, # bar 11
-            {}, # bar 12
-            {   # bar 13
-                1: lambda: [
-                    # Séquences
-                    seq192.select('solo', 'trap2_*'),
-                    # Vocals
-                    vocalsNano.set('normo_exclu', 'on'),
-                    vocalsKesch.set('normo_exclu', 'on'),
-                ]
-            },
-            {}, # bar 14
-            {}, # bar 15
-            {}, # bar 16
-            {
-                1: lambda: self.start_scene('couplet 2 trap vers couplet 2 2', lambda: self.couplet_2_2())
+                1: lambda: self.start_scene('vers queen', lambda: self.queen())
             }
-
         ], loop=False)
 
+
+    def queen(self):
+        """
+        QUEEN (as usual boy)
+        ad lib, sortie nano
+        """
+        self.pause_loopers()
+        self.reset()
+
+        # Transport
+        transport.start()
+
+        # Samples
+        self.open_samples()
+
+        # Vocals
+        vocalsFeat.set('normo_exclu', 'on')
+        vocalsKesch.set('gars_exclu', 'on')
+        vocalsFeat.set('normo_exclu', 'on')
+
+
+        # Séquences
+        seq192.select('solo', 'dummy')
+
+        # Keyboards
+        jmjKeyboard.set_sound('ZDupieux')
+
+    def queen_sortie(self):
+        """
+        QUEEN SORTIE
+        drum stop, transition auto vers couplet 2 2
+        """
+        self.pause_loopers()
+        self.reset()
+
+        seq192.select('solo', 'trap2_*')
+
+
+        # Transport
+        transport.start()
+
+
+        # Samples
+        self.open_samples()
+
+
+        # Vocals
+        vocalsNano.set('normo_exclu', 'on')
+        vocalsKesch.set('normo_exclu', 'on')
+
+        self.start_sequence('queen sortie', [
+            {}, # bar 1
+            {}, # bar 2
+            {}, # bar 3
+            {}, # bar 4
+            {
+                1: lambda: self.start_scene('vers couplet 2 2', lambda: self.couplet_2_2())
+            }
+        ], loop=False)
+
+    @mk2_button(5, 'cyan')
     def couplet_2_2(self):
         """
-        COUPLET 2_2 (basse jouée)
+        COUPLET 2_2 (basse jouée, phili compton l.a)
+        + break sur 4e mesure
+        + transition auto vers hands up hands up (pretrap2)
         """
         self.pause_loopers()
         self.reset()
 
         # Sequences
-        seq192.select('solo', 'couplet_*')
-        seq192.select('off', 'couplet_*guitar*')
-        seq192.select('off', 'couplet_cLow_b*')
+        seq192.select('solo', 'couplet2_2_*')
+        seq192.select('off', 'couplet2_2_*guitar*')
+        # seq192.select('off', 'couplet_cLow_b*')
 
 
         # Transport
@@ -589,7 +674,7 @@ class BX(Video, Light, RouteBase):
         vocalsFeat.set('gars_exclu', 'on')
 
         # Keyboard
-        jmjKeyboard.set_sound('ZDupieux')
+        jmjKeyboard.set_sound('ZOrgan')
 
         # Bass
         bassFX.set('zynwah', 'on')
@@ -601,7 +686,7 @@ class BX(Video, Light, RouteBase):
         synths.set('Trap', 'Amp', 'Gain', 0.35)
 
         # Séquence
-        self.start_sequence('couplet_2_1', [
+        self.start_sequence('couplet_2_2', [
             {}, # bar 1
             {   # bar 2
                 1.5: lambda: vocalsNanoFX2Delay.set('active', 'on'),
@@ -618,22 +703,47 @@ class BX(Video, Light, RouteBase):
             },
             {  # bar 5
                 1: lambda: [
-                    seq192.select('solo', 'couplet_*'),
-                    seq192.select('off', 'couplet_*guitar*'),
-                    seq192.select('off', 'couplet_cLow_b*')
+                    seq192.select('solo', 'couplet2_2_*'),
+                    seq192.select('off', 'couplet2_2_*guitar*'),
+                    # seq192.select('off', 'couplet_cLow_b*')
                 ]
             },
             {}, # bar 6
             {}, # bar 7
             {}, # bar 8
             {
-                1: lambda: self.start_scene('couplet 2 2 vers trap', lambda: self.pretrap())
+                1: lambda: self.start_scene('couplet 2 2 vers trap', lambda: self.pretrap2())
             }
 
         ], loop=False)
 
+    def pretrap2(self):
+        """
+        PRE TRAP 2 (hands up hands up)
+        """
+        self.pause_loopers()
+        self.reset()
 
-    @mk2_button(5, 'yellow')
+        # Transport
+        transport.start()
+
+        # Samples
+        self.open_samples()
+
+        # Vocals
+        vocalsFeat.set('normo_exclu', 'on')
+        vocalsKesch.set('gars_exclu', 'on')
+        vocalsFeat.set('normo_exclu', 'on')
+
+
+        # Séquences
+        seq192.select('solo', 'pretrap_cLow_trap1')
+        seq192.select('on', 'pretrap_cHi_trap')
+
+        # Keyboards
+        jmjKeyboard.set_sound('ZDupieux')
+
+    @mk2_button(6, 'yellow')
     def pretrap_stop_manhooky(self):
         """
         TRAP STOP MANHOOKY (& du 4)

@@ -75,7 +75,10 @@ class QueenCloclo(Video, Light, RouteBase):
         transport.start()
 
         # Séquences
-        seq192.select('solo', 'intro_*')
+        seq192.select('solo', 'couplet_*')
+
+        # Looper
+        looper.trigger(0)
 
     @pedalboard_button(3)
     @mk2_button(3, 'purple')
