@@ -1,0 +1,61 @@
+@prefix atom: <http://lv2plug.in/ns/ext/atom#> .
+@prefix lv2: <http://lv2plug.in/ns/lv2core#> .
+@prefix pset: <http://lv2plug.in/ns/ext/presets#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix state: <http://lv2plug.in/ns/ext/state#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<>
+	a pset:Preset ;
+	lv2:appliesTo <http://calf.sourceforge.net/plugins/MultiChorus> ;
+	lv2:port [
+		lv2:symbol "amount" ;
+		pset:value 0.5
+	] , [
+		lv2:symbol "dry" ;
+		pset:value 0.5
+	] , [
+		lv2:symbol "freq" ;
+		pset:value 100.0
+	] , [
+		lv2:symbol "freq2" ;
+		pset:value 5000.0
+	] , [
+		lv2:symbol "level_in" ;
+		pset:value 1.0
+	] , [
+		lv2:symbol "level_out" ;
+		pset:value 1.0
+	] , [
+		lv2:symbol "lfo" ;
+		pset:value 1.0
+	] , [
+		lv2:symbol "min_delay" ;
+		pset:value 2.75422907
+	] , [
+		lv2:symbol "mod_depth" ;
+		pset:value 8.31763744
+	] , [
+		lv2:symbol "mod_rate" ;
+		pset:value 1.20129275
+	] , [
+		lv2:symbol "on" ;
+		pset:value 0.0
+	] , [
+		lv2:symbol "overlap" ;
+		pset:value 0.736
+	] , [
+		lv2:symbol "q" ;
+		pset:value 0.125
+	] , [
+		lv2:symbol "stereo" ;
+		pset:value 96.00000763
+	] , [
+		lv2:symbol "voices" ;
+		pset:value 6.0
+	] , [
+		lv2:symbol "vphase" ;
+		pset:value 136.0
+	] .
+
