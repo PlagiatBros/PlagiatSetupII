@@ -527,6 +527,47 @@
           <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2021/DDD/MariLouiz.wav" sampleRelative="../../../../Samples/So2021/DDD/MariLouiz.wav"/>
         </instrument>
       </kit>
+      <kit name="QueenCloclo" volume="1.000000">
+        <instrument name="KJ_A" minnote="61" maxnote="61" rootnote="61" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples1" volume="0.500000" pan="-1.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
+          <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2021/QueenCloclo/KJ_A.wav" sampleRelative="../../../../Samples/So2021/QueenCloclo/KJ_A.wav"/>
+        </instrument>
+        <instrument name="KJ_B" minnote="62" maxnote="62" rootnote="62" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples1" volume="0.500000" pan="1.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
+          <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2021/QueenCloclo/KJ_B.wav" sampleRelative="../../../../Samples/So2021/QueenCloclo/KJ_B.wav"/>
+        </instrument>
+        <instrument name="KJ_C" minnote="63" maxnote="63" rootnote="63" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples1" volume="0.500000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
+          <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2021/QueenCloclo/KJ_C.wav" sampleRelative="../../../../Samples/So2021/QueenCloclo/KJ_C.wav"/>
+        </instrument>
+        <instrument name="Violon1_A" minnote="73" maxnote="73" rootnote="73" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples2" volume="0.300000" pan="-0.510204" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
+          <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2021/QueenCloclo/Violon1_A.wav" sampleRelative="../../../../Samples/So2021/QueenCloclo/Violon1_A.wav"/>
+        </instrument>
+        <instrument name="Violon2_A" minnote="74" maxnote="74" rootnote="74" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples2" volume="0.300000" pan="-0.510204" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
+          <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2021/QueenCloclo/Violon2_A.wav" sampleRelative="../../../../Samples/So2021/QueenCloclo/Violon2_A.wav"/>
+        </instrument>
+        <instrument name="Violon2_A-long" minnote="75" maxnote="75" rootnote="75" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples2" volume="0.300000" pan="-0.510204" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
+          <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2021/QueenCloclo/Violon2_A-long.wav" sampleRelative="../../../../Samples/So2021/QueenCloclo/Violon2_A-long.wav"/>
+        </instrument>
+        <instrument name="Violon3_A" minnote="76" maxnote="76" rootnote="76" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples2" volume="0.300000" pan="-0.510204" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
+          <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2021/QueenCloclo/Violon3_A.wav" sampleRelative="../../../../Samples/So2021/QueenCloclo/Violon3_A.wav"/>
+        </instrument>
+        <instrument name="Violon1_B" minnote="77" maxnote="77" rootnote="77" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples2" volume="0.300000" pan="0.510204" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
+          <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2021/QueenCloclo/Violon1_B.wav" sampleRelative="../../../../Samples/So2021/QueenCloclo/Violon1_B.wav"/>
+        </instrument>
+        <instrument name="Violon2_B" minnote="78" maxnote="78" rootnote="78" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples2" volume="0.300000" pan="0.510204" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
+          <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2021/QueenCloclo/Violon2_B.wav" sampleRelative="../../../../Samples/So2021/QueenCloclo/Violon2_B.wav"/>
+        </instrument>
+        <instrument name="Violon1_C" minnote="79" maxnote="79" rootnote="79" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples2" volume="0.300000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
+          <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2021/QueenCloclo/Violon1_C.wav" sampleRelative="../../../../Samples/So2021/QueenCloclo/Violon1_C.wav"/>
+        </instrument>
+        <instrument name="Violon2_C" minnote="80" maxnote="80" rootnote="80" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples2" volume="0.300000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
+          <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2021/QueenCloclo/Violon2_C.wav" sampleRelative="../../../../Samples/So2021/QueenCloclo/Violon2_C.wav"/>
+        </instrument>
+        <instrument name="Violon2_C-long" minnote="81" maxnote="81" rootnote="81" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples2" volume="0.300000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
+          <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2021/QueenCloclo/Violon2_C-long.wav" sampleRelative="../../../../Samples/So2021/QueenCloclo/Violon2_C-long.wav"/>
+        </instrument>
+        <instrument name="Violon3_C" minnote="82" maxnote="82" rootnote="82" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples2" volume="0.300000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
+          <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2021/QueenCloclo/Violon3_C.wav" sampleRelative="../../../../Samples/So2021/QueenCloclo/Violon3_C.wav"/>
+        </instrument>
+      </kit>
     </setup>
   </creation>
 </tap192>

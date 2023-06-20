@@ -26,30 +26,34 @@ class QueenCloclo(Video, Light, RouteBase):
         # Microtonality
         # microtonality.disable()
         microtonality.enable()
-        microtonality.set_tuning(0.35, 0, 0, 0, 0, 0.35, 0, 0, 0.35, 0, 0, 0)
+        microtonality.set_tuning(0, -0.35, 0, 0, 0, 0.35, 0, 0, 0, 0, 0.35, 0)
 
         # Autotuner Notes
-        notes.set_notes(1, 0, 1, 0, 1, 1, 0, 1, 1, 1, 0, 1)
+        #               c     d     e  f     g     a     b
+        notes.set_notes(1, 1, 1, 0, 1, 1, 0, 1, 0, 1, 1, 0)
 
         # Mk2
         mk2Control.set_mode('cut_samples', 'cut_synths')
 
         # Sample
-        # self.set_samples_aliases({
-        #     'GuitarCrunch': 'Samples1',
-        #     'GuitarNatural': 'Samples2',
+        self.set_samples_aliases({
+            'KJ': 'Samples1',
+            'Violons': 'Samples2',
         #     'GuitarChorus': 'Samples3',
         #     'Trumpets': 'Samples4',
-        # })
+        })
 
     def open_samples(self):
-        pass
-        # samples.set('GuitarCrunch', 'Mute', 0.0)
-        # samples.set('GuitarNatural', 'Mute', 0.0)
+        samples.set('KJ', 'Mute', 0.0)
+        samples.set('Violons', 'Mute', 0.0)
         # samples.set('GuitarChorus', 'Mute', 0.0)
         # samples.set('Trumpets', 'Mute', 0.0)
-        # samplesFX3Reverb.set('Trumpets', 'Gain', -10.0)
-        # samplesFX3Reverb.set('SamplesFX3Reverb', 'Mute', 0.0)
+        samplesFX3Reverb.set('Violons', 'Gain', -10.0)
+        samplesFX3Reverb.set('SamplesFX3Reverb', 'Mute', 0.0)
+        samplesFX5TapeDelay.set('Violons', 'Gain', -9.0)
+        samplesFX5TapeDelay.set('KJ', 'Gain', -9.0)
+        samplesFX5TapeDelay.set('SamplesFX5TapeDelay', 'Mute', 0.0)
+
 
 
     @pedalboard_button(1)
@@ -61,48 +65,76 @@ class QueenCloclo(Video, Light, RouteBase):
         self.pause_loopers()
         transport.stop()
 
-    @pedalboard_button(2)
-    @mk2_button(2, 'purple')
-    def intro(self):
+    @mk2_button(2, 'cyan')
+    def couplet(self):
         """
-        INTRO
+        COUPLET 1
         """
         self.pause_loopers()
         self.reset()
-
-
-        # Transport
-        transport.start()
 
         # Séquences
         seq192.select('solo', 'couplet_*')
 
-        # Looper
-        looper.trigger(0)
-
-    @pedalboard_button(3)
-    @mk2_button(3, 'purple')
-    def prerefrain(self):
-        """
-        PRÉ-REFRAIN
-        """
-        self.pause_loopers()
-        self.reset()
-
+        # Samples
+        self.open_samples()
 
         # Transport
         transport.start()
 
+        # Synths
+        synths.set('DubstepHorn', 'Amp', 'Gain', 0.6)
+        synths.set('EasyClassical', 'Amp', 'Gain', 0.6)
+        synths.set('EasyClassical', 'Pan', -0.4)
+        synths.set('ZStambul', 'Amp', 'Gain', 0.6)
+        synths.set('ZStambul', 'Pan', 0.4)
+        synths.set('SteelDrums', 'Amp', 'Gain', 0.35)
+        synths.set('SteelDrums', 'Pan', 0.3)
+
+        # Looper
+        looper.trigger(0)
+
+        # Vocals
+        vocalsKesch.set('normo_exclu', 'on')
+        vocalsNano.set('normo_exclu', 'on')
+        vocalsFeat.set('normo_exclu', 'on')
+
+    @pedalboard_button(3)
+    @mk2_button(3, 'cyan')
+    def alt_couplet(self):
+        """
+        COUPLET ALTERNATIF
+        """
+        self.pause_loopers()
+        self.reset()
+
         # Séquences
-        seq192.select('solo', 'prerefrain_*')
+        seq192.select('solo', 'alt_couplet_*')
 
-        self.start_scene('breakrefrain', lambda: [
-            self.wait(3*4, 'beat'),
-            seq192.select('on', 'break_prerefrain_*')
-        ])
+        # Transport
+        transport.start()
 
-    @pedalboard_button(4)
-    @mk2_button(4, 'purple')
+    @mk2_button(4, 'white')
+    def up_alt_couplet(self):
+        """
+        UP COUPLET ALTERNATIF
+        """
+        self.pause_loopers()
+        self.reset()
+
+        # Séquences
+        seq192.select('on', 'alt2_couplet_*')
+
+        # Synths
+        synths.set('SteelDrums', 'Pan', 0.3)
+        synths.set('ZJestoProunk', 'Pan', -0.3)
+
+        # Samples
+        self.open_samples()
+
+
+    @pedalboard_button(2)
+    @mk2_button(5, 'purple')
     def refrain(self):
         """
         REFRAIN
@@ -110,9 +142,180 @@ class QueenCloclo(Video, Light, RouteBase):
         self.pause_loopers()
         self.reset()
 
+        self.open_samples()
+
+        # Séquences
+        seq192.select('solo', 'refrain_*')
+
+        # Basse
+        bassFX.set('distohi', 'on')
+
 
         # Transport
         transport.start()
 
+        # Synths
+        synths.set('TenorSax', 'Calf%20Mono%20Compressor', 'Bypass', 0.0)
+        synths.set('TenorSax', 'Calf%20Multi%20Chorus', 'Active', 1.0)
+        synthsFX2Delay.set('ZDupieux', 'Gain', -6.0)
+        synthsFX2Delay.set('SynthsFX2Delay', 'Mute', 0.0)
+
+        # Vocals
+        vocalsKesch.set('normo_exclu', 'on')
+        vocalsNano.set('normo_exclu', 'on')
+        vocalsFeat.set('normo_exclu', 'on')
+
+         # Séquences
+        self.start_sequence('sequences/refrain', [
+            { # bar 1
+                1: lambda: [
+                    synthsFX2Delay.set('Charang', 'Gain', -70.0),
+                    synthsFX2Delay.set('TenorSax', 'Gain', -70.0)
+                    ]
+            },
+            {}, # bar 2
+            {}, # bar 3
+            { # bar 4
+                3: lambda: [
+                    synthsFX2Delay.set('Charang', 'Gain', -15.0),
+                    synthsFX2Delay.set('TenorSax', 'Gain', -15.0)
+                ]
+
+            }
+         ], loop=True)
+
+
+    @mk2_button(6, 'white')
+    def break_couplet(self):
+        """
+        BREAK COUPLET (il reste des haricots)
+        """
+        self.pause_loopers()
+        self.reset()
+
         # Séquences
-        seq192.select('solo', 'refrain_*')
+        seq192.select('solo', 'break_*')
+
+        # Samples
+        self.open_samples()
+
+
+    @mk2_button(7, 'cyan')
+    def alt2_couplet(self):
+        """
+        COUPLET ALTERNATIF 2 (we got beans)
+        """
+        self.pause_loopers()
+        self.reset()
+
+        # Séquences
+        # seq192.select('solo', 'alt*')
+        seq192.select('solo', 'up_theme_sf_tenorsax')
+
+        # Synths
+        synths.set('SteelDrums', 'Pan', 0.3)
+        synths.set('ZJestoProunk', 'Pan', -0.3)
+        synths.set('ZTrumpets', 'Amp', 'Gain', 0.5)
+
+
+        # Samples
+        self.open_samples()
+
+        # Transport
+        transport.start()
+
+    @mk2_button(8, 'cyan')
+    def alt2b_couplet(self):
+        """
+        COUPLET ALTERNATIF 2b -what do we need
+        """
+        self.pause_loopers()
+        self.reset()
+
+        # Séquences
+        seq192.select('solo', 'alt*')
+
+        # Synths
+        synths.set('SteelDrums', 'Pan', 0.3)
+        synths.set('ZJestoProunk', 'Pan', -0.3)
+        synths.set('ZTrumpets', 'Amp', 'Gain', 0.5)
+
+        # Keyboards
+        mk2Control.set_mode('cut_samples', 'cut_synths', 'cut_basssynths')
+
+        # Samples
+        self.open_samples()
+
+        # Transport
+        transport.start()
+
+
+    @pedalboard_button(8)
+    def theme(self):
+        """
+        THÈME
+        """
+        self.pause_loopers()
+        self.reset()
+
+        self.open_samples()
+
+        # Séquences
+        seq192.select('solo', 'theme_*')
+
+
+        # Transport
+        transport.start()
+
+        # Keyboards
+        jmjKeyboard.set_sound('TenorSax')
+        mk2Control.set_mode('cut_samples', 'cut_synths')
+
+        # Vocals
+        vocalsKesch.set('meuf_exclu', 'on')
+        vocalsNano.set('normo_exclu', 'on')
+        vocalsFeat.set('normo_exclu', 'on')
+
+
+    @pedalboard_button(9)
+    def bridge(self):
+        """
+        8bridge
+        """
+        self.pause_loopers()
+        self.reset()
+
+        self.open_samples()
+
+        # Séquences
+        seq192.select('solo', '8bridge_*')
+
+
+        # Transport
+        transport.start()
+
+        # Keyboards
+        jmjKeyboard.set_sound('ZTrumpets')
+        mk2Control.set_mode('cut_samples', 'cut_synths')
+
+
+    @pedalboard_button(10)
+    def up_theme(self):
+        """
+        UP THÈME
+        """
+        self.pause_loopers()
+        self.reset()
+
+        self.open_samples()
+
+        # Séquences
+        seq192.select('on', 'up_theme_*')
+
+
+        # Transport
+        transport.start()
+
+        # Keyboards
+        jmjKeyboard.set_sound('ZBombarde')
+        mk2Control.set_mode('cut_samples', 'cut_synths')
