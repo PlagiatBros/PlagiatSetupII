@@ -192,8 +192,6 @@ class AintInTheWay(Video, Light, RouteBase):
         vocalsNano.set('normo_exclu', 'on')
         vocalsFeat.set('normo_exclu', 'on')
 
-
-
         # Transport
         transport.set_tempo(180)
         transport.start()
