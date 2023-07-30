@@ -208,10 +208,7 @@ class NonMixer(Module):
 
             if args[0] in self.init_params:
                 self.init_params.remove(args[0])
-                if not self.init_params:
-                    self.logger.info(' is ready')
-                    self.engine.dispatch_event('nonmixer_ready', self.name)
-                    self.create_meta_parameters()
+                self.check_init_done()
 
 
             if plugin_name in ['Pan', 'Gain', 'Meter']:
@@ -225,14 +222,38 @@ class NonMixer(Module):
         """
         For specific instances we'll create meta parameters
         """
-        pass
+
+
+        for strip_name in self.submodules:
+            if 'Delay' in strip_name:
+                for plugin_name in self.submodules[strip_name].submodules:
+                    plug = self.submodules[strip_name].submodules[plugin_name]
+                    if plugin_name == 'GxMultiBandDelay':
+                        plug.add_parameter('bpm', None, types='f', default=120)
+                        plug.add_parameter('multiplier', None, types='f', default=1)
+                        plug.add_mapping(['bpm', 'multiplier'], ['DELAY1', 'DELAY2', 'DELAY3', 'DELAY4', 'DELAY5'],
+                            transform=lambda bpm, mult: [bpm * mult] * 5
+                        )
+                        plug.add_parameter('feedback', None, types='f', default=0.5)
+                        plug.add_mapping('feedback', ['FEEDBACK1', 'FEEDBACK2', 'FEEDBACK3', 'FEEDBACK4', 'FEEDBACK5'],
+                            transform=lambda feed: [feed * 100] * 5
+
+                        )
 
     def check_init_done(self):
 
-        if self.pending_params_labels == 0 and not self.init_done:
+        if not self.init_done and self.pending_params_labels == 0 and not self.init_params:
             self.init_done = True
+
             for args, kwargs in self.pending_set_calls:
                 self.set(*args, **kwargs)
+            self.create_meta_parameters()
+            for args, kwargs in self.pending_set_calls:
+                self.set(*args, **kwargs)
+
+            self.logger.info(' is ready')
+            self.engine.dispatch_event('nonmixer_ready', self.name)
+
 
     plugin_aliases = {
         'C%2A%20Scape%20-%20Stereo%20delay%20with%20chromatic%20resonances': 'Scape',

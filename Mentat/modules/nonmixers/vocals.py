@@ -8,6 +8,8 @@ class Vocals(NonMixer):
 
 
     def create_meta_parameters(self):
+        
+        super().create_meta_parameters()
 
         strip_prefix = self.name[6:] # remove "Vocals" prefix
 

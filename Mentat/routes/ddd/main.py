@@ -74,6 +74,12 @@ class DDD(Video, Light, RouteBase):
         # Samples
         self.open_samples()
 
+        # synths
+        synthsFX2Delay.set('EasyClassical', 'Gain', -14.0)
+        synthsFX2Delay.set('SynthsFX2Delay', 'Mute', 0.0)
+        synthsFX2Delay.set('SynthsFX2Delay', 'GxMultiBandDelay', 'multiplier', 4)
+        synthsFX2Delay.set('SynthsFX2Delay', 'GxMultiBandDelay', 'feedback', 0.2)
+
         # Vocals
         vocalsNano.set('normo_exclu', 'on')
         vocalsKesch.set('normo_exclu', 'on')

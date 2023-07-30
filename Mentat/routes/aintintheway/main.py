@@ -29,7 +29,7 @@ class AintInTheWay(Video, Light, RouteBase):
         microtonality.set_tuning(0, 0, 0, 0.35, 0, 0, 0, 0, 0, 0, 0.35, 0)
 
         # Autotuner Notes
-        notes.set_notes(1, 0, 1, 1, 1, 1, 0, 1, 0, 1, 1, 0)
+        notes.set_notes(1, 1, 1, 1, 1, 1, 0, 1, 0, 1, 1, 0)
 
         # Mk2
         mk2Control.set_mode('cut_samples', 'cut_synths')
@@ -196,6 +196,9 @@ class AintInTheWay(Video, Light, RouteBase):
         transport.set_tempo(180)
         transport.start()
 
+        # Keyboard
+        jmjKeyboard.set_sound('ZTrumpets')
+
     @pedalboard_button(7)
     @mk2_button(7, 'purple')
     def theme(self):
@@ -211,13 +214,26 @@ class AintInTheWay(Video, Light, RouteBase):
         # Samples
         self.open_samples()
 
-        # jmjKeyboard
-        jmjKeyboard.set_sound('LowZDancestep')
+        # Synths
+        synths.set('Trap', 'Amp', 'Gain', 0.25)
 
+        synthsFX2Delay.set('Trap', 'Gain', -10.0)
+        synthsFX2Delay.set('DubstepHorn', 'Gain', -6.0)
+        synthsFX2Delay.set('SynthsFX2Delay', 'Mute', 0.0)
+
+        synthsFX3Delay.set('Trap', 'Gain', -10.0)
+        synthsFX3Delay.set('SynthsFX3Delay', 'Mute', 0.0)
+
+
+        # Keyboard
+        jmjKeyboard.set_sound('ZTrumpets')
 
         # Transport
         transport.set_tempo(180)
         transport.start()
+
+        # synthsFX3Delay.set('SynthsFX3Delay', 'Invada%20Delay%20Munge%20(mono%20in)', 'Delay%201', 180*3/2)
+        # synthsFX3Delay.set('SynthsFX3Delay', 'Invada%20Delay%20Munge%20(mono%20in)', 'Delay%202', 180*3/2)
 
         # Vocals
         vocalsKesch.set('gars_exclu', 'on')

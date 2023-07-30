@@ -4,6 +4,8 @@ class Bass(NonMixer):
 
     def create_meta_parameters(self):
 
+        super().create_meta_parameters()
+
         def getter(leduc_mute, fbass_mute):
             if leduc_mute == 0.0 and fbass_mute == 1.0:
                 return 'leduc'

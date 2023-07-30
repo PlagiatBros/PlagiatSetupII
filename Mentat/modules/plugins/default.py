@@ -64,53 +64,54 @@ class Plugin():
 
             param = self.plugin.parameters[pname]
 
-            if param.feedback_only:
-                feedback['widgets'].append({
-                    'type': 'fader',
-                    'id': '%s/%s' % (self.id, param.name),
-                    'design': 'compact',
-                    'knobSize': 0,
-                    'html': '<div class="label">%s</div><div class="value">@{this}</div>' % urllib.parse.unquote(pname),
-                    'range': {'min': {'%.1f' % param.range[0]: param.range[0]}, 'max': {'%.1f' % param.range[1]: param.range[1]}},
-                    # 'dashed': [2,2],
-                    'address': '/%s/%s/%s' % (self.mixer_name, self.strip_name, self.name),
-                    'preArgs': pname,
-                    'default': param.args[0],
-                    'interaction': False
-                })
-            else:
-                control['widgets'].append({
-                    'type': 'panel',
-                    'layout': 'vertical',
-                    'css': 'class: strip',
-                    'html': '<div class="label center">%s</div>' % urllib.parse.unquote(pname),
-                    'width': 100,
-                    'widgets': [
-                        {
-                            'type': 'knob',
-                            'id': '%s/%s' % (self.id, param.name),
-                            'horizontal': True,
-                            'pips': True,
-                            'range': {'min': {'%.1f' % param.range[0]: param.range[0]}, 'max': {'%.1f' % param.range[1]: param.range[1]}},
-                            'default': param.args[0],
-                            'doubleTap': True,
-                            'linkId': param.address,
-                            'address': '/%s/%s/%s' % (self.mixer_name, self.strip_name, self.name),
-                            'preArgs': pname,
-                            'decimals': 5,
-                            'pips': True,
-                            'expand': True,
-                            'design': 'solid'
-                        },
-                        {
-                            'type': 'input',
-                            'width': 120,
-                            'decimals': 5,
-                            'linkId': param.address,
-                            'bypass': True
-                        }
-                    ]
-                })
+            if hasattr(param, 'range'):
+                if param.feedback_only:
+                    feedback['widgets'].append({
+                        'type': 'fader',
+                        'id': '%s/%s' % (self.id, param.name),
+                        'design': 'compact',
+                        'knobSize': 0,
+                        'html': '<div class="label">%s</div><div class="value">@{this}</div>' % urllib.parse.unquote(pname),
+                        'range': {'min': {'%.1f' % param.range[0]: param.range[0]}, 'max': {'%.1f' % param.range[1]: param.range[1]}},
+                        # 'dashed': [2,2],
+                        'address': '/%s/%s/%s' % (self.mixer_name, self.strip_name, self.name),
+                        'preArgs': pname,
+                        'default': param.args[0],
+                        'interaction': False
+                    })
+                else:
+                    control['widgets'].append({
+                        'type': 'panel',
+                        'layout': 'vertical',
+                        'css': 'class: strip',
+                        'html': '<div class="label center">%s</div>' % urllib.parse.unquote(pname),
+                        'width': 100,
+                        'widgets': [
+                            {
+                                'type': 'knob',
+                                'id': '%s/%s' % (self.id, param.name),
+                                'horizontal': True,
+                                'pips': True,
+                                'range': {'min': {'%.1f' % param.range[0]: param.range[0]}, 'max': {'%.1f' % param.range[1]: param.range[1]}},
+                                'default': param.args[0],
+                                'doubleTap': True,
+                                'linkId': param.address,
+                                'address': '/%s/%s/%s' % (self.mixer_name, self.strip_name, self.name),
+                                'preArgs': pname,
+                                'decimals': 5,
+                                'pips': True,
+                                'expand': True,
+                                'design': 'solid'
+                            },
+                            {
+                                'type': 'input',
+                                'width': 120,
+                                'decimals': 5,
+                                'linkId': param.address,
+                                'bypass': True
+                            }
+                        ]
+                    })
 
         if feedback['widgets']:
             panel['widgets'].append(feedback)

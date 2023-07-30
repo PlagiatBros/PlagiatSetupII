@@ -9,5 +9,6 @@ class Synths(NonMixer):
     #     self.add_parameter('scape_bpm', pre_add + 'BassScape/C%2A%20Scape%20-%20Stereo%20delay%20with%20chromatic%20resonances/bpm', 'f', default=120.0)
     #
     # def create_meta_parameters(self):
+    #     super().create_meta_parameters()
     #
     #     self.add_alias_parameter('scape_bpm', ('BassScape', 'C%2A%20Scape%20-%20Stereo%20delay%20with%20chromatic%20resonances/bpm'))

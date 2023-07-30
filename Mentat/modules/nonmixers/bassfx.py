@@ -5,6 +5,8 @@ class BassFX(NonMixer):
 
     def create_meta_parameters(self):
 
+        super().create_meta_parameters()
+
         for strip_name in self.submodules:
 
             if not strip_name.endswith('In'):

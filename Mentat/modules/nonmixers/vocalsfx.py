@@ -4,6 +4,8 @@ class VocalsFX(NonMixer):
 
     def create_meta_parameters(self):
 
+        super().create_meta_parameters()
+
         name = self.name
         prefix =  self.name[6:].partition('FX')[0] # Nano or Kesch
 

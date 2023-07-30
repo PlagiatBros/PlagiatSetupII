@@ -64,7 +64,7 @@
 	Mono_Pan_Module 0x48 create :parameter_values "0.000000" :is_default 0 :chain 0x2D :active 1
 	Meter_Module 0x30 create :is_default 1 :chain 0x2D :active 1
 	JACK_Module 0x31 create :parameter_values "2.000000:0.000000" :is_default 1 :chain 0x2D :active 1
-	Mixer_Strip 0x32 create :name "VocalsKesch" :width "narrow" :tab "fader" :color 582525628 :gain_mode 0 :mute_mode 0 :group 0x7 :auto_input "" :manual_connection 0
+	Mixer_Strip 0x32 create :name "VocalsKesch" :width "narrow" :tab "signal" :color 582525628 :gain_mode 0 :mute_mode 0 :group 0x7 :auto_input "" :manual_connection 0
 	Chain 0x33 create :strip 0x32 :tab "chain"
 	JACK_Module 0x34 create :parameter_values "0.000000:1.000000" :is_default 1 :chain 0x33 :active 1
 	Gain_Module 0x35 create :parameter_values "-2.000000:0.000000:0.000000" :is_default 1 :chain 0x33 :active 1
@@ -72,12 +72,13 @@
 	Mono_Pan_Module 0x49 create :parameter_values "0.000000" :is_default 0 :chain 0x33 :active 1
 	Meter_Module 0x36 create :is_default 1 :chain 0x33 :active 1
 	JACK_Module 0x37 create :parameter_values "2.000000:0.000000" :is_default 1 :chain 0x33 :active 1
-	Mixer_Strip 0x197 create :name "VocalsFeat" :width "narrow" :tab "fader" :color 1286719183 :gain_mode 0 :mute_mode 0 :group 0x7 :auto_input "" :manual_connection 0
+	Mixer_Strip 0x197 create :name "VocalsFeat" :width "narrow" :tab "signal" :color 1286719183 :gain_mode 0 :mute_mode 0 :group 0x7 :auto_input "" :manual_connection 0
 	Chain 0x198 create :strip 0x197 :tab "chain"
 	JACK_Module 0x199 create :parameter_values "0.000000:1.000000" :is_default 1 :chain 0x198 :active 1
 	Gain_Module 0x19A create :parameter_values "-2.000000:0.000000:0.000000" :is_default 1 :chain 0x198 :active 1
+	Mono_Pan_Module 0x1AB create :parameter_values "-0.160000" :is_default 0 :chain 0x198 :active 1 :number 0
 	Meter_Module 0x19B create :is_default 1 :chain 0x198 :active 1
-	JACK_Module 0x19C create :parameter_values "1.000000:0.000000" :is_default 1 :chain 0x198 :active 1
+	JACK_Module 0x19C create :parameter_values "2.000000:0.000000" :is_default 1 :chain 0x198 :active 1
 	Mixer_Strip 0x38 create :name "Ambiance" :width "narrow" :tab "signal" :color 961331825 :gain_mode 0 :mute_mode 0 :group 0x7 :auto_input "" :manual_connection 0
 	Chain 0x39 create :strip 0x38 :tab "chain"
 	JACK_Module 0x3A create :parameter_values "0.000000:1.000000" :is_default 1 :chain 0x39 :active 1

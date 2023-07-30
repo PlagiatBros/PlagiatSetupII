@@ -120,8 +120,8 @@ class BX(Video, Light, RouteBase):
 
         # Vocals
         vocalsNano.set('normo_exclu', 'on')
-        # vocalsKesch.set('meuf_exclu', 'on')
-        vocalsFeat.set('gars_exclu', 'on')
+#        vocalsKesch.set('meuf_exclu', 'on')
+        vocalsFeat.set('normo_exclu', 'on')
 
 
         # Keyboard
@@ -147,14 +147,14 @@ class BX(Video, Light, RouteBase):
         # ], loop=False)
         # Séquences
 
-        self.start_sequence('transitiondegenre', [
-        {}, # bar 1
-        {}, # bar 2
-        {}, # bar 3
-        {
-            4.5: lambda: vocalsKesch.set('normo_exclu', 'on')
-        } # bar 4
-        ])
+        # self.start_sequence('transitiondegenre', [
+        # {}, # bar 1
+        # {}, # bar 2
+        # {}, # bar 3
+        # {
+        #     4.5: lambda: vocalsKesch.set('normo_exclu', 'on')
+        # } # bar 4
+        # ])
 
 
 
@@ -206,7 +206,7 @@ class BX(Video, Light, RouteBase):
         ])
 
         # Vocals
-        vocalsKesch.set('normo_exclu', 'on')
+        # vocalsKesch.set('normo_exclu', 'on')
         # vocalsKesch.set('gars', 'on')
         vocalsNano.set('normo_exclu', 'on')
         vocalsFeat.set('gars_exclu', 'on')
@@ -250,7 +250,7 @@ class BX(Video, Light, RouteBase):
 
         # Vocals
         vocalsNano.set('normo_exclu', 'on')
-        vocalsKesch.set('normo_exclu', 'on')
+        # vocalsKesch.set('normo_exclu', 'on')
         vocalsFeat.set('normo_exclu', 'on')
 
         # self.start_scene('bestplace', lambda: [
@@ -557,7 +557,7 @@ class BX(Video, Light, RouteBase):
         # Vocals
         # vocalsKesch.set('meuf', 'on')
         vocalsFeat.set('normo_exclu', 'on')
-        jmjKeyboard.set_sound('ZOrgan')
+        jmjKeyboard.set_sound('ZDupieux')
 
 
         # Séquence
@@ -611,7 +611,7 @@ class BX(Video, Light, RouteBase):
         seq192.select('solo', 'dummy')
 
         # Keyboards
-        jmjKeyboard.set_sound('ZDupieux')
+        #jmjKeyboard.set_sound('ZDupieux')
 
     def queen_sortie(self):
         """
@@ -671,7 +671,7 @@ class BX(Video, Light, RouteBase):
         # Vocals
         vocalsNano.set('normo_exclu', 'on')
         vocalsKesch.set('normo_exclu', 'on')
-        vocalsFeat.set('gars_exclu', 'on')
+        vocalsFeat.set('normo_exclu', 'on')
 
         # Keyboard
         jmjKeyboard.set_sound('ZOrgan')
@@ -684,16 +684,30 @@ class BX(Video, Light, RouteBase):
         synths.set('ZStambul', 'Pan', 0.5)
         synths.set('EasyClassical', 'Pan', 0.3)
         synths.set('Trap', 'Amp', 'Gain', 0.35)
+        synths.set('DubstepHorn', 'Amp', 'Gain', 0.35)
+
+        vocalsKeschFX1Delay.set('VocalsKeschFX1Delay', 'GxMultiBandDelay', 'multiplier', 2),
+
 
         # Séquence
         self.start_sequence('couplet_2_2', [
             {}, # bar 1
             {   # bar 2
-                1.5: lambda: vocalsNanoFX2Delay.set('active', 'on'),
-                2.4: lambda: vocalsNanoFX2Delay.set('pre', 'off'),
+                1.5: lambda:
+                    [
+                    vocalsKeschFX1Delay.set('active', 'on'),
+                    vocalsKeschFX2Delay.set('active', 'on'),
+                    vocalsKesch.set('meuf', 'on'),
+                    ],
+                2.4: lambda:
+                    [
+                        vocalsKeschFX1Delay.set('pre', 'off'),
+                        vocalsKeschFX2Delay.set('pre', 'off'),
+                        vocalsKesch.set('meuf', 'off'),
+                    ]
             },
             {   # bar 3
-                1.5: lambda: vocalsNanoFX2Delay.set('active', 'on'),
+                1.5: lambda: vocalsKeschFX2Delay.set('active', 'on'),
                 2.4: lambda: vocalsKeschFX2Delay.set('pre', 'off'),
                 4: lambda: seq192.select('off', '*')
             },
@@ -704,15 +718,19 @@ class BX(Video, Light, RouteBase):
             {  # bar 5
                 1: lambda: [
                     seq192.select('solo', 'couplet2_2_*'),
+                    # seq192.select('solo', 'couplet2_3*'),
                     seq192.select('off', 'couplet2_2_*guitar*'),
                     # seq192.select('off', 'couplet_cLow_b*')
                 ]
             },
             {}, # bar 6
             {}, # bar 7
-            {}, # bar 8
             {
-                1: lambda: self.start_scene('couplet 2 2 vers trap', lambda: self.pretrap2())
+                1.5: lambda: vocalsNanoFX2Delay.set('active', 'on'),
+                4: lambda: [vocalsKesch.set('gars_exclu', 'on'), vocalsNanoFX2Delay.set('pre', 'off')]
+            }, # bar 8
+            {
+                # 1: lambda: self.start_scene('couplet 2 2 vers trap', lambda: self.pretrap2())
             }
 
         ], loop=False)
@@ -739,6 +757,15 @@ class BX(Video, Light, RouteBase):
         # Séquences
         seq192.select('solo', 'pretrap_cLow_trap1')
         seq192.select('on', 'pretrap_cHi_trap')
+
+
+        # Synths
+        synthsFX3Delay.set('Trap', 'Gain', -24)
+        synthsFX3Delay.set('SynthsFX3Delay', 'Mute', 0)
+
+        synthsFX5Scape.set('Trap', 'Gain', -3)
+        synthsFX5Scape.set('SynthsFX5Scape', 'Mute', 0)
+
 
         # Keyboards
         jmjKeyboard.set_sound('ZDupieux')

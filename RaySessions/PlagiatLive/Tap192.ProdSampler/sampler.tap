@@ -500,6 +500,15 @@
         <instrument name="Key_Reso_Cm_Lento" minnote="74" maxnote="74" rootnote="74" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples1" volume="0.500000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
           <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2021/AintInTheWay/Key_Reso_Cm_Lento.wav" sampleRelative="../../../../Samples/So2021/AintInTheWay/Key_Reso_Cm_Lento.wav"/>
         </instrument>
+        <instrument name="Ney_1" minnote="75" maxnote="75" rootnote="75" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples1" volume="0.500000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
+          <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2021/AintInTheWay/Ney_1.wav" sampleRelative="../../../../Samples/So2021/AintInTheWay/Ney_1.wav"/>
+        </instrument>
+        <instrument name="Ney_2" minnote="76" maxnote="76" rootnote="76" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples1" volume="0.500000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
+          <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2021/AintInTheWay/Ney_2.wav" sampleRelative="../../../../Samples/So2021/AintInTheWay/Ney_2.wav"/>
+        </instrument>
+        <instrument name="Ney_3" minnote="77" maxnote="77" rootnote="77" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples1" volume="0.500000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
+          <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2021/AintInTheWay/Ney_3.wav" sampleRelative="../../../../Samples/So2021/AintInTheWay/Ney_3.wav"/>
+        </instrument>
       </kit>
       <kit name="DDD" volume="1.000000">
         <instrument name="DenisePrigenre_A" minnote="61" maxnote="61" rootnote="61" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples1" volume="1.500000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
@@ -525,6 +534,12 @@
         </instrument>
         <instrument name="MariLouiz" minnote="68" maxnote="68" rootnote="68" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples1" volume="0.500000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
           <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2021/DDD/MariLouiz.wav" sampleRelative="../../../../Samples/So2021/DDD/MariLouiz.wav"/>
+        </instrument>
+        <instrument name="Eagle" minnote="69" maxnote="69" rootnote="69" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples1" volume="0.500000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
+          <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2021/DDD/Eagle.wav" sampleRelative="../../../../Samples/So2021/DDD/Eagle.wav"/>
+        </instrument>
+        <instrument name="Triangle" minnote="70" maxnote="70" rootnote="70" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples1" volume="0.500000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
+          <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2021/DDD/Triangle.wav" sampleRelative="../../../../Samples/So2021/DDD/Triangle.wav"/>
         </instrument>
       </kit>
       <kit name="QueenCloclo" volume="1.000000">

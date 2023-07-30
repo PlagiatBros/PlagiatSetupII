@@ -41,11 +41,14 @@ class Transport(Module):
                 ('VocalsKeschFX1Delay', 'VocalsKeschFX1Delay')
                 ]:
 
-            self.engine.modules[mixer].set(strip, 'GxMultiBandDelay', 'DELAY1', bpm)
-            self.engine.modules[mixer].set(strip, 'GxMultiBandDelay', 'DELAY2', bpm)
-            self.engine.modules[mixer].set(strip, 'GxMultiBandDelay', 'DELAY3', bpm)
-            self.engine.modules[mixer].set(strip, 'GxMultiBandDelay', 'DELAY4', bpm)
-            self.engine.modules[mixer].set(strip, 'GxMultiBandDelay', 'DELAY5', bpm)
+            # self.engine.modules[mixer].set(strip, 'GxMultiBandDelay', 'DELAY1', bpm)
+            # self.engine.modules[mixer].set(strip, 'GxMultiBandDelay', 'DELAY2', bpm)
+            # self.engine.modules[mixer].set(strip, 'GxMultiBandDelay', 'DELAY3', bpm)
+            # self.engine.modules[mixer].set(strip, 'GxMultiBandDelay', 'DELAY4', bpm)
+            # self.engine.modules[mixer].set(strip, 'GxMultiBandDelay', 'DELAY5', bpm)
+            self.engine.modules[mixer].set(strip, 'GxMultiBandDelay', 'bpm', bpm)
+            self.engine.modules[mixer].set(strip, 'GxMultiBandDelay', 'multiplier', 1)
+            self.engine.modules[mixer].set(strip, 'GxMultiBandDelay', 'feedback', 0.5)
 
         # Invada Delay + Munge (Mono In)
         for mixer, strip in [
