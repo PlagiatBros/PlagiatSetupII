@@ -245,10 +245,14 @@ class NonMixer(Module):
         if not self.init_done and self.pending_params_labels == 0 and not self.init_params:
             self.init_done = True
 
+            pending_meta_set_calls = []
             for args, kwargs in self.pending_set_calls:
-                self.set(*args, **kwargs)
+                if self.get_parameter(*args[:-1]) is not None:
+                    self.set(*args, **kwargs)
+                else:
+                    pending_meta_set_calls.append([args, kwargs])
             self.create_meta_parameters()
-            for args, kwargs in self.pending_set_calls:
+            for args, kwargs in pending_meta_set_calls:
                 self.set(*args, **kwargs)
 
             self.logger.info(' is ready')

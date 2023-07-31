@@ -32,6 +32,8 @@ class Mk2Control(Module):
         self.voices = ['gars_exclu', 'meuf_exclu', 'normo_exclu']
         self.current_voice = 0
 
+        self.last_cc = None
+
     def set_lights(self, lights):
         """
         Generates sysex messages for setting colors on pads
@@ -119,6 +121,7 @@ class Mk2Control(Module):
         if address == '/control_change':
 
             cc = args[1]
+
             if cc > 100 and cc < 117:
 
                 if args[2] == 127:
@@ -145,8 +148,6 @@ class Mk2Control(Module):
                 if args[2] == 0:
                     self.resend_lights()
 
-            if cc == 41:
-                self.engine.modules['VocalsNano'].set('NanoIn', 'Gate', 'Range%20(dB)', -90 if args[2] == 0 else 0)
 
             if cc == 19:
                 # vx roll
@@ -161,14 +162,23 @@ class Mk2Control(Module):
                 self.logger.info('BassFX wobble div %d' % (1+args[2]%8))
 
 
+            if cc in [41, 42]:
 
-            if cc == 42:
-                # tmp vx pitch reset
-                for at in ['NanoMeuf', 'NanoNormo', 'NanoGars']:
-                    if args[2] == 0:
-                        self.engine.modules[at].reset('offset')
-                    else:
-                        self.engine.modules[at].set('offset', 0)
+                if args[2] == 0 and self.last_cc == args:
+                    # bug when releasing both buttons at the same time (same cc with value 0 sent twice and missing 0 value for the other button)
+                    cc = 41 if cc == 42 else 42
+                self.last_cc = args
+
+                if cc == 41:
+                    self.engine.modules['VocalsNano'].set('NanoIn', 'Gate', 'Range%20(dB)', -90 if args[2] == 0 else 0)
+
+                if cc == 42:
+                    # tmp vx pitch reset
+                    for at in ['NanoMeuf', 'NanoNormo', 'NanoGars']:
+                        if args[2] == 0:
+                            self.engine.modules[at].reset('offset')
+                        else:
+                            self.engine.modules[at].set('offset', 0)
 
         elif address == '/sysex':
 

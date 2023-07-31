@@ -606,6 +606,9 @@ class BX(Video, Light, RouteBase):
         vocalsKesch.set('gars_exclu', 'on')
         vocalsFeat.set('normo_exclu', 'on')
 
+        # Bass
+        bassFX.set('zynwah', 'on')
+
 
         # Séquences
         seq192.select('solo', 'dummy')
