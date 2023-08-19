@@ -53,6 +53,9 @@ Mk2Keyboard : ConstantSampler |> Tap192.ConstantSampler : midi_in
 Mk2Keyboard : ConstantSampler |> Hammerfall DSP : HDSP MIDI 1
 Mk2Keyboard : ProdSampler   |> Tap192.ProdSampler : midi_in
 
+MPKmini2 : MPKmini2 MIDI 1 |> Mentat : MpkControl
+Mentat : MpkControl |> MPKmini2 : MPKmini2 MIDI 1
+
 loop192.MidiLooper : Loop 0 |> ZynAddSubFX.ZLowSynths : ZynAddSubFX
 loop192.MidiLooper : Loop 1 |> cLowBridge : playback
 loop192.MidiLooper : Loop 2 |> ZynAddSubFX.ZHiSynths : ZynAddSubFX

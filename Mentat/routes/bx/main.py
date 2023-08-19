@@ -179,7 +179,7 @@ class BX(Video, Light, RouteBase):
         prodSampler.send('/instrument/play', 's:Bx_Car')
 
         # Séquences
-        self.start_scene('sequence/keeping', lambda: [
+        self.start_scene('keeping', lambda: [
         #     seq192.select('on', 'couplet_*'),
         #     self.wait(1, 'b'),
         #     seq192.select('off', 'couplet_*'),
@@ -492,6 +492,7 @@ class BX(Video, Light, RouteBase):
 
         # Sequences
         seq192.select('solo', 'pont_afro_trap_*')
+        # seq192.select('couplet2_2*', 'on')
 
         # Transport
         transport.start()
@@ -523,16 +524,16 @@ class BX(Video, Light, RouteBase):
     def couplet_2_1(self):
         """
         COUPLET 2 PART 1 (ain't no suv...)
-        + Transition auto vers Queen
         """
         self.pause_loopers()
         self.reset()
 
         # Sequences
-        seq192.select('solo', 'couplet_*')
-        seq192.select('off', 'couplet_*guitar*')
+        seq192.select('solo', 'couplet2_2*')
         # seq192.select('off', 'couplet_*cHi_easyClassical')
 
+        # Looper
+        looper.record_on_start(0)
 
         # Transport
         transport.start()
@@ -542,47 +543,78 @@ class BX(Video, Light, RouteBase):
 
         # Vocals
         vocalsNano.set('normo_exclu', 'on')
-        # vocalsKesch.set('meuf_exclu', 'on')
-        vocalsFeat.set('gars_exclu', 'on')
+        vocalsKesch.set('normo_exclu', 'on')
+        vocalsFeat.set('normo_exclu', 'on')
 
         # Synths
         synths.set('Trap', 'Pan', -0.7)
         synths.set('ZStambul', 'Pan', 0.5)
         synths.set('EasyClassical', 'Pan', 0.3)
 
-
         synths.set('Trap', 'Amp', 'Gain', 0.35)
 
-
-        # Vocals
-        # vocalsKesch.set('meuf', 'on')
-        vocalsFeat.set('normo_exclu', 'on')
+        # Keyboards
         jmjKeyboard.set_sound('ZDupieux')
+
+        # BassFX
+        bassFX.set('zynwah', 'on')
 
 
         # Séquence
+        # self.start_sequence('couplet_2_1', [
+        #     {}, # bar 1
+        #     {}, # bar 2
+        #     {}, # bar 3
+        #     {   # bar 4
+        #         2: lambda: seq192.select('off', '*'), # stop drums
+        #         3.4: lambda: [
+        #             vocalsKesch.set('meuf_exclu', 'on'),
+        #             vocalsNano.set('meuf_exclu', 'on'),
+        #         ],
+        #         4.5: lambda: constantSampler.send('/instrument/play', 's:FunkyHit1', 100),
+        #     },
+        #     {   # bar 5: Alternate trap (be honest yo bum)
+        #         1: lambda: seq192.select('solo', 'trap_*')
+        #     },
+        #     {}, # bar 6
+        #     {}, # bar 7
+        #     {   # bar 8
+        #         1.5: lambda: prodSampler.send('/instrument/play', 's:Bx_YouWontRaise')
+        #     },
+        #     {
+        #         1: lambda: self.start_scene('vers queen', lambda: self.queen())
+        #     }
+        # ], loop=False)
+
+    @pedalboard_button(8)
+    def alarrache(self):
+        # Séquence
+        seq192.select('solo', 'couplet2_3*')
+
+        # Transport
+        self.pause_loopers()
+        transport.start()
+
+        # Keyboards
+        jmjKeyboard.set_sound('LowCTrap1')
+
+        # Séquence
         self.start_sequence('couplet_2_1', [
-            {}, # bar 1
-            {}, # bar 2
-            {}, # bar 3
-            {   # bar 4
-                2: lambda: seq192.select('off', '*'), # stop drums
-                3.4: lambda: [
-                    vocalsKesch.set('meuf_exclu', 'on'),
-                    vocalsNano.set('meuf_exclu', 'on'),
-                ],
-                4.5: lambda: constantSampler.send('/instrument/play', 's:FunkyHit1', 100),
-            },
             {   # bar 5: Alternate trap (be honest yo bum)
-                1: lambda: seq192.select('solo', 'trap_*')
             },
             {}, # bar 6
             {}, # bar 7
             {   # bar 8
-                1.5: lambda: prodSampler.send('/instrument/play', 's:Bx_YouWontRaise')
+                1.5: lambda: [
+                    prodSampler.send('/instrument/play', 's:Bx_YouWontRaise'),
+                    seq192.select('solo', 'dummy')
+                    ]
             },
             {
-                1: lambda: self.start_scene('vers queen', lambda: self.queen())
+                1: lambda: [
+                    seq192.select('solo', 'couplet2_2*'),
+                    looper.trigger(0)
+                    ]
             }
         ], loop=False)
 

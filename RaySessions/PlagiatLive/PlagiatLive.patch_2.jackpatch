@@ -76,7 +76,7 @@ Non-Mixer-XT.Drums (Main):OH-R/out-1     |> Non-Mixer-XT.Outputs (Outputs):OH-R/
 Non-Mixer-XT.Inputs (Inputs):Ambiance/out-1 |> Non-Mixer-XT.MonitorsKesch (MonitorsKesch):Ambiance/in-1
 Non-Mixer-XT.Inputs (Inputs):Ambiance/out-1 |> Non-Mixer-XT.MonitorsNano (MonitorsNano):Ambiance/in-1
 Non-Mixer-XT.Inputs (Inputs):Bass/out-1  |> sooperlooper:loop0_in_1
-Non-Mixer-XT.Inputs (Inputs):Feat/out-1  |> Non-Mixer-XT.VocalsFeat (In):FeatIn/in-1
+Non-Mixer-XT.Inputs (Inputs):Feat/out-1  |> sooperlooper:loop8_in_1
 Non-Mixer-XT.Inputs (Inputs):Kick/out-1  |> Non-Mixer-XT.Drums (Main):Kick/in-1
 Non-Mixer-XT.Inputs (Inputs):OH-L/out-1  |> Non-Mixer-XT.Drums (Main):OH-L/in-1
 Non-Mixer-XT.Inputs (Inputs):OH-R/out-1  |> Non-Mixer-XT.Drums (Main):OH-R/in-1
@@ -869,10 +869,7 @@ Non-Mixer-XT.VocalsFeat (In):FeatIn/out-1 |> Autotune.FeatMeuf:in
 Non-Mixer-XT.VocalsFeat (In):FeatIn/out-1 |> Autotune.FeatNormo:in
 Non-Mixer-XT.VocalsFeat (Meuf):FeatMeuf/out-1 |> Non-Mixer-XT.VocalsFeat (Out):FeatOut/in-1
 Non-Mixer-XT.VocalsFeat (Normo):FeatNormo/out-1 |> Non-Mixer-XT.VocalsFeat (Out):FeatOut/in-1
-Non-Mixer-XT.VocalsFeat (Out):FeatOut/out-1 |> Non-Mixer-XT.MonitorsFeat (MonitorsFeat):VocalsFeat/in-1
-Non-Mixer-XT.VocalsFeat (Out):FeatOut/out-1 |> Non-Mixer-XT.MonitorsKesch (MonitorsKesch):VocalsFeat/in-1
-Non-Mixer-XT.VocalsFeat (Out):FeatOut/out-1 |> Non-Mixer-XT.MonitorsNano (MonitorsNano):VocalsFeat/in-1
-Non-Mixer-XT.VocalsFeat (Out):FeatOut/out-1 |> Non-Mixer-XT.Outputs (Outputs):VocalsFeat/in-1
+Non-Mixer-XT.VocalsFeat (Out):FeatOut/out-1 |> sooperlooper:loop9_in_1
 Non-Mixer-XT.VocalsKesch (ArtificialBackings):KeschABGars/out-1 |> Non-Mixer-XT.VocalsKesch (Out):KeschOut/in-1
 Non-Mixer-XT.VocalsKesch (ArtificialBackings):KeschABGars/out-1 |> Non-Mixer-XT.VocalsKeschFX1Delay (In):KeschAB/in-1
 Non-Mixer-XT.VocalsKesch (ArtificialBackings):KeschABGars/out-1 |> Non-Mixer-XT.VocalsKeschFX2Delay (In):KeschAB/in-1
@@ -1258,6 +1255,11 @@ sooperlooper:loop7_out_1                 |> Non-Mixer-XT.MonitorsFeat (MonitorsF
 sooperlooper:loop7_out_1                 |> Non-Mixer-XT.MonitorsKesch (MonitorsKesch):VocalsKesch/in-1
 sooperlooper:loop7_out_1                 |> Non-Mixer-XT.MonitorsNano (MonitorsNano):VocalsKesch/in-1
 sooperlooper:loop7_out_1                 |> Non-Mixer-XT.Outputs (Outputs):VocalsKesch/in-1
+sooperlooper:loop8_out_1                 |> Non-Mixer-XT.VocalsFeat (In):FeatIn/in-1
+sooperlooper:loop9_out_1                 |> Non-Mixer-XT.MonitorsFeat (MonitorsFeat):VocalsFeat/in-1
+sooperlooper:loop9_out_1                 |> Non-Mixer-XT.MonitorsKesch (MonitorsKesch):VocalsFeat/in-1
+sooperlooper:loop9_out_1                 |> Non-Mixer-XT.MonitorsNano (MonitorsNano):VocalsFeat/in-1
+sooperlooper:loop9_out_1                 |> Non-Mixer-XT.Outputs (Outputs):VocalsFeat/in-1
 system:capture_1                         |> Non-Mixer-XT.Inputs (Inputs):Bass/in-1
 system:capture_1                         |> gxtuner:in_0
 system:capture_10                        |> Non-Mixer-XT.Inputs (Inputs):Feat/in-1

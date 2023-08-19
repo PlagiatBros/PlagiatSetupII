@@ -50,9 +50,9 @@ class SooperLooper(Module):
             url = 'osc.udp://127.0.0.1:%i' % self.engine.port
             for feed in ['state', 'loop_len', 'loop_pos']:
                 if name == self.name:
-                    self.send('/sl/[0-7]/unregister_auto_update',feed, url, '/sl_feedback')
-                    self.send('/sl/[0-7]/register_auto_update',feed, 50, url, '/sl_feedback')
-                self.send('/sl/[0-7]/get',feed, url, '/sl_feedback')
+                    self.send('/sl/[0-9]/unregister_auto_update',feed, url, '/sl_feedback')
+                    self.send('/sl/[0-9]/register_auto_update',feed, 50, url, '/sl_feedback')
+                self.send('/sl/[0-9]/get',feed, url, '/sl_feedback')
 
     sl_states = {
         1: ['waiting', 'paused'],

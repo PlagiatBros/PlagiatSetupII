@@ -21,6 +21,10 @@ class Autotune(Module):
         self.add_parameter('offset',    '/x42/parameter', 'if', static_args=[6], default=offset)
         self.add_parameter('fastmode',  '/x42/parameter', 'if', static_args=[8], default=1.0)
 
+        # todo: changer le base pitch globalement à la volée: doit renvoyer les notes à fat1
+        # self.add_parameter('base_pitch', None, 'f', default=0)
+        # self.add_parameter('notes', None, 'f', default=[1] * 12)
+
         self.base_offset = offset
         self.pitch_value = 1.0
 

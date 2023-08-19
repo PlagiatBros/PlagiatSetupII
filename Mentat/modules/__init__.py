@@ -19,6 +19,7 @@ from .nonmixers import *
 from .zynaddsubfx import ZynAddSubFx, ZynPart
 from .tap192 import Tap192
 from .mk2minilab import Mk2Control, Mk2Keyboard
+from .mpkmini import MpkControl
 from .jmjkeyboard import JmjKeyboard, JmjKeyboardMidi
 from .joystick import Joystick
 from .notes import Notes
@@ -42,6 +43,7 @@ jmjKeyboard = JmjKeyboard('JmjKeyboard', 'osc', 3002)
 mk2Keyboard = Mk2Keyboard('Mk2Keyboard', 'osc', 3003)
 mk2Control = Mk2Control('Mk2Control', 'midi')
 joystick = Joystick('Joystick', 'osc', 3004)
+mpkControl = MpkControl('MpkControl', 'midi')
 
 
 """

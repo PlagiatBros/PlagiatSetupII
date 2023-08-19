@@ -31,9 +31,10 @@ class RaySession(Module):
 
         self.client_init = []
 
-        self.alsa_patcher = AlsaPatcher('AlsaPatcher')
+        self.alsa_patcher = AlsaPatcher('AlsaPatcher', parent=self)
         self.alsa_patcher.load('%s/PlagiatLive.alsapatch' % session_dir)
         self.alsa_patcher.connect()
+        self.add_submodule(self.alsa_patcher)
 
         # bind usb connections to alsa patch
         context = pyudev.Context()

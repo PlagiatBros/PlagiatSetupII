@@ -3181,6 +3181,52 @@
                           }
                         ],
                         "tabs": []
+                      },
+                      {
+                        "type": "clone",
+                        "widgetId": "sooperlooper_strip_0",
+                        "width": 520,
+                        "height": 90,
+                        "left": 477,
+                        "top": 280,
+                        "lock": false,
+                        "id": "sooperlooper_strip_5",
+                        "visible": true,
+                        "interaction": true,
+                        "comments": "",
+                        "expand": true,
+                        "css": "",
+                        "props": {
+                          "variables": {
+                            "n": 9,
+                            "label": "VX Feat"
+                          }
+                        },
+                        "address": "auto",
+                        "variables": "@{parent.variables}"
+                      },
+                      {
+                        "type": "clone",
+                        "widgetId": "sooperlooper_strip_0",
+                        "width": 520,
+                        "height": 90,
+                        "left": 380,
+                        "top": 284,
+                        "lock": false,
+                        "id": "sooperlooper_strip_4",
+                        "visible": true,
+                        "interaction": true,
+                        "comments": "",
+                        "expand": true,
+                        "css": "",
+                        "props": {
+                          "variables": {
+                            "n": 8,
+                            "label": "VX Feat PRE FX"
+                          }
+                        },
+                        "address": "auto",
+                        "variables": "@{parent.variables}"
                       }
                     ],
                     "tabs": []
@@ -3801,6 +3847,41 @@
                         "ignoreDefaults": false,
                         "bypass": false,
                         "onCreate": "",
+                        "onValue": ""
+                      },
+                      {
+                        "type": "text",
+                        "top": 240,
+                        "left": 100,
+                        "lock": false,
+                        "id": "text_341",
+                        "visible": true,
+                        "comments": "",
+                        "width": "auto",
+                        "height": "auto",
+                        "expand": true,
+                        "colorText": "auto",
+                        "colorWidget": "auto",
+                        "colorStroke": "auto",
+                        "colorFill": "auto",
+                        "alphaStroke": "auto",
+                        "alphaFillOff": "auto",
+                        "alphaFillOn": "auto",
+                        "lineWidth": "auto",
+                        "padding": "auto",
+                        "html": "",
+                        "css": "font-size:200%",
+                        "vertical": false,
+                        "wrap": false,
+                        "align": "center",
+                        "value": "",
+                        "default": "",
+                        "linkId": "",
+                        "address": "auto",
+                        "preArgs": "",
+                        "decimals": 2,
+                        "target": "",
+                        "onCreate": "setInterval(()=>{\n  var d = new Date()\n  set(this,d.getUTCHours()+2 + ':' + d.getUTCMinutes())\n},1000)",
                         "onValue": ""
                       }
                     ],

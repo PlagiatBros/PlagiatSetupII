@@ -159,6 +159,7 @@ class AlsaPatcher(Module):
 
         self.get_alsa_connections()
 
+        connection_change = False
         for connection in self.connections:
 
             src_client_name, src_port_name, dest_client_name, dest_port_name = connection
@@ -177,9 +178,12 @@ class AlsaPatcher(Module):
 
                         try:
                             self.seq.connect_ports((src_client.id, src_port.id), (dest_client.id, dest_port.id))
+                            connection_change = True
                         except Exception as e:
                             self.logger.error('error while making connection %s:\n%s' % (list(connection), e))
 
+        if connection_change:
+            self.dispatch_event('alsa_connections_changed')
 
     def print_connections(self):
         """

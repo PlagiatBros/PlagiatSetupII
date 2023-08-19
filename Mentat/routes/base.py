@@ -128,6 +128,7 @@ class RouteBase(Route):
         - `name`: name of sequence
         """
         self.stop_scene('sequences/%s' % name)
+        self.stop_scene('sequence/%s' % name)
 
     def resetFX(self):
         """
@@ -177,6 +178,9 @@ class RouteBase(Route):
                 mod.set('pre', 'off')
                 v = 'Nano' if 'Nano' in name else 'Kesch'
                 mod.set('%sAB' % v, 'Mute', 1)
+
+            elif name in ['NanoMeuf', 'NanoNormo', 'NanoGars', 'KeschMeuf', 'KeschNormo', 'KeschGars',  'FeatMeuf', 'FeatNormo', 'FeatGars']:
+                mod.set('correction', 1)
 
 
         samplesFX2Delay.set('SamplesFX2Delay', 'ReverseDelay', 'Wet', -70)
