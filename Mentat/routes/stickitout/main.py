@@ -162,8 +162,8 @@ class StickItOut(Video, Light, RouteBase):
         # Vocals
         vocalsNano.set('gars_exclu', 'on')
         vocalsKesch.set('normo_exclu', 'on')
-        for name in ['KeschNormo', 'FeatMeuf', 'FeatNormo']:
-            mod.set('correction', 0)
+        for name in ['KeschNormo', 'FeatNormo']:
+            self.engine.set(name, 'correction', 0)
 
         # Synths
         synths.set('TrapFifth', 'Pan', -0.5)

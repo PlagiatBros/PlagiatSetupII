@@ -541,6 +541,12 @@
         <instrument name="Triangle" minnote="70" maxnote="70" rootnote="70" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples1" volume="0.500000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
           <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2021/DDD/Triangle.wav" sampleRelative="../../../../Samples/So2021/DDD/Triangle.wav"/>
         </instrument>
+        <instrument name="Gnagna" minnote="71" maxnote="71" rootnote="71" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples1" volume="0.500000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
+          <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2021/DDD/Gnagna.wav" sampleRelative="../../../../Samples/So2021/DDD/Gnagna.wav"/>
+        </instrument>
+        <instrument name="Horns_E" minnote="72" maxnote="72" rootnote="72" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples1" volume="0.500000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
+          <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2021/DDD/Horns_E.wav" sampleRelative="../../../../Samples/So2021/DDD/Horns_E.wav"/>
+        </instrument>
       </kit>
       <kit name="QueenCloclo" volume="1.000000">
         <instrument name="KJ_A" minnote="61" maxnote="61" rootnote="61" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples1" volume="0.500000" pan="-1.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
