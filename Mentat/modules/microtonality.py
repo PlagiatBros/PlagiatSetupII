@@ -75,5 +75,5 @@ class MicroTonality(Module):
 
         mts.append(0xF7) # sysex end
 
-        for fluid in ['Rhodes', 'Charang', 'TenorSax', 'OrchestraHit']:
+        for fluid in ['Rhodes', 'Charang', 'TenorSax', 'OrchestraHit', 'MajorVocals']:
             modules[fluid].send('/sysex', *mts)

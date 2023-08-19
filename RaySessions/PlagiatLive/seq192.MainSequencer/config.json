@@ -94,6 +94,13 @@
         "10": {
             "name": "constantSampler",
             "color": "#c71775"
-        }
+        },
+        "11": {
+            "name": "MajorVocals",
+            "color": "#c77217",
+            "channels": {
+                    "0": {"name": "MajorVocals"}
+            }
+        },
     }
 }

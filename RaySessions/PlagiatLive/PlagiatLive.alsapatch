@@ -20,6 +20,7 @@ JmjKeyboard : Fluid_TenorSax           |> Fluid_TenorSax : Fluid_TenorSax
 JmjKeyboard : Fluid_Charang           |> Fluid_Charang : Fluid_Charang
 JmjKeyboard : Fluid_OrchestraHit       |> Fluid_OrchestraHit : Fluid_OrchestraHit
 JmjKeyboard : Fluid_SteelDrum          |> Fluid_SteelDrum : Fluid_SteelDrum
+JmjKeyboard : Fluid_MajorVocals          |> Fluid_MajorVocals : Fluid_MajorVocals
 
 JmjKeyboard : ConstantSampler |> Tap192.ConstantSampler : midi_in
 #JmjKeyboard : ConstantSampler |> SPD-SX : SPD-SX Control
@@ -47,6 +48,7 @@ Mk2Keyboard : Fluid_TenorSax           |> Fluid_TenorSax : Fluid_TenorSax
 Mk2Keyboard : Fluid_Charang           |> Fluid_Charang : Fluid_Charang
 Mk2Keyboard : Fluid_OrchestraHit       |> Fluid_OrchestraHit : Fluid_OrchestraHit
 Mk2Keyboard : Fluid_SteelDrum          |> Fluid_SteelDrum : Fluid_SteelDrum
+Mk2Keyboard : Fluid_MajorVocals          |> Fluid_MajorVocals : Fluid_MajorVocals
 
 Mk2Keyboard : ConstantSampler |> Tap192.ConstantSampler : midi_in
 #Mk2Keyboard : ConstantSampler |> SPD-SX : SPD-SX Control
@@ -75,6 +77,7 @@ seq192.MainSequencer : TenorSax        |> Fluid_TenorSax : Fluid_TenorSax
 seq192.MainSequencer : Charang        |> Fluid_Charang : Fluid_Charang
 seq192.MainSequencer : OrchestraHit    |> Fluid_OrchestraHit : Fluid_OrchestraHit
 seq192.MainSequencer : SteelDrum       |> Fluid_SteelDrum : Fluid_SteelDrum
+seq192.MainSequencer : MajorVocals       |> Fluid_MajorVocals : Fluid_MajorVocals
 
 MonoSynthMicroTonal : Out   |> cHiBridge : playback
 
@@ -88,8 +91,10 @@ Mentat : MidiPanic |> Fluid_TenorSax : Fluid_TenorSax
 Mentat : MidiPanic |> Fluid_Charang : Fluid_Charang
 Mentat : MidiPanic |> Fluid_OrchestraHit : Fluid_OrchestraHit
 Mentat : MidiPanic |> Fluid_SteelDrum : Fluid_SteelDrum
+Mentat : MidiPanic |> Fluid_MajorVocals : Fluid_MajorVocals
 
 Mentat : Charang |> Fluid_Charang : Fluid_Charang
 Mentat : TenorSax |> Fluid_TenorSax : Fluid_TenorSax
 Mentat : SteelDrum |> Fluid_SteelDrum : Fluid_SteelDrum
 Mentat : OrchestraHit |> Fluid_OrchestraHit : Fluid_OrchestraHit
+Mentat : MajorVocals |> Fluid_MajorVocals : Fluid_MajorVocals
