@@ -630,9 +630,9 @@
           <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2021/DDD/AMoi_2.wav" sampleRelative="../../../../Samples/So2021/DDD/AMoi_2.wav"/>
         </instrument>
         <instrument name="Trombone" minnote="72" maxnote="72" rootnote="72" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples1" volume="0.500000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
-          <variation minveloc="0" maxveloc="51" sample="/home/plagiat/PlagiatSetup/Samples/So2021/DDD/Trombione_E-1.wav" sampleRelative="../../../../Samples/So2021/DDD/Trombone_E-1.wav"/>
-          <variation minveloc="52" maxveloc="100" sample="/home/plagiat/PlagiatSetup/Samples/So2021/DDD/Trombione_E-2.wav" sampleRelative="../../../../Samples/So2021/DDD/Trombone_E-2.wav"/>
-          <variation minveloc="101" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2021/DDD/Trombione_E-3.wav" sampleRelative="../../../../Samples/So2021/DDD/Trombone_E-3.wav"/>
+          <variation minveloc="0" maxveloc="51" sample="/home/plagiat/PlagiatSetup/Samples/So2021/DDD/Trombone_E-1.wav" sampleRelative="../../../../Samples/So2021/DDD/Trombone_E-1.wav"/>
+          <variation minveloc="52" maxveloc="100" sample="/home/plagiat/PlagiatSetup/Samples/So2021/DDD/Trombone_E-2.wav" sampleRelative="../../../../Samples/So2021/DDD/Trombone_E-2.wav"/>
+          <variation minveloc="101" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2021/DDD/Trombone_E-3.wav" sampleRelative="../../../../Samples/So2021/DDD/Trombone_E-3.wav"/>
         </instrument>
         <instrument name="TromboneSlide_G" minnote="72" maxnote="72" rootnote="72" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples1" volume="0.500000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
           <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2021/DDD/TromboneSlide_G.wav" sampleRelative="../../../../Samples/So2021/DDD/TromboneSlide_G.wav"/>
