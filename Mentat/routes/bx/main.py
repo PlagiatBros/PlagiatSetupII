@@ -40,6 +40,9 @@ class BX(Video, Light, RouteBase):
             'GuitarNatural': 'Samples2',
             'GuitarChorus': 'Samples3',
             'Trumpets': 'Samples4',
+            'ZurnaTheme': 'Samples5',
+            'ZurnaLongue': 'Samples3',
+            'Sitar': 'Samples4'
         })
 
     def open_samples(self):
@@ -49,6 +52,11 @@ class BX(Video, Light, RouteBase):
         samples.set('Trumpets', 'Mute', 0.0)
         samplesFX3Reverb.set('Trumpets', 'Gain', -10.0)
         samplesFX3Reverb.set('SamplesFX3Reverb', 'Mute', 0.0)
+
+    def open_samples_lickme(self):
+        samples.set('Sitar', 'Mute', 0.0)
+        samples.set('ZurnaLongue', 'Mute', 0.0)
+        samples.set('ZurnaTheme', 'Mute', 0.0)
 
 
     @pedalboard_button(1)
@@ -587,6 +595,99 @@ class BX(Video, Light, RouteBase):
         # ], loop=False)
 
     @pedalboard_button(8)
+    def theme_lick_me(self):
+        # Séquence
+        seq192.select('solo', 'themelickme*')
+
+        # Transport
+        self.pause_loopers()
+        transport.start()
+
+        # Audiolooper
+        looper.trigger(0)
+
+        # Samples
+        self.open_samples_lickme()
+        samplesFX2Delay.set('Samples5', 'Gain', -17.8)
+        samplesFX2Delay.set('SamplesFX2Delay', 'Mute', 0.0)
+
+        # Synths
+        synthsFX3Delay.set('MajorVocals', 'Gain', -17.8)
+        synthsFX3Delay.set('SynthsFX3Delay', 'Mute', 0.0)
+
+
+
+        # Séquences
+        self.start_sequence('sequence/theme_lickme_samplepitch', [
+            {}, # bar 1
+            {}, # bar 2
+            {}, # bar 3
+            { # bar 4
+                1.2: lambda: postprocess.animate_pitch('Samples', 1, 0.1, 0.918, 's'),
+                2.2: lambda: postprocess.animate_pitch('Samples', None, 1, 0.2, 's'),
+            },
+            {}, # bar 5
+            {}, # bar 6
+            {  # bar 7
+                2.4: lambda: postprocess.animate_pitch('Samples', 1, 0.25, 0.918, 's'),
+                2.8: lambda: postprocess.animate_pitch('Samples', None, 1, 0.1, 's'),
+            },
+            { # bar 8
+                1.2: lambda: postprocess.animate_pitch('Samples', 1, 0.1, 0.918, 's'),
+                3: lambda: postprocess.animate_pitch('Samples', None, 1, 0.2, 's'),
+                3.62: lambda: postprocess.animate_pitch('Samples', 1, 0.1, 0.918, 's'),
+                3.73: lambda: postprocess.animate_pitch('Samples', None, 1, 0.2, 's'),
+                4.12: lambda: postprocess.animate_pitch('Samples', 1, 0.1, 0.918, 's'),
+                4.15: lambda: postprocess.animate_pitch('Samples', None, 1, 0.2, 's'),
+                4.4: lambda: postprocess.animate_pitch('Samples', 1, 0.1, 0.918, 's'),
+                4.5: lambda: postprocess.animate_pitch('Samples', None, 1, 0.2, 's'),
+                4.78: lambda: postprocess.animate_pitch('Samples', 1, 0.1, 0.918, 's'),
+                4.85: lambda: postprocess.animate_pitch('Samples', None, 1, 0.2, 's'),
+            }
+        ], loop=True)
+
+        self.start_sequence('sequence/theme_lickme_majorvocals', [
+            {
+                1.4: lambda: postprocess.animate_pitch('Synths', 1, 0.1, 0.515, 's'),
+                3.25: lambda: postprocess.animate_pitch('Synths', None, 1, 0.1, 's'),
+            }, # bar 1
+            { # bar 2
+                1.18: lambda: postprocess.animate_pitch('Synths', 1, 0.1, 0.515, 's'),
+                2.3: lambda: postprocess.animate_pitch('Synths', None, 1, 0.1, 's'),
+            },
+            { # bar 3
+                1.875: lambda: postprocess.animate_pitch('Synths', 1, 0.1, 0.515, 's'),
+                2: lambda: postprocess.animate_pitch('Synths', None, 1, 0.1, 's'),
+                2.875: lambda: postprocess.animate_pitch('Synths', 1, 0.1, 0.515, 's'),
+                3.375: lambda: postprocess.animate_pitch('Synths', None, 1, 0.1, 's'),
+            },
+            { # bar 4
+                1.2: lambda: postprocess.animate_pitch('Synths', 1, 0.1, 0.515, 's'),
+                2.11: lambda: postprocess.animate_pitch('Synths', None, 1, 0.1, 's'),
+            },
+            {}, # bar 5
+            {}, # bar 6
+            {  # bar 7
+                2.4: lambda: postprocess.animate_pitch('Synths', 1, 0.1, 0.515, 's'),
+                2.8: lambda: postprocess.animate_pitch('Synths', None, 1, 0.1, 's'),
+                4.82: lambda: postprocess.animate_pitch('Synths', 1, 0.1, 0.515, 's'),
+            },
+            { # bar 8
+                3.1: lambda: postprocess.animate_pitch('Synths', None, 1, 0.1, 's'),
+                3.62: lambda: postprocess.animate_pitch('Synths', 1, 0.1, 0.515, 's'),
+                3.73: lambda: postprocess.animate_pitch('Synths', None, 1, 0.2, 's'),
+                4.12: lambda: postprocess.animate_pitch('Synths', 1, 0.1, 0.515, 's'),
+                4.15: lambda: postprocess.animate_pitch('Synths', None, 1, 0.2, 's'),
+                4.4: lambda: postprocess.animate_pitch('Synths', 1, 0.1, 0.515, 's'),
+                4.5: lambda: postprocess.animate_pitch('Synths', None, 1, 0.2, 's'),
+                4.78: lambda: postprocess.animate_pitch('Synths', 1, 0.1, 0.515, 's'),
+                4.85: lambda: postprocess.animate_pitch('Synths', None, 1, 0.2, 's'),
+            }
+        ], loop=True)
+
+
+
+    @pedalboard_button(18)
     def alarrache(self):
         # Séquence
         seq192.select('solo', 'couplet2_3*')
