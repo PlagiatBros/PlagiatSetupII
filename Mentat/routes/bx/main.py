@@ -594,7 +594,82 @@ class BX(Video, Light, RouteBase):
         #     }
         # ], loop=False)
 
+
+
     @pedalboard_button(8)
+    def lickme_start(self):
+        # Séquence
+        seq192.select('solo', 'coupletlickme_zHi_diplo*')
+
+        # Looper
+        looper.record_on_start(0)
+
+
+        # Transport
+        self.pause_loopers()
+        transport.start()
+
+
+        # BassFX
+        bassFX.set('zynwah', 'on')
+
+        # Séquences
+        self.start_scene('start_lickme', lambda: [
+            self.wait(6*4, 'beat'),
+            self.wait(2, 'beat'),
+            self.wait(1.2, 'beat'),
+            prodSampler.send('/instrument/play', 's:BX_arpegeSitar'),
+            self.wait_next_cycle(),
+            self.wait(1, 'beat'),
+            looper.record(0),
+            self.wait_next_cycle(),
+            self.policeman_lick_me()
+        ])
+
+
+    def policeman_lick_me(self):
+        # Séquence
+        seq192.select('solo', 'coupletlickme*')
+
+        # Transport
+        self.pause_loopers()
+        transport.start()
+
+        # Samples
+        self.open_samples_lickme()
+
+    @pedalboard_button(9)
+    def couplet1_lickme(self):
+        # Séquence
+        seq192.select('solo', 'couplet1lickme*')
+
+        # Transport
+        self.pause_loopers()
+        transport.start()
+
+        # Samples
+        self.open_samples_lickme()
+
+        # Vocals
+        vocalsKesch.set('normo_exclu', 'on')
+
+        # Séquence
+        self.start_sequence('sequence/couplet1', [
+            {
+                # bar 1
+                1: lambda: seq192.select('off', 'couplet1lickme_zHi_stambul'),
+                2.8: lambda: seq192.select('on', 'couplet1lickme_zHi_stambul')
+            },
+            {},
+            {},
+            {},
+            { # bar 5
+                1: lambda: looper.trigger(0)
+            },
+        ], loop=False)
+
+
+    @pedalboard_button(10)
     def theme_lick_me(self):
         # Séquence
         seq192.select('solo', 'themelickme*')
@@ -685,6 +760,40 @@ class BX(Video, Light, RouteBase):
             }
         ], loop=True)
 
+    @pedalboard_button(11)
+    def couplet2_lickme(self):
+        # Séquence
+        seq192.select('solo', 'couplet2lickme*')
+
+        # Transport
+        self.pause_loopers()
+        transport.start()
+
+        # Samples
+        self.open_samples_lickme()
+
+        # Vocals
+        vocalsKesch.set('normo_exclu', 'on')
+
+        # Séquence
+        self.start_sequence('sequence/couplet1', [
+            {},
+            {
+                3.5: lambda: postprocess.animate_pitch('Synths', 1, 0.1, 0.515, 's'),
+                3.8: lambda: postprocess.animate_pitch('Synths', None, 1, 0.1, 's'),
+            },
+            {},
+            {},
+            { # bar 5
+                1: lambda: seq192.select('on', 'coupletlickme*'),
+                2: lambda: seq192.select('off', 'couplet2lickme*')
+            },
+            {},{},{},
+            {},{},{},{},
+            {
+                1: lambda: looper.trigger(0)
+            }
+        ], loop=False)
 
 
     @pedalboard_button(18)
