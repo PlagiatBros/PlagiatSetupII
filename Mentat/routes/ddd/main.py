@@ -261,3 +261,22 @@ class DDD(Video, Light, RouteBase):
 
         # Keyboard
         jmjKeyboard.set_sound('ZTrumpets', boost=True)
+
+    @pedalboard_button(7)
+    def couplet2_freeze(self):
+        self.pause_loopers()
+        self.reset()
+
+        # Séquences
+        seq192.select('solo', 'couplet2-break_zLow_dubstep')
+
+        # Transport
+        transport.start()
+
+        self.start_scene('freeze', lambda: [
+            postprocess.animate_pitch('*', 1, 0.2, 6, 'beats'),
+            self.wait(7, 'beats'),
+            postprocess.animate_pitch('*', None, 1, 1, 'beats'),
+            self.wait_next_cycle(),
+            self.couplet2_3()
+        ])
