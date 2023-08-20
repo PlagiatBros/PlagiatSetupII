@@ -56,7 +56,6 @@ class DDD(Video, Light, RouteBase):
         transport.stop()
 
 
-    @mk2_button(2)
     @pedalboard_button(2)
     def intro(self):
         """
@@ -86,6 +85,46 @@ class DDD(Video, Light, RouteBase):
 
         # Keyboard
         jmjKeyboard.set_sound('ZTrumpets', boost=True)
+
+
+
+    @mk2_button(2)
+    def couplet1_1(self):
+        """
+        COUPLET 1-1 (Ass tonishing)
+        """
+        self.pause_loopers()
+        self.reset()
+
+        # Sequences
+        seq192.select('solo', 'couplet1*')
+
+        # Transport
+        transport.start()
+
+        # Samples
+        self.open_samples()
+
+        # Vocals
+        vocalsNano.set('normo_exclu', 'on')
+        vocalsKesch.set('normo_exclu', 'on')
+
+        # Keyboard
+        jmjKeyboard.set_sound('ZTrumpets', boost=True)
+
+
+        self.start_scene('sequences/couplet_1', lambda: [
+            self.wait(4*4, 'beats'),
+            # der believe I'm a
+            seq192.select('off', 'couplet1_sf_orchestraHit'),
+            self.wait(4*4, 'beats'),
+            # But I won't die trying
+            seq192.select('on', 'couplet1_sf_orchestraHit'),
+            seq192.select('on', 'upcouplet1_*'),
+            self.wait(4*4, 'beats'),
+            # mula mula
+            seq192.select('solo', 'intro_*')
+        ])
 
 
     @pedalboard_button(3)
@@ -144,15 +183,15 @@ class DDD(Video, Light, RouteBase):
 
 
     @pedalboard_button(5)
-    def couplet(self):
+    def couplet2_1(self):
         """
-        COUPLET
+        COUPLET 2_1 (you tell me)
         """
         self.pause_loopers()
         self.reset()
 
         # Sequences
-        seq192.select('solo', 'couplet_*_min')
+        seq192.select('solo', 'couplet2-1_*')
 
         # Transport
         transport.start()
@@ -162,25 +201,63 @@ class DDD(Video, Light, RouteBase):
 
         # Vocals
         vocalsNano.set('normo_exclu', 'on')
-        vocalsKesch.set('meuf_exclu', 'on')
+        vocalsKesch.set('normo_exclu', 'on')
 
         # Keyboard
         jmjKeyboard.set_sound('ZTrumpets', boost=True)
 
+
     @mk2_button(3)
-    def couplet_up(self):
+    def couplet2_2(self):
         """
-        COUPLET UP
+        COUPLET 2_2 (chuis un @male deconstruit)
         """
+        self.pause_loopers()
+        self.reset()
 
-        # Séquences
-        seq192.select('solo', 'couplet_*_up*')
+        # Sequences
+        seq192.select('solo', 'couplet2-2_*')
 
-    @mk2_button(4)
-    def couplet_full(self):
-        """
-        COUPLET FULL
-        """
+        # Transport
+        transport.start()
 
-        # Séquences
-        seq192.select('solo', 'couplet_*')
+        # Samples
+        self.open_samples()
+
+        # Vocals
+        vocalsNano.set('normo_exclu', 'on')
+        vocalsKesch.set('normo_exclu', 'on')
+
+        # Keyboard
+        jmjKeyboard.set_sound('ZTrumpets', boost=True)
+
+        # rhode fade in
+        # synths.set('ZNotSoRhodes', 'Amp', 'Gain', 0)
+        # self.start_scene('sequences/rhode_fadein', lambda: [
+        #     self.wait(2*4, 'beats'),
+        #     synths.animate('ZNotSoRhodes', 'Amp', 'Gain', 0, 1, 2*4, 'beats')
+        # ])
+
+    @pedalboard_button(6)
+    def couplet2_3(self):
+        """
+        COUPLET 2_3 (let's go back)
+        """
+        self.pause_loopers()
+        self.reset()
+
+        # Sequences
+        seq192.select('solo', 'couplet2-3_*')
+
+        # Transport
+        transport.start()
+
+        # Samples
+        self.open_samples()
+
+        # Vocals
+        vocalsNano.set('normo_exclu', 'on')
+        vocalsKesch.set('normo_exclu', 'on')
+
+        # Keyboard
+        jmjKeyboard.set_sound('ZTrumpets', boost=True)

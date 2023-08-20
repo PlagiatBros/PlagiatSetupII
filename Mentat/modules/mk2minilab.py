@@ -126,17 +126,11 @@ class Mk2Control(Module):
 
                 if args[2] == 127:
 
-                    if cc < 109:
-                        # pads 1-8
+                    if cc < 112:
+                        # pads 1-11
                         self.engine.route('osc', 'mk2', '/mk2/button', [cc - 100])
                     else:
-                        if cc == 109:
-                            self.engine.modules['AudioLooper'].record(4)
-                        elif cc == 110:
-                            self.engine.modules['AudioLooper'].overdub(4)
-                        elif cc == 111:
-                            self.engine.modules['AudioLooper'].pause(4)
-                        elif cc == 112:
+                        if cc == 112:
                             self.engine.modules['AudioLooper'].record(5)
                         elif cc == 113:
                             self.engine.modules['AudioLooper'].overdub(5)
@@ -199,7 +193,7 @@ class Mk2Control(Module):
 
     default_colors = [
     	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, # buttons 1-8
-    	mk2colors['red'], mk2colors['red'],mk2colors['yellow'], # sl vx pre rec/overdub/pause
+        0x00, 0x00, 0x00, # buttons 9-11
     	mk2colors['red'], mk2colors['red'],mk2colors['yellow'], # sl vx post rec/overdub/pause
     	0x00, mk2colors['purple']
     ]
