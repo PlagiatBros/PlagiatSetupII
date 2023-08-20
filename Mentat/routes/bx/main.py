@@ -627,7 +627,7 @@ class BX(Video, Light, RouteBase):
         vocalsKesch.set('normo_exclu', 'on')
 
         # Séquence
-        self.start_sequence('sequence/couplet1', [
+        self.start_sequence('sequence/couplet2', [
             {},
             {
                 3.5: lambda: postprocess.animate_pitch('Synths', 1, 0.1, 0.515, 's'),
@@ -640,8 +640,11 @@ class BX(Video, Light, RouteBase):
                 2: lambda: seq192.select('off', 'couplet2lickme*')
             },
             {},{},{},
-            {},{},{},{},
-            {
+            {}, #bar 9
+            {},{},{},
+            {}, # bar 12
+            {}, {}, {},
+            { ## bar 16
                 1: lambda: looper.trigger(0)
             }
         ], loop=False)
@@ -683,7 +686,7 @@ class BX(Video, Light, RouteBase):
             {}, # bar 7
             {   # bar 8
                 1.5: lambda: [
-                    prodSampler.send('/instrument/play', 's:Bx_YouWontRaise'),
+                    prodSampler.send('/instrument/play', 's:Plagiat/BX/Bx_YouWontRaise'),
                     seq192.select('solo', 'dummy')
                     ]
             },
@@ -734,94 +737,7 @@ class BX(Video, Light, RouteBase):
         bassFX.set('zynwah', 'on')
 
 
-        # Séquence
-        # self.start_sequence('couplet_2_1', [
-        #     {}, # bar 1
-        #     {}, # bar 2
-        #     {}, # bar 3
-        #     {   # bar 4
-        #         2: lambda: seq192.select('off', '*'), # stop drums
-        #         3.4: lambda: [
-        #             vocalsKesch.set('meuf_exclu', 'on'),
-        #             vocalsNano.set('meuf_exclu', 'on'),
-        #         ],
-        #         4.5: lambda: constantSampler.send('/instrument/play', 's:FunkyHit1', 100),
-        #     },
-        #     {   # bar 5: Alternate trap (be honest yo bum)
-        #         1: lambda: seq192.select('solo', 'trap_*')
-        #     },
-        #     {}, # bar 6
-        #     {}, # bar 7
-        #     {   # bar 8
-        #         1.5: lambda: prodSampler.send('/instrument/play', 's:Bx_YouWontRaise')
-        #     },
-        #     {
-        #         1: lambda: self.start_scene('vers queen', lambda: self.queen())
-        #     }
-        # ], loop=False)
 
-
-    def queen(self):
-        """
-        QUEEN (as usual boy)
-        ad lib, sortie nano
-        """
-        self.pause_loopers()
-        self.reset()
-
-        # Transport
-        transport.start()
-
-        # Samples
-        self.open_samples()
-
-        # Vocals
-        vocalsFeat.set('normo_exclu', 'on')
-        vocalsKesch.set('gars_exclu', 'on')
-        vocalsFeat.set('normo_exclu', 'on')
-
-        # Bass
-        bassFX.set('zynwah', 'on')
-
-
-        # Séquences
-        seq192.select('solo', 'dummy')
-
-        # Keyboards
-        #jmjKeyboard.set_sound('ZDupieux')
-
-    def queen_sortie(self):
-        """
-        QUEEN SORTIE
-        drum stop, transition auto vers couplet 2 2
-        """
-        self.pause_loopers()
-        self.reset()
-
-        seq192.select('solo', 'trap2_*')
-
-
-        # Transport
-        transport.start()
-
-
-        # Samples
-        self.open_samples()
-
-
-        # Vocals
-        vocalsNano.set('normo_exclu', 'on')
-        vocalsKesch.set('normo_exclu', 'on')
-
-        self.start_sequence('queen sortie', [
-            {}, # bar 1
-            {}, # bar 2
-            {}, # bar 3
-            {}, # bar 4
-            {
-                1: lambda: self.start_scene('vers couplet 2 2', lambda: self.couplet_2_2())
-            }
-        ], loop=False)
 
     @pedalboard_button(10)
     def couplet_2_2(self):
