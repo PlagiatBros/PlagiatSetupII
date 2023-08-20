@@ -144,6 +144,9 @@ class BX(Video, Light, RouteBase):
 
     @mk2_button(2)
     def couplet_keeping(self):
+        """
+        PONT COUPLET 1 (keeping windows shut onboard)
+        """
         # Séquence
         # seq192.select('off', 'couplet_*'),
 
@@ -491,6 +494,9 @@ class BX(Video, Light, RouteBase):
 
     @mk2_button(5, 'green')
     def couplet1_lickme(self):
+        """
+        COUPLET 1 LICK ME (crowds & trumpets)
+        """
         # Séquence
         seq192.select('solo', 'couplet1lickme*')
 
@@ -522,6 +528,9 @@ class BX(Video, Light, RouteBase):
 
     @pedalboard_button(8)
     def theme_lick_me(self):
+        """
+        THÈME LICK ME
+        """
         # Séquence
         seq192.select('solo', 'themelickme*')
 
@@ -613,6 +622,9 @@ class BX(Video, Light, RouteBase):
 
     @mk2_button(6,  'green')
     def couplet2_lickme(self):
+        """
+        COUPLET 2 LICK ME (sex in the metaverse)
+        """
         # Séquence
         seq192.select('solo', 'couplet2lickme*')
 
@@ -651,6 +663,9 @@ class BX(Video, Light, RouteBase):
 
     @pedalboard_button(9)
     def aintnosuv(self):
+        """
+        AINT NO SUV A CAPELLA
+        """
         # Séquence
         seq192.select('solo', 'dummy')
 
@@ -665,6 +680,9 @@ class BX(Video, Light, RouteBase):
 
     @mk2_button(7, 'purple')
     def trapcouplet2(self):
+        """
+        COUPLET 2 TRAP (my bum is yo dashboard)
+        """
         # Séquence
         seq192.select('solo', 'trap2*')
         seq192.select('on', 'trap_*Low*')
@@ -911,4 +929,7 @@ class BX(Video, Light, RouteBase):
 
     @pedalboard_button(11)
     def rec_key(self):
+        """
+        REC BASS SYNTHS
+        """
         looper.record(2)
