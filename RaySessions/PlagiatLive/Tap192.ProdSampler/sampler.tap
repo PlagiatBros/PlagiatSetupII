@@ -468,61 +468,60 @@
         <instrument name="Bx_Car" minnote="43" maxnote="43" rootnote="43" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples4" volume="1.000000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
           <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2021/BxMillezim/Bx_Car.wav" sampleRelative="../../../../Samples/So2021/BxMillezim/Bx_Car.wav"/>
         </instrument>
-        <instrument name="BX_arpegeSitar" minnote="43" maxnote="43" rootnote="43" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples4" volume="1.000000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
+        <instrument name="BX_arpegeSitar" minnote="44" maxnote="44" rootnote="44" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples4" volume="1.000000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
           <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2021/BxMillezim/BX_arpegeSitar.wav" sampleRelative="../../../../Samples/So2021/BxMillezim/BX_arpegeSitar.wav"/>
         </instrument>
-        <instrument name="BX_phraseSitar" minnote="43" maxnote="43" rootnote="43" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples4" volume="1.000000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
+        <instrument name="BX_phraseSitar" minnote="45" maxnote="45" rootnote="45" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples4" volume="1.000000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
           <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2021/BxMillezim/BX_phraseSitar.wav" sampleRelative="../../../../Samples/So2021/BxMillezim/BX_phraseSitar.wav"/>
         </instrument>
-        <instrument name="BX_zurnaLongue" minnote="43" maxnote="43" rootnote="43" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples4" volume="1.000000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
+        <instrument name="BX_zurnaLongue" minnote="46" maxnote="46" rootnote="46" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples3" volume="1.000000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
           <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2021/BxMillezim/BX_zurnaLongue.wav" sampleRelative="../../../../Samples/So2021/BxMillezim/BX_zurnaLongue.wav"/>
         </instrument>
-        <instrument name="BX_zurnaLongue_downPitched" minnote="43" maxnote="43" rootnote="43" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples4" volume="1.000000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
+        <instrument name="BX_zurnaLongue_downPitched" minnote="47" maxnote="47" rootnote="47" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples3" volume="1.000000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
           <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2021/BxMillezim/BX_zurnaLongue_downPitched.wav" sampleRelative="../../../../Samples/So2021/BxMillezim/BX_zurnaLongue_downPitched.wav"/>
         </instrument>
-        <instrument name="BX_zurnaTheme_note00" minnote="43" maxnote="43" rootnote="43" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples4" volume="1.000000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
+        <instrument name="BX_zurnaTheme_note00" minnote="48" maxnote="48" rootnote="48" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples5" volume="1.000000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
           <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2021/BxMillezim/BX_zurnaTheme_note00.wav" sampleRelative="../../../../Samples/So2021/BxMillezim/BX_zurnaTheme_note00.wav"/>
         </instrument>
-        <instrument name="BX_zurnaTheme_note1" minnote="43" maxnote="43" rootnote="43" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples4" volume="1.000000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
+        <instrument name="BX_zurnaTheme_note1" minnote="49" maxnote="49" rootnote="49" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples5" volume="1.000000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
           <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2021/BxMillezim/BX_zurnaTheme_note1.wav" sampleRelative="../../../../Samples/So2021/BxMillezim/BX_zurnaTheme_note1.wav"/>
         </instrument>
-        <instrument name="BX_zurnaTheme_note2" minnote="43" maxnote="43" rootnote="43" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples4" volume="1.000000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
+        <instrument name="BX_zurnaTheme_note2" minnote="50" maxnote="50" rootnote="50" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples5" volume="1.000000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
           <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2021/BxMillezim/BX_zurnaTheme_note2.wav" sampleRelative="../../../../Samples/So2021/BxMillezim/BX_zurnaTheme_note2.wav"/>
         </instrument>
-        <instrument name="BX_zurnaTheme_note3" minnote="43" maxnote="43" rootnote="43" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples4" volume="1.000000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
+        <instrument name="BX_zurnaTheme_note3" minnote="51" maxnote="51" rootnote="51" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples5" volume="1.000000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
           <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2021/BxMillezim/BX_zurnaTheme_note3.wav" sampleRelative="../../../../Samples/So2021/BxMillezim/BX_zurnaTheme_note3.wav"/>
         </instrument>
-        <instrument name="BX_zurnaTheme_note4" minnote="43" maxnote="43" rootnote="43" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples4" volume="1.000000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
+        <instrument name="BX_zurnaTheme_note4" minnote="52" maxnote="52" rootnote="52" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples5" volume="1.000000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
           <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2021/BxMillezim/BX_zurnaTheme_note4.wav" sampleRelative="../../../../Samples/So2021/BxMillezim/BX_zurnaTheme_note4.wav"/>
         </instrument>
-        <instrument name="BX_zurnaTheme_note5" minnote="43" maxnote="43" rootnote="43" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples4" volume="1.000000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
+        <instrument name="BX_zurnaTheme_note5" minnote="53" maxnote="53" rootnote="53" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples5" volume="1.000000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
           <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2021/BxMillezim/BX_zurnaTheme_note5.wav" sampleRelative="../../../../Samples/So2021/BxMillezim/BX_zurnaTheme_note5.wav"/>
         </instrument>
-        <instrument name="BX_zurnaTheme_note6" minnote="43" maxnote="43" rootnote="43" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples4" volume="1.000000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
+        <instrument name="BX_zurnaTheme_note6" minnote="54" maxnote="54" rootnote="54" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples5" volume="1.000000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
           <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2021/BxMillezim/BX_zurnaTheme_note6.wav" sampleRelative="../../../../Samples/So2021/BxMillezim/BX_zurnaTheme_note6.wav"/>
         </instrument>
-        <instrument name="BX_zurnaTheme_note7_courte" minnote="43" maxnote="43" rootnote="43" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples4" volume="1.000000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
+        <instrument name="BX_zurnaTheme_note7_courte" minnote="55" maxnote="55" rootnote="55" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples5" volume="1.000000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
           <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2021/BxMillezim/BX_zurnaTheme_note7_courte.wav" sampleRelative="../../../../Samples/So2021/BxMillezim/BX_zurnaTheme_note7_courte.wav"/>
         </instrument>
-        <instrument name="BX_zurnaTheme_note7_longue" minnote="43" maxnote="43" rootnote="43" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples4" volume="1.000000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
+        <instrument name="BX_zurnaTheme_note7_longue" minnote="56" maxnote="56" rootnote="56" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples5" volume="1.000000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
           <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2021/BxMillezim/BX_zurnaTheme_note7_longue.wav" sampleRelative="../../../../Samples/So2021/BxMillezim/BX_zurnaTheme_note7_longue.wav"/>
         </instrument>
-        <instrument name="BX_zurnaTheme_note8" minnote="43" maxnote="43" rootnote="43" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples4" volume="1.000000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
+        <instrument name="BX_zurnaTheme_note8" minnote="57" maxnote="57" rootnote="57" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples5" volume="1.000000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
           <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2021/BxMillezim/BX_zurnaTheme_note8.wav" sampleRelative="../../../../Samples/So2021/BxMillezim/BX_zurnaTheme_note8.wav"/>
         </instrument>
-        <instrument name="BX_zurnaTheme_note9" minnote="43" maxnote="43" rootnote="43" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples4" volume="1.000000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
+        <instrument name="BX_zurnaTheme_note9" minnote="58" maxnote="58" rootnote="58" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples5" volume="1.000000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
           <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2021/BxMillezim/BX_zurnaTheme_note9.wav" sampleRelative="../../../../Samples/So2021/BxMillezim/BX_zurnaTheme_note9.wav"/>
         </instrument>
-        <instrument name="BX_zurnaTheme_note10" minnote="43" maxnote="43" rootnote="43" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples4" volume="1.000000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
+        <instrument name="BX_zurnaTheme_note10" minnote="59" maxnote="59" rootnote="59" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples5" volume="1.000000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
           <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2021/BxMillezim/BX_zurnaTheme_note10.wav" sampleRelative="../../../../Samples/So2021/BxMillezim/BX_zurnaTheme_note10.wav"/>
         </instrument>
-        <instrument name="BX_zurnaTheme_note11" minnote="43" maxnote="43" rootnote="43" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples4" volume="1.000000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
+        <instrument name="BX_zurnaTheme_note11" minnote="60" maxnote="60" rootnote="60" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples5" volume="1.000000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
           <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2021/BxMillezim/BX_zurnaTheme_note11.wav" sampleRelative="../../../../Samples/So2021/BxMillezim/BX_zurnaTheme_note11.wav"/>
         </instrument>
-        <instrument name="BX_zurnaTheme_note12" minnote="43" maxnote="43" rootnote="43" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples4" volume="1.000000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
+        <instrument name="BX_zurnaTheme_note12" minnote="61" maxnote="61" rootnote="61" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples5" volume="1.000000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
           <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2021/BxMillezim/BX_zurnaTheme_note12.wav" sampleRelative="../../../../Samples/So2021/BxMillezim/BX_zurnaTheme_note12.wav"/>
         </instrument>
-
       </kit>
       <kit name="AintInTheWay" volume="1.000000">
         <instrument name="Key_Cadence_Cm" minnote="61" maxnote="61" rootnote="61" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples1" volume="0.500000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
@@ -638,13 +637,13 @@
           <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2021/DDD/TromboneSlide_G.wav" sampleRelative="../../../../Samples/So2021/DDD/TromboneSlide_G.wav"/>
         </instrument>
         <instrument name="TromboneSlide_Ab" minnote="72" maxnote="72" rootnote="72" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples1" volume="0.500000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
-          <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2021/DDD/TromboneSlide_Ab.wav" sampleRelative="../../../../Samples/So2021/DDD/TromboneSlide_AbTromboneSlide_Ab.wav"/>
+          <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2021/DDD/TromboneSlide_Ab.wav" sampleRelative="../../../../Samples/So2021/DDD/TromboneSlide_Ab.wav"/>
         </instrument>
         <instrument name="TromboneSlide_Bb" minnote="72" maxnote="72" rootnote="72" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples1" volume="0.500000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
           <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2021/DDD/TromboneSlide_Bb.wav" sampleRelative="../../../../Samples/So2021/DDD/TromboneSlide_Bb.wav"/>
         </instrument>
         <instrument name="TromboneSlide_F" minnote="72" maxnote="72" rootnote="72" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples1" volume="0.500000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
-          <variation minveloc="0" maxveloc="63" sample="/home/plagiat/PlagiatSetup/Samples/So2021/DDD/TromboneSlide_F.wav" sampleRelative="../../../../Samples/So2021/DDD/TromboneSlide_F-var2.wav"/>
+          <variation minveloc="0" maxveloc="63" sample="/home/plagiat/PlagiatSetup/Samples/So2021/DDD/TromboneSlide_F.wav" sampleRelative="../../../../Samples/So2021/DDD/TromboneSlide_F.wav"/>
           <variation minveloc="64" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2021/DDD/TromboneSlide_F.wav" sampleRelative="../../../../Samples/So2021/DDD/TromboneSlide_F.wav"/>
         </instrument>
         <instrument name="TromboneSlide_Bb2" minnote="72" maxnote="72" rootnote="72" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples1" volume="0.500000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
