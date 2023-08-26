@@ -91,8 +91,6 @@ class AintInTheWay(Video, Light, RouteBase):
         # Séquences
         seq192.select('solo', 'prerefrain_*')
 
-
-
         # Samples
         self.open_samples()
 
@@ -101,13 +99,11 @@ class AintInTheWay(Video, Light, RouteBase):
         vocalsNano.set('normo_exclu', 'on')
         vocalsFeat.set('normo_exclu', 'on')
 
-
-
         # Transport
         transport.set_tempo(120)
         transport.start()
 
-
+        # Séquences
         self.start_scene('breakrefrain', lambda: [
             self.wait(7*4, 'beat'),
             seq192.select('on', 'break_prerefrain_*'),
@@ -127,7 +123,6 @@ class AintInTheWay(Video, Light, RouteBase):
         # Séquences
         seq192.select('solo', 'refrain_*')
 
-
         # Transport
         transport.set_tempo(120)
         transport.start()
@@ -141,7 +136,6 @@ class AintInTheWay(Video, Light, RouteBase):
         vocalsFeat.set('normo_exclu', 'on')
 
 
-
     @pedalboard_button(5)
     @mk2_button(5, 'purple')
     def couplet_part1(self):
@@ -153,7 +147,6 @@ class AintInTheWay(Video, Light, RouteBase):
 
         # Samples
         self.open_samples()
-
 
         # Séquences
         seq192.select('solo', 'couplet_part1_*')
@@ -169,7 +162,6 @@ class AintInTheWay(Video, Light, RouteBase):
         vocalsKesch.set('normo_exclu', 'on')
         vocalsNano.set('normo_exclu', 'on')
         vocalsFeat.set('normo_exclu', 'on')
-
 
 
     @pedalboard_button(6)
@@ -199,6 +191,7 @@ class AintInTheWay(Video, Light, RouteBase):
         # Keyboard
         jmjKeyboard.set_sound('ZTrumpets')
 
+
     @pedalboard_button(7)
     @mk2_button(7, 'purple')
     def theme(self):
@@ -224,7 +217,6 @@ class AintInTheWay(Video, Light, RouteBase):
         synthsFX3Delay.set('Trap', 'Gain', -10.0)
         synthsFX3Delay.set('SynthsFX3Delay', 'Mute', 0.0)
 
-
         # Keyboard
         jmjKeyboard.set_sound('ZTrumpets')
 
@@ -239,6 +231,7 @@ class AintInTheWay(Video, Light, RouteBase):
         vocalsKesch.set('gars_exclu', 'on')
         vocalsNano.set('normo_exclu', 'on')
         vocalsFeat.set('normo_exclu', 'on')
+
 
     @pedalboard_button(8)
     @mk2_button(8, 'purple')
@@ -261,16 +254,12 @@ class AintInTheWay(Video, Light, RouteBase):
         # Samples
         self.open_samples()
 
-
         # Transport
         transport.set_tempo(180)
         transport.start()
 
-
         # jmjKeyboard
         jmjKeyboard.set_sound('SteelDrum')
-
-
 
         # Vocals
         vocalsKesch.set('normo_exclu', 'on')

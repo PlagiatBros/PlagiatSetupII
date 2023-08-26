@@ -640,7 +640,13 @@
         <instrument name="AMoi2" minnote="80" maxnote="80" rootnote="80" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples1" volume="0.500000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
           <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2021/DDD/AMoi_2.wav" sampleRelative="../../../../Samples/So2021/DDD/AMoi_2.wav"/>
         </instrument>
-        <instrument name="Trombone" minnote="4" maxnote="20" rootnote="72" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples1" volume="0.500000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
+        <instrument name="BEP_Oooh" minnote="79" maxnote="79" rootnote="79" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples1" volume="0.500000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
+          <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2021/DDD/BEP_Oooh.wav" sampleRelative="../../../../Samples/So2021/DDD/BEP_Oooh.wav"/>
+        </instrument>
+        <instrument name="BEP_Violins" minnote="80" maxnote="80" rootnote="80" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples1" volume="0.500000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
+          <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2021/DDD/BEP_Violins.wav" sampleRelative="../../../../Samples/So2021/DDD/BEP_Violins.wav"/>
+        </instrument>
+        <!--instrument name="Trombone" minnote="4" maxnote="20" rootnote="4" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples1" volume="0.500000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
           <variation minveloc="0" maxveloc="51" sample="/home/plagiat/PlagiatSetup/Samples/So2021/DDD/Trombone_E-1.wav" sampleRelative="../../../../Samples/So2021/DDD/Trombone_E-1.wav"/>
           <variation minveloc="52" maxveloc="100" sample="/home/plagiat/PlagiatSetup/Samples/So2021/DDD/Trombone_E-2.wav" sampleRelative="../../../../Samples/So2021/DDD/Trombone_E-2.wav"/>
           <variation minveloc="101" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2021/DDD/Trombone_E-3.wav" sampleRelative="../../../../Samples/So2021/DDD/Trombone_E-3.wav"/>
@@ -661,7 +667,7 @@
         <instrument name="TromboneSlide_Bb2" minnote="106" maxnote="107" rootnote="106" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples1" volume="0.500000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
           <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2021/DDD/TromboneSlide_Bb2.wav" sampleRelative="../../../../Samples/So2021/DDD/TromboneSlide_Bb2.wav"/>
         </instrument>
-        <instrument name="TromboneSlide_C2" minnote="72" maxnote="109" rootnote="108" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples1" volume="0.500000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
+        <instrument name="TromboneSlide_C2" minnote="108" maxnote="109" rootnote="108" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples1" volume="0.500000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
           <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2021/DDD/TromboneSlide_C2.wav" sampleRelative="../../../../Samples/So2021/DDD/TromboneSlide_C2.wav"/>
         </instrument>
         <instrument name="TromboneSlide_D2" minnote="110" maxnote="115" rootnote="110" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples1" volume="0.500000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
@@ -672,7 +678,7 @@
         </instrument>
         <instrument name="TromboneSlide_Bb3" minnote="118" maxnote="118" rootnote="118" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples1" volume="0.500000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
           <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2021/DDD/TromboneSlide_Bb3.wav" sampleRelative="../../../../Samples/So2021/DDD/TromboneSlide_Bb3.wav"/>
-        </instrument>
+        </instrument-->
       </kit>
       <kit name="QueenCloclo" volume="1.000000">
         <instrument name="KJ_A" minnote="61" maxnote="61" rootnote="61" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples1" volume="0.500000" pan="-1.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
