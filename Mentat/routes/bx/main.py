@@ -89,6 +89,7 @@ class BX(Video, Light, RouteBase):
         # Vocals
         vocalsNano.set('normo_exclu', 'on')
         vocalsKesch.set('meuf_exclu', 'on')
+        vocalsFeat.set('normo_exclu', 'on')
 
         # Keyboard
         jmjKeyboard.set_sound('ZTrumpets', boost=True)
@@ -222,7 +223,7 @@ class BX(Video, Light, RouteBase):
 
         # Vocals
         vocalsNano.set('normo_exclu', 'on')
-        # vocalsKesch.set('normo_exclu', 'on')
+        vocalsKesch.set('normo_exclu', 'on')
         vocalsFeat.set('normo_exclu', 'on')
 
         synthsFX2Delay.set('Trap', 'Gain', -14.0)
@@ -344,6 +345,10 @@ class BX(Video, Light, RouteBase):
         # Bass
         bassFX.set('distohi', 'on')
         bassFX.set('degrade', 'on')
+        bassfx.set('scape', 'poston')
+        bassfx.set('wobble', 'poston')
+        bassfx.set('wobble_subdivision', 6)
+
 
         # Vocals
         vocalsNano.set('normo_exclu', 'on')
@@ -357,11 +362,6 @@ class BX(Video, Light, RouteBase):
         # Synths
         synthsFX2Delay.set('Trap', 'Gain', -14.0)
         synthsFX2Delay.set('SynthsFX2Delay', 'Mute', 0.0)
-
-        # Bass
-        bassfx.set('scape', 'poston')
-        bassfx.set('wobble', 'poston')
-        bassfx.set('wobble_subdivision', 6)
 
         # Séquences
         self.start_sequence('sequence/bx_theme_hiSynths', [
@@ -429,6 +429,8 @@ class BX(Video, Light, RouteBase):
         # Vocals
         vocalsNano.set('normo_exclu', 'on')
         vocalsKesch.set('gars_exclu', 'on')
+        vocalsFeat.set('normo_exclu', 'on')
+
 
         # Keyboard
         jmjKeyboard.set_sound('ZTrumpets', boost=True)
@@ -449,6 +451,9 @@ class BX(Video, Light, RouteBase):
 
 
     def lickme_start(self):
+        """
+        Bouclage Lick Me
+        """
         # Séquence
         seq192.select('solo', 'coupletlickme_zHi_diplo*')
 
@@ -459,6 +464,11 @@ class BX(Video, Light, RouteBase):
         # Transport
         self.pause_loopers()
         transport.start()
+
+        # Vocals
+        vocalsNano.set('normo_exclu', 'on')
+        vocalsKesch.set('normo_exclu', 'on')
+        vocalsFeat.set('normo_exclu', 'on')
 
 
         # BassFX
@@ -479,6 +489,9 @@ class BX(Video, Light, RouteBase):
 
 
     def policeman_lick_me(self):
+        """
+        Hey Mister Policeman
+        """
         # Séquence
         seq192.select('solo', 'coupletlickme*')
 
@@ -491,6 +504,12 @@ class BX(Video, Light, RouteBase):
 
         # Samples
         self.open_samples_lickme()
+
+        # Vocals
+        vocalsNano.set('normo_exclu', 'on')
+        vocalsKesch.set('normo_exclu', 'on')
+        vocalsFeat.set('normo_exclu', 'on')
+
 
     @mk2_button(5, 'green')
     def couplet1_lickme(self):
@@ -508,7 +527,9 @@ class BX(Video, Light, RouteBase):
         self.open_samples_lickme()
 
         # Vocals
+        vocalsNano.set('normo_exclu', 'on')
         vocalsKesch.set('normo_exclu', 'on')
+        vocalsFeat.set('normo_exclu', 'on')
 
         # Séquence
         self.start_sequence('sequence/couplet1', [
@@ -550,7 +571,10 @@ class BX(Video, Light, RouteBase):
         synthsFX3Delay.set('MajorVocals', 'Gain', -17.8)
         synthsFX3Delay.set('SynthsFX3Delay', 'Mute', 0.0)
 
-
+        # Vocals
+        vocalsNano.set('normo_exclu', 'on')
+        vocalsKesch.set('normo_exclu', 'on')
+        vocalsFeat.set('normo_exclu', 'on')
 
         # Séquences
         self.start_sequence('sequence/theme_lickme_samplepitch', [
@@ -636,7 +660,10 @@ class BX(Video, Light, RouteBase):
         self.open_samples_lickme()
 
         # Vocals
+        vocalsNano.set('normo_exclu', 'on')
         vocalsKesch.set('normo_exclu', 'on')
+        vocalsFeat.set('normo_exclu', 'on')
+
 
         # Séquence
         self.start_sequence('sequence/couplet2', [
@@ -696,6 +723,11 @@ class BX(Video, Light, RouteBase):
         # Keyboards
         jmjKeyboard.set_sound('LowCTrap1')
 
+        # Vocals
+        vocalsKesch.set('normo_exclu', 'on')
+        vocalsFeat.set('normo_exclu', 'on')
+        vocalsNano.set('normo_exclu', 'on')
+
         # Séquence
         self.start_sequence('couplet_2_1', [
             {   # bar 5: Alternate trap (be honest yo bum)
@@ -716,45 +748,42 @@ class BX(Video, Light, RouteBase):
         ], loop=False)
 
 
-    def couplet_2_1(self):
-        """
-        COUPLET 2 PART 1 (ain't no suv...)
-        """
-        self.pause_loopers()
-        self.reset()
-
-        # Sequences
-        seq192.select('solo', 'couplet2_2*')
-        # seq192.select('off', 'couplet_*cHi_easyClassical')
-
-        # Looper
-        looper.record_on_start(0)
-
-        # Transport
-        transport.start()
-
-        # Samples
-        self.open_samples()
-
-        # Vocals
-        vocalsNano.set('normo_exclu', 'on')
-        vocalsKesch.set('normo_exclu', 'on')
-        vocalsFeat.set('normo_exclu', 'on')
-
-        # Synths
-        synths.set('Trap', 'Pan', -0.7)
-        synths.set('ZStambul', 'Pan', 0.5)
-        synths.set('EasyClassical', 'Pan', 0.3)
-
-        synths.set('Trap', 'Amp', 'Gain', 0.35)
-
-        # Keyboards
-        jmjKeyboard.set_sound('ZDupieux')
-
-        # BassFX
-        bassFX.set('zynwah', 'on')
-
-
+    # def couplet_2_1(self):
+    #     """
+    #     COUPLET 2 PART 1 (ain't no suv...)
+    #     """
+    #     self.pause_loopers()
+    #     self.reset()
+    #
+    #     # Sequences
+    #     seq192.select('solo', 'couplet2_2*')
+    #
+    #     # Looper
+    #     looper.record_on_start(0)
+    #
+    #     # Transport
+    #     transport.start()
+    #
+    #     # Samples
+    #     self.open_samples()
+    #
+    #     # Vocals
+    #     vocalsNano.set('normo_exclu', 'on')
+    #     vocalsKesch.set('normo_exclu', 'on')
+    #     vocalsFeat.set('normo_exclu', 'on')
+    #
+    #     # Synths
+    #     synths.set('Trap', 'Pan', -0.7)
+    #     synths.set('ZStambul', 'Pan', 0.5)
+    #     synths.set('EasyClassical', 'Pan', 0.3)
+    #
+    #     synths.set('Trap', 'Amp', 'Gain', 0.35)
+    #
+    #     # Keyboards
+    #     jmjKeyboard.set_sound('ZDupieux')
+    #
+    #     # BassFX
+    #     bassFX.set('zynwah', 'on')
 
 
     @pedalboard_button(10)
@@ -784,6 +813,9 @@ class BX(Video, Light, RouteBase):
         vocalsKesch.set('normo_exclu', 'on')
         vocalsFeat.set('normo_exclu', 'on')
 
+        vocalsKeschFX1Delay.set('VocalsKeschFX1Delay', 'GxMultiBandDelay', 'multiplier', 2),
+
+
         # Keyboard
         jmjKeyboard.set_sound('ZOrgan')
 
@@ -797,7 +829,6 @@ class BX(Video, Light, RouteBase):
         synths.set('Trap', 'Amp', 'Gain', 0.35)
         synths.set('DubstepHorn', 'Amp', 'Gain', 0.35)
 
-        vocalsKeschFX1Delay.set('VocalsKeschFX1Delay', 'GxMultiBandDelay', 'multiplier', 2),
 
 
         # Séquence
