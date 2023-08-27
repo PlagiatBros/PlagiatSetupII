@@ -537,6 +537,12 @@
         <instrument name="BX_zurnaTheme_note17" minnote="30" maxnote="30" rootnote="30" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples5" volume="1.000000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
           <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2021/BxMillezim/BX_zurnaTheme_note17.wav" sampleRelative="../../../../Samples/So2021/BxMillezim/BX_zurnaTheme_note17.wav"/>
         </instrument>
+        <instrument name="ShamisenOstinato_High" minnote="76" maxnote="76" rootnote="76" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples5" volume="0.416667" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
+          <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2021/BxMillezim/ShamisenOstinato_High.wav" sampleRelative="../../../../Samples/So2021/BxMillezim/ShamisenOstinato_High.wav"/>
+        </instrument>
+        <instrument name="ShamisenOstinato_Low" minnote="77" maxnote="77" rootnote="77" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples5" volume="0.416667" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
+          <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2021/BxMillezim/ShamisenOstinato_Low.wav" sampleRelative="../../../../Samples/So2021/BxMillezim/ShamisenOstinato_Low.wav"/>
+        </instrument>
       </kit>
       <kit name="AintInTheWay" volume="1.000000">
         <instrument name="Key_Cadence_Cm" minnote="61" maxnote="61" rootnote="61" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples1" volume="0.500000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
@@ -624,12 +630,6 @@
         </instrument>
         <instrument name="Koto_3" minnote="75" maxnote="75" rootnote="75" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples4" volume="0.361111" pan="0.306122" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
           <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2021/DDD/Koto_3.wav" sampleRelative="../../../../Samples/So2021/DDD/Koto_3.wav"/>
-        </instrument>
-        <instrument name="ShamisenOstinato_High" minnote="76" maxnote="76" rootnote="76" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples4" volume="0.416667" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
-          <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2021/DDD/ShamisenOstinato_High.wav" sampleRelative="../../../../Samples/So2021/DDD/ShamisenOstinato_High.wav"/>
-        </instrument>
-        <instrument name="ShamisenOstinato_Low" minnote="77" maxnote="77" rootnote="77" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples4" volume="0.416667" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
-          <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2021/DDD/ShamisenOstinato_Low.wav" sampleRelative="../../../../Samples/So2021/DDD/ShamisenOstinato_Low.wav"/>
         </instrument>
         <instrument name="Mouettes" minnote="78" maxnote="78" rootnote="78" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples3" volume="0.444444" pan="-0.367347" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
           <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2021/DDD/Mouettes_Triolets.wav" sampleRelative="../../../../Samples/So2021/DDD/Mouettes_Triolets.wav"/>

@@ -40,6 +40,7 @@ class BX(Video, Light, RouteBase):
             'GuitarNatural': 'Samples2',
             'GuitarChorus': 'Samples3',
             'Trumpets': 'Samples4',
+            'Shamisen' : 'Samples5',
             'ZurnaTheme': 'Samples5',
             'ZurnaLongue': 'Samples3',
             'Sitar': 'Samples4'
@@ -50,8 +51,10 @@ class BX(Video, Light, RouteBase):
         samples.set('GuitarNatural', 'Mute', 0.0)
         samples.set('GuitarChorus', 'Mute', 0.0)
         samples.set('Trumpets', 'Mute', 0.0)
+        samples.set('Shamisen', 'Mute', 0.0)
         samplesFX3Reverb.set('Trumpets', 'Gain', -10.0)
         samplesFX3Reverb.set('SamplesFX3Reverb', 'Mute', 0.0)
+
 
     def open_samples_lickme(self):
         samples.set('Sitar', 'Mute', 0.0)
@@ -101,11 +104,15 @@ class BX(Video, Light, RouteBase):
         synths.set('EasyClassical', 'Pan', 0.3)
 
         synths.set('Trap', 'Amp', 'Gain', 0.35)
+        synths.set('ZStambul', 'Amp', 'Gain', 0.65)
+        synths.set('EasyClassical', 'Amp', 'Gain', 0.55)
 
         synthsFX2Delay.set('Trap', 'Gain', -14.0)
         synthsFX2Delay.set('SynthsFX2Delay', 'Mute', 0.0)
 
-
+        synths.animate('Trap', 'Pan', -0.7, 0.7, 80, 's',  easing='linear-mirror', loop='true')
+        synths.animate('EasyClassical', 'Pan', 0.3, -0.1, 80, 's',  easing='linear-mirror', loop='true')
+        synths.animate('ZStambul', 'Pan', 0.5, 0, 80, 's',  easing='linear-mirror', loop='true')
 
     @pedalboard_button(3)
     def couplet(self):
@@ -126,6 +133,17 @@ class BX(Video, Light, RouteBase):
         # Samples
         self.open_samples()
 
+        samples.set('Shamisen', 'Gain', -12.25)
+
+        samplesFX6Scape.set('Shamisen', 'Gain', -5.5)
+        samplesFX6Scape.set('SamplesFX6Scape', 'Mute', 0.0)
+
+        samplesFX4Autofilter.set('Shamisen', 'Gain', -1)
+        samplesFX4Autofilter.set('SamplesFX4Autofilter', 'Mute', 0.0)
+
+        samplesFX7Degrade.set('Shamisen', 'Gain', -9)
+        samplesFX7Degrade.set('SamplesFX7Degrade', 'Mute', 0.0)
+
         # Vocals
         vocalsNano.set('normo_exclu', 'on')
         vocalsFeat.set('normo_exclu', 'on')
@@ -139,8 +157,49 @@ class BX(Video, Light, RouteBase):
         synths.set('ZStambul', 'Pan', 0.5)
         synths.set('EasyClassical', 'Pan', 0.3)
 
-
         synths.set('Trap', 'Amp', 'Gain', 0.35)
+        synths.set('ZStambul', 'Amp', 'Gain', 0.65)
+        synths.set('EasyClassical', 'Amp', 'Gain', 0.55)
+
+        synthsFX2Delay.set('Trap', 'Gain', -14.0)
+        synthsFX2Delay.set('SynthsFX2Delay', 'Mute', 0.0)
+
+        synths.animate('Trap', 'Pan', -0.7, 0.7, 80, 's',  easing='linear-mirror', loop='true')
+        synths.animate('EasyClassical', 'Pan', 0.3, -0.1, 80, 's',  easing='linear-mirror', loop='true')
+        synths.animate('ZStambul', 'Pan', 0.5, 0, 80, 's',  easing='linear-mirror', loop='true')
+
+
+        # BassSynths
+        bassSynths.set('TrapBass2', 'Amp', 'Gain', 0.9)
+        bassSynths.set('BassBarkline', 'Amp', 'Gain', 1)
+        bassSynths.set('BassBoom', 'Amp', 'Gain', 0.8)
+
+        self.start_sequence('couplet1', [
+            {
+                4.5: lambda: postprocess.set_pitch('Samples', 0.8)
+            },
+            {
+                1: lambda: postprocess.animate_pitch('Samples', None, 1, 0.2, 'b')
+            },
+            {
+                3.5: lambda: postprocess.animate_pitch('Samples', None, 0.8, 0.5, 'b')
+            },
+            {
+                1: lambda: postprocess.animate_pitch('Samples', None, 1, 0.2, 'b')
+            },
+            {
+                4.5: lambda: postprocess.set_pitch('Samples', 0.8)
+            },
+            {
+                1: lambda: postprocess.animate_pitch('Samples', None, 1, 0.2, 'b')
+            },
+            {
+                3.5: lambda: postprocess.animate_pitch('Samples', None, 1.2, 0.5, 'b')
+            },
+            {
+                1: lambda: postprocess.animate_pitch('Samples', None, 1, 0.2, 'b')
+            },
+        ], loop=True)
 
 
     @mk2_button(2)
@@ -164,7 +223,7 @@ class BX(Video, Light, RouteBase):
         samplesFX3Reverb.set('SamplesFX3Reverb', 'Mute', 0.0)
         samplesFX6Scape.set('GuitarCrunch', 'Gain', -26.67)
         samplesFX6Scape.set('SamplesFX6Scape', 'Mute', 0.0)
-        prodSampler.send('/instrument/play', 's:Bx_Car')
+        prodSampler.send('/instrument/play', 's:Plagiat/BX/Bx_Car')
 
         # Séquences
         self.start_scene('keeping', lambda: [
