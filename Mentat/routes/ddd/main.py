@@ -36,14 +36,22 @@ class DDD(Video, Light, RouteBase):
 
         # Sample
         self.set_samples_aliases({
-            # 'GuitarCrunch': 'Samples1',
+            'MetP': 'Samples1',
+            'Animox': 'Samples3',
+            'Ambiance': 'Samples4',
+            'BEP': 'Samples5',
         })
 
     def open_samples(self):
-        samples.set('Samples1', 'Mute', 0.0)
-        pass
-        # samples.set('GuitarCrunch', 'Mute', 0.0)
-        # samplesFX3Reverb.set('Trumpets', 'Gain', -10.0)
+        samples.set('MetP', 'Mute', 0.0)
+        samples.set('Animox', 'Mute', 0.0)
+        samples.set('Ambiance', 'Mute', 0.0)
+        samples.set('BEP', 'Mute', 0.0)
+
+
+        samplesFX3Reverb.set('Ambiance', 'Gain', -15.0)
+        samplesFX3Reverb.set('Animox', 'Gain', -18.0)
+        samplesFX3Reverb.set('SamplesFX3Reverb', 'Mute', 0.0)
 
 
     @pedalboard_button(1)
@@ -158,6 +166,7 @@ class DDD(Video, Light, RouteBase):
 
         # Samples
         self.open_samples()
+        samplesFX3Reverb.set('MetP', 'Gain', -18.0)
 
         # Vocals
         vocalsNano.set('normo_exclu', 'on')
@@ -252,6 +261,19 @@ class DDD(Video, Light, RouteBase):
 
         # rhode fade in
         # synths.set('ZNotSoRhodes', 'Amp', 'Gain', 0)
+        synths.set('MajorVocals', 'Amp', 'Gain', 0.5)
+
+        synthsFX1Reverb.set('Rhodes', 'Gain', -10.0)
+        synthsFX1Reverb.set('SynthsFX1Reverb', 'Mute', 0.0)
+
+
+        synthsFX3Delay.set('MajorVocals', 'Gain', -10.0)
+        synthsFX3Delay.set('SynthsFX3Delay', 'Mute', 0.0)
+        synthsFX3Delay.set('SynthsFX3Delay', 'Invada%20Delay%20Munge%20(mono%20in)', 'Delay%201', 0.203)
+        synthsFX3Delay.set('SynthsFX3Delay', 'Invada%20Delay%20Munge%20(mono%20in)', 'Feedback%201', 33)
+        synthsFX3Delay.set('SynthsFX3Delay', 'Invada%20Delay%20Munge%20(mono%20in)', 'Delay%202', 0.347)
+        synthsFX3Delay.set('SynthsFX3Delay', 'Invada%20Delay%20Munge%20(mono%20in)', 'Feedback%202', 29)
+
         # self.start_scene('sequences/rhode_fadein', lambda: [
         #     self.wait(2*4, 'beats'),
         #     synths.animate('ZNotSoRhodes', 'Amp', 'Gain', 0, 1, 2*4, 'beats')
@@ -274,6 +296,18 @@ class DDD(Video, Light, RouteBase):
         # Samples
         self.open_samples()
 
+        samplesFX1Delay.set('BEP', 'Gain', -12.0)
+        samplesFX1Delay.set('SamplesFX1Delay', 'Mute', 0.0)
+        samplesFX1Delay.set('SamplesFX1Delay', 'GxMultiBandDelay', 'multiplier', 4)
+        samplesFX1Delay.set('SamplesFX1Delay', 'GxMultiBandDelay', 'DELAY3', 161)
+        samplesFX1Delay.set('SamplesFX1Delay', 'GxMultiBandDelay', 'FEEDBACK3', 96)
+
+        # Synths
+        synths.set('Z8bits', 'Amp', 'Gain', 0.5)
+
+        synthsFX4TapeDelay.set('Z8bits', 'Gain', -18)
+        synthsFX4TapeDelay.set('SynthsFX4TapeDelay', 'Mute', 0.0)
+
         # Vocals
         vocalsNano.set('normo_exclu', 'on')
         vocalsKesch.set('normo_exclu', 'on')
@@ -282,6 +316,17 @@ class DDD(Video, Light, RouteBase):
         # Keyboard
         jmjKeyboard.set_sound('ZTrumpets', boost=True)
 
+        # Séquences
+        self.start_sequence('couplet2_3_tapedelay', [
+            { # bar 1
+                1: lambda: synthsFX4TapeDelay.animate('SynthsFX4TapeDelay', 'Tape%20Delay%20Simulation', 'Tape%20speed%20(inches/sec%2C%201=normal)', None, 1, 0.1, 's')
+            },
+            {}, {}, {}, {}, {}, {},
+            { # bar 8
+                1: lambda: synthsFX4TapeDelay.animate('SynthsFX4TapeDelay', 'Tape%20Delay%20Simulation', 'Tape%20speed%20(inches/sec%2C%201=normal)', 1, 0.2, 4, 'b')
+            }
+        ])
+
     @pedalboard_button(7)
     def couplet2_freeze(self):
         self.pause_loopers()
@@ -289,14 +334,18 @@ class DDD(Video, Light, RouteBase):
 
         # Séquences
         seq192.select('solo', 'couplet2-break_zLow_dubstep')
+        seq192.select('on', 'couplet2-3_zHi_8bits')
 
         # Transport
         transport.start()
 
         self.start_scene('freeze', lambda: [
             postprocess.animate_pitch('*', 1, 0.2, 6, 'beats'),
+            synthsFX4TapeDelay.animate('SynthsFX4TapeDelay', 'Tape%20Delay%20Simulation', 'Tape%20speed%20(inches/sec%2C%201=normal)', 1, 0.2, 4, 'b'),
+            postprocess.set_filter('Synths', 600),
             self.wait(7, 'beats'),
             postprocess.animate_pitch('*', None, 1, 1, 'beats'),
+            postprocess.animate_filter('Synths', None, 20000, 0.75, 'beats'),
             self.wait_next_cycle(),
             self.couplet2_3()
         ])
