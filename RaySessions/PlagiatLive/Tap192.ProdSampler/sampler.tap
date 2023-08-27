@@ -604,13 +604,13 @@
         <instrument name="MariLouiz" minnote="68" maxnote="68" rootnote="68" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples1" volume="0.500000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
           <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2021/DDD/MariLouiz.wav" sampleRelative="../../../../Samples/So2021/DDD/MariLouiz.wav"/>
         </instrument>
-        <instrument name="Eagle" minnote="69" maxnote="69" rootnote="69" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples1" volume="0.500000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
+        <instrument name="Eagle" minnote="81" maxnote="81" rootnote="81" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples1" volume="0.500000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
           <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2021/DDD/Eagle.wav" sampleRelative="../../../../Samples/So2021/DDD/Eagle.wav"/>
         </instrument>
-        <instrument name="Triangle" minnote="70" maxnote="70" rootnote="70" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples1" volume="0.500000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
+        <instrument name="Triangle" minnote="69" maxnote="69" rootnote="69" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples1" volume="0.500000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
           <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2021/DDD/Triangle.wav" sampleRelative="../../../../Samples/So2021/DDD/Triangle.wav"/>
         </instrument>
-        <instrument name="Gnagna" minnote="71" maxnote="71" rootnote="71" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples1" volume="0.500000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
+        <instrument name="Gnagna" minnote="70" maxnote="70" rootnote="70" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples1" volume="0.500000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
           <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2021/DDD/Gnagna.wav" sampleRelative="../../../../Samples/So2021/DDD/Gnagna.wav"/>
         </instrument>
         <instrument name="Horns_E" minnote="21" maxnote="40" rootnote="28" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples1" volume="0.500000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
@@ -640,10 +640,10 @@
         <instrument name="AMoi2" minnote="80" maxnote="80" rootnote="80" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples1" volume="0.500000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
           <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2021/DDD/AMoi_2.wav" sampleRelative="../../../../Samples/So2021/DDD/AMoi_2.wav"/>
         </instrument>
-        <instrument name="BEP_Oooh" minnote="79" maxnote="79" rootnote="79" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples1" volume="0.500000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
+        <instrument name="BEP_Oooh" minnote="71" maxnote="71" rootnote="71" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples1" volume="0.500000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
           <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2021/DDD/BEP_Oooh.wav" sampleRelative="../../../../Samples/So2021/DDD/BEP_Oooh.wav"/>
         </instrument>
-        <instrument name="BEP_Violins" minnote="80" maxnote="80" rootnote="80" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples1" volume="0.500000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
+        <instrument name="BEP_Violins" minnote="72" maxnote="72" rootnote="72" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples1" volume="0.500000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
           <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2021/DDD/BEP_Violins.wav" sampleRelative="../../../../Samples/So2021/DDD/BEP_Violins.wav"/>
         </instrument>
       </kit>
