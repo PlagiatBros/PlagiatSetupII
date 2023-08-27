@@ -143,7 +143,7 @@ class RouteBase(Route):
         for name, mod in engine.modules.items():
 
             # Synths Pan
-            if name == 'Synths':
+            if name == 'Synths' or name == 'BassSynths':
                 for name in mod.submodules:
                     if 'Pan' in mod.submodules[name].parameters:
                         mod.submodules[name].set('Pan', 0.0)

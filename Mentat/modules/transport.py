@@ -59,6 +59,8 @@ class Transport(Module):
                 ]:
             self.engine.modules[mixer].set(strip, 'Invada%20Delay%20Munge%20(mono%20in)', 'Delay%201', 60./bpm*2) # half notes
             self.engine.modules[mixer].set(strip, 'Invada%20Delay%20Munge%20(mono%20in)', 'Delay%202', 60./bpm*2) # half notes
+            self.engine.modules[mixer].set(strip, 'Invada%20Delay%20Munge%20(mono%20in)', 'Feedback%201', 50) # half notes
+            self.engine.modules[mixer].set(strip, 'Invada%20Delay%20Munge%20(mono%20in)', 'Feedback%202', 50) # half notes            
 
         # Tape Delay Simulator
         for mixer, strip in [

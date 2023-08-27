@@ -73,11 +73,24 @@ class DDD(Video, Light, RouteBase):
         # Samples
         self.open_samples()
 
-        # synths
-        synthsFX2Delay.set('EasyClassical', 'Gain', -14.0)
-        synthsFX2Delay.set('SynthsFX2Delay', 'Mute', 0.0)
-        synthsFX2Delay.set('SynthsFX2Delay', 'GxMultiBandDelay', 'multiplier', 4)
-        synthsFX2Delay.set('SynthsFX2Delay', 'GxMultiBandDelay', 'feedback', 0.2)
+        # Synths
+        synths.set('EasyClassical', 'Amp', 'Gain', 0.9)
+        # synthsFX2Delay.set('EasyClassical', 'Gain', -14.0)
+        # synthsFX2Delay.set('SynthsFX2Delay', 'Mute', 0.0)
+        # synthsFX2Delay.set('SynthsFX2Delay', 'GxMultiBandDelay', 'multiplier', 4)
+        # synthsFX2Delay.set('SynthsFX2Delay', 'GxMultiBandDelay', 'feedback', 0.2)
+        synthsFX3Delay.set('EasyClassical', 'Gain', -10.0)
+        synthsFX3Delay.set('SynthsFX3Delay', 'Mute', 0.0)
+        synthsFX3Delay.set('SynthsFX3Delay', 'Invada%20Delay%20Munge%20(mono%20in)', 'Delay%201', 0.203)
+        synthsFX3Delay.set('SynthsFX3Delay', 'Invada%20Delay%20Munge%20(mono%20in)', 'Feedback%201', 33)
+        synthsFX3Delay.set('SynthsFX3Delay', 'Invada%20Delay%20Munge%20(mono%20in)', 'Delay%202', 0.347)
+        synthsFX3Delay.set('SynthsFX3Delay', 'Invada%20Delay%20Munge%20(mono%20in)', 'Feedback%202', 29)
+
+        # BassSynths
+        bassSynths.set('BassTrap2', 'Amp', 'Gain', 1)
+        bassSynths.set('BassBarkline', 'Amp', 'Gain', 0.9)
+        bassSynths.set('BassBoom', 'Amp', 'Gain', 0.8)
+
 
         # Vocals
         vocalsNano.set('normo_exclu', 'on')
