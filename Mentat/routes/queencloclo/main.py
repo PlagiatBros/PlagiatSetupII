@@ -50,8 +50,8 @@ class QueenCloclo(Video, Light, RouteBase):
         # samples.set('Trumpets', 'Mute', 0.0)
         samplesFX3Reverb.set('Violons', 'Gain', -10.0)
         samplesFX3Reverb.set('SamplesFX3Reverb', 'Mute', 0.0)
-        samplesFX5TapeDelay.set('Violons', 'Gain', -9.0)
-        samplesFX5TapeDelay.set('KJ', 'Gain', -9.0)
+        samplesFX5TapeDelay.set('Violons', 'Gain', -12.0)
+        samplesFX5TapeDelay.set('KJ', 'Gain', -12.0)
         samplesFX5TapeDelay.set('SamplesFX5TapeDelay', 'Mute', 0.0)
 
 
@@ -111,6 +111,12 @@ class QueenCloclo(Video, Light, RouteBase):
         # Séquences
         seq192.select('solo', 'alt_couplet_*')
 
+        # Synths
+        synths.set('ZDiploLike', 'Pan', 0.15)
+        synths.set('ZJestoProunk', 'Pan', -0.15)
+        synths.set('ZDiploLike', 'Amp', 'Gain', 0.85)
+        synths.set('ZJestoProunk', 'Amp', 'Gain', 0.85)
+
         # Transport
         transport.start()
 
@@ -128,6 +134,9 @@ class QueenCloclo(Video, Light, RouteBase):
         # Synths
         synths.set('SteelDrums', 'Pan', 0.3)
         synths.set('ZJestoProunk', 'Pan', -0.3)
+        synths.set('ZDiploLike', 'Amp', 'Gain', 0.85)
+        synths.set('ZJestoProunk', 'Amp', 'Gain', 0.85)
+        synths.set('SteelDrums', 'Amp', 'Gain', 0.85)
 
         # Samples
         self.open_samples()
@@ -157,8 +166,12 @@ class QueenCloclo(Video, Light, RouteBase):
         # Synths
         synths.set('TenorSax', 'Calf%20Mono%20Compressor', 'Bypass', 0.0)
         synths.set('TenorSax', 'Calf%20Multi%20Chorus', 'Active', 1.0)
-        synthsFX2Delay.set('ZDupieux', 'Gain', -6.0)
+        synths.set('ZDupieux', 'Amp', 'Gain', 0.9)
+        synths.set('TrapFifth', 'Amp', 'Gain', 0.45)
+        synthsFX2Delay.set('ZDupieux', 'Gain', -9.0)
         synthsFX2Delay.set('SynthsFX2Delay', 'Mute', 0.0)
+        synthsFX5Scape.set('ZDupieux', 'Gain', -4.0)
+        synthsFX5Scape.set('SynthsFX5Scape', 'Mute', 0.0)
 
         # Vocals
         vocalsKesch.set('normo_exclu', 'on')
@@ -238,7 +251,11 @@ class QueenCloclo(Video, Light, RouteBase):
         # Synths
         synths.set('SteelDrums', 'Pan', 0.3)
         synths.set('ZJestoProunk', 'Pan', -0.3)
-        synths.set('ZTrumpets', 'Amp', 'Gain', 0.5)
+        # synths.set('ZTrumpets', 'Amp', 'Gain', 0.5)
+        synths.set('ZDiploLike', 'Amp', 'Gain', 0.85)
+        synths.set('ZJestoProunk', 'Amp', 'Gain', 0.85)
+        synths.set('SteelDrums', 'Amp', 'Gain', 0.85)
+
 
         # Keyboards
         mk2Control.set_mode('cut_samples', 'cut_synths', 'cut_basssynths')
