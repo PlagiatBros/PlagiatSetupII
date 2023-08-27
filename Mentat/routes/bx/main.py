@@ -246,8 +246,10 @@ class BX(Video, Light, RouteBase):
         # Vocals
         # vocalsKesch.set('normo_exclu', 'on')
         vocalsKesch.set('gars_exclu', 'on')
+        vocalsKeschFX1Delay.set('active', 'on'),
         vocalsNano.set('normo_exclu', 'on')
         vocalsFeat.set('gars_exclu', 'on')
+        vocalsFeatFX1Delay.set('active', 'on'),
 
 
     @mk2_button(3)
@@ -285,8 +287,10 @@ class BX(Video, Light, RouteBase):
         vocalsKesch.set('normo_exclu', 'on')
         vocalsFeat.set('normo_exclu', 'on')
 
+        # Synths
         synthsFX2Delay.set('Trap', 'Gain', -14.0)
         synthsFX2Delay.set('SynthsFX2Delay', 'Mute', 0.0)
+
 
 
     @mk2_button(4, 'purple')
@@ -326,8 +330,17 @@ class BX(Video, Light, RouteBase):
         # Keyboard
         jmjKeyboard.set_sound('ZTrumpets', boost=True)
 
-        synthsFX2Delay.set('Trap', 'Gain', -14.0)
+        synths.set('EasyClassical', 'Amp', 'Gain', 0.35)
+        synthsFX1Reverb.set('EasyClassical', 'Gain', -2.5)
+        synthsFX1Reverb.set('SynthsFX1Reverb', 'Mute', 0.0)
+
+        synthsFX2Delay.set('EasyClassical', 'Gain', -9.0)
         synthsFX2Delay.set('SynthsFX2Delay', 'Mute', 0.0)
+        synthsFX2Delay.set('SynthsFX2Delay', 'GxMultiBandDelay', 'multiplier', 1.5),
+
+        # BassSynths
+        synths.set('BassTrap2', 'Amp', 'Gain', 0.8)
+
 
         # Séquences
         self.start_sequence('sequence/trap', [
@@ -339,6 +352,7 @@ class BX(Video, Light, RouteBase):
             {},
             {}
         ], loop=True)
+
 
 
     @pedalboard_button(5)
@@ -359,6 +373,7 @@ class BX(Video, Light, RouteBase):
         self.open_samples()
         samplesFX2Delay.set('GuitarCrunch', 'Gain', -18.0)
         samplesFX2Delay.set('SamplesFX2Delay', 'Mute', 0.0)
+
 
         # Vocals
         vocalsNano.set('meuf_exclu', 'on')
@@ -401,6 +416,17 @@ class BX(Video, Light, RouteBase):
         # Samples
         self.open_samples()
 
+        samples.set('Shamisen', 'Gain', -12.25)
+
+        samplesFX6Scape.set('Shamisen', 'Gain', -5.5)
+        samplesFX6Scape.set('SamplesFX6Scape', 'Mute', 0.0)
+
+        samplesFX4Autofilter.set('Shamisen', 'Gain', -1)
+        samplesFX4Autofilter.set('SamplesFX4Autofilter', 'Mute', 0.0)
+
+        samplesFX7Degrade.set('Shamisen', 'Gain', -9)
+        samplesFX7Degrade.set('SamplesFX7Degrade', 'Mute', 0.0)
+
         # Bass
         bassFX.set('distohi', 'on')
         bassFX.set('degrade', 'on')
@@ -419,8 +445,21 @@ class BX(Video, Light, RouteBase):
         jmjKeyboard.set_sound('ZTrumpets', boost=True)
 
         # Synths
+        synths.set('Trap', 'Amp', 'Gain', 0.7)
+        synths.set('TrapFifth', 'Amp', 'Gain', 0.7)
+        synths.set('EasyClassical', 'Amp', 'Gain', 0.8)
+        synths.set('ZDupieux', 'Amp', 'Gain', 0.6)
+
+        synths.set('Trap', 'Pan', -0.4)
+        synths.set('TrapFifth', 'Pan', 0.4)
+        synths.set('ZDupieux', 'Pan', -1)
+        synths.set('TenorSax', 'Pan', 1)
+
         synthsFX2Delay.set('Trap', 'Gain', -14.0)
         synthsFX2Delay.set('SynthsFX2Delay', 'Mute', 0.0)
+
+        synthsFX3Delay.set('Trumpets', 'Gain', -6.0)
+        synthsFX3Delay.set('SynthsFX3Delay', 'Mute', 0.0)
 
         # Séquences
         self.start_sequence('sequence/bx_theme_hiSynths', [
