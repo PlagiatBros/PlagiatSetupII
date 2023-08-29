@@ -183,6 +183,16 @@ class RouteBase(Route):
                 mod.set('correction', 1)
 
 
+        for mixer, strip in [
+                ('SamplesFX1Delay', 'SamplesFX1Delay'),
+                ('SynthsFX2Delay', 'SynthsFX2Delay'),
+                ('VocalsNanoFX1Delay', 'VocalsNanoFX1Delay'),
+                ('VocalsKeschFX1Delay', 'VocalsKeschFX1Delay')
+                ]:
+
+            self.engine.modules[mixer].set(strip, 'GxMultiBandDelay', 'feedback', 0.5)
+
+
         samplesFX2Delay.set('SamplesFX2Delay', 'ReverseDelay', 'Wet', -70)
 
         postprocess.set_filter('*', 21600)

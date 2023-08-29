@@ -2,6 +2,7 @@
 # not needed if package is installed
 from sys import path, exit, argv
 from os.path import dirname
+import os
 import logging
 path.insert(0, dirname(__file__) + '/../src/mentat')
 
@@ -26,7 +27,18 @@ for name, mod in getmembers(routes):
         engine.add_route(mod)
 
 # set default route
-engine.set_route('IfIHadAHummer')
+def keeproute(route):
+    os.environ['MENTAT_ROUTE'] = str(route.name)
+engine.add_event_callback('route_changed', keeproute)
+if engine.restarted and os.getenv('MENTAT_ROUTE') is not None:
+    engine.set_route(os.getenv('MENTAT_ROUTE'))
+    engine.start_scene('restarted', lambda:[
+        engine.modules['ConstantSampler'].send('/instrument/play', 's:Plagiat/ConstantKit/BoringBloke', 40),
+        engine.wait(0.6, 's'),
+        engine.modules['ConstantSampler'].send('/instrument/stop', 's:Plagiat/ConstantKit/BoringBloke')
+    ])
+else:
+    engine.set_route('IfIHadAHummer')
 
 #################################################################
 #################################################################

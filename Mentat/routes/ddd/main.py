@@ -64,6 +64,37 @@ class DDD(Video, Light, RouteBase):
         transport.stop()
 
 
+    @pedalboard_button(11)
+    def preintro(self):
+        """
+        PREINTRO
+        """
+        self.pause_loopers()
+        self.reset()
+
+        # Sequences
+        seq192.select('solo', 'couplet1_samples_kotoshami')
+
+        # Transport
+        transport.start()
+
+        # Samples
+        self.open_samples()
+        samplesFX1Delay.set('Samples1', 'Gain', -18.0)
+        samplesFX1Delay.set('SamplesFX1Delay', 'Mute', 0.0)
+
+        # Vocals
+        vocalsNano.set('gars_exclu', 'on')
+        vocalsKesch.set('meuf_exclu', 'on')
+        vocalsFeat.set('normo_exclu', 'on')
+
+        # Keyboard
+        jmjKeyboard.set_sound('ZTrumpets', boost=True)
+
+
+
+
+
     @pedalboard_button(2)
     def intro(self):
         """
@@ -110,7 +141,7 @@ class DDD(Video, Light, RouteBase):
 
 
 
-    @mk2_button(2)
+    @mk2_button(2, 'cyan')
     def couplet1_1(self):
         """
         COUPLET 1-1 (Ass tonishing)
@@ -208,6 +239,7 @@ class DDD(Video, Light, RouteBase):
         bassFX.set('distohi', 'on')
 
 
+    @mk2_button(3, 'cyan')
     @pedalboard_button(5)
     def couplet2_1(self):
         """
@@ -234,7 +266,7 @@ class DDD(Video, Light, RouteBase):
         jmjKeyboard.set_sound('ZTrumpets', boost=True)
 
 
-    @mk2_button(3)
+    @mk2_button(4)
     def couplet2_2(self):
         """
         COUPLET 2_2 (chuis un @male deconstruit)
@@ -279,7 +311,8 @@ class DDD(Video, Light, RouteBase):
         #     synths.animate('ZNotSoRhodes', 'Amp', 'Gain', 0, 1, 2*4, 'beats')
         # ])
 
-    @pedalboard_button(6)
+    # @pedalboard_button(6)
+    @mk2_button(5, 'purple')
     def couplet2_3(self):
         """
         COUPLET 2_3 (let's go back)
@@ -339,7 +372,7 @@ class DDD(Video, Light, RouteBase):
         # Transport
         transport.start()
 
-        self.start_scene('freeze', lambda: [
+        self.start_scene('sequences/freeze', lambda: [
             postprocess.animate_pitch('*', 1, 0.2, 6, 'beats'),
             synthsFX4TapeDelay.animate('SynthsFX4TapeDelay', 'Tape%20Delay%20Simulation', 'Tape%20speed%20(inches/sec%2C%201=normal)', 1, 0.2, 4, 'b'),
             postprocess.set_filter('Synths', 600),
@@ -347,5 +380,5 @@ class DDD(Video, Light, RouteBase):
             postprocess.animate_pitch('*', None, 1, 1, 'beats'),
             postprocess.animate_filter('Synths', None, 20000, 0.75, 'beats'),
             self.wait_next_cycle(),
-            self.couplet2_3()
+            self.run(self.couplet2_3)
         ])

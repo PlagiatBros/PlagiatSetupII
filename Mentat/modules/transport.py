@@ -11,6 +11,8 @@ class Transport(Module):
 
         super().__init__(*args, **kwargs)
 
+        self.rolling = False
+
     def set_tempo(self, bpm):
         """
         Set tempo.
@@ -41,14 +43,8 @@ class Transport(Module):
                 ('VocalsKeschFX1Delay', 'VocalsKeschFX1Delay')
                 ]:
 
-            # self.engine.modules[mixer].set(strip, 'GxMultiBandDelay', 'DELAY1', bpm)
-            # self.engine.modules[mixer].set(strip, 'GxMultiBandDelay', 'DELAY2', bpm)
-            # self.engine.modules[mixer].set(strip, 'GxMultiBandDelay', 'DELAY3', bpm)
-            # self.engine.modules[mixer].set(strip, 'GxMultiBandDelay', 'DELAY4', bpm)
-            # self.engine.modules[mixer].set(strip, 'GxMultiBandDelay', 'DELAY5', bpm)
             self.engine.modules[mixer].set(strip, 'GxMultiBandDelay', 'bpm', bpm)
             self.engine.modules[mixer].set(strip, 'GxMultiBandDelay', 'multiplier', 1)
-            self.engine.modules[mixer].set(strip, 'GxMultiBandDelay', 'feedback', 0.5)
 
         # Invada Delay + Munge (Mono In)
         for mixer, strip in [
@@ -60,7 +56,7 @@ class Transport(Module):
             self.engine.modules[mixer].set(strip, 'Invada%20Delay%20Munge%20(mono%20in)', 'Delay%201', 60./bpm*2) # half notes
             self.engine.modules[mixer].set(strip, 'Invada%20Delay%20Munge%20(mono%20in)', 'Delay%202', 60./bpm*2) # half notes
             self.engine.modules[mixer].set(strip, 'Invada%20Delay%20Munge%20(mono%20in)', 'Feedback%201', 50) # half notes
-            self.engine.modules[mixer].set(strip, 'Invada%20Delay%20Munge%20(mono%20in)', 'Feedback%202', 50) # half notes            
+            self.engine.modules[mixer].set(strip, 'Invada%20Delay%20Munge%20(mono%20in)', 'Feedback%202', 50) # half notes
 
         # Tape Delay Simulator
         for mixer, strip in [

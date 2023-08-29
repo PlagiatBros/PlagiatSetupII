@@ -226,7 +226,7 @@ class BX(Video, Light, RouteBase):
         prodSampler.send('/instrument/play', 's:Plagiat/BX/Bx_Car')
 
         # Séquences
-        self.start_scene('keeping', lambda: [
+        self.start_scene('sequences/keeping', lambda: [
             self.wait(1,'b'),
             postprocess.animate_pitch('Synths', 1,0.2, 2.5, 'b'),
             self.wait(2.5, 'b'),
@@ -240,7 +240,7 @@ class BX(Video, Light, RouteBase):
             constantSampler.send('/instrument/play', 's:TimboYeah'),
             # vocalsKesch.set('normo_exclu', 'on'),
             self.wait(1,'b'),
-            self.couplet()
+            self.run(self.couplet)
         ])
 
         # Vocals
@@ -249,7 +249,7 @@ class BX(Video, Light, RouteBase):
         vocalsKeschFX1Delay.set('active', 'on'),
         vocalsNano.set('normo_exclu', 'on')
         vocalsFeat.set('gars_exclu', 'on')
-        vocalsFeatFX1Delay.set('active', 'on'),
+        # vocalsFeatFX1Delay.set('active', 'on'),
 
 
     @mk2_button(3)
@@ -263,11 +263,11 @@ class BX(Video, Light, RouteBase):
 
 
         # Séquences (Mentat)
-        self.start_scene('bx_heeee', lambda: [
+        self.start_scene('sequences/bx_heeee', lambda: [
             self.wait(3.6, 'beat'),
             prodSampler.send('/instrument/play', 's:Bx_Heee'),
             self.wait(0.4, 'b'),
-            self.pretrap()
+            self.run(self.pretrap)
         ])
 
         # Keyboards
@@ -568,14 +568,14 @@ class BX(Video, Light, RouteBase):
         synths.animate('ZStambul', 'Pan', 0.5, 0, 80, 's',  easing='linear-mirror', loop='true')
 
         # Séquences
-        self.start_scene('bx_whatif', lambda: [
+        self.start_scene('sequences/bx_whatif', lambda: [
             prodSampler.send('/instrument/play', 's:Bx_WhatIf'),
             self.wait(4, 'beat'), #bar 1
             self.wait(4, 'beat'), #bar 2
             self.wait(4, 'beat'), #bar 3
             vocalsKesch.set('normo_exclu', 'on'),
             self.wait(4, 'beat'), #bar 4
-            self.lickme_start()
+            self.run(self.lickme_start)
         ])
 
 
@@ -616,7 +616,7 @@ class BX(Video, Light, RouteBase):
         bassFX.set('bassscape', 'on')
 
         # Séquences
-        self.start_scene('start_lickme', lambda: [
+        self.start_scene('sequences/start_lickme', lambda: [
             self.wait(6*4, 'beat'),
             self.wait(2, 'beat'),
             self.wait(1.2, 'beat'),
@@ -625,7 +625,7 @@ class BX(Video, Light, RouteBase):
             self.wait(1, 'beat'),
             looper.record(0),
             self.wait_next_cycle(),
-            self.policeman_lick_me()
+            self.run(self.policeman_lick_me)
         ])
 
 
@@ -1062,12 +1062,12 @@ class BX(Video, Light, RouteBase):
         """
         TRAP STOP MANHOOKY (& du 4)
         """
-        self.start_scene('trap_stop_manhooky', lambda: [
+        self.start_scene('sequences/trap_stop_manhooky', lambda: [
             prodSampler.send('/instrument/play', 's:Bx_YouWontRaise'),
             self.wait_next_cycle(),
             seq192.select('off', '*'),
             self.wait_next_cycle(),
-            self.trap()
+            self.run(self.trap)
         ])
 
         jmjKeyboard.set_sound('ZDupieux')

@@ -33,7 +33,7 @@ class QueenCloclo(Video, Light, RouteBase):
         notes.set_notes(1, 1, 1, 0, 1, 1, 0, 1, 0, 1, 1, 0)
 
         # Mk2
-        mk2Control.set_mode('cut_samples', 'cut_synths')
+        mk2Control.set_mode('cut_basssynths')
 
         # Sample
         self.set_samples_aliases({

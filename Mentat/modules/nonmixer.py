@@ -236,8 +236,8 @@ class NonMixer(Module):
                         )
                         plug.add_parameter('feedback', None, types='f', default=0.5)
                         plug.add_mapping('feedback', ['FEEDBACK1', 'FEEDBACK2', 'FEEDBACK3', 'FEEDBACK4', 'FEEDBACK5'],
-                            transform=lambda feed: [feed * 100] * 5
-
+                            transform=lambda feed: [feed * 100] * 5,
+                            inverse=lambda f1, f2, f3, f4, f5: -1 if f1 != f2 or f2 != f3 or f3 != f4 or f4 != f5 else f1 / 100
                         )
 
     def check_init_done(self):

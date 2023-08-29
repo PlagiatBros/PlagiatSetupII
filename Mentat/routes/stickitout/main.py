@@ -220,13 +220,15 @@ class StickItOut(Video, Light, RouteBase):
 #        vocalsKesch.set('_exclu', 'on')
 
         # Sequences (Mentat)
-        self.start_scene('theme_launcher',
+        self.start_scene('sequences/theme_launcher',
         lambda: [
             self.wait_next_cycle(),
-            self.theme()
+            self.run(self.theme)
         ])
 
-    @pedalboard_button(6)
+
+    # @pedalboard_button(6)
+    @mk2_button(4)
     def couplet2(self):
         """
         COUPLET 2 (WANNA GET OFF)
@@ -383,9 +385,9 @@ class StickItOut(Video, Light, RouteBase):
         ], loop=True)
 
 
-        self.start_scene('theme_on_demand', lambda: [
+        self.start_scene('sequences/theme_on_demand', lambda: [
             self.wait(16),
-            self.theme_mesh(pitch=True)
+            self.run(self.theme_mesh, pitch=True)
         ])
 
     @pedalboard_button(9)
@@ -416,11 +418,11 @@ class StickItOut(Video, Light, RouteBase):
 #        vocalsKesch.set('_exclu', 'on')
 
         # Sequences (Mentat)
-        self.start_scene('theme_launcher',
-        lambda: [
-            self.wait_next_cycle(),
-            self.theme2()
-        ])
+        self.start_scene('sequences/theme_launcher',
+            lambda: [
+                self.wait_next_cycle(),
+                self.run(self.theme2)
+                ])
 
 
     def theme2(self):
