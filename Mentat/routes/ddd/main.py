@@ -119,6 +119,7 @@ class DDD(Video, Light, RouteBase):
         # synthsFX2Delay.set('SynthsFX2Delay', 'GxMultiBandDelay', 'multiplier', 4)
         # synthsFX2Delay.set('SynthsFX2Delay', 'GxMultiBandDelay', 'feedback', 0.2)
         synthsFX3Delay.set('EasyClassical', 'Gain', -10.0)
+        synthsFX3Delay.set('SynthsFX3Delay', 'AutoFilter', 'dsp/bypass', 0)
         synthsFX3Delay.set('SynthsFX3Delay', 'Mute', 0.0)
         synthsFX3Delay.set('SynthsFX3Delay', 'Invada%20Delay%20Munge%20(mono%20in)', 'Delay%201', 0.203)
         synthsFX3Delay.set('SynthsFX3Delay', 'Invada%20Delay%20Munge%20(mono%20in)', 'Feedback%201', 33)
@@ -300,6 +301,7 @@ class DDD(Video, Light, RouteBase):
 
 
         synthsFX3Delay.set('MajorVocals', 'Gain', -10.0)
+        synthsFX3Delay.set('SynthsFX3Delay', 'AutoFilter', 'dsp/bypass', 0)
         synthsFX3Delay.set('SynthsFX3Delay', 'Mute', 0.0)
         synthsFX3Delay.set('SynthsFX3Delay', 'Invada%20Delay%20Munge%20(mono%20in)', 'Delay%201', 0.203)
         synthsFX3Delay.set('SynthsFX3Delay', 'Invada%20Delay%20Munge%20(mono%20in)', 'Feedback%201', 33)

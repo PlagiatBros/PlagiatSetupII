@@ -113,7 +113,7 @@ class Transport(Module):
         for mixer, strip in [
                 ('SamplesFX4Autofilter', 'SamplesFX4Autofilter')
             ]:
-            self.engine.modules[mixer].set(strip, 'C%2A%20AutoFilter%20-%20Self-modulating%20resonant%20filter', 'rate', 60./bpm)
+            self.engine.modules[mixer].set(strip, 'AutoFilter', 'rate', 60./bpm)
 
         # Zam Delay
         for mixer, strip in [

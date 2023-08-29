@@ -269,7 +269,8 @@ class NonMixer(Module):
         'Aux%20(B)': 'Aux-B',
         'Aux%20(C)': 'Aux-C',
         'Aux%20(D)': 'Aux-D',
-        'Amplifier%20(Mono)': 'Amp'
+        'Amplifier%20(Mono)': 'Amp',
+        'C%2A%20AutoFilter%20-%20Self-modulating%20resonant%20filter': 'AutoFilter'
     }
 
     parameter_aliases = {
