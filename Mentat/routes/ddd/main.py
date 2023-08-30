@@ -64,7 +64,7 @@ class DDD(Video, Light, RouteBase):
         transport.stop()
 
 
-    @pedalboard_button(11)
+    @pedalboard_button(10)
     def preintro(self):
         """
         PREINTRO
@@ -384,3 +384,12 @@ class DDD(Video, Light, RouteBase):
             self.wait_next_cycle(),
             self.run(self.couplet2_3)
         ])
+
+    @pedalboard_button(11)
+    def tostickitout(self):
+        """
+        STICKITOUT
+        """
+        self.engine.set_route('StickItOut')
+        openstagecontrol.send('/gxtuner_modal', 1)
+        self.engine.active_route.intro()

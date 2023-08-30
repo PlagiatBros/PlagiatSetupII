@@ -874,6 +874,9 @@ class BX(Video, Light, RouteBase):
         vocalsFeat.set('normo_exclu', 'on')
         vocalsNano.set('normo_exclu', 'on')
 
+        for name in ['KeschMeuf', 'KeschNormo', 'KeschGars']:
+            self.engine.modules[name].set('correction', 1)
+
     @mk2_button(7, 'purple')
     def trapcouplet2(self):
         """

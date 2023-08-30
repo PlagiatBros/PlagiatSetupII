@@ -91,9 +91,6 @@ class QueenCloclo(Video, Light, RouteBase):
         synths.set('SteelDrums', 'Amp', 'Gain', 0.35)
         synths.set('SteelDrums', 'Pan', 0.3)
 
-        # Looper
-        looper.trigger(0)
-
         # Vocals
         vocalsKesch.set('normo_exclu', 'on')
         vocalsNano.set('normo_exclu', 'on')
@@ -257,9 +254,6 @@ class QueenCloclo(Video, Light, RouteBase):
         synths.set('SteelDrums', 'Amp', 'Gain', 0.85)
 
 
-        # Keyboards
-        mk2Control.set_mode('cut_samples', 'cut_synths', 'cut_basssynths')
-
         # Samples
         self.open_samples()
 
@@ -286,7 +280,6 @@ class QueenCloclo(Video, Light, RouteBase):
 
         # Keyboards
         jmjKeyboard.set_sound('TenorSax')
-        mk2Control.set_mode('cut_samples', 'cut_synths')
 
         # Vocals
         vocalsKesch.set('meuf_exclu', 'on')
@@ -313,7 +306,6 @@ class QueenCloclo(Video, Light, RouteBase):
 
         # Keyboards
         jmjKeyboard.set_sound('ZTrumpets')
-        mk2Control.set_mode('cut_samples', 'cut_synths')
 
 
     @pedalboard_button(10)
@@ -335,4 +327,3 @@ class QueenCloclo(Video, Light, RouteBase):
 
         # Keyboards
         jmjKeyboard.set_sound('ZBombarde')
-        mk2Control.set_mode('cut_samples', 'cut_synths')
