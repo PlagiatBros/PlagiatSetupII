@@ -339,7 +339,7 @@ class BX(Video, Light, RouteBase):
         synthsFX2Delay.set('SynthsFX2Delay', 'GxMultiBandDelay', 'multiplier', 1.5),
 
         # BassSynths
-        synths.set('BassTrap2', 'Amp', 'Gain', 0.8)
+        bassSynths.set('BassTrap2', 'Amp', 'Gain', 0.8)
 
 
         # Séquences
