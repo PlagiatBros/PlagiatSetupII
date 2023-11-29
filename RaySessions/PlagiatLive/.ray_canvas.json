@@ -6173,6 +6173,48 @@
       ],
       "flags": 0,
       "layout_mode": 0
+    },
+    {
+      "port_types_view": 31,
+      "group_name": "Fluid_MajorVocals",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        -2440,
+        2372
+      ],
+      "in_xy": [
+        400,
+        10781
+      ],
+      "out_xy": [
+        0,
+        10781
+      ],
+      "flags": 0,
+      "layout_mode": 0
+    },
+    {
+      "port_types_view": 31,
+      "group_name": "ecasound",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        1370,
+        7987
+      ],
+      "in_xy": [
+        400,
+        11848
+      ],
+      "out_xy": [
+        0,
+        11848
+      ],
+      "flags": 0,
+      "layout_mode": 0
     }
   ],
   "version": "0.14.0"
