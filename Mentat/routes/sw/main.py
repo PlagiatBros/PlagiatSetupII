@@ -372,7 +372,7 @@ class SW(Video, Light, RouteBase):
         """
 
         # Sequences
-        seq192.select('on', 'lambout')
+        seq192.select('on', 'lambout*')
 
     @mk2_button(4, 'blue')
     def vanhalen(self):
