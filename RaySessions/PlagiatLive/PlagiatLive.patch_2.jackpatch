@@ -1131,6 +1131,10 @@ Non-Mixer-XT.VocalsNanoFX9Scape (In):NanoGars/out-1 |> Non-Mixer-XT.VocalsNanoFX
 Non-Mixer-XT.VocalsNanoFX9Scape (In):NanoMeuf/out-1 |> Non-Mixer-XT.VocalsNanoFX9Scape (Process):VocalsNanoFX9Scape/in-1
 Non-Mixer-XT.VocalsNanoFX9Scape (In):NanoNormo/out-1 |> Non-Mixer-XT.VocalsNanoFX9Scape (Process):VocalsNanoFX9Scape/in-1
 Non-Mixer-XT.VocalsNanoFX9Scape (Process):VocalsNanoFX9Scape/out-1 |> Non-Mixer-XT.VocalsNano (Out):NanoOut/in-1
+Tap192.ConstantSampler:Kick-L            |> Non-Mixer-XT.Inputs (Inputs):Kick/in-1
+Tap192.ConstantSampler:OH-L              |> Non-Mixer-XT.Inputs (Inputs):OH-L/in-1
+Tap192.ConstantSampler:OH-R              |> Non-Mixer-XT.Inputs (Inputs):OH-R/in-1
+Tap192.ConstantSampler:Snare-L           |> Non-Mixer-XT.Inputs (Inputs):Snare/in-1
 Tap192.ConstantSampler:output-L          |> Non-Mixer-XT.Samples (Main):ConstantSampler/in-1
 Tap192.ConstantSampler:output-L          |> Non-Mixer-XT.SamplesFX1Delay (In):ConstantSampler/in-1
 Tap192.ConstantSampler:output-L          |> Non-Mixer-XT.SamplesFX2Delay (In):ConstantSampler/in-1

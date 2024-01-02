@@ -152,7 +152,10 @@ class SW(Video, Light, RouteBase):
             },
             {}, # bar 22
             { # bar 23 ("Despite")
-                1: lambda: seq192.select('solo', 'couplet1*')
+                1: lambda: [
+                    seq192.select('solo', 'couplet1*'),
+                    seq192.select('off', 'couplet1-1_csamples'),
+                    ]
             }
 
         ], loop=False)
@@ -380,8 +383,9 @@ class SW(Video, Light, RouteBase):
         self.reset()
 
         # Transport
-        transport.start()
         seq192.select('solo', 'dummy')
+        transport.start()
+
 
         # keyboards
         jmjKeyboard.set_sound('ZTrumpets', boost=True)

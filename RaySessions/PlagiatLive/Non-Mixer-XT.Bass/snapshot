@@ -32,7 +32,7 @@
 	JACK_Module 0x16 create :parameter_values "0.000000:1.000000" :is_default 1 :chain 0x15 :active 1
 	LADSPA_Plugin 0x9E create :plugin_id 1410 :plugin_ins 1 :plugin_outs 1 :parameter_values "350.000000:5600.000000:-51.000000:90.000000:680.000000:2001.000000:-90.000000:0.000000:0.000000" :is_default 0 :chain 0x15 :active 1
 	LV2_Plugin 0xD5 create :lv2_plugin_uri "http://calf.sourceforge.net/plugins/BassEnhancer" :plugin_ins 2 :plugin_outs 2 :custom_data "Calf_Bass_Enhancer.nDIPB" :is_default 0 :chain 0x15 :active 1
-	Gain_Module 0x17 create :parameter_values "-3.000000:0.000000:0.000000" :is_default 1 :chain 0x15 :active 1
+	Gain_Module 0x17 create :parameter_values "-6.000000:0.000000:0.000000" :is_default 1 :chain 0x15 :active 1
 	Meter_Module 0x18 create :is_default 1 :chain 0x15 :active 1
 	JACK_Module 0x19 create :parameter_values "2.000000:0.000000" :is_default 1 :chain 0x15 :active 1
 	Mixer_Strip 0x1D create :name "BassOut" :width "narrow" :tab "fader" :color 767528597 :gain_mode 0 :mute_mode 0 :group 0x7A :auto_input "" :manual_connection 0
