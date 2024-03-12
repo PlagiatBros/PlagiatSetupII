@@ -251,6 +251,8 @@ class BX(Video, Light, RouteBase):
         vocalsFeat.set('gars_exclu', 'on')
         # vocalsFeatFX1Delay.set('active', 'on'),
 
+        # Samples
+        #samples.set_lead()
 
     @mk2_button(3)
     def stop_basses(self):
@@ -271,7 +273,11 @@ class BX(Video, Light, RouteBase):
         ])
 
         # Keyboards
-        jmjKeyboard.set_sound('ZDupieux')
+        jmjKeyboard.set_sound('ZDupieux', lead=False)
+
+        # Samples
+        #samples.set_lead()
+
 
     # @mk2_button(3)
     def pretrap(self):
@@ -381,7 +387,7 @@ class BX(Video, Light, RouteBase):
         vocalsFeat.set('normo_exclu', 'on')
 
         # Keyboard
-        jmjKeyboard.set_sound('ZTrumpets', boost=False)
+        jmjKeyboard.set_sound('ZTrumpets', lead=True)
 
         synths.set('TrapFifth', 'Amp', 'Gain', 0.35)
         synths.set('TrapFifth', 'Pan', -0.33)
@@ -442,7 +448,7 @@ class BX(Video, Light, RouteBase):
         vocalsFeat.set('meuf', 'on')
 
         # Keyboard
-        jmjKeyboard.set_sound('ZTrumpets', boost=True)
+        jmjKeyboard.set_sound('ZTrumpets', lead=True)
 
         # Synths
         synths.set('Trap', 'Amp', 'Gain', 0.4)
@@ -602,6 +608,7 @@ class BX(Video, Light, RouteBase):
         # Synths
         synths.set('ZDiploLike', 'Pan', -0.15)
         synths.set('ZDiploLike', 'Amp', 'Gain', 0.8)
+        synths.set_lead()
 
         synthsFX1Reverb.set('ZDiploLike', 'Gain', -6.0)
         synthsFX1Reverb.set('SynthsFX1Reverb', 'Mute', 0.0)
@@ -610,6 +617,8 @@ class BX(Video, Light, RouteBase):
         synthsFX2Delay.set('SynthsFX2Delay', 'Mute', 0.0)
         synthsFX2Delay.set('SynthsFX2Delay', 'GxMultiBandDelay', 'feedback', 0.3)
 
+        # Samples
+        #samples.set_lead()
 
         # BassFX
         bassFX.set('zynwah', 'on')
@@ -645,6 +654,7 @@ class BX(Video, Light, RouteBase):
 
         # Samples
         self.open_samples_lickme()
+        #samples.set_lead()
 
         # Vocals
         vocalsNano.set('normo_exclu', 'on')
@@ -675,6 +685,8 @@ class BX(Video, Light, RouteBase):
 
         # Samples
         self.open_samples_lickme()
+        #samples.set_lead()
+
 
         # Vocals
         vocalsNano.set('normo_exclu', 'on')
@@ -720,9 +732,11 @@ class BX(Video, Light, RouteBase):
         samplesFX3Reverb.set('SamplesFX3Reverb', 'Mute', 0.0)
         samplesFX7Degrade.set('Samples5', 'Gain', -12)
         samplesFX7Degrade.set('SamplesFX7Degrade', 'Mute', 0.0)
+        #samples.set_lead('Samples5')
 
         # Synths
         synths.set('MajorVocals', 'Amp', 'Gain', 0.5)
+        synths.set_lead('MajorVocals')
 
         synthsFX1Reverb.set('MajorVocals', 'Gain', -9.0)
         synthsFX1Reverb.set('SynthsFX1Reverb', 'Mute', 0.0)
@@ -819,6 +833,7 @@ class BX(Video, Light, RouteBase):
 
         # Samples
         self.open_samples_lickme()
+        # samples.set_lead()
 
         # Vocals
         vocalsNano.set('normo_exclu', 'on')
@@ -828,6 +843,7 @@ class BX(Video, Light, RouteBase):
         # Synths
         synths.set("ZStambul", 'Pan', -0.15)
         synths.set('MajorVocals', 'Amp', 'Gain', 0.4)
+        synths.set_lead()
 
         synthsFX1Reverb.set('MajorVocals', 'Gain', -9.0)
         synthsFX1Reverb.set('SynthsFX1Reverb', 'Mute', 0.0)
@@ -865,6 +881,8 @@ class BX(Video, Light, RouteBase):
         # Séquence
         seq192.select('solo', 'dummy')
 
+        self.reset()
+
         # Transport
         self.pause_loopers()
         transport.start()
@@ -882,6 +900,8 @@ class BX(Video, Light, RouteBase):
         """
         COUPLET 2 TRAP (my bum is yo dashboard)
         """
+        self.reset()
+
         # Séquence
         seq192.select('solo', 'trap2*')
         seq192.select('on', 'trap_*Low*')
@@ -963,7 +983,7 @@ class BX(Video, Light, RouteBase):
 
 
         # Keyboard
-        jmjKeyboard.set_sound('ZOrgan')
+        jmjKeyboard.set_sound('ZOrgan', lead=False)
 
         # Bass
         bassFX.set('zynwah', 'on')
@@ -1025,41 +1045,6 @@ class BX(Video, Light, RouteBase):
 
         ], loop=False)
 
-    # def pretrap2(self): # INUTILE ?
-    #     """
-    #     PRE TRAP 2 (hands up hands up)
-    #     """
-    #     self.pause_loopers()
-    #     self.reset()
-    #
-    #     # Transport
-    #     transport.start()
-    #
-    #     # Samples
-    #     self.open_samples()
-    #
-    #     # Vocals
-    #     vocalsFeat.set('normo_exclu', 'on')
-    #     vocalsKesch.set('gars_exclu', 'on')
-    #     vocalsFeat.set('normo_exclu', 'on')
-    #
-    #
-    #     # Séquences
-    #     seq192.select('solo', 'pretrap_cLow_trap1')
-    #     seq192.select('on', 'pretrap_cHi_trap')
-    #
-    #
-    #     # Synths
-    #     synthsFX3Delay.set('Trap', 'Gain', -24)
-    #     synthsFX3Delay.set('SynthsFX3Delay', 'Mute', 0)
-    #
-    #     synthsFX5Scape.set('Trap', 'Gain', -3)
-    #     synthsFX5Scape.set('SynthsFX5Scape', 'Mute', 0)
-    #
-    #
-    #     # Keyboards
-    #     jmjKeyboard.set_sound('ZDupieux')
-
     @mk2_button(8, 'yellow')
     def pretrap_stop_manhooky(self):
         """
@@ -1073,7 +1058,8 @@ class BX(Video, Light, RouteBase):
             self.run(self.trap)
         ])
 
-        jmjKeyboard.set_sound('ZDupieux')
+        jmjKeyboard.set_sound('ZDupieux', lead="False")
+        #samples.set_lead()
 
     @mk2_button(9, 'cyan')
     def geouerz(self):
@@ -1086,7 +1072,7 @@ class BX(Video, Light, RouteBase):
         self.reset()
 
         # Keyboard
-        jmjKeyboard.set_sound('Charang')
+        jmjKeyboard.set_sound('Charang', lead=False)
 
 
     @mk2_button(10, 'cyan')

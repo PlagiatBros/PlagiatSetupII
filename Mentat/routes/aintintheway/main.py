@@ -84,6 +84,7 @@ class AintInTheWay(Video, Light, RouteBase):
         vocalsNano.set('normo_exclu', 'on')
         vocalsFeat.set('normo_exclu', 'on')
 
+
     @pedalboard_button(3)
     @mk2_button(3, 'purple')
     def refrain1(self):
@@ -140,7 +141,7 @@ class AintInTheWay(Video, Light, RouteBase):
         transport.start()
 
         # jmjKeyboard
-        jmjKeyboard.set_sound('ZTrumpets')
+        jmjKeyboard.set_sound('ZTrumpets', lead=False)
 
         # Vocals
         vocalsKesch.set('normo_exclu', 'on')
@@ -173,7 +174,7 @@ class AintInTheWay(Video, Light, RouteBase):
         transport.start()
 
         # Keyboard
-        jmjKeyboard.set_sound('ZTrumpets')
+        jmjKeyboard.set_sound('ZTrumpets', lead=True)
 
     @mk2_button(7)
     @pedalboard_button(7)
@@ -203,7 +204,7 @@ class AintInTheWay(Video, Light, RouteBase):
         synthsFX3Delay.set('SynthsFX3Delay', 'Mute', 0.0)
 
         # Keyboard
-        jmjKeyboard.set_sound('ZTrumpets')
+        jmjKeyboard.set_sound('ZTrumpets', lead=True)
 
         # Transport
         transport.set_tempo(180)
@@ -243,8 +244,6 @@ class AintInTheWay(Video, Light, RouteBase):
         vocalsFeat.set('normo_exclu', 'on')
 
 
-
-
     @pedalboard_button(8)
     def salsa(self):
         """
@@ -270,7 +269,7 @@ class AintInTheWay(Video, Light, RouteBase):
         transport.start()
 
         # jmjKeyboard
-        jmjKeyboard.set_sound('SteelDrum')
+        jmjKeyboard.set_sound('SteelDrum', lead=True)
 
         # Vocals
         vocalsKesch.set('normo_exclu', 'on')
@@ -299,4 +298,4 @@ class AintInTheWay(Video, Light, RouteBase):
 
 
         # jmjKeyboard
-        jmjKeyboard.set_sound('SteelDrum')
+        jmjKeyboard.set_sound('SteelDrum', lead=False)

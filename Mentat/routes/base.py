@@ -217,6 +217,13 @@ class RouteBase(Route):
             samples.set('Samples' + str(i), 'Mute', 1.0)
             samples.set('Samples' + str(i), 'Gain', 0)
 
+    def reset_leads(self):
+        """
+        Reset leads gain boosts
+        """
+        synths.set_lead()
+        # samples.set_lead(None)
+
     def pause_loopers(self):
         """
         Pause loopers and looped scenes (sequences)
@@ -232,6 +239,7 @@ class RouteBase(Route):
         """
         self.resetFX()
         self.resetSamples()
+        self.reset_leads()
 
         self.engine.set('cut', 'off')
 
