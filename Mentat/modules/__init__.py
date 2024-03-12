@@ -67,6 +67,7 @@ monitorsNano = NonMixer('MonitorsNano', 'osc', 10002)
 monitorsKesch = NonMixer('MonitorsKesch', 'osc', 10003)
 # (drums) 10004
 monitorsFeat = NonMixer('MonitorsFeat', 'osc', 10005)
+console = Console('Console', 'osc', 10006)
 
 bass = Bass('Bass', 'osc', 10010)
 bassFX = bassfx = BassFX('BassFX', 'osc', 10011)
