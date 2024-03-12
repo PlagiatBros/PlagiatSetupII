@@ -74,7 +74,7 @@ bassFX = bassfx = BassFX('BassFX', 'osc', 10011)
 
 bassSynths = NonMixer('BassSynths', 'osc', 10020)
 
-synths = NonMixer('Synths', 'osc', 10030)
+synths = Synths('Synths', 'osc', 10030)
 synthsFX1Reverb = NonMixer('SynthsFX1Reverb', 'osc', 10031)
 synthsFX2Delay = NonMixer('SynthsFX2Delay', 'osc', 10032)
 synthsFX3Delay = NonMixer('SynthsFX3Delay', 'osc', 10033)
