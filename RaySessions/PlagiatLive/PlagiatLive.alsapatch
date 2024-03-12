@@ -6,11 +6,6 @@ Joystick : out              |> seq192.MainSequencer : seq192 in
 Mentat : OpenStageControlKeyboardOut              |> JmjKeyboard : in
 
 
-JmjKeyboard : ZLow          |> loop192.MidiLooper : Loop 0
-JmjKeyboard : CLow          |> loop192.MidiLooper : Loop 1
-JmjKeyboard : ZHi           |> loop192.MidiLooper : Loop 2
-JmjKeyboard : CHi           |> loop192.MidiLooper : Loop 3
-JmjKeyboard : CHiSf         |> loop192.MidiLooper : Loop 4
 JmjKeyboard : ZLow          |> ZynAddSubFX.ZLowSynths : ZynAddSubFX
 JmjKeyboard : CLow          |> cLowBridge : playback
 JmjKeyboard : ZHi           |> ZynAddSubFX.ZHiSynths : ZynAddSubFX
@@ -34,11 +29,11 @@ Mentat : Mk2Control |>  Arturia MiniLab mkII : Arturia MiniLab mkII MIDI 1
 Arturia MiniLab mkII : Arturia MiniLab mkII MIDI 1  |> Mentat : Mk2Control
 Arturia MiniLab mkII : Arturia MiniLab mkII MIDI 1  |>  Mk2Keyboard : in
 
-Mk2Keyboard : ZLow          |> loop192.MidiLooper : Loop 0
-Mk2Keyboard : CLow          |> loop192.MidiLooper : Loop 1
-Mk2Keyboard : ZHi           |> loop192.MidiLooper : Loop 2
-Mk2Keyboard : CHi           |> loop192.MidiLooper : Loop 3
-Mk2Keyboard : CHiSf         |> loop192.MidiLooper : Loop 4
+# midi squatting
+MPKmini2 : MPKmini2 MIDI 1 |> Mk2Keyboard : in
+
+
+
 Mk2Keyboard : ZLow          |> ZynAddSubFX.ZLowSynths : ZynAddSubFX
 Mk2Keyboard : CLow          |> cLowBridge : playback
 Mk2Keyboard : ZHi           |> ZynAddSubFX.ZHiSynths : ZynAddSubFX
@@ -58,10 +53,47 @@ Mk2Keyboard : ProdSampler   |> Tap192.ProdSampler : midi_in
 MPKmini2 : MPKmini2 MIDI 1 |> Mentat : MpkControl
 Mentat : MpkControl |> MPKmini2 : MPKmini2 MIDI 1
 
+
+Mk2Keyboard : ZHi          |> loop192.MidiLooper : Loop 0
+Mk2Keyboard : ZLow          |> loop192.MidiLooper : Loop 1
+Mk2Keyboard : CHi           |> loop192.MidiLooper : Loop 2
+Mk2Keyboard : CLow           |> loop192.MidiLooper : Loop 3
+Mk2Keyboard : Fluid_Rhodes           |> loop192.MidiLooper : Loop 4
+Mk2Keyboard : Fluid_TenorSax           |> loop192.MidiLooper : Loop 5
+Mk2Keyboard : Fluid_Charang           |> loop192.MidiLooper : Loop 6
+Mk2Keyboard : Fluid_OrchestraHit           |> loop192.MidiLooper : Loop 7
+Mk2Keyboard : Fluid_SteelDrum           |> loop192.MidiLooper : Loop 8
+Mk2Keyboard : Fluid_MajorVocals           |> loop192.MidiLooper : Loop 9
+Mk2Keyboard : ProdSampler           |> loop192.MidiLooper : Loop 10
+Mk2Keyboard : ConstantSampler           |> loop192.MidiLooper : Loop 11
+
+JmjKeyboard : ZHi          |> loop192.MidiLooper : Loop 0
+JmjKeyboard : ZLow          |> loop192.MidiLooper : Loop 1
+JmjKeyboard : CHi           |> loop192.MidiLooper : Loop 2
+JmjKeyboard : CLow           |> loop192.MidiLooper : Loop 3
+JmjKeyboard : Fluid_Rhodes           |> loop192.MidiLooper : Loop 4
+JmjKeyboard : Fluid_TenorSax           |> loop192.MidiLooper : Loop 5
+JmjKeyboard : Fluid_Charang           |> loop192.MidiLooper : Loop 6
+JmjKeyboard : Fluid_OrchestraHit           |> loop192.MidiLooper : Loop 7
+JmjKeyboard : Fluid_SteelDrum           |> loop192.MidiLooper : Loop 8
+JmjKeyboard : Fluid_MajorVocals           |> loop192.MidiLooper : Loop 9
+JmjKeyboard : ProdSampler           |> loop192.MidiLooper : Loop 10
+JmjKeyboard : ConstantSampler           |> loop192.MidiLooper : Loop 11
+
+
 loop192.MidiLooper : Loop 0 |> ZynAddSubFX.ZLowSynths : ZynAddSubFX
-loop192.MidiLooper : Loop 1 |> cLowBridge : playback
-loop192.MidiLooper : Loop 2 |> ZynAddSubFX.ZHiSynths : ZynAddSubFX
-loop192.MidiLooper : Loop 3 |> MonoSynthMicroTonal : In
+loop192.MidiLooper : Loop 1 |> ZynAddSubFX.ZHiSynths : ZynAddSubFX
+loop192.MidiLooper : Loop 2 |> cLowBridge : playback
+loop192.MidiLooper : Loop 3 |> cHiBridge : playback
+loop192.MidiLooper : Loop 4          |> Fluid_Rhodes : Fluid_Rhodes
+loop192.MidiLooper : Loop 5        |> Fluid_TenorSax : Fluid_TenorSax
+loop192.MidiLooper : Loop 6        |> Fluid_Charang : Fluid_Charang
+loop192.MidiLooper : Loop 7    |> Fluid_OrchestraHit : Fluid_OrchestraHit
+loop192.MidiLooper : Loop 8       |> Fluid_SteelDrum : Fluid_SteelDrum
+loop192.MidiLooper : Loop 9       |> Fluid_MajorVocals : Fluid_MajorVocals
+loop192.MidiLooper : Loop 10       |> Fluid_MajorVocals : Fluid_MajorVocals
+loop192.MidiLooper : Loop 11       |> Fluid_MajorVocals : Fluid_MajorVocals
+
 
 seq192.MainSequencer : zynBass |> ZynAddSubFX.ZLowSynths : ZynAddSubFX
 seq192.MainSequencer : carlaBass |> cLowBridge : playback

@@ -193,3 +193,30 @@ class SooperLooper(Module):
             - `-1` to affect all loops
         """
         self.send('/sl/%s/hit' % i, 'trigger')
+
+
+    def reverse(self, i='-1'):
+        """
+        Reverse playback
+
+        **Parameters**
+
+        - `i`:
+            - loop number or
+            - osc pattern to affect multiple loops (examples: '[1,2,5]', '[2-5]'...)
+            - `-1` to affect all loops
+        """
+        self.send('/sl/%s/hit' % i, 'reverse')
+
+    def undo(self, i='-1'):
+        """
+        Undo
+
+        **Parameters**
+
+        - `i`:
+            - loop number or
+            - osc pattern to affect multiple loops (examples: '[1,2,5]', '[2-5]'...)
+            - `-1` to affect all loops
+        """
+        self.send('/sl/%s/hit' % i, 'undo')

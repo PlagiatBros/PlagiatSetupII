@@ -21,6 +21,8 @@ app.on('sessionOpened', (data, client)=>{
             receive('/SESSION/OPEN', __dirname + '/main.json', {clientId: client.id})
         } else if (client.address === '127.0.0.1') {
             receive('/SESSION/OPEN', __dirname + '/main.json', {clientId: client.id})
+        } else if (client.id.includes('chastitties')) {
+            receive('/SESSION/OPEN', __dirname + '/chastitties.json', {clientId: client.id})
         }
     } else {
         send_mentat('/OpenStageControl/call', 'send_state')

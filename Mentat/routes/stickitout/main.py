@@ -1,4 +1,4 @@
-from ..base import RouteBase, mk2_button, pedalboard_button
+from ..base import RouteBase, mk2_button, pedalboard_button, gui_button
 from .video import Video
 from .light import Light
 
@@ -56,6 +56,7 @@ class StickItOut(Video, Light, RouteBase):
 
         # Keyboards
         jmjKeyboard.set_sound('ZJestoProunk')
+        mk2Keyboard.set_sound('Mute')
 
         # Vocals
         vocalsNano.set('gars_exclu', 'on')
@@ -69,6 +70,9 @@ class StickItOut(Video, Light, RouteBase):
 
         looper.record(3)
 
+        # Bass
+        bass.set('BassDry', 'GxChorus-Stereo', 'BYPASS', 1)
+
 
     @mk2_button(2)
     def couplet1_1(self):
@@ -79,7 +83,7 @@ class StickItOut(Video, Light, RouteBase):
         self.reset()
 
         # Loopers
-        looper.trigger(0)
+        #looper.trigger(0)
 
         # Séquences
         seq192.select('solo', 'couplet1-0_*')
@@ -89,6 +93,10 @@ class StickItOut(Video, Light, RouteBase):
 
         # Keyboards
         jmjKeyboard.set_sound('ZJestoProunk')
+
+        # Bass
+        bassFX.set('zynwah', 'on')
+        bass.set('BassDry', 'GxChorus-Stereo', 'BYPASS', 1)
 
         # Vocals
         vocalsNano.set('gars_exclu', 'on')
@@ -165,6 +173,7 @@ class StickItOut(Video, Light, RouteBase):
         for name in ['KeschNormo', 'FeatNormo']:
             self.engine.set(name, 'correction', 0)
 
+
         # Synths
         synths.set('TrapFifth', 'Pan', -0.5)
         synths.set('ZDiploLike', 'Pan', 0.5)
@@ -212,6 +221,10 @@ class StickItOut(Video, Light, RouteBase):
         samplesFX3Reverb.set('SamplesFX3Reverb', 'Mute', 0.0)
         samplesFX2Delay.set('Samples[1-4]', 'Gain', -24.0)
         samplesFX2Delay.set('SamplesFX2Delay', 'Mute', 0.0)
+
+        # Bass
+        bass.set('BassDry', 'GxChorus-Stereo', 'BYPASS', 1)
+
 
         # Keyboards
         jmjKeyboard.set_sound("ZDupieux")
@@ -302,6 +315,17 @@ class StickItOut(Video, Light, RouteBase):
             }
         ], loop=False)
 
+        # Keyboards
+        jmjKeyboard.set_sound('ConstantSampler')
+        mk2Keyboard.set_sound('LowZ8bits')
+
+        # Samples
+        samplesFX3Reverb.set('SamplesFX3Reverb', 'Mute', 0.0)
+        samplesFX6Scape.set('SamplesFX6Scape', 'Mute', 0.0)
+        samplesFX7Degrade.set('SamplesFX7Degrade', 'Mute', 0.0)
+
+
+
     @pedalboard_button(8)
     def couplet2_final(self):
         """
@@ -348,6 +372,9 @@ class StickItOut(Video, Light, RouteBase):
 
         # Transport
         transport.start()
+
+        # Bass
+        bass.set('BassDry', 'GxChorus-Stereo', 'BYPASS', 1)
 
 
         # Vocals
@@ -490,6 +517,9 @@ class StickItOut(Video, Light, RouteBase):
         vocalsNano.set('gars_exclu', 'on')
         vocalsKesch.set('normo_exclu', 'on')
 
+        # Bass
+        bass.set('BassDry', 'GxChorus-Stereo', 'BYPASS', 1)
+
         # Keyboards
         jmjKeyboard.set_sound("ZDupieux")
 
@@ -529,3 +559,54 @@ class StickItOut(Video, Light, RouteBase):
             ], loop=True)
         else:
             bassfx.set('distohi', 'on')
+
+
+    @mk2_button(5)
+    def theme_2(self):
+        self.theme_mesh(True)
+
+    @mk2_button(6, 'yellow')
+    def organ(self):
+        self.stop()
+
+        # Keyboards
+        jmjKeyboard.set_sound("ZOrgan")
+
+
+
+
+    """
+    St Germain Controls
+    """
+    @gui_button(
+        type='fader',
+        html='Reverb (@{this}dB)',
+        horizontal=True,
+        design='compact',
+        address='/SamplesFX3Reverb/ConstantSampler',
+        preArgs='Gain',
+        range={'min':-70, 'max': 6})
+    def samples_reverb(self):
+        pass
+
+    @gui_button(
+        type='fader',
+        html='Scape (@{this}dB)',
+        horizontal=True,
+        design='compact',
+        address='/SamplesFX6Scape/ConstantSampler',
+        preArgs='Gain',
+        range={'min':-70, 'max': 6})
+    def samples_scape(self):
+        pass
+
+    @gui_button(
+        type='fader',
+        html='Degrade (@{this}dB)',
+        horizontal=True,
+        design='compact',
+        address='/SamplesFX7Degrade/ConstantSampler',
+        preArgs='Gain',
+        range={'min':-70, 'max': 6})
+    def samples_degrade(self):
+        pass

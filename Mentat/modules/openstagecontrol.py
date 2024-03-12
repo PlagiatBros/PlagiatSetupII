@@ -102,8 +102,11 @@ class OpenStageControl(Module):
             if route.name in m.__qualname__:
                 if hasattr(m, 'gui_button'):
                     subroute_data.append({
+                        'type': 'button',
+                        'mode': 'momentary',
                         'method': m.__name__,
                         'label': getdoc(m).split('\n')[0] if getdoc(m) else m.__name__,
+                        **m.gui_data
                     })
                 else:
                     btns = ''
@@ -465,7 +468,7 @@ class OpenStageControl(Module):
         self.engine.modules['Transport'].stop()
         self.engine.active_route.pause_loopers()
 
-    def route_method(self, name):
+    def route_method(self, name, *args):
         """
         Call method in active route that's linked to a pedalboard or mk2 button
         """
@@ -477,7 +480,7 @@ class OpenStageControl(Module):
                 elif hasattr(m, 'pedalboard_buttons'):
                     self.engine.active_route.route('osc', None, '/pedalBoard/button', list(m.pedalboard_buttons.keys())[:1])
                 elif hasattr(m, 'gui_button'):
-                    m()
+                    m(*args)
 
     def set_active_non_mixer(self, name):
         """
@@ -498,6 +501,7 @@ class OpenStageControl(Module):
             if state == 1:
                 self.send('/EDIT/MERGE', id, json.dumps({'widgets': self.plugin_modals[id].widgets}), '{"noWarning": true}')
                 self.send_state()
-                self.plugin_modals[id].plugin.enable_feedback()
+                # self.plugin_modals[id].plugin.enable_feedback()
             else:
-                self.plugin_modals[id].plugin.disable_feedback()
+                # self.plugin_modals[id].plugin.disable_feedback()
+                pass

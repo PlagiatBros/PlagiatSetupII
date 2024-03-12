@@ -112,6 +112,15 @@ vocalsKeschFX8TapeDelay = VocalsFX('VocalsKeschFX8TapeDelay', 'osc', 10068)
 vocalsKeschFX9Scape = VocalsFX('VocalsKeschFX9Scape', 'osc', 10069)
 
 vocalsFeat = Vocals('VocalsFeat', 'osc', 10070)
+vocalsFeatFX1Delay = VocalsFX('VocalsFeatFX1Delay', 'osc', 10071)
+vocalsFeatFX2Delay = VocalsFX('VocalsFeatFX2Delay', 'osc', 10072)
+vocalsFeatFX3TrapVerb = VocalsFX('VocalsFeatFX3TrapVerb', 'osc', 10073)
+vocalsFeatFX4Disint = VocalsFX('VocalsFeatFX4Disint', 'osc', 10074)
+vocalsFeatFX5RingMod = VocalsFX('VocalsFeatFX5RingMod', 'osc', 10075)
+vocalsFeatFX6Granular = VocalsFX('VocalsFeatFX6Granular', 'osc', 10076)
+vocalsFeatFX7Slice = VocalsFX('VocalsFeatFX7Slice', 'osc', 10077)
+vocalsFeatFX8TapeDelay = VocalsFX('VocalsFeatFX8TapeDelay', 'osc', 10078)
+vocalsFeatFX9Scape = VocalsFX('VocalsFeatFX9Scape', 'osc', 10079)
 
 """
 Samplers

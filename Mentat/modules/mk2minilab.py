@@ -147,6 +147,26 @@ class Mk2Control(Module):
                 # vx roll
                 self.engine.modules['VocalsNano'].set(self.voices[args[2] % 3], 'on')
 
+
+            if cc == 20:
+                # granular in
+                self.engine.modules['VocalsNanoFX6Granular'].set('NanoMeuf', 'Gain', 70 * args[2] / 127 - 70)
+                self.engine.modules['VocalsNanoFX6Granular'].set('NanoGars', 'Gain',70 * args[2] / 127 - 70)
+                self.engine.modules['VocalsNanoFX6Granular'].set('NanoNormo', 'Gain', 70 * args[2] / 127 - 70)
+                self.engine.modules['VocalsNanoFX6Granular'].set('pre', 'on' if args[2] != 0 else 'off')
+            if cc ==21:
+                self.engine.modules['VocalsNanoFX6Granular'].set('VocalsNanoFX6Granular', 'ZamGrains', 'Grains', 100*args[2] / 127 )
+            if cc ==22:
+                self.engine.modules['VocalsNanoFX6Granular'].set('VocalsNanoFX6Granular', 'ZamGrains', 'Grain%20Speed', 20*args[2] / 127-0.9 )
+            if cc ==23:
+                self.engine.modules['VocalsNanoFX6Granular'].set('VocalsNanoFX6Granular', 'ZamGrains', 'Play%20Speed', 20*args[2] / 127-0.9 )
+            if cc ==24:
+                self.engine.modules['VocalsNanoFX6Granular'].set('VocalsNanoFX6Granular', 'ZamGrains', 'Loop%20time', 1000*args[2] / 127-0.9 )
+            if cc ==12:
+                self.engine.modules['VocalsNanoFX6Granular'].set('VocalsNanoFX6Granular', 'ZamGrains', 'Freeze', 1 if args[2] > 64 else 0)
+
+
+
             if cc == 25:
                 self.logger.info('BassFX degrade %f' % (args[2] / 127))
                 self.engine.modules['BassFX'].set('BassDegrade', 'MDA%20Degrade', 'Rate',  args[2] / 127)

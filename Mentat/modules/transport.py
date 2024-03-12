@@ -40,7 +40,8 @@ class Transport(Module):
                 ('SamplesFX1Delay', 'SamplesFX1Delay'),
                 ('SynthsFX2Delay', 'SynthsFX2Delay'),
                 ('VocalsNanoFX1Delay', 'VocalsNanoFX1Delay'),
-                ('VocalsKeschFX1Delay', 'VocalsKeschFX1Delay')
+                ('VocalsKeschFX1Delay', 'VocalsKeschFX1Delay'),
+                ('VocalsFeatFX1Delay', 'VocalsFeatFX1Delay'),
                 ]:
 
             self.engine.modules[mixer].set(strip, 'GxMultiBandDelay', 'bpm', bpm)
@@ -51,7 +52,8 @@ class Transport(Module):
                 ('SamplesFX2Delay', 'SamplesFX2Delay'),
                 ('SynthsFX3Delay', 'SynthsFX3Delay'),
                 ('VocalsNanoFX2Delay', 'VocalsNanoFX2Delay'),
-                ('VocalsKeschFX2Delay', 'VocalsKeschFX2Delay')
+                ('VocalsKeschFX2Delay', 'VocalsKeschFX2Delay'),
+                ('VocalsFeatFX2Delay', 'VocalsFeatFX2Delay'),
                 ]:
             self.engine.modules[mixer].set(strip, 'Invada%20Delay%20Munge%20(mono%20in)', 'Delay%201', 60./bpm*2) # half notes
             self.engine.modules[mixer].set(strip, 'Invada%20Delay%20Munge%20(mono%20in)', 'Delay%202', 60./bpm*2) # half notes
@@ -64,7 +66,8 @@ class Transport(Module):
                 ('SamplesFX5TapeDelay', 'SamplesFX5TapeDelay'),
                 ('SynthsFX4TapeDelay', 'SynthsFX4TapeDelay'),
                 ('VocalsNanoFX8TapeDelay', 'VocalsNanoFX8TapeDelay'),
-                ('VocalsKeschFX8TapeDelay', 'VocalsKeschFX8TapeDelay')
+                ('VocalsKeschFX8TapeDelay', 'VocalsKeschFX8TapeDelay'),
+                ('VocalsFeatFX8TapeDelay', 'VocalsFeatFX8TapeDelay')
                 ]:
             self.engine.modules[mixer].set(strip, 'Tape%20Delay%20Simulation', 'Tap%201%20distance%20(inches)', 60./bpm)
             self.engine.modules[mixer].set(strip, 'Tape%20Delay%20Simulation', 'Tap%202%20distance%20(inches)', 2*60./bpm)
@@ -78,7 +81,8 @@ class Transport(Module):
                 ('SamplesFX6Scape', 'SamplesFX6Scape'),
                 ('SynthsFX5Scape', 'SynthsFX5Scape'),
                 ('VocalsNanoFX9Scape', 'VocalsNanoFX9Scape'),
-                ('VocalsKeschFX9Scape', 'VocalsKeschFX9Scape')
+                ('VocalsKeschFX9Scape', 'VocalsKeschFX9Scape'),
+                ('VocalsFeatFX9Scape', 'VocalsFeatFX9Scape')
                 ]:
             self.engine.modules[mixer].set(strip, 'Scape', 'bpm', bpm)
 
@@ -97,7 +101,8 @@ class Transport(Module):
         # Zam Grains
         for mixer, strip in [
                 ('VocalsNanoFX6Granular', 'VocalsNanoFX6Granular'),
-                ('VocalsKeschFX6Granular', 'VocalsKeschFX6Granular')
+                ('VocalsKeschFX6Granular', 'VocalsKeschFX6Granular'),
+                ('VocalsFeatFX6Granular', 'VocalsFeatFX6Granular'),
             ]:
             self.engine.modules[mixer].set(strip, 'ZamGrains', 'Grain%20Speed', bpm/120.)
             self.engine.modules[mixer].set(strip, 'ZamGrains', 'Play%20Speed', bpm/120.)
@@ -105,7 +110,8 @@ class Transport(Module):
         # Bitrot Repeater
         for mixer, strip in [
                 ('VocalsNanoFX7Slice', 'VocalsNanoFX7Slice'),
-                ('VocalsKeschFX7Slice', 'VocalsKeschFX7Slice')
+                ('VocalsKeschFX7Slice', 'VocalsKeschFX7Slice'),
+                ('VocalsFeatFX7Slice', 'VocalsFeatFX7Slice'),
             ]:
             self.engine.modules[mixer].set(strip, 'Bitrot%20Repeat', 'BPM', bpm)
 

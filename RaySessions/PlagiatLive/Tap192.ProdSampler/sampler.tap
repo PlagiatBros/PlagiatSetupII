@@ -363,15 +363,6 @@
         <instrument name="Hink" minnote="55" maxnote="55" rootnote="55" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples4" volume="0.400000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
           <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2021/StickItOut/Hink.flac" sampleRelative="../../../../Samples/So2021/StickItOut/Hink.flac"/>
         </instrument>
-        <instrument name="Jajaja_Intro" minnote="12" maxnote="12" rootnote="12" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples5" volume="0.400000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
-          <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2021/StickItOut/jajaja_b_intro.flac" sampleRelative="../../../../Samples/So2021/StickItOut/jajaja_b_intro.flac"/>
-        </instrument>
-        <instrument name="Jajaja_Bourvil" minnote="13" maxnote="13" rootnote="13" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples5" volume="0.400000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
-          <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2021/StickItOut/jajaja_b.flac" sampleRelative="../../../../Samples/So2021/StickItOut/jajaja_b.flac"/>
-        </instrument>
-        <instrument name="Jajaja_Busta" minnote="14" maxnote="14" rootnote="14" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples5" volume="0.400000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
-          <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2021/StickItOut/jajaja_br.flac" sampleRelative="../../../../Samples/So2021/StickItOut/jajaja_br.flac"/>
-        </instrument>
       </kit>
       <kit name="IfIHadAHummer" volume="1.000000">
         <instrument name="Gtr_Refrain" minnote="60" maxnote="60" rootnote="60" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples1" volume="1.000000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">

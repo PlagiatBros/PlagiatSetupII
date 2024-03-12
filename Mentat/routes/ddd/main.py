@@ -89,7 +89,7 @@ class DDD(Video, Light, RouteBase):
         vocalsFeat.set('normo_exclu', 'on')
 
         # Keyboard
-        jmjKeyboard.set_sound('ZTrumpets', boost=True)
+        jmjKeyboard.set_sound('ZDre')
 
 
 
@@ -289,6 +289,9 @@ class DDD(Video, Light, RouteBase):
         vocalsKesch.set('normo_exclu', 'on')
         vocalsFeat.set('normo_exclu', 'on')
 
+        vocalsFeatFX3TrapVerb.set('pre', 'on')
+
+
         # Keyboard
         jmjKeyboard.set_sound('ZTrumpets', boost=True)
 
@@ -313,8 +316,34 @@ class DDD(Video, Light, RouteBase):
         #     synths.animate('ZNotSoRhodes', 'Amp', 'Gain', 0, 1, 2*4, 'beats')
         # ])
 
-    # @pedalboard_button(6)
+    @pedalboard_button(7)
+    def couplet2_2_bassoff(self):
+        seq192.select('off', 'couplet2-2_cLow_trap1')
+        vocalsKeschFX5RingMod.set('pre', 'on')
+        vocalsKeschFX5RingMod.set('Kesch*', 'Gain', -8)
+
     @mk2_button(5, 'purple')
+    def couplet2_2_basson(self):
+        seq192.select('on', 'couplet2-2_cLow_trap1')
+
+    @pedalboard_button(8)
+    def couplet2_2_refrain(self):
+        self.couplet2_2()
+        seq192.select('off', 'couplet2-2_cLow_trap1')
+        seq192.select('on', 'basscake_couplet2-2_*')
+
+        vocalsKeschFX1Delay.set('pre', 'on')
+        vocalsKeschFX5RingMod.set('pre', 'on')
+        vocalsKeschFX5RingMod.set('KeschNormo', 'Gain',-8)
+
+        vocalsFeatFX3TrapVerb.set('pre', 'on')
+        # Ring Mod sur voix
+
+        jmjKeyboard.set_sound('ZDre')
+
+
+    # @pedalboard_button(6)
+    @mk2_button(6, 'purple')
     def couplet2_3(self):
         """
         COUPLET 2_3 (let's go back)
@@ -362,7 +391,7 @@ class DDD(Video, Light, RouteBase):
             }
         ])
 
-    @pedalboard_button(7)
+    @pedalboard_button(9)
     def couplet2_freeze(self):
         self.pause_loopers()
         self.reset()
@@ -384,6 +413,19 @@ class DDD(Video, Light, RouteBase):
             self.wait_next_cycle(),
             self.run(self.couplet2_3)
         ])
+
+    @mk2_button(8, 'purple')
+    def refrain_bis(self):
+        """
+        Refrain
+        """
+        looper.record_on_start('[7,8]')
+        self.refrain()
+        self.start_scene('sequences/refrain_vxloop', lambda: [
+            self.wait(15, 'beats'),
+            looper.record('[7,8]'),
+        ])
+
 
     @pedalboard_button(11)
     def tostickitout(self):

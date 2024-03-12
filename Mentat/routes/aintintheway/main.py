@@ -8,6 +8,12 @@ class AintInTheWay(Video, Light, RouteBase):
     """
     Ain't In The Way
     """
+    def set_notes(self, beachboys=False):
+        if beachboys:
+            notes.set_notes(1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 0)
+        else:
+            notes.set_notes(1, 1, 1, 1, 1, 1, 0, 1, 0, 1, 1, 0)
+
 
     def activate(self):
         """
@@ -29,7 +35,7 @@ class AintInTheWay(Video, Light, RouteBase):
         microtonality.set_tuning(0, 0, 0, 0.35, 0, 0, 0, 0, 0, 0, 0.35, 0)
 
         # Autotuner Notes
-        notes.set_notes(1, 1, 1, 1, 1, 1, 0, 1, 0, 1, 1, 0)
+        self.set_notes()
 
         # Mk2
         mk2Control.set_mode('cut_samples', 'cut_synths')
@@ -58,6 +64,8 @@ class AintInTheWay(Video, Light, RouteBase):
         """
         INTRO
         """
+        self.set_notes()
+
         self.pause_loopers()
         self.reset()
 
@@ -82,6 +90,9 @@ class AintInTheWay(Video, Light, RouteBase):
         """
         REFRAIN 1 (run bass 2e cycle)
         """
+        self.set_notes()
+
+
         self.pause_loopers()
         self.reset()
 
@@ -172,6 +183,8 @@ class AintInTheWay(Video, Light, RouteBase):
         """
         self.pause_loopers()
         self.reset()
+
+        self.set_notes(True)
 
         # Séquences
         seq192.select('solo', 'theme_*')

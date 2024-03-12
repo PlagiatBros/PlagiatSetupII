@@ -51,9 +51,12 @@ class gui_button():
     Decorator for route methods that can be called directly
     from gui buttons
     """
+    def __init__(self, **data):
+        self.data = data
     def __call__(self, method):
         if not hasattr(method, 'index'):
             global method_index
+            method.gui_data = dict(self.data)
             method.index = method_index
             method_index += 1
         method.gui_button = True
@@ -136,6 +139,8 @@ class RouteBase(Route):
         """
         # BassFX
         bassFX.reset('BassDegrade', 'MDA%20Degrade', 'rate')
+        bass.set('BassDry', 'GxChorus-Stereo', 'BYPASS', 0)
+
         for name in bassFX.meta_parameters:
             bassFX.set(name, 'off')
 
@@ -170,6 +175,8 @@ class RouteBase(Route):
                     # Ins
                     mod.set('Samples' + str(i), 'Gain', -70.0)
 
+                mod.set('ConstantSampler', 'Gain', -70.0)
+
                 # Outs
                 mod.set(name, 'Mute', 1.0)
 
@@ -178,6 +185,8 @@ class RouteBase(Route):
                 mod.set('pre', 'off')
                 v = 'Nano' if 'Nano' in name else 'Kesch'
                 mod.set('%sAB' % v, 'Mute', 1)
+            elif 'VocalsFeatFX' in name:
+                mod.set('pre', 'off')
 
             elif name in ['NanoMeuf', 'NanoNormo', 'NanoGars', 'KeschMeuf', 'KeschNormo', 'KeschGars',  'FeatMeuf', 'FeatNormo', 'FeatGars']:
                 mod.set('correction', 1)
@@ -187,7 +196,8 @@ class RouteBase(Route):
                 ('SamplesFX1Delay', 'SamplesFX1Delay'),
                 ('SynthsFX2Delay', 'SynthsFX2Delay'),
                 ('VocalsNanoFX1Delay', 'VocalsNanoFX1Delay'),
-                ('VocalsKeschFX1Delay', 'VocalsKeschFX1Delay')
+                ('VocalsKeschFX1Delay', 'VocalsKeschFX1Delay'),
+                ('VocalsFeatFX1Delay', 'VocalsFeatFX1Delay')
                 ]:
 
             self.engine.modules[mixer].set(strip, 'GxMultiBandDelay', 'feedback', 0.5)
