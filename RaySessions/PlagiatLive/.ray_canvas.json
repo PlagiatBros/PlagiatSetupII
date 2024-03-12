@@ -3140,8 +3140,8 @@
         0
       ],
       "in_xy": [
-        1963,
-        8559
+        1800,
+        8445
       ],
       "out_xy": [
         -6773,
@@ -3228,10 +3228,10 @@
         10309
       ],
       "out_xy": [
-        1230,
-        10370
+        1226,
+        10653
       ],
-      "flags": 116,
+      "flags": 100,
       "layout_mode": 0
     },
     {
@@ -3266,12 +3266,12 @@
         10046
       ],
       "in_xy": [
-        1246,
-        10431
+        1244,
+        10712
       ],
       "out_xy": [
-        1239,
-        10760
+        1233,
+        11038
       ],
       "flags": 68,
       "layout_mode": 10
@@ -6613,6 +6613,321 @@
         12392
       ],
       "flags": 4,
+      "layout_mode": 0
+    },
+    {
+      "port_types_view": 31,
+      "group_name": "Non-Mixer-XT.Console/Unnamed",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        -2440,
+        1620
+      ],
+      "in_xy": [
+        400,
+        12394
+      ],
+      "out_xy": [
+        0,
+        12394
+      ],
+      "flags": 0,
+      "layout_mode": 0
+    },
+    {
+      "port_types_view": 31,
+      "group_name": "Non-Mixer-XT.Console/Unnamed.1",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        -2440,
+        1688
+      ],
+      "in_xy": [
+        400,
+        12394
+      ],
+      "out_xy": [
+        0,
+        12394
+      ],
+      "flags": 0,
+      "layout_mode": 0
+    },
+    {
+      "port_types_view": 31,
+      "group_name": "Non-Mixer-XT.Console/Unnamed.2",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        -2440,
+        1756
+      ],
+      "in_xy": [
+        400,
+        12394
+      ],
+      "out_xy": [
+        0,
+        12394
+      ],
+      "flags": 0,
+      "layout_mode": 0
+    },
+    {
+      "port_types_view": 31,
+      "group_name": "Non-Mixer-XT.Console/Unnamed.3",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        -2440,
+        1824
+      ],
+      "in_xy": [
+        400,
+        12394
+      ],
+      "out_xy": [
+        0,
+        12394
+      ],
+      "flags": 0,
+      "layout_mode": 0
+    },
+    {
+      "port_types_view": 31,
+      "group_name": "Non-Mixer-XT.Console/Unnamed.4",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        -2440,
+        1892
+      ],
+      "in_xy": [
+        400,
+        12394
+      ],
+      "out_xy": [
+        0,
+        12394
+      ],
+      "flags": 0,
+      "layout_mode": 0
+    },
+    {
+      "port_types_view": 31,
+      "group_name": "Non-Mixer-XT.Console (Console)",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        1424,
+        8426
+      ],
+      "in_xy": [
+        400,
+        12394
+      ],
+      "out_xy": [
+        0,
+        12394
+      ],
+      "flags": 0,
+      "layout_mode": 0
+    },
+    {
+      "port_types_view": 31,
+      "group_name": "Non-Mixer-XT.Console/Unnamed.5",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        -2440,
+        1824
+      ],
+      "in_xy": [
+        400,
+        12394
+      ],
+      "out_xy": [
+        0,
+        12394
+      ],
+      "flags": 0,
+      "layout_mode": 0
+    },
+    {
+      "port_types_view": 31,
+      "group_name": "Non-Mixer-XT.Console/LeadSamples",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        -2440,
+        1892
+      ],
+      "in_xy": [
+        400,
+        12394
+      ],
+      "out_xy": [
+        0,
+        12394
+      ],
+      "flags": 0,
+      "layout_mode": 0
+    },
+    {
+      "port_types_view": 31,
+      "group_name": "Non-Mixer-XT.Console/Kick",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        -2379,
+        2480
+      ],
+      "in_xy": [
+        400,
+        12394
+      ],
+      "out_xy": [
+        0,
+        12394
+      ],
+      "flags": 0,
+      "layout_mode": 0
+    },
+    {
+      "port_types_view": 31,
+      "group_name": "Non-Mixer-XT.Console/FOH",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        -2379,
+        2548
+      ],
+      "in_xy": [
+        400,
+        12394
+      ],
+      "out_xy": [
+        0,
+        12394
+      ],
+      "flags": 0,
+      "layout_mode": 0
+    },
+    {
+      "port_types_view": 31,
+      "group_name": "Non-Mixer-XT.Outputs/Unnamed",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        -2440,
+        1620
+      ],
+      "in_xy": [
+        400,
+        12394
+      ],
+      "out_xy": [
+        0,
+        12394
+      ],
+      "flags": 0,
+      "layout_mode": 0
+    },
+    {
+      "port_types_view": 31,
+      "group_name": "Non-Mixer-XT.Outputs/Unnamed.1",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        -2440,
+        1750
+      ],
+      "in_xy": [
+        400,
+        12394
+      ],
+      "out_xy": [
+        0,
+        12394
+      ],
+      "flags": 0,
+      "layout_mode": 0
+    },
+    {
+      "port_types_view": 31,
+      "group_name": "Non-Mixer-XT.Outputs/Synths.1",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        -2440,
+        1756
+      ],
+      "in_xy": [
+        400,
+        12394
+      ],
+      "out_xy": [
+        0,
+        12394
+      ],
+      "flags": 0,
+      "layout_mode": 0
+    },
+    {
+      "port_types_view": 31,
+      "group_name": "Non-Mixer-XT.Console/Synths",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        -2440,
+        1818
+      ],
+      "in_xy": [
+        400,
+        12394
+      ],
+      "out_xy": [
+        0,
+        12394
+      ],
+      "flags": 0,
+      "layout_mode": 0
+    },
+    {
+      "port_types_view": 31,
+      "group_name": "Non-Mixer-XT.Console/Samples",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        -2440,
+        1896
+      ],
+      "in_xy": [
+        400,
+        12394
+      ],
+      "out_xy": [
+        0,
+        12394
+      ],
+      "flags": 0,
       "layout_mode": 0
     }
   ],

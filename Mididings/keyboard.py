@@ -170,16 +170,16 @@ def create_keyboard(name):
                 Scene('Z8bits',
                     z8bits
                 ),
-                Scene('CDubstepHorn',
+                Scene('DubstepHorn',
                     cDubstepHorn
                 ),
-                Scene('CTrap',
+                Scene('Trap',
                     cTrap
                 ),
-                Scene('CEasyClassical',
+                Scene('EasyClassical',
                     cEasyClassical
                 ),
-                Scene('CTrapFifth',
+                Scene('TrapFifth',
                     cTrapFifth
                 ),
                 Scene('Rhodes',
