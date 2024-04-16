@@ -206,6 +206,10 @@ class RouteBase(Route):
         samplesFX2Delay.set('SamplesFX2Delay', 'ReverseDelay', 'Wet', -70)
         synthsFX3Delay.set('SynthsFX3Delay', 'AutoFilter', 'dsp/bypass', 1)
 
+        vocalsNanoFX2Delay.set('Nano*', 'Gain', -15.0)
+        vocalsKeschFX2Delay.set('Kesch*', 'Gain', -15.0)
+        vocalsFeatFX2Delay.set('Feat*', 'Gain', -15.0)
+
         postprocess.set_filter('*', 21600)
         postprocess.set_pitch('*', 1)
 

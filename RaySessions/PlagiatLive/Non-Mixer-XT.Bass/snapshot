@@ -7,33 +7,36 @@
 	Mixer_Strip 0x1 create :name "BassIn" :width "narrow" :tab "signal" :color 1792906215 :gain_mode 0 :mute_mode 0 :group 0x79 :auto_input "" :manual_connection 0
 	Chain 0x2 create :strip 0x1 :tab "chain"
 	JACK_Module 0x3 create :parameter_values "0.000000:1.000000" :is_default 1 :chain 0x2 :active 1
-	LADSPA_Plugin 0x102 create :plugin_id 1042 :plugin_ins 1 :plugin_outs 1 :parameter_values "33.000000:0.000000" :is_default 0 :chain 0x2 :active 1
+	LADSPA_Plugin 0x102 create :plugin_id 1042 :plugin_ins 1 :plugin_outs 1 :parameter_values "1.000000:1.000000" :is_default 0 :chain 0x2 :active 0
 	Gain_Module 0x4 create :parameter_values "0.000000:0.000000:0.000000" :is_default 1 :chain 0x2 :active 1
 	Meter_Module 0x5 create :is_default 1 :chain 0x2 :active 1
 	JACK_Module 0x6 create :parameter_values "1.000000:0.000000" :is_default 1 :chain 0x2 :active 1
 	Mixer_Strip 0xE create :name "BassDry" :width "narrow" :tab "signal" :color 1883220457 :gain_mode 0 :mute_mode 0 :group 0x7 :auto_input "" :manual_connection 0
 	Chain 0xF create :strip 0xE :tab "chain"
 	JACK_Module 0x10 create :parameter_values "0.000000:1.000000" :is_default 1 :chain 0xF :active 1
-	LV2_Plugin 0xD6 create :lv2_plugin_uri "urn:ardour:a-eq" :plugin_ins 1 :plugin_outs 1 :parameter_values "160.000000:0.000000:220.000000:2.500000:1.700000:1200.000000:-8.500000:2.400000:5000.000000:4.000000:2.000000:7000.000000:2.000000:1.000000:9000.000000:0.000000:0.000000:1.000000:1.000000:1.000000:1.000000:1.000000:1.000000:1.000000:0.000000" :is_default 0 :chain 0xF :active 1
-	LV2_Plugin 0xD7 create :lv2_plugin_uri "http://invadarecords.com/plugins/lv2/compressor/mono" :plugin_ins 1 :plugin_outs 1 :parameter_values "0.000000:0.000000:0.000457:0.064585:-13.500000:7.400000:5.000000:0.000000:0.000000" :is_default 0 :chain 0xF :active 1
-	LV2_Plugin 0x126 create :lv2_plugin_uri "http://guitarix.sourceforge.net/plugins/gx_chorus_stereo#_chorus_stereo" :plugin_ins 2 :plugin_outs 2 :parameter_values "0.500000:0.020000:0.180000:1.200000:1.000000:0.000000" :is_default 0 :chain 0xF :active 1 :number 0
+	LV2_Plugin 0x14C create :lv2_plugin_uri "http://guitarix.sourceforge.net/plugins/gx_studiopre#studiopre" :plugin_ins 1 :plugin_outs 1 :parameter_values "1.000000:0.000000:0.000000:0.000000:0.000000:0.000000:1.000000" :is_default 0 :chain 0xF :active 0 :number 0
+	LV2_Plugin 0x14A create :lv2_plugin_uri "urn:ardour:a-eq" :plugin_ins 1 :plugin_outs 1 :parameter_values "120.000000:-11.000000:100.000000:7.000000:0.100000:1000.000000:0.000000:1.000000:2500.000000:0.000000:1.000000:4000.000000:1.000000:2.000000:9500.000000:-2.000000:0.000000:1.000000:1.000000:1.000000:1.000000:1.000000:1.000000:1.000000:0.000000" :is_default 0 :chain 0xF :active 1 :number 0
+	LV2_Plugin 0x14D create :lv2_plugin_uri "http://invadarecords.com/plugins/lv2/compressor/mono" :plugin_ins 1 :plugin_outs 1 :parameter_values "0.000000:0.000000:0.000010:0.001000:-17.000000:8.000000:2.000000:1.000000:0.000000" :is_default 0 :chain 0xF :active 1 :number 0
+	LV2_Plugin 0x126 create :lv2_plugin_uri "http://guitarix.sourceforge.net/plugins/gx_chorus_stereo#_chorus_stereo" :plugin_ins 2 :plugin_outs 2 :parameter_values "0.000000:0.000000:0.000000:1.000000:0.000000:0.000000" :is_default 0 :chain 0xF :active 1 :number 0
 	Gain_Module 0x11 create :parameter_values "0.000000:0.000000:0.000000" :is_default 1 :chain 0xF :active 1
 	Meter_Module 0x12 create :is_default 1 :chain 0xF :active 1
 	JACK_Module 0x13 create :parameter_values "2.000000:0.000000" :is_default 1 :chain 0xF :active 1
-	Mixer_Strip 0xE9 create :name "FBassDry" :width "narrow" :tab "fader" :color 778929041 :gain_mode 0 :mute_mode 0 :group 0x7 :auto_input "" :manual_connection 0
+	Mixer_Strip 0xE9 create :name "FBassDry" :width "narrow" :tab "signal" :color 778929041 :gain_mode 0 :mute_mode 0 :group 0x7 :auto_input "" :manual_connection 0
 	Chain 0xEA create :strip 0xE9 :tab "chain"
 	JACK_Module 0xEB create :parameter_values "0.000000:1.000000" :is_default 1 :chain 0xEA :active 1
-	LV2_Plugin 0xFD create :lv2_plugin_uri "urn:ardour:a-eq" :plugin_ins 1 :plugin_outs 1 :parameter_values "50.000000:-5.000000:220.000000:0.000000:1.700000:1200.000000:0.000000:2.400000:5000.000000:0.000000:2.000000:7000.000000:0.000000:1.000000:9000.000000:0.000000:0.000000:1.000000:1.000000:1.000000:1.000000:1.000000:1.000000:1.000000:0.000000" :is_default 0 :chain 0xEA :active 1
-	LV2_Plugin 0xFF create :lv2_plugin_uri "http://invadarecords.com/plugins/lv2/compressor/mono" :plugin_ins 1 :plugin_outs 1 :parameter_values "0.000000:0.000000:0.000457:0.064585:-9.000000:7.400000:5.000000:0.000000:0.000000" :is_default 0 :chain 0xEA :active 1
+	LV2_Plugin 0x140 create :lv2_plugin_uri "urn:ardour:a-eq" :plugin_ins 1 :plugin_outs 1 :parameter_values "160.000000:0.000000:220.000000:2.000000:1.000000:1200.000000:-8.000000:2.000000:5000.000000:4.000000:2.000000:7000.000000:2.000000:1.000000:9000.000000:0.000000:0.000000:1.000000:1.000000:1.000000:1.000000:1.000000:1.000000:1.000000:1.000000" :is_default 0 :chain 0xEA :active 0 :number 0
+	LV2_Plugin 0x144 create :lv2_plugin_uri "http://invadarecords.com/plugins/lv2/compressor/mono" :plugin_ins 1 :plugin_outs 1 :parameter_values "0.000000:0.000000:0.000010:0.001000:-13.000000:7.000000:5.000000:0.000000:1.000000" :is_default 0 :chain 0xEA :active 0 :number 0
+	LV2_Plugin 0x146 create :lv2_plugin_uri "http://guitarix.sourceforge.net/plugins/gx_chorus_stereo#_chorus_stereo" :plugin_ins 2 :plugin_outs 2 :parameter_values "0.000000:0.000000:0.000000:1.000000:0.000000:1.000000" :is_default 0 :chain 0xEA :active 0 :number 0
 	Gain_Module 0xEC create :parameter_values "0.000000:1.000000:0.000000" :is_default 1 :chain 0xEA :active 1
 	Meter_Module 0xED create :is_default 1 :chain 0xEA :active 1
-	JACK_Module 0xEE create :parameter_values "1.000000:0.000000" :is_default 1 :chain 0xEA :active 1
-	Mixer_Strip 0x14 create :name "BassSub" :width "narrow" :tab "fader" :color 92781688 :gain_mode 0 :mute_mode 0 :group 0x7 :auto_input "" :manual_connection 0
+	JACK_Module 0xEE create :parameter_values "2.000000:0.000000" :is_default 1 :chain 0xEA :active 1
+	Mixer_Strip 0x14 create :name "BassSub" :width "narrow" :tab "signal" :color 92781688 :gain_mode 0 :mute_mode 0 :group 0x7 :auto_input "" :manual_connection 0
 	Chain 0x15 create :strip 0x14 :tab "chain"
 	JACK_Module 0x16 create :parameter_values "0.000000:1.000000" :is_default 1 :chain 0x15 :active 1
 	LADSPA_Plugin 0x9E create :plugin_id 1410 :plugin_ins 1 :plugin_outs 1 :parameter_values "350.000000:5600.000000:-51.000000:90.000000:680.000000:2001.000000:-90.000000:0.000000:0.000000" :is_default 0 :chain 0x15 :active 1
 	LV2_Plugin 0xD5 create :lv2_plugin_uri "http://calf.sourceforge.net/plugins/BassEnhancer" :plugin_ins 2 :plugin_outs 2 :custom_data "Calf_Bass_Enhancer.nDIPB" :is_default 0 :chain 0x15 :active 1
-	Gain_Module 0x17 create :parameter_values "-6.000000:0.000000:0.000000" :is_default 1 :chain 0x15 :active 1
+	LV2_Plugin 0x14E create :lv2_plugin_uri "http://invadarecords.com/plugins/lv2/compressor/mono" :plugin_ins 1 :plugin_outs 1 :parameter_values "0.000000:0.000000:0.000010:0.001000:-14.000000:8.000000:0.000000:1.000000:0.000000" :is_default 0 :chain 0x15 :active 1 :number 0
+	Gain_Module 0x17 create :parameter_values "-3.000000:0.000000:0.000000" :is_default 1 :chain 0x15 :active 1
 	Meter_Module 0x18 create :is_default 1 :chain 0x15 :active 1
 	JACK_Module 0x19 create :parameter_values "2.000000:0.000000" :is_default 1 :chain 0x15 :active 1
 	Mixer_Strip 0x1D create :name "BassOut" :width "narrow" :tab "fader" :color 767528597 :gain_mode 0 :mute_mode 0 :group 0x7A :auto_input "" :manual_connection 0

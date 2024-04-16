@@ -29,7 +29,7 @@
 		pset:value 1.0
 	] , [
 		lv2:symbol "freq" ;
-		pset:value 110.0
+		pset:value 93.04644775
 	] , [
 		lv2:symbol "level_in" ;
 		pset:value 1.0
