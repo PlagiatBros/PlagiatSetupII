@@ -37,40 +37,40 @@
 	Mixer_Strip 0x1A create :name "BassSynths" :width "narrow" :tab "fader" :color 108896415 :gain_mode 0 :mute_mode 0 :group 0x7 :auto_input "" :manual_connection 0
 	Chain 0x1B create :strip 0x1A :tab "chain"
 	JACK_Module 0x1C create :parameter_values "0.000000:1.000000" :is_default 1 :chain 0x1B :active 1
-	Gain_Module 0x1D create :parameter_values "-4.000000:0.000000:0.000000" :is_default 1 :chain 0x1B :active 1
+	Gain_Module 0x1D create :parameter_values "-6.000000:0.000000:0.000000" :is_default 1 :chain 0x1B :active 1
 	Mono_Pan_Module 0x45 create :parameter_values "0.000000" :is_default 0 :chain 0x1B :active 1
 	Meter_Module 0x1E create :is_default 1 :chain 0x1B :active 1
 	JACK_Module 0x1F create :parameter_values "2.000000:0.000000" :is_default 1 :chain 0x1B :active 1
 	Mixer_Strip 0x20 create :name "Synths" :width "narrow" :tab "fader" :color 1530920787 :gain_mode 0 :mute_mode 0 :group 0x7 :auto_input "" :manual_connection 0
 	Chain 0x21 create :strip 0x20 :tab "chain"
 	JACK_Module 0x22 create :parameter_values "0.000000:2.000000" :is_default 1 :chain 0x21 :active 1
-	Gain_Module 0x23 create :parameter_values "-6.000000:0.000000:0.000000" :is_default 1 :chain 0x21 :active 1
+	Gain_Module 0x23 create :parameter_values "-12.000000:0.000000:0.000000" :is_default 1 :chain 0x21 :active 1
 	Meter_Module 0x24 create :is_default 1 :chain 0x21 :active 1
 	JACK_Module 0x25 create :parameter_values "2.000000:0.000000" :is_default 1 :chain 0x21 :active 1
 	Mixer_Strip 0x26 create :name "Samples" :width "narrow" :tab "fader" :color 365343733 :gain_mode 0 :mute_mode 0 :group 0x7 :auto_input "" :manual_connection 0
 	Chain 0x27 create :strip 0x26 :tab "chain"
 	JACK_Module 0x28 create :parameter_values "0.000000:2.000000" :is_default 1 :chain 0x27 :active 1
-	Gain_Module 0x29 create :parameter_values "-6.000000:0.000000:0.000000" :is_default 1 :chain 0x27 :active 1
+	Gain_Module 0x29 create :parameter_values "-15.000000:0.000000:0.000000" :is_default 1 :chain 0x27 :active 1
 	Meter_Module 0x2A create :is_default 1 :chain 0x27 :active 1
 	JACK_Module 0x2B create :parameter_values "2.000000:0.000000" :is_default 1 :chain 0x27 :active 1
 	Mixer_Strip 0x2C create :name "VocalsNano" :width "narrow" :tab "fader" :color 1483449133 :gain_mode 0 :mute_mode 0 :group 0x7 :auto_input "" :manual_connection 0
 	Chain 0x2D create :strip 0x2C :tab "chain"
 	JACK_Module 0x2E create :parameter_values "0.000000:1.000000" :is_default 1 :chain 0x2D :active 1
-	Gain_Module 0x2F create :parameter_values "-5.000000:0.000000:0.000000" :is_default 1 :chain 0x2D :active 1
+	Gain_Module 0x2F create :parameter_values "0.000000:0.000000:0.000000" :is_default 1 :chain 0x2D :active 1
 	Mono_Pan_Module 0x48 create :parameter_values "0.000000" :is_default 0 :chain 0x2D :active 1
 	Meter_Module 0x30 create :is_default 1 :chain 0x2D :active 1
 	JACK_Module 0x31 create :parameter_values "2.000000:0.000000" :is_default 1 :chain 0x2D :active 1
 	Mixer_Strip 0x32 create :name "VocalsKesch" :width "narrow" :tab "fader" :color 617922373 :gain_mode 0 :mute_mode 0 :group 0x7 :auto_input "" :manual_connection 0
 	Chain 0x33 create :strip 0x32 :tab "chain"
 	JACK_Module 0x34 create :parameter_values "0.000000:1.000000" :is_default 1 :chain 0x33 :active 1
-	Gain_Module 0x35 create :parameter_values "3.000000:0.000000:0.000000" :is_default 1 :chain 0x33 :active 1
+	Gain_Module 0x35 create :parameter_values "5.000000:0.000000:0.000000" :is_default 1 :chain 0x33 :active 1
 	Mono_Pan_Module 0x49 create :parameter_values "0.000000" :is_default 0 :chain 0x33 :active 1
 	Meter_Module 0x36 create :is_default 1 :chain 0x33 :active 1
 	JACK_Module 0x37 create :parameter_values "2.000000:0.000000" :is_default 1 :chain 0x33 :active 1
 	Mixer_Strip 0x13D create :name "VocalsFeat" :width "narrow" :tab "fader" :color 1567331918 :gain_mode 0 :mute_mode 0 :group 0x7 :auto_input "" :manual_connection 0
 	Chain 0x13E create :strip 0x13D :tab "chain"
 	JACK_Module 0x13F create :parameter_values "0.000000:1.000000" :is_default 1 :chain 0x13E :active 1
-	Gain_Module 0x140 create :parameter_values "3.000000:0.000000:0.000000" :is_default 1 :chain 0x13E :active 1
+	Gain_Module 0x140 create :parameter_values "0.000000:0.000000:0.000000" :is_default 1 :chain 0x13E :active 1
 	Meter_Module 0x141 create :is_default 1 :chain 0x13E :active 1
 	JACK_Module 0x142 create :parameter_values "1.000000:0.000000" :is_default 1 :chain 0x13E :active 1
 	Mixer_Strip 0x38 create :name "Ambiance" :width "narrow" :tab "fader" :color 129940977 :gain_mode 0 :mute_mode 0 :group 0x7 :auto_input "" :manual_connection 0
@@ -89,7 +89,7 @@
 	Mixer_Strip 0x137 create :name "SynthsBoost" :width "narrow" :tab "fader" :color 340701635 :gain_mode 0 :mute_mode 0 :group 0x7 :auto_input "" :manual_connection 0
 	Chain 0x138 create :strip 0x137 :tab "chain"
 	JACK_Module 0x139 create :parameter_values "0.000000:1.000000" :is_default 1 :chain 0x138 :active 1
-	Gain_Module 0x13A create :parameter_values "-6.000000:0.000000:0.000000" :is_default 1 :chain 0x138 :active 1
+	Gain_Module 0x13A create :parameter_values "-8.000000:0.000000:0.000000" :is_default 1 :chain 0x138 :active 1
 	Meter_Module 0x13B create :is_default 1 :chain 0x138 :active 1
 	JACK_Module 0x13C create :parameter_values "1.000000:0.000000" :is_default 1 :chain 0x138 :active 1
 }

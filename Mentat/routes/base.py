@@ -184,7 +184,7 @@ class RouteBase(Route):
             elif 'VocalsNanoFX' in name or 'VocalsKeschFX' in name:
                 mod.set('pre', 'off')
                 v = 'Nano' if 'Nano' in name else 'Kesch'
-                mod.set('%sAB' % v, 'Mute', 1)
+                # mod.set('%sAB' % v, 'Mute', 1)
             elif 'VocalsFeatFX' in name:
                 mod.set('pre', 'off')
 

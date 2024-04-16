@@ -8,7 +8,7 @@ class Vocals(NonMixer):
 
 
     def create_meta_parameters(self):
-        
+
         super().create_meta_parameters()
 
         strip_prefix = self.name[6:] # remove "Vocals" prefix
@@ -22,10 +22,12 @@ class Vocals(NonMixer):
                 strip_name = strip_prefix + name.capitalize()
                 ab_strip_name = strip_prefix + 'AB' + name.capitalize()
 
-                def getter(mute, ab_mute):
-                    if mute == 0.0 and ab_mute == 0.0:
+                def getter(mute
+                #, ab_mute
+                ):
+                    if mute == 0.0:# and ab_mute == 0.0:
                         return 'on'
-                    elif mute == 1.0 and ab_mute == 1.0:
+                    elif mute == 1.0:# and ab_mute == 1.0:
                         return 'off'
                     else:
                         return '?'
@@ -33,7 +35,7 @@ class Vocals(NonMixer):
                 def setter(state):
                     if state == 'on':
                         self.set(strip_name, 'Mute', 0.0)
-                        self.set(ab_strip_name, 'Mute', 0.0)
+                        # Gself.set(ab_strip_name, 'Mute', 0.0)
                         for vx in ['normo', 'gars', 'meuf']:
                             if vx != name:
                                 vx_strip_name = strip_prefix + vx.capitalize()
@@ -41,7 +43,7 @@ class Vocals(NonMixer):
                                 self.set(vx_strip_name, 'Aux-B', 'Gain', -70)
                     elif state == 'off':
                         self.set(strip_name, 'Mute', 1.0)
-                        self.set(ab_strip_name, 'Mute', 1.0)
+                        #self.set(ab_strip_name, 'Mute', 1.0)
 
                     for fx in fxs:
                         if fx.get('pre') == 'on' and fx.get('post') == 'on':
@@ -50,7 +52,9 @@ class Vocals(NonMixer):
 
                 self.add_meta_parameter(
                     name,
-                    [(strip_name, 'Mute'), (ab_strip_name, 'Mute')],
+                    # [ # auto backings virés
+                    (strip_name, 'Mute'),
+                    #, (ab_strip_name, 'Mute')],
                     getter,
                     setter
                 )

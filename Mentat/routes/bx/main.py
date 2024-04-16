@@ -72,60 +72,18 @@ class BX(Video, Light, RouteBase):
         transport.stop()
 
 
-    @pedalboard_button(2)
-    def intro(self):
+    @mk2_button(2)
+    def couplet1_tight(self):
         """
-        INTRO
-        """
-        self.pause_loopers()
-        self.reset()
-
-        # Sequences
-        seq192.select('solo', 'intro_*')
-
-        # Transport
-        transport.start()
-
-        # Samples
-        self.open_samples()
-
-        # Vocals
-        vocalsNano.set('normo_exclu', 'on')
-        vocalsKesch.set('meuf_exclu', 'on')
-        vocalsFeat.set('normo_exclu', 'on')
-
-        # Keyboard
-        jmjKeyboard.set_sound('ZTrumpets', boost=True)
-
-
-        # Synths
-        synths.set('Trap', 'Pan', -0.7)
-        synths.set('ZStambul', 'Pan', 0.5)
-        synths.set('EasyClassical', 'Pan', 0.3)
-
-        synths.set('Trap', 'Amp', 'Gain', 0.35)
-        synths.set('ZStambul', 'Amp', 'Gain', 0.65)
-        synths.set('EasyClassical', 'Amp', 'Gain', 0.55)
-
-        synthsFX2Delay.set('Trap', 'Gain', -14.0)
-        synthsFX2Delay.set('SynthsFX2Delay', 'Mute', 0.0)
-
-        synths.animate('Trap', 'Pan', -0.7, 0.7, 80, 's',  easing='linear-mirror', loop='true')
-        synths.animate('EasyClassical', 'Pan', 0.3, -0.1, 80, 's',  easing='linear-mirror', loop='true')
-        synths.animate('ZStambul', 'Pan', 0.5, 0, 80, 's',  easing='linear-mirror', loop='true')
-
-    @pedalboard_button(3)
-    def couplet(self):
-        """
-        COUPLET
+        COUPLET 1 TIGHT
+        Chastitties: What U Say & Grab the bully
         """
         self.pause_loopers()
         self.reset()
 
         # Sequences
-        seq192.select('solo', 'couplet_*')
-        seq192.select('off', 'couplet_*guitar*')
-
+        seq192.select('solo', 'couplet1_tight*')
+        seq192.select('off', 'couplet1_*guitar*')
 
         # Transport
         transport.start()
@@ -147,7 +105,7 @@ class BX(Video, Light, RouteBase):
         # Vocals
         vocalsNano.set('normo_exclu', 'on')
         vocalsFeat.set('normo_exclu', 'on')
-
+        vocalsKesch.set('normo_exclu', 'on')
 
         # Keyboard
         jmjKeyboard.set_sound('ZTrumpets', boost=True)
@@ -170,136 +128,253 @@ class BX(Video, Light, RouteBase):
 
 
         # BassSynths
-        bassSynths.set('TrapBass2', 'Amp', 'Gain', 0.9)
+        bassSynths.set('BassTrap2', 'Amp', 'Gain', 0.9)
         bassSynths.set('BassBarkline', 'Amp', 'Gain', 1)
         bassSynths.set('BassBoom', 'Amp', 'Gain', 0.8)
 
-        self.start_sequence('couplet1', [
-            {
-                4.5: lambda: postprocess.set_pitch('Samples', 0.8)
-            },
-            {
-                1: lambda: postprocess.animate_pitch('Samples', None, 1, 0.2, 'b')
-            },
-            {
-                3.5: lambda: postprocess.animate_pitch('Samples', None, 0.8, 0.5, 'b')
-            },
-            {
-                1: lambda: postprocess.animate_pitch('Samples', None, 1, 0.2, 'b')
-            },
-            {
-                4.5: lambda: postprocess.set_pitch('Samples', 0.8)
-            },
-            {
-                1: lambda: postprocess.animate_pitch('Samples', None, 1, 0.2, 'b')
-            },
-            {
-                3.5: lambda: postprocess.animate_pitch('Samples', None, 1.2, 0.5, 'b')
-            },
-            {
-                1: lambda: postprocess.animate_pitch('Samples', None, 1, 0.2, 'b')
-            },
-        ], loop=True)
-
-
-    @mk2_button(2)
-    def couplet_keeping(self):
+    @pedalboard_button(2)
+    def couplet1_aerien(self):
         """
-        PONT COUPLET 1 (keeping windows shut onboard)
+        COUPLET 1 AERIEN
+        Chastitties: don't look at that
         """
-        # Séquence
-        # seq192.select('off', 'couplet_*'),
+        # self.pause_loopers()
+        # self.reset()
 
-        seq192.select('solo', 'triou*'),
+        # Sequences
+        seq192.select('solo', 'couplet1_aerien*')
+
+        # Transport
+        # transport.start()
+
+        # Samples
+        self.open_samples()
+
+        samples.set('Shamisen', 'Gain', -12.25)
+
+        samplesFX6Scape.set('Shamisen', 'Gain', -5.5)
+        samplesFX6Scape.set('SamplesFX6Scape', 'Mute', 0.0)
+
+        samplesFX4Autofilter.set('Shamisen', 'Gain', -1)
+        samplesFX4Autofilter.set('SamplesFX4Autofilter', 'Mute', 0.0)
+
+        samplesFX7Degrade.set('Shamisen', 'Gain', -9)
+        samplesFX7Degrade.set('SamplesFX7Degrade', 'Mute', 0.0)
+
+        # Vocals
+        vocalsNano.set('normo_exclu', 'on')
+        vocalsFeat.set('normo_exclu', 'on')
+        vocalsKesch.set('normo_exclu', 'on')
+
+
+        # Keyboard
+        jmjKeyboard.set_sound('ZTrumpets', boost=True)
+
+        # Synths
+        synths.set('Trap', 'Pan', -0.7)
+        synths.set('ZStambul', 'Pan', 0.5)
+        synths.set('EasyClassical', 'Pan', 0.3)
+
+        synths.set('Trap', 'Amp', 'Gain', 0.35)
+        synths.set('ZStambul', 'Amp', 'Gain', 0.65)
+        synths.set('EasyClassical', 'Amp', 'Gain', 0.55)
+
+        synthsFX2Delay.set('Trap', 'Gain', -14.0)
+        synthsFX2Delay.set('SynthsFX2Delay', 'Mute', 0.0)
+
+        synths.animate('Trap', 'Pan', -0.7, 0.7, 80, 's',  easing='linear-mirror', loop='true')
+        synths.animate('EasyClassical', 'Pan', 0.3, -0.1, 80, 's',  easing='linear-mirror', loop='true')
+        synths.animate('ZStambul', 'Pan', 0.5, 0, 80, 's',  easing='linear-mirror', loop='true')
+
+        # BassSynths
+        bassSynths.set('BassTrap2', 'Amp', 'Gain', 0.9)
+        bassSynths.set('BassBarkline', 'Amp', 'Gain', 1)
+        bassSynths.set('BassBoom', 'Amp', 'Gain', 0.8)
+
+    @mk2_button(3)
+    def couplet1_knowers(self):
+        """
+        COUPLET 1 KNOWERS
+        Chastitties: U push the goal trigga
+        """
+        self.pause_loopers()
+        self.reset()
+
+        # Sequences
+        seq192.select('solo', 'couplet1_knowers*')
+
+
+        # Transport
+        transport.start()
+
+        # Samples
+        self.open_samples()
+
+        samples.set('Shamisen', 'Gain', -12.25)
+
+        samplesFX6Scape.set('Shamisen', 'Gain', -5.5)
+        samplesFX6Scape.set('SamplesFX6Scape', 'Mute', 0.0)
+
+        samplesFX4Autofilter.set('Shamisen', 'Gain', -1)
+        samplesFX4Autofilter.set('SamplesFX4Autofilter', 'Mute', 0.0)
+
+        samplesFX7Degrade.set('Shamisen', 'Gain', -9)
+        samplesFX7Degrade.set('SamplesFX7Degrade', 'Mute', 0.0)
+
+        # Vocals
+        vocalsNano.set('normo_exclu', 'on')
+        vocalsFeat.set('normo_exclu', 'on')
+        vocalsKesch.set('normo_exclu', 'on')
+
+
+        # Keyboard
+        jmjKeyboard.set_sound('ZDupieux', boost=False)
+
+    @pedalboard_button(3)
+    def couplet1_pont(self):
+        """
+        COUPLET 1 PONT MAJOR
+        Tutti: BOYS
+        """
+        self.pause_loopers()
+        self.reset()
+
+        # Sequences
+        seq192.select('solo', 'couplet1_pont*')
+        seq192.select('on', 'couplet1_knowers*')
+
+
+        # Transport
+        transport.start()
+
+        # Samples
+        self.open_samples()
+
+        samples.set('Shamisen', 'Gain', -12.25)
+
+        samplesFX6Scape.set('Shamisen', 'Gain', -5.5)
+        samplesFX6Scape.set('SamplesFX6Scape', 'Mute', 0.0)
+
+        samplesFX4Autofilter.set('Shamisen', 'Gain', -1)
+        samplesFX4Autofilter.set('SamplesFX4Autofilter', 'Mute', 0.0)
+
+        samplesFX7Degrade.set('Shamisen', 'Gain', -9)
+        samplesFX7Degrade.set('SamplesFX7Degrade', 'Mute', 0.0)
+
+        # Vocals
+        vocalsNano.set('normo_exclu', 'on')
+        vocalsFeat.set('normo_exclu', 'on')
+        vocalsKesch.set('normo_exclu', 'on')
+
+
+        # Keyboard
+        jmjKeyboard.set_sound('MajorVocals', boost=True)
+
+    @pedalboard_button(4)
+    def couplet1_2tight(self):
+        """
+        COUPLET 1
+        MISSY : "Same Way"
+        """
+
+        self.couplet1_tight()
+        # self.pause_loopers()
+        # self.reset()
+        #
+        # # Sequences
+        # seq192.select('solo', 'couplet1_tight*')
+        # seq192.select('on', 'couplet1_2tight*')
+        # seq192.select('off', 'couplet1_tight_cHi*')
+        #
+        # # Transport
+        # transport.start()
+        #
+        # # Samples
+        # self.open_samples()
+        #
+        # samples.set('GuitarCrunch', 'Gain', -15)
+        #
+        # samplesFX6Scape.set('GuitarCrunch', 'Gain', -6.5)
+        # samplesFX6Scape.set('SamplesFX6Scape', 'Mute', 0.0)
+        #
+        # samplesFX4Autofilter.set('GuitarCrunch', 'Gain', -2)
+        # samplesFX4Autofilter.set('SamplesFX4Autofilter', 'Mute', 0.0)
+        #
+        # samplesFX7Degrade.set('GuitarCrunch', 'Gain', -11)
+        # samplesFX7Degrade.set('SamplesFX7Degrade', 'Mute', 0.0)
+        #
+        # # Vocals
+        # vocalsNano.set('normo_exclu', 'on')
+        # vocalsFeat.set('normo_exclu', 'on')
+        # vocalsKesch.set('normo_exclu', 'on')
+        #
+        # # Keyboard
+        # jmjKeyboard.set_sound('ZTrumpets', boost=True)
+        #
+        # # Synths
+        # synths.set('ZStambul', 'Pan', 0.5)
+        # synths.set('Rhodes', 'Pan', 0.3)
+        #
+        # synths.set('ZStambul', 'Amp', 'Gain', 0.65)
+        # synths.set('TenorSax', 'Amp', 'Gain', 0.5)
+        #
+        # synthsFX2Delay.set('Rhodes', 'Gain', -14.0)
+        # synthsFX2Delay.set('SynthsFX2Delay', 'Mute', 0.0)
+        #
+        # synths.animate('Rhodes', 'Pan', 0.3, -0.1, 80, 's',  easing='linear-mirror', loop='true')
+        # synths.animate('ZStambul', 'Pan', 0.5, 0, 80, 's',  easing='linear-mirror', loop='true')
+        #
+        # # BassSynths
+        # bassSynths.set('BassBarkline', 'Amp', 'Gain', 1)
+        # bassSynths.set('BassBoom', 'Amp', 'Gain', 0.8)
+
+        # Sequence
+        self.start_scene('sequence/couplet1_tight_p2', lambda: [
+            self.wait(12, 'beat'),
+            autotuneKeschNormo.set('correction', 0),
+            self.wait(4, 'beat'),
+            self.wait(14, 'beat'),
+            seq192.select('solo', 'couplet1_3tight*'),
+            seq192.select('on', 'couplet1_tight_samples_yeah'),
+            seq192.select('on', 'couplet1_tight_samples_funkyHit'),
+            samplesFX6Scape.set('SamplesFX6Scape', 'Mute', 1.0)
+        ])
+
+
+
+
+    @mk2_button(4)
+    def pretrap(self):
+        """
+        PRE-TRAP
+        """
+        self.reset()
+        self.pause_loopers()
+
+        # Séquences
+        # seq192.select('solo', 'pretrap_cHi_trap')
+        seq192.select('solo', 'pretrap_cLow_trap1')
 
         # transport
         transport.start()
 
         # Samples
         self.open_samples()
-        samplesFX2Delay.set('ConstantSampler', 'Gain', -18.0)
-        samplesFX2Delay.set('SamplesFX2Delay', 'Mute', 0.0)
-        samplesFX3Reverb.set('GuitarCrunch', 'Gain', -42.0)
-        samplesFX3Reverb.set('SamplesFX3Reverb', 'Mute', 0.0)
-        samplesFX6Scape.set('GuitarCrunch', 'Gain', -26.67)
-        samplesFX6Scape.set('SamplesFX6Scape', 'Mute', 0.0)
-        prodSampler.send('/instrument/play', 's:Plagiat/BX/Bx_Car')
 
-        # Séquences
-        self.start_scene('sequences/keeping', lambda: [
-            self.wait(1,'b'),
-            postprocess.animate_pitch('Synths', 1,0.2, 2.5, 'b'),
-            self.wait(2.5, 'b'),
-            postprocess.animate_pitch('Synths', None,1, .5, 'b'),
-            self.wait(0.5, 'b'),
-            self.wait(1,'b'),
-            postprocess.animate_pitch('Synths', 1,0.2, 1.5, 'b'),
-            self.wait(1.5, 'b'),
-            postprocess.animate_pitch('Synths', None,1, .5, 'b'),
-            self.wait(0.5, 'b'),
-            constantSampler.send('/instrument/play', 's:TimboYeah'),
-            # vocalsKesch.set('normo_exclu', 'on'),
-            self.wait(1,'b'),
-            self.run(self.couplet)
-        ])
-
-        # Vocals
-        # vocalsKesch.set('normo_exclu', 'on')
-        vocalsKesch.set('gars_exclu', 'on')
-        vocalsKeschFX1Delay.set('active', 'on'),
-        vocalsNano.set('normo_exclu', 'on')
-        vocalsFeat.set('gars_exclu', 'on')
-        # vocalsFeatFX1Delay.set('active', 'on'),
-
-        # Samples
-        #samples.set_lead()
-
-    @mk2_button(3)
-    def stop_basses(self):
-        """
-        STOP BASSES
-        """
-        # Séquences
-        seq192.select('off', 'couplet_*Low*')
-        seq192.select('off', 'couplet_*samples*')
-
-
-        # Séquences (Mentat)
-        self.start_scene('sequences/bx_heeee', lambda: [
-            self.wait(3.6, 'beat'),
-            prodSampler.send('/instrument/play', 's:Bx_Heee'),
-            self.wait(0.4, 'b'),
-            self.run(self.pretrap)
-        ])
-
-        # Keyboards
-        jmjKeyboard.set_sound('ZDupieux', lead=False)
-
-        # Samples
-        #samples.set_lead()
-
-
-    # @mk2_button(3)
-    def pretrap(self):
-        """
-        PRE-TRAP
-        """
-        # Séquences
-        # seq192.select('solo', 'pretrap_cHi_trap')
-        seq192.select('solo', 'pretrap_cLow_trap1')
 
         # Vocals
         vocalsNano.set('normo_exclu', 'on')
         vocalsKesch.set('normo_exclu', 'on')
         vocalsFeat.set('normo_exclu', 'on')
 
+        # Keyboards
+        jmjKeyboard.set_sound('ZDupieux', boost=False)
+
         # Synths
         synthsFX2Delay.set('Trap', 'Gain', -14.0)
         synthsFX2Delay.set('SynthsFX2Delay', 'Mute', 0.0)
 
-
-
-    @mk2_button(4, 'purple')
+    @mk2_button(5, 'purple')
     def trap(self):
         """
         TRAP
@@ -359,8 +434,6 @@ class BX(Video, Light, RouteBase):
             {}
         ], loop=True)
 
-
-
     @pedalboard_button(5)
     def refrain(self):
         """
@@ -387,7 +460,7 @@ class BX(Video, Light, RouteBase):
         vocalsFeat.set('normo_exclu', 'on')
 
         # Keyboard
-        jmjKeyboard.set_sound('ZTrumpets', lead=True)
+        jmjKeyboard.set_sound('ZTrumpets', lead=False)
 
         synths.set('TrapFifth', 'Amp', 'Gain', 0.35)
         synths.set('TrapFifth', 'Pan', -0.33)
@@ -579,323 +652,167 @@ class BX(Video, Light, RouteBase):
             self.wait(4, 'beat'), #bar 1
             self.wait(4, 'beat'), #bar 2
             self.wait(4, 'beat'), #bar 3
-            vocalsKesch.set('normo_exclu', 'on'),
-            self.wait(4, 'beat'), #bar 4
-            self.run(self.lickme_start)
+            self.wait(2, 'beat'), #bar 4
+            vocalsKesch.set('meuf_exclu', 'on'),
+            self.wait(2, 'beat'),
+            self.run(self.couplet2_nu),
+#            self.run(self.lickme_start)
         ])
 
-
-    def lickme_start(self):
+    @pedalboard_button(99)
+    def couplet2_nu(self):
         """
-        Bouclage Lick Me
+        COUPLET 2 (what U say)
+        """
+        self.couplet1_tight()
+        vocalsKesch.set('meuf_exclu', 'on')
+
+        seq192.select('on','//couplet*Low*')
+
+    @mk2_button(6)
+    def couplet2_keeping(self):
+        """
+        COUPLET 2 PONT (keeping windows shut)
         """
         # Séquence
-        seq192.select('solo', 'coupletlickme_zHi_diplo*')
+        # seq192.select('off', 'couplet_*'),
 
-        # Looper
-        looper.record_on_start(0)
+        seq192.select('solo', 'triou*'),
 
-
-        # Transport
-        self.pause_loopers()
+        # transport
         transport.start()
 
-        # Vocals
-        vocalsNano.set('normo_exclu', 'on')
-        vocalsKesch.set('normo_exclu', 'on')
-        vocalsFeat.set('normo_exclu', 'on')
-
-        # Synths
-        synths.set('ZDiploLike', 'Pan', -0.15)
-        synths.set('ZDiploLike', 'Amp', 'Gain', 0.8)
-        synths.set_lead()
-
-        synthsFX1Reverb.set('ZDiploLike', 'Gain', -6.0)
-        synthsFX1Reverb.set('SynthsFX1Reverb', 'Mute', 0.0)
-
-        synthsFX2Delay.set('ZDiploLike', 'Gain', -18.0)
-        synthsFX2Delay.set('SynthsFX2Delay', 'Mute', 0.0)
-        synthsFX2Delay.set('SynthsFX2Delay', 'GxMultiBandDelay', 'feedback', 0.3)
-
         # Samples
-        #samples.set_lead()
-
-        # BassFX
-        bassFX.set('zynwah', 'on')
-        bassFX.set('bassscape', 'on')
+        self.open_samples()
+        samplesFX2Delay.set('ConstantSampler', 'Gain', -18.0)
+        samplesFX2Delay.set('SamplesFX2Delay', 'Mute', 0.0)
+        samplesFX3Reverb.set('GuitarCrunch', 'Gain', -42.0)
+        samplesFX3Reverb.set('SamplesFX3Reverb', 'Mute', 0.0)
+        samplesFX6Scape.set('GuitarCrunch', 'Gain', -26.67)
+        samplesFX6Scape.set('SamplesFX6Scape', 'Mute', 0.0)
+        prodSampler.send('/instrument/play', 's:Plagiat/BX/Bx_Car')
 
         # Séquences
-        self.start_scene('sequences/start_lickme', lambda: [
-            self.wait(6*4, 'beat'),
-            self.wait(2, 'beat'),
-            self.wait(1.2, 'beat'),
-            prodSampler.send('/instrument/play', 's:BX_arpegeSitar'),
+        self.start_scene('sequences/keeping', lambda: [
+            self.wait(1,'b'),
+            postprocess.animate_pitch('Synths', 1,0.2, 2.5, 'b'),
+            self.wait(2.5, 'b'),
+            postprocess.animate_pitch('Synths', None,1, .5, 'b'),
+            self.wait(0.5, 'b'),
+            self.wait(1,'b'),
+            postprocess.animate_pitch('Synths', 1,0.2, 1.5, 'b'),
+            self.wait(1.5, 'b'),
+            postprocess.animate_pitch('Synths', None,1, .5, 'b'),
+            self.wait(0.5, 'b'),
+            constantSampler.send('/instrument/play', 's:TimboYeah'),
+            vocalsKesch.set('normo_exclu', 'on'),
+            self.wait(1,'b'),
+            self.run(lambda: [
+                self.couplet2_nu(),
+                vocalsKesch.set('normo_exclu', 'on')
+            ]),
+        ])
+
+        self.start_scene('sequences/vxkesch_dude', lambda: [
+            self.wait(2, 'b'),
+            vocalsKesch.set('gars_exclu', 'on'),
+            vocalsKeschFX1Delay.set('active', 'on'),
+        ])
+
+        # Vocals
+        # vocalsKesch.set('normo_exclu', 'on')
+        vocalsNano.set('normo_exclu', 'on')
+        vocalsFeat.set('gars_exclu', 'on')
+        # vocalsFeatFX1Delay.set('active', 'on'),
+
+        # Samples
+        #samples.set_lead()
+
+    @mk2_button(7)
+    def couplet2_jeez(self):
+        """
+        COUPLET 2 JEEZ (got wings)
+        appui 2e temps
+        """
+        # Séquences
+        seq192.select('off', '//couplet_*Low*')
+        seq192.select('off', 'couplet_*samples*')
+
+
+        # Séquences (Mentat)
+        self.start_scene('sequences/bx_heeee', lambda: [
+            self.wait(2.6, 'beat'),
+            prodSampler.send('/instrument/play', 's:Bx_Heee'),
+        ])
+        self.start_scene('sequences/bx_asusual', lambda: [
             self.wait_next_cycle(),
-            self.wait(1, 'beat'),
-            looper.record(0),
-            self.wait_next_cycle(),
-            self.run(self.policeman_lick_me)
+            self.run(self.couplet2_knowers_asusual)
         ])
 
 
-    def policeman_lick_me(self):
-        """
-        Hey Mister Policeman
-        """
-        # Séquence
-        seq192.select('solo', 'coupletlickme*')
+        # Vocals
+        vocalsKesch.set('normo_exclu','on')
 
-        # Transport
-        self.pause_loopers()
-        transport.start()
-
-        # Looper
-        looper.trigger(0)
+        # Keyboards
+        jmjKeyboard.set_sound('ZDupieux', lead=False)
 
         # Samples
-        self.open_samples_lickme()
         #samples.set_lead()
 
-        # Vocals
-        vocalsNano.set('normo_exclu', 'on')
-        vocalsKesch.set('normo_exclu', 'on')
-        vocalsFeat.set('normo_exclu', 'on')
-
-
-    @mk2_button(5, 'green')
-    def couplet1_lickme(self):
+    @pedalboard_button(98)
+    def couplet2_knowers_asusual(self):
         """
-        COUPLET 1 LICK ME (crowds & trumpets)
+        COUPLET 2 knowers (as usual)
         """
-        # Séquence
-        seq192.select('solo', 'couplet1lickme*')
-
-        # Transport
-        self.pause_loopers()
-        transport.start()
-
-        # Synths
-        synths.set("ZStambul", 'Pan', -0.15)
-        synths.set('MajorVocals', 'Amp', 'Gain', 0.4)
-
-        synthsFX1Reverb.set('MajorVocals', 'Gain', -9.0)
-        synthsFX1Reverb.set('SynthsFX1Reverb', 'Mute', 0.0)
-        synthsFX2Delay.set('MajorVocals', 'Gain', -15.0)
-        synthsFX2Delay.set('SynthsFX2Delay', 'Mute', 0.0)
-
-        # Samples
-        self.open_samples_lickme()
-        #samples.set_lead()
-
-
-        # Vocals
-        vocalsNano.set('normo_exclu', 'on')
-        vocalsKesch.set('normo_exclu', 'on')
-        vocalsFeat.set('normo_exclu', 'on')
-
-        # Séquence
-        self.start_sequence('sequence/couplet1', [
-            {
-                # bar 1
-                1: lambda: seq192.select('off', 'couplet1lickme_zHi_stambul'),
-                2.8: lambda: seq192.select('on', 'couplet1lickme_zHi_stambul')
-            },
-            {},
-            {},
-            {},
-            { # bar 5
-                1: lambda: looper.trigger(0)
-            },
-        ], loop=False)
-
+        self.couplet1_knowers()
+        seq192.select('off', 'couplet1_knowers_zHi_dupieux')
 
     @pedalboard_button(8)
-    def theme_lick_me(self):
+    def couplet2_knowers_phili(self):
         """
-        THÈME LICK ME
+        COUPLET 2 knowers (compton phili)
         """
-        # Séquence
-        seq192.select('solo', 'themelickme*')
+        looper.unpause(0)
+        self.start_scene('lancement_basse_et_fx', lambda: [
+            self.wait_next_cycle(),
+            seq192.select('on', 'couplet1_knowers_zHi_dupieux'),
+            self.start_sequence('couplet_2_2', [
+                {}, # bar 1
+                {   # bar 2
+                    1.25: lambda:
+                        [
+                            vocalsKeschFX1Delay.set('active', 'on'),
+                            vocalsKeschFX2Delay.set('active', 'on'),
+                            vocalsKesch.set('meuf', 'on'),
+                            vocalsFeatFX1Delay.set('active', 'on'),
+                            vocalsFeatFX2Delay.set('active', 'on'),
+                        ],
+                    2.9: lambda:
+                        [
+                            vocalsKeschFX1Delay.set('pre', 'off'),
+                            vocalsKeschFX2Delay.set('pre', 'off'),
+                            vocalsKesch.set('meuf', 'off'),
+                            vocalsFeatFX1Delay.set('pre', 'off'),
+                            vocalsFeatFX2Delay.set('pre', 'off'),
+                        ]
+                },
+                {   # bar 3
+                    1: lambda: [
+                        vocalsKeschFX2Delay.set('active', 'on'),
+                        vocalsFeatFX2Delay.set('active', 'on')
+                    ],
+                    2.4: lambda: [
+                        vocalsKeschFX2Delay.set('pre', 'off'),
+                        vocalsFeatFX2Delay.set('pre', 'off')
+                    ],
+                }
 
-        # Transport
-        self.pause_loopers()
-        transport.start()
+            ], loop=False)
 
-        # Audiolooper
-        looper.trigger(0)
+        ])
 
-        # Samples
-        self.open_samples_lickme()
-        samplesFX2Delay.set('Samples5', 'Gain', -15.8)
-        samplesFX2Delay.set('SamplesFX2Delay', 'Mute', 0.0)
-        samplesFX3Reverb.set('Samples5', 'Gain', -12)
-        samplesFX3Reverb.set('SamplesFX3Reverb', 'Mute', 0.0)
-        samplesFX7Degrade.set('Samples5', 'Gain', -12)
-        samplesFX7Degrade.set('SamplesFX7Degrade', 'Mute', 0.0)
-        #samples.set_lead('Samples5')
 
-        # Synths
-        synths.set('MajorVocals', 'Amp', 'Gain', 0.5)
-        synths.set_lead('MajorVocals')
-
-        synthsFX1Reverb.set('MajorVocals', 'Gain', -9.0)
-        synthsFX1Reverb.set('SynthsFX1Reverb', 'Mute', 0.0)
-        synthsFX2Delay.set('MajorVocals', 'Gain', -15.0)
-        synthsFX2Delay.set('SynthsFX2Delay', 'Mute', 0.0)
-
-        synthsFX3Delay.set('MajorVocals', 'Gain', -17.8)
-        synthsFX3Delay.set('SynthsFX3Delay', 'Mute', 0.0)
-
-        # Vocals
-        vocalsNano.set('normo_exclu', 'on')
-        vocalsKesch.set('normo_exclu', 'on')
-        vocalsFeat.set('normo_exclu', 'on')
-
-        # Séquences
-        self.start_sequence('sequence/theme_lickme_samplepitch', [
-            {}, # bar 1
-            {}, # bar 2
-            {}, # bar 3
-            { # bar 4
-                1.2: lambda: postprocess.animate_pitch('Samples', 1, 0.1, 0.918, 's'),
-                2.2: lambda: postprocess.animate_pitch('Samples', None, 1, 0.2, 's'),
-            },
-            {}, # bar 5
-            {}, # bar 6
-            {  # bar 7
-                2.4: lambda: postprocess.animate_pitch('Samples', 1, 0.25, 0.918, 's'),
-                2.8: lambda: postprocess.animate_pitch('Samples', None, 1, 0.1, 's'),
-            },
-            { # bar 8
-                1.2: lambda: postprocess.animate_pitch('Samples', 1, 0.1, 0.918, 's'),
-                3: lambda: postprocess.animate_pitch('Samples', None, 1, 0.2, 's'),
-                3.62: lambda: postprocess.animate_pitch('Samples', 1, 0.1, 0.918, 's'),
-                3.73: lambda: postprocess.animate_pitch('Samples', None, 1, 0.2, 's'),
-                4.12: lambda: postprocess.animate_pitch('Samples', 1, 0.1, 0.918, 's'),
-                4.15: lambda: postprocess.animate_pitch('Samples', None, 1, 0.2, 's'),
-                4.4: lambda: postprocess.animate_pitch('Samples', 1, 0.1, 0.918, 's'),
-                4.5: lambda: postprocess.animate_pitch('Samples', None, 1, 0.2, 's'),
-                4.78: lambda: postprocess.animate_pitch('Samples', 1, 0.1, 0.918, 's'),
-                4.85: lambda: postprocess.animate_pitch('Samples', None, 1, 0.2, 's'),
-            }
-        ], loop=True)
-
-        self.start_sequence('sequence/theme_lickme_majorvocals', [
-            {
-                1.4: lambda: postprocess.animate_pitch('Synths', 1, 0.1, 0.515, 's'),
-                3.25: lambda: postprocess.animate_pitch('Synths', None, 1, 0.1, 's'),
-            }, # bar 1
-            { # bar 2
-                1.18: lambda: postprocess.animate_pitch('Synths', 1, 0.1, 0.515, 's'),
-                2.3: lambda: postprocess.animate_pitch('Synths', None, 1, 0.1, 's'),
-            },
-            { # bar 3
-                1.875: lambda: postprocess.animate_pitch('Synths', 1, 0.1, 0.515, 's'),
-                2: lambda: postprocess.animate_pitch('Synths', None, 1, 0.1, 's'),
-                2.875: lambda: postprocess.animate_pitch('Synths', 1, 0.1, 0.515, 's'),
-                3.375: lambda: postprocess.animate_pitch('Synths', None, 1, 0.1, 's'),
-            },
-            { # bar 4
-                1.2: lambda: postprocess.animate_pitch('Synths', 1, 0.1, 0.515, 's'),
-                2.11: lambda: postprocess.animate_pitch('Synths', None, 1, 0.1, 's'),
-            },
-            {}, # bar 5
-            {}, # bar 6
-            {  # bar 7
-                2.4: lambda: postprocess.animate_pitch('Synths', 1, 0.1, 0.515, 's'),
-                2.8: lambda: postprocess.animate_pitch('Synths', None, 1, 0.1, 's'),
-                4.82: lambda: postprocess.animate_pitch('Synths', 1, 0.1, 0.515, 's'),
-            },
-            { # bar 8
-                3.1: lambda: postprocess.animate_pitch('Synths', None, 1, 0.1, 's'),
-                3.62: lambda: postprocess.animate_pitch('Synths', 1, 0.1, 0.515, 's'),
-                3.73: lambda: postprocess.animate_pitch('Synths', None, 1, 0.2, 's'),
-                4.12: lambda: postprocess.animate_pitch('Synths', 1, 0.1, 0.515, 's'),
-                4.15: lambda: postprocess.animate_pitch('Synths', None, 1, 0.2, 's'),
-                4.4: lambda: postprocess.animate_pitch('Synths', 1, 0.1, 0.515, 's'),
-                4.5: lambda: postprocess.animate_pitch('Synths', None, 1, 0.2, 's'),
-                4.78: lambda: postprocess.animate_pitch('Synths', 1, 0.1, 0.515, 's'),
-                4.85: lambda: postprocess.animate_pitch('Synths', None, 1, 0.2, 's'),
-            }
-        ], loop=True)
-
-    @mk2_button(6,  'green')
-    def couplet2_lickme(self):
-        """
-        COUPLET 2 LICK ME (sex in the metaverse)
-        """
-        # Séquence
-        seq192.select('solo', 'couplet2lickme*')
-
-        # Transport
-        self.pause_loopers()
-        transport.start()
-
-        # Samples
-        self.open_samples_lickme()
-        # samples.set_lead()
-
-        # Vocals
-        vocalsNano.set('normo_exclu', 'on')
-        vocalsKesch.set('normo_exclu', 'on')
-        vocalsFeat.set('normo_exclu', 'on')
-
-        # Synths
-        synths.set("ZStambul", 'Pan', -0.15)
-        synths.set('MajorVocals', 'Amp', 'Gain', 0.4)
-        synths.set_lead()
-
-        synthsFX1Reverb.set('MajorVocals', 'Gain', -9.0)
-        synthsFX1Reverb.set('SynthsFX1Reverb', 'Mute', 0.0)
-        synthsFX2Delay.set('MajorVocals', 'Gain', -15.0)
-        synthsFX2Delay.set('SynthsFX2Delay', 'Mute', 0.0)
-
-        # Séquence
-        self.start_sequence('sequence/couplet2', [
-            {},
-            {
-                3.5: lambda: postprocess.animate_pitch('Synths', 1, 0.1, 0.515, 's'),
-                3.8: lambda: postprocess.animate_pitch('Synths', None, 1, 0.1, 's'),
-            },
-            {},
-            {},
-            { # bar 5
-                1: lambda: seq192.select('on', 'coupletlickme*'),
-                2: lambda: seq192.select('off', 'couplet2lickme*')
-            },
-            {},{},{},
-            {}, #bar 9
-            {},{},{},
-            {}, # bar 12
-            {}, {}, {},
-            { ## bar 16
-                1: lambda: looper.trigger(0)
-            }
-        ], loop=False)
-
-    @pedalboard_button(9)
-    def aintnosuv(self):
-        """
-        AINT NO SUV A CAPELLA
-        """
-        # Séquence
-        seq192.select('solo', 'dummy')
-
-        self.reset()
-
-        # Transport
-        self.pause_loopers()
-        transport.start()
-
-        # Vocals
-        vocalsKesch.set('normo_exclu', 'on')
-        vocalsFeat.set('normo_exclu', 'on')
-        vocalsNano.set('normo_exclu', 'on')
-
-        for name in ['KeschMeuf', 'KeschNormo', 'KeschGars']:
-            self.engine.modules[name].set('correction', 1)
-
-    @mk2_button(7, 'purple')
+    @mk2_button(8, 'purple')
     def trapcouplet2(self):
         """
         COUPLET 2 TRAP (my bum is yo dashboard)
@@ -916,7 +833,7 @@ class BX(Video, Light, RouteBase):
         samplesFX3Reverb.set('SamplesFX3Reverb', 'Mute', 0.0)
 
         # Keyboards
-        jmjKeyboard.set_sound('LowCTrap1')
+        jmjKeyboard.set_sound('ZDupieux', boost=False)
 
         # Vocals
         vocalsKesch.set('normo_exclu', 'on')
@@ -952,114 +869,6 @@ class BX(Video, Light, RouteBase):
 
 
 
-    @pedalboard_button(10)
-    def couplet_2_2(self):
-        """
-        COUPLET 2_2 (basse jouée, phili compton l.a)
-        + break sur 4e mesure
-        + transition auto vers hands up hands up (pretrap2)
-        """
-        self.pause_loopers()
-        self.reset()
-
-        # Sequences
-        seq192.select('solo', 'couplet2_2_*')
-        seq192.select('off', 'couplet2_2_*guitar*')
-        # seq192.select('off', 'couplet_cLow_b*')
-
-
-        # Transport
-        transport.start()
-
-        # Samples
-        self.open_samples()
-
-        # Vocals
-        vocalsNano.set('normo_exclu', 'on')
-        vocalsKesch.set('normo_exclu', 'on')
-        vocalsFeat.set('normo_exclu', 'on')
-
-        vocalsKeschFX1Delay.set('VocalsKeschFX1Delay', 'GxMultiBandDelay', 'multiplier', 2),
-
-
-        # Keyboard
-        jmjKeyboard.set_sound('ZOrgan', lead=False)
-
-        # Bass
-        bassFX.set('zynwah', 'on')
-
-        # Synths
-        synths.set('Trap', 'Pan', -0.7)
-        synths.set('ZStambul', 'Pan', 0.5)
-        synths.set('EasyClassical', 'Pan', 0.3)
-        synths.set('EasyClassical', 'Amp', 'Gain', 0.55)
-        synths.set('ZStambul', 'Amp', 'Gain', 0.65)
-        synths.set('Trap', 'Amp', 'Gain', 0.35)
-        synths.set('DubstepHorn', 'Amp', 'Gain', 0.35)
-
-
-
-        # Séquence
-        self.start_sequence('couplet_2_2', [
-            {}, # bar 1
-            {   # bar 2
-                1.5: lambda:
-                    [
-                    vocalsKeschFX1Delay.set('active', 'on'),
-                    vocalsKeschFX2Delay.set('active', 'on'),
-                    vocalsKesch.set('meuf', 'on'),
-                    ],
-                2.4: lambda:
-                    [
-                        vocalsKeschFX1Delay.set('pre', 'off'),
-                        vocalsKeschFX2Delay.set('pre', 'off'),
-                        vocalsKesch.set('meuf', 'off'),
-                    ]
-            },
-            {   # bar 3
-                1.5: lambda: vocalsKeschFX2Delay.set('active', 'on'),
-                2.4: lambda: vocalsKeschFX2Delay.set('pre', 'off'),
-                4: lambda: seq192.select('off', '*')
-            },
-            {  # bar 4
-                1: lambda: seq192.select('off', '*'),
-                4.5: lambda: constantSampler.send('/instrument/play', 's:FunkyHit1', 100)
-            },
-            {  # bar 5
-                1: lambda: [
-                    seq192.select('solo', 'couplet2_2_*'),
-                    # seq192.select('solo', 'couplet2_3*'),
-                    seq192.select('off', 'couplet2_2_*guitar*'),
-                    # seq192.select('off', 'couplet_cLow_b*')
-                ]
-            },
-            {}, # bar 6
-            {}, # bar 7
-            {
-                1.5: lambda: vocalsNanoFX2Delay.set('active', 'on'),
-                4: lambda: [vocalsKesch.set('gars_exclu', 'on'), vocalsNanoFX2Delay.set('pre', 'off')]
-            }, # bar 8
-            {
-                # 1: lambda: self.start_scene('couplet 2 2 vers trap', lambda: self.pretrap2())
-            }
-
-        ], loop=False)
-
-    @mk2_button(8, 'yellow')
-    def pretrap_stop_manhooky(self):
-        """
-        TRAP STOP MANHOOKY (& du 4)
-        """
-        self.start_scene('sequences/trap_stop_manhooky', lambda: [
-            prodSampler.send('/instrument/play', 's:Bx_YouWontRaise'),
-            self.wait_next_cycle(),
-            seq192.select('off', '*'),
-            self.wait_next_cycle(),
-            self.run(self.trap)
-        ])
-
-        jmjKeyboard.set_sound('ZDupieux', lead="False")
-        #samples.set_lead()
 
     @mk2_button(9, 'cyan')
     def geouerz(self):
@@ -1091,6 +900,30 @@ class BX(Video, Light, RouteBase):
 
         # Keyboard
         jmjKeyboard.set_sound('LowZDancestep')
+
+    @mk2_button(11, 'cyan')
+    def outro_outro(self):
+        """
+        TRANCE phase 2 (tkt)
+        """
+        self.pause_loopers()
+        self.reset()
+
+        # Sequences
+        seq192.select('off', '*')
+
+        # Transport
+        transport.start()
+
+        # Keyboard
+        jmjKeyboard.set_sound('MajorVocals', lead=True)
+
+        # Loops
+        looper.trigger(3)
+
+        # Vx
+        vocalsKesch.set('normo_exclu', 'on')
+
 
     @pedalboard_button(11)
     def rec_key(self):

@@ -5480,7 +5480,7 @@
                         "ignoreDefaults": false,
                         "bypass": true,
                         "onCreate": "",
-                        "onValue": "var bass = value.filter(x=>x.indexOf('Low')===0||x.includes('Sampler')),\n    bvals = {}\nfor (var s of bass) {\n  var label = s.includes('Sampler') ? s : s.substr(4)\n  label = label.replace(/([A-Z])/g, ' $1').trim()\n  bvals[label] = s\n}\nsetVar('keyboard_low_switch', 'values', bvals)\n\n\nvar high = value.filter(x=>x.indexOf('Low') !== 0),\n    hvals = {}\nfor (var s of high) {\n  var label = s.substr(1).replace(/([A-Z])/g, ' $1').trim()\n  hvals[label] = s\n}\nsetVar('keyboard_hi_switch', 'values', hvals)\n\nset('keyboard_low_switch', get('keyboard_current_sound'))\nset('keyboard_hi_switch', get('keyboard_current_sound'))"
+                        "onValue": "var bass = value.filter(x=>x.indexOf('Low')===0||x.includes('Sampler')),\n    bvals = {}\nfor (var s of bass) {\n  var label = s.includes('Sampler') ? s : s.substr(4)\n  label = label.replace(/([A-Z])/g, ' $1').trim()\n  bvals[label] = s\n}\nsetVar('keyboard_low_switch', 'values', bvals)\n\n\nvar high = value.filter(x=>x.indexOf('Low') !== 0),\n    hvals = {}\nfor (var s of high) {\n  var label = s.replace(/^Z/g, '').replace(/([A-Z])/g, ' $1').trim()\n  hvals[label] = s\n}\nsetVar('keyboard_hi_switch', 'values', hvals)\n\nset('keyboard_low_switch', get('keyboard_current_sound'))\nset('keyboard_hi_switch', get('keyboard_current_sound'))"
                       },
                       {
                         "type": "switch",

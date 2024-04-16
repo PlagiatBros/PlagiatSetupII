@@ -40,11 +40,11 @@ class JmjKeyboard(Keyboard):
         self.set_sound('ZDupieux')
 
 
-    def set_sound(self, name, boost=False):
+    def set_sound(self, name, boost=False, lead=None):
 
         old_sound = self.get('current_sound')
 
-        super().set_sound(name, boost)
+        super().set_sound(name, boost, lead)
 
         new_sound = self.get('current_sound')
 

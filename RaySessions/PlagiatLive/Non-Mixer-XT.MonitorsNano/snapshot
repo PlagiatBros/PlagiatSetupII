@@ -67,7 +67,7 @@
 	Mixer_Strip 0x32 create :name "VocalsKesch" :width "narrow" :tab "signal" :color 582525628 :gain_mode 0 :mute_mode 0 :group 0x7 :auto_input "" :manual_connection 0
 	Chain 0x33 create :strip 0x32 :tab "chain"
 	JACK_Module 0x34 create :parameter_values "0.000000:1.000000" :is_default 1 :chain 0x33 :active 1
-	Gain_Module 0x35 create :parameter_values "-2.000000:0.000000:0.000000" :is_default 1 :chain 0x33 :active 1
+	Gain_Module 0x35 create :parameter_values "0.000000:0.000000:0.000000" :is_default 1 :chain 0x33 :active 1
 	LV2_Plugin 0x140 create :lv2_plugin_uri "urn:ardour:a-eq" :plugin_ins 1 :plugin_outs 1 :parameter_values "160.000000:0.000000:300.000000:0.000000:1.000000:1000.000000:0.000000:1.000000:2500.000000:0.000000:1.000000:5000.000000:-6.000000:1.500000:9000.000000:0.000000:0.000000:1.000000:1.000000:1.000000:1.000000:1.000000:1.000000:1.000000:0.000000" :is_default 0 :chain 0x33 :active 1
 	Mono_Pan_Module 0x49 create :parameter_values "0.000000" :is_default 0 :chain 0x33 :active 1
 	Meter_Module 0x36 create :is_default 1 :chain 0x33 :active 1

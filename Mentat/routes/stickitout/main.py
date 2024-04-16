@@ -95,7 +95,7 @@ class StickItOut(Video, Light, RouteBase):
         jmjKeyboard.set_sound('ZJestoProunk')
 
         # Bass
-        bassFX.set('zynwah', 'on')
+        # bassFX.set('zynwah', 'on')
         bass.set('BassDry', 'GxChorus-Stereo', 'BYPASS', 1)
 
         # Vocals
