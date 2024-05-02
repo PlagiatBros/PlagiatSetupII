@@ -28,6 +28,8 @@ class Seq192(Module):
             'DDD': 12,
             'AintInTheWay': 14,
             'QueenCloclo': 15,
+            'LickMe': 16,
+            'GrandOpening': 17,
         }
 
     def start(self):

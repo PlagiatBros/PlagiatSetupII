@@ -13,6 +13,8 @@ from .bx.main import BX
 from .ddd.main import DDD
 from .aintintheway.main import AintInTheWay
 from .queencloclo.main import QueenCloclo
+from .lickme.main import LickMe
+from .grandopening.main import GrandOpening
 
 snapshat = Snapshat('Snapshat')
 mcob = Mcob('Mcob')
@@ -29,3 +31,5 @@ bx = BX('BX')
 ddd = DDD('DDD')
 aintintheway = AintInTheWay('AintInTheWay')
 queencloclo = QueenCloclo('QueenCloclo')
+lickme = LickMe('LickMe')
+grandopening = GrandOpening('GrandOpening')

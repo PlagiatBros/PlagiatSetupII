@@ -84,6 +84,8 @@ class AintInTheWay(Video, Light, RouteBase):
         vocalsNano.set('normo_exclu', 'on')
         vocalsFeat.set('normo_exclu', 'on')
 
+        inputs.set('keschmic', 'dynamic')
+
 
     @pedalboard_button(3)
     @mk2_button(3, 'purple')
@@ -107,6 +109,8 @@ class AintInTheWay(Video, Light, RouteBase):
         vocalsKesch.set('normo_exclu', 'on')
         vocalsNano.set('normo_exclu', 'on')
         vocalsFeat.set('normo_exclu', 'on')
+
+        inputs.set('keschmic', 'dynamic')
 
         # Transport
         transport.set_tempo(120)
@@ -148,6 +152,7 @@ class AintInTheWay(Video, Light, RouteBase):
         vocalsNano.set('normo_exclu', 'on')
         vocalsFeat.set('normo_exclu', 'on')
 
+        inputs.set('keschmic', 'dynamic')
 
     @pedalboard_button(6)
     @mk2_button(5, 'cyan')
@@ -168,6 +173,8 @@ class AintInTheWay(Video, Light, RouteBase):
         vocalsKesch.set('normo_exclu', 'on')
         vocalsNano.set('normo_exclu', 'on')
         vocalsFeat.set('normo_exclu', 'on')
+
+        inputs.set('keschmic', 'dynamic')
 
         # Transport
         transport.set_tempo(180)
@@ -218,6 +225,7 @@ class AintInTheWay(Video, Light, RouteBase):
         vocalsNano.set('normo_exclu', 'on')
         vocalsFeat.set('normo_exclu', 'on')
 
+        inputs.set('keschmic', 'dynamic')
 
     @pedalboard_button(4)
     @mk2_button(6, 'purple')
@@ -243,6 +251,7 @@ class AintInTheWay(Video, Light, RouteBase):
         vocalsNano.set('normo_exclu', 'on')
         vocalsFeat.set('normo_exclu', 'on')
 
+        inputs.set('keschmic', 'dynamic')
 
     @pedalboard_button(8)
     def salsa(self):
@@ -276,6 +285,7 @@ class AintInTheWay(Video, Light, RouteBase):
         vocalsNano.set('normo_exclu', 'on')
         vocalsFeat.set('normo_exclu', 'on')
 
+        inputs.set('keschmic', 'dynamic')
 
     @pedalboard_button(9)
     def savoir_aimer(self):
@@ -299,3 +309,5 @@ class AintInTheWay(Video, Light, RouteBase):
 
         # jmjKeyboard
         jmjKeyboard.set_sound('SteelDrum', lead=False)
+
+        inputs.set('keschmic', 'dynamic')

@@ -107,6 +107,8 @@ class BX(Video, Light, RouteBase):
         vocalsFeat.set('normo_exclu', 'on')
         vocalsKesch.set('normo_exclu', 'on')
 
+        inputs.set('keschmic', 'static')
+
         # Keyboard
         jmjKeyboard.set_sound('ZTrumpets', boost=True)
 
@@ -166,6 +168,7 @@ class BX(Video, Light, RouteBase):
         vocalsFeat.set('normo_exclu', 'on')
         vocalsKesch.set('normo_exclu', 'on')
 
+        inputs.set('keschmic', 'static')
 
         # Keyboard
         jmjKeyboard.set_sound('ZTrumpets', boost=True)
@@ -266,6 +269,8 @@ class BX(Video, Light, RouteBase):
         vocalsFeat.set('normo_exclu', 'on')
         vocalsKesch.set('normo_exclu', 'on')
 
+        inputs.set('keschmic', 'dynamic')
+
 
         # Keyboard
         jmjKeyboard.set_sound('MajorVocals', boost=True)
@@ -328,6 +333,9 @@ class BX(Video, Light, RouteBase):
         # bassSynths.set('BassBarkline', 'Amp', 'Gain', 1)
         # bassSynths.set('BassBoom', 'Amp', 'Gain', 0.8)
 
+        # VOCALS
+        inputs.set('keschmic', 'static')
+
         # Sequence
         self.start_scene('sequence/couplet1_tight_p2', lambda: [
             self.wait(12, 'beat'),
@@ -339,6 +347,8 @@ class BX(Video, Light, RouteBase):
             seq192.select('on', 'couplet1_tight_samples_funkyHit'),
             samplesFX6Scape.set('SamplesFX6Scape', 'Mute', 1.0)
         ])
+
+
 
 
 
@@ -366,6 +376,9 @@ class BX(Video, Light, RouteBase):
         vocalsNano.set('normo_exclu', 'on')
         vocalsKesch.set('normo_exclu', 'on')
         vocalsFeat.set('normo_exclu', 'on')
+
+        # VOCALS
+        inputs.set('keschmic', 'dynamic')
 
         # Keyboards
         jmjKeyboard.set_sound('ZDupieux', boost=False)
@@ -395,6 +408,10 @@ class BX(Video, Light, RouteBase):
         vocalsNano.set('normo_exclu', 'on')
         vocalsKesch.set('normo_exclu', 'on')
         vocalsKesch.set('gars', 'on')
+
+        # VOCALS
+        inputs.set('keschmic', 'dynamic')
+
         self.start_sequence('sequence/bad_kiddybitch', [
             {
                 1: lambda: vocalsFeat.set('normo_exclu', 'on')
@@ -459,6 +476,9 @@ class BX(Video, Light, RouteBase):
         vocalsKesch.set('normo_exclu', 'on')
         vocalsFeat.set('normo_exclu', 'on')
 
+        # VOCALS
+        inputs.set('keschmic', 'static')
+
         # Keyboard
         jmjKeyboard.set_sound('ZTrumpets', lead=False)
 
@@ -519,6 +539,9 @@ class BX(Video, Light, RouteBase):
         vocalsKesch.set('gars_exclu', 'on')
         vocalsFeat.set('normo_exclu', 'on')
         vocalsFeat.set('meuf', 'on')
+
+        # VOCALS
+        inputs.set('keschmic', 'static')
 
         # Keyboard
         jmjKeyboard.set_sound('ZTrumpets', lead=True)
@@ -626,6 +649,9 @@ class BX(Video, Light, RouteBase):
         vocalsKesch.set('gars_exclu', 'on')
         vocalsFeat.set('normo_exclu', 'on')
 
+        # VOCALS
+        inputs.set('keschmic', 'dynamic')
+
 
         # Keyboard
         jmjKeyboard.set_sound('ZTrumpets', boost=True)
@@ -666,8 +692,13 @@ class BX(Video, Light, RouteBase):
         """
         self.couplet1_tight()
         vocalsKesch.set('meuf_exclu', 'on')
+        # VOCALS
+        inputs.set('keschmic', 'dynamic')
+
 
         seq192.select('on','//couplet*Low*')
+
+
 
     @mk2_button(6)
     def couplet2_keeping(self):
@@ -725,6 +756,9 @@ class BX(Video, Light, RouteBase):
         vocalsFeat.set('gars_exclu', 'on')
         # vocalsFeatFX1Delay.set('active', 'on'),
 
+        # VOCALS
+        inputs.set('keschmic', 'dynamic')
+
         # Samples
         #samples.set_lead()
 
@@ -753,6 +787,9 @@ class BX(Video, Light, RouteBase):
         # Vocals
         vocalsKesch.set('normo_exclu','on')
 
+        # VOCALS
+        inputs.set('keschmic', 'dynamic')
+
         # Keyboards
         jmjKeyboard.set_sound('ZDupieux', lead=False)
 
@@ -767,12 +804,19 @@ class BX(Video, Light, RouteBase):
         self.couplet1_knowers()
         seq192.select('off', 'couplet1_knowers_zHi_dupieux')
 
+        # VOCALS
+        inputs.set('keschmic', 'dynamic')
+
     @pedalboard_button(8)
     def couplet2_knowers_phili(self):
         """
         COUPLET 2 knowers (compton phili)
         """
         looper.unpause(0)
+
+        # VOCALS
+        inputs.set('keschmic', 'dynamic')
+
         self.start_scene('lancement_basse_et_fx', lambda: [
             self.wait_next_cycle(),
             seq192.select('on', 'couplet1_knowers_zHi_dupieux'),
@@ -840,6 +884,9 @@ class BX(Video, Light, RouteBase):
         vocalsFeat.set('normo_exclu', 'on')
         vocalsNano.set('normo_exclu', 'on')
 
+        # VOCALS
+        inputs.set('keschmic', 'dynamic')
+
         # Séquence
         self.start_sequence('couplet_2_1', [
             {   # bar 5: Alternate trap (be honest yo bum)
@@ -883,6 +930,8 @@ class BX(Video, Light, RouteBase):
         # Keyboard
         jmjKeyboard.set_sound('Charang', lead=False)
 
+        # VOCALS
+        inputs.set('keschmic', 'dynamic')
 
     @mk2_button(10, 'cyan')
     def outro_click(self):
@@ -923,6 +972,8 @@ class BX(Video, Light, RouteBase):
 
         # Vx
         vocalsKesch.set('normo_exclu', 'on')
+
+        inputs.set('keschmic', 'dynamic')
 
 
     @pedalboard_button(11)

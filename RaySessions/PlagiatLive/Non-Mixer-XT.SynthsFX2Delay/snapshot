@@ -88,7 +88,7 @@
 	Mixer_Strip 0x37 create :name "Trap" :width "narrow" :tab "signal" :color 997303149 :gain_mode 0 :mute_mode 0 :group 0x61 :auto_input "" :manual_connection 0
 	Chain 0x38 create :strip 0x37 :tab "chain"
 	JACK_Module 0x39 create :parameter_values "0.000000:2.000000" :is_default 1 :chain 0x38 :active 1
-	Gain_Module 0x3A create :parameter_values "-14.000000:0.000000:0.000000" :is_default 1 :chain 0x38 :active 1
+	Gain_Module 0x3A create :parameter_values "-70.000000:0.000000:0.000000" :is_default 1 :chain 0x38 :active 1
 	Meter_Module 0x3B create :is_default 1 :chain 0x38 :active 1
 	JACK_Module 0x3C create :parameter_values "2.000000:0.000000" :is_default 1 :chain 0x38 :active 1
 	Mixer_Strip 0x3D create :name "ZDre" :width "narrow" :tab "signal" :color 1109364839 :gain_mode 0 :mute_mode 0 :group 0x61 :auto_input "" :manual_connection 0
@@ -137,7 +137,7 @@
 	Chain 0x63 create :strip 0x62 :tab "chain"
 	JACK_Module 0x64 create :parameter_values "0.000000:2.000000" :is_default 1 :chain 0x63 :active 1
 	LV2_Plugin 0xD0 create :lv2_plugin_uri "http://guitarix.sourceforge.net/plugins/gx_mbdelay_#_mbdelay_" :plugin_ins 1 :plugin_outs 1 :parameter_values "120.000000:120.000000:120.000000:120.000000:120.000000:50.000000:50.000000:50.000000:50.000000:50.000000:-23.000000:-5.000000:-2.000000:0.000000:-10.000000:90.000000:410.000000:1800.000000:6153.000000:0.000000" :is_default 0 :chain 0x63 :active 1
-	Gain_Module 0x65 create :parameter_values "0.000000:0.000000:0.000000" :is_default 1 :chain 0x63 :active 1
+	Gain_Module 0x65 create :parameter_values "0.000000:1.000000:0.000000" :is_default 1 :chain 0x63 :active 1
 	Meter_Module 0x66 create :is_default 1 :chain 0x63 :active 1
 	JACK_Module 0x67 create :parameter_values "2.000000:0.000000" :is_default 1 :chain 0x63 :active 1
 }

@@ -88,6 +88,8 @@ class DDD(Video, Light, RouteBase):
         vocalsKesch.set('meuf_exclu', 'on')
         vocalsFeat.set('normo_exclu', 'on')
 
+        inputs.set('keschmic', 'static')
+
         # Keyboard
         jmjKeyboard.set_sound('ZDre')
 
@@ -137,6 +139,8 @@ class DDD(Video, Light, RouteBase):
         vocalsKesch.set('normo_exclu', 'on')
         vocalsFeat.set('normo_exclu', 'on')
 
+        inputs.set('keschmic', 'dynamic')
+
         # Keyboard
         jmjKeyboard.set_sound('ZTrumpets', boost=True)
 
@@ -163,6 +167,8 @@ class DDD(Video, Light, RouteBase):
         vocalsNano.set('normo_exclu', 'on')
         vocalsKesch.set('normo_exclu', 'on')
         vocalsFeat.set('normo_exclu', 'on')
+
+        inputs.set('keschmic', 'dynamic')
 
         # Keyboard
         jmjKeyboard.set_sound('ZTrumpets', boost=True)
@@ -233,6 +239,8 @@ class DDD(Video, Light, RouteBase):
         vocalsKesch.set('normo_exclu', 'on')
         vocalsFeat.set('normo_exclu', 'on')
 
+        inputs.set('keschmic', 'static')
+
         # Keyboard
         jmjKeyboard.set_sound('ZTrumpets', boost=True)
 
@@ -263,6 +271,8 @@ class DDD(Video, Light, RouteBase):
         vocalsKesch.set('normo_exclu', 'on')
         vocalsFeat.set('normo_exclu', 'on')
 
+        inputs.set('keschmic', 'dynamic')
+
         # Keyboard
         jmjKeyboard.set_sound('ZTrumpets', boost=True)
 
@@ -291,6 +301,7 @@ class DDD(Video, Light, RouteBase):
 
         vocalsFeatFX3TrapVerb.set('pre', 'on')
 
+        inputs.set('keschmic', 'dynamic')
 
         # Keyboard
         jmjKeyboard.set_sound('ZTrumpets', boost=True)
@@ -339,6 +350,8 @@ class DDD(Video, Light, RouteBase):
         vocalsFeatFX3TrapVerb.set('pre', 'on')
         # Ring Mod sur voix
 
+        inputs.set('keschmic', 'dynamic')
+
         jmjKeyboard.set_sound('ZDre')
 
 
@@ -376,6 +389,8 @@ class DDD(Video, Light, RouteBase):
         vocalsNano.set('normo_exclu', 'on')
         vocalsKesch.set('normo_exclu', 'on')
         vocalsFeat.set('normo_exclu', 'on')
+
+        inputs.set('keschmic', 'dynamic')
 
         # Keyboard
         jmjKeyboard.set_sound('ZTrumpets', boost=True)
@@ -419,12 +434,18 @@ class DDD(Video, Light, RouteBase):
         """
         Refrain
         """
+
+        # Vocals
+        inputs.set('keschmic', 'static')
+
         looper.record_on_start('[7,8]')
         self.refrain()
         self.start_scene('sequences/refrain_vxloop', lambda: [
             self.wait(15, 'beats'),
             looper.record('[7,8]'),
         ])
+
+        inputs.set('keschmic', 'static')
 
 
     @pedalboard_button(11)

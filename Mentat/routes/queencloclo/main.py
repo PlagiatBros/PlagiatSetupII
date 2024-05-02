@@ -84,9 +84,11 @@ class QueenCloclo(Video, Light, RouteBase):
         jmjKeyboard.set_sound('ZTrumpets', lead=True)
 
         # Vocals
-        vocalsKesch.set('normo_exclu', 'on')
+        vocalsKesch.set('meuf_exclu', 'on')
         vocalsNano.set('normo_exclu', 'on')
         vocalsFeat.set('normo_exclu', 'on')
+
+        inputs.set('keschmic', 'static')
 
     @mk2_button(2, 'cyan')
     def intro(self):
@@ -121,6 +123,8 @@ class QueenCloclo(Video, Light, RouteBase):
         vocalsNano.set('normo_exclu', 'on')
         vocalsFeat.set('normo_exclu', 'on')
 
+        inputs.set('keschmic', 'dynamic')
+
     @pedalboard_button(3)
     def couplet1a(self):
         """
@@ -136,6 +140,9 @@ class QueenCloclo(Video, Light, RouteBase):
             self.wait(15, 'b'),
             looper.record(0)
         ])
+
+        # Vocals
+        inputs.set('keschmic', 'dynamic')
 
     @mk2_button(3, 'cyan')
     def couplet1b(self):
@@ -164,6 +171,9 @@ class QueenCloclo(Video, Light, RouteBase):
             self.wait(2*4, 'beats'),
             self.run(self.couplet1c)
         ])
+
+        # Vocals
+        inputs.set('keschmic', 'dynamic')
 
     @mk2_button(99)
     def couplet1c(self):
@@ -201,6 +211,7 @@ class QueenCloclo(Video, Light, RouteBase):
         vocalsNano.set('normo_exclu', 'on')
         vocalsFeat.set('normo_exclu', 'on')
 
+        inputs.set('keschmic', 'dynamic')
 
     # def up_alt_couplet(self):
     #     """
@@ -260,6 +271,7 @@ class QueenCloclo(Video, Light, RouteBase):
         vocalsNano.set('normo_exclu', 'on')
         vocalsFeat.set('normo_exclu', 'on')
 
+        inputs.set('keschmic', 'dynamic')
 
     @mk2_button(5, 'purple')
     def refrain1(self,):
@@ -296,6 +308,8 @@ class QueenCloclo(Video, Light, RouteBase):
         vocalsKesch.set('normo_exclu', 'on')
         vocalsNano.set('normo_exclu', 'on')
         vocalsFeat.set('normo_exclu', 'on')
+
+        inputs.set('keschmic', 'static')
 
          # Séquences
         self.start_sequence('sequences/refrain', [
@@ -344,10 +358,17 @@ class QueenCloclo(Video, Light, RouteBase):
         synths.set('SteelDrums', 'Amp', 'Gain', 0.35)
         synths.set('SteelDrums', 'Pan', 0.3)
 
+        synthsFX4TapeDelay.set('SynthsFX4TapeDelay', 'Mute', 0)
+        synthsFX4TapeDelay.set('Rhodes', 'Gain', -20)
+        synthsFX6Degrade.set('SynthsFX6Degrade', 'Mute', 0)
+        synthsFX6Degrade.set('Piano', 'Gain', -24)
+
         # Vocals
         vocalsKesch.set('normo_exclu', 'on')
         vocalsNano.set('normo_exclu', 'on')
         vocalsFeat.set('normo_exclu', 'on')
+
+        inputs.set('keschmic', 'dynamic')
 
     @mk2_button(7, 'cyan')
     def couplet2b(self):
@@ -381,6 +402,8 @@ class QueenCloclo(Video, Light, RouteBase):
         vocalsKesch.set('normo_exclu', 'on')
         vocalsNano.set('normo_exclu', 'on')
         vocalsFeat.set('normo_exclu', 'on')
+
+        inputs.set('keschmic', 'dynamic')
 
         # Keyboards
         jmjKeyboard.set_sound('LowZ8bits')
@@ -424,6 +447,8 @@ class QueenCloclo(Video, Light, RouteBase):
         vocalsNano.set('normo_exclu', 'on')
         vocalsFeat.set('normo_exclu', 'on')
 
+        inputs.set('keschmic', 'dynamic')
+
         # Keyboards
         jmjKeyboard.set_sound('LowZ8bits')
 
@@ -459,6 +484,9 @@ class QueenCloclo(Video, Light, RouteBase):
         # Keyboards
         jmjKeyboard.set_sound('MajorVocals',lead=True)
 
+        # Vocals
+        inputs.set('keschmic', 'dynamic')
+
     @pedalboard_button(6)
     def refrain_coupletcouplet(self):
         """
@@ -466,6 +494,7 @@ class QueenCloclo(Video, Light, RouteBase):
         """
         self.couplet_refrainrefrain()
         transport.start()
+
 
 
     @mk2_button(8, 'cyan')
@@ -500,6 +529,8 @@ class QueenCloclo(Video, Light, RouteBase):
         vocalsKesch.set('normo_exclu', 'on')
         vocalsNano.set('normo_exclu', 'on')
         vocalsFeat.set('normo_exclu', 'on')
+
+        inputs.set('keschmic', 'dynamic')
 
         # Keyboards
         jmjKeyboard.set_sound('MajorVocals', lead=True)
@@ -578,6 +609,10 @@ class QueenCloclo(Video, Light, RouteBase):
 
         jmjKeyboard.set_sound('TenorSax')
 
+        # Vocals
+        vocalsKesch.set('meuf_exclu', 'on')
+        inputs.set('keschmic', 'dynamic')
+
     @pedalboard_button(8)
     def theme(self):
         """
@@ -603,6 +638,7 @@ class QueenCloclo(Video, Light, RouteBase):
         vocalsNano.set('normo_exclu', 'on')
         vocalsFeat.set('normo_exclu', 'on')
 
+        inputs.set('keschmic', 'static')
 
     @pedalboard_button(9)
     def bridge(self):
@@ -624,6 +660,8 @@ class QueenCloclo(Video, Light, RouteBase):
         # Keyboards
         jmjKeyboard.set_sound('ZTrumpets')
 
+        inputs.set('keschmic', 'static')
+
 
     @pedalboard_button(10)
     def up_theme(self):
@@ -644,3 +682,11 @@ class QueenCloclo(Video, Light, RouteBase):
 
         # Keyboards
         jmjKeyboard.set_sound('ZBombarde')
+
+        inputs.set('keschmic', 'static')
+
+
+
+    @chastt_button(1)
+    def chastt_note_1(self):
+        chasttKeyboard.play_note(45, 0.5)

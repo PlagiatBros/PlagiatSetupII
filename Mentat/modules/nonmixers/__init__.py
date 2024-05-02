@@ -3,4 +3,6 @@ from .bassfx import BassFX
 from .vocals import Vocals
 from .vocalsfx import VocalsFX
 from .console import Console
+from .inputs import Inputs
+from .outputs import Outputs
 from .synths import Synths

@@ -56,6 +56,21 @@ MPKmini2 : MPKmini2 MIDI 1 |> Mentat : MpkControl
 Mentat : MpkControl |> MPKmini2 : MPKmini2 MIDI 1
 
 
+ChasttKeyboard : ZLow          |> ZynAddSubFX.ZLowSynths : ZynAddSubFX
+ChasttKeyboard : CLow          |> cLowBridge : playback
+ChasttKeyboard : ZHi           |> ZynAddSubFX.ZHiSynths : ZynAddSubFX
+ChasttKeyboard : CHi           |> MonoSynthMicroTonal : In
+ChasttKeyboard : Fluid_Rhodes           |> Fluid_Rhodes : Fluid_Rhodes
+ChasttKeyboard : Fluid_TenorSax           |> Fluid_TenorSax : Fluid_TenorSax
+ChasttKeyboard : Fluid_Charang           |> Fluid_Charang : Fluid_Charang
+ChasttKeyboard : Fluid_OrchestraHit       |> Fluid_OrchestraHit : Fluid_OrchestraHit
+ChasttKeyboard : Fluid_SteelDrum          |> Fluid_SteelDrum : Fluid_SteelDrum
+ChasttKeyboard : Fluid_MajorVocals          |> Fluid_MajorVocals : Fluid_MajorVocals
+ChasttKeyboard : Fluid_Piano          |> Fluid_Piano : Fluid_Piano
+Mentat : ChasttControlMidiOut |> ChasttKeyboard : in
+
+
+
 Mk2Keyboard : ZHi          |> loop192.MidiLooper : Loop 0
 Mk2Keyboard : ZLow          |> loop192.MidiLooper : Loop 1
 Mk2Keyboard : CHi           |> loop192.MidiLooper : Loop 2
@@ -135,4 +150,4 @@ Mentat : TenorSax |> Fluid_TenorSax : Fluid_TenorSax
 Mentat : SteelDrum |> Fluid_SteelDrum : Fluid_SteelDrum
 Mentat : OrchestraHit |> Fluid_OrchestraHit : Fluid_OrchestraHit
 Mentat : MajorVocals |> Fluid_MajorVocals : Fluid_MajorVocals
-Mentat : MajorVocals |> Fluid_Piano : Fluid_Piano
+Mentat : Piano |> Fluid_Piano : Fluid_Piano

@@ -65,6 +65,8 @@ class IfIHadAHummer(Video, Light, RouteBase):
         vocalsNano.set('meuf_exclu', 'on')
         vocalsKesch.set('meuf_exclu', 'on')
 
+        inputs.set('keschmic', 'static')
+
         # Keyboards
         jmjKeyboard.set_sound('LowZDancestep')
 
@@ -89,6 +91,8 @@ class IfIHadAHummer(Video, Light, RouteBase):
         # Vocals
         vocalsNano.set('gars_exclu', 'on')
         vocalsKesch.set('gars_exclu', 'on')
+
+        inputs.set('keschmic', 'dynamic')
 
         # Samples
         samples.set('Samples1', 'Mute', 0.0)
@@ -147,6 +151,7 @@ class IfIHadAHummer(Video, Light, RouteBase):
         vocalsNano.set('gars_exclu', 'on')
         vocalsKesch.set('normo_exclu', 'on')
 
+
         # Sequences
         seq192.select('solo', 'refrainPP_*')
 
@@ -175,6 +180,8 @@ class IfIHadAHummer(Video, Light, RouteBase):
         # Vocals
         vocalsNano.set('gars_exclu', 'on')
         vocalsKesch.set('normo_exclu', 'on')
+
+        inputs.set('keschmic', 'static')
 
         # Sequences
         seq192.select('on', 'refrainPP_*')
@@ -217,6 +224,8 @@ class IfIHadAHummer(Video, Light, RouteBase):
 #        vocalsKeschFX4Disint.set('active', 'on')
         vocalsKeschFX5RingMod.set('active', 'on')
 
+        inputs.set('keschmic', 'static')
+
         # Bass
         bassfx.set('distohi', 'on')
 
@@ -238,6 +247,8 @@ class IfIHadAHummer(Video, Light, RouteBase):
         self.refrain()
 #        vocalsKesch.set('normo', 'on')
         vocalsNano.set('normo_exclu', 'on')
+        inputs.set('keschmic', 'dynamic')
+
         seq192.select('on', 'refrain2_*')
 
         self.start_sequence('delay_refrain', [
@@ -268,6 +279,8 @@ class IfIHadAHummer(Video, Light, RouteBase):
         # Vocals
         vocalsNano.set('gars_exclu', 'on')
         vocalsKesch.set('meuf_exclu', 'on')
+
+        inputs.set('keschmic', 'dynamic')
 
         # Samples
         samples.set('Samples1', 'Mute', 0.0)

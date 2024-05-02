@@ -19,6 +19,7 @@ from .nonmixers import *
 from .zynaddsubfx import ZynAddSubFx, ZynPart
 from .tap192 import Tap192
 from .mk2minilab import Mk2Control, Mk2Keyboard
+from .chasttcontrol import ChasttControl, ChasttKeyboard
 from .mpkmini import MpkControl
 from .jmjkeyboard import JmjKeyboard, JmjKeyboardMidi
 from .joystick import Joystick
@@ -42,6 +43,11 @@ jmjKeyboardMidi = JmjKeyboardMidi('JmjKeyboardMidi', 'midi')
 jmjKeyboard = JmjKeyboard('JmjKeyboard', 'osc', 3002)
 mk2Keyboard = Mk2Keyboard('Mk2Keyboard', 'osc', 3003)
 mk2Control = Mk2Control('Mk2Control', 'midi')
+
+chasttKeyboard = ChasttKeyboard('ChasttKeyboard', 'osc', 3005)
+chasttControl = ChasttControl('ChasttControl', None)
+chasttControlMidiOut = Module('ChasttControlMidiOut', 'midi')
+
 joystick = Joystick('Joystick', 'osc', 3004)
 mpkControl = MpkControl('MpkControl', 'midi')
 
@@ -61,8 +67,8 @@ seq192 = Seq192('Seq192', 'osc', 9920)
 """
 Mixers
 """
-inputs = NonMixer('Inputs', 'osc', 10000)
-outputs = NonMixer('Outputs', 'osc', 10001)
+inputs = Inputs('Inputs', 'osc', 10000)
+outputs = Outputs('Outputs', 'osc', 10001)
 monitorsNano = NonMixer('MonitorsNano', 'osc', 10002)
 monitorsKesch = NonMixer('MonitorsKesch', 'osc', 10003)
 # (drums) 10004
@@ -80,6 +86,7 @@ synthsFX2Delay = NonMixer('SynthsFX2Delay', 'osc', 10032)
 synthsFX3Delay = NonMixer('SynthsFX3Delay', 'osc', 10033)
 synthsFX4TapeDelay = NonMixer('SynthsFX4TapeDelay', 'osc', 10034)
 synthsFX5Scape = NonMixer('SynthsFX5Scape', 'osc', 10035)
+synthsFX6Degrade = NonMixer('SynthsFX6Degrade', 'osc', 10036)
 
 samples = NonMixer('Samples', 'osc', 10040)
 samplesFX1Delay = NonMixer('SamplesFX1Delay', 'osc', 10041)

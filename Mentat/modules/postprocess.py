@@ -93,9 +93,9 @@ class PostProcess(Module):
         """
         for strip in ['Bass', 'BassSynths', 'Synths', 'Samples']:
             def closure(strip):
-                params = [('Outputs', strip, 'Mute'), ('Outputs', strip, 'Aux-A', 'Gain'), ('Outputs', strip, 'Aux-B', 'Gain'), ('Outputs', strip, 'Aux-C', 'Gain')]
-                def getter(mute, auxa, auxb, auxc):
-                    if mute == 1 and auxa == -70 and auxb == -70 and auxc == -70:
+                params = [('Outputs', strip, 'Mute'), ('Outputs', strip, 'Aux-A', 'Gain'), ('Outputs', strip, 'Aux-B', 'Gain')]
+                def getter(mute, auxa, auxb):
+                    if mute == 1 and auxa == -70 and auxb == -70:
                         return 'on'
                     else:
                         return 'off'

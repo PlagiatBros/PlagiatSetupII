@@ -1,4 +1,4 @@
-from ..base import RouteBase, mk2_button, pedalboard_button, gui_button
+from ..base import *
 from .video import Video
 from .light import Light
 
@@ -30,6 +30,8 @@ class StickItOut(Video, Light, RouteBase):
 
         # Mk2
         mk2Control.set_mode('cut_samples', 'cut_synths')
+
+        chasttKeyboard.set_sound('LowZ8bits')
 
     @pedalboard_button(1)
     @mk2_button(1, 'blue')
@@ -610,3 +612,26 @@ class StickItOut(Video, Light, RouteBase):
         range={'min':-70, 'max': 6})
     def samples_degrade(self):
         pass
+
+
+    @chastt_button(1)
+    def chastt_note_1(self):
+        chasttKeyboard.play_note(46, 0.5)
+
+    @chastt_button(2)
+    def chastt_note_2(self):
+        chasttKeyboard.play_note(43, 0.5)
+
+    @chastt_button(3)
+    def chastt_note_3(self):
+        chasttKeyboard.play_note(40, 0.5)
+
+
+
+    @chastt_button(5)
+    def chastt_note_5(self):
+        self.engine.modules['ConstantSampler'].send('/instrument/play', 's:Plagiat/ConstantKit/Clap', 127)
+
+    @chastt_button(6)
+    def chastt_note_6(self):
+        self.engine.modules['ConstantSampler'].send('/instrument/play', 's:Plagiat/ConstantKit/Stick', 127)

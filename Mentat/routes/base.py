@@ -46,6 +46,28 @@ class mk2_button():
             method.mk2_buttons[self.button] = self.color
         return method
 
+class chastt_button():
+    """
+    Decorator for route methods that can be called directly
+    from chastt button messages
+
+    Handles the buttons' colors.
+    """
+    def __init__(self, button, color='cyan'):
+        self.button = button
+        self.color = color
+    def __call__(self, method):
+        if not hasattr(method, 'index'):
+            global method_index
+            method.index = method_index
+            method_index += 1
+        if not hasattr(method, 'chastt_buttons'):
+            method.chastt_buttons = {}
+        if not self.button in method.chastt_buttons:
+            method.chastt_buttons[self.button] = self.color
+        return method
+
+
 class gui_button():
     """
     Decorator for route methods that can be called directly
@@ -72,8 +94,10 @@ class RouteBase(Route):
         self.direct_routing = {
             '/pedalBoard/button': {},
             '/mk2/button': {},
+            '/chastt/button': {},
         }
         self.mk2_lights = {}
+        self.chastt_lights = {}
 
         for name, method in getmembers(self):
 
@@ -90,9 +114,18 @@ class RouteBase(Route):
                     self.direct_routing['/mk2/button'][button].insert(0, method)
                     self.mk2_lights[button] = method.mk2_buttons[button]
 
+            if hasattr(method, 'chastt_buttons'):
+                for button in method.chastt_buttons:
+                    if button not in self.direct_routing['/chastt/button']:
+                        self.direct_routing['/chastt/button'][button] = []
+                    self.direct_routing['/chastt/button'][button].insert(0, method)
+                    self.chastt_lights[button] = method.chastt_buttons[button]
+
+
     def activate(self):
 
         mk2Control.set_lights(self.mk2_lights)
+        chasttControl.set_lights(self.chastt_lights)
 
         super().activate()
 
@@ -105,6 +138,10 @@ class RouteBase(Route):
             if len(args) > 0 and args[0] in self.direct_routing[address]:
                 for method in self.direct_routing[address][args[0]]:
                     method()
+
+        # ugly routing for network'd chastt control
+        if address.startswith('/chastt/'):
+            chasttControl.route(address, args)
 
         if address == '/set_route':
             engine.set_route(args[0])

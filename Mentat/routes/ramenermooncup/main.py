@@ -67,6 +67,8 @@ class RamenerMooncup(Video, Light, RouteBase):
         vocalsNano.set('gars_exclu', 'on')
         vocalsKesch.set('meuf_exclu', 'on')
 
+        inputs.set('keschmic', 'static')
+
     @mk2_button(2, 'purple')
     def couplet1(self):
         """
@@ -87,6 +89,10 @@ class RamenerMooncup(Video, Light, RouteBase):
         # Looper
         looper.record(0)
 
+
+        # Vocals
+        inputs.set('keschmic', 'static')
+
         # Sequences (Mentat)
         self.start_scene('sequences/couplet1_delayed', lambda:[
             self.wait_next_cycle(),
@@ -95,7 +101,8 @@ class RamenerMooncup(Video, Light, RouteBase):
             self.start_sequence('couplet', [
                 *[{} for i in range(7)], # bars 1 - 7
                 { # bar 8
-                    4: lambda: looper.record(0)
+                    4: lambda: looper.record(0),
+                    4.9: inputs.set('keschmic', 'dynamic')
                 },
                 *[{} for i in range(29)], # bars 9 - 21
                 { # bar 22
@@ -163,6 +170,8 @@ class RamenerMooncup(Video, Light, RouteBase):
         vocalsNano.set('normo_exclu', 'on')
         vocalsKesch.set('gars_exclu', 'on')
 
+        inputs.set('keschmic', 'static')
+
     @mk2_button(4, 'purple')
     def couplet2_intro(self):
         """
@@ -189,6 +198,8 @@ class RamenerMooncup(Video, Light, RouteBase):
         vocalsNano.set('gars_exclu', 'on')
         vocalsKesch.set('normo_exclu', 'on')
         vocalsKesch.set('meuf', 'on')
+
+        inputs.set('keschmic', 'dynamic')
 
     @pedalboard_button(4)
     def couplet2_main(self):
@@ -316,6 +327,8 @@ class RamenerMooncup(Video, Light, RouteBase):
         vocalsNano.set('normo_exclu', 'on')
         vocalsKesch.set('normo_exclu', 'on')
 
+        inputs.set('keschmic', 'static')
+
     @pedalboard_button(6)
     def disco(self):
         """
@@ -339,6 +352,8 @@ class RamenerMooncup(Video, Light, RouteBase):
         # Vocals
         vocalsNano.set('gars_exclu', 'on')
         vocalsKesch.set('gars_exclu', 'on')
+
+        inputs.set('keschmic', 'static')
 
     @mk2_button(5)
     def startingblocks(self):
@@ -396,6 +411,8 @@ class RamenerMooncup(Video, Light, RouteBase):
         vocalsNano.set('gars_exclu', 'on')
         vocalsKesch.set('gars_exclu', 'on')
 
+        inputs.set('keschmic', 'static')
+
         self.start_sequence('ramener', [
             {}, {}, # bars 1-2
             {
@@ -441,6 +458,8 @@ class RamenerMooncup(Video, Light, RouteBase):
         vocalsKeschFX2Delay.set('Kesch*', 'Gain', 0.0)
         vocalsKeschFX2Delay.set('VocalsKeschFX2Delay', 'Mute', 0.0)
 
+        inputs.set('keschmic', 'static')
+
 
         self.start_sequence('ramener', [
             {
@@ -479,6 +498,8 @@ class RamenerMooncup(Video, Light, RouteBase):
         # Vocals
         vocalsNano.set('gars_exclu', 'on')
         vocalsKesch.set('gars_exclu', 'on')
+
+        inputs.set('keschmic', 'static')
 
     @gui_button()
     def ramener_synth_on(self):

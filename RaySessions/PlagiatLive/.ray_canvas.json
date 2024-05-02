@@ -5152,8 +5152,8 @@
       "in_zone": "",
       "out_zone": "",
       "null_xy": [
-        281,
-        10580
+        503,
+        9967
       ],
       "in_xy": [
         400,
@@ -6727,8 +6727,8 @@
       "in_zone": "",
       "out_zone": "",
       "null_xy": [
-        1424,
-        8426
+        1317,
+        8456
       ],
       "in_xy": [
         400,
@@ -7117,6 +7117,48 @@
         3915
       ],
       "flags": 68,
+      "layout_mode": 0
+    },
+    {
+      "port_types_view": 31,
+      "group_name": "Non-Mixer-XT.Outputs/LeadSynths",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        -2652,
+        2652
+      ],
+      "in_xy": [
+        400,
+        12392
+      ],
+      "out_xy": [
+        0,
+        12392
+      ],
+      "flags": 0,
+      "layout_mode": 0
+    },
+    {
+      "port_types_view": 31,
+      "group_name": "Non-Mixer-XT.Outputs/LeadSamples",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        -2440,
+        1631
+      ],
+      "in_xy": [
+        400,
+        12392
+      ],
+      "out_xy": [
+        0,
+        12392
+      ],
+      "flags": 0,
       "layout_mode": 0
     }
   ],
