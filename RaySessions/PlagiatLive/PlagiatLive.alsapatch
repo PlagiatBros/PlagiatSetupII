@@ -16,6 +16,7 @@ JmjKeyboard : Fluid_Charang           |> Fluid_Charang : Fluid_Charang
 JmjKeyboard : Fluid_OrchestraHit       |> Fluid_OrchestraHit : Fluid_OrchestraHit
 JmjKeyboard : Fluid_SteelDrum          |> Fluid_SteelDrum : Fluid_SteelDrum
 JmjKeyboard : Fluid_MajorVocals          |> Fluid_MajorVocals : Fluid_MajorVocals
+JmjKeyboard : Fluid_Piano          |> Fluid_Piano : Fluid_Piano
 
 JmjKeyboard : ConstantSampler |> Tap192.ConstantSampler : midi_in
 #JmjKeyboard : ConstantSampler |> SPD-SX : SPD-SX Control
@@ -44,6 +45,7 @@ Mk2Keyboard : Fluid_Charang           |> Fluid_Charang : Fluid_Charang
 Mk2Keyboard : Fluid_OrchestraHit       |> Fluid_OrchestraHit : Fluid_OrchestraHit
 Mk2Keyboard : Fluid_SteelDrum          |> Fluid_SteelDrum : Fluid_SteelDrum
 Mk2Keyboard : Fluid_MajorVocals          |> Fluid_MajorVocals : Fluid_MajorVocals
+Mk2Keyboard : Fluid_Piano          |> Fluid_Piano : Fluid_Piano
 
 Mk2Keyboard : ConstantSampler |> Tap192.ConstantSampler : midi_in
 #Mk2Keyboard : ConstantSampler |> SPD-SX : SPD-SX Control
@@ -64,6 +66,7 @@ Mk2Keyboard : Fluid_Charang           |> loop192.MidiLooper : Loop 6
 Mk2Keyboard : Fluid_OrchestraHit           |> loop192.MidiLooper : Loop 7
 Mk2Keyboard : Fluid_SteelDrum           |> loop192.MidiLooper : Loop 8
 Mk2Keyboard : Fluid_MajorVocals           |> loop192.MidiLooper : Loop 9
+Mk2Keyboard : Fluid_Piano           |> loop192.MidiLooper : Loop 9
 Mk2Keyboard : ProdSampler           |> loop192.MidiLooper : Loop 10
 Mk2Keyboard : ConstantSampler           |> loop192.MidiLooper : Loop 11
 
@@ -77,6 +80,7 @@ JmjKeyboard : Fluid_Charang           |> loop192.MidiLooper : Loop 6
 JmjKeyboard : Fluid_OrchestraHit           |> loop192.MidiLooper : Loop 7
 JmjKeyboard : Fluid_SteelDrum           |> loop192.MidiLooper : Loop 8
 JmjKeyboard : Fluid_MajorVocals           |> loop192.MidiLooper : Loop 9
+JmjKeyboard : Fluid_Piano           |> loop192.MidiLooper : Loop 9
 JmjKeyboard : ProdSampler           |> loop192.MidiLooper : Loop 10
 JmjKeyboard : ConstantSampler           |> loop192.MidiLooper : Loop 11
 
@@ -91,8 +95,7 @@ loop192.MidiLooper : Loop 6        |> Fluid_Charang : Fluid_Charang
 loop192.MidiLooper : Loop 7    |> Fluid_OrchestraHit : Fluid_OrchestraHit
 loop192.MidiLooper : Loop 8       |> Fluid_SteelDrum : Fluid_SteelDrum
 loop192.MidiLooper : Loop 9       |> Fluid_MajorVocals : Fluid_MajorVocals
-loop192.MidiLooper : Loop 10       |> Fluid_MajorVocals : Fluid_MajorVocals
-loop192.MidiLooper : Loop 11       |> Fluid_MajorVocals : Fluid_MajorVocals
+loop192.MidiLooper : Loop 10       |> Fluid_Piano : Fluid_Piano
 
 
 seq192.MainSequencer : zynBass |> ZynAddSubFX.ZLowSynths : ZynAddSubFX
@@ -110,6 +113,7 @@ seq192.MainSequencer : Charang        |> Fluid_Charang : Fluid_Charang
 seq192.MainSequencer : OrchestraHit    |> Fluid_OrchestraHit : Fluid_OrchestraHit
 seq192.MainSequencer : SteelDrum       |> Fluid_SteelDrum : Fluid_SteelDrum
 seq192.MainSequencer : MajorVocals       |> Fluid_MajorVocals : Fluid_MajorVocals
+seq192.MainSequencer : Piano       |> Fluid_Piano : Fluid_Piano
 
 MonoSynthMicroTonal : Out   |> cHiBridge : playback
 
@@ -124,9 +128,11 @@ Mentat : MidiPanic |> Fluid_Charang : Fluid_Charang
 Mentat : MidiPanic |> Fluid_OrchestraHit : Fluid_OrchestraHit
 Mentat : MidiPanic |> Fluid_SteelDrum : Fluid_SteelDrum
 Mentat : MidiPanic |> Fluid_MajorVocals : Fluid_MajorVocals
+Mentat : MidiPanic |> Fluid_Piano : Fluid_Piano
 
 Mentat : Charang |> Fluid_Charang : Fluid_Charang
 Mentat : TenorSax |> Fluid_TenorSax : Fluid_TenorSax
 Mentat : SteelDrum |> Fluid_SteelDrum : Fluid_SteelDrum
 Mentat : OrchestraHit |> Fluid_OrchestraHit : Fluid_OrchestraHit
 Mentat : MajorVocals |> Fluid_MajorVocals : Fluid_MajorVocals
+Mentat : MajorVocals |> Fluid_Piano : Fluid_Piano

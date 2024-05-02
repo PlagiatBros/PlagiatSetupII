@@ -11,7 +11,7 @@
 	lv2:appliesTo <http://calf.sourceforge.net/plugins/BassEnhancer> ;
 	lv2:port [
 		lv2:symbol "amount" ;
-		pset:value 3.5
+		pset:value 3.20428014
 	] , [
 		lv2:symbol "blend" ;
 		pset:value 0.0
@@ -20,7 +20,7 @@
 		pset:value 0.0
 	] , [
 		lv2:symbol "drive" ;
-		pset:value 8.19999981
+		pset:value 5.32719994
 	] , [
 		lv2:symbol "floor" ;
 		pset:value 15.0
@@ -29,7 +29,7 @@
 		pset:value 1.0
 	] , [
 		lv2:symbol "freq" ;
-		pset:value 93.04644775
+		pset:value 82.86554718
 	] , [
 		lv2:symbol "level_in" ;
 		pset:value 1.0

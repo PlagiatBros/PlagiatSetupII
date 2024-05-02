@@ -182,6 +182,7 @@ charang = Module('Charang', 'midi')
 steeldrum = Module('SteelDrum', 'midi')
 orchestrahit = Module('OrchestraHit', 'midi')
 majorvocals = Module('MajorVocals', 'midi')
+piano = Module('Piano', 'midi')
 
 
 """

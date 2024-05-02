@@ -19,6 +19,7 @@ Carla.LowCSynths/Trap3:Out L             |> Non-Mixer-XT.BassSynths (Main):BassT
 Fluid_Charang:left                       |> Non-Mixer-XT.Synths (Main):Charang/in-1
 Fluid_MajorVocals:left                   |> Non-Mixer-XT.Synths (Main):MajorVocals/in-1
 Fluid_OrchestraHit:left                  |> Non-Mixer-XT.Synths (Main):OrchestraHit/in-1
+Fluid_Piano:left                         |> Non-Mixer-XT.Synths (Main):Piano/in-1
 Fluid_Rhodes:left                        |> Non-Mixer-XT.Synths (Main):Rhodes/in-1
 Fluid_SteelDrum:left                     |> Non-Mixer-XT.Synths (Main):SteelDrums/in-1
 Fluid_TenorSax:left                      |> Non-Mixer-XT.Synths (Main):TenorSax/in-1
@@ -107,6 +108,7 @@ Non-Mixer-XT.Inputs (Inputs):OH-L/out-1  |> Non-Mixer-XT.Drums (Main):OH-L/in-1
 Non-Mixer-XT.Inputs (Inputs):OH-R/out-1  |> Non-Mixer-XT.Drums (Main):OH-R/in-1
 Non-Mixer-XT.Inputs (Inputs):Snare/out-1 |> Non-Mixer-XT.Drums (Main):Snare/in-1
 Non-Mixer-XT.Inputs (Inputs):VocalsKesch/out-1 |> sooperlooper:loop6_in_1
+Non-Mixer-XT.Inputs (Inputs):VocalsKeschB/out-1 |> sooperlooper:loop6_in_1
 Non-Mixer-XT.Inputs (Inputs):VocalsNano/out-1 |> sooperlooper:loop4_in_1
 Non-Mixer-XT.MonitorsFeat (MonitorsFeat):Bass/out-1 |> Non-Mixer-XT.MonitorsFeat (MonitorsFeat):MonitorsFeat/in-1
 Non-Mixer-XT.MonitorsFeat (MonitorsFeat):Bass/out-2 |> Non-Mixer-XT.MonitorsFeat (MonitorsFeat):MonitorsFeat/in-2
@@ -432,6 +434,11 @@ Non-Mixer-XT.Synths (Main):OrchestraHit/out-2 |> Non-Mixer-XT.SynthsFX2Delay (In
 Non-Mixer-XT.Synths (Main):OrchestraHit/out-2 |> Non-Mixer-XT.SynthsFX3Delay (In):OrchestraHit/in-2
 Non-Mixer-XT.Synths (Main):OrchestraHit/out-2 |> Non-Mixer-XT.SynthsFX4TapeDelay (In):OrchestraHit/in-2
 Non-Mixer-XT.Synths (Main):OrchestraHit/out-2 |> Non-Mixer-XT.SynthsFX5Scape (In):OrchestraHit/in-2
+Non-Mixer-XT.Synths (Main):Piano/aux-A/out-1 |> Non-Mixer-XT.MonitorsKesch (MonitorsKesch):SynthsBoost/in-1
+Non-Mixer-XT.Synths (Main):Piano/aux-B/out-1 |> Non-Mixer-XT.Synths (Main):MainReverb/in-1
+Non-Mixer-XT.Synths (Main):Piano/aux-B/out-2 |> Non-Mixer-XT.Synths (Main):MainReverb/in-2
+Non-Mixer-XT.Synths (Main):Piano/out-1   |> Non-Mixer-XT.Synths (Out):SynthsOut/in-1
+Non-Mixer-XT.Synths (Main):Piano/out-2   |> Non-Mixer-XT.Synths (Out):SynthsOut/in-2
 Non-Mixer-XT.Synths (Main):Rhodes/aux-A/out-1 |> Non-Mixer-XT.MonitorsKesch (MonitorsKesch):SynthsBoost/in-1
 Non-Mixer-XT.Synths (Main):Rhodes/out-1  |> Non-Mixer-XT.Synths (Out):SynthsOut/in-1
 Non-Mixer-XT.Synths (Main):Rhodes/out-1  |> Non-Mixer-XT.SynthsFX1Reverb (In):Rhodes/in-1
@@ -941,39 +948,6 @@ Non-Mixer-XT.VocalsFeatFX9Scape (In):FeatGars/out-1 |> Non-Mixer-XT.VocalsFeatFX
 Non-Mixer-XT.VocalsFeatFX9Scape (In):FeatMeuf/out-1 |> Non-Mixer-XT.VocalsFeatFX9Scape (Process):VocalsFeatFX9Scape/in-1
 Non-Mixer-XT.VocalsFeatFX9Scape (In):FeatNormo/out-1 |> Non-Mixer-XT.VocalsFeatFX9Scape (Process):VocalsFeatFX9Scape/in-1
 Non-Mixer-XT.VocalsFeatFX9Scape (Process):VocalsFeatFX9Scape/out-1 |> Non-Mixer-XT.VocalsFeat (Out):FeatOut/in-1
-Non-Mixer-XT.VocalsKesch (ArtificialBackings):KeschABGars/out-1 |> Non-Mixer-XT.VocalsKesch (Out):KeschOut/in-1
-Non-Mixer-XT.VocalsKesch (ArtificialBackings):KeschABGars/out-1 |> Non-Mixer-XT.VocalsKeschFX1Delay (In):KeschAB/in-1
-Non-Mixer-XT.VocalsKesch (ArtificialBackings):KeschABGars/out-1 |> Non-Mixer-XT.VocalsKeschFX2Delay (In):KeschAB/in-1
-Non-Mixer-XT.VocalsKesch (ArtificialBackings):KeschABGars/out-1 |> Non-Mixer-XT.VocalsKeschFX3TrapVerb (In):KeschAB/in-1
-Non-Mixer-XT.VocalsKesch (ArtificialBackings):KeschABGars/out-1 |> Non-Mixer-XT.VocalsKeschFX4Disint (In):KeschAB/in-1
-Non-Mixer-XT.VocalsKesch (ArtificialBackings):KeschABGars/out-1 |> Non-Mixer-XT.VocalsKeschFX5RingMod (In):KeschAB/in-1
-Non-Mixer-XT.VocalsKesch (ArtificialBackings):KeschABGars/out-1 |> Non-Mixer-XT.VocalsKeschFX6Granular (In):KeschAB/in-1
-Non-Mixer-XT.VocalsKesch (ArtificialBackings):KeschABGars/out-1 |> Non-Mixer-XT.VocalsKeschFX7Slice (In):KeschAB/in-1
-Non-Mixer-XT.VocalsKesch (ArtificialBackings):KeschABGars/out-1 |> Non-Mixer-XT.VocalsKeschFX8TapeDelay (In):KeschAB/in-1
-Non-Mixer-XT.VocalsKesch (ArtificialBackings):KeschABGars/out-1 |> Non-Mixer-XT.VocalsKeschFX9Scape (In):KeschAB/in-1
-Non-Mixer-XT.VocalsKesch (ArtificialBackings):KeschABMeuf/out-1 |> Non-Mixer-XT.VocalsKesch (Out):KeschOut/in-1
-Non-Mixer-XT.VocalsKesch (ArtificialBackings):KeschABMeuf/out-1 |> Non-Mixer-XT.VocalsKeschFX1Delay (In):KeschAB/in-1
-Non-Mixer-XT.VocalsKesch (ArtificialBackings):KeschABMeuf/out-1 |> Non-Mixer-XT.VocalsKeschFX2Delay (In):KeschAB/in-1
-Non-Mixer-XT.VocalsKesch (ArtificialBackings):KeschABMeuf/out-1 |> Non-Mixer-XT.VocalsKeschFX3TrapVerb (In):KeschAB/in-1
-Non-Mixer-XT.VocalsKesch (ArtificialBackings):KeschABMeuf/out-1 |> Non-Mixer-XT.VocalsKeschFX4Disint (In):KeschAB/in-1
-Non-Mixer-XT.VocalsKesch (ArtificialBackings):KeschABMeuf/out-1 |> Non-Mixer-XT.VocalsKeschFX5RingMod (In):KeschAB/in-1
-Non-Mixer-XT.VocalsKesch (ArtificialBackings):KeschABMeuf/out-1 |> Non-Mixer-XT.VocalsKeschFX6Granular (In):KeschAB/in-1
-Non-Mixer-XT.VocalsKesch (ArtificialBackings):KeschABMeuf/out-1 |> Non-Mixer-XT.VocalsKeschFX7Slice (In):KeschAB/in-1
-Non-Mixer-XT.VocalsKesch (ArtificialBackings):KeschABMeuf/out-1 |> Non-Mixer-XT.VocalsKeschFX8TapeDelay (In):KeschAB/in-1
-Non-Mixer-XT.VocalsKesch (ArtificialBackings):KeschABMeuf/out-1 |> Non-Mixer-XT.VocalsKeschFX9Scape (In):KeschAB/in-1
-Non-Mixer-XT.VocalsKesch (ArtificialBackings):KeschABNormo/out-1 |> Non-Mixer-XT.VocalsKesch (Out):KeschOut/in-1
-Non-Mixer-XT.VocalsKesch (ArtificialBackings):KeschABNormo/out-1 |> Non-Mixer-XT.VocalsKeschFX1Delay (In):KeschAB/in-1
-Non-Mixer-XT.VocalsKesch (ArtificialBackings):KeschABNormo/out-1 |> Non-Mixer-XT.VocalsKeschFX2Delay (In):KeschAB/in-1
-Non-Mixer-XT.VocalsKesch (ArtificialBackings):KeschABNormo/out-1 |> Non-Mixer-XT.VocalsKeschFX3TrapVerb (In):KeschAB/in-1
-Non-Mixer-XT.VocalsKesch (ArtificialBackings):KeschABNormo/out-1 |> Non-Mixer-XT.VocalsKeschFX4Disint (In):KeschAB/in-1
-Non-Mixer-XT.VocalsKesch (ArtificialBackings):KeschABNormo/out-1 |> Non-Mixer-XT.VocalsKeschFX5RingMod (In):KeschAB/in-1
-Non-Mixer-XT.VocalsKesch (ArtificialBackings):KeschABNormo/out-1 |> Non-Mixer-XT.VocalsKeschFX6Granular (In):KeschAB/in-1
-Non-Mixer-XT.VocalsKesch (ArtificialBackings):KeschABNormo/out-1 |> Non-Mixer-XT.VocalsKeschFX7Slice (In):KeschAB/in-1
-Non-Mixer-XT.VocalsKesch (ArtificialBackings):KeschABNormo/out-1 |> Non-Mixer-XT.VocalsKeschFX8TapeDelay (In):KeschAB/in-1
-Non-Mixer-XT.VocalsKesch (ArtificialBackings):KeschABNormo/out-1 |> Non-Mixer-XT.VocalsKeschFX9Scape (In):KeschAB/in-1
-Non-Mixer-XT.VocalsKesch (Gars):KeschGars/aux-A/out-1 |> Non-Mixer-XT.VocalsKesch (ArtificialBackings):KeschABNormo/in-1
-Non-Mixer-XT.VocalsKesch (Gars):KeschGars/aux-B/out-1 |> Non-Mixer-XT.VocalsKesch (ArtificialBackings):KeschABMeuf/in-1
-Non-Mixer-XT.VocalsKesch (Gars):KeschGars/aux-B/out-1 |> Non-Mixer-XT.VocalsKesch (ArtificialBackings):KeschABNormo/in-1
 Non-Mixer-XT.VocalsKesch (Gars):KeschGars/aux-C/out-1 |> Non-Mixer-XT.VocalsKeschFX1Delay (In):KeschGars/in-1
 Non-Mixer-XT.VocalsKesch (Gars):KeschGars/aux-C/out-1 |> Non-Mixer-XT.VocalsKeschFX2Delay (In):KeschGars/in-1
 Non-Mixer-XT.VocalsKesch (Gars):KeschGars/aux-C/out-1 |> Non-Mixer-XT.VocalsKeschFX3TrapVerb (In):KeschGars/in-1
@@ -987,8 +961,6 @@ Non-Mixer-XT.VocalsKesch (Gars):KeschGars/out-1 |> Non-Mixer-XT.VocalsKesch (Out
 Non-Mixer-XT.VocalsKesch (In):KeschIn/out-1 |> Autotune.KeschGars:in
 Non-Mixer-XT.VocalsKesch (In):KeschIn/out-1 |> Autotune.KeschMeuf:in
 Non-Mixer-XT.VocalsKesch (In):KeschIn/out-1 |> Autotune.KeschNormo:in
-Non-Mixer-XT.VocalsKesch (Meuf):KeschMeuf/aux-A/out-1 |> Non-Mixer-XT.VocalsKesch (ArtificialBackings):KeschABGars/in-1
-Non-Mixer-XT.VocalsKesch (Meuf):KeschMeuf/aux-B/out-1 |> Non-Mixer-XT.VocalsKesch (ArtificialBackings):KeschABNormo/in-1
 Non-Mixer-XT.VocalsKesch (Meuf):KeschMeuf/aux-C/out-1 |> Non-Mixer-XT.VocalsKeschFX1Delay (In):KeschMeuf/in-1
 Non-Mixer-XT.VocalsKesch (Meuf):KeschMeuf/aux-C/out-1 |> Non-Mixer-XT.VocalsKeschFX2Delay (In):KeschMeuf/in-1
 Non-Mixer-XT.VocalsKesch (Meuf):KeschMeuf/aux-C/out-1 |> Non-Mixer-XT.VocalsKeschFX3TrapVerb (In):KeschMeuf/in-1
@@ -999,8 +971,6 @@ Non-Mixer-XT.VocalsKesch (Meuf):KeschMeuf/aux-C/out-1 |> Non-Mixer-XT.VocalsKesc
 Non-Mixer-XT.VocalsKesch (Meuf):KeschMeuf/aux-C/out-1 |> Non-Mixer-XT.VocalsKeschFX8TapeDelay (In):KeschMeuf/in-1
 Non-Mixer-XT.VocalsKesch (Meuf):KeschMeuf/aux-C/out-1 |> Non-Mixer-XT.VocalsKeschFX9Scape (In):KeschMeuf/in-1
 Non-Mixer-XT.VocalsKesch (Meuf):KeschMeuf/out-1 |> Non-Mixer-XT.VocalsKesch (Out):KeschOut/in-1
-Non-Mixer-XT.VocalsKesch (Normo):KeschNormo/aux-A/out-1 |> Non-Mixer-XT.VocalsKesch (ArtificialBackings):KeschABMeuf/in-1
-Non-Mixer-XT.VocalsKesch (Normo):KeschNormo/aux-B/out-1 |> Non-Mixer-XT.VocalsKesch (ArtificialBackings):KeschABGars/in-1
 Non-Mixer-XT.VocalsKesch (Normo):KeschNormo/aux-C/out-1 |> Non-Mixer-XT.VocalsKeschFX1Delay (In):KeschNormo/in-1
 Non-Mixer-XT.VocalsKesch (Normo):KeschNormo/aux-C/out-1 |> Non-Mixer-XT.VocalsKeschFX2Delay (In):KeschNormo/in-1
 Non-Mixer-XT.VocalsKesch (Normo):KeschNormo/aux-C/out-1 |> Non-Mixer-XT.VocalsKeschFX3TrapVerb (In):KeschNormo/in-1
@@ -1057,37 +1027,6 @@ Non-Mixer-XT.VocalsKeschFX9Scape (In):KeschGars/out-1 |> Non-Mixer-XT.VocalsKesc
 Non-Mixer-XT.VocalsKeschFX9Scape (In):KeschMeuf/out-1 |> Non-Mixer-XT.VocalsKeschFX9Scape (Process):VocalsKeschFX9Scape/in-1
 Non-Mixer-XT.VocalsKeschFX9Scape (In):KeschNormo/out-1 |> Non-Mixer-XT.VocalsKeschFX9Scape (Process):VocalsKeschFX9Scape/in-1
 Non-Mixer-XT.VocalsKeschFX9Scape (Process):VocalsKeschFX9Scape/out-1 |> Non-Mixer-XT.VocalsKesch (Out):KeschOut/in-1
-Non-Mixer-XT.VocalsNano (ArtificialBackings):NanoABGars/out-1 |> Non-Mixer-XT.VocalsNano (Out):NanoOut/in-1
-Non-Mixer-XT.VocalsNano (ArtificialBackings):NanoABGars/out-1 |> Non-Mixer-XT.VocalsNanoFX1Delay (In):NanoAB/in-1
-Non-Mixer-XT.VocalsNano (ArtificialBackings):NanoABGars/out-1 |> Non-Mixer-XT.VocalsNanoFX2Delay (In):NanoAB/in-1
-Non-Mixer-XT.VocalsNano (ArtificialBackings):NanoABGars/out-1 |> Non-Mixer-XT.VocalsNanoFX3TrapVerb (In):NanoAB/in-1
-Non-Mixer-XT.VocalsNano (ArtificialBackings):NanoABGars/out-1 |> Non-Mixer-XT.VocalsNanoFX4Disint (In):NanoAB/in-1
-Non-Mixer-XT.VocalsNano (ArtificialBackings):NanoABGars/out-1 |> Non-Mixer-XT.VocalsNanoFX5RingMod (In):NanoAB/in-1
-Non-Mixer-XT.VocalsNano (ArtificialBackings):NanoABGars/out-1 |> Non-Mixer-XT.VocalsNanoFX6Granular (In):NanoAB/in-1
-Non-Mixer-XT.VocalsNano (ArtificialBackings):NanoABGars/out-1 |> Non-Mixer-XT.VocalsNanoFX7Slice (In):NanoAB/in-1
-Non-Mixer-XT.VocalsNano (ArtificialBackings):NanoABGars/out-1 |> Non-Mixer-XT.VocalsNanoFX8TapeDelay (In):NanoAB/in-1
-Non-Mixer-XT.VocalsNano (ArtificialBackings):NanoABGars/out-1 |> Non-Mixer-XT.VocalsNanoFX9Scape (In):NanoAB/in-1
-Non-Mixer-XT.VocalsNano (ArtificialBackings):NanoABMeuf/out-1 |> Non-Mixer-XT.VocalsNano (Out):NanoOut/in-1
-Non-Mixer-XT.VocalsNano (ArtificialBackings):NanoABMeuf/out-1 |> Non-Mixer-XT.VocalsNanoFX1Delay (In):NanoAB/in-1
-Non-Mixer-XT.VocalsNano (ArtificialBackings):NanoABMeuf/out-1 |> Non-Mixer-XT.VocalsNanoFX2Delay (In):NanoAB/in-1
-Non-Mixer-XT.VocalsNano (ArtificialBackings):NanoABMeuf/out-1 |> Non-Mixer-XT.VocalsNanoFX3TrapVerb (In):NanoAB/in-1
-Non-Mixer-XT.VocalsNano (ArtificialBackings):NanoABMeuf/out-1 |> Non-Mixer-XT.VocalsNanoFX4Disint (In):NanoAB/in-1
-Non-Mixer-XT.VocalsNano (ArtificialBackings):NanoABMeuf/out-1 |> Non-Mixer-XT.VocalsNanoFX5RingMod (In):NanoAB/in-1
-Non-Mixer-XT.VocalsNano (ArtificialBackings):NanoABMeuf/out-1 |> Non-Mixer-XT.VocalsNanoFX6Granular (In):NanoAB/in-1
-Non-Mixer-XT.VocalsNano (ArtificialBackings):NanoABMeuf/out-1 |> Non-Mixer-XT.VocalsNanoFX7Slice (In):NanoAB/in-1
-Non-Mixer-XT.VocalsNano (ArtificialBackings):NanoABMeuf/out-1 |> Non-Mixer-XT.VocalsNanoFX9Scape (In):NanoAB/in-1
-Non-Mixer-XT.VocalsNano (ArtificialBackings):NanoABNormo/out-1 |> Non-Mixer-XT.VocalsNano (Out):NanoOut/in-1
-Non-Mixer-XT.VocalsNano (ArtificialBackings):NanoABNormo/out-1 |> Non-Mixer-XT.VocalsNanoFX1Delay (In):NanoAB/in-1
-Non-Mixer-XT.VocalsNano (ArtificialBackings):NanoABNormo/out-1 |> Non-Mixer-XT.VocalsNanoFX2Delay (In):NanoAB/in-1
-Non-Mixer-XT.VocalsNano (ArtificialBackings):NanoABNormo/out-1 |> Non-Mixer-XT.VocalsNanoFX3TrapVerb (In):NanoAB/in-1
-Non-Mixer-XT.VocalsNano (ArtificialBackings):NanoABNormo/out-1 |> Non-Mixer-XT.VocalsNanoFX4Disint (In):NanoAB/in-1
-Non-Mixer-XT.VocalsNano (ArtificialBackings):NanoABNormo/out-1 |> Non-Mixer-XT.VocalsNanoFX5RingMod (In):NanoAB/in-1
-Non-Mixer-XT.VocalsNano (ArtificialBackings):NanoABNormo/out-1 |> Non-Mixer-XT.VocalsNanoFX6Granular (In):NanoAB/in-1
-Non-Mixer-XT.VocalsNano (ArtificialBackings):NanoABNormo/out-1 |> Non-Mixer-XT.VocalsNanoFX7Slice (In):NanoAB/in-1
-Non-Mixer-XT.VocalsNano (ArtificialBackings):NanoABNormo/out-1 |> Non-Mixer-XT.VocalsNanoFX9Scape (In):NanoAB/in-1
-Non-Mixer-XT.VocalsNano (Gars):NanoGars/aux-A/out-1 |> Non-Mixer-XT.VocalsNano (ArtificialBackings):NanoABMeuf/in-1
-Non-Mixer-XT.VocalsNano (Gars):NanoGars/aux-A/out-1 |> Non-Mixer-XT.VocalsNano (ArtificialBackings):NanoABNormo/in-1
-Non-Mixer-XT.VocalsNano (Gars):NanoGars/aux-B/out-1 |> Non-Mixer-XT.VocalsNano (ArtificialBackings):NanoABMeuf/in-1
 Non-Mixer-XT.VocalsNano (Gars):NanoGars/aux-C/out-1 |> Non-Mixer-XT.VocalsNanoFX1Delay (In):NanoGars/in-1
 Non-Mixer-XT.VocalsNano (Gars):NanoGars/aux-C/out-1 |> Non-Mixer-XT.VocalsNanoFX2Delay (In):NanoGars/in-1
 Non-Mixer-XT.VocalsNano (Gars):NanoGars/aux-C/out-1 |> Non-Mixer-XT.VocalsNanoFX3TrapVerb (In):NanoGars/in-1
@@ -1101,8 +1040,6 @@ Non-Mixer-XT.VocalsNano (Gars):NanoGars/out-1 |> Non-Mixer-XT.VocalsNano (Out):N
 Non-Mixer-XT.VocalsNano (In):NanoIn/out-1 |> Autotune.NanoGars:in
 Non-Mixer-XT.VocalsNano (In):NanoIn/out-1 |> Autotune.NanoMeuf:in
 Non-Mixer-XT.VocalsNano (In):NanoIn/out-1 |> Autotune.NanoNormo:in
-Non-Mixer-XT.VocalsNano (Meuf):NanoMeuf/aux-A/out-1 |> Non-Mixer-XT.VocalsNano (ArtificialBackings):NanoABGars/in-1
-Non-Mixer-XT.VocalsNano (Meuf):NanoMeuf/aux-B/out-1 |> Non-Mixer-XT.VocalsNano (ArtificialBackings):NanoABNormo/in-1
 Non-Mixer-XT.VocalsNano (Meuf):NanoMeuf/aux-C/out-1 |> Non-Mixer-XT.VocalsNanoFX1Delay (In):NanoMeuf/in-1
 Non-Mixer-XT.VocalsNano (Meuf):NanoMeuf/aux-C/out-1 |> Non-Mixer-XT.VocalsNanoFX2Delay (In):NanoMeuf/in-1
 Non-Mixer-XT.VocalsNano (Meuf):NanoMeuf/aux-C/out-1 |> Non-Mixer-XT.VocalsNanoFX3TrapVerb (In):NanoMeuf/in-1
@@ -1113,8 +1050,6 @@ Non-Mixer-XT.VocalsNano (Meuf):NanoMeuf/aux-C/out-1 |> Non-Mixer-XT.VocalsNanoFX
 Non-Mixer-XT.VocalsNano (Meuf):NanoMeuf/aux-C/out-1 |> Non-Mixer-XT.VocalsNanoFX8TapeDelay (In):NanoMeuf/in-1
 Non-Mixer-XT.VocalsNano (Meuf):NanoMeuf/aux-C/out-1 |> Non-Mixer-XT.VocalsNanoFX9Scape (In):NanoMeuf/in-1
 Non-Mixer-XT.VocalsNano (Meuf):NanoMeuf/out-1 |> Non-Mixer-XT.VocalsNano (Out):NanoOut/in-1
-Non-Mixer-XT.VocalsNano (Normo):NanoNormo/aux-A/out-1 |> Non-Mixer-XT.VocalsNano (ArtificialBackings):NanoABMeuf/in-1
-Non-Mixer-XT.VocalsNano (Normo):NanoNormo/aux-B/out-1 |> Non-Mixer-XT.VocalsNano (ArtificialBackings):NanoABGars/in-1
 Non-Mixer-XT.VocalsNano (Normo):NanoNormo/aux-C/out-1 |> Non-Mixer-XT.VocalsNanoFX1Delay (In):NanoNormo/in-1
 Non-Mixer-XT.VocalsNano (Normo):NanoNormo/aux-C/out-1 |> Non-Mixer-XT.VocalsNanoFX2Delay (In):NanoNormo/in-1
 Non-Mixer-XT.VocalsNano (Normo):NanoNormo/aux-C/out-1 |> Non-Mixer-XT.VocalsNanoFX3TrapVerb (In):NanoNormo/in-1
@@ -1349,6 +1284,7 @@ sooperlooper:loop9_out_1                 |> ecasound:in_39
 sooperlooper:loop9_out_1                 |> ecasound:in_40
 system:capture_1                         |> Non-Mixer-XT.Inputs (Inputs):Bass/in-1
 system:capture_10                        |> Non-Mixer-XT.Inputs (Inputs):Feat/in-1
+system:capture_12                        |> Non-Mixer-XT.Inputs (Inputs):VocalsKeschB/in-1
 system:capture_2                         |> Non-Mixer-XT.Inputs (Inputs):VocalsKesch/in-1
 system:capture_3                         |> Non-Mixer-XT.Inputs (Inputs):VocalsNano/in-1
 system:capture_4                         |> Non-Mixer-XT.Inputs (Inputs):Kick/in-1

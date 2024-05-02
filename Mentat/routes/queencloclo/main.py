@@ -8,7 +8,7 @@ class QueenCloclo(Video, Light, RouteBase):
     """
     Queen Cloclo
     """
-
+    scale=[1, 1, 1, 0, 1, 1, 0, 1, 0, 1, 1, 0]
     def activate(self):
         """
         Called when the engine switches to this route.
@@ -25,12 +25,12 @@ class QueenCloclo(Video, Light, RouteBase):
 
         # Microtonality
         # microtonality.disable()
-        microtonality.enable()
-        microtonality.set_tuning(0, -0.35, 0, 0, 0, 0.35, 0, 0, 0, 0, 0.35, 0)
+        microtonality.disable()
+        # microtonality.set_tuning(0, -0.35, 0, 0, 0, 0.35, 0, 0, 0, 0, 0.35, 0)
 
         # Autotuner Notes
         #               c     d     e  f     g     a     b
-        notes.set_notes(1, 1, 1, 0, 1, 1, 0, 1, 0, 1, 1, 0)
+        notes.set_notes(*self.scale)
 
         # Mk2
         mk2Control.set_mode('cut_basssynths')
@@ -65,16 +65,41 @@ class QueenCloclo(Video, Light, RouteBase):
         self.pause_loopers()
         transport.stop()
 
-    @mk2_button(2, 'cyan')
-    def couplet(self):
+    @pedalboard_button(2)
+    def preintro(self):
         """
-        COUPLET 1
+        PRE-INTRO
         """
         self.pause_loopers()
         self.reset()
+        notes.set_notes(*self.scale)
+
+        # Séquences
+        seq192.select('solo', 'dummy')
+
+        # Transport
+        transport.start()
+
+        # Synths
+        jmjKeyboard.set_sound('ZTrumpets', lead=True)
+
+        # Vocals
+        vocalsKesch.set('normo_exclu', 'on')
+        vocalsNano.set('normo_exclu', 'on')
+        vocalsFeat.set('normo_exclu', 'on')
+
+    @mk2_button(2, 'cyan')
+    def intro(self):
+        """
+        INTRO (bass-bat)
+        """
+        self.pause_loopers()
+        self.reset()
+        notes.set_notes(*self.scale)
 
         # Séquences
         seq192.select('solo', 'couplet_*')
+        seq192.select('off', 'couplet_cLow_Barkline_half')
 
         # Samples
         self.open_samples()
@@ -97,13 +122,29 @@ class QueenCloclo(Video, Light, RouteBase):
         vocalsFeat.set('normo_exclu', 'on')
 
     @pedalboard_button(3)
-    @mk2_button(3, 'cyan')
-    def alt_couplet(self):
+    def couplet1a(self):
         """
-        COUPLET ALTERNATIF
+        COUPLET 1A (come on this song)
+        filtrage synth, trig bass loop
+        """
+        postprocess.animate_filter('synths', 400, 22000, 4, 'beat', easing='exponential-in')
+        self.start_scene('sequences/couplet1a', lambda:[
+            self.wait(3, 'b'),
+            looper.record(0),
+            self.wait_next_cycle(),
+            seq192.select('off', 'couplet_zHi_trumpets'),
+            self.wait(15, 'b'),
+            looper.record(0)
+        ])
+
+    @mk2_button(3, 'cyan')
+    def couplet1b(self):
+        """
+        COUPLET 1B (in the name)
         """
         self.pause_loopers()
         self.reset()
+        notes.set_notes(*self.scale)
 
         # Séquences
         seq192.select('solo', 'alt_couplet_*')
@@ -117,48 +158,129 @@ class QueenCloclo(Video, Light, RouteBase):
         # Transport
         transport.start()
 
-    @mk2_button(4, 'white')
-    def up_alt_couplet(self):
+        self.start_scene('sequences/couplet1c', lambda: [
+            self.wait(4*4, 'beats'),
+            seq192.select('solo', 'alt2_couplet_*samples_violons'),
+            self.wait(2*4, 'beats'),
+            self.run(self.couplet1c)
+        ])
+
+    @mk2_button(99)
+    def couplet1c(self):
         """
-        UP COUPLET ALTERNATIF
+        COUPLET 1C (we empty)
         """
         self.pause_loopers()
         self.reset()
+        notes.set_notes(*self.scale)
 
         # Séquences
-        seq192.select('on', 'alt2_couplet_*')
-
-        # Synths
-        synths.set('SteelDrums', 'Pan', 0.3)
-        synths.set('ZJestoProunk', 'Pan', -0.3)
-        synths.set('ZDiploLike', 'Amp', 'Gain', 0.85)
-        synths.set('ZJestoProunk', 'Amp', 'Gain', 0.85)
-        synths.set('SteelDrums', 'Amp', 'Gain', 0.85)
+        seq192.select('solo', 'couplet_*')
+        seq192.select('off', 'couplet_cLow_Barkline_full')
 
         # Samples
         self.open_samples()
 
+        # Transport
+        transport.start()
 
-    @pedalboard_button(2)
-    @mk2_button(5, 'purple')
-    def refrain(self):
+        # Looper
+        looper.trigger(0)
+
+        # Synths
+        synths.set('DubstepHorn', 'Amp', 'Gain', 0.6)
+        synths.set('EasyClassical', 'Amp', 'Gain', 0.6)
+        synths.set('EasyClassical', 'Pan', -0.4)
+        synths.set('ZStambul', 'Amp', 'Gain', 0.6)
+        synths.set('ZStambul', 'Pan', 0.4)
+        synths.set('SteelDrums', 'Amp', 'Gain', 0.35)
+        synths.set('SteelDrums', 'Pan', 0.3)
+
+        # Vocals
+        vocalsKesch.set('normo_exclu', 'on')
+        vocalsNano.set('normo_exclu', 'on')
+        vocalsFeat.set('normo_exclu', 'on')
+
+
+    # def up_alt_couplet(self):
+    #     """
+    #     UP COUPLET ALTERNATIF
+    #     """
+    #     self.pause_loopers()
+    #     self.reset()
+    #
+    #     # Séquences
+    #     seq192.select('on', 'alt2_couplet_*')
+    #
+    #     # Synths
+    #     synths.set('SteelDrums', 'Pan', 0.3)
+    #     synths.set('ZJestoProunk', 'Pan', -0.3)
+    #     synths.set('ZDiploLike', 'Amp', 'Gain', 0.85)
+    #     synths.set('ZJestoProunk', 'Amp', 'Gain', 0.85)
+    #     synths.set('SteelDrums', 'Amp', 'Gain', 0.85)
+    #
+    #     # Samples
+    #     self.open_samples()
+
+
+    @mk2_button(4, 'purple')
+    def prerefrain(self):
         """
-        REFRAIN
+        PREREFRAIN (loop vx seules)
         """
         self.pause_loopers()
         self.reset()
+        notes.set_notes(*self.scale)
+
+        # Séquences
+        seq192.select('solo', 'dummy')
+
+        # Loopers
+        looper.record_on_start('[5,7,9]')
+
+        # Transport
+        transport.start()
+
+        # harmo chastitties
+        autotuneFeatNormo.set_notes(*self.scale[2:], *self.scale[0:2])
+
+        self.start_scene('sequences/autorefrain', lambda: [
+            self.wait(15),
+            looper.record('[5,7]'), #,9]'),
+            self.wait(1),
+            # self.run(self.refrain1)
+        ])
+
+        # Keyboards
+        jmjKeyboard.set_sound('ZTrumpets')
+
+
+        # Vocals
+        vocalsKesch.set('normo_exclu', 'on')
+        vocalsNano.set('normo_exclu', 'on')
+        vocalsFeat.set('normo_exclu', 'on')
+
+
+    @mk2_button(5, 'purple')
+    def refrain1(self,):
+        """
+        REFRAIN 1
+        """
+
+        self.reset()
+        notes.set_notes(*self.scale)
 
         self.open_samples()
 
         # Séquences
         seq192.select('solo', 'refrain_*')
 
-        # Basse
-        bassFX.set('distohi', 'on')
-
-
         # Transport
         transport.start()
+        looper.trigger('[5,7]')
+
+        # Basse
+        bassFX.set('distohi', 'on')
 
         # Synths
         synths.set('TenorSax', 'Calf%20Mono%20Compressor', 'Bypass', 0.0)
@@ -194,65 +316,170 @@ class QueenCloclo(Video, Light, RouteBase):
             }
          ], loop=True)
 
-
-    @mk2_button(6, 'white')
-    def break_couplet(self):
+    @mk2_button(6, 'cyan')
+    def couplet2a(self):
         """
-        BREAK COUPLET (il reste des haricots)
+        COUPLET 2a
         """
         self.pause_loopers()
         self.reset()
+        notes.set_notes(*self.scale)
 
         # Séquences
-        seq192.select('solo', 'break_*')
+        seq192.select('solo', 'couplet2_Piano')
+        seq192.select('on', 'couplet2_contrechant_court')
 
         # Samples
         self.open_samples()
 
+        # Transport
+        transport.start()
+
+        # Synths
+        synths.set('DubstepHorn', 'Amp', 'Gain', 0.6)
+        synths.set('EasyClassical', 'Amp', 'Gain', 0.6)
+        synths.set('EasyClassical', 'Pan', -0.4)
+        synths.set('ZStambul', 'Amp', 'Gain', 0.6)
+        synths.set('ZStambul', 'Pan', 0.4)
+        synths.set('SteelDrums', 'Amp', 'Gain', 0.35)
+        synths.set('SteelDrums', 'Pan', 0.3)
+
+        # Vocals
+        vocalsKesch.set('normo_exclu', 'on')
+        vocalsNano.set('normo_exclu', 'on')
+        vocalsFeat.set('normo_exclu', 'on')
 
     @mk2_button(7, 'cyan')
-    def alt2_couplet(self):
+    def couplet2b(self):
         """
-        COUPLET ALTERNATIF 2 (we got beans)
+        COUPLET 2b
         """
         self.pause_loopers()
         self.reset()
 
         # Séquences
-        # seq192.select('solo', 'alt*')
-        seq192.select('solo', 'up_theme_sf_tenorsax')
-
-        # Synths
-        synths.set('SteelDrums', 'Pan', 0.3)
-        synths.set('ZJestoProunk', 'Pan', -0.3)
-        synths.set('ZTrumpets', 'Amp', 'Gain', 0.5)
-
+        seq192.select('solo', 'couplet2_Piano2')
+        seq192.select('on', 'couplet2_contrechant_court')
+        seq192.select('on', 'couplet2_contrechant_long')
 
         # Samples
         self.open_samples()
 
         # Transport
         transport.start()
+
+        # Synths
+        synths.set('DubstepHorn', 'Amp', 'Gain', 0.6)
+        synths.set('EasyClassical', 'Amp', 'Gain', 0.6)
+        synths.set('EasyClassical', 'Pan', -0.4)
+        synths.set('ZStambul', 'Amp', 'Gain', 0.6)
+        synths.set('ZStambul', 'Pan', 0.4)
+        synths.set('SteelDrums', 'Amp', 'Gain', 0.35)
+        synths.set('SteelDrums', 'Pan', 0.3)
+
+        # Vocals
+        vocalsKesch.set('normo_exclu', 'on')
+        vocalsNano.set('normo_exclu', 'on')
+        vocalsFeat.set('normo_exclu', 'on')
+
+        # Keyboards
+        jmjKeyboard.set_sound('LowZ8bits')
+        mk2Control.set_mode('stopit')
+        mk2Keyboard.set_sound('LowCTrap1')
+
+    @pedalboard_button(5)
+    def couplet2refrain(self):
+        """
+        COUPLET 2 Refrain
+        """
+        self.pause_loopers()
+        self.reset()
+
+        # Samples
+        self.open_samples()
+
+        notes.set_notes([1]*12)
+
+        # Séquences
+        # seq192.select('solo', 'couplet2_Piano')
+        seq192.select('solo', 'gonnadgun_zHi_trumpets')
+        # seq192.select('on', 'couplet2_contrechant_long')
+        # seq192.select('on', 'couplet2_refrain')
+
+        # Transport
+        transport.start()
+
+
+        # Synths
+        synths.set('DubstepHorn', 'Amp', 'Gain', 0.6)
+        synths.set('EasyClassical', 'Amp', 'Gain', 0.6)
+        synths.set('EasyClassical', 'Pan', -0.4)
+        synths.set('ZStambul', 'Amp', 'Gain', 0.6)
+        synths.set('ZStambul', 'Pan', 0.4)
+        synths.set('SteelDrums', 'Amp', 'Gain', 0.35)
+        synths.set('SteelDrums', 'Pan', 0.3)
+
+        # Vocals
+        vocalsKesch.set('normo_exclu', 'on')
+        vocalsNano.set('normo_exclu', 'on')
+        vocalsFeat.set('normo_exclu', 'on')
+
+        # Keyboards
+        jmjKeyboard.set_sound('LowZ8bits')
+
+        # Séquences
+        # self.start_sequence('sequence/gonnadgunseq', [
+        #     {
+        #         1: lambda: [
+        #             seq192.select('solo', 'couplet2_contrechant_court'),
+        #             seq192.select('on', 'couplet2_contrechant_long'),
+        #             ],
+        #         2.5: lambda: [
+        #             seq192.select('solo', 'dummy')
+        #         ]
+        #         },
+        # ],
+        # loop=True)
+        self.start_scene('sequence/gonnadgun', lambda: [
+            self.wait(16, 'beat'),
+            self.run(self.couplet_refrainrefrain)
+        ])
+
+
+
+    def couplet_refrainrefrain(self):
+
+        self.stop_sequence('*')
+
+        # Séquences
+        seq192.select('solo', 'couplet2_contrechant_court'),
+        seq192.select('on', 'couplet2_contrechant_long'),
+        seq192.select('on', 'couplet2_refrain')
+
+        # Keyboards
+        jmjKeyboard.set_sound('MajorVocals',lead=True)
+
+    @pedalboard_button(6)
+    def refrain_coupletcouplet(self):
+        """
+        Refrain Couplet couplet
+        """
+        self.couplet_refrainrefrain()
+        transport.start()
+
 
     @mk2_button(8, 'cyan')
-    def alt2b_couplet(self):
+    def couplet2bc(self):
         """
-        COUPLET ALTERNATIF 2b -what do we need
+        COUPLET 2c
         """
         self.pause_loopers()
         self.reset()
 
         # Séquences
-        seq192.select('solo', 'alt*')
-
-        # Synths
-        synths.set('SteelDrums', 'Pan', 0.3)
-        synths.set('ZJestoProunk', 'Pan', -0.3)
-        # synths.set('ZTrumpets', 'Amp', 'Gain', 0.5)
-        synths.set('ZDiploLike', 'Amp', 'Gain', 0.85)
-        synths.set('ZJestoProunk', 'Amp', 'Gain', 0.85)
-        synths.set('SteelDrums', 'Amp', 'Gain', 0.85)
-
+        seq192.select('solo', 'couplet2_Piano')
+        seq192.select('on', 'couplet2_salsa')
+        seq192.select('on', 'couplet2_bass*')
 
         # Samples
         self.open_samples()
@@ -260,6 +487,96 @@ class QueenCloclo(Video, Light, RouteBase):
         # Transport
         transport.start()
 
+        # Synths
+        synths.set('DubstepHorn', 'Amp', 'Gain', 0.6)
+        synths.set('EasyClassical', 'Amp', 'Gain', 0.6)
+        synths.set('EasyClassical', 'Pan', -0.4)
+        synths.set('ZStambul', 'Amp', 'Gain', 0.6)
+        synths.set('ZStambul', 'Pan', 0.4)
+        synths.set('SteelDrums', 'Amp', 'Gain', 0.35)
+        synths.set('SteelDrums', 'Pan', 0.3)
+
+        # Vocals
+        vocalsKesch.set('normo_exclu', 'on')
+        vocalsNano.set('normo_exclu', 'on')
+        vocalsFeat.set('normo_exclu', 'on')
+
+        # Keyboards
+        jmjKeyboard.set_sound('MajorVocals', lead=True)
+
+    #
+    # @mk2_button(6, 'white')
+    # def break_couplet(self):
+    #     """
+    #     BREAK COUPLET (il reste des haricots)
+    #     """
+    #     self.pause_loopers()
+    #     self.reset()
+    #
+    #     # Séquences
+    #     seq192.select('solo', 'break_*')
+    #
+    #     # Samples
+    #     self.open_samples()
+    #
+    #
+    # @mk2_button(7, 'cyan')
+    # def alt2_couplet(self):
+    #     """
+    #     COUPLET ALTERNATIF 2 (we got beans)
+    #     """
+    #     self.pause_loopers()
+    #     self.reset()
+    #
+    #     # Séquences
+    #     # seq192.select('solo', 'alt*')
+    #     seq192.select('solo', 'up_theme_sf_tenorsax')
+    #
+    #     # Synths
+    #     synths.set('SteelDrums', 'Pan', 0.3)
+    #     synths.set('ZJestoProunk', 'Pan', -0.3)
+    #     synths.set('ZTrumpets', 'Amp', 'Gain', 0.5)
+    #
+    #
+    #     # Samples
+    #     self.open_samples()
+    #
+    #     # Transport
+    #     transport.start()
+    #
+    # @mk2_button(8, 'cyan')
+    # def alt2b_couplet(self):
+    #     """
+    #     COUPLET ALTERNATIF 2b -what do we need
+    #     """
+    #     self.pause_loopers()
+    #     self.reset()
+    #
+    #     # Séquences
+    #     seq192.select('solo', 'alt*')
+    #
+    #     # Synths
+    #     synths.set('SteelDrums', 'Pan', 0.3)
+    #     synths.set('ZJestoProunk', 'Pan', -0.3)
+    #     # synths.set('ZTrumpets', 'Amp', 'Gain', 0.5)
+    #     synths.set('ZDiploLike', 'Amp', 'Gain', 0.85)
+    #     synths.set('ZJestoProunk', 'Amp', 'Gain', 0.85)
+    #     synths.set('SteelDrums', 'Amp', 'Gain', 0.85)
+    #
+    #
+    #     # Samples
+    #     self.open_samples()
+    #
+    #     # Transport
+    #     transport.start()
+    #
+    #
+    @pedalboard_button(7)
+    def beethoven(self):
+        transport.stop()
+        self.pause_loopers()
+
+        jmjKeyboard.set_sound('TenorSax')
 
     @pedalboard_button(8)
     def theme(self):

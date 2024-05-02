@@ -182,7 +182,7 @@ class DDD(Video, Light, RouteBase):
         ])
 
 
-    @pedalboard_button(3)
+    @mk2_button(3, 'green')
     def prerefrain(self):
         """
         PREREFRAIN MariLouiz
@@ -240,7 +240,7 @@ class DDD(Video, Light, RouteBase):
         bassFX.set('distohi', 'on')
 
 
-    @mk2_button(3, 'cyan')
+    @mk2_button(4, 'cyan')
     @pedalboard_button(5)
     def couplet2_1(self):
         """
@@ -267,7 +267,7 @@ class DDD(Video, Light, RouteBase):
         jmjKeyboard.set_sound('ZTrumpets', boost=True)
 
 
-    @mk2_button(4)
+    @mk2_button(5)
     def couplet2_2(self):
         """
         COUPLET 2_2 (chuis un @male deconstruit)
@@ -322,7 +322,7 @@ class DDD(Video, Light, RouteBase):
         vocalsKeschFX5RingMod.set('pre', 'on')
         vocalsKeschFX5RingMod.set('Kesch*', 'Gain', -8)
 
-    @mk2_button(5, 'purple')
+    @mk2_button(6, 'purple')
     def couplet2_2_basson(self):
         seq192.select('on', 'couplet2-2_cLow_trap1')
 
@@ -343,7 +343,7 @@ class DDD(Video, Light, RouteBase):
 
 
     # @pedalboard_button(6)
-    @mk2_button(6, 'purple')
+    @mk2_button(7, 'purple')
     def couplet2_3(self):
         """
         COUPLET 2_3 (let's go back)

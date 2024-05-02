@@ -1,6 +1,7 @@
 from mentat import Module
 from .keyboard import Keyboard
 
+from math import copysign
 
 class Mk2Keyboard(Keyboard):
     """
@@ -105,7 +106,9 @@ class Mk2Control(Module):
 
             if 'keyboard' not in self.modes or self.shift_key:
 
-                p = 1.0 + args[1] / 8192 * 0.75
+                clamp = copysign(max(abs(args[1]) - 2048,0) / (8192 - 2048), args[1])
+
+                p = 1.0 + clamp * 0.75
 
                 self.engine.modules['PostProcess'].set_pitch('*', p)
 

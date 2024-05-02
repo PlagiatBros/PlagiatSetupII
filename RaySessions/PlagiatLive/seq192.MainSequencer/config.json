@@ -101,6 +101,13 @@
             "channels": {
                     "0": {"name": "MajorVocals"}
             }
+        },
+        "12": {
+            "name": "Piano",
+            "color": "#c77217",
+            "channels": {
+                    "0": {"name": "Piano"}
+            }
         }
     }
 }

@@ -8,7 +8,7 @@
 	Chain 0x2 create :strip 0x1 :tab "chain"
 	JACK_Module 0x3 create :parameter_values "0.000000:1.000000" :is_default 1 :chain 0x2 :active 1
 	LADSPA_Plugin 0xA4 create :plugin_id 1410 :plugin_ins 1 :plugin_outs 1 :parameter_values "197.699997:501.600006:-60.174999:47.499619:360.000000:900.000000:-21.375000:0.000000:0.000000" :is_default 0 :chain 0x2 :active 1
-	LV2_Plugin 0xA3 create :lv2_plugin_uri "urn:ardour:a-eq" :plugin_ins 1 :plugin_outs 1 :parameter_values "100.000000:-20.000000:300.000000:0.000000:1.000000:1000.000000:0.000000:1.000000:2500.000000:0.000000:1.000000:6000.000000:0.000000:1.000000:6500.000000:-20.000000:0.000000:1.000000:1.000000:1.000000:1.000000:1.000000:1.000000:1.000000:0.000000" :is_default 0 :chain 0x2 :active 1
+	LV2_Plugin 0xA3 create :lv2_plugin_uri "urn:ardour:a-eq" :plugin_ins 1 :plugin_outs 1 :parameter_values "100.000000:-20.000000:300.000000:0.000000:1.000000:1000.000000:0.000000:1.000000:2500.000000:0.000000:1.000000:6000.000000:0.000000:1.000000:6500.000000:-20.000000:0.000000:1.000000:1.000000:1.000000:1.000000:1.000000:1.000000:1.000000:1.000000" :is_default 0 :chain 0x2 :active 0
 	LADSPA_Plugin 0xE9 create :plugin_id 1916 :plugin_ins 1 :plugin_outs 1 :parameter_values "1.000000:10.000000:270.000000:-23.500000:10.200000:3.250000:6.000000:0.000000" :is_default 0 :chain 0x2 :active 1
 	Gain_Module 0x4 create :parameter_values "0.000000:0.000000:0.000000" :is_default 1 :chain 0x2 :active 1
 	Meter_Module 0x5 create :is_default 1 :chain 0x2 :active 1
@@ -16,37 +16,37 @@
 	Mixer_Strip 0x16 create :name "KeschMeuf" :width "narrow" :tab "signal" :color 828296856 :gain_mode 0 :mute_mode 0 :group 0x3F :auto_input "" :manual_connection 0
 	Chain 0x17 create :strip 0x16 :tab "chain"
 	JACK_Module 0x18 create :parameter_values "0.000000:1.000000" :is_default 1 :chain 0x17 :active 1
-	LV2_Plugin 0xA6 create :lv2_plugin_uri "urn:ardour:a-eq" :plugin_ins 1 :plugin_outs 1 :parameter_values "160.000000:-12.500000:280.000000:0.000000:0.300061:950.000000:-4.000000:1.500000:6000.000000:-20.000000:0.197431:5500.000000:1.000000:1.300000:9000.000000:-12.000000:0.000000:1.000000:1.000000:1.000000:1.000000:1.000000:1.000000:1.000000:0.000000" :is_default 0 :chain 0x17 :active 1
+	LV2_Plugin 0xA6 create :lv2_plugin_uri "urn:ardour:a-eq" :plugin_ins 1 :plugin_outs 1 :parameter_values "160.000000:-12.500000:280.000000:0.000000:0.300061:950.000000:-4.000000:1.500000:6000.000000:-20.000000:0.197431:5500.000000:1.000000:1.300000:9000.000000:-12.000000:0.000000:1.000000:1.000000:1.000000:1.000000:1.000000:0.000000:1.000000:0.000000" :is_default 0 :chain 0x17 :active 1
 	LADSPA_Plugin 0xF2 create :plugin_id 1916 :plugin_ins 1 :plugin_outs 1 :parameter_values "0.000000:10.000000:120.000000:-9.500000:7.400000:3.250000:3.600000:0.000000" :is_default 0 :chain 0x17 :active 1
 	AUX_Module 0x42 create :parameter_values "0.000000" :is_default 0 :chain 0x17 :active 1 :number 0
 	AUX_Module 0x43 create :parameter_values "-70.000000" :is_default 0 :chain 0x17 :active 1 :number 1
 	AUX_Module 0x78 create :parameter_values "0.000000" :is_default 0 :chain 0x17 :active 1 :number 2
 	Gain_Module 0x19 create :parameter_values "0.000000:1.000000:0.000000" :is_default 1 :chain 0x17 :active 1
-	LADSPA_Plugin 0x158 create :plugin_id 1515013196 :plugin_ins 1 :plugin_outs 1 :parameter_values "0.000000:500.000000:0.000000:5800.000000:1.000000:0.000000:0.015000:0.148936:0.000000" :is_default 0 :chain 0x17 :active 1
+	LADSPA_Plugin 0x158 create :plugin_id 1515013196 :plugin_ins 1 :plugin_outs 1 :parameter_values "0.000000:458.333344:0.000000:5800.000000:1.000000:0.000000:0.015000:0.148936:0.000000" :is_default 0 :chain 0x17 :active 1
 	Meter_Module 0x1A create :is_default 1 :chain 0x17 :active 1
 	JACK_Module 0x1B create :parameter_values "1.000000:0.000000" :is_default 1 :chain 0x17 :active 1
 	Mixer_Strip 0x1C create :name "KeschNormo" :width "narrow" :tab "signal" :color 1073111549 :gain_mode 0 :mute_mode 0 :group 0x40 :auto_input "" :manual_connection 0
 	Chain 0x1D create :strip 0x1C :tab "chain"
 	JACK_Module 0x1E create :parameter_values "0.000000:1.000000" :is_default 1 :chain 0x1D :active 1
-	LV2_Plugin 0xAB create :lv2_plugin_uri "urn:ardour:a-eq" :plugin_ins 1 :plugin_outs 1 :parameter_values "160.000000:0.000000:180.000000:10.500000:0.700000:600.000000:-9.000000:1.500000:6000.000000:-20.000000:0.284764:3000.000000:0.000000:4.000000:6000.000000:-4.500000:0.000000:1.000000:1.000000:1.000000:1.000000:1.000000:1.000000:1.000000:0.000000" :is_default 0 :chain 0x1D :active 1
+	LV2_Plugin 0xAB create :lv2_plugin_uri "urn:ardour:a-eq" :plugin_ins 1 :plugin_outs 1 :parameter_values "160.000000:0.000000:180.000000:10.500000:0.700000:600.000000:-9.000000:1.500000:6000.000000:-20.000000:0.284764:3000.000000:0.000000:4.000000:6000.000000:-4.500000:0.000000:1.000000:1.000000:1.000000:1.000000:1.000000:0.000000:1.000000:0.000000" :is_default 0 :chain 0x1D :active 1
 	LADSPA_Plugin 0xEA create :plugin_id 1916 :plugin_ins 1 :plugin_outs 1 :parameter_values "0.000000:10.000000:401.000000:-12.000000:6.600000:3.250000:2.800000:0.000000" :is_default 0 :chain 0x1D :active 1
 	AUX_Module 0x44 create :parameter_values "0.000000" :is_default 0 :chain 0x1D :active 1 :number 0
 	AUX_Module 0x45 create :parameter_values "-70.000000" :is_default 0 :chain 0x1D :active 1 :number 1
 	AUX_Module 0x7A create :parameter_values "0.000000" :is_default 0 :chain 0x1D :active 1 :number 2
 	Gain_Module 0x1F create :parameter_values "0.000000:0.000000:0.000000" :is_default 1 :chain 0x1D :active 1
-	LADSPA_Plugin 0x159 create :plugin_id 1515013196 :plugin_ins 1 :plugin_outs 1 :parameter_values "0.000000:500.000000:0.000000:5015.000000:3.000000:0.000000:0.015000:0.150000:0.000000" :is_default 0 :chain 0x1D :active 1
+	LADSPA_Plugin 0x159 create :plugin_id 1515013196 :plugin_ins 1 :plugin_outs 1 :parameter_values "0.000000:458.333344:0.000000:5015.000000:3.000000:0.000000:0.015000:0.150000:0.000000" :is_default 0 :chain 0x1D :active 1
 	Meter_Module 0x20 create :is_default 1 :chain 0x1D :active 1
 	JACK_Module 0x21 create :parameter_values "1.000000:0.000000" :is_default 1 :chain 0x1D :active 1
 	Mixer_Strip 0x22 create :name "KeschGars" :width "narrow" :tab "signal" :color 153870459 :gain_mode 0 :mute_mode 0 :group 0x41 :auto_input "" :manual_connection 0
 	Chain 0x23 create :strip 0x22 :tab "chain"
 	JACK_Module 0x24 create :parameter_values "0.000000:1.000000" :is_default 1 :chain 0x23 :active 1
-	LV2_Plugin 0xAC create :lv2_plugin_uri "urn:ardour:a-eq" :plugin_ins 1 :plugin_outs 1 :parameter_values "32.000000:-20.000000:85.000000:8.500000:2.200000:2200.000000:-2.500000:2.400000:2500.000000:0.000000:1.000000:4500.000000:3.000000:2.200000:9000.000000:-20.000000:0.000000:1.000000:1.000000:1.000000:1.000000:1.000000:1.000000:1.000000:0.000000" :is_default 0 :chain 0x23 :active 1
+	LV2_Plugin 0xAC create :lv2_plugin_uri "urn:ardour:a-eq" :plugin_ins 1 :plugin_outs 1 :parameter_values "32.000000:-20.000000:85.000000:8.500000:2.200000:2200.000000:-2.500000:2.400000:2500.000000:0.000000:1.000000:4500.000000:3.000000:2.200000:9000.000000:-20.000000:0.000000:1.000000:1.000000:1.000000:1.000000:1.000000:0.000000:1.000000:0.000000" :is_default 0 :chain 0x23 :active 1
 	LADSPA_Plugin 0xF4 create :plugin_id 1916 :plugin_ins 1 :plugin_outs 1 :parameter_values "1.000000:10.000000:170.000000:-9.000000:6.600000:3.250000:3.200000:0.000000" :is_default 0 :chain 0x23 :active 1
 	AUX_Module 0x46 create :parameter_values "0.000000" :is_default 0 :chain 0x23 :active 1 :number 0
 	AUX_Module 0x47 create :parameter_values "-70.000000" :is_default 0 :chain 0x23 :active 1 :number 1
 	AUX_Module 0x7C create :parameter_values "0.000000" :is_default 0 :chain 0x23 :active 1 :number 2
 	Gain_Module 0x25 create :parameter_values "0.000000:1.000000:0.000000" :is_default 1 :chain 0x23 :active 1
-	LADSPA_Plugin 0x15B create :plugin_id 1515013196 :plugin_ins 1 :plugin_outs 1 :parameter_values "0.000000:500.000000:0.000000:5015.000000:3.000000:0.000000:0.015000:0.150000:0.000000" :is_default 0 :chain 0x23 :active 1
+	LADSPA_Plugin 0x15B create :plugin_id 1515013196 :plugin_ins 1 :plugin_outs 1 :parameter_values "0.000000:458.333344:0.000000:5015.000000:3.000000:0.000000:0.015000:0.150000:0.000000" :is_default 0 :chain 0x23 :active 1
 	Meter_Module 0x26 create :is_default 1 :chain 0x23 :active 1
 	JACK_Module 0x27 create :parameter_values "1.000000:0.000000" :is_default 1 :chain 0x23 :active 1
 	Mixer_Strip 0xF create :name "KeschOut" :width "narrow" :tab "signal" :color 463642946 :gain_mode 0 :mute_mode 0 :group 0x3E :auto_input "" :manual_connection 0

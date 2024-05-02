@@ -3393,7 +3393,7 @@
       ],
       "in_xy": [
         -4305,
-        3347
+        3342
       ],
       "out_xy": [
         -3893,
@@ -5131,8 +5131,8 @@
       "in_zone": "",
       "out_zone": "",
       "null_xy": [
-        -5197,
-        3213
+        -5193,
+        3171
       ],
       "in_xy": [
         400,
@@ -5237,7 +5237,7 @@
       "out_zone": "",
       "null_xy": [
         -5193,
-        3167
+        3128
       ],
       "in_xy": [
         400,
@@ -5278,8 +5278,8 @@
       "in_zone": "",
       "out_zone": "",
       "null_xy": [
-        -5208,
-        3315
+        -5211,
+        3257
       ],
       "in_xy": [
         400,
@@ -5320,8 +5320,8 @@
       "in_zone": "",
       "out_zone": "",
       "null_xy": [
-        -5208,
-        3359
+        -5211,
+        3300
       ],
       "in_xy": [
         400,
@@ -5384,7 +5384,7 @@
       "out_zone": "",
       "null_xy": [
         -5193,
-        2551
+        2513
       ],
       "in_xy": [
         400,
@@ -5446,8 +5446,8 @@
       "in_zone": "",
       "out_zone": "",
       "null_xy": [
-        -5193,
-        3265
+        -5187,
+        3214
       ],
       "in_xy": [
         400,
@@ -5740,8 +5740,8 @@
       "in_zone": "",
       "out_zone": "",
       "null_xy": [
-        -5198,
-        3411
+        -5211,
+        3430
       ],
       "in_xy": [
         400,
@@ -5782,8 +5782,8 @@
       "in_zone": "",
       "out_zone": "",
       "null_xy": [
-        -5198,
-        3512
+        -5211,
+        3528
       ],
       "in_xy": [
         400,
@@ -5824,8 +5824,8 @@
       "in_zone": "",
       "out_zone": "",
       "null_xy": [
-        -5198,
-        3631
+        -5211,
+        3644
       ],
       "in_xy": [
         400,
@@ -5866,8 +5866,8 @@
       "in_zone": "",
       "out_zone": "",
       "null_xy": [
-        -5198,
-        3762
+        -5211,
+        3775
       ],
       "in_xy": [
         400,
@@ -6181,8 +6181,8 @@
       "in_zone": "",
       "out_zone": "",
       "null_xy": [
-        -2379,
-        2431
+        -5211,
+        3343
       ],
       "in_xy": [
         400,
@@ -6928,6 +6928,195 @@
         12394
       ],
       "flags": 0,
+      "layout_mode": 0
+    },
+    {
+      "port_types_view": 31,
+      "group_name": "Non-Mixer-XT.Inputs/Unnamed",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        -2440,
+        1631
+      ],
+      "in_xy": [
+        400,
+        12392
+      ],
+      "out_xy": [
+        0,
+        12392
+      ],
+      "flags": 0,
+      "layout_mode": 0
+    },
+    {
+      "port_types_view": 31,
+      "group_name": "Non-Mixer-XT.Inputs/VocalsKeschB",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        -2440,
+        1631
+      ],
+      "in_xy": [
+        400,
+        12392
+      ],
+      "out_xy": [
+        0,
+        12392
+      ],
+      "flags": 0,
+      "layout_mode": 0
+    },
+    {
+      "port_types_view": 31,
+      "group_name": "FLUID Synth (3935)",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        -2440,
+        1631
+      ],
+      "in_xy": [
+        400,
+        11059
+      ],
+      "out_xy": [
+        0,
+        11059
+      ],
+      "flags": 0,
+      "layout_mode": 0
+    },
+    {
+      "port_types_view": 31,
+      "group_name": "FLUID Synth (4061)",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        -2440,
+        1642
+      ],
+      "in_xy": [
+        400,
+        12392
+      ],
+      "out_xy": [
+        0,
+        12392
+      ],
+      "flags": 0,
+      "layout_mode": 0
+    },
+    {
+      "port_types_view": 31,
+      "group_name": "FLUID Synth (4203)",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        -2440,
+        1642
+      ],
+      "in_xy": [
+        400,
+        12392
+      ],
+      "out_xy": [
+        0,
+        12392
+      ],
+      "flags": 0,
+      "layout_mode": 0
+    },
+    {
+      "port_types_view": 31,
+      "group_name": "Fluid_MajorVocals-01",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        -2440,
+        1642
+      ],
+      "in_xy": [
+        400,
+        12392
+      ],
+      "out_xy": [
+        0,
+        12392
+      ],
+      "flags": 0,
+      "layout_mode": 0
+    },
+    {
+      "port_types_view": 31,
+      "group_name": "Fluid_Piano",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        -5191,
+        3387
+      ],
+      "in_xy": [
+        400,
+        12392
+      ],
+      "out_xy": [
+        0,
+        12392
+      ],
+      "flags": 0,
+      "layout_mode": 0
+    },
+    {
+      "port_types_view": 31,
+      "group_name": "Non-Mixer-XT.Synths/Unnamed",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        -2440,
+        1642
+      ],
+      "in_xy": [
+        400,
+        12392
+      ],
+      "out_xy": [
+        0,
+        12392
+      ],
+      "flags": 0,
+      "layout_mode": 0
+    },
+    {
+      "port_types_view": 31,
+      "group_name": "Non-Mixer-XT.Synths/Piano",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        -4387,
+        3872
+      ],
+      "in_xy": [
+        -4438,
+        3872
+      ],
+      "out_xy": [
+        -4387,
+        3915
+      ],
+      "flags": 68,
       "layout_mode": 0
     }
   ],

@@ -41,7 +41,7 @@
 		pset:value 1.20129275
 	] , [
 		lv2:symbol "on" ;
-		pset:value 0.0
+		pset:value 1.0
 	] , [
 		lv2:symbol "overlap" ;
 		pset:value 0.736
