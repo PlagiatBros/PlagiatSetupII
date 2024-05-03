@@ -100,7 +100,7 @@ class LickMe(RouteBase):
 
         # BassFX
         bassFX.set('zynwah', 'on')
-        bassFX.set('bassscape', 'on')
+        bassFX.set('scape', 'on')
 
         # Séquences
         self.start_scene('sequences/start_lickme', lambda: [
@@ -198,6 +198,11 @@ class LickMe(RouteBase):
         """
         # Séquence
         seq192.select('solo', 'themelickme*')
+
+        # BassFX
+        bassFX.set('zynwah', 'off')
+        bassFX.set('scape', 'off')
+
 
         # Transport
         self.pause_loopers()

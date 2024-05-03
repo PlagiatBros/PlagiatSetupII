@@ -3396,8 +3396,8 @@
         3342
       ],
       "out_xy": [
-        -3893,
-        2128
+        -3882,
+        2099
       ],
       "flags": 68,
       "layout_mode": 0
@@ -3809,7 +3809,7 @@
       "out_zone": "",
       "null_xy": [
         -2635,
-        2052
+        2015
       ],
       "in_xy": [
         400,
@@ -3934,7 +3934,7 @@
       "in_zone": "",
       "out_zone": "",
       "null_xy": [
-        -2639,
+        -2700,
         2238
       ],
       "in_xy": [
@@ -4123,7 +4123,7 @@
       "in_zone": "",
       "out_zone": "",
       "null_xy": [
-        -2650,
+        -2724,
         2386
       ],
       "in_xy": [
@@ -4228,7 +4228,7 @@
       "in_zone": "",
       "out_zone": "",
       "null_xy": [
-        -2652,
+        -2701,
         2549
       ],
       "in_xy": [
@@ -7149,6 +7149,69 @@
       "null_xy": [
         -2440,
         1631
+      ],
+      "in_xy": [
+        400,
+        12392
+      ],
+      "out_xy": [
+        0,
+        12392
+      ],
+      "flags": 0,
+      "layout_mode": 0
+    },
+    {
+      "port_types_view": 31,
+      "group_name": "Non-Mixer-XT.SynthsFX6Degrade (In)",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        -2521,
+        2133
+      ],
+      "in_xy": [
+        400,
+        11059
+      ],
+      "out_xy": [
+        0,
+        11059
+      ],
+      "flags": 0,
+      "layout_mode": 0
+    },
+    {
+      "port_types_view": 31,
+      "group_name": "Non-Mixer-XT.SynthsFX6Degrade (Process)",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        -2521,
+        1625
+      ],
+      "in_xy": [
+        400,
+        11059
+      ],
+      "out_xy": [
+        0,
+        11059
+      ],
+      "flags": 0,
+      "layout_mode": 0
+    },
+    {
+      "port_types_view": 31,
+      "group_name": "ChasttKeyboard",
+      "null_zone": "",
+      "in_zone": "",
+      "out_zone": "",
+      "null_xy": [
+        -2521,
+        2930
       ],
       "in_xy": [
         400,

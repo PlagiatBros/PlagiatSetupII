@@ -103,7 +103,11 @@ class StickItOut(Video, Light, RouteBase):
         # Vocals
         vocalsNano.set('gars_exclu', 'on')
         vocalsKesch.set('normo_exclu', 'on')
+        vocalsFeat.set('normo_exclu', 'on')
 
+        self.engine.set('FeatNormo', 'correction', 0)
+
+        inputs.set('keschmic', 'static')
 
 
     @pedalboard_button(3)
@@ -121,10 +125,11 @@ class StickItOut(Video, Light, RouteBase):
         transport.start()
 
 
-
         # Vocals
         vocalsNano.set('gars_exclu', 'on')
         vocalsKesch.set('normo_exclu', 'on')
+
+        inputs.set('keschmic', 'dynamic')
 
         # Synths
         synthsFX2Delay.set('Rhodes', 'Gain', -9.0)
@@ -174,6 +179,8 @@ class StickItOut(Video, Light, RouteBase):
         vocalsKesch.set('normo_exclu', 'on')
         for name in ['KeschNormo', 'FeatNormo']:
             self.engine.set(name, 'correction', 0)
+
+        inputs.set('keschmic', 'dynamic')
 
 
         # Synths
@@ -233,6 +240,7 @@ class StickItOut(Video, Light, RouteBase):
 
         # Vocals
 #        vocalsKesch.set('_exclu', 'on')
+        inputs.set('keschmic', 'static')
 
         # Sequences (Mentat)
         self.start_scene('sequences/theme_launcher',
@@ -260,6 +268,8 @@ class StickItOut(Video, Light, RouteBase):
         # Vocals
         vocalsNano.set('meuf_exclu', 'on')
         vocalsKesch.set('normo_exclu', 'on')
+
+        inputs.set('keschmic', 'dynamic')
 
         # Synths
         synthsFX2Delay.set('Trap', 'Gain', -16.0)
@@ -293,7 +303,8 @@ class StickItOut(Video, Light, RouteBase):
     @pedalboard_button(7)
     def pontcouplet2(self):
         """
-        LOUNGE COUPLET 2
+        LOUNGE
+        chastt on da bass
         """
         self.pause_loopers()
         self.reset()
@@ -320,12 +331,46 @@ class StickItOut(Video, Light, RouteBase):
         # Keyboards
         jmjKeyboard.set_sound('ConstantSampler')
         mk2Keyboard.set_sound('LowZ8bits')
+        samples.set_lead('ConstantSampler')
 
         # Samples
         samplesFX3Reverb.set('SamplesFX3Reverb', 'Mute', 0.0)
         samplesFX6Scape.set('SamplesFX6Scape', 'Mute', 0.0)
         samplesFX7Degrade.set('SamplesFX7Degrade', 'Mute', 0.0)
 
+        # Vocals
+        inputs.set('keschmic', 'static')
+
+
+    @mk2_button(5, 'purple')
+    def lounge_disco(self):
+        """
+        LOUNGE DISCO
+        """
+        seq192.select('solo', 'disco_*')
+        jmjKeyboard.set_sound('ZTrumpets', lead=True)
+
+    @mk2_button(6, 'purple')
+    def lounge_drop(self):
+        """
+        LOUNGE DROP
+        to danzz
+        """
+        self.pause_loopers()
+        self.reset()
+
+        jmjKeyboard.set_sound('ZDupieux', lead=False)
+        seq192.select('solo', 'daftdrunk_*')
+        synths.animate('ZTrumpets', 'Amp', 'Gain', 0,  1, 8*4, mode='b', easing='exponential')
+        self.start_scene('droplounge', lambda: [
+            self.wait(4*7, 'b'),
+            jmjKeyboard.set_sound('MajorVocals', lead=True),
+            self.wait(4*1, 'b'),
+            seq192.select('solo', 'aceofbaise_*')
+        ])
+
+        # Transport
+        transport.start()
 
 
     @pedalboard_button(8)
@@ -347,6 +392,9 @@ class StickItOut(Video, Light, RouteBase):
         # Vocals
         vocalsNano.set('gars_exclu', 'on')
         vocalsKesch.set('meuf_exclu', 'on')
+
+        inputs.set('keschmic', 'dynamic')
+
 
         # Synths
         synthsFX2Delay.set('Rhodes', 'Gain', -9.0)
@@ -382,6 +430,8 @@ class StickItOut(Video, Light, RouteBase):
         # Vocals
         vocalsNano.set('gars_exclu', 'on')
         vocalsKesch.set('normo_exclu', 'on')
+
+        inputs.set('keschmic', 'static')
 
         # Keyboards
         jmjKeyboard.set_sound("ZDupieux")
@@ -519,6 +569,8 @@ class StickItOut(Video, Light, RouteBase):
         vocalsNano.set('gars_exclu', 'on')
         vocalsKesch.set('normo_exclu', 'on')
 
+        inputs.set('keschmic', 'static')
+
         # Bass
         bass.set('BassDry', 'GxChorus-Stereo', 'BYPASS', 1)
 
@@ -563,11 +615,11 @@ class StickItOut(Video, Light, RouteBase):
             bassfx.set('distohi', 'on')
 
 
-    @mk2_button(5)
+    @mk2_button(7, 'cyan')
     def theme_2(self):
         self.theme_mesh(True)
 
-    @mk2_button(6, 'yellow')
+    @mk2_button(8, 'blue')
     def organ(self):
         self.stop()
 
@@ -581,24 +633,28 @@ class StickItOut(Video, Light, RouteBase):
     St Germain Controls
     """
     @gui_button(
-        type='fader',
-        html='Reverb (@{this}dB)',
-        horizontal=True,
-        design='compact',
-        address='/SamplesFX3Reverb/ConstantSampler',
+        type='button',
+        mode='push',
+        label='Reverb',
         preArgs='Gain',
-        range={'min':-70, 'max': 6})
+        on=0,
+        off=-70,
+        address='/SamplesFX3Reverb/ConstantSampler',
+        height=80
+    )
     def samples_reverb(self):
         pass
 
     @gui_button(
-        type='fader',
-        html='Scape (@{this}dB)',
-        horizontal=True,
-        design='compact',
-        address='/SamplesFX6Scape/ConstantSampler',
+        type='button',
+        mode='push',
+        label='Scape',
         preArgs='Gain',
-        range={'min':-70, 'max': 6})
+        on=0,
+        off=-70,
+        address='/SamplesFX6Scape/ConstantSampler',
+        height=80
+    )
     def samples_scape(self):
         pass
 
@@ -609,23 +665,41 @@ class StickItOut(Video, Light, RouteBase):
         design='compact',
         address='/SamplesFX7Degrade/ConstantSampler',
         preArgs='Gain',
-        range={'min':-70, 'max': 6})
+        range={'min':-70, 'max': 6},
+        height=80
+        )
     def samples_degrade(self):
+        pass
+
+    @gui_button(
+        type='button',
+        label='seq pontcoulet',
+        mode='tap',
+        design='compact',
+        address='/Seq192/call',
+        preArgs=['select', 'toggle'],
+        on='pontcouplet2*',
+        height=80
+        )
+    def seq_pontcoulet(self):
         pass
 
 
     @chastt_button(1)
     def chastt_note_1(self):
-        chasttKeyboard.play_note(46, 0.5)
+        chasttKeyboard.play_note(46, 0.3, velocity=100)
 
     @chastt_button(2)
     def chastt_note_2(self):
-        chasttKeyboard.play_note(43, 0.5)
+        chasttKeyboard.play_note(43, 0.3, velocity=100)
 
     @chastt_button(3)
     def chastt_note_3(self):
-        chasttKeyboard.play_note(40, 0.5)
+        chasttKeyboard.play_note(40, 0.3, velocity=100)
 
+    @chastt_button(4)
+    def bassactive(self):
+        seq192.select('toggle', 'lounge_zLow_8bits')
 
 
     @chastt_button(5)
@@ -635,3 +709,22 @@ class StickItOut(Video, Light, RouteBase):
     @chastt_button(6)
     def chastt_note_6(self):
         self.engine.modules['ConstantSampler'].send('/instrument/play', 's:Plagiat/ConstantKit/Stick', 127)
+
+
+    @chastt_button(7)
+    def chastt_note_7(self):
+        self.engine.modules['ConstantSampler'].send('/instrument/stop', 's:Plagiat/ConstantKit/Jajaja_Bourvil')
+        self.engine.modules['ConstantSampler'].send('/instrument/play', 's:Plagiat/ConstantKit/Jajaja_Bourvil', 127)
+        self.start_scene('stopbourvil', lambda: [
+            self.wait(0.5, 'b'),
+            self.engine.modules['ConstantSampler'].send('/instrument/stop', 's:Plagiat/ConstantKit/Jajaja_Bourvil')
+        ])
+
+    @chastt_button(8)
+    def chastt_note_8(self):
+        self.engine.modules['ConstantSampler'].send('/instrument/stop', 's:Plagiat/ConstantKit/Jajaja_Busta')
+        self.engine.modules['ConstantSampler'].send('/instrument/play', 's:Plagiat/ConstantKit/Jajaja_Busta', 127)
+        self.start_scene('stopbourvil', lambda: [
+            self.wait(0.4, 'b'),
+            self.engine.modules['ConstantSampler'].send('/instrument/stop', 's:Plagiat/ConstantKit/Jajaja_Busta')
+        ])

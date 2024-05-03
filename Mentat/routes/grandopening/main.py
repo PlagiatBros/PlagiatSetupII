@@ -100,6 +100,7 @@ class GrandOpening(Video, Light, RouteBase):
         autotuneKeschNormo.set('correction', 1)
         inputs.set('keschmic', 'dynamic')
 
+    @mk2_button(2, 'cyan')
     @pedalboard_button(4)
     def trumpets(self):
         """
@@ -125,6 +126,7 @@ class GrandOpening(Video, Light, RouteBase):
         autotuneKeschNormo.set('correction', 1)
         inputs.set('keschmic', 'dynamic')
 
+    @mk2_button(3, 'cyan')
     @pedalboard_button(5)
     def couplet1b(self):
         """
@@ -165,6 +167,13 @@ class GrandOpening(Video, Light, RouteBase):
         # Transport
         transport.start()
 
+        # Synths
+        synths.animate('ZTrumpets', 'Pan', -0.7, 0.7, 9, easing="exponential-mirror", loop=True)
+        synths.animate('TenorSax', 'Pan', 0.7, -0.7, 9, easing="exponential-mirror", loop=True)
+        synths.animate('Charang', 'Pan', 0.7, -0.7, 9, easing="exponential-mirror", loop=True)
+        synths.set('TenorSax', 'Calf%20Mono%20Compressor', 'Bypass', 0.0)
+        synths.set('TenorSax', 'Calf%20Multi%20Chorus', 'Active', 1.0)
+
         # Samples
         samplesFX6Scape.set('Samples1', 'Gain', -6.0)
         samplesFX6Scape.set('SamplesFX6Scape', 'Mute', 0.0)
@@ -172,19 +181,19 @@ class GrandOpening(Video, Light, RouteBase):
         samples.set('Samples2', 'Mute', 0.0)
 
         # Vocals
-        vocalsNano.set('meuf_exclu', 'on')
+        vocalsNano.set('normo_exclu', 'on')
         vocalsNanoFX2Delay.set('active', 'on')
-        vocalsKesch.set('gars_exclu', 'on')
+        vocalsKesch.set('normo_exclu', 'on')
         vocalsKeschFX2Delay.set('active', 'on')
 
         inputs.set('keschmic', 'static')
 
         # Sequences (Mentat)
-        self.start_sequence('refrain', {
-            'signature': '8/4',
-            1: lambda: vocalsKesch.set('gars_exclu', 'on'),
-            6: lambda: vocalsKesch.set('meuf_exclu', 'on'),
-        })
+        # self.start_sequence('refrain', {
+        #     'signature': '8/4',
+        #     1: lambda: vocalsKesch.set('gars_exclu', 'on'),
+        #     6: lambda: vocalsKesch.set('meuf_exclu', 'on'),
+        # })
 
 
 
@@ -216,6 +225,7 @@ class GrandOpening(Video, Light, RouteBase):
 
         inputs.set('keschmic', 'static')
 
+        jmjKeyboard.set_sound('LowCTrap1')
 
     @pedalboard_button(8)
     def couplet2(self):
@@ -243,7 +253,7 @@ class GrandOpening(Video, Light, RouteBase):
         inputs.set('keschmic', 'static')
 
 
-    @mk2_button(2, 'purple')
+    @mk2_button(5, 'purple')
     def contrechant(self):
         """
         CONTRECHANT (couplet)
@@ -256,7 +266,7 @@ class GrandOpening(Video, Light, RouteBase):
         vocalsNanoFX3TrapVerb.set('VocalsNanoFX3TrapVerb', 'Mute', 1.0)
 
 
-    @mk2_button(3, 'purple')
+    @mk2_button(4, 'purple')
     def trap(self):
         """
         TRAP (couplet)

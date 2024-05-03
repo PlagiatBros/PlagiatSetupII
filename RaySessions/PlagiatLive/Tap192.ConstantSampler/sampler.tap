@@ -42,10 +42,10 @@
         <instrument name="Kick2" minnote="11" maxnote="11" rootnote="11" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Kick" volume="2.000000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
           <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/Constant/2023-04-19_SDLT/808_kickLong.wav" sampleRelative="../../../../Samples/Constant/2023-04-19_SDLT/808_kickLong.wav"/>
         </instrument>
-        <instrument name="Snare1" minnote="13" maxnote="13" rootnote="13" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Snare" volume="4.000000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
+        <instrument name="Snare1" minnote="13" maxnote="13" rootnote="13" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="output" volume="4.000000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
           <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/Constant/2023-04-19_SDLT/808_snare1.wav" sampleRelative="../../../../Samples/Constant/2023-04-19_SDLT/808_snare1.wav"/>
         </instrument>
-        <instrument name="Snare2" minnote="14" maxnote="14" rootnote="14" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Snare" volume="4.000000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
+        <instrument name="Snare2" minnote="14" maxnote="14" rootnote="14" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="output" volume="4.000000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
           <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/Constant/2023-04-19_SDLT/808_snare2.wav" sampleRelative="../../../../Samples/Constant/2023-04-19_SDLT/808_snare2.wav"/>
         </instrument>
         <instrument name="Clap" minnote="16" maxnote="16" rootnote="16" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="output" volume="2.000000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
@@ -54,10 +54,10 @@
         <instrument name="Stick" minnote="17" maxnote="17" rootnote="17" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="output" volume="2.000000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
           <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/Constant/2023-04-19_SDLT/808_stick.wav" sampleRelative="../../../../Samples/Constant/2023-04-19_SDLT/808_stick.wav"/>
         </instrument>
-        <instrument name="HH" minnote="19" maxnote="19" rootnote="19" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="OH" volume="1.000000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
+        <instrument name="HH" minnote="19" maxnote="19" rootnote="19" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="output" volume="1.000000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
           <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/Constant/2023-04-19_SDLT/808_hh.wav" sampleRelative="../../../../Samples/Constant/2023-04-19_SDLT/808_hh.wav"/>
         </instrument>
-        <instrument name="Krash" minnote="20" maxnote="20" rootnote="20" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="OH" volume="4.000000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
+        <instrument name="Krash" minnote="20" maxnote="20" rootnote="20" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="output" volume="4.000000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
           <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/Constant/2023-04-19_SDLT/808_krsh.wav" sampleRelative="../../../../Samples/Constant/2023-04-19_SDLT/808_krsh.wav"/>
         </instrument>
         <instrument name="Jajaja_Intro" minnote="96" maxnote="96" rootnote="96" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="output" volume="1.000000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">

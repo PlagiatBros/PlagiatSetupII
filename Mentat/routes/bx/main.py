@@ -495,7 +495,8 @@ class BX(Video, Light, RouteBase):
         # Sequences
         self.start_scene('sequence/refrain_p2', lambda: [
             self.wait(32, 'beat'),
-            vocalsKesch.set('meuf', 'on')
+            vocalsKesch.set('meuf', 'on'),
+            inputs.set('keschmic', 'static')
         ])
 
     @pedalboard_button(6)

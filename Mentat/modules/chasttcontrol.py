@@ -14,7 +14,7 @@ class ChasttKeyboard(Keyboard):
 
     def play_note(self, note, duration=1, velocity=127):
         self.engine.modules['ChasttControlMidiOut'].send('/note_off', 0, note)
-        self.engine.modules['ChasttControlMidiOut'].send('/note_on', 0, note, 127)
+        self.engine.modules['ChasttControlMidiOut'].send('/note_on', 0, note, velocity)
         self.start_scene('chastt/noteoff/%i' % note, lambda: [
             self.wait(duration, 'b'),
             self.engine.modules['ChasttControlMidiOut'].send('/note_off', 0, note)

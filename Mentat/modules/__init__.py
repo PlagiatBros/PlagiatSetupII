@@ -88,7 +88,7 @@ synthsFX4TapeDelay = NonMixer('SynthsFX4TapeDelay', 'osc', 10034)
 synthsFX5Scape = NonMixer('SynthsFX5Scape', 'osc', 10035)
 synthsFX6Degrade = NonMixer('SynthsFX6Degrade', 'osc', 10036)
 
-samples = NonMixer('Samples', 'osc', 10040)
+samples = Samples('Samples', 'osc', 10040)
 samplesFX1Delay = NonMixer('SamplesFX1Delay', 'osc', 10041)
 samplesFX2Delay = NonMixer('SamplesFX2Delay', 'osc', 10042)
 samplesFX3Reverb = NonMixer('SamplesFX3Reverb', 'osc', 10043)

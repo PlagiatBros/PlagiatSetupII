@@ -90,7 +90,7 @@
 	LADSPA_Plugin 0x2BD create :plugin_id 1433 :plugin_ins 1 :plugin_outs 1 :parameter_values "1.000000:4.000000:0.000000" :is_default 0 :chain 0x2B7 :active 1 :number 0
 	LADSPA_Plugin 0x2C3 create :plugin_id 1891 :plugin_ins 1 :plugin_outs 1 :parameter_values "21600.000000:3.000000:0.000000" :is_default 0 :chain 0x2B7 :active 1 :number 0
 	AUX_Module 0x2C6 create :parameter_values "0.000000" :is_default 0 :chain 0x2B7 :active 1 :number 0
-	AUX_Module 0x2C7 create :parameter_values "0.000000" :is_default 0 :chain 0x2B7 :active 1 :number 1
+	AUX_Module 0x2C7 create :parameter_values "-12.000000" :is_default 0 :chain 0x2B7 :active 1 :number 1
 	Gain_Module 0x2B9 create :parameter_values "0.000000:0.000000:0.000000" :is_default 1 :chain 0x2B7 :active 1
 	Meter_Module 0x2BA create :is_default 1 :chain 0x2B7 :active 1
 	JACK_Module 0x2BB create :parameter_values "1.000000:0.000000" :is_default 1 :chain 0x2B7 :active 1

@@ -6,3 +6,4 @@ from .console import Console
 from .inputs import Inputs
 from .outputs import Outputs
 from .synths import Synths
+from .samples import Samples

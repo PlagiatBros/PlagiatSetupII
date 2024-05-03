@@ -102,7 +102,7 @@ class RamenerMooncup(Video, Light, RouteBase):
                 *[{} for i in range(7)], # bars 1 - 7
                 { # bar 8
                     4: lambda: looper.record(0),
-                    4.9: inputs.set('keschmic', 'dynamic')
+                    4.9: lambda: inputs.set('keschmic', 'dynamic')
                 },
                 *[{} for i in range(29)], # bars 9 - 21
                 { # bar 22

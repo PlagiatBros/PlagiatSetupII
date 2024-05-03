@@ -225,7 +225,7 @@ class AintInTheWay(Video, Light, RouteBase):
         vocalsNano.set('normo_exclu', 'on')
         vocalsFeat.set('normo_exclu', 'on')
 
-        inputs.set('keschmic', 'dynamic')
+        inputs.set('keschmic', 'static')
 
     @pedalboard_button(4)
     @mk2_button(6, 'purple')

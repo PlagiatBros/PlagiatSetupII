@@ -34,6 +34,7 @@ class QueenCloclo(Video, Light, RouteBase):
 
         # Mk2
         mk2Control.set_mode('cut_basssynths')
+        chasttKeyboard.set_sound('LowCTrap1')
 
         # Sample
         self.set_samples_aliases({
@@ -75,7 +76,7 @@ class QueenCloclo(Video, Light, RouteBase):
         notes.set_notes(*self.scale)
 
         # Séquences
-        seq192.select('solo', 'dummy')
+        seq192.select('solo', 'couplet_zHi_trumpets')
 
         # Transport
         transport.start()
@@ -142,6 +143,9 @@ class QueenCloclo(Video, Light, RouteBase):
         ])
 
         # Vocals
+        self.engine.set('NanoNormo', 'correction', 0)
+        self.engine.set('KeschNormo', 'correction', 0)
+
         inputs.set('keschmic', 'dynamic')
 
     @mk2_button(3, 'cyan')
@@ -640,7 +644,16 @@ class QueenCloclo(Video, Light, RouteBase):
 
         inputs.set('keschmic', 'static')
 
-    @pedalboard_button(9)
+    @mk2_button(9)
+    def uptranse(self):
+        """
+        Refrain Couplet couplet
+        """
+        self.couplet_refrainrefrain()
+        transport.start()
+        seq192.select('on', 'couplet2_uprefrain')
+
+    @mk2_button(10)
     def bridge(self):
         """
         8bridge
@@ -663,7 +676,7 @@ class QueenCloclo(Video, Light, RouteBase):
         inputs.set('keschmic', 'static')
 
 
-    @pedalboard_button(10)
+    @mk2_button(11)
     def up_theme(self):
         """
         UP THÈME
@@ -685,6 +698,19 @@ class QueenCloclo(Video, Light, RouteBase):
 
         inputs.set('keschmic', 'static')
 
+    @pedalboard_button(9)
+    def transetranse(self):
+        jmjKeyboard.set_sound('ZNotSoRhodes', lead=False)
+        seq192.select('solo', 'dummy')
+        transport.start()
+
+    @pedalboard_button(10)
+    def keyboard_transe_boucling(self):
+        looper.record(3)
+
+    @pedalboard_button(11)
+    def keyboard_transe_overdubbing(self):
+        looper.overdub(3)
 
 
     @chastt_button(1)

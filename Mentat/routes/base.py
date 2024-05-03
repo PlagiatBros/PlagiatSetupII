@@ -263,7 +263,7 @@ class RouteBase(Route):
         Reset leads gain boosts
         """
         synths.set_lead()
-        # samples.set_lead(None)
+        samples.set_lead()
 
     def pause_loopers(self):
         """
