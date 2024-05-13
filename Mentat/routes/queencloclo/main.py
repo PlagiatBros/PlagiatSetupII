@@ -88,6 +88,8 @@ class QueenCloclo(Video, Light, RouteBase):
 
         # Keyboards
         jmjKeyboard.set_sound('ZTrumpets', lead=True)
+        samples.set_lead()
+
 
         # Vocals
         vocalsKesch.set('meuf_exclu', 'on')
@@ -128,6 +130,8 @@ class QueenCloclo(Video, Light, RouteBase):
         # synths.set('SteelDrums', 'Pan', 0.3)
 
         synths.set_lead('ZTrumpets')
+        samples.set_lead()
+
 
         synthsFX5Scape.set('ZTrumpets', 'Gain', -9.0)
         synthsFX5Scape.set('SynthsFX5Scape', 'Mute', 0.0)
@@ -159,7 +163,8 @@ class QueenCloclo(Video, Light, RouteBase):
         ])
 
         # set lead
-        # NO LEAD
+        synths.set_lead()
+        samples.set_lead()
 
         # Vocals
         self.engine.set('NanoNormo', 'correction', 0)
