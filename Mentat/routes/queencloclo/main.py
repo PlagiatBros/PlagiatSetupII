@@ -47,13 +47,17 @@ class QueenCloclo(Video, Light, RouteBase):
     def open_samples(self):
         samples.set('KJ', 'Mute', 0.0)
         samples.set('Violons', 'Mute', 0.0)
+        samples.set('KJ', 'Gain', -4.0)
         # samples.set('GuitarChorus', 'Mute', 0.0)
         # samples.set('Trumpets', 'Mute', 0.0)
         samplesFX3Reverb.set('Violons', 'Gain', -10.0)
         samplesFX3Reverb.set('SamplesFX3Reverb', 'Mute', 0.0)
         samplesFX5TapeDelay.set('Violons', 'Gain', -12.0)
-        samplesFX5TapeDelay.set('KJ', 'Gain', -12.0)
+        samplesFX5TapeDelay.set('KJ', 'Gain', -14.0)
         samplesFX5TapeDelay.set('SamplesFX5TapeDelay', 'Mute', 0.0)
+        samplesFX7Degrade.set('KJ', 'Gain', -3.0)
+        samplesFX7Degrade.set('SamplesFX7Degrade', 'Mute', 0.0)
+
 
 
 
@@ -81,7 +85,8 @@ class QueenCloclo(Video, Light, RouteBase):
         # Transport
         transport.start()
 
-        # Synths
+
+        # Keyboards
         jmjKeyboard.set_sound('ZTrumpets', lead=True)
 
         # Vocals
@@ -111,13 +116,21 @@ class QueenCloclo(Video, Light, RouteBase):
         transport.start()
 
         # Synths
-        synths.set('DubstepHorn', 'Amp', 'Gain', 0.6)
-        synths.set('EasyClassical', 'Amp', 'Gain', 0.6)
-        synths.set('EasyClassical', 'Pan', -0.4)
-        synths.set('ZStambul', 'Amp', 'Gain', 0.6)
+        # synths.set('DubstepHorn', 'Amp', 'Gain', 0.6)
+        # synths.set('EasyClassical', 'Amp', 'Gain', 0.6)
+        # synths.set('EasyClassical', 'Pan', -0.4)
+        synths.set('ZTrumpets', 'Amp', 'Gain', 0.8)
+        synths.set('ZStambul', 'Amp', 'Gain', 0.8)
         synths.set('ZStambul', 'Pan', 0.4)
-        synths.set('SteelDrums', 'Amp', 'Gain', 0.35)
-        synths.set('SteelDrums', 'Pan', 0.3)
+        synths.set('ZNotSoRhodes', 'Amp', 'Gain', 1)
+        synths.set('ZNotSoRhodes', 'Pan', -0.4)
+        # synths.set('SteelDrums', 'Amp', 'Gain', 0.35)
+        # synths.set('SteelDrums', 'Pan', 0.3)
+
+        synths.set_lead('ZTrumpets')
+
+        synthsFX5Scape.set('ZTrumpets', 'Gain', -9.0)
+        synthsFX5Scape.set('SynthsFX5Scape', 'Mute', 0.0)
 
         # Vocals
         vocalsKesch.set('normo_exclu', 'on')
@@ -138,6 +151,9 @@ class QueenCloclo(Video, Light, RouteBase):
             looper.record(0),
             self.wait_next_cycle(),
             seq192.select('off', 'couplet_zHi_trumpets'),
+            samplesFX3Reverb.set('KJ', 'Gain', -12.0),
+            samplesFX3Reverb.set('SamplesFX3Reverb', 'Mute', 0.0),
+            samplesFX5TapeDelay.set('SamplesFX5TapeDelay', 'Mute', 1.0),
             self.wait(15, 'b'),
             looper.record(0)
         ])
@@ -159,6 +175,9 @@ class QueenCloclo(Video, Light, RouteBase):
 
         # Séquences
         seq192.select('solo', 'alt_couplet_*')
+
+        # Samples
+
 
         # Synths
         synths.set('ZDiploLike', 'Pan', 0.15)
