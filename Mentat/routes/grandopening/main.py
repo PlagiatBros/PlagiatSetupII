@@ -60,7 +60,10 @@ class GrandOpening(Video, Light, RouteBase):
         transport.start()
 
         # Keys
-        jmjKeyboard.set_sound('Piano')
+        jmjKeyboard.set_sound('Piano', lead=False)
+        synths.set_lead()
+        samples.set_lead()
+        
 
         # Vocals
         vocalsNano.set('normo_exclu', 'on')
@@ -90,7 +93,10 @@ class GrandOpening(Video, Light, RouteBase):
         transport.start()
 
         # Keys
-        jmjKeyboard.set_sound('Piano')
+        jmjKeyboard.set_sound('Piano', lead=False)
+        synths.set_lead()
+        samples.set_lead()
+
 
         # Vocals
         vocalsNano.set('normo_exclu', 'on')
@@ -119,7 +125,9 @@ class GrandOpening(Video, Light, RouteBase):
         jmjKeyboard.set_sound('Piano', lead=False)
 
         # Set lead
-        # NO LEAD
+        synths.set_lead()
+        samples.set_lead()
+
 
         # Synths
         synthsFX2Delay.set('ZTrumpets', 'Gain', -12.0)
@@ -164,6 +172,9 @@ class GrandOpening(Video, Light, RouteBase):
 
         # Keys
         jmjKeyboard.set_sound('Piano', lead=False)
+        synths.set_lead()
+        samples.set_lead()
+
 
         # Vocals
         vocalsNano.set('normo_exclu', 'on')
@@ -205,7 +216,9 @@ class GrandOpening(Video, Light, RouteBase):
         synthsFX2Delay.set('SynthsFX2Delay', 'Mute', 0.0)
 
         # set LEAD
-        # NO LEAD
+        synths.set_lead()
+        samples.set_lead()
+
 
         # Samples
         samplesFX6Scape.set('Samples1', 'Gain', -6.0)
