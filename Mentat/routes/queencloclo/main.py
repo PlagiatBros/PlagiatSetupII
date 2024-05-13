@@ -158,6 +158,9 @@ class QueenCloclo(Video, Light, RouteBase):
             looper.record(0)
         ])
 
+        # set lead
+        # NO LEAD
+
         # Vocals
         self.engine.set('NanoNormo', 'correction', 0)
         self.engine.set('KeschNormo', 'correction', 0)
@@ -177,7 +180,6 @@ class QueenCloclo(Video, Light, RouteBase):
         seq192.select('solo', 'alt_couplet_*')
 
         # Samples
-
 
         # Synths
         synths.set('ZDiploLike', 'Pan', 0.15)
