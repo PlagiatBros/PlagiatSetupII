@@ -118,6 +118,22 @@ class GrandOpening(Video, Light, RouteBase):
         # Keys
         jmjKeyboard.set_sound('Piano')
 
+        # Synths
+        synthsFX2Delay.set('ZTrumpets', 'Gain', -12.0)
+        synthsFX2Delay.set('ZDre', 'Gain', 0.0)
+        synthsFX2Delay.set('DupstepHorn', 'Gain', 0.0)
+        synthsFX2Delay.set('SynthsFX2Delay', 'Mute', 0.0)
+
+        synthsFX3Delay.set('ZDre', 'Gain', -9.0)
+        synthsFX3Delay.set('DupstepHorn', 'Gain', -9.0)
+        synthsFX3Delay.set('SynthsFX3Delay', 'Mute', 0.0)
+
+        synths.set('ZDre', 'Amp', 'Gain', 0.5)
+        synths.set('DubstepHorn', 'Amp', 'Gain', 0.5)
+
+        synths.animate('ZDre', 'Pan', -0.5, 0.5, 12, 'b', easing='linear-mirror', loop=True)
+        synths.animate('DubstepHorn', 'Pan', 0.5, -0.5, 12, 'b', easing='linear-mirror', loop=True)
+
         # Vocals
         vocalsNano.set('normo_exclu', 'on')
         vocalsKesch.set('normo_exclu', 'on')
@@ -171,8 +187,17 @@ class GrandOpening(Video, Light, RouteBase):
         synths.animate('ZTrumpets', 'Pan', -0.7, 0.7, 9, easing="exponential-mirror", loop=True)
         synths.animate('TenorSax', 'Pan', 0.7, -0.7, 9, easing="exponential-mirror", loop=True)
         synths.animate('Charang', 'Pan', 0.7, -0.7, 9, easing="exponential-mirror", loop=True)
+
         synths.set('TenorSax', 'Calf%20Mono%20Compressor', 'Bypass', 0.0)
         synths.set('TenorSax', 'Calf%20Multi%20Chorus', 'Active', 1.0)
+
+        synths.set('TenorSax', 'Amp', 'Gain', 0.5)
+        synths.set('ZTrumpets', 'Amp', 'Gain', 0.7)
+
+        synthsFX2Delay.set('ZTrumpets', 'Gain', -7.0)
+        synthsFX2Delay.set('TenorSax', 'Gain', -10.0)
+        synthsFX2Delay.set('Charang', 'Gain', -6.0)
+        synthsFX2Delay.set('SynthsFX2Delay', 'Mute', 0.0)
 
         # Samples
         samplesFX6Scape.set('Samples1', 'Gain', -6.0)
@@ -283,13 +308,13 @@ class GrandOpening(Video, Light, RouteBase):
 
 
 
-    # @pedalboard_button(11)
-    # def goto_mcob(self):
-    #     """
-    #     GOTO MCOB
-    #     """
-    #     engine.set_route('Mcob')
-    #     engine.active_route.intro()
+    @pedalboard_button(11)
+    def goto_mcob(self):
+        """
+        GOTO QCC
+        """
+        engine.set_route('QueenCloclo')
+        engine.active_route.preintro()
 
 
 
