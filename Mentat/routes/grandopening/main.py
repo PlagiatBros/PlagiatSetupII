@@ -116,7 +116,10 @@ class GrandOpening(Video, Light, RouteBase):
         transport.start()
 
         # Keys
-        jmjKeyboard.set_sound('Piano')
+        jmjKeyboard.set_sound('Piano', lead=False)
+
+        # Set lead
+        # NO LEAD
 
         # Synths
         synthsFX2Delay.set('ZTrumpets', 'Gain', -12.0)
@@ -133,6 +136,8 @@ class GrandOpening(Video, Light, RouteBase):
 
         synths.animate('ZDre', 'Pan', -0.5, 0.5, 12, 'b', easing='linear-mirror', loop=True)
         synths.animate('DubstepHorn', 'Pan', 0.5, -0.5, 12, 'b', easing='linear-mirror', loop=True)
+
+
 
         # Vocals
         vocalsNano.set('normo_exclu', 'on')
@@ -158,7 +163,7 @@ class GrandOpening(Video, Light, RouteBase):
         transport.start()
 
         # Keys
-        jmjKeyboard.set_sound('Piano')
+        jmjKeyboard.set_sound('Piano', lead=False)
 
         # Vocals
         vocalsNano.set('normo_exclu', 'on')
@@ -199,11 +204,16 @@ class GrandOpening(Video, Light, RouteBase):
         synthsFX2Delay.set('Charang', 'Gain', -6.0)
         synthsFX2Delay.set('SynthsFX2Delay', 'Mute', 0.0)
 
+        # set LEAD
+        # NO LEAD
+
         # Samples
         samplesFX6Scape.set('Samples1', 'Gain', -6.0)
         samplesFX6Scape.set('SamplesFX6Scape', 'Mute', 0.0)
         samples.set('Samples1', 'Mute', 0.0)
         samples.set('Samples2', 'Mute', 0.0)
+
+        samples.set_lead('Samples2')
 
         # Vocals
         vocalsNano.set('normo_exclu', 'on')
