@@ -63,7 +63,7 @@ class GrandOpening(Video, Light, RouteBase):
         jmjKeyboard.set_sound('Piano', lead=False)
         synths.set_lead()
         samples.set_lead()
-        
+
 
         # Vocals
         vocalsNano.set('normo_exclu', 'on')
@@ -362,13 +362,3 @@ class GrandOpening(Video, Light, RouteBase):
         VOCALS NANO --
         """
         vocalsNano.set('gars_exclu', 'on')
-
-
-
-    @chastt_button(1)
-    def chastt_note_1(self):
-        chasttControlMidiOut.send('/note_on', 0, 45, 127)
-        self.start_scene('chasttnoteoff', lambda: [
-            self.wait(0.5, 'b'),
-            chasttControlMidiOut.send('/note_off', 0, 45)
-        ])

@@ -619,10 +619,6 @@ class QueenCloclo(Video, Light, RouteBase):
         looper.overdub(3)
 
 
-    @chastt_button(1)
-    def chastt_note_1(self):
-        chasttKeyboard.play_note(45, 0.5)
-
 
     @pedalboard_button(7)
     def beethoven(self):

@@ -26,13 +26,13 @@ JmjKeyboard : ProdSampler   |> Tap192.ProdSampler : midi_in
 
 JmjKeyboard : Mentat   |> Mentat : JmjKeyboardMidi
 
-Mentat : Mk2Control |>  Arturia MiniLab mkII : Arturia MiniLab mkII MIDI 1
-Arturia MiniLab mkII : Arturia MiniLab mkII MIDI 1  |> Mentat : Mk2Control
-Arturia MiniLab mkII : Arturia MiniLab mkII MIDI 1  |>  Mk2Keyboard : in
+Mentat : Mk2Control |>  Arturia MiniLab mkII Nano : Arturia MiniLab mkII MIDI 1
+Arturia MiniLab mkII Nano : Arturia MiniLab mkII MIDI 1  |> Mentat : Mk2Control
+Arturia MiniLab mkII Nano : Arturia MiniLab mkII MIDI 1  |>  Mk2Keyboard : in
 
-# midi squatting
-MPKmini2 : MPKmini2 MIDI 1 |> Mk2Keyboard : in
-
+Mentat : ChasttControl |>  Arturia MiniLab mkII Chastt : Arturia MiniLab mkII MIDI 1
+Arturia MiniLab mkII Chastt : Arturia MiniLab mkII MIDI 1  |> Mentat : ChasttControl
+Arturia MiniLab mkII Chastt : Arturia MiniLab mkII MIDI 1  |> ChasttKeyboard : in
 
 
 Mk2Keyboard : ZLow          |> ZynAddSubFX.ZLowSynths : ZynAddSubFX
@@ -48,12 +48,7 @@ Mk2Keyboard : Fluid_MajorVocals          |> Fluid_MajorVocals : Fluid_MajorVocal
 Mk2Keyboard : Fluid_Piano          |> Fluid_Piano : Fluid_Piano
 
 Mk2Keyboard : ConstantSampler |> Tap192.ConstantSampler : midi_in
-#Mk2Keyboard : ConstantSampler |> SPD-SX : SPD-SX Control
-Mk2Keyboard : ConstantSampler |> Hammerfall DSP : HDSP MIDI 1
 Mk2Keyboard : ProdSampler   |> Tap192.ProdSampler : midi_in
-
-MPKmini2 : MPKmini2 MIDI 1 |> Mentat : MpkControl
-Mentat : MpkControl |> MPKmini2 : MPKmini2 MIDI 1
 
 
 ChasttKeyboard : ZLow          |> ZynAddSubFX.ZLowSynths : ZynAddSubFX
@@ -67,8 +62,8 @@ ChasttKeyboard : Fluid_OrchestraHit       |> Fluid_OrchestraHit : Fluid_Orchestr
 ChasttKeyboard : Fluid_SteelDrum          |> Fluid_SteelDrum : Fluid_SteelDrum
 ChasttKeyboard : Fluid_MajorVocals          |> Fluid_MajorVocals : Fluid_MajorVocals
 ChasttKeyboard : Fluid_Piano          |> Fluid_Piano : Fluid_Piano
-Mentat : ChasttControlMidiOut |> ChasttKeyboard : in
-
+ChasttKeyboard : ConstantSampler |> Tap192.ConstantSampler : midi_in
+ChasttKeyboard : ProdSampler   |> Tap192.ProdSampler : midi_in
 
 
 Mk2Keyboard : ZHi          |> loop192.MidiLooper : Loop 0

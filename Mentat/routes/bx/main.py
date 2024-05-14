@@ -455,7 +455,7 @@ class BX(Video, Light, RouteBase):
         vocalsKesch.set('gars', 'on')
 
         # VOCALS
-        inputs.set('keschmic', 'dynamic')
+        inputs.set('keschmic', 'dynamics')
 
         self.start_sequence('sequence/bad_kiddybitch', [
             {
@@ -522,7 +522,7 @@ class BX(Video, Light, RouteBase):
         vocalsFeat.set('normo_exclu', 'on')
 
         # VOCALS
-        inputs.set('keschmic', 'static')
+        inputs.set('keschmic', 'dynamic')
 
         # Keyboard
         jmjKeyboard.set_sound('ZTrumpets', lead=False)

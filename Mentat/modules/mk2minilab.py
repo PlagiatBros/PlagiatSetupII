@@ -106,7 +106,8 @@ class Mk2Control(Module):
 
             if 'keyboard' not in self.modes or self.shift_key:
 
-                clamp = copysign(max(abs(args[1]) - 2048,0) / (8192 - 2048), args[1])
+                deadzone = 0 # 2048
+                clamp = copysign(max(abs(args[1]) - deadzone,0) / (8192 - deadzone), args[1])
 
                 p = 1.0 + clamp * 0.75
 

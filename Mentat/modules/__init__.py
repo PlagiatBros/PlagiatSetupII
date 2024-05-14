@@ -41,12 +41,12 @@ openstagecontrolKeyboardOut = Module('OpenStageControlKeyboardOut', 'midi')
 pedalboard = PedalBoard('PedalBoard', 'osc', 3001)
 jmjKeyboardMidi = JmjKeyboardMidi('JmjKeyboardMidi', 'midi')
 jmjKeyboard = JmjKeyboard('JmjKeyboard', 'osc', 3002)
+
 mk2Keyboard = Mk2Keyboard('Mk2Keyboard', 'osc', 3003)
 mk2Control = Mk2Control('Mk2Control', 'midi')
 
 chasttKeyboard = ChasttKeyboard('ChasttKeyboard', 'osc', 3005)
-chasttControl = ChasttControl('ChasttControl', None)
-chasttControlMidiOut = Module('ChasttControlMidiOut', 'midi')
+chasttControl = ChasttControl('ChasttControl', 'midi')
 
 joystick = Joystick('Joystick', 'osc', 3004)
 mpkControl = MpkControl('MpkControl', 'midi')

@@ -685,46 +685,43 @@ class StickItOut(Video, Light, RouteBase):
         pass
 
 
-    @chastt_button(1)
-    def chastt_note_1(self):
-        chasttKeyboard.play_note(46, 0.3, velocity=100)
-
-    @chastt_button(2)
-    def chastt_note_2(self):
-        chasttKeyboard.play_note(43, 0.3, velocity=100)
-
-    @chastt_button(3)
-    def chastt_note_3(self):
-        chasttKeyboard.play_note(40, 0.3, velocity=100)
-
-    @chastt_button(4)
+    @chastt_button(8, 'red')
     def bassactive(self):
         seq192.select('toggle', 'lounge_zLow_8bits')
 
 
-    @chastt_button(5)
-    def chastt_note_5(self):
-        self.engine.modules['ConstantSampler'].send('/instrument/play', 's:Plagiat/ConstantKit/Clap', 127)
+    @chastt_button(3, 'blue')
+    def clapit(self):
+        constantSampler.send('/instrument/play', 's:Clap', 100)
 
-    @chastt_button(6)
-    def chastt_note_6(self):
-        self.engine.modules['ConstantSampler'].send('/instrument/play', 's:Plagiat/ConstantKit/Stick', 127)
+    @chastt_button(5, 'blue')
+    def stickit(self):
+        constantSampler.send('/instrument/play', 's:Stick', 100)
 
-
-    @chastt_button(7)
-    def chastt_note_7(self):
-        self.engine.modules['ConstantSampler'].send('/instrument/stop', 's:Plagiat/ConstantKit/Jajaja_Bourvil')
-        self.engine.modules['ConstantSampler'].send('/instrument/play', 's:Plagiat/ConstantKit/Jajaja_Bourvil', 127)
-        self.start_scene('stopbourvil', lambda: [
-            self.wait(0.5, 'b'),
-            self.engine.modules['ConstantSampler'].send('/instrument/stop', 's:Plagiat/ConstantKit/Jajaja_Bourvil')
-        ])
-
-    @chastt_button(8)
-    def chastt_note_8(self):
-        self.engine.modules['ConstantSampler'].send('/instrument/stop', 's:Plagiat/ConstantKit/Jajaja_Busta')
-        self.engine.modules['ConstantSampler'].send('/instrument/play', 's:Plagiat/ConstantKit/Jajaja_Busta', 127)
-        self.start_scene('stopbourvil', lambda: [
-            self.wait(0.4, 'b'),
-            self.engine.modules['ConstantSampler'].send('/instrument/stop', 's:Plagiat/ConstantKit/Jajaja_Busta')
-        ])
+    #
+    # @chastt_button(1)
+    # def chastt_note_5(self):
+    #     self.engine.modules['ConstantSampler'].send('/instrument/play', 's:Plagiat/ConstantKit/Clap', 127)
+    #
+    # @chastt_button(2)
+    # def chastt_note_6(self):
+    #     self.engine.modules['ConstantSampler'].send('/instrument/play', 's:Plagiat/ConstantKit/Stick', 127)
+    #
+    #
+    # @chastt_button(3)
+    # def chastt_note_7(self):
+    #     self.engine.modules['ConstantSampler'].send('/instrument/stop', 's:Plagiat/ConstantKit/Jajaja_Bourvil')
+    #     self.engine.modules['ConstantSampler'].send('/instrument/play', 's:Plagiat/ConstantKit/Jajaja_Bourvil', 127)
+    #     self.start_scene('stopbourvil', lambda: [
+    #         self.wait(0.5, 'b'),
+    #         self.engine.modules['ConstantSampler'].send('/instrument/stop', 's:Plagiat/ConstantKit/Jajaja_Bourvil')
+    #     ])
+    #
+    # @chastt_button(4)
+    # def chastt_note_8(self):
+    #     self.engine.modules['ConstantSampler'].send('/instrument/stop', 's:Plagiat/ConstantKit/Jajaja_Busta')
+    #     self.engine.modules['ConstantSampler'].send('/instrument/play', 's:Plagiat/ConstantKit/Jajaja_Busta', 127)
+    #     self.start_scene('stopbourvil', lambda: [
+    #         self.wait(0.4, 'b'),
+    #         self.engine.modules['ConstantSampler'].send('/instrument/stop', 's:Plagiat/ConstantKit/Jajaja_Busta')
+    #     ])

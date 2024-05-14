@@ -43,13 +43,39 @@ class AlsaPatcher(Module):
 
         self.clients = {}
         self.clients_names = {}
+        self.clients_ids = {}
+
+        self.aliases = {}
+
+
+        def find_nano_mk2(clients):
+            mk2s = [c for c in clients.values() if 'Arturia MiniLab mkII' in c.name]
+            print(mk2s)
+            if len(mk2s) > 1:
+                return mk2s[-1]
+        def find_chastt_mk2(clients):
+            mk2s = [c for c in clients.values() if 'Arturia MiniLab mkII' in c.name]
+            print(mk2s)
+            if len(mk2s) > 0:
+                return mk2s[0]
+
+        self.add_alias('Arturia MiniLab mkII Nano', find_nano_mk2)
+        self.add_alias('Arturia MiniLab mkII Chastt', find_chastt_mk2)
+
+    def add_alias(self, alias_name, function):
+        self.aliases[alias_name] = function
 
     def get_client(self, name):
 
-        if name in self.clients:
-            return self.clients[name]
-        else:
-            self.logger.warning('client "%s" not found' % name)
+        if name in self.aliases:
+            client = self.aliases[name](self.clients)
+            if client:
+                return client
+
+        if name in self.clients_ids and self.clients_ids[name] in self.clients:
+            return self.clients[self.clients_ids[name]]
+
+        self.logger.warning('client "%s" not found' % name)
 
 
     def get_port(self, client, port_name):
@@ -94,6 +120,7 @@ class AlsaPatcher(Module):
         clients = self.seq.connection_list()
 
         self.clients_names.clear()
+        self.clients_ids.clear()
         self.clients.clear()
         self.active_connections.clear()
 
@@ -102,10 +129,11 @@ class AlsaPatcher(Module):
             client_name, client_id, port_list = client
 
             self.clients_names[client_id] = client_name
+            self.clients_ids[client_name] = client_id
 
             valid_ports = [p for p in port_list if self.is_valid_port(client_id, p[1])]
 
-            self.clients[client_name] = AlsaClient(
+            self.clients[client_id] = AlsaClient(
                 name=client_name,
                 id=client_id,
                 ports=valid_ports
@@ -198,13 +226,13 @@ class AlsaPatcher(Module):
             src_client_id, src_port_id, dest_client_id, dest_port_id = connection
 
             src_client_name = self.clients_names[src_client_id]
-            src_port_name = [port for port in self.clients[src_client_name].ports.values() if port.id == src_port_id][0].name
+            src_port_name = [port for port in self.clients[src_client_id].ports.values() if port.id == src_port_id][0].name
 
             if src_client_name == 'System' and src_port_name == 'Announce':
                 continue
 
             dest_client_name = self.clients_names[dest_client_id]
-            dest_port_name = [port for port in self.clients[dest_client_name].ports.values() if port.id == dest_port_id][0].name
+            dest_port_name = [port for port in self.clients[dest_client_id].ports.values() if port.id == dest_port_id][0].name
 
             src = src_client_name + ':' + src_port_name
             dest = dest_client_name + ':' + dest_port_name
