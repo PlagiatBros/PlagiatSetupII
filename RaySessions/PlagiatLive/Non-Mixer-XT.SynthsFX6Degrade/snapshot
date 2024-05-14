@@ -139,9 +139,9 @@
 	Gain_Module 0xD7 create :parameter_values "-70.000000:0.000000:0.000000" :is_default 1 :chain 0xD5 :active 1
 	Meter_Module 0xD8 create :is_default 1 :chain 0xD5 :active 1
 	JACK_Module 0xD9 create :parameter_values "2.000000:0.000000" :is_default 1 :chain 0xD5 :active 1
-	Mixer_Strip 0x62 create :name "SynthsFX6Degrade" :width "narrow" :tab "fader" :color 1783112937 :gain_mode 0 :mute_mode 0 :group 0x69 :auto_input "" :manual_connection 0
+	Mixer_Strip 0x62 create :name "SynthsFX6Degrade" :width "narrow" :tab "signal" :color 1783112937 :gain_mode 0 :mute_mode 0 :group 0x69 :auto_input "" :manual_connection 0
 	Chain 0x63 create :strip 0x62 :tab "chain"
-	JACK_Module 0x64 create :parameter_values "0.000000:1.000000" :is_default 1 :chain 0x63 :active 1
+	JACK_Module 0x64 create :parameter_values "0.000000:2.000000" :is_default 1 :chain 0x63 :active 1
 	LV2_Plugin 0x1BB create :lv2_plugin_uri "http://drobilla.net/plugins/mda/Degrade" :plugin_ins 2 :plugin_outs 2 :parameter_values "0.800000:0.500000:0.650000:0.900000:0.580000:0.500000:0.000000" :is_default 0 :chain 0x63 :active 1 :number 0
 	Gain_Module 0x65 create :parameter_values "0.000000:1.000000:0.000000" :is_default 1 :chain 0x63 :active 1
 	Meter_Module 0x66 create :is_default 1 :chain 0x63 :active 1
