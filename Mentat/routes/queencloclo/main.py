@@ -590,13 +590,49 @@ class QueenCloclo(Video, Light, RouteBase):
         # Keyboards
         jmjKeyboard.set_sound('MajorVocals')
 
+    @mk2_button(9)
+    def uptranse(self):
+        """
+        Refrain Couplet couplet
+        """
+        self.couplet_refrainrefrain()
+        transport.start()
+        seq192.select('on', 'couplet2_uprefrain')
+
+    @pedalboard_button(9)
+    def transetranse(self):
+        jmjKeyboard.set_sound('ZNotSoRhodes', lead=False)
+
+        # LEAD
+        synths.set_lead('MajorVocals')
+        samples.set_lead()
+
+        seq192.select('solo', 'dummy')
+        transport.start()
+
+    @pedalboard_button(10)
+    def keyboard_transe_boucling(self):
+        looper.record(3)
+
+    @pedalboard_button(11)
+    def keyboard_transe_overdubbing(self):
+        looper.overdub(3)
+
+
+    @chastt_button(1)
+    def chastt_note_1(self):
+        chasttKeyboard.play_note(45, 0.5)
+
 
     @pedalboard_button(7)
     def beethoven(self):
         transport.stop()
         self.pause_loopers()
 
-        jmjKeyboard.set_sound('TenorSax')
+        jmjKeyboard.set_sound('TenorSax', lead=True)
+
+        # Lead
+        samples.set_lead()
 
         # Vocals
         vocalsKesch.set('meuf_exclu', 'on')
@@ -620,7 +656,10 @@ class QueenCloclo(Video, Light, RouteBase):
         transport.start()
 
         # Keyboards
-        jmjKeyboard.set_sound('TenorSax')
+        jmjKeyboard.set_sound('TenorSax', lead=True)
+
+        # Lead
+        samples.set_lead()
 
         # Vocals
         vocalsKesch.set('meuf_exclu', 'on')
@@ -629,14 +668,6 @@ class QueenCloclo(Video, Light, RouteBase):
 
         inputs.set('keschmic', 'static')
 
-    @mk2_button(9)
-    def uptranse(self):
-        """
-        Refrain Couplet couplet
-        """
-        self.couplet_refrainrefrain()
-        transport.start()
-        seq192.select('on', 'couplet2_uprefrain')
 
     @mk2_button(10)
     def bridge(self):
@@ -656,7 +687,10 @@ class QueenCloclo(Video, Light, RouteBase):
         transport.start()
 
         # Keyboards
-        jmjKeyboard.set_sound('ZTrumpets')
+        jmjKeyboard.set_sound('ZTrumpets', lead=False)
+
+        synths.set_lead('ZBombarde')
+        samples.set_lead()
 
         inputs.set('keschmic', 'static')
 
@@ -674,30 +708,19 @@ class QueenCloclo(Video, Light, RouteBase):
         # Séquences
         seq192.select('on', 'up_theme_*')
 
+        # Synths
+        synths.set('ZTrumpets', 'Pan', -0.7)
+        # synths.set('ZCosma', 'Amp', 'Gain', 0.9)
+        synths.set('ZCosma', 'Pan', 0.7)
+        synths.set('TenorSax', 'Amp', 'Gain', 0.9)
 
         # Transport
         transport.start()
 
         # Keyboards
-        jmjKeyboard.set_sound('ZBombarde')
+        jmjKeyboard.set_sound('ZBombarde', lead=True)
+
+        # LEAD
+        samples.set_lead()
 
         inputs.set('keschmic', 'static')
-
-    @pedalboard_button(9)
-    def transetranse(self):
-        jmjKeyboard.set_sound('ZNotSoRhodes', lead=False)
-        seq192.select('solo', 'dummy')
-        transport.start()
-
-    @pedalboard_button(10)
-    def keyboard_transe_boucling(self):
-        looper.record(3)
-
-    @pedalboard_button(11)
-    def keyboard_transe_overdubbing(self):
-        looper.overdub(3)
-
-
-    @chastt_button(1)
-    def chastt_note_1(self):
-        chasttKeyboard.play_note(45, 0.5)
