@@ -91,7 +91,11 @@ class DDD(Video, Light, RouteBase):
         inputs.set('keschmic', 'static')
 
         # Keyboard
-        jmjKeyboard.set_sound('ZDre')
+        jmjKeyboard.set_sound('ZDre', lead=False)
+
+        # LEAD
+        synths.set_lead()
+        samples.set_lead()
 
 
 
@@ -144,6 +148,8 @@ class DDD(Video, Light, RouteBase):
         # Keyboard
         jmjKeyboard.set_sound('ZTrumpets', boost=True)
 
+        # Lead
+        samples.set_lead()
 
 
     @mk2_button(2, 'cyan')
@@ -171,7 +177,7 @@ class DDD(Video, Light, RouteBase):
         inputs.set('keschmic', 'dynamic')
 
         # Keyboard
-        jmjKeyboard.set_sound('ZTrumpets', boost=True)
+        jmjKeyboard.set_sound('ZTrumpets', boost=False)
 
 
         self.start_scene('sequences/couplet_1', lambda: [
@@ -186,6 +192,17 @@ class DDD(Video, Light, RouteBase):
             # mula mula
             seq192.select('solo', 'intro_*')
         ])
+
+        # Synths
+        synths.set('MajorVocals', 'Amp', 'Gain', 0.7)
+
+        synthsFX1Reverb.set('MajorVocals', 'Gain', -6.0)
+        synthsFX1Reverb.set('SynthsFX1Reverb', 'Mute', 0.0)
+
+
+        # Lead
+        synths.set_lead()
+        samples.set_lead('Samples4')
 
 
     @mk2_button(3, 'green')
@@ -212,7 +229,11 @@ class DDD(Video, Light, RouteBase):
         vocalsFeat.set('normo_exclu', 'on')
 
         # Keyboard
-        jmjKeyboard.set_sound('ZTrumpets', boost=True)
+        jmjKeyboard.set_sound('ZTrumpets', boost=False)
+
+        # LEAD
+        synths.set_lead()
+        samples.set_lead()
 
 
     @pedalboard_button(4)
@@ -242,10 +263,14 @@ class DDD(Video, Light, RouteBase):
         inputs.set('keschmic', 'static')
 
         # Keyboard
-        jmjKeyboard.set_sound('ZTrumpets', boost=True)
+        jmjKeyboard.set_sound('ZTrumpets')
 
         # Bass FX
         bassFX.set('distohi', 'on')
+
+        # LEAD
+        synths.set_lead()
+        samples.set_lead()
 
 
     @mk2_button(4, 'cyan')
@@ -274,7 +299,11 @@ class DDD(Video, Light, RouteBase):
         inputs.set('keschmic', 'dynamic')
 
         # Keyboard
-        jmjKeyboard.set_sound('ZTrumpets', boost=True)
+        jmjKeyboard.set_sound('ZTrumpets', boost=False)
+
+        # LEAD
+        synths.set_lead()
+        samples.set_lead()
 
 
     @mk2_button(5)
@@ -327,6 +356,10 @@ class DDD(Video, Light, RouteBase):
         #     synths.animate('ZNotSoRhodes', 'Amp', 'Gain', 0, 1, 2*4, 'beats')
         # ])
 
+        # LEAD
+        synths.set_lead('MajorVocals')
+        samples.set_lead()
+
     @pedalboard_button(7)
     def couplet2_2_bassoff(self):
         seq192.select('off', 'couplet2-2_cLow_trap1')
@@ -352,7 +385,12 @@ class DDD(Video, Light, RouteBase):
 
         inputs.set('keschmic', 'dynamic')
 
-        jmjKeyboard.set_sound('ZDre')
+        jmjKeyboard.set_sound('ZDre', boost=True)
+
+        # Lead
+        # synths.set_lead('MajorVocals')
+        samples.set_lead()
+
 
 
     # @pedalboard_button(6)
@@ -379,6 +417,10 @@ class DDD(Video, Light, RouteBase):
         samplesFX1Delay.set('SamplesFX1Delay', 'GxMultiBandDelay', 'DELAY3', 161)
         samplesFX1Delay.set('SamplesFX1Delay', 'GxMultiBandDelay', 'FEEDBACK3', 96)
 
+        samplesFX6Scape.set('BEP', 'Gain', -9.0)
+        samplesFX6Scape.set('SamplesFX6Scape', 'Mute', 0.0)
+
+
         # Synths
         synths.set('Z8bits', 'Amp', 'Gain', 0.5)
 
@@ -393,7 +435,11 @@ class DDD(Video, Light, RouteBase):
         inputs.set('keschmic', 'dynamic')
 
         # Keyboard
-        jmjKeyboard.set_sound('ZTrumpets', boost=True)
+        jmjKeyboard.set_sound('ZTrumpets', boost=False)
+
+        # Lead
+        synths.set_lead()
+        samples.set_lead()
 
         # Séquences
         self.start_sequence('couplet2_3_tapedelay', [
@@ -408,6 +454,9 @@ class DDD(Video, Light, RouteBase):
 
     @pedalboard_button(9)
     def couplet2_freeze(self):
+        """
+        FREEEEEEEEZE
+        """
         self.pause_loopers()
         self.reset()
 
@@ -428,6 +477,10 @@ class DDD(Video, Light, RouteBase):
             self.wait_next_cycle(),
             self.run(self.couplet2_3)
         ])
+
+        # Lead
+        synths.set_lead()
+        samples.set_lead()
 
     @mk2_button(8, 'purple')
     def refrain_bis(self):
@@ -453,6 +506,6 @@ class DDD(Video, Light, RouteBase):
         """
         STICKITOUT
         """
-        self.engine.set_route('StickItOut')
+        self.engine.set_route('BX')
         openstagecontrol.send('/gxtuner_modal', 1)
-        self.engine.active_route.intro()
+        # self.engine.active_route.intro()
