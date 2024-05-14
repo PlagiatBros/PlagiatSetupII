@@ -110,7 +110,7 @@ class BX(Video, Light, RouteBase):
         inputs.set('keschmic', 'static')
 
         # Keyboard
-        jmjKeyboard.set_sound('ZTrumpets', boost=True)
+        jmjKeyboard.set_sound('ZTrumpets', boost=False)
 
         # Synths
         synths.set('Trap', 'Pan', -0.7)
@@ -133,6 +133,11 @@ class BX(Video, Light, RouteBase):
         bassSynths.set('BassTrap2', 'Amp', 'Gain', 0.9)
         bassSynths.set('BassBarkline', 'Amp', 'Gain', 1)
         bassSynths.set('BassBoom', 'Amp', 'Gain', 0.8)
+
+
+        # Lead
+        synths.set_lead()
+        samples.set_lead()
 
     @pedalboard_button(2)
     def couplet1_aerien(self):
@@ -194,6 +199,10 @@ class BX(Video, Light, RouteBase):
         bassSynths.set('BassBarkline', 'Amp', 'Gain', 1)
         bassSynths.set('BassBoom', 'Amp', 'Gain', 0.8)
 
+        # Lead
+        synths.set_lead()
+        samples.set_lead()
+
     @mk2_button(3)
     def couplet1_knowers(self):
         """
@@ -224,6 +233,15 @@ class BX(Video, Light, RouteBase):
         samplesFX7Degrade.set('Shamisen', 'Gain', -9)
         samplesFX7Degrade.set('SamplesFX7Degrade', 'Mute', 0.0)
 
+        # Synths
+        synths.set('ZDupieux', 'Pan', 0.2)
+        synths.set('ZDupieux', 'Amp', 'Gain', 0.9)
+        synths.set('Z8bits', 'Pan', -0.2)
+        synths.set('Z8bits', 'Amp', 'Gain', 0.9)
+
+        synthsFX2Delay.set('Z8bits', 'Gain', -18.0)
+        synthsFX2Delay.set('SynthsFX2Delay', 'Mute', 0.0)
+
         # Vocals
         vocalsNano.set('normo_exclu', 'on')
         vocalsFeat.set('normo_exclu', 'on')
@@ -232,6 +250,10 @@ class BX(Video, Light, RouteBase):
 
         # Keyboard
         jmjKeyboard.set_sound('ZDupieux', boost=False)
+
+        # Lead
+        synths.set_lead('MajorVocals')
+        samples.set_lead()
 
     @pedalboard_button(3)
     def couplet1_pont(self):
@@ -271,9 +293,21 @@ class BX(Video, Light, RouteBase):
 
         inputs.set('keschmic', 'dynamic')
 
+        # Synths
+        synths.set('ZDupieux', 'Pan', 0.2)
+        synths.set('ZDupieux', 'Amp', 'Gain', 0.9)
+        synths.set('Z8bits', 'Pan', -0.2)
+        synths.set('Z8bits', 'Amp', 'Gain', 0.9)
+
+        synthsFX2Delay.set('Z8bits', 'Gain', -18.0)
+        synthsFX2Delay.set('SynthsFX2Delay', 'Mute', 0.0)
+
 
         # Keyboard
         jmjKeyboard.set_sound('MajorVocals', boost=True)
+
+        # Lead
+        samples.set_lead()
 
     @pedalboard_button(4)
     def couplet1_2tight(self):
@@ -348,7 +382,18 @@ class BX(Video, Light, RouteBase):
             samplesFX6Scape.set('SamplesFX6Scape', 'Mute', 1.0)
         ])
 
+        # Samples
+        samplesFX3Reverb.set('GuitarCrunch', 'Gain', -34.0)
+        samplesFX3Reverb.set('GuitarNatural', 'Gain', -13.39)
+        samplesFX3Reverb.set('GuitarChorus', 'Gain', -16.0)
+        samplesFX3Reverb.set('SamplesFX3Reverb', 'Mute', 0.0)
 
+        samplesFX2Delay.set('GuitarNatural', 'Gain', -13.39)
+        samplesFX2Delay.set('SamplesFX2Delay', 'Mute', 0.0)
+
+        # Lead
+        synths.set_lead()
+        samples.set_lead()
 
 
 

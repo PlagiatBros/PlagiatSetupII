@@ -408,10 +408,10 @@
         <instrument name="Gtr_CocotteNatural" minnote="63" maxnote="63" rootnote="63" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples2" volume="0.500000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
           <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2021/BxMillezim/CocotteGuitare_Natural_16th.wav" sampleRelative="../../../../Samples/So2021/BxMillezim/CocotteGuitare_Natural_16th.wav"/>
         </instrument>
-        <instrument name="Gtr_CocotteCrunch" minnote="64" maxnote="64" rootnote="64" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples1" volume="0.500000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
+        <instrument name="Gtr_CocotteCrunch" minnote="64" maxnote="64" rootnote="64" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples1" volume="0.500000" pan="-0.265306" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
           <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2021/BxMillezim/CocotteGuitare_Crunch.wav" sampleRelative="../../../../Samples/So2021/BxMillezim/CocotteGuitare_Crunch.wav"/>
         </instrument>
-        <instrument name="Gtr_CocotteFlange" minnote="65" maxnote="65" rootnote="65" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples3" volume="0.500000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
+        <instrument name="Gtr_CocotteFlange" minnote="65" maxnote="65" rootnote="65" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples3" volume="0.500000" pan="0.326531" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
           <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2021/BxMillezim/CocotteGuitare_FlangeChorus.wav" sampleRelative="../../../../Samples/So2021/BxMillezim/CocotteGuitare_FlangeChorus.wav"/>
         </instrument>
         <instrument name="Gtr_MacroCocotteCrunch" minnote="66" maxnote="66" rootnote="66" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples1" volume="0.500000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
@@ -458,6 +458,12 @@
         </instrument>
         <instrument name="Bx_Car" minnote="43" maxnote="43" rootnote="43" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples4" volume="1.000000" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
           <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2021/BxMillezim/Bx_Car.wav" sampleRelative="../../../../Samples/So2021/BxMillezim/Bx_Car.wav"/>
+        </instrument>
+        <instrument name="ShamisenOstinato_High" minnote="76" maxnote="76" rootnote="76" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples5" volume="0.416667" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
+          <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2021/BxMillezim/ShamisenOstinato_High.wav" sampleRelative="../../../../Samples/So2021/BxMillezim/ShamisenOstinato_High.wav"/>
+        </instrument>
+        <instrument name="ShamisenOstinato_Low" minnote="77" maxnote="77" rootnote="77" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples5" volume="0.416667" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
+          <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2021/BxMillezim/ShamisenOstinato_Low.wav" sampleRelative="../../../../Samples/So2021/BxMillezim/ShamisenOstinato_Low.wav"/>
         </instrument>
       </kit>
       <kit name="LickMe" volume="1.000000">
@@ -529,12 +535,6 @@
         </instrument>
         <instrument name="BX_zurnaTheme_note17" minnote="30" maxnote="30" rootnote="31" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples5" volume="0.722222" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
           <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2021/BxMillezim/BX_zurnaTheme_note17.wav" sampleRelative="../../../../Samples/So2021/BxMillezim/BX_zurnaTheme_note17.wav"/>
-        </instrument>
-        <instrument name="ShamisenOstinato_High" minnote="76" maxnote="76" rootnote="76" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples5" volume="0.416667" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
-          <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2021/BxMillezim/ShamisenOstinato_High.wav" sampleRelative="../../../../Samples/So2021/BxMillezim/ShamisenOstinato_High.wav"/>
-        </instrument>
-        <instrument name="ShamisenOstinato_Low" minnote="77" maxnote="77" rootnote="77" rootnotefine="0.000000" channel="1" cut="-1" polyphony="0" output="Samples5" volume="0.416667" pan="0.000000" pitch_over_range="true" play_mode="normal" play_loop="no" play_reverse="no">
-          <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2021/BxMillezim/ShamisenOstinato_Low.wav" sampleRelative="../../../../Samples/So2021/BxMillezim/ShamisenOstinato_Low.wav"/>
         </instrument>
       </kit>
       <kit name="AintInTheWay" volume="1.000000">
@@ -701,7 +701,6 @@
           <variation minveloc="0" maxveloc="127" sample="/home/plagiat/PlagiatSetup/Samples/So2020/SnapchatAuHarem/Intro1.wav" sampleRelative="../../../../Samples/So2020/SnapchatAuHarem/Intro1.wav"/>
         </instrument>
       </kit>
-
     </setup>
   </creation>
 </tap192>
