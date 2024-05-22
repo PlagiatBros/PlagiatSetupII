@@ -132,11 +132,11 @@ class GrandOpening(Video, Light, RouteBase):
         # Synths
         synthsFX2Delay.set('ZTrumpets', 'Gain', -12.0)
         synthsFX2Delay.set('ZDre', 'Gain', 0.0)
-        synthsFX2Delay.set('DupstepHorn', 'Gain', 0.0)
+        synthsFX2Delay.set('DubstepHorn', 'Gain', 0.0)
         synthsFX2Delay.set('SynthsFX2Delay', 'Mute', 0.0)
 
         synthsFX3Delay.set('ZDre', 'Gain', -9.0)
-        synthsFX3Delay.set('DupstepHorn', 'Gain', -9.0)
+        synthsFX3Delay.set('DubstepHorn', 'Gain', -9.0)
         synthsFX3Delay.set('SynthsFX3Delay', 'Mute', 0.0)
 
         synths.set('ZDre', 'Amp', 'Gain', 0.5)
