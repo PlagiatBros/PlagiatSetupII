@@ -7,7 +7,7 @@ import mididings.engine as _engine
 import mididings.event as _event
 from ports import get_port
 
-def create_keyboard(name):
+def create_keyboard(name, transpose=0):
 
     inPort = get_port(name)
     mentatPort = get_port('Mentat')
@@ -24,7 +24,7 @@ def create_keyboard(name):
         AutoRestart()
     )
 
-    generic_in = Transpose(-12) >> ~ChannelFilter(16) >> [
+    generic_in = Transpose(-12 + transpose) >> ~ChannelFilter(16) >> [
         Filter(NOTE),
         Filter(CTRL) >> [
             CtrlFilter(1), # Modulation

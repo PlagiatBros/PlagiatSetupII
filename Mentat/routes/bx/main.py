@@ -395,6 +395,28 @@ class BX(Video, Light, RouteBase):
         synths.set_lead()
         samples.set_lead()
 
+    @gui_button(
+        type='button',
+        mode='momentary',
+        label='Bentley Leak',
+        height=80
+    )
+    def bentley_leak(self):
+        postprocess.animate_filter('Synths', 20000, 600, 0.2, 'b')
+        postprocess.animate_filter('Samples', 20000, 1400, 0.2, 'b')
+
+
+    @gui_button(
+        type='button',
+        mode='momentary',
+        label='Bentley Geak',
+        height=80
+    )
+    def bentley_geak(self):
+        looper.unpause(0)
+        postprocess.animate_filter('Synths', 600, 22000, 0.5, 'b')
+        postprocess.animate_filter('Samples', 1400, 22000, 0.5, 'b')
+
 
 
 
@@ -431,6 +453,8 @@ class BX(Video, Light, RouteBase):
         # Synths
         synthsFX2Delay.set('Trap', 'Gain', -14.0)
         synthsFX2Delay.set('SynthsFX2Delay', 'Mute', 0.0)
+
+        postprocess.animate_filter('Synths', 0, 22000, 8*4, 'b', easing='exponential')
 
     @mk2_button(5, 'purple')
     def trap(self):

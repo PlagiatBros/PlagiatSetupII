@@ -147,6 +147,10 @@ class Mk2Control(Module):
                     self.resend_lights()
 
 
+            if cc == 18:
+                self.engine.modules['MonitorsNano'].set('MonitorsNano', 'Gain', args[2] / 127 * 76 - 70)
+
+
             if cc == 19:
                 # vx roll
                 self.engine.modules['VocalsNano'].set(self.voices[args[2] % 3], 'on')
