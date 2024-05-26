@@ -21,7 +21,7 @@ Fluid_MajorVocals:left                   |> Non-Mixer-XT.Synths (Main):MajorVoca
 Fluid_OrchestraHit:left                  |> Non-Mixer-XT.Synths (Main):OrchestraHit/in-1
 Fluid_Piano:left                         |> Non-Mixer-XT.Synths (Main):Piano/in-1
 Fluid_Rhodes:left                        |> Non-Mixer-XT.Synths (Main):Rhodes/in-1
-Fluid_SteelDrum:left                     |> Non-Mixer-XT.Synths (Main):SteelDrums/in-1
+Fluid_SteelDrums:left                     |> Non-Mixer-XT.Synths (Main):SteelDrums/in-1
 Fluid_TenorSax:left                      |> Non-Mixer-XT.Synths (Main):TenorSax/in-1
 Non-Mixer-XT.Bass (In):BassIn/out-1      |> Non-Mixer-XT.Bass (Main):BassDry/in-1
 Non-Mixer-XT.Bass (In):BassIn/out-1      |> Non-Mixer-XT.Bass (Main):BassSub/in-1

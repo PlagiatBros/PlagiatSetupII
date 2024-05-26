@@ -81,10 +81,10 @@
             }
         },
         "8": {
-            "name": "SteelDrum",
+            "name": "SteelDrums",
             "color": "#c77217",
             "channels": {
-                    "0": {"name": "SteelDrum"}
+                    "0": {"name": "SteelDrums"}
             }
         },
         "9": {

@@ -278,7 +278,7 @@ class AintInTheWay(Video, Light, RouteBase):
         transport.start()
 
         # jmjKeyboard
-        jmjKeyboard.set_sound('SteelDrum', lead=True)
+        jmjKeyboard.set_sound('SteelDrums', lead=True)
 
         # Vocals
         vocalsKesch.set('normo_exclu', 'on')
@@ -308,6 +308,6 @@ class AintInTheWay(Video, Light, RouteBase):
 
 
         # jmjKeyboard
-        jmjKeyboard.set_sound('SteelDrum', lead=False)
+        jmjKeyboard.set_sound('SteelDrums', lead=False)
 
         inputs.set('keschmic', 'dynamic')

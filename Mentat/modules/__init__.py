@@ -186,7 +186,7 @@ Fluid synths
 rhodes = Module('Rhodes', 'midi')
 tenorsax = Module('TenorSax', 'midi')
 charang = Module('Charang', 'midi')
-steeldrum = Module('SteelDrum', 'midi')
+steeldrums = Module('SteelDrums', 'midi')
 orchestrahit = Module('OrchestraHit', 'midi')
 majorvocals = Module('MajorVocals', 'midi')
 piano = Module('Piano', 'midi')
