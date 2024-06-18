@@ -1,3 +1,3 @@
 from keyboard import create_keyboard
 
-create_keyboard('JmjKeyboard', transpose=-3)
+create_keyboard('JmjKeyboard', transpose=0)

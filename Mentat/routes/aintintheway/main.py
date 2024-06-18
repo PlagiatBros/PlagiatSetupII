@@ -180,6 +180,9 @@ class AintInTheWay(Video, Light, RouteBase):
         transport.set_tempo(180)
         transport.start()
 
+        # Synths
+        synths.set("ZNotSoRhodes", "Pan", -0.4)
+
         # Keyboard
         jmjKeyboard.set_sound('ZTrumpets', lead=True)
 

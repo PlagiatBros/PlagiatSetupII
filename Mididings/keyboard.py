@@ -15,7 +15,7 @@ def create_keyboard(name, transpose=0):
     config(
         backend='alsa',
         client_name=name,
-        out_ports=['ZLow', 'CLow', 'ZHi', 'CHiSf', 'CHi', 'ProdSampler', 'ConstantSampler', 'Fluid_TenorSax', 'Fluid_Charang', 'Fluid_OrchestraHit', 'Fluid_SteelDrum', 'Fluid_Rhodes', 'Fluid_MajorVocals', 'Fluid_Piano', 'Mentat'],
+        out_ports=['ZLow', 'CLow', 'ZHi', 'CHiSf', 'CHi', 'ProdSampler', 'ConstantSampler', 'Fluid_TenorSax', 'Fluid_Charang', 'Fluid_OrchestraHit', 'Fluid_SteelDrums', 'Fluid_Rhodes', 'Fluid_MajorVocals', 'Fluid_Piano', 'Mentat'],
         in_ports=['in']
     )
 
@@ -86,7 +86,7 @@ def create_keyboard(name, transpose=0):
     tenorSax = generic_in >> Output('Fluid_TenorSax')
     charang = generic_in >> Output('Fluid_Charang')
     orchestraHit = generic_in >> Output('Fluid_OrchestraHit')
-    steelDrum = generic_in >> Output('Fluid_SteelDrum')
+    steelDrum = generic_in >> Output('Fluid_SteelDrums')
     majorVocals = generic_in >> Output('Fluid_MajorVocals')
     piano = generic_in >> Output('Fluid_Piano')
 
@@ -195,7 +195,7 @@ def create_keyboard(name, transpose=0):
                 Scene('OrchestraHit',
                     orchestraHit
                 ),
-                Scene('SteelDrum',
+                Scene('SteelDrums',
                     steelDrum
                 ),
                 Scene('MajorVocals',

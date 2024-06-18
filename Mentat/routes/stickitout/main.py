@@ -88,7 +88,7 @@ class StickItOut(Video, Light, RouteBase):
         #looper.trigger(0)
 
         # Séquences
-        seq192.select('solo', 'couplet1-0_*')
+        seq192.select('solo', 'pont_bassslap*')
 
         # Transport
         transport.start()
@@ -109,6 +109,24 @@ class StickItOut(Video, Light, RouteBase):
 
         inputs.set('keschmic', 'static')
 
+        # Synths
+        synthsFX2Delay.set('ZDupieux', 'Gain', -9.0)
+        synthsFX2Delay.set('DubstepHorn', 'Gain', -9.0)
+        synthsFX2Delay.set('SynthsFX2Delay', 'Mute', 0.0)
+
+        synths.set('ZDupieux', 'Amp', 'Gain', 0.8)
+        synths.set('ZTrumpets', 'Pan', 0.3)
+        synths.set('DubstepHorn', 'Pan',-0.3)
+
+        synths.set_lead('')
+
+
+        self.start_scene('coupletchast', lambda: [
+            self.wait(16, 'b'),
+            seq192.select('solo', 'couplet1-0_*'),
+            self.wait(10 * 4, 'b'),
+            seq192.select('solo', 'couplet1-0up_*'),
+            ])
 
     @pedalboard_button(3)
     def couplet1_2(self):

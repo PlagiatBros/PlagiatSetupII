@@ -720,3 +720,16 @@ class QueenCloclo(Video, Light, RouteBase):
         samples.set_lead()
 
         inputs.set('keschmic', 'static')
+
+    @gui_button(
+        type='button',
+        label='If I Had A Hummer',
+        mode='momentary',
+        height=80
+        )
+    def goto_hummerg(self):
+        """
+        GOTO Voiture de Filles
+        """
+        engine.set_route('IfIHadAHummer')
+        engine.active_route.refrain()
