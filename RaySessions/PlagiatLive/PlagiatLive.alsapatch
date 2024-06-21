@@ -1,10 +1,11 @@
-Hammerfall DSP : HDSP MIDI 1 |> JmjKeyboard : in
+Hammerfall DSP : HDSP MIDI 1 |> JmjTranspose : in
 Hammerfall DSP : HDSP MIDI 1 |> seq192.MainSequencer : seq192 in
-Joystick : out              |> JmjKeyboard : in
+Joystick : out              |> JmjTranspose : in
 Joystick : out              |> seq192.MainSequencer : seq192 in
 
-Mentat : OpenStageControlKeyboardOut              |> JmjKeyboard : in
+Mentat : OpenStageControlKeyboardOut              |> JmjTranspose : in
 
+JmjTranspose : out |> JmjKeyboard : in
 
 JmjKeyboard : ZLow          |> ZynAddSubFX.ZLowSynths : ZynAddSubFX
 JmjKeyboard : CLow          |> cLowBridge : playback

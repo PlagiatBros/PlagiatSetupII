@@ -35,7 +35,7 @@ def create_keyboard(name, transpose=0):
         ]
 
     # Zyn LowSynths
-    lowZDubstep = generic_in >> Output('ZLow', 1)
+    lowZDubstep = generic_in >> Transpose(-12) >> Output('ZLow', 1)
     lowZDancestep = generic_in >> Output('ZLow', 2)
     lowZRagstep = generic_in >> Output('ZLow', 3)
     lowZDupieux = generic_in >> Output('ZLow', 4)
@@ -217,5 +217,5 @@ def create_keyboard(name, transpose=0):
                 ),
             ])
         },
-        control =  CtrlFilter(7) >> Output('Mentat', 1), # Pédale de volume (-> filtre par mentat)
+        control =  [CtrlFilter(7), CtrlFilter(11)] >> Output('Mentat', 1), # Pédale de volume (-> filtre par mentat)
     )

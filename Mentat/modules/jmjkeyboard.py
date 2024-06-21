@@ -17,6 +17,41 @@ zyn_parts = {
     'ZDiploLikeWide': [15],
 }
 
+class JmjTranspose(Keyboard):
+    """
+    Midi octave transpose from jmj
+    """
+
+    octave_scenes = {
+        0: 1,
+        -2: 2,
+        -1: 3,
+        1: 4,
+        2: 5
+    }
+
+    def __init__(self, *args, **kwargs):
+
+        super().__init__(*args, **kwargs)
+
+        self.add_parameter('octave', None, 'i', default=0)
+
+        self.add_event_callback('parameter_changed', self.parameter_changed)
+
+    def parameter_changed(self, module, name, value):
+
+        if name == 'octave':
+            if value > 2:
+                value = 2
+            elif value < -2:
+                value = -2
+            elif value not in self.octave_scenes:
+                value = 0
+            self.send('/mididings/switch_scene', self.octave_scenes[value])
+
+
+
+
 class JmjKeyboardMidi(Module):
     """
     Midi controls from jmj
@@ -25,7 +60,7 @@ class JmjKeyboardMidi(Module):
     def route(self, address, args):
 
         if address == '/control_change':
-            if args[1] == 7:
+            if args[1] == 7: #  7 m-audio, 11 ben UZ
                 self.engine.modules['JmjKeyboard'].set_filter(args[2])
 
 class JmjKeyboard(Keyboard):

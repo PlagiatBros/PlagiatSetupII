@@ -5596,7 +5596,7 @@
                 "html": "<div class=\"label center\">Keys</div>",
                 "css": "class: strip",
                 "colorBg": "auto",
-                "layout": "vertical",
+                "layout": "horizontal",
                 "justify": "start",
                 "gridTemplate": "",
                 "contain": true,
@@ -5644,7 +5644,7 @@
                     "colorWhite": "rgba(164,175,193,1)",
                     "colorBlack": "#191e25",
                     "keys": 60,
-                    "start": "#{36 + @{octave} * 12}",
+                    "start": 36,
                     "traversing": true,
                     "on": "@{velocity_fader}",
                     "off": 0,
@@ -5827,7 +5827,7 @@
                     "left": 10,
                     "lock": false,
                     "id": "octave_plus",
-                    "visible": true,
+                    "visible": false,
                     "interaction": true,
                     "comments": "",
                     "width": "auto",
@@ -5863,7 +5863,7 @@
                     "ignoreDefaults": false,
                     "bypass": false,
                     "onCreate": "",
-                    "onValue": "set('octave', get('octave') + 1)"
+                    "onValue": "set('octave', Math.min(2, get('octave') + 1))"
                   },
                   {
                     "type": "button",
@@ -5876,7 +5876,7 @@
                     "comments": "",
                     "width": "auto",
                     "height": "auto",
-                    "expand": "false",
+                    "expand": true,
                     "colorText": "auto",
                     "colorWidget": "auto",
                     "colorStroke": "auto",
@@ -5887,7 +5887,7 @@
                     "lineWidth": "auto",
                     "padding": "auto",
                     "html": "",
-                    "css": "font-size: 110%",
+                    "css": "font-size: 140%",
                     "colorTextOn": "auto",
                     "label": "@{octave}",
                     "vertical": false,
@@ -5915,7 +5915,7 @@
                     "left": 30,
                     "lock": false,
                     "id": "octave_minus",
-                    "visible": true,
+                    "visible": false,
                     "interaction": true,
                     "comments": "",
                     "width": "auto",
@@ -5951,7 +5951,7 @@
                     "ignoreDefaults": false,
                     "bypass": false,
                     "onCreate": "",
-                    "onValue": "set('octave', get('octave') - 1)"
+                    "onValue": "set('octave', Math.max(get('octave') - 1, -2))"
                   },
                   {
                     "type": "variable",
@@ -5961,15 +5961,15 @@
                     "value": "",
                     "default": 0,
                     "linkId": "",
-                    "address": "auto",
-                    "preArgs": "",
+                    "address": "/JmjTranspose",
+                    "preArgs": "octave",
                     "typeTags": "",
                     "decimals": 2,
                     "target": "",
                     "ignoreDefaults": false,
                     "bypass": false,
                     "onCreate": "",
-                    "onValue": ""
+                    "onValue": "send('/JmjTranspose', 'octave', value)"
                   }
                 ],
                 "tabs": []
