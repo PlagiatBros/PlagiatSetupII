@@ -23,12 +23,15 @@ hook(
     OSCInterface(inPort, mentatPort),
     AutoRestart()
 )
+
+out = Velocity(curve=2.5)  >> Output('out')
+
 run(
     scenes = {
-        1: Scene('0', Transpose(0) >> Output('out')),
-        2: Scene('-2', Transpose(-24) >> Output('out')),
-        3: Scene('-1', Transpose(-12) >> Output('out')),
-        4: Scene('1', Transpose(12) >> Output('out')),
-        5: Scene('2', Transpose(24) >> Output('out')),
+        1: Scene('0', Transpose(0) >> out),
+        2: Scene('-2', Transpose(-24) >> out),
+        3: Scene('-1', Transpose(-12) >> out),
+        4: Scene('1', Transpose(12) >> out),
+        5: Scene('2', Transpose(24) >> out),
     }
 )
