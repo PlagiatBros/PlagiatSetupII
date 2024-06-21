@@ -67,8 +67,8 @@ Non-Mixer-XT.Console (Console):Bass/out-1 |> system:playback_3
 Non-Mixer-XT.Console (Console):BassSynth/out-1 |> system:playback_4
 Non-Mixer-XT.Console (Console):FOH/out-1 |> system:playback_1
 Non-Mixer-XT.Console (Console):FOH/out-2 |> system:playback_2
-Non-Mixer-XT.Console (Console):LeadSamples/out-1 |> system:playback_13
-Non-Mixer-XT.Console (Console):LeadSynth/out-1 |> system:playback_14
+Non-Mixer-XT.Console (Console):LeadSamples/out-1 |> system:playback_5
+Non-Mixer-XT.Console (Console):LeadSynth/out-1 |> system:playback_6
 Non-Mixer-XT.Console (Console):Prod/out-1 |> system:playback_1
 Non-Mixer-XT.Console (Console):Prod/out-2 |> system:playback_2
 Non-Mixer-XT.Console (Console):Samples/out-1 |> Non-Mixer-XT.Console (Console):Prod/in-1
@@ -120,8 +120,8 @@ Non-Mixer-XT.MonitorsFeat (MonitorsFeat):Klick/out-1 |> Non-Mixer-XT.MonitorsFea
 Non-Mixer-XT.MonitorsFeat (MonitorsFeat):Klick/out-1 |> Non-Mixer-XT.MonitorsFeat (MonitorsFeat):MonitorsFeat/in-2
 Non-Mixer-XT.MonitorsFeat (MonitorsFeat):LeadProd/out-1 |> Non-Mixer-XT.MonitorsFeat (MonitorsFeat):MonitorsFeat/in-1
 Non-Mixer-XT.MonitorsFeat (MonitorsFeat):LeadProd/out-1 |> Non-Mixer-XT.MonitorsFeat (MonitorsFeat):MonitorsFeat/in-2
-Non-Mixer-XT.MonitorsFeat (MonitorsFeat):MonitorsFeat/out-1 |> system:playback_15
-Non-Mixer-XT.MonitorsFeat (MonitorsFeat):MonitorsFeat/out-2 |> system:playback_16
+Non-Mixer-XT.MonitorsFeat (MonitorsFeat):MonitorsFeat/out-1 |> system:playback_13
+Non-Mixer-XT.MonitorsFeat (MonitorsFeat):MonitorsFeat/out-2 |> system:playback_14
 Non-Mixer-XT.MonitorsFeat (MonitorsFeat):OH-L/out-1 |> Non-Mixer-XT.MonitorsFeat (MonitorsFeat):MonitorsFeat/in-1
 Non-Mixer-XT.MonitorsFeat (MonitorsFeat):OH-L/out-2 |> Non-Mixer-XT.MonitorsFeat (MonitorsFeat):MonitorsFeat/in-2
 Non-Mixer-XT.MonitorsFeat (MonitorsFeat):OH-R/out-1 |> Non-Mixer-XT.MonitorsFeat (MonitorsFeat):MonitorsFeat/in-1
@@ -176,8 +176,8 @@ Non-Mixer-XT.MonitorsNano (MonitorsNano):Klick/out-1 |> Non-Mixer-XT.MonitorsNan
 Non-Mixer-XT.MonitorsNano (MonitorsNano):Klick/out-1 |> Non-Mixer-XT.MonitorsNano (MonitorsNano):MonitorsNano/in-2
 Non-Mixer-XT.MonitorsNano (MonitorsNano):LeadProd/out-1 |> Non-Mixer-XT.MonitorsNano (MonitorsNano):MonitorsNano/in-1
 Non-Mixer-XT.MonitorsNano (MonitorsNano):LeadProd/out-1 |> Non-Mixer-XT.MonitorsNano (MonitorsNano):MonitorsNano/in-2
-Non-Mixer-XT.MonitorsNano (MonitorsNano):MonitorsNano/out-1 |> system:playback_5
-Non-Mixer-XT.MonitorsNano (MonitorsNano):MonitorsNano/out-2 |> system:playback_6
+Non-Mixer-XT.MonitorsNano (MonitorsNano):MonitorsNano/out-1 |> system:playback_15
+Non-Mixer-XT.MonitorsNano (MonitorsNano):MonitorsNano/out-2 |> system:playback_16
 Non-Mixer-XT.MonitorsNano (MonitorsNano):OH-L/out-1 |> Non-Mixer-XT.MonitorsNano (MonitorsNano):MonitorsNano/in-1
 Non-Mixer-XT.MonitorsNano (MonitorsNano):OH-L/out-2 |> Non-Mixer-XT.MonitorsNano (MonitorsNano):MonitorsNano/in-2
 Non-Mixer-XT.MonitorsNano (MonitorsNano):OH-R/out-1 |> Non-Mixer-XT.MonitorsNano (MonitorsNano):MonitorsNano/in-1
