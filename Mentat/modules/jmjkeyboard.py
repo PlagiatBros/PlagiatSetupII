@@ -24,10 +24,14 @@ class JmjTranspose(Keyboard):
 
     octave_scenes = {
         0: 1,
-        -2: 2,
-        -1: 3,
-        1: 4,
-        2: 5
+        -4: 2,
+        -3: 3,
+        -2: 4,
+        -1: 5,
+        1: 6,
+        2: 7,
+        3: 8,
+        4: 9,
     }
 
     def __init__(self, *args, **kwargs):
@@ -35,19 +39,22 @@ class JmjTranspose(Keyboard):
         super().__init__(*args, **kwargs)
 
         self.add_parameter('octave', None, 'i', default=0)
+        self.add_parameter('octave-bonus', None, 'i', default=0)
 
         self.add_event_callback('parameter_changed', self.parameter_changed)
 
     def parameter_changed(self, module, name, value):
 
-        if name == 'octave':
-            if value > 2:
-                value = 2
-            elif value < -2:
-                value = -2
-            elif value not in self.octave_scenes:
-                value = 0
-            self.send('/mididings/switch_scene', self.octave_scenes[value])
+        if name in ['octave', 'octave-bonus']:
+            oct = self.get('octave') + self.get('octave-bonus')
+            if oct > 4:
+                oct = 4
+            elif oct < -4:
+                oct = -4
+            elif oct not in self.octave_scenes:
+                oct = 0
+            print(oct)
+            self.send('/mididings/switch_scene', self.octave_scenes[oct])
 
 
 

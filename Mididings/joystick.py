@@ -26,8 +26,8 @@ def process(type, name, value):
     if type == 'axis':
         if name == 'x':
             output_event(PitchbendEvent('out', 2, int(value * 8192)))
-        elif name == 'rx':
-            output_event(CtrlEvent('out', 1, 1, int(100 * abs(value))))
+        #elif name == 'rx':
+        #    output_event(CtrlEvent('out', 1, 1, int(100 * abs(value))))
 
     elif type == 'status':
         if name == 'connected' and value == 0:
@@ -36,7 +36,7 @@ def process(type, name, value):
 
 mididings.hook(
     Joystick(dev=0, callback=process),
-    AutoRestart()
+    #AutoRestart()
 )
 
 mididings.run(mididings.Pass())

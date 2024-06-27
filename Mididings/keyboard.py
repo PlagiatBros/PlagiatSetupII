@@ -21,7 +21,7 @@ def create_keyboard(name, transpose=0):
 
     hook(
         OSCInterface(inPort, mentatPort),
-        AutoRestart()
+    #    AutoRestart()
     )
 
     generic_in = Transpose(-12 + transpose) >> ~ChannelFilter(16) >> [

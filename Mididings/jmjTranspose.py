@@ -23,15 +23,23 @@ hook(
     OSCInterface(inPort, mentatPort),
     AutoRestart()
 )
-
 out = Velocity(curve=2.5)  >> Output('out')
 
+invertPedal= Pass()
+# [CtrlFilter(64) >> [
+#     CtrlValueFilter(0) >> Ctrl(64, 127),
+#     CtrlValueFilter(127) >> Ctrl(64, 0),
+#     ], ~CtrlFilter(64)]
 run(
     scenes = {
-        1: Scene('0', Transpose(0) >> out),
-        2: Scene('-2', Transpose(-24) >> out),
-        3: Scene('-1', Transpose(-12) >> out),
-        4: Scene('1', Transpose(12) >> out),
-        5: Scene('2', Transpose(24) >> out),
+        1: Scene('0', [Filter(NOTE)  >> Transpose(0), ~Filter(NOTE) >> invertPedal]  >> out),
+        2: Scene('-4', [Filter(NOTE)  >> Transpose(-4 * 12), ~Filter(NOTE) >> invertPedal] >> out),
+        3: Scene('-3', [Filter(NOTE)  >> Transpose(-3 * 12), ~Filter(NOTE) >> invertPedal] >> out),
+        4: Scene('-2', [Filter(NOTE)  >> Transpose(-2 * 12), ~Filter(NOTE) >> invertPedal] >> out),
+        5: Scene('-1', [Filter(NOTE)  >> Transpose(-1 * 12), ~Filter(NOTE) >> invertPedal] >> out),
+        6: Scene('1', [Filter(NOTE)  >> Transpose(1 * 12), ~Filter(NOTE) >> invertPedal] >> out),
+        7: Scene('2', [Filter(NOTE)  >> Transpose(2 * 12), ~Filter(NOTE) >> invertPedal] >> out),
+        8: Scene('3', [Filter(NOTE)  >> Transpose(3 * 12), ~Filter(NOTE) >> invertPedal] >> out),
+        9: Scene('4', [Filter(NOTE)  >> Transpose(4 * 12), ~Filter(NOTE) >> invertPedal] >> out),
     }
 )
