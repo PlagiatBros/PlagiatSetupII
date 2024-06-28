@@ -149,6 +149,15 @@ class ChasttControl(Module):
             if cc == 18:
                 self.engine.modules['MonitorsFeat'].set('MonitorsFeat', 'Gain', args[2] / 127 * 76 - 70)
 
+            if cc in [41, 42]:
+
+                if args[2] == 0 and self.last_cc == args:
+                    # bug when releasing both buttons at the same time (same cc with value 0 sent twice and missing 0 value for the other button)
+                    cc = 41 if cc == 42 else 42
+                self.last_cc = args
+
+                if cc == 41:
+                    self.engine.modules['VocalsFeat'].set('FeatIn', 'Gate', 'Range%20(dB)', -90 if args[2] == 0 else 0)
 
         elif address == '/sysex':
 
