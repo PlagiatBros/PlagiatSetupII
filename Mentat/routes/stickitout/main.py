@@ -51,7 +51,9 @@ class StickItOut(Video, Light, RouteBase):
         self.reset()
 
         # Séquences
-        seq192.select('solo', 'dummy')
+        seq192.select('solo', 'couplet1-1_cLow_barkline')
+        seq192.select('on', 'couplet1-1_sf_rhodes')
+
 
         # Transport
         transport.start()
@@ -419,6 +421,8 @@ class StickItOut(Video, Light, RouteBase):
         synthsFX2Delay.set('EasyClassical', 'Gain', -9.0)
         synthsFX2Delay.set('TrapFifth', 'Gain', -9.0)
         synthsFX2Delay.set('SynthsFX2Delay', 'Mute', 0.0)
+
+        jmjKeyboard.set_sound('ZTrumpets', lead=False)
 
 
     @pedalboard_button(4)
