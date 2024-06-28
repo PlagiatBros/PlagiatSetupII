@@ -35,25 +35,25 @@ def create_keyboard(name, transpose=0):
         ]
 
     # Zyn LowSynths
-    lowZDubstep = generic_in >> Transpose(-12) >> Output('ZLow', 1)
-    lowZDancestep = generic_in >> Output('ZLow', 2)
-    lowZRagstep = generic_in >> Output('ZLow', 3)
-    lowZDupieux = generic_in >> Output('ZLow', 4)
-    lowZPhrampton = generic_in >> Output('ZLow', 5)
-    lowZSine = generic_in >> Output('ZLow', 6)
-    lowZ8bit = generic_in >> Output('ZLow', 8)
+    lowZDubstep = generic_in >> Transpose(-24) >> Output('ZLow', 1)
+    lowZDancestep = generic_in >> Transpose(-12) >> Output('ZLow', 2)
+    lowZRagstep = generic_in >> Transpose(-12) >> Output('ZLow', 3)
+    lowZDupieux = generic_in >> Transpose(-12) >> Output('ZLow', 4)
+    lowZPhrampton = generic_in >> Transpose(-12) >> Output('ZLow', 5)
+    lowZSine = generic_in >> Transpose(-12) >> Output('ZLow', 6)
+    lowZ8bit = generic_in >> Transpose(-12) >> Output('ZLow', 8)
 
     # Carla LowSynths
-    lowCTrap1 = generic_in >> Output('CLow', 1)
-    lowCTrap2 = generic_in >> Output('CLow', 2)
-    lowCBarkline = generic_in >> Output('CLow', 3)
-    lowCBoom = generic_in >> Output('CLow', 4)
+    lowCTrap1 = generic_in >> Transpose(-12) >> Output('CLow', 1)
+    lowCTrap2 = generic_in >> Transpose(-12) >> Output('CLow', 2)
+    lowCBarkline = generic_in >> Transpose(-12) >> Output('CLow', 3)
+    lowCBoom = generic_in >> Transpose(-12) >> Output('CLow', 4)
     lowCBoomTrapLine = generic_in >> [
         Output('CLow', 2),
         Output('CLow', 3),
         Output('CLow', 4),
         ]
-    lowCTrap3 = generic_in >> Output('CLow', 5)
+    lowCTrap3 = generic_in >> Transpose(-12) >> Output('CLow', 5)
 
     # Zyn HiSynths
     zDupieux = generic_in >> Output('ZHi', 1)
