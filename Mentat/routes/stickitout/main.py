@@ -51,7 +51,7 @@ class StickItOut(Video, Light, RouteBase):
         self.reset()
 
         # Séquences
-        seq192.select('solo', 'couplet1-1_cLow_barkline')
+        seq192.select('solo', 'couplet1-1_cHi_trap')
         seq192.select('on', 'couplet1-1_sf_rhodes')
 
 
