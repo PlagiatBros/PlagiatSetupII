@@ -139,6 +139,11 @@ class ChasttControl(Module):
                             self.engine.modules['AudioLooper'].overdub(9)
                         elif cc == 114:
                             self.engine.modules['AudioLooper'].pause(9)
+                        elif cc == 115:
+                            self.engine.modules['ConstantSampler'].send('/instrument/play', 's:Plagiat/ConstantKit/AirHorn', 80)
+                        elif cc == 116:
+                            self.engine.active_route.stop()
+
                         # elif cc == 116:
                         #     self.engine.modules['Transport'].trigger()
 
@@ -180,5 +185,5 @@ class ChasttControl(Module):
     	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, # buttons 1-8
         mk2colors['yellow'], mk2colors['yellow'], mk2colors['yellow'], # buttons 9-11
     	mk2colors['red'], mk2colors['red'],mk2colors['yellow'], # sl vx post rec/overdub/pause
-    	0x00, mk2colors['purple']
+    	mk2colors['purple'], mk2colors['blue']
     ]

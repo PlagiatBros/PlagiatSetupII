@@ -28,7 +28,7 @@
 	JACK_Module 0xC1 create :parameter_values "0.000000:1.000000" :is_default 1 :chain 0xC0 :active 1
 	Gain_Module 0xC2 create :parameter_values "6.000000:0.000000:0.000000" :is_default 1 :chain 0xC0 :active 1
 	LV2_Plugin 0x13F create :lv2_plugin_uri "urn:ardour:a-eq" :plugin_ins 1 :plugin_outs 1 :parameter_values "160.000000:0.000000:300.000000:0.000000:1.000000:1000.000000:0.000000:1.000000:2500.000000:0.000000:1.000000:6000.000000:0.000000:1.000000:9000.000000:0.000000:0.000000:1.000000:1.000000:1.000000:1.000000:1.000000:1.000000:1.000000:0.000000" :is_default 0 :chain 0xC0 :active 1
-	Mono_Pan_Module 0xFB create :parameter_values "0.660000" :is_default 0 :chain 0xC0 :active 1
+	Mono_Pan_Module 0xFB create :parameter_values "0.300000" :is_default 0 :chain 0xC0 :active 1
 	Meter_Module 0xC3 create :is_default 1 :chain 0xC0 :active 1
 	JACK_Module 0xC4 create :parameter_values "2.000000:0.000000" :is_default 1 :chain 0xC0 :active 1
 	Mixer_Strip 0x14 create :name "Bass" :width "narrow" :tab "fader" :color 831012823 :gain_mode 0 :mute_mode 0 :group 0x7 :auto_input "" :manual_connection 0
@@ -96,7 +96,7 @@
 	JACK_Module 0x40 create :parameter_values "0.000000:2.000000" :is_default 1 :chain 0x3F :active 1
 	LADSPA_Plugin 0x139 create :plugin_id 1955 :plugin_ins 2 :plugin_outs 2 :parameter_values "0.000000:0.400000:1.000000" :is_default 0 :chain 0x3F :active 0
 	LV2_Plugin 0x144 create :lv2_plugin_uri "urn:ardour:a-eq" :plugin_ins 1 :plugin_outs 1 :parameter_values "160.000000:0.000000:300.000000:0.000000:1.000000:1000.000000:0.000000:1.000000:2500.000000:0.000000:1.000000:5000.000000:-0.500000:1.900000:9000.000000:0.000000:0.000000:1.000000:1.000000:1.000000:1.000000:1.000000:1.000000:1.000000:0.000000" :is_default 0 :chain 0x3F :active 1
-	Gain_Module 0x41 create :parameter_values "5.401575:0.000000:0.000000" :is_default 1 :chain 0x3F :active 1
+	Gain_Module 0x41 create :parameter_values "6.000000:0.000000:0.000000" :is_default 1 :chain 0x3F :active 1
 	Meter_Module 0x42 create :is_default 1 :chain 0x3F :active 1
 	JACK_Module 0x43 create :parameter_values "2.000000:0.000000" :is_default 1 :chain 0x3F :active 1
 }

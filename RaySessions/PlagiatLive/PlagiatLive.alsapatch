@@ -1,5 +1,5 @@
 ARP Odyssey : ARP Odyssey ARP Odyssey _ SYNTH |> JmjTranspose : in
-
+Oxygen 61 : Oxygen 61 MIDI 1 |> JmjTranspose : in
 Hammerfall DSP : HDSP MIDI 1 |> JmjTranspose : in
 Hammerfall DSP : HDSP MIDI 1 |> seq192.MainSequencer : seq192 in
 Joystick : out              |> JmjTranspose : in
