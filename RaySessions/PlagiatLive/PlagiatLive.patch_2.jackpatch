@@ -21,7 +21,7 @@ Fluid_MajorVocals:left                   |> Non-Mixer-XT.Synths (Main):MajorVoca
 Fluid_OrchestraHit:left                  |> Non-Mixer-XT.Synths (Main):OrchestraHit/in-1
 Fluid_Piano:left                         |> Non-Mixer-XT.Synths (Main):Piano/in-1
 Fluid_Rhodes:left                        |> Non-Mixer-XT.Synths (Main):Rhodes/in-1
-Fluid_SteelDrums:left                     |> Non-Mixer-XT.Synths (Main):SteelDrums/in-1
+Fluid_SteelDrums:left                    |> Non-Mixer-XT.Synths (Main):SteelDrums/in-1
 Fluid_TenorSax:left                      |> Non-Mixer-XT.Synths (Main):TenorSax/in-1
 Non-Mixer-XT.Bass (In):BassIn/out-1      |> Non-Mixer-XT.Bass (Main):BassDry/in-1
 Non-Mixer-XT.Bass (In):BassIn/out-1      |> Non-Mixer-XT.Bass (Main):BassSub/in-1
@@ -67,6 +67,7 @@ Non-Mixer-XT.Console (Console):Bass/out-1 |> system:playback_3
 Non-Mixer-XT.Console (Console):BassSynth/out-1 |> system:playback_4
 Non-Mixer-XT.Console (Console):FOH/out-1 |> system:playback_1
 Non-Mixer-XT.Console (Console):FOH/out-2 |> system:playback_2
+Non-Mixer-XT.Console (Console):Kick/out-1 |> system:playback_12
 Non-Mixer-XT.Console (Console):LeadSamples/out-1 |> system:playback_5
 Non-Mixer-XT.Console (Console):LeadSynth/out-1 |> system:playback_6
 Non-Mixer-XT.Console (Console):Prod/out-1 |> system:playback_1
@@ -78,7 +79,6 @@ Non-Mixer-XT.Console (Console):Synths/out-2 |> Non-Mixer-XT.Console (Console):Pr
 Non-Mixer-XT.Console (Console):VxFeat/out-1 |> system:playback_11
 Non-Mixer-XT.Console (Console):VxKesch/out-1 |> system:playback_9
 Non-Mixer-XT.Console (Console):VxNano/out-1 |> system:playback_10
-Non-Mixer-XT.Console (Console):Kick/out-1 |> system:playback_12
 Non-Mixer-XT.Drums (Main):Kick/out-1     |> Non-Mixer-XT.MonitorsFeat (MonitorsFeat):Kick/in-1
 Non-Mixer-XT.Drums (Main):Kick/out-1     |> Non-Mixer-XT.MonitorsKesch (MonitorsKesch):Kick/in-1
 Non-Mixer-XT.Drums (Main):Kick/out-1     |> Non-Mixer-XT.MonitorsNano (MonitorsNano):Kick/in-1

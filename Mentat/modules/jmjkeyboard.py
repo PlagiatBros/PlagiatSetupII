@@ -53,7 +53,6 @@ class JmjTranspose(Keyboard):
                 oct = -4
             elif oct not in self.octave_scenes:
                 oct = 0
-            print(oct)
             self.send('/mididings/switch_scene', self.octave_scenes[oct])
 
 

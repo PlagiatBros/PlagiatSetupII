@@ -25,11 +25,14 @@ hook(
 )
 out = Velocity(curve=2.5)  >> Output('out')
 
-invertPedal= Pass()
-# [CtrlFilter(64) >> [
-#     CtrlValueFilter(0) >> Ctrl(64, 127),
-#     CtrlValueFilter(127) >> Ctrl(64, 0),
-#     ], ~CtrlFilter(64)]
+INVERT_SUSTAIN = False
+invertPedal = Pass()
+if INVERT_SUSTAIN:
+    invertPedal= [CtrlFilter(64) >> [
+        CtrlValueFilter(0) >> Ctrl(64, 127),
+        CtrlValueFilter(127) >> Ctrl(64, 0),
+         ], ~CtrlFilter(64), Filter(PITCHBEND)]
+
 run(
     scenes = {
         1: Scene('0', [Filter(NOTE)  >> Transpose(0), ~Filter(NOTE) >> invertPedal]  >> out),

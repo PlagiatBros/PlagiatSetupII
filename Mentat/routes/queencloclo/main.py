@@ -492,6 +492,7 @@ class QueenCloclo(Video, Light, RouteBase):
 
         # Synths
         synths.set('ZTrumpets', 'Amp', 'Gain', 0.9)
+        midipanic.reset() # ppitch fix à cause du refrain
 
         # Vocals
         vocalsKesch.set('normo_exclu', 'on')

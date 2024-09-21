@@ -372,6 +372,9 @@ class RamenerMooncup(Video, Light, RouteBase):
         # Samples
         samples.set('Samples1', 'Mute', 0.0)
 
+        # Keyboards
+        jmjKeyboard.set_sound('ZTrumpets', boost=True)
+
         # Transport
         transport.start()
 
@@ -384,7 +387,6 @@ class RamenerMooncup(Video, Light, RouteBase):
         self.disco()
         # Keyboards
         jmjKeyboard.set_sound('LowZDubstep')
-
 
     @pedalboard_button(8)
     def ramener_launcher(self):
@@ -494,6 +496,8 @@ class RamenerMooncup(Video, Light, RouteBase):
         # Samples
         samples.set('Samples1', 'Mute', 0.0)
 
+        # Keyboards
+        jmjKeyboard.set_sound('ZTrumpets', boost=True)
 
         # Vocals
         vocalsNano.set('gars_exclu', 'on')

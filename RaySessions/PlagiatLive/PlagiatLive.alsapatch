@@ -1,5 +1,7 @@
+Roland Digital Piano : Roland Digital Piano MIDI 1 |> JmjTranspose : in
 ARP Odyssey : ARP Odyssey ARP Odyssey _ SYNTH |> JmjTranspose : in
 Oxygen 61 : Oxygen 61 MIDI 1 |> JmjTranspose : in
+Launchkey MK2 49 : Launchkey MK2 49 Launchkey MIDI |> JmjTranspose : in
 Hammerfall DSP : HDSP MIDI 1 |> JmjTranspose : in
 Hammerfall DSP : HDSP MIDI 1 |> seq192.MainSequencer : seq192 in
 Joystick : out              |> JmjTranspose : in
