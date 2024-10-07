@@ -25,6 +25,7 @@ from .jmjkeyboard import JmjKeyboard, JmjKeyboardMidi, JmjTranspose
 from .joystick import Joystick
 from .notes import Notes
 from .midipanic import MidiPanic
+from .fluidsynth import FluidSynth
 
 """
 Engine
@@ -184,13 +185,13 @@ zyntreble.add_submodule(
 """
 Fluid synths
 """
-rhodes = Module('Rhodes', 'midi')
-tenorsax = Module('TenorSax', 'midi')
-charang = Module('Charang', 'midi')
-steeldrums = Module('SteelDrums', 'midi')
-orchestrahit = Module('OrchestraHit', 'midi')
-majorvocals = Module('MajorVocals', 'midi')
-piano = Module('Piano', 'midi')
+rhodes = FluidSynth('Rhodes', 'midi')
+tenorsax = FluidSynth('TenorSax', 'midi')
+charang = FluidSynth('Charang', 'midi')
+steeldrums = FluidSynth('SteelDrums', 'midi')
+orchestrahit = FluidSynth('OrchestraHit', 'midi')
+majorvocals = FluidSynth('MajorVocals', 'midi')
+piano = FluidSynth('Piano', 'midi')
 
 
 """
