@@ -1,8 +1,8 @@
 from .default import Plugin
-# from .sc4 import SC4
+from .eq import AceEQ
 
 plugin_map = {
-    # 'SC4%20mono': SC4
+    'ACE%20EQ': SC4
 }
 
 def osc_plugin(plugin):
