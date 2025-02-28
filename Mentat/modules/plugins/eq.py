@@ -10,10 +10,8 @@ class AceEQ(Plugin):
             'expand': True,
             'file': 'eq.json',
             'props': {
-                {
-                    'variables': {
-                        'address': '/%s/%s/%s' % (self.mixer_name, self.strip_name, self.name)
-                    }
+                'variables': {
+                    'address': '/%s/%s/%s' % (self.mixer_name, self.strip_name, self.name)
                 }
             }
         }]
