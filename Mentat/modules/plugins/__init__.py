@@ -2,7 +2,7 @@ from .default import Plugin
 from .eq import AceEQ
 
 plugin_map = {
-    'ACE%20EQ': SC4
+    'ACE%20EQ': AceEQ
 }
 
 def osc_plugin(plugin):
