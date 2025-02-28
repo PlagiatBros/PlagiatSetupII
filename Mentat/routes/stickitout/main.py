@@ -4,6 +4,8 @@ from .light import Light
 
 from modules import *
 
+from random import randint
+
 class StickItOut(Video, Light, RouteBase):
 
     def activate(self):
@@ -51,19 +53,19 @@ class StickItOut(Video, Light, RouteBase):
         self.reset()
 
         # Séquences
-        seq192.select('solo', 'couplet1-1_cHi_trap')
-        seq192.select('on', 'couplet1-1_sf_rhodes')
+        # seq192.select('solo', 'couplet1-1_cHi_trap')
+        seq192.select('solo', 'couplet1-1_sf_rhodes')
 
 
         # Transport
         transport.start()
 
         # Keyboards
-        jmjKeyboard.set_sound('ZJestoProunk')
+        jmjKeyboard.set_sound('LowZRagstep')
         mk2Keyboard.set_sound('Mute')
 
         # Vocals
-        vocalsNano.set('gars_exclu', 'on')
+        vocalsNano.set('normo_exclu', 'on')
         vocalsKesch.set('meuf_exclu', 'on')
 
     @pedalboard_button(11)
@@ -72,10 +74,42 @@ class StickItOut(Video, Light, RouteBase):
         INTRO (KEY AUTO)
         """
 
-        looper.record(3)
+        self.pause_loopers()
+        self.reset()
 
-        # Bass
-        bass.set('BassDry', 'GxChorus-Stereo', 'BYPASS', 1)
+        # Séquences
+        seq192.select('solo', 'dummy')
+
+
+        # Transport
+        transport.start()
+
+        # Keyboards
+        jmjKeyboard.set_sound('MajorVocals')
+        mk2Keyboard.set_sound('Mute')
+
+        # Vocals
+        vocalsNano.set('normo_exclu', 'on')
+        vocalsKesch.set('meuf_exclu', 'on')
+
+        self.start_sequence('vocalpitch', [
+            {
+            1: lambda: jmjTranspose.set('octave-bonus', randint(-2,0)),
+            1.5: lambda: jmjTranspose.set('octave-bonus', 0),
+            2: lambda: jmjTranspose.set('octave-bonus', 0),
+            2.5: lambda: jmjTranspose.set('octave-bonus', randint(-2,0)),
+            3: lambda: jmjTranspose.set('octave-bonus', 0),
+            },
+        ], loop=True)
+
+    @chastt_button(2, 'cyan')
+    def couplet_1_surcouche_basse(self):
+        self.start_scene('heuss', lambda: [
+            self.wait_next_cycle(),
+            seq192.select('on', 'heuss_*')
+            ]
+        )
+
 
 
     @mk2_button(2)
@@ -85,6 +119,7 @@ class StickItOut(Video, Light, RouteBase):
         """
         self.pause_loopers()
         self.reset()
+        self.resetFX()
 
         # Loopers
         #looper.trigger(0)
@@ -416,7 +451,12 @@ class StickItOut(Video, Light, RouteBase):
         inputs.set('keschmic', 'dynamic')
 
 
+
+
         # Synths
+        synths.animate('MajorVocals', 'Pan', 0.8,  -0.8, 4, easing='random', loop=True)
+        synths.animate('Trap', 'Pan', -0.8, 0.8, 4, easing='random', loop=True)
+
         synthsFX2Delay.set('Rhodes', 'Gain', -9.0)
         synthsFX2Delay.set('EasyClassical', 'Gain', -9.0)
         synthsFX2Delay.set('TrapFifth', 'Gain', -9.0)
@@ -700,11 +740,12 @@ class StickItOut(Video, Light, RouteBase):
         design='compact',
         address='/Seq192/call',
         preArgs=['select', 'toggle'],
-        on='pontcouplet2*',
+        on='aceofbaise*',
         height=80
         )
     def seq_pontcoulet(self):
         pass
+
 
 
     @chastt_button(8, 'red')
