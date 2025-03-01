@@ -305,7 +305,8 @@ class OpenStageControl(Module):
                                     'width': 120,
                                     'decimals': 2,
                                     'linkId': '/%s/%s/Pan' % (name, sname),
-                                    'bypass': True
+                                    'bypass': True,
+                                    'numeric': 0.1
                                 }
                             ]
                         })
@@ -348,7 +349,8 @@ class OpenStageControl(Module):
                             'width': 120,
                             'decimals': 5,
                             'linkId': '/%s/%s/Gain' % (name, sname),
-                            'bypass': True
+                            'bypass': True,
+                            'numeric': 1
                         })
 
             panel['variables'] = {'names': tab_names}
