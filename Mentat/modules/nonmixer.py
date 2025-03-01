@@ -76,23 +76,22 @@ class NonMixer(Module):
                 self.send('/signal/list')
 
             if self.name == 'Outputs':
-                self.enable_meters(True)
+                self.enable_meters()
 
-    def update_meters(self, foh=False):
-        if foh:
-            while True:
-                self.wait(1/30, 'sec')
-                self.send(NMPREFIX + self.name + '/strip/FOH/Meter/Level%20(dB)/unscaled')
-        else:
-            while True:
-                self.wait(1/30, 'sec')
-                for strip in self.submodules:
-                    self.send(NMPREFIX + self.name + '/strip/'+strip+'/Meter/Level%20(dB)/unscaled')
+    def update_meters(self):
+        while True:
+            self.wait(1/30, 'sec')
+            for strip in self.submodules:
+                self.send(NMPREFIX + self.name + '/strip/'+strip+'/Meter/Level%20(dB)/unscaled')
 
-    def enable_meters(self, foh=False):
-        self.start_scene('meter_levels' if not foh else 'foh_meter_levels', self.update_meters, foh)
+
+    def enable_meters(self):
+        self.start_scene('meter_levels', self.update_meters)
 
     def disable_meters(self):
+        if self.name == 'Outputs':
+            # never disable output meters
+            return
         self.stop_scene('meter_levels')
 
 
