@@ -214,8 +214,15 @@ class OpenStageControl(Module):
             """
             panel = {'id': 'non-mixer-gui-tabs', 'type': 'panel', 'default': 6, 'tabs': [], 'verticalTabs': True, 'bypass': True, 'onValue': 'var name = getProp(this, "variables").names[value]; if (name) send("/OpenStageControl/call", "set_active_non_mixer", name)'}
             tab_names = []
+            index = 0
             for name, mod in self.engine.modules.items():
                 if isinstance(mod, NonMixer):
+
+                    # non-mixers tabs should always default on 'Outputs'
+                    if name == 'Outputs'
+                        panel['default'] = index
+                    index += 1
+
                     tab = {
                         'type': 'tab',
                         'id': name,
