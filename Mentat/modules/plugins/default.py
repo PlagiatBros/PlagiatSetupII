@@ -2,6 +2,8 @@ import urllib
 
 class Plugin():
 
+    enable_feedback = False
+
     def __init__(self, plugin):
 
         self.plugin = plugin

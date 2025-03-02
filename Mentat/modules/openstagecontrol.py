@@ -510,7 +510,9 @@ class OpenStageControl(Module):
             if state == 1:
                 self.send('/EDIT', id, json.dumps({'widgets': self.plugin_modals[id].widgets}), '{"noWarning": true}')
                 self.send_state()
-                # self.plugin_modals[id].plugin.enable_feedback()
+                if self.plugin_modals[id].enable_feedback:
+                    self.plugin_modals[id].plugin.enable_feedback()
             else:
                 self.send('/EDIT', id, json.dumps({'widgets': []}), '{"noWarning": true}')
-                # self.plugin_modals[id].plugin.disable_feedback()
+                if self.plugin_modals[id].enable_feedback:
+                    self.plugin_modals[id].plugin.disable_feedback()
