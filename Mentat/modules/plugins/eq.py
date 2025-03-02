@@ -4,6 +4,7 @@ class AceEQ(Plugin):
 
     def create_parameters(self):
         self.modal['popupHeight'] =800
+        self.modal['popupPadding'] = 8
         self.widgets = [{
             'id': self.id + '/eq_fragment',
             'type': 'fragment',

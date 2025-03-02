@@ -212,14 +212,14 @@ class OpenStageControl(Module):
             """
             Non mixer gui
             """
-            panel = {'id': 'non-mixer-gui-tabs', 'type': 'panel', 'default': 6, 'tabs': [], 'verticalTabs': True, 'bypass': True, 'onValue': 'var name = getProp(this, "variables").names[value]; if (name) send("/OpenStageControl/call", "set_active_non_mixer", name)'}
+            panel = {'id': 'non-mixer-gui-tabs', 'type': 'panel', 'default': 6, 'tabs': [], 'tabsPosition': 'right', 'bypass': True, 'onValue': 'var name = getProp(this, "variables").names[value]; if (name) send("/OpenStageControl/call", "set_active_non_mixer", name)'}
             tab_names = []
             index = 0
             for name, mod in self.engine.modules.items():
                 if isinstance(mod, NonMixer):
 
                     # non-mixers tabs should always default on 'Outputs'
-                    if name == 'Outputs'
+                    if name == 'Outputs':
                         panel['default'] = index
                     index += 1
 
@@ -508,12 +508,9 @@ class OpenStageControl(Module):
     def display_modal(self, id, state):
         if id in self.plugin_modals:
             if state == 1:
-                self.send('/EDIT/MERGE', id, json.dumps({'widgets': self.plugin_modals[id].widgets}), '{"noWarning": true}')
-                self.start_scene('plugmodal',lambda: [
-			self.wait(0.1,'s'),
-			self.send_state()
-		])
+                self.send('/EDIT', id, json.dumps({'widgets': self.plugin_modals[id].widgets}), '{"noWarning": true}')
+                self.send_state()
                 # self.plugin_modals[id].plugin.enable_feedback()
             else:
+                self.send('/EDIT', id, json.dumps({'widgets': []}), '{"noWarning": true}')
                 # self.plugin_modals[id].plugin.disable_feedback()
-                pass

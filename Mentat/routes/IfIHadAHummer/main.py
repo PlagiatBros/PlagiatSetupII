@@ -247,18 +247,18 @@ class IfIHadAHummer(Video, Light, RouteBase):
         self.refrain()
 #        vocalsKesch.set('normo', 'on')
         vocalsNano.set('normo_exclu', 'on')
-        inputs.set('keschmic', 'dynamic')
+        inputs.set('keschmic', 'static')
 
         seq192.select('on', 'refrain2_*')
 
-        self.start_sequence('delay_refrain', [
-            {
-                1: lambda: vocalsKeschFX2Delay.set('pre', 'off')
-            },
-            {
-                2.5: lambda: vocalsKeschFX2Delay.set('pre', 'on')
-            }
-        ], loop=True)
+        # self.start_sequence('delay_refrain', [
+        #     {
+        #         1: lambda: vocalsKeschFX2Delay.set('pre', 'off')
+        #     },
+        #     {
+        #         2.5: lambda: vocalsKeschFX2Delay.set('pre', 'on')
+        #     }
+        # ], loop=True)
 
     @mk2_button(5)
     def couplet2(self):
