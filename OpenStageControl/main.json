@@ -1,6 +1,6 @@
 {
   "createdWith": "Open Stage Control",
-  "version": "1.16.5",
+  "version": "1.27.6-dev",
   "type": "session",
   "content": {
     "type": "root",
@@ -24,7 +24,6 @@
     "contain": true,
     "scroll": true,
     "innerPadding": true,
-    "verticalTabs": false,
     "hideMenu": true,
     "variables": "@{parent.variables}",
     "traversing": false,
@@ -71,7 +70,6 @@
         "contain": true,
         "scroll": true,
         "innerPadding": false,
-        "verticalTabs": false,
         "variables": "@{parent.variables}",
         "traversing": false,
         "value": "",
@@ -117,7 +115,6 @@
             "contain": true,
             "scroll": true,
             "innerPadding": false,
-            "verticalTabs": false,
             "variables": "@{parent.variables}",
             "traversing": false,
             "value": "",
@@ -163,7 +160,6 @@
                 "contain": true,
                 "scroll": true,
                 "innerPadding": true,
-                "verticalTabs": false,
                 "variables": "@{parent.variables}",
                 "traversing": false,
                 "value": "",
@@ -234,10 +230,15 @@
                     "bypass": false,
                     "onCreate": "",
                     "onValue": "",
-                    "onTouch": ""
+                    "onTouch": "",
+                    "borderRadius": "auto",
+                    "colorKnob": "auto",
+                    "touchZone": "all"
                   }
                 ],
-                "tabs": []
+                "tabs": [],
+                "borderRadius": "auto",
+                "tabsPosition": "top"
               },
               {
                 "type": "panel",
@@ -269,7 +270,6 @@
                 "contain": true,
                 "scroll": true,
                 "innerPadding": true,
-                "verticalTabs": false,
                 "variables": "@{parent.variables}",
                 "traversing": false,
                 "value": "",
@@ -318,10 +318,14 @@
                     "onValue": "",
                     "align": "center",
                     "vertical": false,
-                    "wrap": false
+                    "wrap": false,
+                    "borderRadius": "auto",
+                    "bypass": false
                   }
                 ],
-                "tabs": []
+                "tabs": [],
+                "borderRadius": "auto",
+                "tabsPosition": "top"
               },
               {
                 "type": "panel",
@@ -353,7 +357,6 @@
                 "contain": true,
                 "scroll": true,
                 "innerPadding": true,
-                "verticalTabs": false,
                 "variables": "@{parent.variables}",
                 "traversing": false,
                 "value": "",
@@ -411,10 +414,14 @@
                     "wrap": false,
                     "on": 1,
                     "off": 0,
-                    "mode": "toggle"
+                    "mode": "toggle",
+                    "borderRadius": "auto",
+                    "decoupled": false
                   }
                 ],
-                "tabs": []
+                "tabs": [],
+                "borderRadius": "auto",
+                "tabsPosition": "top"
               },
               {
                 "type": "panel",
@@ -446,7 +453,6 @@
                 "contain": true,
                 "scroll": true,
                 "innerPadding": true,
-                "verticalTabs": false,
                 "variables": "@{parent.variables}",
                 "traversing": false,
                 "value": "",
@@ -514,10 +520,15 @@
                     "bypass": true,
                     "onCreate": "",
                     "onValue": "",
-                    "onTouch": ""
+                    "onTouch": "",
+                    "borderRadius": "auto",
+                    "colorKnob": "auto",
+                    "touchZone": "all"
                   }
                 ],
-                "tabs": []
+                "tabs": [],
+                "borderRadius": "auto",
+                "tabsPosition": "top"
               },
               {
                 "type": "panel",
@@ -549,7 +560,6 @@
                 "contain": true,
                 "scroll": true,
                 "innerPadding": true,
-                "verticalTabs": false,
                 "variables": "@{parent.variables}",
                 "traversing": false,
                 "value": "",
@@ -607,7 +617,9 @@
                     "ignoreDefaults": false,
                     "bypass": false,
                     "onCreate": "",
-                    "onValue": ""
+                    "onValue": "",
+                    "borderRadius": "auto",
+                    "decoupled": false
                   },
                   {
                     "type": "button",
@@ -651,13 +663,19 @@
                     "ignoreDefaults": false,
                     "bypass": false,
                     "onCreate": "",
-                    "onValue": ""
+                    "onValue": "",
+                    "borderRadius": "auto",
+                    "decoupled": false
                   }
                 ],
-                "tabs": []
+                "tabs": [],
+                "borderRadius": "auto",
+                "tabsPosition": "top"
               }
             ],
-            "tabs": []
+            "tabs": [],
+            "borderRadius": "auto",
+            "tabsPosition": "top"
           },
           {
             "type": "panel",
@@ -689,7 +707,6 @@
             "contain": true,
             "scroll": true,
             "innerPadding": true,
-            "verticalTabs": false,
             "variables": "@{parent.variables}",
             "traversing": false,
             "value": "",
@@ -747,10 +764,14 @@
                 "ignoreDefaults": false,
                 "bypass": false,
                 "onCreate": "",
-                "onValue": ""
+                "onValue": "",
+                "borderRadius": "auto",
+                "decoupled": false
               }
             ],
-            "tabs": []
+            "tabs": [],
+            "borderRadius": "auto",
+            "tabsPosition": "top"
           },
           {
             "type": "panel",
@@ -782,7 +803,6 @@
             "contain": true,
             "scroll": true,
             "innerPadding": false,
-            "verticalTabs": false,
             "variables": "@{parent.variables}",
             "traversing": false,
             "value": "",
@@ -828,7 +848,6 @@
                 "contain": true,
                 "scroll": true,
                 "innerPadding": true,
-                "verticalTabs": false,
                 "variables": "@{parent.variables}",
                 "traversing": false,
                 "value": "",
@@ -938,10 +957,12 @@
                         "ignoreDefaults": false,
                         "bypass": false,
                         "onCreate": "",
-                        "onValue": "set('routes_modal', 0)"
+                        "onValue": "set('routes_modal', 0)",
+                        "borderRadius": "auto"
                       }
                     ],
-                    "tabs": []
+                    "tabs": [],
+                    "borderRadius": "auto"
                   },
                   {
                     "type": "button",
@@ -985,13 +1006,19 @@
                     "ignoreDefaults": false,
                     "bypass": false,
                     "onCreate": "",
-                    "onValue": ""
+                    "onValue": "",
+                    "borderRadius": "auto",
+                    "decoupled": false
                   }
                 ],
-                "tabs": []
+                "tabs": [],
+                "borderRadius": "auto",
+                "tabsPosition": "top"
               }
             ],
-            "tabs": []
+            "tabs": [],
+            "borderRadius": "auto",
+            "tabsPosition": "top"
           },
           {
             "type": "panel",
@@ -1023,7 +1050,6 @@
             "contain": true,
             "scroll": true,
             "innerPadding": true,
-            "verticalTabs": false,
             "variables": "@{parent.variables}",
             "traversing": false,
             "value": "",
@@ -1081,13 +1107,19 @@
                 "ignoreDefaults": false,
                 "bypass": false,
                 "onCreate": "",
-                "onValue": ""
+                "onValue": "",
+                "borderRadius": "auto",
+                "decoupled": false
               }
             ],
-            "tabs": []
+            "tabs": [],
+            "borderRadius": "auto",
+            "tabsPosition": "top"
           }
         ],
-        "tabs": []
+        "tabs": [],
+        "borderRadius": "auto",
+        "tabsPosition": "top"
       },
       {
         "type": "panel",
@@ -1119,7 +1151,6 @@
         "contain": true,
         "scroll": true,
         "innerPadding": false,
-        "verticalTabs": false,
         "variables": "@{parent.variables}",
         "traversing": false,
         "value": "",
@@ -1165,7 +1196,6 @@
             "contain": true,
             "scroll": true,
             "innerPadding": false,
-            "verticalTabs": false,
             "variables": "@{parent.variables}",
             "traversing": false,
             "value": "",
@@ -1211,7 +1241,6 @@
                 "contain": true,
                 "scroll": true,
                 "innerPadding": true,
-                "verticalTabs": false,
                 "variables": "@{parent.variables}",
                 "traversing": false,
                 "value": "",
@@ -1283,7 +1312,10 @@
                     "bypass": false,
                     "onCreate": "",
                     "onValue": "send('/Transport/call', 'set_tempo', value * locals.tempo)",
-                    "onTouch": "if (event.type=='start') {\nlocals.tempo = get('tempo')\n}"
+                    "onTouch": "if (event.type=='start') {\nlocals.tempo = get('tempo')\n}",
+                    "borderRadius": "auto",
+                    "colorKnob": "auto",
+                    "touchZone": "all"
                   },
                   {
                     "type": "variable",
@@ -1345,10 +1377,14 @@
                     "ignoreDefaults": false,
                     "bypass": false,
                     "onCreate": "",
-                    "onValue": ""
+                    "onValue": "",
+                    "borderRadius": "auto",
+                    "decoupled": false
                   }
                 ],
-                "tabs": []
+                "tabs": [],
+                "borderRadius": "auto",
+                "tabsPosition": "top"
               },
               {
                 "type": "panel",
@@ -1380,7 +1416,6 @@
                 "contain": true,
                 "scroll": true,
                 "innerPadding": true,
-                "verticalTabs": false,
                 "variables": "@{parent.variables}",
                 "traversing": false,
                 "value": "",
@@ -1438,7 +1473,9 @@
                     "on": 1,
                     "off": 0,
                     "mode": "momentary",
-                    "doubleTap": false
+                    "doubleTap": false,
+                    "borderRadius": "auto",
+                    "decoupled": false
                   },
                   {
                     "type": "button",
@@ -1482,7 +1519,9 @@
                     "on": 1,
                     "off": 0,
                     "mode": "momentary",
-                    "doubleTap": false
+                    "doubleTap": false,
+                    "borderRadius": "auto",
+                    "decoupled": false
                   },
                   {
                     "type": "panel",
@@ -1526,7 +1565,6 @@
                     "contain": true,
                     "scroll": true,
                     "innerPadding": true,
-                    "verticalTabs": false,
                     "variables": "@{parent.variables}",
                     "traversing": false,
                     "widgets": [
@@ -1586,7 +1624,10 @@
                         "bypass": false,
                         "onCreate": "locals.touched = false",
                         "onValue": "if (get('pitch_link') && locals.touched) {\n  set('pitch_fader_*', value, {sync:false}) \n}\nif (value === 1) setVar('pitch_semitone', 'pitch', 0)",
-                        "onTouch": "if (event.type == 'start') {\n  locals.touched = true\n}\n\nif (event.type == 'stop') {\n  set(this, 1.0)\n  locals.touched = false\n}"
+                        "onTouch": "if (event.type == 'start') {\n  locals.touched = true\n}\n\nif (event.type == 'stop') {\n  set(this, 1.0)\n  locals.touched = false\n}",
+                        "borderRadius": "auto",
+                        "colorKnob": "auto",
+                        "touchZone": "all"
                       },
                       {
                         "type": "fader",
@@ -1644,7 +1685,10 @@
                         "bypass": false,
                         "onCreate": "locals.touched = false",
                         "onValue": "if (get('pitch_link') && locals.touched) {\n  set('pitch_fader_*', value, {sync:false}) \n}\nif (value === 1) setVar('pitch_semitone', 'pitch', 0)",
-                        "onTouch": "if (event.type == 'start') {\n  locals.touched = true\n}\n\nif (event.type == 'stop') {\n  set(this, 1.0)\n  locals.touched = false\n}"
+                        "onTouch": "if (event.type == 'start') {\n  locals.touched = true\n}\n\nif (event.type == 'stop') {\n  set(this, 1.0)\n  locals.touched = false\n}",
+                        "borderRadius": "auto",
+                        "colorKnob": "auto",
+                        "touchZone": "all"
                       },
                       {
                         "type": "fader",
@@ -1702,7 +1746,10 @@
                         "bypass": false,
                         "onCreate": "locals.touched = false",
                         "onValue": "if (get('pitch_link') && locals.touched) {\n  set('pitch_fader_*', value, {sync:false}) \n}\nif (value === 1) setVar('pitch_semitone', 'pitch', 0)",
-                        "onTouch": "if (event.type == 'start') {\n  locals.touched = true\n}\n\nif (event.type == 'stop') {\n  set(this, 1.0)\n  locals.touched = false\n}"
+                        "onTouch": "if (event.type == 'start') {\n  locals.touched = true\n}\n\nif (event.type == 'stop') {\n  set(this, 1.0)\n  locals.touched = false\n}",
+                        "borderRadius": "auto",
+                        "colorKnob": "auto",
+                        "touchZone": "all"
                       },
                       {
                         "type": "fader",
@@ -1760,10 +1807,15 @@
                         "bypass": false,
                         "onCreate": "locals.touched = false",
                         "onValue": "if (get('pitch_link') && locals.touched) {\n  set('pitch_fader_*', value, {sync:false}) \n}\nif (value === 1) setVar('pitch_semitone', 'pitch', 0)",
-                        "onTouch": "if (event.type == 'start') {\n  locals.touched = true\n}\n\nif (event.type == 'stop') {\n  set(this, 1.0)\n  locals.touched = false\n}"
+                        "onTouch": "if (event.type == 'start') {\n  locals.touched = true\n}\n\nif (event.type == 'stop') {\n  set(this, 1.0)\n  locals.touched = false\n}",
+                        "borderRadius": "auto",
+                        "colorKnob": "auto",
+                        "touchZone": "all"
                       }
                     ],
-                    "tabs": []
+                    "tabs": [],
+                    "borderRadius": "auto",
+                    "tabsPosition": "top"
                   },
                   {
                     "type": "button",
@@ -1807,10 +1859,14 @@
                     "ignoreDefaults": false,
                     "bypass": true,
                     "onCreate": "",
-                    "onValue": ""
+                    "onValue": "",
+                    "borderRadius": "auto",
+                    "decoupled": false
                   }
                 ],
-                "tabs": []
+                "tabs": [],
+                "borderRadius": "auto",
+                "tabsPosition": "top"
               },
               {
                 "type": "panel",
@@ -1842,7 +1898,6 @@
                 "contain": true,
                 "scroll": true,
                 "innerPadding": true,
-                "verticalTabs": false,
                 "variables": "@{parent.variables}",
                 "traversing": false,
                 "value": "",
@@ -1900,7 +1955,9 @@
                     "on": 1,
                     "off": 0,
                     "mode": "momentary",
-                    "doubleTap": false
+                    "doubleTap": false,
+                    "borderRadius": "auto",
+                    "decoupled": false
                   },
                   {
                     "type": "panel",
@@ -1944,7 +2001,6 @@
                     "contain": true,
                     "scroll": true,
                     "innerPadding": true,
-                    "verticalTabs": false,
                     "variables": "@{parent.variables}",
                     "traversing": false,
                     "widgets": [
@@ -2003,7 +2059,10 @@
                         "bypass": false,
                         "onCreate": "locals.touched = false",
                         "onValue": "if (get('filter_link') && locals.touched) {\n  set('filter_fader_*', value, {sync:false}) \n}\n",
-                        "onTouch": "locals.touched = event.type == 'start'"
+                        "onTouch": "locals.touched = event.type == 'start'",
+                        "borderRadius": "auto",
+                        "colorKnob": "auto",
+                        "touchZone": "all"
                       },
                       {
                         "type": "fader",
@@ -2060,7 +2119,10 @@
                         "bypass": false,
                         "onCreate": "locals.touched = false",
                         "onValue": "if (get('filter_link') && locals.touched) {\n  set('filter_fader_*', value, {sync:false}) \n}",
-                        "onTouch": "locals.touched = event.type == 'start'"
+                        "onTouch": "locals.touched = event.type == 'start'",
+                        "borderRadius": "auto",
+                        "colorKnob": "auto",
+                        "touchZone": "all"
                       },
                       {
                         "type": "fader",
@@ -2117,10 +2179,15 @@
                         "bypass": false,
                         "onCreate": "locals.touched = false",
                         "onValue": "if (get('filter_link') && locals.touched) {\n  set('filter_fader_*', value, {sync:false}) \n}",
-                        "onTouch": "locals.touched = event.type == 'start'"
+                        "onTouch": "locals.touched = event.type == 'start'",
+                        "borderRadius": "auto",
+                        "colorKnob": "auto",
+                        "touchZone": "all"
                       }
                     ],
-                    "tabs": []
+                    "tabs": [],
+                    "borderRadius": "auto",
+                    "tabsPosition": "top"
                   },
                   {
                     "type": "button",
@@ -2164,13 +2231,19 @@
                     "ignoreDefaults": false,
                     "bypass": true,
                     "onCreate": "",
-                    "onValue": ""
+                    "onValue": "",
+                    "borderRadius": "auto",
+                    "decoupled": false
                   }
                 ],
-                "tabs": []
+                "tabs": [],
+                "borderRadius": "auto",
+                "tabsPosition": "top"
               }
             ],
-            "tabs": []
+            "tabs": [],
+            "borderRadius": "auto",
+            "tabsPosition": "top"
           },
           {
             "type": "panel",
@@ -2202,7 +2275,6 @@
             "contain": true,
             "scroll": true,
             "innerPadding": false,
-            "verticalTabs": false,
             "variables": "@{parent.variables}",
             "traversing": false,
             "value": "",
@@ -2248,7 +2320,6 @@
                 "contain": true,
                 "scroll": false,
                 "innerPadding": false,
-                "verticalTabs": false,
                 "variables": "@{parent.variables}",
                 "traversing": false,
                 "value": "",
@@ -2285,7 +2356,6 @@
                     "contain": true,
                     "scroll": true,
                     "innerPadding": true,
-                    "verticalTabs": false,
                     "label": "Loopers",
                     "variables": "@{parent.variables}",
                     "traversing": false,
@@ -2332,7 +2402,6 @@
                         "contain": true,
                         "scroll": true,
                         "innerPadding": false,
-                        "verticalTabs": false,
                         "variables": "@{parent.variables}",
                         "traversing": false,
                         "value": "",
@@ -2378,7 +2447,6 @@
                             "contain": true,
                             "scroll": true,
                             "innerPadding": false,
-                            "verticalTabs": false,
                             "variables": "@{parent.variables}",
                             "traversing": false,
                             "value": "",
@@ -2430,7 +2498,6 @@
                                 "contain": true,
                                 "scroll": false,
                                 "innerPadding": true,
-                                "verticalTabs": false,
                                 "traversing": false,
                                 "value": "",
                                 "default": "",
@@ -2489,7 +2556,9 @@
                                     "comments": "",
                                     "onValue": "",
                                     "lock": false,
-                                    "onCreate": ""
+                                    "onCreate": "",
+                                    "borderRadius": "auto",
+                                    "decoupled": false
                                   },
                                   {
                                     "type": "button",
@@ -2533,7 +2602,9 @@
                                     "comments": "",
                                     "onValue": "",
                                     "lock": false,
-                                    "onCreate": ""
+                                    "onCreate": "",
+                                    "borderRadius": "auto",
+                                    "decoupled": false
                                   },
                                   {
                                     "type": "button",
@@ -2580,7 +2651,9 @@
                                     "comments": "",
                                     "onValue": "",
                                     "lock": false,
-                                    "onCreate": ""
+                                    "onCreate": "",
+                                    "borderRadius": "auto",
+                                    "decoupled": false
                                   },
                                   {
                                     "type": "panel",
@@ -2624,7 +2697,6 @@
                                     "contain": true,
                                     "scroll": true,
                                     "innerPadding": false,
-                                    "verticalTabs": false,
                                     "variables": "@{parent.variables}",
                                     "traversing": false,
                                     "widgets": [
@@ -2673,7 +2745,9 @@
                                         "mode": "momentary",
                                         "vertical": false,
                                         "wrap": false,
-                                        "colorTextOn": "auto"
+                                        "colorTextOn": "auto",
+                                        "borderRadius": "auto",
+                                        "decoupled": false
                                       },
                                       {
                                         "type": "button",
@@ -2720,10 +2794,14 @@
                                         "mode": "momentary",
                                         "vertical": false,
                                         "wrap": false,
-                                        "colorTextOn": "auto"
+                                        "colorTextOn": "auto",
+                                        "borderRadius": "auto",
+                                        "decoupled": false
                                       }
                                     ],
-                                    "tabs": []
+                                    "tabs": [],
+                                    "borderRadius": "auto",
+                                    "tabsPosition": "top"
                                   },
                                   {
                                     "type": "fader",
@@ -2780,7 +2858,10 @@
                                     "horizontal": true,
                                     "gradient": [],
                                     "snap": false,
-                                    "onTouch": ""
+                                    "onTouch": "",
+                                    "borderRadius": "auto",
+                                    "colorKnob": "auto",
+                                    "touchZone": "all"
                                   },
                                   {
                                     "type": "script",
@@ -2805,7 +2886,9 @@
                                     "keyType": "keydown"
                                   }
                                 ],
-                                "tabs": []
+                                "tabs": [],
+                                "borderRadius": "auto",
+                                "tabsPosition": "top"
                               },
                               {
                                 "type": "clone",
@@ -2877,7 +2960,9 @@
                                 "variables": "@{parent.variables}"
                               }
                             ],
-                            "tabs": []
+                            "tabs": [],
+                            "borderRadius": "auto",
+                            "tabsPosition": "top"
                           },
                           {
                             "type": "panel",
@@ -2909,7 +2994,6 @@
                             "contain": true,
                             "scroll": false,
                             "innerPadding": false,
-                            "verticalTabs": false,
                             "variables": "@{parent.variables}",
                             "traversing": false,
                             "value": "",
@@ -3018,13 +3102,19 @@
                                 "variables": "@{parent.variables}"
                               }
                             ],
-                            "tabs": []
+                            "tabs": [],
+                            "borderRadius": "auto",
+                            "tabsPosition": "top"
                           }
                         ],
-                        "tabs": []
+                        "tabs": [],
+                        "borderRadius": "auto",
+                        "tabsPosition": "top"
                       }
                     ],
-                    "tabs": []
+                    "tabs": [],
+                    "borderRadius": "auto",
+                    "tabsPosition": "top"
                   },
                   {
                     "type": "tab",
@@ -3046,7 +3136,6 @@
                     "contain": true,
                     "scroll": true,
                     "innerPadding": true,
-                    "verticalTabs": false,
                     "label": "Mixers",
                     "variables": "@{parent.variables}",
                     "traversing": false,
@@ -3078,11 +3167,14 @@
                         "css": "",
                         "file": "non-mixers.json",
                         "props": {},
+                        "fallback": "",
                         "address": "auto",
                         "variables": "@{parent.variables}"
                       }
                     ],
-                    "tabs": []
+                    "tabs": [],
+                    "borderRadius": "auto",
+                    "tabsPosition": "top"
                   },
                   {
                     "type": "tab",
@@ -3104,7 +3196,6 @@
                     "contain": true,
                     "scroll": true,
                     "innerPadding": true,
-                    "verticalTabs": false,
                     "label": "Session",
                     "variables": "@{parent.variables}",
                     "traversing": false,
@@ -3136,11 +3227,14 @@
                         "css": "",
                         "file": "ray-session.json",
                         "props": {},
+                        "fallback": "",
                         "address": "auto",
                         "variables": "@{parent.variables}"
                       }
                     ],
-                    "tabs": []
+                    "tabs": [],
+                    "borderRadius": "auto",
+                    "tabsPosition": "top"
                   },
                   {
                     "type": "tab",
@@ -3162,7 +3256,6 @@
                     "contain": true,
                     "scroll": true,
                     "innerPadding": true,
-                    "verticalTabs": false,
                     "label": "Feat",
                     "variables": "@{parent.variables}",
                     "traversing": false,
@@ -3209,7 +3302,6 @@
                         "contain": true,
                         "scroll": true,
                         "innerPadding": true,
-                        "verticalTabs": false,
                         "variables": "@{parent.variables}",
                         "traversing": false,
                         "value": "",
@@ -3255,7 +3347,6 @@
                             "contain": true,
                             "scroll": true,
                             "innerPadding": false,
-                            "verticalTabs": false,
                             "variables": "@{parent.variables}",
                             "traversing": false,
                             "value": "",
@@ -3313,7 +3404,9 @@
                                 "ignoreDefaults": false,
                                 "bypass": false,
                                 "onCreate": "",
-                                "onValue": ""
+                                "onValue": "",
+                                "borderRadius": "auto",
+                                "decoupled": false
                               },
                               {
                                 "type": "button",
@@ -3357,7 +3450,9 @@
                                 "ignoreDefaults": false,
                                 "bypass": false,
                                 "onCreate": "",
-                                "onValue": ""
+                                "onValue": "",
+                                "borderRadius": "auto",
+                                "decoupled": false
                               },
                               {
                                 "type": "button",
@@ -3401,7 +3496,9 @@
                                 "ignoreDefaults": false,
                                 "bypass": false,
                                 "onCreate": "",
-                                "onValue": ""
+                                "onValue": "",
+                                "borderRadius": "auto",
+                                "decoupled": false
                               },
                               {
                                 "type": "button",
@@ -3445,7 +3542,9 @@
                                 "ignoreDefaults": false,
                                 "bypass": false,
                                 "onCreate": "",
-                                "onValue": ""
+                                "onValue": "",
+                                "borderRadius": "auto",
+                                "decoupled": false
                               },
                               {
                                 "type": "button",
@@ -3489,10 +3588,14 @@
                                 "ignoreDefaults": false,
                                 "bypass": true,
                                 "onCreate": "",
-                                "onValue": "send('/VocalsFeatFX2Delay', 'active', value)"
+                                "onValue": "send('/VocalsFeatFX2Delay', 'active', value)",
+                                "borderRadius": "auto",
+                                "decoupled": false
                               }
                             ],
-                            "tabs": []
+                            "tabs": [],
+                            "borderRadius": "auto",
+                            "tabsPosition": "top"
                           },
                           {
                             "type": "panel",
@@ -3524,7 +3627,6 @@
                             "contain": true,
                             "scroll": true,
                             "innerPadding": false,
-                            "verticalTabs": false,
                             "variables": "@{parent.variables}",
                             "traversing": false,
                             "value": "",
@@ -3582,7 +3684,9 @@
                                 "ignoreDefaults": false,
                                 "bypass": false,
                                 "onCreate": "",
-                                "onValue": ""
+                                "onValue": "",
+                                "borderRadius": "auto",
+                                "decoupled": false
                               },
                               {
                                 "type": "button",
@@ -3626,7 +3730,9 @@
                                 "ignoreDefaults": false,
                                 "bypass": false,
                                 "onCreate": "",
-                                "onValue": ""
+                                "onValue": "",
+                                "borderRadius": "auto",
+                                "decoupled": false
                               },
                               {
                                 "type": "button",
@@ -3670,7 +3776,9 @@
                                 "ignoreDefaults": false,
                                 "bypass": false,
                                 "onCreate": "",
-                                "onValue": ""
+                                "onValue": "",
+                                "borderRadius": "auto",
+                                "decoupled": false
                               },
                               {
                                 "type": "button",
@@ -3714,13 +3822,19 @@
                                 "ignoreDefaults": false,
                                 "bypass": false,
                                 "onCreate": "",
-                                "onValue": ""
+                                "onValue": "",
+                                "borderRadius": "auto",
+                                "decoupled": false
                               }
                             ],
-                            "tabs": []
+                            "tabs": [],
+                            "borderRadius": "auto",
+                            "tabsPosition": "top"
                           }
                         ],
-                        "tabs": []
+                        "tabs": [],
+                        "borderRadius": "auto",
+                        "tabsPosition": "top"
                       },
                       {
                         "type": "clone",
@@ -3769,7 +3883,9 @@
                         "variables": "@{parent.variables}"
                       }
                     ],
-                    "tabs": []
+                    "tabs": [],
+                    "borderRadius": "auto",
+                    "tabsPosition": "top"
                   },
                   {
                     "type": "tab",
@@ -3791,7 +3907,6 @@
                     "contain": true,
                     "scroll": true,
                     "innerPadding": true,
-                    "verticalTabs": false,
                     "label": "MIDI Looper",
                     "variables": "@{parent.variables}",
                     "traversing": false,
@@ -3838,7 +3953,6 @@
                         "contain": true,
                         "scroll": true,
                         "innerPadding": true,
-                        "verticalTabs": false,
                         "variables": {
                           "n": "x",
                           "label": "test"
@@ -3890,7 +4004,9 @@
                             "decimals": 2,
                             "target": "",
                             "onCreate": "",
-                            "onValue": ""
+                            "onValue": "",
+                            "borderRadius": "auto",
+                            "bypass": false
                           },
                           {
                             "type": "button",
@@ -3937,7 +4053,9 @@
                             "ignoreDefaults": false,
                             "bypass": false,
                             "onCreate": "",
-                            "onValue": ""
+                            "onValue": "",
+                            "borderRadius": "auto",
+                            "decoupled": false
                           },
                           {
                             "type": "button",
@@ -3984,7 +4102,9 @@
                             "ignoreDefaults": false,
                             "bypass": false,
                             "onCreate": "",
-                            "onValue": ""
+                            "onValue": "",
+                            "borderRadius": "auto",
+                            "decoupled": false
                           },
                           {
                             "type": "button",
@@ -4031,13 +4151,19 @@
                             "ignoreDefaults": false,
                             "bypass": false,
                             "onCreate": "",
-                            "onValue": ""
+                            "onValue": "",
+                            "borderRadius": "auto",
+                            "decoupled": false
                           }
                         ],
-                        "tabs": []
+                        "tabs": [],
+                        "borderRadius": "auto",
+                        "tabsPosition": "top"
                       }
                     ],
-                    "tabs": []
+                    "tabs": [],
+                    "borderRadius": "auto",
+                    "tabsPosition": "top"
                   },
                   {
                     "type": "tab",
@@ -4059,7 +4185,6 @@
                     "contain": true,
                     "scroll": true,
                     "innerPadding": true,
-                    "verticalTabs": false,
                     "label": "Startup",
                     "variables": "@{parent.variables}",
                     "traversing": false,
@@ -4119,12 +4244,17 @@
                         "ignoreDefaults": false,
                         "bypass": false,
                         "onCreate": "",
-                        "onValue": ""
+                        "onValue": "",
+                        "borderRadius": "auto"
                       }
                     ],
-                    "tabs": []
+                    "tabs": [],
+                    "borderRadius": "auto",
+                    "tabsPosition": "top"
                   }
-                ]
+                ],
+                "borderRadius": "auto",
+                "tabsPosition": "top"
               },
               {
                 "type": "panel",
@@ -4156,7 +4286,6 @@
                 "contain": true,
                 "scroll": true,
                 "innerPadding": true,
-                "verticalTabs": false,
                 "variables": "@{parent.variables}",
                 "traversing": false,
                 "value": "",
@@ -4202,7 +4331,6 @@
                     "contain": true,
                     "scroll": true,
                     "innerPadding": false,
-                    "verticalTabs": false,
                     "variables": "@{parent.variables}",
                     "traversing": false,
                     "value": "",
@@ -4260,7 +4388,9 @@
                         "ignoreDefaults": false,
                         "bypass": false,
                         "onCreate": "",
-                        "onValue": ""
+                        "onValue": "",
+                        "borderRadius": "auto",
+                        "decoupled": false
                       },
                       {
                         "type": "button",
@@ -4304,7 +4434,9 @@
                         "ignoreDefaults": false,
                         "bypass": false,
                         "onCreate": "",
-                        "onValue": ""
+                        "onValue": "",
+                        "borderRadius": "auto",
+                        "decoupled": false
                       },
                       {
                         "type": "button",
@@ -4348,7 +4480,9 @@
                         "ignoreDefaults": false,
                         "bypass": false,
                         "onCreate": "",
-                        "onValue": ""
+                        "onValue": "",
+                        "borderRadius": "auto",
+                        "decoupled": false
                       },
                       {
                         "type": "button",
@@ -4392,7 +4526,9 @@
                         "ignoreDefaults": false,
                         "bypass": false,
                         "onCreate": "",
-                        "onValue": ""
+                        "onValue": "",
+                        "borderRadius": "auto",
+                        "decoupled": false
                       },
                       {
                         "type": "button",
@@ -4436,10 +4572,14 @@
                         "ignoreDefaults": false,
                         "bypass": true,
                         "onCreate": "",
-                        "onValue": "send('/VocalsKeschFX2Delay', 'active', value)"
+                        "onValue": "send('/VocalsKeschFX2Delay', 'active', value)",
+                        "borderRadius": "auto",
+                        "decoupled": false
                       }
                     ],
-                    "tabs": []
+                    "tabs": [],
+                    "borderRadius": "auto",
+                    "tabsPosition": "top"
                   },
                   {
                     "type": "panel",
@@ -4471,7 +4611,6 @@
                     "contain": true,
                     "scroll": true,
                     "innerPadding": false,
-                    "verticalTabs": false,
                     "variables": "@{parent.variables}",
                     "traversing": false,
                     "value": "",
@@ -4529,7 +4668,9 @@
                         "ignoreDefaults": false,
                         "bypass": false,
                         "onCreate": "",
-                        "onValue": ""
+                        "onValue": "",
+                        "borderRadius": "auto",
+                        "decoupled": false
                       },
                       {
                         "type": "button",
@@ -4573,7 +4714,9 @@
                         "ignoreDefaults": false,
                         "bypass": false,
                         "onCreate": "",
-                        "onValue": ""
+                        "onValue": "",
+                        "borderRadius": "auto",
+                        "decoupled": false
                       },
                       {
                         "type": "button",
@@ -4617,7 +4760,9 @@
                         "ignoreDefaults": false,
                         "bypass": false,
                         "onCreate": "",
-                        "onValue": ""
+                        "onValue": "",
+                        "borderRadius": "auto",
+                        "decoupled": false
                       },
                       {
                         "type": "button",
@@ -4661,16 +4806,24 @@
                         "ignoreDefaults": false,
                         "bypass": false,
                         "onCreate": "",
-                        "onValue": ""
+                        "onValue": "",
+                        "borderRadius": "auto",
+                        "decoupled": false
                       }
                     ],
-                    "tabs": []
+                    "tabs": [],
+                    "borderRadius": "auto",
+                    "tabsPosition": "top"
                   }
                 ],
-                "tabs": []
+                "tabs": [],
+                "borderRadius": "auto",
+                "tabsPosition": "top"
               }
             ],
-            "tabs": []
+            "tabs": [],
+            "borderRadius": "auto",
+            "tabsPosition": "top"
           },
           {
             "type": "panel",
@@ -4702,7 +4855,6 @@
             "contain": true,
             "scroll": true,
             "innerPadding": false,
-            "verticalTabs": false,
             "variables": "@{parent.variables}",
             "traversing": false,
             "value": "",
@@ -4748,7 +4900,6 @@
                 "contain": true,
                 "scroll": true,
                 "innerPadding": true,
-                "verticalTabs": false,
                 "variables": "@{parent.variables}",
                 "traversing": false,
                 "value": "",
@@ -4812,10 +4963,13 @@
                     "onCreate": "",
                     "onValue": "",
                     "widgets": [],
-                    "tabs": []
+                    "tabs": [],
+                    "borderRadius": "auto"
                   }
                 ],
-                "tabs": []
+                "tabs": [],
+                "borderRadius": "auto",
+                "tabsPosition": "top"
               },
               {
                 "type": "panel",
@@ -4847,7 +5001,6 @@
                 "contain": true,
                 "scroll": true,
                 "innerPadding": true,
-                "verticalTabs": false,
                 "variables": "@{parent.variables}",
                 "traversing": false,
                 "value": "",
@@ -4923,7 +5076,10 @@
                     "bypass": false,
                     "onCreate": "",
                     "onValue": "",
-                    "onTouch": ""
+                    "onTouch": "",
+                    "borderRadius": "auto",
+                    "colorKnob": "auto",
+                    "touchZone": "all"
                   },
                   {
                     "type": "panel",
@@ -4955,7 +5111,6 @@
                     "contain": true,
                     "scroll": true,
                     "innerPadding": true,
-                    "verticalTabs": false,
                     "variables": "@{parent.variables}",
                     "traversing": false,
                     "value": "",
@@ -5014,7 +5169,8 @@
                         "ignoreDefaults": false,
                         "bypass": false,
                         "onCreate": "",
-                        "onValue": ""
+                        "onValue": "",
+                        "borderRadius": "auto"
                       },
                       {
                         "type": "text",
@@ -5049,7 +5205,9 @@
                         "decimals": 2,
                         "target": "",
                         "onCreate": "setInterval(()=>{\n  var d = new Date()\n  set(this,d.getUTCHours()+2 + ':' + String(d.getUTCMinutes()).padStart(2,'0'))\n},1000)",
-                        "onValue": ""
+                        "onValue": "",
+                        "borderRadius": "auto",
+                        "bypass": false
                       },
                       {
                         "type": "button",
@@ -5085,10 +5243,8 @@
                         "value": "",
                         "default": "",
                         "linkId": "",
-                        "address": "/VocalsKesch",
+                        "address": "/VocalsKesch/KeschIn/Gate",
                         "preArgs": [
-                          "KeschIn",
-                          "Gate",
                           "dsp/bypass"
                         ],
                         "typeTags": "",
@@ -5097,7 +5253,9 @@
                         "ignoreDefaults": false,
                         "bypass": false,
                         "onCreate": "",
-                        "onValue": ""
+                        "onValue": "",
+                        "borderRadius": "auto",
+                        "decoupled": false
                       },
                       {
                         "type": "button",
@@ -5141,16 +5299,24 @@
                         "ignoreDefaults": false,
                         "bypass": false,
                         "onCreate": "",
-                        "onValue": "if (value == 'on') {\n  send('/VocalsKeschFX5RingMod', 'KeschGars', 'Gain', -8)\n  send('/VocalsKeschFX5RingMod', 'KeschNormo', 'Gain', -8)\n  send('/VocalsKeschFX5RingMod', 'KeschMeuf', 'Gain', -8)\n}"
+                        "onValue": "if (value == 'on') {\n  send('/VocalsKeschFX5RingMod', 'KeschGars', 'Gain', -8)\n  send('/VocalsKeschFX5RingMod', 'KeschNormo', 'Gain', -8)\n  send('/VocalsKeschFX5RingMod', 'KeschMeuf', 'Gain', -8)\n}",
+                        "borderRadius": "auto",
+                        "decoupled": false
                       }
                     ],
-                    "tabs": []
+                    "tabs": [],
+                    "borderRadius": "auto",
+                    "tabsPosition": "top"
                   }
                 ],
-                "tabs": []
+                "tabs": [],
+                "borderRadius": "auto",
+                "tabsPosition": "top"
               }
             ],
-            "tabs": []
+            "tabs": [],
+            "borderRadius": "auto",
+            "tabsPosition": "top"
           },
           {
             "type": "panel",
@@ -5182,7 +5348,6 @@
             "contain": true,
             "scroll": true,
             "innerPadding": false,
-            "verticalTabs": false,
             "variables": "@{parent.variables}",
             "traversing": false,
             "value": "",
@@ -5246,13 +5411,18 @@
                 "onCreate": "",
                 "onValue": "",
                 "widgets": [],
-                "tabs": []
+                "tabs": [],
+                "borderRadius": "auto"
               }
             ],
-            "tabs": []
+            "tabs": [],
+            "borderRadius": "auto",
+            "tabsPosition": "top"
           }
         ],
-        "tabs": []
+        "tabs": [],
+        "borderRadius": "auto",
+        "tabsPosition": "top"
       },
       {
         "type": "panel",
@@ -5284,7 +5454,6 @@
         "contain": true,
         "scroll": true,
         "innerPadding": false,
-        "verticalTabs": false,
         "variables": "@{parent.variables}",
         "traversing": false,
         "value": "",
@@ -5330,7 +5499,6 @@
             "contain": true,
             "scroll": true,
             "innerPadding": false,
-            "verticalTabs": false,
             "variables": "@{parent.variables}",
             "traversing": false,
             "value": "",
@@ -5376,7 +5544,6 @@
                 "contain": true,
                 "scroll": true,
                 "innerPadding": true,
-                "verticalTabs": false,
                 "variables": "@{parent.variables}",
                 "traversing": false,
                 "value": "",
@@ -5522,7 +5689,8 @@
                         "values": "#{VAR{values}||['Loading']}",
                         "colorTextOn": "auto",
                         "wrap": "soft",
-                        "mode": "tap"
+                        "mode": "tap",
+                        "borderRadius": "auto"
                       },
                       {
                         "type": "switch",
@@ -5564,13 +5732,17 @@
                         "onValue": "if (value) {\n  send('/JmjKeyboard/call', 'set_sound', value)\n  set('parent', 0)\n}\n",
                         "colorTextOn": "auto",
                         "wrap": "soft",
-                        "mode": "tap"
+                        "mode": "tap",
+                        "borderRadius": "auto"
                       }
                     ],
-                    "tabs": []
+                    "tabs": [],
+                    "borderRadius": "auto"
                   }
                 ],
-                "tabs": []
+                "tabs": [],
+                "borderRadius": "auto",
+                "tabsPosition": "top"
               },
               {
                 "type": "panel",
@@ -5602,7 +5774,6 @@
                 "contain": true,
                 "scroll": true,
                 "innerPadding": false,
-                "verticalTabs": false,
                 "variables": "@{parent.variables}",
                 "traversing": false,
                 "value": "",
@@ -5664,10 +5835,13 @@
                     "ignoreDefaults": false,
                     "bypass": false,
                     "onCreate": "",
-                    "onValue": ""
+                    "onValue": "",
+                    "borderRadius": "auto"
                   }
                 ],
-                "tabs": []
+                "tabs": [],
+                "borderRadius": "auto",
+                "tabsPosition": "top"
               },
               {
                 "type": "panel",
@@ -5699,7 +5873,6 @@
                 "contain": true,
                 "scroll": true,
                 "innerPadding": true,
-                "verticalTabs": false,
                 "variables": "@{parent.variables}",
                 "traversing": false,
                 "value": "",
@@ -5770,10 +5943,15 @@
                     "sensitivity": 1,
                     "steps": "",
                     "origin": 1,
-                    "onTouch": ""
+                    "onTouch": "",
+                    "borderRadius": "auto",
+                    "colorKnob": "auto",
+                    "touchZone": "all"
                   }
                 ],
-                "tabs": []
+                "tabs": [],
+                "borderRadius": "auto",
+                "tabsPosition": "top"
               },
               {
                 "type": "panel",
@@ -5805,7 +5983,6 @@
                 "contain": true,
                 "scroll": true,
                 "innerPadding": true,
-                "verticalTabs": false,
                 "variables": "@{parent.variables}",
                 "traversing": false,
                 "value": "",
@@ -5863,7 +6040,9 @@
                     "ignoreDefaults": false,
                     "bypass": false,
                     "onCreate": "",
-                    "onValue": "set('octave', Math.min(2, get('octave') + 1))"
+                    "onValue": "set('octave', Math.min(2, get('octave') + 1))",
+                    "borderRadius": "auto",
+                    "decoupled": false
                   },
                   {
                     "type": "button",
@@ -5907,7 +6086,9 @@
                     "ignoreDefaults": false,
                     "bypass": false,
                     "onCreate": "",
-                    "onValue": "set('octave', 0)"
+                    "onValue": "set('octave', 0)",
+                    "borderRadius": "auto",
+                    "decoupled": false
                   },
                   {
                     "type": "button",
@@ -5951,7 +6132,9 @@
                     "ignoreDefaults": false,
                     "bypass": false,
                     "onCreate": "",
-                    "onValue": "set('octave', Math.max(get('octave') - 1, -2))"
+                    "onValue": "set('octave', Math.max(get('octave') - 1, -2))",
+                    "borderRadius": "auto",
+                    "decoupled": false
                   },
                   {
                     "type": "variable",
@@ -5972,7 +6155,9 @@
                     "onValue": "send('/JmjTranspose', 'octave', value)"
                   }
                 ],
-                "tabs": []
+                "tabs": [],
+                "borderRadius": "auto",
+                "tabsPosition": "top"
               },
               {
                 "type": "panel",
@@ -6004,7 +6189,6 @@
                 "contain": true,
                 "scroll": true,
                 "innerPadding": true,
-                "verticalTabs": false,
                 "variables": "@{parent.variables}",
                 "traversing": false,
                 "value": "",
@@ -6062,10 +6246,14 @@
                     "ignoreDefaults": false,
                     "bypass": false,
                     "onCreate": "",
-                    "onValue": "set('keyboard_keys/*', 0)"
+                    "onValue": "set('keyboard_keys/*', 0)",
+                    "borderRadius": "auto",
+                    "decoupled": false
                   }
                 ],
-                "tabs": []
+                "tabs": [],
+                "borderRadius": "auto",
+                "tabsPosition": "top"
               },
               {
                 "type": "panel",
@@ -6097,7 +6285,6 @@
                 "contain": true,
                 "scroll": true,
                 "innerPadding": true,
-                "verticalTabs": false,
                 "variables": "@{parent.variables}",
                 "traversing": false,
                 "value": "",
@@ -6155,7 +6342,9 @@
                     "ignoreDefaults": false,
                     "bypass": false,
                     "onCreate": "",
-                    "onValue": ""
+                    "onValue": "",
+                    "borderRadius": "auto",
+                    "decoupled": false
                   },
                   {
                     "type": "button",
@@ -6199,13 +6388,19 @@
                     "ignoreDefaults": false,
                     "bypass": true,
                     "onCreate": "",
-                    "onValue": "send('/Synths/call', 'set_lead', '')"
+                    "onValue": "send('/Synths/call', 'set_lead', '')",
+                    "borderRadius": "auto",
+                    "decoupled": false
                   }
                 ],
-                "tabs": []
+                "tabs": [],
+                "borderRadius": "auto",
+                "tabsPosition": "top"
               }
             ],
-            "tabs": []
+            "tabs": [],
+            "borderRadius": "auto",
+            "tabsPosition": "top"
           },
           {
             "type": "panel",
@@ -6237,7 +6432,6 @@
             "contain": true,
             "scroll": true,
             "innerPadding": true,
-            "verticalTabs": false,
             "variables": "@{parent.variables}",
             "traversing": false,
             "value": "",
@@ -6283,7 +6477,6 @@
                 "contain": true,
                 "scroll": true,
                 "innerPadding": false,
-                "verticalTabs": false,
                 "variables": "@{parent.variables}",
                 "traversing": false,
                 "value": "",
@@ -6383,10 +6576,12 @@
                         "preArgs": "",
                         "target": "",
                         "onCreate": "",
-                        "onValue": ""
+                        "onValue": "",
+                        "borderRadius": "auto"
                       }
                     ],
-                    "tabs": []
+                    "tabs": [],
+                    "borderRadius": "auto"
                   },
                   {
                     "type": "button",
@@ -6430,10 +6625,14 @@
                     "wrap": false,
                     "on": "on",
                     "off": "off",
-                    "mode": "toggle"
+                    "mode": "toggle",
+                    "borderRadius": "auto",
+                    "decoupled": false
                   }
                 ],
-                "tabs": []
+                "tabs": [],
+                "borderRadius": "auto",
+                "tabsPosition": "top"
               },
               {
                 "type": "panel",
@@ -6465,7 +6664,6 @@
                 "contain": true,
                 "scroll": true,
                 "innerPadding": false,
-                "verticalTabs": false,
                 "variables": "@{parent.variables}",
                 "traversing": false,
                 "value": "",
@@ -6523,7 +6721,9 @@
                     "ignoreDefaults": false,
                     "bypass": false,
                     "onCreate": "",
-                    "onValue": ""
+                    "onValue": "",
+                    "borderRadius": "auto",
+                    "decoupled": false
                   },
                   {
                     "type": "button",
@@ -6567,18 +6767,29 @@
                     "ignoreDefaults": false,
                     "bypass": false,
                     "onCreate": "",
-                    "onValue": "set('keyboard_keys/*', 0, {send: false})"
+                    "onValue": "set('keyboard_keys/*', 0, {send: false})",
+                    "borderRadius": "auto",
+                    "decoupled": false
                   }
                 ],
-                "tabs": []
+                "tabs": [],
+                "borderRadius": "auto",
+                "tabsPosition": "top"
               }
             ],
-            "tabs": []
+            "tabs": [],
+            "borderRadius": "auto",
+            "tabsPosition": "top"
           }
         ],
-        "tabs": []
+        "tabs": [],
+        "borderRadius": "auto",
+        "tabsPosition": "top"
       }
     ],
-    "tabs": []
+    "tabs": [],
+    "borderRadius": "auto",
+    "tabsPosition": "top",
+    "onPreload": ""
   }
 }

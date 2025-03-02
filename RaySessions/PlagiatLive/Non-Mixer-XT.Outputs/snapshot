@@ -6,6 +6,7 @@
 	AUX_Module 0x38 create :parameter_values "0.000000" :is_default 0 :chain 0x2 :active 1 :number 0
 	LV2_Plugin 0x18B create :lv2_plugin_uri "urn:ardour:a-eq" :plugin_ins 1 :plugin_outs 1 :parameter_values "160.000000:0.000000:80.000000:15.000000:0.100000:700.000000:-7.000000:1.000000:950.000000:20.000000:0.100000:6000.000000:0.000000:1.000000:9000.000000:0.000000:0.000000:1.000000:1.000000:1.000000:1.000000:1.000000:1.000000:1.000000:1.000000" :is_default 0 :chain 0x2 :active 0
 	LADSPA_Plugin 0x18A create :plugin_id 1916 :plugin_ins 1 :plugin_outs 1 :parameter_values "0.000000:101.000000:401.000000:-10.000000:5.000000:3.000000:4.000000:1.000000" :is_default 0 :chain 0x2 :active 0
+	LV2_Plugin 0x301 create :lv2_plugin_uri "urn:ardour:a-comp" :plugin_ins 2 :plugin_outs 1 :parameter_values "10.000000:80.000000:0.000000:4.000000:0.000000:0.000000:0.000000:1.000000" :is_default 0 :chain 0x2 :active 1 :number 0
 	Gain_Module 0x4 create :parameter_values "0.000000:0.000000:0.000000" :is_default 1 :chain 0x2 :active 1
 	Mono_Pan_Module 0x40 create :parameter_values "0.000000" :is_default 0 :chain 0x2 :active 1
 	Meter_Module 0x5 create :is_default 1 :chain 0x2 :active 1
@@ -124,7 +125,7 @@
 	Mixer_Strip 0x2C create :name "FOH" :width "narrow" :tab "signal" :color 1237093030 :gain_mode 0 :mute_mode 0 :group 0x7 :auto_input "" :manual_connection 0
 	Chain 0x2D create :strip 0x2C :tab "chain"
 	JACK_Module 0x2E create :parameter_values "0.000000:2.000000" :is_default 1 :chain 0x2D :active 1
-	LV2_Plugin 0x2FB create :lv2_plugin_uri "http://calf.sourceforge.net/plugins/Equalizer8Band" :plugin_ins 2 :plugin_outs 2 :custom_data "Calf_Equalizer_8_Band.nAOHC" :is_default 0 :chain 0x2D :active 1 :number 0
+	LV2_Plugin 0x2FB create :lv2_plugin_uri "http://calf.sourceforge.net/plugins/Equalizer8Band" :plugin_ins 2 :plugin_outs 2 :custom_data "Calf_Equalizer_8_Band.nAOHC" :is_default 0 :chain 0x2D :active 0 :number 0
 	Gain_Module 0x2F create :parameter_values "-8.860000:0.000000:0.000000" :is_default 1 :chain 0x2D :active 1
 	Meter_Module 0x30 create :is_default 1 :chain 0x2D :active 1
 	JACK_Module 0x31 create :parameter_values "2.000000:0.000000" :is_default 1 :chain 0x2D :active 1

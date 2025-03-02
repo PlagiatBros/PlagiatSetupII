@@ -178,7 +178,7 @@ class RouteBase(Route):
         bassFX.reset('BassDegrade', 'MDA%20Degrade', 'rate')
         bass.set('BassDry', 'GxChorus-Stereo', 'BYPASS', 0)
 
-        
+
         jmjTranspose.set('octave-bonus', 0)
 
         for name in bassFX.meta_parameters:
@@ -286,6 +286,7 @@ class RouteBase(Route):
         self.reset_leads()
 
         self.engine.set('cut', 'off')
+        vocalsKesch.set('KeschIn', 'Gate', 'dsp/bypass', 0)
 
 
     def set_samples_aliases(self, aliases):

@@ -149,7 +149,7 @@ class IfIHadAHummer(Video, Light, RouteBase):
 
         # Vocals
         vocalsNano.set('gars_exclu', 'on')
-        vocalsKesch.set('normo_exclu', 'on')
+        inputs.set('keschmic', 'dynamic')
 
 
         # Sequences
@@ -158,7 +158,10 @@ class IfIHadAHummer(Video, Light, RouteBase):
         # Sequences
         self.start_sequence('bridgit_jones',
             [
-            {}, {}, {}, {}, # bars 1 - 4
+            {}, {
+                vocalsKesch.set('gars_exclu', 'on'),
+                vocalsKesch.set('KeschIn', 'Gate', 'dsp/bypass', 1)
+            }, {}, {}, # bars 1 - 4
             {}, {}, {}, # bars 5 - 7
             { # bar 8
                 2.75: lambda: postprocess.animate_pitch('*', 1, 0.25, 1.5),
@@ -345,7 +348,7 @@ class IfIHadAHummer(Video, Light, RouteBase):
             [
             {}, # bar 1
             { # bar 2
-                4: lambda: vocalsKesch.set('normo_exclu', 'on')
+                4: lambda: vocalsKesch.set('gars_exclu', 'on')
             },
             { # bar 3
                 1: lambda: [
