@@ -44,7 +44,7 @@
 }
 
 .knob-container {
-    --color-stroke: white;
+    --color-knob: white;
     --line-width: 3rem!important;
 }
 
@@ -286,8 +286,6 @@
 
 .mixers-tab .navigation {
   overflow: auto;
-  order:1;
-  border-left: 1rem solid var(--color-background);
 }
 .mixers-tab  .tablink {
   min-width: 200rem;
