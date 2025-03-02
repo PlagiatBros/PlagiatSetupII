@@ -428,7 +428,8 @@
             "variables": {
               "band": "low",
               "freq": 100,
-              "color": "rgba(255,0,150,1)"
+              "color": "rgba(255,0,150,1)",
+              "address": "@{parent.variables.address}"
             },
             "traversing": false,
             "value": "",
@@ -801,7 +802,8 @@
             "variables": {
               "band": "1",
               "freq": 100,
-              "color": "rgba(255,0,150,1)"
+              "color": "rgba(255,0,150,1)",
+              "address": "@{parent.variables.address}"
             },
             "colorText": "auto",
             "colorWidget": "auto",
@@ -1064,7 +1066,7 @@
                 "ignoreDefaults": false,
                 "bypass": false,
                 "onCreate": "",
-                "onValue": "console.log(value)",
+                "onValue": "",
                 "design": "solid",
                 "colorKnob": "rgba(255,255,255,1)",
                 "pips": false,
@@ -1193,7 +1195,8 @@
               "variables": {
                 "band": 2,
                 "freq": 1000,
-                "color": "rgba(150,255,0,1)"
+                "color": "rgba(150,255,0,1)",
+                "address": "@{parent.variables.address}"
               }
             },
             "address": "auto",
@@ -1217,7 +1220,8 @@
               "variables": {
                 "band": 3,
                 "freq": 4000,
-                "color": "rgba(0,150,255,1)"
+                "color": "rgba(0,150,255,1)",
+                "address": "@{parent.variables.address}"
               }
             },
             "address": "auto",
@@ -1241,7 +1245,8 @@
               "variables": {
                 "band": 4,
                 "freq": 12000,
-                "color": "rgba(0,150,255,1)"
+                "color": "rgba(0,150,255,1)",
+                "address": "@{parent.variables.address}"
               }
             },
             "address": "auto",
@@ -1282,7 +1287,8 @@
             "variables": {
               "band": "high",
               "freq": 100,
-              "color": "rgba(255,0,150,1)"
+              "color": "rgba(255,0,150,1)",
+              "address": "@{parent.variables.address}"
             },
             "traversing": false,
             "value": "",
