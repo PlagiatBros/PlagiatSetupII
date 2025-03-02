@@ -13,7 +13,7 @@ class OpenStageControl(Module):
     Open Stage Control touch interface.
     """
 
-    osc_version = '1.16.3'
+    osc_version = '1.27.6'
 
     def __init__(self, *args, **kwargs):
 
@@ -500,7 +500,10 @@ class OpenStageControl(Module):
         if id in self.plugin_modals:
             if state == 1:
                 self.send('/EDIT/MERGE', id, json.dumps({'widgets': self.plugin_modals[id].widgets}), '{"noWarning": true}')
-                self.send_state()
+                self.start_scene('plugmodal',lambda: [
+			self.wait(0.1,'s'),
+			self.send_state()
+		])
                 # self.plugin_modals[id].plugin.enable_feedback()
             else:
                 # self.plugin_modals[id].plugin.disable_feedback()
