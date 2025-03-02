@@ -108,7 +108,8 @@ class Plugin():
                                 'width': 120,
                                 'decimals': 5,
                                 'linkId': param.address,
-                                'bypass': True
+                                'bypass': True,
+                                'numeric': True
                             }
                         ]
                     })
