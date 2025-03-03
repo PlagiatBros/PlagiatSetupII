@@ -300,7 +300,10 @@ class AintInTheWay(Video, Light, RouteBase):
         # self.reset()
 
         seq192.select('on', 'coucou*')
-        
+
+        # jmjKeyboard
+        jmjKeyboard.set_sound('ZTrumpets', lead=True)
+
 
         #
         # # Samples

@@ -613,6 +613,17 @@ class BX(Video, Light, RouteBase):
         # VOCALS
         inputs.set('keschmic', 'static')
 
+
+        vocalsFeat.set('normo_exclu', 'on')
+        vocalsFeatFX2Delay.set('FeatNormo', 'Gain', 0.0)
+        vocalsFeatFX2Delay.set('FeatNormo', 'Mute', 0.0)
+        vocalsFeatFX2Delay.set('VocalsFeatFX2Delay', 'Invada%20Delay%20Munge%20(mono%20in)', 'Delay%201', 0.15) #0.203)
+        vocalsFeatFX2Delay.set('VocalsFeatFX2Delay', 'Invada%20Delay%20Munge%20(mono%20in)', 'Feedback%201', 33)
+        vocalsFeatFX2Delay.set('VocalsFeatFX2Delay', 'Invada%20Delay%20Munge%20(mono%20in)', 'Delay%202', 0.25) #0.347)
+        vocalsFeatFX2Delay.set('VocalsFeatFX2Delay', 'Invada%20Delay%20Munge%20(mono%20in)', 'Feedback%202', 29)
+
+
+
         # Keyboard
         jmjKeyboard.set_sound('ZTrumpets', lead=True)
 
