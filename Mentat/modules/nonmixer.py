@@ -264,6 +264,7 @@ class NonMixer(Module):
         'Glame%20Lowpass%20Filter': 'Lowpass',
         'AM%20pitchshifter': 'Pitchshifter',
         'Mono%20Pan': 'Pan',
+        'ACE%20EQ%20(stereo)': 'ACE%20EQ',
         'Aux%20(A)': 'Aux-A',
         'Aux%20(B)': 'Aux-B',
         'Aux%20(C)': 'Aux-C',
