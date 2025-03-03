@@ -159,8 +159,8 @@ class IfIHadAHummer(Video, Light, RouteBase):
         self.start_sequence('bridgit_jones',
             [
             {}, {
-                vocalsKesch.set('gars_exclu', 'on'),
-                vocalsKesch.set('KeschIn', 'Gate', 'dsp/bypass', 1)
+                1: lambda: [vocalsKesch.set('gars_exclu', 'on'),
+                            vocalsKesch.set('KeschIn', 'Gate', 'dsp/bypass', 1)]
             }, {}, {}, # bars 1 - 4
             {}, {}, {}, # bars 5 - 7
             { # bar 8
@@ -225,7 +225,7 @@ class IfIHadAHummer(Video, Light, RouteBase):
         vocalsNano.set('meuf_exclu', 'on')
         vocalsKesch.set('meuf_exclu', 'on')
 #        vocalsKeschFX4Disint.set('active', 'on')
-        vocalsKeschFX5RingMod.set('active', 'on')
+#        vocalsKeschFX5RingMod.set('active', 'on')
 
         inputs.set('keschmic', 'static')
 
@@ -392,13 +392,33 @@ class IfIHadAHummer(Video, Light, RouteBase):
         transport.start()
 
         # Basses
-        bassfx.set('distohi', 'on')
+        # bassfx.set('distohi', 'on')
         bassfx.set('scape', 'on')
         bassfx.set('tapedelay', 'on')
+
+        # Vocals
+        vocalsNano.set('normo_exclu', 'on')
+        vocalsKesch.set('meuf_exclu', 'on')
 
 
         # Samples
         samples.set('Samples2', 'Mute', 0.0)
+
+    @mk2_button(8, 'blue')
+    def ifi(self):
+        """
+        Si j'aurais un hummer a capella
+        """
+        self.pause_loopers()
+        self.reset()
+
+        # Séquences
+        seq192.select('solo', 'dummy')
+
+        # Transport
+        transport.set_cycle('4/4', 'Xxxx')
+        transport.start()
+
 
     @pedalboard_button(7)
     def transe_loop_basssynth(self):
@@ -434,6 +454,7 @@ class IfIHadAHummer(Video, Light, RouteBase):
         BASS DELAY OFF
         """
         bassfx.set('tapedelay', 'off')
+        bassfx.set('scape', 'off')
 
     @gui_button()
     def bdelay_on(self):

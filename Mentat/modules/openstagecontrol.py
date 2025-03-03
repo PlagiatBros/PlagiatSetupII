@@ -204,161 +204,162 @@ class OpenStageControl(Module):
             - non mixers instances
             - ray session
         """
-        if not self.engine.restarted:
 
-            self.wait(2, 's')
+        self.wait(2, 's')
 
 
-            """
-            Non mixer gui
-            """
-            panel = {'id': 'non-mixer-gui-tabs', 'type': 'panel', 'default': 6, 'tabs': [], 'tabsPosition': 'right', 'bypass': True, 'onValue': 'var name = getProp(this, "variables").names[value]; if (name) send("/OpenStageControl/call", "set_active_non_mixer", name)'}
-            tab_names = []
-            index = 0
-            for name, mod in self.engine.modules.items():
-                if isinstance(mod, NonMixer):
+        """
+        Non mixer gui
+        """
+        panel = {'id': 'non-mixer-gui-tabs', 'type': 'panel', 'default': 6, 'tabs': [], 'tabsPosition': 'right', 'bypass': True, 'onValue': 'var name = getProp(this, "variables").names[value]; if (name) send("/OpenStageControl/call", "set_active_non_mixer", name)'}
+        tab_names = []
+        index = 0
+        for name, mod in self.engine.modules.items():
+            if isinstance(mod, NonMixer):
 
-                    # non-mixers tabs should always default on 'Outputs'
-                    if name == 'Outputs':
-                        panel['default'] = index
-                    index += 1
+                # non-mixers tabs should always default on 'Outputs'
+                if name == 'Outputs':
+                    panel['default'] = index
+                index += 1
 
-                    tab = {
-                        'type': 'tab',
-                        'id': name,
-                        'label': name,
-                        'layout': 'horizontal',
-                        'innerPadding': False,
+                tab = {
+                    'type': 'tab',
+                    'id': name,
+                    'label': name,
+                    'layout': 'horizontal',
+                    'innerPadding': False,
+                    'widgets': [],
+                    'padding': 1,
+                    'contain': False
+                }
+                tab_names.append(name)
+                panel['tabs'].append(tab)
+                for sname, smod in mod.submodules.items():
+                    id = '%s/%s' % (name, sname)
+                    strip = {
+                        'id': id,
+                        'type': 'panel',
+                        'layout': 'vertical',
+                        'width': 120,
                         'widgets': [],
-                        'padding': 1,
+                        'innerPadding': True,
+                        'lineWidth': 0,
+                        'css': 'class: strip;',
+                        'html': '<div class="label center">%s</div>' % urllib.parse.unquote(sname),
+                        'scroll': False
+                    }
+                    tab['widgets'].append(strip)
+                    plugins = {
+                        'type': 'panel',
+                        'layout': 'vertical',
+                        'height': 120,
+                        'widgets': [],
+                        'innerPadding': True,
+                        'padding': 4,
+                        'css': 'class: carved;',
+                        'scroll': True,
                         'contain': False
                     }
-                    tab_names.append(name)
-                    panel['tabs'].append(tab)
-                    for sname, smod in mod.submodules.items():
-                        id = '%s/%s' % (name, sname)
-                        strip = {
-                            'id': id,
-                            'type': 'panel',
-                            'layout': 'vertical',
-                            'width': 120,
-                            'widgets': [],
-                            'innerPadding': True,
-                            'lineWidth': 0,
-                            'css': 'class: strip;',
-                            'html': '<div class="label center">%s</div>' % urllib.parse.unquote(sname),
-                            'scroll': False
-                        }
-                        tab['widgets'].append(strip)
-                        plugins = {
-                            'type': 'panel',
-                            'layout': 'vertical',
-                            'height': 120,
-                            'widgets': [],
-                            'innerPadding': True,
-                            'padding': 4,
-                            'css': 'class: carved;',
-                            'scroll': True,
-                            'contain': False
-                        }
-                        strip['widgets'].append(plugins)
+                    strip['widgets'].append(plugins)
 
-                        for plugname, plugmod in smod.submodules.items():
-                            oscplug = osc_plugin(plugmod)
-                            plugins['widgets'].append(oscplug.modal)
-                            self.plugin_modals[oscplug.id] = oscplug
+                    for plugname, plugmod in smod.submodules.items():
+                        oscplug = osc_plugin(plugmod)
+                        plugins['widgets'].append(oscplug.modal)
+                        self.plugin_modals[oscplug.id] = oscplug
 
-                        strip['widgets'].append({
-                            'type': 'button',
-                            'label': 'Mute',
-                            'colorWidget': 'var(--yellow)',
-                            'css': 'class: discrete;',
-                            'value': smod.get('Mute'),
-                            'address': '/%s/%s' % (name, sname),
-                            'preArgs': 'Mute'
-                        })
+                    strip['widgets'].append({
+                        'type': 'button',
+                        'label': 'Mute',
+                        'colorWidget': 'var(--yellow)',
+                        'css': 'class: discrete;',
+                        'value': smod.get('Mute'),
+                        'address': '/%s/%s' % (name, sname),
+                        'preArgs': 'Mute'
+                    })
 
-                        strip['widgets'].append({
-                            'type': 'panel',
-                            'height': 50,
-                            'layout': 'horizontal',
-                            'innerPadding': False,
-                            'padding': 10,
-                            'widgets': [
-                                {
-                                    'type': 'knob',
-                                    'range': {'min': -1, 'max': 1},
-                                    'design': 'solid',
-                                    'horizontal': True,
-                                    'origin': 0,
-                                    'css': 'class: locked;' if not 'Pan' in smod.parameters else '',
-                                    'doubleTap': True,
-                                    'value': smod.get('Pan') if 'Pan' in smod.parameters else 0,
-                                    'address': '/%s/%s' % (name, sname),
-                                    'preArgs': 'Pan',
-                                    'linkId': '/%s/%s/Pan' % (name, sname),
-                                    'sensitivity': 0.25
-                                },
-                                {
-                                    'type': 'input',
-                                    'css': ('class: locked;' if not 'Pan' in smod.parameters else '') + ';\nmargin: 7rem 0 8rem!important',
-                                    'width': 120,
-                                    'decimals': 2,
-                                    'linkId': '/%s/%s/Pan' % (name, sname),
-                                    'bypass': True,
-                                    'numeric': 0.1
-                                }
-                            ]
-                        })
+                    strip['widgets'].append({
+                        'type': 'panel',
+                        'height': 50,
+                        'layout': 'horizontal',
+                        'innerPadding': False,
+                        'padding': 10,
+                        'widgets': [
+                            {
+                                'type': 'knob',
+                                'range': {'min': -1, 'max': 1},
+                                'design': 'solid',
+                                'horizontal': True,
+                                'origin': 0,
+                                'css': 'class: locked;' if not 'Pan' in smod.parameters else '',
+                                'doubleTap': True,
+                                'value': smod.get('Pan') if 'Pan' in smod.parameters else 0,
+                                'address': '/%s/%s' % (name, sname),
+                                'preArgs': 'Pan',
+                                'linkId': '/%s/%s/Pan' % (name, sname),
+                                'sensitivity': 0.25
+                            },
+                            {
+                                'type': 'input',
+                                'css': ('class: locked;' if not 'Pan' in smod.parameters else '') + ';\nmargin: 7rem 0 8rem!important',
+                                'width': 120,
+                                'decimals': 2,
+                                'linkId': '/%s/%s/Pan' % (name, sname),
+                                'bypass': True,
+                                'numeric': 0.1
+                            }
+                        ]
+                    })
 
-                        strip['widgets'].append({
-                            'type': 'panel',
-                            'expand': True,
-                            'scroll': False,
-                            'widgets': [
-                                {
-                                    'type': 'fader',
-                                    'range': {'min': -70, '6%': -60, '12%': -50, '20%': -40, '30%': -30, '42%': -20, '60%': -10, '80%': 0, 'max': 6 },
-                                    'width': '100%',
-                                    'height': '100%',
-                                    'doubleTap': True,
-                                    'pips': True,
-                                    'design': 'round',
-                                    'value': smod.get('Gain'),
-                                    'default': smod.get('Gain'),
-                                    'address': '/%s/%s' % (name, sname),
-                                    'linkId': '/%s/%s/Gain' % (name, sname),
-                                    'preArgs': 'Gain'
-                                },
-                                {
-                                    'type': 'fader',
-                                    'css': 'class: meter',
-                                    'range': {'min': -70, '6%': -60, '12%': -50, '20%': -40, '30%': -30, '42%': -20, '60%': -10, '80%': 0, 'max': 6 },
-                                    'interaction': False,
-                                    'pips': False,
-                                    'design': 'compact',
-                                    'dashed': [2,2],
-                                    'default': -70,
-                                    'address': '/%s/%s' % (name, sname),
-                                    'preArgs': 'Level'
-                                }
-                            ]
-                        })
-                        strip['widgets'].append({
-                            'type': 'input',
-                            'width': 120,
-                            'decimals': 5,
-                            'linkId': '/%s/%s/Gain' % (name, sname),
-                            'bypass': True,
-                            'numeric': 1
-                        })
+                    strip['widgets'].append({
+                        'type': 'panel',
+                        'expand': True,
+                        'scroll': False,
+                        'widgets': [
+                            {
+                                'type': 'fader',
+                                'range': {'min': -70, '6%': -60, '12%': -50, '20%': -40, '30%': -30, '42%': -20, '60%': -10, '80%': 0, 'max': 6 },
+                                'width': '100%',
+                                'height': '100%',
+                                'doubleTap': True,
+                                'pips': True,
+                                'design': 'round',
+                                'value': smod.get('Gain'),
+                                'default': smod.get('Gain'),
+                                'address': '/%s/%s' % (name, sname),
+                                'linkId': '/%s/%s/Gain' % (name, sname),
+                                'preArgs': 'Gain'
+                            },
+                            {
+                                'type': 'fader',
+                                'css': 'class: meter',
+                                'range': {'min': -70, '6%': -60, '12%': -50, '20%': -40, '30%': -30, '42%': -20, '60%': -10, '80%': 0, 'max': 6 },
+                                'interaction': False,
+                                'pips': False,
+                                'design': 'compact',
+                                'dashed': [2,2],
+                                'default': -70,
+                                'address': '/%s/%s' % (name, sname),
+                                'preArgs': 'Level'
+                            }
+                        ]
+                    })
+                    strip['widgets'].append({
+                        'type': 'input',
+                        'width': 120,
+                        'decimals': 5,
+                        'linkId': '/%s/%s/Gain' % (name, sname),
+                        'bypass': True,
+                        'numeric': 1
+                    })
 
-            panel['variables'] = {'names': tab_names}
-            frag = {
-                'type': 'fragment',
-                'version': self.osc_version,
-                'content': panel
-            }
+        panel['variables'] = {'names': tab_names}
+        frag = {
+            'type': 'fragment',
+            'version': self.osc_version,
+            'content': panel
+        }
+        if not self.engine.restarted:
+        
             file = open(self.session_dir + '/non-mixers.json', 'w+')
             data = json.dumps(frag)
             if data != file.read():

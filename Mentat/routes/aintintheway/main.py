@@ -184,7 +184,8 @@ class AintInTheWay(Video, Light, RouteBase):
         synths.set("ZNotSoRhodes", "Pan", -0.4)
 
         # Keyboard
-        jmjKeyboard.set_sound('ZTrumpets', lead=True)
+        jmjKeyboard.set_sound('LowZRagstep', lead=True)
+        mk2Control.set_mode('cut_basssynths')
 
     @mk2_button(7)
     @pedalboard_button(7)
@@ -295,22 +296,23 @@ class AintInTheWay(Video, Light, RouteBase):
         """
         SAVOIR AIMÉ
         """
-        self.pause_loopers()
-        self.reset()
+        # self.pause_loopers()
+        # self.reset()
 
-        seq192.select('solo', 'dummy')
+        seq192.select('on', 'coucou*')
+        
 
-
-        # Samples
-        self.open_samples()
-
-
-        # Transport
-        transport.set_tempo(120)
-        transport.start()
-
-
-        # jmjKeyboard
-        jmjKeyboard.set_sound('SteelDrums', lead=False)
-
-        inputs.set('keschmic', 'dynamic')
+        #
+        # # Samples
+        # self.open_samples()
+        #
+        #
+        # # Transport
+        # transport.set_tempo(120)
+        # transport.start()
+        #
+        #
+        # # jmjKeyboard
+        # jmjKeyboard.set_sound('SteelDrums', lead=False)
+        #
+        # inputs.set('keschmic', 'dynamic')
