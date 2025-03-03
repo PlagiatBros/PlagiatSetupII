@@ -454,7 +454,7 @@ class StickItOut(Video, Light, RouteBase):
 
 
         # Synths
-        synths.animate('MajorVocals', 'Pan', 0.8,  -0.8, 4, easing='random', loop=True)
+        synths.animate('MajorVocals', 'Pan', 0.8,  -0.8, 4,  loop=True)
         synths.animate('Trap', 'Pan', -0.8, 0.8, 4, easing='random', loop=True)
 
         synthsFX2Delay.set('Rhodes', 'Gain', -9.0)
