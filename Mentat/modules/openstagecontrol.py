@@ -359,7 +359,7 @@ class OpenStageControl(Module):
             'content': panel
         }
         if not self.engine.restarted:
-        
+
             file = open(self.session_dir + '/non-mixers.json', 'w+')
             data = json.dumps(frag)
             if data != file.read():
@@ -506,14 +506,19 @@ class OpenStageControl(Module):
         self.set('active_non_mixer', name)
 
 
-    def display_modal(self, id, state):
+    def display_modal(self, id, state, edit=True):
         if id in self.plugin_modals:
             if state == 1:
-                self.send('/EDIT', id, json.dumps({'widgets': self.plugin_modals[id].widgets}), '{"noWarning": true}')
+                if edit:
+                    self.send('/EDIT', id, json.dumps({'widgets': self.plugin_modals[id].widgets}), '{"noWarning": true}')
                 self.send_state()
                 if self.plugin_modals[id].enable_feedback:
                     self.plugin_modals[id].plugin.enable_feedback()
             else:
-                self.send('/EDIT', id, json.dumps({'widgets': []}), '{"noWarning": true}')
+                if edit:
+                    self.send('/EDIT', id, json.dumps({'widgets': []}), '{"noWarning": true}')
                 if self.plugin_modals[id].enable_feedback:
                     self.plugin_modals[id].plugin.disable_feedback()
+
+    def display_modal_regie(self, id, state):
+        self.display_modal(id, state, False)

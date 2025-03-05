@@ -15,3 +15,10 @@ class Outputs(NonMixer):
             self.submodules['Lead' + module.parent_module.name].set(module.name, name, value)
         elif name == 'Mute':
             self.submodules['Lead' + module.name].set('Mute', value)
+
+
+    def get_state(self, *args, **kwargs):
+        """
+        Exclude some plugins/params from saved states to avoid remote mix save from breaking things
+        """
+        return [s for s in super().get_state() if s[0] not in ['Pitchshifter', 'Lowpass', 'Aux-A', 'Aux-B', 'Level']]
