@@ -166,7 +166,7 @@
 .carved {
     --color-background: var(--color-bg-backup);
     --line-width: 1rem;
-    --color-stroke: rgba(0,0,0,0.35);
+    --color-stroke: rgba(0,0,0,0.2);
 }
 .modal-container .popup {
     --color-background: var(--color-bg-backup);
