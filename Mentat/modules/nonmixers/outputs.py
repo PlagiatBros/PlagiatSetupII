@@ -21,4 +21,4 @@ class Outputs(NonMixer):
         """
         Exclude some plugins/params from saved states to avoid remote mix save from breaking things
         """
-        return [s for s in super().get_state() if s[0] not in ['Pitchshifter', 'Lowpass', 'Aux-A', 'Aux-B', 'Level']]
+        return [s for s in super().get_state() if s[1] not in ['Pitchshifter', 'Lowpass', 'Aux-A', 'Aux-B', 'Level'] and 'dsp/bypass' not in s]

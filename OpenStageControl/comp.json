@@ -801,7 +801,7 @@
                 "html": "",
                 "css": "",
                 "value": "Attack",
-                "default": "",
+                "default": 10,
                 "linkId": "comp_attack",
                 "address": "@{parent.variables.address}",
                 "preArgs": "att",
@@ -818,7 +818,7 @@
                 "angle": 270,
                 "mode": "vertical",
                 "spring": false,
-                "doubleTap": false,
+                "doubleTap": true,
                 "range": {
                   "min": 0.1,
                   "max": 100
@@ -855,7 +855,7 @@
                 "html": "",
                 "css": "",
                 "value": "Release",
-                "default": "",
+                "default": 80,
                 "linkId": "comp_release",
                 "address": "@{parent.variables.address}",
                 "preArgs": "rel",
@@ -872,7 +872,7 @@
                 "angle": 270,
                 "mode": "vertical",
                 "spring": false,
-                "doubleTap": false,
+                "doubleTap": true,
                 "range": {
                   "min": 1,
                   "max": 2000
@@ -909,7 +909,7 @@
                 "html": "",
                 "css": "",
                 "value": "Knee",
-                "default": "",
+                "default": 0,
                 "linkId": "comp_knee",
                 "address": "@{parent.variables.address}",
                 "preArgs": "kn",
@@ -926,7 +926,7 @@
                 "angle": 270,
                 "mode": "vertical",
                 "spring": false,
-                "doubleTap": false,
+                "doubleTap": true,
                 "range": {
                   "min": 0,
                   "max": 8
@@ -963,7 +963,7 @@
                 "html": "",
                 "css": "",
                 "value": "Ratio",
-                "default": "",
+                "default": 1,
                 "linkId": "comp_ratio",
                 "address": "@{parent.variables.address}",
                 "preArgs": "rat",
@@ -980,7 +980,7 @@
                 "angle": 270,
                 "mode": "vertical",
                 "spring": false,
-                "doubleTap": false,
+                "doubleTap": true,
                 "range": {
                   "min": 1,
                   "max": 20
@@ -1017,7 +1017,7 @@
                 "html": "",
                 "css": "",
                 "value": "Threshold",
-                "default": "",
+                "default": 0,
                 "linkId": "comp_threshold",
                 "address": "@{parent.variables.address}",
                 "preArgs": "thr",
@@ -1034,7 +1034,7 @@
                 "angle": 270,
                 "mode": "vertical",
                 "spring": false,
-                "doubleTap": false,
+                "doubleTap": true,
                 "range": {
                   "min": -60,
                   "max": 0
@@ -1071,7 +1071,7 @@
                 "html": "",
                 "css": "",
                 "value": "Makeup",
-                "default": "",
+                "default": 0,
                 "linkId": "comp_makeup",
                 "address": "@{parent.variables.address}",
                 "preArgs": "mak",
@@ -1088,7 +1088,7 @@
                 "angle": 270,
                 "mode": "vertical",
                 "spring": false,
-                "doubleTap": false,
+                "doubleTap": true,
                 "range": {
                   "min": 0,
                   "max": 30
