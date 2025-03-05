@@ -326,7 +326,7 @@
         "decimals": 2,
         "target": "",
         "ignoreDefaults": false,
-        "bypass": false,
+        "bypass": true,
         "onCreate": "",
         "onValue": "if (value === 1) {\n  setVar('confirm_yes', 'label', getProp(getVar(this,'action_id'), 'label')) \n}",
         "widgets": [
@@ -552,7 +552,7 @@
                 "decimals": 2,
                 "target": "",
                 "ignoreDefaults": false,
-                "bypass": false,
+                "bypass": true,
                 "onCreate": "",
                 "onValue": "",
                 "popupWidth": 300,
@@ -662,7 +662,7 @@
                         "decimals": 2,
                         "target": "",
                         "ignoreDefaults": false,
-                        "bypass": false,
+                        "bypass": true,
                         "onCreate": "",
                         "onValue": ""
                       }
