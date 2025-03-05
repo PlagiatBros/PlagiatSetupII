@@ -511,7 +511,12 @@ class OpenStageControl(Module):
             if state == 1:
                 if edit:
                     self.send('/EDIT', id, json.dumps({'widgets': self.plugin_modals[id].widgets}), '{"noWarning": true}')
-                self.send_state()
+                #self.send_state()
+                for address in self.osc_state:
+                    if id in address:
+                        for name in self.osc_state[address]:
+                            self.send(address, name, *self.osc_state[address][name])
+                
                 if self.plugin_modals[id].enable_feedback:
                     self.plugin_modals[id].plugin.enable_feedback()
             else:
