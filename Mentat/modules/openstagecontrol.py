@@ -128,8 +128,14 @@ class OpenStageControl(Module):
 
     def client_started(self, name):
 
-        self.send_state()
+        self.send_state_delayed()
 
+
+    def send_state_delayed(self):
+        self.start_scene('send_state', lambda: [
+            self.wait(1, 's'),
+            self.send_state()
+        ])
 
     def send_state(self):
         """
@@ -205,7 +211,7 @@ class OpenStageControl(Module):
             - ray session
         """
 
-        self.wait(2, 's')
+        self.wait(1, 's')
 
 
         """
@@ -438,12 +444,8 @@ class OpenStageControl(Module):
                 file.write(data)
             file.close()
 
-        """
-        Misc
-        """
+        self.send_state_delayed()
 
-        self.wait(2, 's')
-        self.send_state()
 
     def edit_gui(self, widget, data):
         """
@@ -516,7 +518,7 @@ class OpenStageControl(Module):
                     if id in address:
                         for name in self.osc_state[address]:
                             self.send(address, name, *self.osc_state[address][name])
-                
+
                 if self.plugin_modals[id].enable_feedback:
                     self.plugin_modals[id].plugin.enable_feedback()
             else:
