@@ -133,7 +133,7 @@ class OpenStageControl(Module):
 
     def send_state_delayed(self):
         self.start_scene('send_state', lambda: [
-            self.wait(1, 's'),
+            self.wait(2, 's'),
             self.send_state()
         ])
 
@@ -211,7 +211,7 @@ class OpenStageControl(Module):
             - ray session
         """
 
-        self.wait(1, 's')
+        self.wait(2, 's')
 
 
         """
