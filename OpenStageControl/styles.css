@@ -45,7 +45,7 @@
 
 .knob-container {
     --color-knob: white;
-    --line-width: 3rem!important;
+    --line-width: 2rem!important;
 }
 
 .fader-container.design-compact {
