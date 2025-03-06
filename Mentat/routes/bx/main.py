@@ -598,7 +598,7 @@ class BX(Video, Light, RouteBase):
 
         # Bass
         bassFX.set('distohi', 'on')
-        bassFX.set('degrade', 'on')
+        # bassFX.set('degrade', 'on')
         bassfx.set('scape', 'poston')
         bassfx.set('wobble', 'poston')
         bassfx.set('wobble_subdivision', 6)
