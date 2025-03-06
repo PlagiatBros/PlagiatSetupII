@@ -53,37 +53,31 @@
 	Chain 0x38 create :strip 0x37 :tab "chain"
 	JACK_Module 0x39 create :parameter_values "0.000000:1.000000" :is_default 1 :chain 0x38 :active 1
 	LV2_Plugin 0xA6 create :lv2_plugin_uri "http://invadarecords.com/plugins/lv2/filter/hpf/mono" :plugin_ins 1 :plugin_outs 1 :parameter_values "0.000000:1000.000000:0.000000:0.000000:0.000000" :is_default 0 :chain 0x38 :active 1
+	LV2_Plugin 0x113 create :lv2_plugin_uri "http://guitarix.sourceforge.net/plugins/gx_bmp_#_bmp_" :plugin_ins 1 :plugin_outs 1 :parameter_values "0.640000:0.500000:0.840000:0.000000" :is_default 0 :chain 0x38 :active 1 :number 0
+	LADSPA_Plugin 0x114 create :plugin_id 1410 :plugin_ins 1 :plugin_outs 1 :parameter_values "200.000000:7000.000000:-50.000000:100.000000:120.000000:350.000000:-90.000000:0.000000:0.000000" :is_default 0 :chain 0x38 :active 1 :number 0
 	LV2_Plugin 0xA7 create :lv2_plugin_uri "http://drobilla.net/plugins/mda/Bandisto" :plugin_ins 2 :plugin_outs 2 :parameter_values "1.000000:0.420000:0.780000:0.000000:0.673759:0.517730:0.000000:0.574468:0.520000:0.000000:0.000000" :is_default 0 :chain 0x38 :active 1
 	LADSPA_Plugin 0xF3 create :plugin_id 2156 :plugin_ins 2 :plugin_outs 2 :parameter_values "0.500000:0.446809:0.000000:0.000000:1.000000:0.000000:0.418440:0.524823:0.000000" :is_default 0 :chain 0x38 :active 1
 	LADSPA_Plugin 0xF2 create :plugin_id 1795 :plugin_ins 2 :plugin_outs 2 :parameter_values "1.000000:0.567376:0.432624:0.250000:0.000000" :is_default 0 :chain 0x38 :active 1
-	Gain_Module 0x3A create :parameter_values "0.000000:1.000000:0.000000" :is_default 1 :chain 0x38 :active 1
+	Gain_Module 0x3A create :parameter_values "0.000000:0.000000:0.000000" :is_default 1 :chain 0x38 :active 1
 	Meter_Module 0x3B create :is_default 1 :chain 0x38 :active 1
 	JACK_Module 0x3C create :parameter_values "2.000000:0.000000" :is_default 1 :chain 0x38 :active 1
-	Mixer_Strip 0x3D create :name "BassZynWahIn" :width "narrow" :tab "signal" :color 1244674052 :gain_mode 0 :mute_mode 0 :group 0x23 :auto_input "" :manual_connection 0
-	Chain 0x3E create :strip 0x3D :tab "chain"
-	JACK_Module 0x3F create :parameter_values "0.000000:1.000000" :is_default 1 :chain 0x3E :active 1
-	Gain_Module 0x40 create :parameter_values "0.000000:0.000000:0.000000" :is_default 1 :chain 0x3E :active 1
-	Meter_Module 0x41 create :is_default 1 :chain 0x3E :active 1
-	JACK_Module 0x42 create :parameter_values "1.000000:0.000000" :is_default 1 :chain 0x3E :active 1
-	Mixer_Strip 0x43 create :name "BassZynWah" :width "narrow" :tab "signal" :color 828223282 :gain_mode 0 :mute_mode 0 :group 0x24 :auto_input "" :manual_connection 0
-	Chain 0x44 create :strip 0x43 :tab "chain"
-	JACK_Module 0x45 create :parameter_values "0.000000:1.000000" :is_default 1 :chain 0x44 :active 1
-	LV2_Plugin 0xDD create :lv2_plugin_uri "http://drobilla.net/plugins/fomp/autowah" :plugin_ins 1 :plugin_outs 1 :parameter_values "-10.000000:0.113475:0.496454:0.148936:1.000000:0.000000" :is_default 0 :chain 0x44 :active 1
-	LV2_Plugin 0xA9 create :lv2_plugin_uri "http://invadarecords.com/plugins/lv2/compressor/stereo" :plugin_ins 2 :plugin_outs 2 :parameter_values "0.000000:0.500000:0.000020:0.003347:-17.000000:7.800000:4.500000:1.000000:0.000000" :is_default 0 :chain 0x44 :active 1
-	Gain_Module 0x46 create :parameter_values "-6.000000:0.000000:0.000000" :is_default 1 :chain 0x44 :active 1
-	Meter_Module 0x47 create :is_default 1 :chain 0x44 :active 1
-	JACK_Module 0x48 create :parameter_values "2.000000:0.000000" :is_default 1 :chain 0x44 :active 1
-	Mixer_Strip 0xD1 create :name "BassTapeDelayIn" :width "narrow" :tab "signal" :color 361624780 :gain_mode 0 :mute_mode 0 :group 0x23 :auto_input "" :manual_connection 0
-	Chain 0xD2 create :strip 0xD1 :tab "chain"
-	JACK_Module 0xD3 create :parameter_values "0.000000:1.000000" :is_default 1 :chain 0xD2 :active 1
-	Gain_Module 0xD4 create :parameter_values "0.000000:1.000000:0.000000" :is_default 1 :chain 0xD2 :active 1
-	Meter_Module 0xD5 create :is_default 1 :chain 0xD2 :active 1
-	JACK_Module 0xD6 create :parameter_values "1.000000:0.000000" :is_default 1 :chain 0xD2 :active 1
-	Mixer_Strip 0xD7 create :name "BassTapeDelay" :width "narrow" :tab "signal" :color 865873064 :gain_mode 0 :mute_mode 0 :group 0x24 :auto_input "" :manual_connection 0
-	Chain 0xD8 create :strip 0xD7 :tab "chain"
-	JACK_Module 0xD9 create :parameter_values "0.000000:1.000000" :is_default 1 :chain 0xD8 :active 1
-	LADSPA_Plugin 0xEE create :plugin_id 1211 :plugin_ins 1 :plugin_outs 1 :parameter_values "1.000000:-90.000000:0.500000:0.000000:1.000000:-90.000000:1.500000:-90.000000:2.000000:-90.000000:0.000000" :is_default 0 :chain 0xD8 :active 1
-	Gain_Module 0xDA create :parameter_values "0.000000:1.000000:0.000000" :is_default 1 :chain 0xD8 :active 1
-	Meter_Module 0xDB create :is_default 1 :chain 0xD8 :active 1
-	JACK_Module 0xDC create :parameter_values "1.000000:0.000000" :is_default 1 :chain 0xD8 :active 1
+	Mixer_Strip 0x3D create :name "BassZynWahIn" :width "narrow" :tab "signal" :color 1244674052 :gain_mode 0 :mute_mode 0 :group 0x23 :auto_input "" :manual_connection 0 Chain 
+	0x3E create :strip 0x3D :tab "chain" JACK_Module 0x3F create :parameter_values "0.000000:1.000000" :is_default 1 :chain 0x3E :active 1 Gain_Module 0x40 create 
+	:parameter_values "0.000000:0.000000:0.000000" :is_default 1 :chain 0x3E :active 1 Meter_Module 0x41 create :is_default 1 :chain 0x3E :active 1 JACK_Module 0x42 create 
+	:parameter_values "1.000000:0.000000" :is_default 1 :chain 0x3E :active 1 Mixer_Strip 0x43 create :name "BassZynWah" :width "narrow" :tab "signal" :color 828223282 
+	:gain_mode 0 :mute_mode 0 :group 0x24 :auto_input "" :manual_connection 0 Chain 0x44 create :strip 0x43 :tab "chain" JACK_Module 0x45 create :parameter_values 
+	"0.000000:1.000000" :is_default 1 :chain 0x44 :active 1 LV2_Plugin 0xDD create :lv2_plugin_uri "http://drobilla.net/plugins/fomp/autowah" :plugin_ins 1 :plugin_outs 1 
+	:parameter_values "-10.000000:0.113475:0.496454:0.148936:1.000000:0.000000" :is_default 0 :chain 0x44 :active 1 LV2_Plugin 0xA9 create :lv2_plugin_uri 
+	"http://invadarecords.com/plugins/lv2/compressor/stereo" :plugin_ins 2 :plugin_outs 2 :parameter_values 
+	"0.000000:0.500000:0.000020:0.003347:-17.000000:7.800000:4.500000:1.000000:0.000000" :is_default 0 :chain 0x44 :active 1 Gain_Module 0x46 create :parameter_values 
+	"-6.000000:0.000000:0.000000" :is_default 1 :chain 0x44 :active 1 Meter_Module 0x47 create :is_default 1 :chain 0x44 :active 1 JACK_Module 0x48 create :parameter_values 
+	"2.000000:0.000000" :is_default 1 :chain 0x44 :active 1 Mixer_Strip 0xD1 create :name "BassTapeDelayIn" :width "narrow" :tab "signal" :color 361624780 :gain_mode 0 
+	:mute_mode 0 :group 0x23 :auto_input "" :manual_connection 0 Chain 0xD2 create :strip 0xD1 :tab "chain" JACK_Module 0xD3 create :parameter_values "0.000000:1.000000" 
+	:is_default 1 :chain 0xD2 :active 1 Gain_Module 0xD4 create :parameter_values "0.000000:1.000000:0.000000" :is_default 1 :chain 0xD2 :active 1 Meter_Module 0xD5 create 
+	:is_default 1 :chain 0xD2 :active 1 JACK_Module 0xD6 create :parameter_values "1.000000:0.000000" :is_default 1 :chain 0xD2 :active 1 Mixer_Strip 0xD7 create :name 
+	"BassTapeDelay" :width "narrow" :tab "signal" :color 865873064 :gain_mode 0 :mute_mode 0 :group 0x24 :auto_input "" :manual_connection 0 Chain 0xD8 create :strip 0xD7 :tab 
+	"chain" JACK_Module 0xD9 create :parameter_values "0.000000:1.000000" :is_default 1 :chain 0xD8 :active 1 LADSPA_Plugin 0xEE create :plugin_id 1211 :plugin_ins 1 
+	:plugin_outs 1 :parameter_values "1.000000:-90.000000:0.500000:0.000000:1.000000:-90.000000:1.500000:-90.000000:2.000000:-90.000000:0.000000" :is_default 0 :chain 0xD8 
+	:active 1 Gain_Module 0xDA create :parameter_values "0.000000:1.000000:0.000000" :is_default 1 :chain 0xD8 :active 1 Meter_Module 0xDB create :is_default 1 :chain 0xD8 
+	:active 1 JACK_Module 0xDC create :parameter_values "1.000000:0.000000" :is_default 1 :chain 0xD8 :active 1
 }
