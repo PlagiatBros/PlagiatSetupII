@@ -151,7 +151,10 @@ class NonMixer(Module):
                             if plugin_name == 'Meter.1':
                                 if 'PFL' not in strip_mod.parameters:
                                     strip_mod.add_parameter('PFL', None, 'i', default=0)
-                                return
+                                return False
+
+                            if param_shortname in strip_mod.parameters:
+                                return False
 
                             strip_mod.add_parameter(param_shortname, parameter_address if plugin_name != 'Meter' else None, 'f', default=None)
                             strip_mod.parameters[param_shortname].range = args[3:5]
