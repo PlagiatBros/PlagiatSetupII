@@ -3150,7 +3150,7 @@
                     "decimals": 2,
                     "target": "",
                     "ignoreDefaults": false,
-                    "bypass": false,
+                    "bypass": true,
                     "onCreate": "",
                     "onValue": "",
                     "align": "center",
@@ -3169,7 +3169,7 @@
                 "left": 110,
                 "lock": false,
                 "id": "pfl_panel_@{parent.variables.name}",
-                "visible": "@{setting_mutes}",
+                "visible": true,
                 "interaction": true,
                 "comments": "",
                 "width": "auto",
@@ -3244,7 +3244,7 @@
                     "decimals": 2,
                     "target": "",
                     "ignoreDefaults": false,
-                    "bypass": false,
+                    "bypass": true,
                     "onCreate": "",
                     "onValue": "set('prefader_level_@{parent.variables.name}', get('prefader_level_@{parent.variables.name}'))",
                     "html": "",
@@ -3391,7 +3391,7 @@
                         "range": {
                           "min": -70,
                           "20%": -40,
-                          "42%": -20,
+                          "40%": -20,
                           "60%": -10,
                           "80%": 0,
                           "max": 6
@@ -3455,7 +3455,7 @@
                         "range": {
                           "min": -70,
                           "20%": -40,
-                          "42%": -20,
+                          "40%": -20,
                           "60%": -10,
                           "80%": 0,
                           "max": 6
@@ -3473,7 +3473,7 @@
                         "decimals": 2,
                         "target": "",
                         "ignoreDefaults": false,
-                        "bypass": false,
+                        "bypass": true,
                         "onCreate": "",
                         "onValue": "",
                         "onTouch": ""
@@ -3537,10 +3537,14 @@
                     "range": {
                       "min": -70,
                       "20%": -40,
-                      "42%": -20,
+                      "40%": -20,
                       "60%": -10,
-                      "80%": 0,
-                      "max": 6
+                      "80%": {
+                        "  0": 0
+                      },
+                      "max": {
+                        "+6": 6
+                      }
                     },
                     "logScale": false,
                     "sensitivity": 1,
@@ -3555,7 +3559,7 @@
                     "decimals": 2,
                     "target": "",
                     "ignoreDefaults": false,
-                    "bypass": false,
+                    "bypass": true,
                     "onCreate": "",
                     "onValue": "",
                     "onTouch": ""
@@ -3596,7 +3600,7 @@
                 "decimals": 1,
                 "target": "",
                 "ignoreDefaults": false,
-                "bypass": false,
+                "bypass": true,
                 "onCreate": "",
                 "onValue": "",
                 "align": "center",
