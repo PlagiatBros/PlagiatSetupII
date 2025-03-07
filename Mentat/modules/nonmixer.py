@@ -265,6 +265,7 @@ class NonMixer(Module):
         'Glame%20Lowpass%20Filter': 'Lowpass',
         'AM%20pitchshifter': 'Pitchshifter',
         'Mono%20Pan': 'Pan',
+        'Stereo%20balance%20and%20panner': 'Pan',
         'ACE%20Compressor%20(stereo)': 'ACE%20Compressor',
         'Aux%20(A)': 'Aux-A',
         'Aux%20(B)': 'Aux-B',
@@ -278,7 +279,7 @@ class NonMixer(Module):
         'Gain%20(dB)': 'Gain',
         'Level%20(dB)': 'Level',
         'Wet%20Level%20(dB)': 'Wet',
-
         'Cutoff%20Frequency': 'Cutoff',
         'Pitch%20shift': 'Pitch',
+        'Balance': 'Pan',
     }
