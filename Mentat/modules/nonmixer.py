@@ -82,10 +82,11 @@ class NonMixer(Module):
         while True:
             self.wait(1/30, 'sec')
             for strip in self.submodules:
-                stripmod = self.submodules[strip]
+                # stripmod = self.submodules[strip]
                 meter_name = 'Meter'
-                if stripmod.get_parameter('PFL') and stripmod.get('PFL'):
-                    meter_name += '.1'
+                # only 1st meter (pre) is reachable
+                # if stripmod.get_parameter('PFL') and stripmod.get('PFL'):
+                #     meter_name += '.1'
                 self.send(f'{NMPREFIX}{self.name}/strip/{strip}/{meter_name}/Level%20(dB)/unscaled')
 
 
@@ -148,11 +149,11 @@ class NonMixer(Module):
                                 # skip dsp/bypass for these
                                 return False
 
-                            if plugin_name == 'Meter.1':
-                                if 'PFL' not in strip_mod.parameters:
-                                    strip_mod.add_parameter('PFL', None, 'i', default=0)
-                                return False
-
+                            # if plugin_name == 'Meter.1':
+                            #     if 'PFL' not in strip_mod.parameters:
+                            #         strip_mod.add_parameter('PFL', None, 'i', default=0)
+                            #     return False
+                            # 2nd meter registers as "Meter" instead of "Meter.1"
                             if param_shortname in strip_mod.parameters:
                                 return False
 
