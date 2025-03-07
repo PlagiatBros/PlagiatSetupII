@@ -133,10 +133,6 @@ class StickItOut(Video, Light, RouteBase):
         # Keyboards
         jmjKeyboard.set_sound('ZJestoProunk')
 
-        # Bass
-        # bassFX.set('zynwah', 'on')
-        bass.set('BassDry', 'GxChorus-Stereo', 'BYPASS', 1)
-
         # Vocals
         vocalsNano.set('gars_exclu', 'on')
         vocalsKesch.set('normo_exclu', 'on')
@@ -285,10 +281,6 @@ class StickItOut(Video, Light, RouteBase):
         samplesFX3Reverb.set('SamplesFX3Reverb', 'Mute', 0.0)
         samplesFX2Delay.set('Samples[1-4]', 'Gain', -24.0)
         samplesFX2Delay.set('SamplesFX2Delay', 'Mute', 0.0)
-
-        # Bass
-        bass.set('BassDry', 'GxChorus-Stereo', 'BYPASS', 1)
-
 
         # Keyboards
         jmjKeyboard.set_sound("ZDupieux")
@@ -485,10 +477,6 @@ class StickItOut(Video, Light, RouteBase):
         # Transport
         transport.start()
 
-        # Bass
-        bass.set('BassDry', 'GxChorus-Stereo', 'BYPASS', 1)
-
-
         # Vocals
         vocalsNano.set('gars_exclu', 'on')
         vocalsKesch.set('normo_exclu', 'on')
@@ -632,9 +620,6 @@ class StickItOut(Video, Light, RouteBase):
         vocalsKesch.set('normo_exclu', 'on')
 
         inputs.set('keschmic', 'static')
-
-        # Bass
-        bass.set('BassDry', 'GxChorus-Stereo', 'BYPASS', 1)
 
         # Keyboards
         jmjKeyboard.set_sound("ZDupieux")

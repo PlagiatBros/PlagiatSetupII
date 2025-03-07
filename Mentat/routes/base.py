@@ -176,7 +176,6 @@ class RouteBase(Route):
         """
         # BassFX
         bassFX.reset('BassDegrade', 'MDA%20Degrade', 'rate')
-        bass.set('BassDry', 'GxChorus-Stereo', 'BYPASS', 0)
 
 
         jmjTranspose.set('octave-bonus', 0)
