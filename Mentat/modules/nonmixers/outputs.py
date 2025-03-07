@@ -34,7 +34,7 @@ class Outputs(NonMixer):
 
         return state
 
-    def load_fx_state(self, state_name, fx_name):
+    def load_fx_state(self, strip_name, fx_name, state_name):
         if state_name in self.states:
-            state = [s for s in self.states[state_name] if s[0] == fx_name]
+            state = [s for s in self.states[state_name] if s[0] == strip_name and s[1] == fx_name]
             self.set_state(state)
