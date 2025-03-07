@@ -82,7 +82,11 @@ class NonMixer(Module):
         while True:
             self.wait(1/30, 'sec')
             for strip in self.submodules:
-                self.send(NMPREFIX + self.name + '/strip/'+strip+'/Meter/Level%20(dB)/unscaled')
+                stripmod = self.submodules[strip]
+                meter_name = 'Meter'
+                if strip.get_parameter('PFL') and strip.get('PFL'):
+                    meter_name += '.1'
+                self.send(f'{NMPREFIX}{self.name}/strip/{strip}/{meter_name}/Level%20(dB)/unscaled')
 
 
     def enable_meters(self):
@@ -138,11 +142,17 @@ class NonMixer(Module):
                         if param_shortname in NonMixer.parameter_aliases:
                             param_shortname = NonMixer.parameter_aliases[param_shortname]
 
-                        if plugin_name in ['Gain', 'Pan', 'Meter']:
+                        if plugin_name in ['Gain', 'Pan', 'Meter', 'Meter.1']:
                             # add gain / pan / level params directly to the strip module
                             if param_shortname == 'dsp/bypass':
                                 # skip dsp/bypass for these
                                 return False
+
+                            if plugin_name == 'Meter.1':
+                                if 'PFL' not in strip_mod.parameters:
+                                    strip_mod.add_parameter('PFL', None, 'i', default=0)
+                                return
+
                             strip_mod.add_parameter(param_shortname, parameter_address if plugin_name != 'Meter' else None, 'f', default=None)
                             strip_mod.parameters[param_shortname].range = args[3:5]
 
@@ -214,7 +224,7 @@ class NonMixer(Module):
                 self.check_init_done()
 
 
-            if plugin_name in ['Pan', 'Gain', 'Meter']:
+            if plugin_name in ['Pan', 'Gain', 'Meter', 'Meter.1']:
                 self.set(strip, param_shortname, args[1])
             else:
                 self.set(strip, plugin_name, param_shortname, args[1])
