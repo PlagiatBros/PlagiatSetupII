@@ -33,3 +33,8 @@ class Outputs(NonMixer):
             state.append(s)
 
         return state
+
+    def load_fx_state(self, state_name, fx_name):
+        if state_name in self.states:
+            state = [s for s in self.states[state_name] if s[0] == fx_name]
+            self.set_state(state)
