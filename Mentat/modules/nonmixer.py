@@ -140,6 +140,9 @@ class NonMixer(Module):
 
                         if plugin_name in ['Gain', 'Pan', 'Meter']:
                             # add gain / pan / level params directly to the strip module
+                            if param_shortname == 'dsp/bypass':
+                                # skip dsp/bypass for these
+                                return False
                             strip_mod.add_parameter(param_shortname, parameter_address if plugin_name != 'Meter' else None, 'f', default=None)
                             strip_mod.parameters[param_shortname].range = args[3:5]
 
