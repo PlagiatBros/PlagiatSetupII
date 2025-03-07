@@ -84,7 +84,7 @@ class NonMixer(Module):
             for strip in self.submodules:
                 stripmod = self.submodules[strip]
                 meter_name = 'Meter'
-                if strip.get_parameter('PFL') and strip.get('PFL'):
+                if stripmod.get_parameter('PFL') and stripmod.get('PFL'):
                     meter_name += '.1'
                 self.send(f'{NMPREFIX}{self.name}/strip/{strip}/{meter_name}/Level%20(dB)/unscaled')
 
