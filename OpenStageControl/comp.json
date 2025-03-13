@@ -194,7 +194,7 @@
                 "top": 0,
                 "left": 0,
                 "lock": false,
-                "id": "xy_1",
+                "id": "comp_pad",
                 "visible": true,
                 "interaction": true,
                 "comments": "",
@@ -220,7 +220,7 @@
                 "spring": false,
                 "rangeX": {
                   "min": -60,
-                  "max": 0
+                  "max": 10
                 },
                 "rangeY": {
                   "min": 20,

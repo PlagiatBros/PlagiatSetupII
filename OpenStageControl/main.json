@@ -5466,7 +5466,7 @@
                         "preArgs": "",
                         "decimals": 2,
                         "target": "",
-                        "onCreate": "setInterval(()=>{\n  var d = new Date()\n  set(this,d.getUTCHours()+2 + ':' + String(d.getUTCMinutes()).padStart(2,'0'))\n},1000)",
+                        "onCreate": "setInterval(()=>{\n  var d = new Date(),\n      h = d.getHours().toLocaleString().padStart(2,\"0\"),\n      m = d.getMinutes().toLocaleString().padStart(2,\"0\")\n  set(this, `${h}:${m}`)\n},1000)",
                         "onValue": "",
                         "borderRadius": "auto",
                         "bypass": false
