@@ -68,7 +68,7 @@ class GrandOpening(Video, Light, RouteBase):
         # Vocals
         vocalsNano.set('normo_exclu', 'on')
         vocalsKesch.set('meuf_exclu', 'on')
-        vocalsFeat.set('normo_exclu', 'on')
+        vocalsChast.set('normo_exclu', 'on')
 
         autotuneKeschNormo.set('correction', 0)
         inputs.set('keschmic', 'static')
@@ -101,7 +101,7 @@ class GrandOpening(Video, Light, RouteBase):
         # Vocals
         vocalsNano.set('normo_exclu', 'on')
         vocalsKesch.set('normo_exclu', 'on')
-        vocalsFeat.set('normo_exclu', 'on')
+        vocalsChast.set('normo_exclu', 'on')
 
         autotuneKeschNormo.set('correction', 1)
         inputs.set('keschmic', 'dynamic')
@@ -150,7 +150,7 @@ class GrandOpening(Video, Light, RouteBase):
         # Vocals
         vocalsNano.set('normo_exclu', 'on')
         vocalsKesch.set('normo_exclu', 'on')
-        vocalsFeat.set('normo_exclu', 'on')
+        vocalsChast.set('normo_exclu', 'on')
 
         autotuneKeschNormo.set('correction', 1)
         inputs.set('keschmic', 'dynamic')
@@ -179,7 +179,7 @@ class GrandOpening(Video, Light, RouteBase):
         # Vocals
         vocalsNano.set('normo_exclu', 'on')
         vocalsKesch.set('normo_exclu', 'on')
-        vocalsFeat.set('normo_exclu', 'on')
+        vocalsChast.set('normo_exclu', 'on')
 
         autotuneKeschNormo.set('correction', 1)
         inputs.set('keschmic', 'dynamic')

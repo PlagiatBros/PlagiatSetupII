@@ -224,10 +224,10 @@ class RouteBase(Route):
                 mod.set('pre', 'off')
                 v = 'Nano' if 'Nano' in name else 'Kesch'
                 # mod.set('%sAB' % v, 'Mute', 1)
-            elif 'VocalsFeatFX' in name:
+            elif 'VocalsChastFX' in name:
                 mod.set('pre', 'off')
 
-            elif name in ['NanoMeuf', 'NanoNormo', 'NanoGars', 'KeschMeuf', 'KeschNormo', 'KeschGars',  'FeatMeuf', 'FeatNormo', 'FeatGars']:
+            elif name in ['NanoMeuf', 'NanoNormo', 'NanoGars', 'KeschMeuf', 'KeschNormo', 'KeschGars',  'ChastMeuf', 'ChastNormo', 'ChastGars']:
                 mod.set('correction', 1)
 
 
@@ -236,7 +236,7 @@ class RouteBase(Route):
                 ('SynthsFX2Delay', 'SynthsFX2Delay'),
                 ('VocalsNanoFX1Delay', 'VocalsNanoFX1Delay'),
                 ('VocalsKeschFX1Delay', 'VocalsKeschFX1Delay'),
-                ('VocalsFeatFX1Delay', 'VocalsFeatFX1Delay')
+                ('VocalsChastFX1Delay', 'VocalsChastFX1Delay')
                 ]:
 
             self.engine.modules[mixer].set(strip, 'GxMultiBandDelay', 'feedback', 0.5)
@@ -247,7 +247,7 @@ class RouteBase(Route):
 
         vocalsNanoFX2Delay.set('Nano*', 'Gain', -15.0)
         vocalsKeschFX2Delay.set('Kesch*', 'Gain', -15.0)
-        vocalsFeatFX2Delay.set('Feat*', 'Gain', -15.0)
+        vocalsChastFX2Delay.set('Chast*', 'Gain', -15.0)
 
         postprocess.set_filter('*', 21600)
         postprocess.set_pitch('*', 1)

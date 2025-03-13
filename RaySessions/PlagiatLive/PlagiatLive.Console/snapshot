@@ -48,7 +48,7 @@
 	Gain_Module 0x1C create :parameter_values "-20.000000:0.000000:0.000000" :is_default 1 :chain 0x1A :active 1
 	Meter_Module 0x1D create :is_default 1 :chain 0x1A :active 1
 	JACK_Module 0x1E create :parameter_values "1.000000:0.000000" :is_default 1 :chain 0x1A :active 1
-	Mixer_Strip 0x20 create :name "VxFeat" :width "narrow" :tab "signal" :color 140471724 :gain_mode 0 :mute_mode 0 :group 0x1F :auto_input "" :manual_connection 0
+	Mixer_Strip 0x20 create :name "VxChast" :width "narrow" :tab "signal" :color 140471724 :gain_mode 0 :mute_mode 0 :group 0x1F :auto_input "" :manual_connection 0
 	Chain 0x21 create :strip 0x20 :tab "chain"
 	JACK_Module 0x22 create :parameter_values "0.000000:1.000000" :is_default 1 :chain 0x21 :active 1
 	Gain_Module 0x23 create :parameter_values "-20.000000:0.000000:0.000000" :is_default 1 :chain 0x21 :active 1

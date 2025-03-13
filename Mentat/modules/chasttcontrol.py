@@ -128,11 +128,11 @@ class ChasttControl(Module):
                         self.engine.route('osc', 'chastt', '/chastt/button', [cc - 100])
                     else:
                         if cc == 109:
-                            self.engine.modules['VocalsFeat'].set('gars_exclu', 'on')
+                            self.engine.modules['VocalsChast'].set('gars_exclu', 'on')
                         elif cc == 110:
-                            self.engine.modules['VocalsFeat'].set('normo_exclu', 'on')
+                            self.engine.modules['VocalsChast'].set('normo_exclu', 'on')
                         elif cc == 111:
-                            self.engine.modules['VocalsFeat'].set('meuf_exclu', 'on')
+                            self.engine.modules['VocalsChast'].set('meuf_exclu', 'on')
                         elif cc == 112:
                             self.engine.modules['AudioLooper'].record(9)
                         elif cc == 113:
@@ -152,7 +152,7 @@ class ChasttControl(Module):
 
 
             if cc == 18:
-                self.engine.modules['MonitorsFeat'].set('MonitorsFeat', 'Gain', args[2] / 127 * 76 - 70)
+                self.engine.modules['MonitorsChast'].set('MonitorsChast', 'Gain', args[2] / 127 * 76 - 70)
 
             if cc in [41, 42]:
 
@@ -162,7 +162,7 @@ class ChasttControl(Module):
                 self.last_cc = args
 
                 if cc == 41:
-                    self.engine.modules['VocalsFeat'].set('FeatIn', 'Gate', 'Range%20(dB)', -90 if args[2] == 0 else 0)
+                    self.engine.modules['VocalsChast'].set('ChastIn', 'Gate', 'Range%20(dB)', -90 if args[2] == 0 else 0)
 
         elif address == '/sysex':
 

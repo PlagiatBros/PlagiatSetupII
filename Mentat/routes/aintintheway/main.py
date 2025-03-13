@@ -82,7 +82,7 @@ class AintInTheWay(Video, Light, RouteBase):
         # Vocals
         vocalsKesch.set('normo_exclu', 'on')
         vocalsNano.set('normo_exclu', 'on')
-        vocalsFeat.set('normo_exclu', 'on')
+        vocalsChast.set('normo_exclu', 'on')
 
         inputs.set('keschmic', 'dynamic')
 
@@ -108,7 +108,7 @@ class AintInTheWay(Video, Light, RouteBase):
         # Vocals
         vocalsKesch.set('normo_exclu', 'on')
         vocalsNano.set('normo_exclu', 'on')
-        vocalsFeat.set('normo_exclu', 'on')
+        vocalsChast.set('normo_exclu', 'on')
 
         inputs.set('keschmic', 'dynamic')
 
@@ -150,7 +150,7 @@ class AintInTheWay(Video, Light, RouteBase):
         # Vocals
         vocalsKesch.set('normo_exclu', 'on')
         vocalsNano.set('normo_exclu', 'on')
-        vocalsFeat.set('normo_exclu', 'on')
+        vocalsChast.set('normo_exclu', 'on')
 
         inputs.set('keschmic', 'dynamic')
 
@@ -172,7 +172,7 @@ class AintInTheWay(Video, Light, RouteBase):
         # Vocals
         vocalsKesch.set('normo_exclu', 'on')
         vocalsNano.set('normo_exclu', 'on')
-        vocalsFeat.set('normo_exclu', 'on')
+        vocalsChast.set('normo_exclu', 'on')
 
         inputs.set('keschmic', 'dynamic')
 
@@ -227,7 +227,7 @@ class AintInTheWay(Video, Light, RouteBase):
         # Vocals
         vocalsKesch.set('normo_exclu', 'on')
         vocalsNano.set('normo_exclu', 'on')
-        vocalsFeat.set('normo_exclu', 'on')
+        vocalsChast.set('normo_exclu', 'on')
 
         inputs.set('keschmic', 'static')
 
@@ -253,7 +253,7 @@ class AintInTheWay(Video, Light, RouteBase):
         # Vocals
         vocalsKesch.set('normo_exclu', 'on')
         vocalsNano.set('normo_exclu', 'on')
-        vocalsFeat.set('normo_exclu', 'on')
+        vocalsChast.set('normo_exclu', 'on')
 
         inputs.set('keschmic', 'dynamic')
 
@@ -287,7 +287,7 @@ class AintInTheWay(Video, Light, RouteBase):
         # Vocals
         vocalsKesch.set('normo_exclu', 'on')
         vocalsNano.set('normo_exclu', 'on')
-        vocalsFeat.set('normo_exclu', 'on')
+        vocalsChast.set('normo_exclu', 'on')
 
         inputs.set('keschmic', 'dynamic')
 

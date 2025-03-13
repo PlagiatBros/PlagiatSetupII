@@ -94,7 +94,7 @@ class QueenCloclo(Video, Light, RouteBase):
         # Vocals
         vocalsKesch.set('meuf_exclu', 'on')
         vocalsNano.set('normo_exclu', 'on')
-        vocalsFeat.set('normo_exclu', 'on')
+        vocalsChast.set('normo_exclu', 'on')
 
         inputs.set('keschmic', 'static')
 
@@ -139,7 +139,7 @@ class QueenCloclo(Video, Light, RouteBase):
         # Vocals
         vocalsKesch.set('normo_exclu', 'on')
         vocalsNano.set('normo_exclu', 'on')
-        vocalsFeat.set('normo_exclu', 'on')
+        vocalsChast.set('normo_exclu', 'on')
 
         inputs.set('keschmic', 'dynamic')
 
@@ -255,7 +255,7 @@ class QueenCloclo(Video, Light, RouteBase):
         # Vocals
         vocalsKesch.set('normo_exclu', 'on')
         vocalsNano.set('normo_exclu', 'on')
-        vocalsFeat.set('normo_exclu', 'on')
+        vocalsChast.set('normo_exclu', 'on')
 
         inputs.set('keschmic', 'dynamic')
 
@@ -279,7 +279,7 @@ class QueenCloclo(Video, Light, RouteBase):
         transport.start()
 
         # harmo chastitties
-        autotuneFeatNormo.set_notes(*self.scale[2:], *self.scale[0:2])
+        autotuneChastNormo.set_notes(*self.scale[2:], *self.scale[0:2])
 
         self.start_scene('sequences/autorefrain', lambda: [
             self.wait(15),
@@ -295,7 +295,7 @@ class QueenCloclo(Video, Light, RouteBase):
         # Vocals
         vocalsKesch.set('normo_exclu', 'on')
         vocalsNano.set('normo_exclu', 'on')
-        vocalsFeat.set('normo_exclu', 'on')
+        vocalsChast.set('normo_exclu', 'on')
 
         inputs.set('keschmic', 'dynamic')
 
@@ -351,7 +351,7 @@ class QueenCloclo(Video, Light, RouteBase):
         # Vocals
         vocalsKesch.set('normo_exclu', 'on')
         vocalsNano.set('normo_exclu', 'on')
-        vocalsFeat.set('normo_exclu', 'on')
+        vocalsChast.set('normo_exclu', 'on')
 
         inputs.set('keschmic', 'static')
 
@@ -409,7 +409,7 @@ class QueenCloclo(Video, Light, RouteBase):
         # Vocals
         vocalsKesch.set('normo_exclu', 'on')
         vocalsNano.set('normo_exclu', 'on')
-        vocalsFeat.set('normo_exclu', 'on')
+        vocalsChast.set('normo_exclu', 'on')
 
         inputs.set('keschmic', 'dynamic')
 
@@ -454,7 +454,7 @@ class QueenCloclo(Video, Light, RouteBase):
         # Vocals
         vocalsKesch.set('normo_exclu', 'on')
         vocalsNano.set('normo_exclu', 'on')
-        vocalsFeat.set('normo_exclu', 'on')
+        vocalsChast.set('normo_exclu', 'on')
 
         inputs.set('keschmic', 'dynamic')
 
@@ -497,7 +497,7 @@ class QueenCloclo(Video, Light, RouteBase):
         # Vocals
         vocalsKesch.set('normo_exclu', 'on')
         vocalsNano.set('normo_exclu', 'on')
-        vocalsFeat.set('normo_exclu', 'on')
+        vocalsChast.set('normo_exclu', 'on')
 
         inputs.set('keschmic', 'dynamic')
 
@@ -584,7 +584,7 @@ class QueenCloclo(Video, Light, RouteBase):
         # Vocals
         vocalsKesch.set('normo_exclu', 'on')
         vocalsNano.set('normo_exclu', 'on')
-        vocalsFeat.set('normo_exclu', 'on')
+        vocalsChast.set('normo_exclu', 'on')
 
         inputs.set('keschmic', 'dynamic')
 
@@ -661,7 +661,7 @@ class QueenCloclo(Video, Light, RouteBase):
         # Vocals
         vocalsKesch.set('meuf_exclu', 'on')
         vocalsNano.set('normo_exclu', 'on')
-        vocalsFeat.set('normo_exclu', 'on')
+        vocalsChast.set('normo_exclu', 'on')
 
         inputs.set('keschmic', 'static')
 

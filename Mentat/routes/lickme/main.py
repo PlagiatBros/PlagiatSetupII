@@ -79,7 +79,7 @@ class LickMe(RouteBase):
         # Vocals
         vocalsNano.set('normo_exclu', 'on')
         vocalsKesch.set('normo_exclu', 'on')
-        vocalsFeat.set('normo_exclu', 'on')
+        vocalsChast.set('normo_exclu', 'on')
 
         inputs.set('keschmic', 'dynamic')
 
@@ -137,7 +137,7 @@ class LickMe(RouteBase):
         # Vocals
         vocalsNano.set('normo_exclu', 'on')
         vocalsKesch.set('normo_exclu', 'on')
-        vocalsFeat.set('normo_exclu', 'on')
+        vocalsChast.set('normo_exclu', 'on')
 
         inputs.set('keschmic', 'dynamic')
 
@@ -171,7 +171,7 @@ class LickMe(RouteBase):
         # Vocals
         vocalsNano.set('normo_exclu', 'on')
         vocalsKesch.set('normo_exclu', 'on')
-        vocalsFeat.set('normo_exclu', 'on')
+        vocalsChast.set('normo_exclu', 'on')
 
         inputs.set('keschmic', 'dynamic')
 
@@ -236,7 +236,7 @@ class LickMe(RouteBase):
         # Vocals
         vocalsNano.set('normo_exclu', 'on')
         vocalsKesch.set('normo_exclu', 'on')
-        vocalsFeat.set('normo_exclu', 'on')
+        vocalsChast.set('normo_exclu', 'on')
 
         inputs.set('keschmic', 'dynamic')
 
@@ -327,7 +327,7 @@ class LickMe(RouteBase):
         # Vocals
         vocalsNano.set('normo_exclu', 'on')
         vocalsKesch.set('normo_exclu', 'on')
-        vocalsFeat.set('normo_exclu', 'on')
+        vocalsChast.set('normo_exclu', 'on')
 
         inputs.set('keschmic', 'dynamic')
 

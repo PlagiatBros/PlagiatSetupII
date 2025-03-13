@@ -17,7 +17,7 @@
         # Vocals
         vocalsNano.set('normo_exclu', 'on')
         vocalsKesch.set('normo_exclu', 'on')
-        vocalsFeat.set('normo_exclu', 'on')
+        vocalsChast.set('normo_exclu', 'on')
 
         # Synths
         synths.set('ZDiploLike', 'Pan', -0.15)
@@ -73,7 +73,7 @@
         # Vocals
         vocalsNano.set('normo_exclu', 'on')
         vocalsKesch.set('normo_exclu', 'on')
-        vocalsFeat.set('normo_exclu', 'on')
+        vocalsChast.set('normo_exclu', 'on')
 
 
     @mk2_button(99, 'green')
@@ -105,7 +105,7 @@
         # Vocals
         vocalsNano.set('normo_exclu', 'on')
         vocalsKesch.set('normo_exclu', 'on')
-        vocalsFeat.set('normo_exclu', 'on')
+        vocalsChast.set('normo_exclu', 'on')
 
         # Séquence
         self.start_sequence('sequence/couplet1', [
@@ -163,7 +163,7 @@
         # Vocals
         vocalsNano.set('normo_exclu', 'on')
         vocalsKesch.set('normo_exclu', 'on')
-        vocalsFeat.set('normo_exclu', 'on')
+        vocalsChast.set('normo_exclu', 'on')
 
         # Séquences
         self.start_sequence('sequence/theme_lickme_samplepitch', [
@@ -252,7 +252,7 @@
         # Vocals
         vocalsNano.set('normo_exclu', 'on')
         vocalsKesch.set('normo_exclu', 'on')
-        vocalsFeat.set('normo_exclu', 'on')
+        vocalsChast.set('normo_exclu', 'on')
 
         # Synths
         synths.set("ZStambul", 'Pan', -0.15)
@@ -303,7 +303,7 @@
 
         # Vocals
         vocalsKesch.set('normo_exclu', 'on')
-        vocalsFeat.set('normo_exclu', 'on')
+        vocalsChast.set('normo_exclu', 'on')
         vocalsNano.set('normo_exclu', 'on')
 
         for name in ['KeschMeuf', 'KeschNormo', 'KeschGars']:
@@ -334,7 +334,7 @@
 
         # Vocals
         vocalsKesch.set('normo_exclu', 'on')
-        vocalsFeat.set('normo_exclu', 'on')
+        vocalsChast.set('normo_exclu', 'on')
         vocalsNano.set('normo_exclu', 'on')
 
         # Séquence

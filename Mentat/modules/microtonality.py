@@ -9,7 +9,7 @@ class MicroTonality(Module):
 
         super().__init__(*args, **kwargs)
 
-        self.autotunes = ['NanoMeuf', 'NanoNormo', 'NanoGars', 'KeschMeuf', 'KeschNormo', 'KeschGars', 'FeatMeuf', 'FeatNormo', 'FeatGars']
+        self.autotunes = ['NanoMeuf', 'NanoNormo', 'NanoGars', 'KeschMeuf', 'KeschNormo', 'KeschGars', 'ChastMeuf', 'ChastNormo', 'ChastGars']
         self.zynsynth = 'ZHiSynths'
         self.calfpitcher = 'CalfPitcher'
 

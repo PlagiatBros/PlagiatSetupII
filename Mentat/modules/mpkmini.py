@@ -138,21 +138,21 @@ class MpkControl(Module):
 
             if cc == 24:
                 # granular in
-                self.engine.modules['VocalsFeatFX6Granular'].set('FeatMeuf', 'Gain', 70 * val / 127 - 70)
-                self.engine.modules['VocalsFeatFX6Granular'].set('FeatGars', 'Gain',70 * val / 127 - 70)
-                self.engine.modules['VocalsFeatFX6Granular'].set('FeatNormo', 'Gain', 70 * val / 127 - 70)
-                self.engine.modules['VocalsFeatFX6Granular'].set('pre', 'on' if val != 0 else 'off')
+                self.engine.modules['VocalsChastFX6Granular'].set('ChastMeuf', 'Gain', 70 * val / 127 - 70)
+                self.engine.modules['VocalsChastFX6Granular'].set('ChastGars', 'Gain',70 * val / 127 - 70)
+                self.engine.modules['VocalsChastFX6Granular'].set('ChastNormo', 'Gain', 70 * val / 127 - 70)
+                self.engine.modules['VocalsChastFX6Granular'].set('pre', 'on' if val != 0 else 'off')
             if cc == 25:
-                self.engine.modules['VocalsFeatFX6Granular'].set('VocalsFeatFX6Granular', 'ZamGrains', 'Freeze', 1 if val > 64 else 0)
+                self.engine.modules['VocalsChastFX6Granular'].set('VocalsChastFX6Granular', 'ZamGrains', 'Freeze', 1 if val > 64 else 0)
 
             if cc == 1:
-                self.engine.modules['VocalsFeatFX6Granular'].set('VocalsFeatFX6Granular', 'ZamGrains', 'Grains', 100*val / 127 )
+                self.engine.modules['VocalsChastFX6Granular'].set('VocalsChastFX6Granular', 'ZamGrains', 'Grains', 100*val / 127 )
             if cc == 2:
-                self.engine.modules['VocalsFeatFX6Granular'].set('VocalsFeatFX6Granular', 'ZamGrains', 'Grain%20Speed', 20 * pow(val / 127, 2) )
+                self.engine.modules['VocalsChastFX6Granular'].set('VocalsChastFX6Granular', 'ZamGrains', 'Grain%20Speed', 20 * pow(val / 127, 2) )
             if cc == 3:
-                self.engine.modules['VocalsFeatFX6Granular'].set('VocalsFeatFX6Granular', 'ZamGrains', 'Play%20Speed', 20 * pow(val / 127, 2) )
+                self.engine.modules['VocalsChastFX6Granular'].set('VocalsChastFX6Granular', 'ZamGrains', 'Play%20Speed', 20 * pow(val / 127, 2) )
             if cc == 4:
-                self.engine.modules['VocalsFeatFX6Granular'].set('VocalsFeatFX6Granular', 'ZamGrains', 'Loop%20time', 900*val / 127 +100 )
+                self.engine.modules['VocalsChastFX6Granular'].set('VocalsChastFX6Granular', 'ZamGrains', 'Loop%20time', 900*val / 127 +100 )
             self.last_cc = cc
 
         elif address == '/note_on':

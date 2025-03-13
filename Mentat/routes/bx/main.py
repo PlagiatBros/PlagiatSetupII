@@ -104,7 +104,7 @@ class BX(Video, Light, RouteBase):
 
         # Vocals
         vocalsNano.set('normo_exclu', 'on')
-        vocalsFeat.set('normo_exclu', 'on')
+        vocalsChast.set('normo_exclu', 'on')
         vocalsKesch.set('normo_exclu', 'on')
 
         inputs.set('keschmic', 'static')
@@ -170,7 +170,7 @@ class BX(Video, Light, RouteBase):
 
         # Vocals
         vocalsNano.set('normo_exclu', 'on')
-        vocalsFeat.set('normo_exclu', 'on')
+        vocalsChast.set('normo_exclu', 'on')
         vocalsKesch.set('normo_exclu', 'on')
 
         inputs.set('keschmic', 'static')
@@ -244,7 +244,7 @@ class BX(Video, Light, RouteBase):
 
         # Vocals
         vocalsNano.set('normo_exclu', 'on')
-        vocalsFeat.set('normo_exclu', 'on')
+        vocalsChast.set('normo_exclu', 'on')
         vocalsKesch.set('normo_exclu', 'on')
 
 
@@ -288,7 +288,7 @@ class BX(Video, Light, RouteBase):
 
         # Vocals
         vocalsNano.set('normo_exclu', 'on')
-        vocalsFeat.set('normo_exclu', 'on')
+        vocalsChast.set('normo_exclu', 'on')
         vocalsKesch.set('normo_exclu', 'on')
 
         inputs.set('keschmic', 'dynamic')
@@ -344,7 +344,7 @@ class BX(Video, Light, RouteBase):
         #
         # # Vocals
         # vocalsNano.set('normo_exclu', 'on')
-        # vocalsFeat.set('normo_exclu', 'on')
+        # vocalsChast.set('normo_exclu', 'on')
         # vocalsKesch.set('normo_exclu', 'on')
         #
         # # Keyboard
@@ -442,7 +442,7 @@ class BX(Video, Light, RouteBase):
         # Vocals
         vocalsNano.set('normo_exclu', 'on')
         vocalsKesch.set('normo_exclu', 'on')
-        vocalsFeat.set('normo_exclu', 'on')
+        vocalsChast.set('normo_exclu', 'on')
 
         # VOCALS
         inputs.set('keschmic', 'dynamic')
@@ -483,12 +483,12 @@ class BX(Video, Light, RouteBase):
 
         self.start_sequence('sequence/bad_kiddybitch', [
             {
-                1: lambda: vocalsFeat.set('normo_exclu', 'on')
+                1: lambda: vocalsChast.set('normo_exclu', 'on')
             }, {},
             {
                 1: lambda: [
-                    vocalsFeat.set('normo_exclu', 'on'),
-                    vocalsFeat.set('meuf', 'on')
+                    vocalsChast.set('normo_exclu', 'on'),
+                    vocalsChast.set('meuf', 'on')
                     ]
             }, {}
         ], loop=True)
@@ -543,7 +543,7 @@ class BX(Video, Light, RouteBase):
         # Vocals
         vocalsNano.set('meuf_exclu', 'on')
         vocalsKesch.set('normo_exclu', 'on')
-        vocalsFeat.set('normo_exclu', 'on')
+        vocalsChast.set('normo_exclu', 'on')
 
         # VOCALS
         inputs.set('keschmic', 'dynamic')
@@ -607,20 +607,20 @@ class BX(Video, Light, RouteBase):
         # Vocals
         vocalsNano.set('normo_exclu', 'on')
         vocalsKesch.set('gars_exclu', 'on')
-        vocalsFeat.set('normo_exclu', 'on')
-        vocalsFeat.set('meuf', 'on')
+        vocalsChast.set('normo_exclu', 'on')
+        vocalsChast.set('meuf', 'on')
 
         # VOCALS
         inputs.set('keschmic', 'static')
 
 
-        vocalsFeat.set('normo_exclu', 'on')
-        vocalsFeatFX2Delay.set('FeatNormo', 'Gain', 0.0)
-        vocalsFeatFX2Delay.set('FeatNormo', 'Mute', 0.0)
-        vocalsFeatFX2Delay.set('VocalsFeatFX2Delay', 'Invada%20Delay%20Munge%20(mono%20in)', 'Delay%201', 0.15) #0.203)
-        vocalsFeatFX2Delay.set('VocalsFeatFX2Delay', 'Invada%20Delay%20Munge%20(mono%20in)', 'Feedback%201', 33)
-        vocalsFeatFX2Delay.set('VocalsFeatFX2Delay', 'Invada%20Delay%20Munge%20(mono%20in)', 'Delay%202', 0.25) #0.347)
-        vocalsFeatFX2Delay.set('VocalsFeatFX2Delay', 'Invada%20Delay%20Munge%20(mono%20in)', 'Feedback%202', 29)
+        vocalsChast.set('normo_exclu', 'on')
+        vocalsChastFX2Delay.set('ChastNormo', 'Gain', 0.0)
+        vocalsChastFX2Delay.set('ChastNormo', 'Mute', 0.0)
+        vocalsChastFX2Delay.set('VocalsChastFX2Delay', 'Invada%20Delay%20Munge%20(mono%20in)', 'Delay%201', 0.15) #0.203)
+        vocalsChastFX2Delay.set('VocalsChastFX2Delay', 'Invada%20Delay%20Munge%20(mono%20in)', 'Feedback%201', 33)
+        vocalsChastFX2Delay.set('VocalsChastFX2Delay', 'Invada%20Delay%20Munge%20(mono%20in)', 'Delay%202', 0.25) #0.347)
+        vocalsChastFX2Delay.set('VocalsChastFX2Delay', 'Invada%20Delay%20Munge%20(mono%20in)', 'Feedback%202', 29)
 
 
 
@@ -728,7 +728,7 @@ class BX(Video, Light, RouteBase):
         # Vocals
         vocalsNano.set('normo_exclu', 'on')
         vocalsKesch.set('gars_exclu', 'on')
-        vocalsFeat.set('normo_exclu', 'on')
+        vocalsChast.set('normo_exclu', 'on')
 
         # VOCALS
         inputs.set('keschmic', 'dynamic')
@@ -834,8 +834,8 @@ class BX(Video, Light, RouteBase):
         # Vocals
         # vocalsKesch.set('normo_exclu', 'on')
         vocalsNano.set('normo_exclu', 'on')
-        vocalsFeat.set('gars_exclu', 'on')
-        # vocalsFeatFX1Delay.set('active', 'on'),
+        vocalsChast.set('gars_exclu', 'on')
+        # vocalsChastFX1Delay.set('active', 'on'),
 
         # VOCALS
         inputs.set('keschmic', 'dynamic')
@@ -909,26 +909,26 @@ class BX(Video, Light, RouteBase):
                             vocalsKeschFX1Delay.set('active', 'on'),
                             vocalsKeschFX2Delay.set('active', 'on'),
                             vocalsKesch.set('meuf', 'on'),
-                            vocalsFeatFX1Delay.set('active', 'on'),
-                            vocalsFeatFX2Delay.set('active', 'on'),
+                            vocalsChastFX1Delay.set('active', 'on'),
+                            vocalsChastFX2Delay.set('active', 'on'),
                         ],
                     2.9: lambda:
                         [
                             vocalsKeschFX1Delay.set('pre', 'off'),
                             vocalsKeschFX2Delay.set('pre', 'off'),
                             vocalsKesch.set('meuf', 'off'),
-                            vocalsFeatFX1Delay.set('pre', 'off'),
-                            vocalsFeatFX2Delay.set('pre', 'off'),
+                            vocalsChastFX1Delay.set('pre', 'off'),
+                            vocalsChastFX2Delay.set('pre', 'off'),
                         ]
                 },
                 {   # bar 3
                     1: lambda: [
                         vocalsKeschFX2Delay.set('active', 'on'),
-                        vocalsFeatFX2Delay.set('active', 'on')
+                        vocalsChastFX2Delay.set('active', 'on')
                     ],
                     2.4: lambda: [
                         vocalsKeschFX2Delay.set('pre', 'off'),
-                        vocalsFeatFX2Delay.set('pre', 'off')
+                        vocalsChastFX2Delay.set('pre', 'off')
                     ],
                 }
 
@@ -962,7 +962,7 @@ class BX(Video, Light, RouteBase):
 
         # Vocals
         vocalsKesch.set('normo_exclu', 'on')
-        vocalsFeat.set('normo_exclu', 'on')
+        vocalsChast.set('normo_exclu', 'on')
         vocalsNano.set('normo_exclu', 'on')
 
         # VOCALS

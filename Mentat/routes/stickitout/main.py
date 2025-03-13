@@ -136,9 +136,9 @@ class StickItOut(Video, Light, RouteBase):
         # Vocals
         vocalsNano.set('gars_exclu', 'on')
         vocalsKesch.set('normo_exclu', 'on')
-        vocalsFeat.set('normo_exclu', 'on')
+        vocalsChast.set('normo_exclu', 'on')
 
-        self.engine.set('FeatNormo', 'correction', 0)
+        self.engine.set('ChastNormo', 'correction', 0)
 
         inputs.set('keschmic', 'static')
 
@@ -228,7 +228,7 @@ class StickItOut(Video, Light, RouteBase):
         # Vocals
         vocalsNano.set('gars_exclu', 'on')
         vocalsKesch.set('normo_exclu', 'on')
-        for name in ['KeschNormo', 'FeatNormo']:
+        for name in ['KeschNormo', 'ChastNormo']:
             self.engine.set(name, 'correction', 0)
 
         inputs.set('keschmic', 'dynamic')

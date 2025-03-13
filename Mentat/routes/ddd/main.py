@@ -86,7 +86,7 @@ class DDD(Video, Light, RouteBase):
         # Vocals
         vocalsNano.set('gars_exclu', 'on')
         vocalsKesch.set('meuf_exclu', 'on')
-        vocalsFeat.set('normo_exclu', 'on')
+        vocalsChast.set('normo_exclu', 'on')
 
         inputs.set('keschmic', 'static')
 
@@ -141,7 +141,7 @@ class DDD(Video, Light, RouteBase):
         # Vocals
         vocalsNano.set('normo_exclu', 'on')
         vocalsKesch.set('normo_exclu', 'on')
-        vocalsFeat.set('normo_exclu', 'on')
+        vocalsChast.set('normo_exclu', 'on')
 
         inputs.set('keschmic', 'dynamic')
 
@@ -172,7 +172,7 @@ class DDD(Video, Light, RouteBase):
         # Vocals
         vocalsNano.set('normo_exclu', 'on')
         vocalsKesch.set('normo_exclu', 'on')
-        vocalsFeat.set('normo_exclu', 'on')
+        vocalsChast.set('normo_exclu', 'on')
 
         inputs.set('keschmic', 'dynamic')
 
@@ -226,7 +226,7 @@ class DDD(Video, Light, RouteBase):
         # Vocals
         vocalsNano.set('normo_exclu', 'on')
         vocalsKesch.set('meuf_exclu', 'on')
-        vocalsFeat.set('normo_exclu', 'on')
+        vocalsChast.set('normo_exclu', 'on')
 
         # Keyboard
         jmjKeyboard.set_sound('ZTrumpets', boost=False)
@@ -258,7 +258,7 @@ class DDD(Video, Light, RouteBase):
         # Vocals
         vocalsNano.set('meuf_exclu', 'on')
         vocalsKesch.set('normo_exclu', 'on')
-        vocalsFeat.set('normo_exclu', 'on')
+        vocalsChast.set('normo_exclu', 'on')
 
         inputs.set('keschmic', 'static')
 
@@ -294,7 +294,7 @@ class DDD(Video, Light, RouteBase):
         # Vocals
         vocalsNano.set('normo_exclu', 'on')
         vocalsKesch.set('normo_exclu', 'on')
-        vocalsFeat.set('normo_exclu', 'on')
+        vocalsChast.set('normo_exclu', 'on')
 
         inputs.set('keschmic', 'dynamic')
 
@@ -326,9 +326,9 @@ class DDD(Video, Light, RouteBase):
         # Vocals
         vocalsNano.set('normo_exclu', 'on')
         vocalsKesch.set('normo_exclu', 'on')
-        vocalsFeat.set('normo_exclu', 'on')
+        vocalsChast.set('normo_exclu', 'on')
 
-        vocalsFeatFX3TrapVerb.set('pre', 'on')
+        vocalsChastFX3TrapVerb.set('pre', 'on')
 
         inputs.set('keschmic', 'dynamic')
 
@@ -380,7 +380,7 @@ class DDD(Video, Light, RouteBase):
         vocalsKeschFX5RingMod.set('pre', 'on')
         vocalsKeschFX5RingMod.set('KeschNormo', 'Gain',-8)
 
-        vocalsFeatFX3TrapVerb.set('pre', 'on')
+        vocalsChastFX3TrapVerb.set('pre', 'on')
         # Ring Mod sur voix
 
         inputs.set('keschmic', 'dynamic')
@@ -430,7 +430,7 @@ class DDD(Video, Light, RouteBase):
         # Vocals
         vocalsNano.set('normo_exclu', 'on')
         vocalsKesch.set('normo_exclu', 'on')
-        vocalsFeat.set('normo_exclu', 'on')
+        vocalsChast.set('normo_exclu', 'on')
 
         inputs.set('keschmic', 'dynamic')
 

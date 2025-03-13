@@ -74,7 +74,7 @@ outputs = Outputs('Outputs', 'osc', 10001)
 monitorsNano = NonMixer('MonitorsNano', 'osc', 10002)
 monitorsKesch = NonMixer('MonitorsKesch', 'osc', 10003)
 # (drums) 10004
-monitorsFeat = NonMixer('MonitorsFeat', 'osc', 10005)
+monitorsChast = NonMixer('MonitorsChast', 'osc', 10005)
 console = Console('Console', 'osc', 10006)
 
 bass = Bass('Bass', 'osc', 10010)
@@ -121,16 +121,16 @@ vocalsKeschFX7Slice = VocalsFX('VocalsKeschFX7Slice', 'osc', 10067)
 vocalsKeschFX8TapeDelay = VocalsFX('VocalsKeschFX8TapeDelay', 'osc', 10068)
 vocalsKeschFX9Scape = VocalsFX('VocalsKeschFX9Scape', 'osc', 10069)
 
-vocalsFeat = Vocals('VocalsFeat', 'osc', 10070)
-vocalsFeatFX1Delay = VocalsFX('VocalsFeatFX1Delay', 'osc', 10071)
-vocalsFeatFX2Delay = VocalsFX('VocalsFeatFX2Delay', 'osc', 10072)
-vocalsFeatFX3TrapVerb = VocalsFX('VocalsFeatFX3TrapVerb', 'osc', 10073)
-vocalsFeatFX4Disint = VocalsFX('VocalsFeatFX4Disint', 'osc', 10074)
-vocalsFeatFX5RingMod = VocalsFX('VocalsFeatFX5RingMod', 'osc', 10075)
-vocalsFeatFX6Granular = VocalsFX('VocalsFeatFX6Granular', 'osc', 10076)
-vocalsFeatFX7Slice = VocalsFX('VocalsFeatFX7Slice', 'osc', 10077)
-vocalsFeatFX8TapeDelay = VocalsFX('VocalsFeatFX8TapeDelay', 'osc', 10078)
-vocalsFeatFX9Scape = VocalsFX('VocalsFeatFX9Scape', 'osc', 10079)
+vocalsChast = Vocals('VocalsChast', 'osc', 10070)
+vocalsChastFX1Delay = VocalsFX('VocalsChastFX1Delay', 'osc', 10071)
+vocalsChastFX2Delay = VocalsFX('VocalsChastFX2Delay', 'osc', 10072)
+vocalsChastFX3TrapVerb = VocalsFX('VocalsChastFX3TrapVerb', 'osc', 10073)
+vocalsChastFX4Disint = VocalsFX('VocalsChastFX4Disint', 'osc', 10074)
+vocalsChastFX5RingMod = VocalsFX('VocalsChastFX5RingMod', 'osc', 10075)
+vocalsChastFX6Granular = VocalsFX('VocalsChastFX6Granular', 'osc', 10076)
+vocalsChastFX7Slice = VocalsFX('VocalsChastFX7Slice', 'osc', 10077)
+vocalsChastFX8TapeDelay = VocalsFX('VocalsChastFX8TapeDelay', 'osc', 10078)
+vocalsChastFX9Scape = VocalsFX('VocalsChastFX9Scape', 'osc', 10079)
 
 """
 Samplers
@@ -205,9 +205,9 @@ autotuneKeschMeuf = Autotune('KeschMeuf', 'osc', 12060, offset=4.0)
 autotuneKeschNormo = Autotune('KeschNormo', 'osc', 12061, offset=0.0)
 autotuneKeschGars = Autotune('KeschGars', 'osc', 12062, offset=-4.0)
 
-autotuneFeatMeuf = Autotune('FeatMeuf', 'osc', 12070, offset=4.0)
-autotuneFeatNormo = Autotune('FeatNormo', 'osc', 12071, offset=0.0)
-autotuneFeatGars = Autotune('FeatGars', 'osc', 12072, offset=-4.0)
+autotuneChastMeuf = Autotune('ChastMeuf', 'osc', 12070, offset=4.0)
+autotuneChastNormo = Autotune('ChastNormo', 'osc', 12071, offset=0.0)
+autotuneChastGars = Autotune('ChastGars', 'osc', 12072, offset=-4.0)
 
 
 """

@@ -32,7 +32,7 @@ class Inputs(NonMixer):
             'A': 'Kick',
             'B': 'Snare',
             'C': 'VocalsNano',
-            'D': 'Feat',
+            'D': 'Chast',
         }
 
 
