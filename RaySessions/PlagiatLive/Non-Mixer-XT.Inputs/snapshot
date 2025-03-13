@@ -58,4 +58,24 @@
 	Gain_Module 0x4D create :parameter_values "0.000000:0.000000:0.000000" :is_default 1 :chain 0x4B :active 1
 	Meter_Module 0x4E create :is_default 1 :chain 0x4B :active 1
 	JACK_Module 0x4F create :parameter_values "1.000000:0.000000" :is_default 1 :chain 0x4B :active 1
+	Mixer_Strip 0xE9 create :name "Extra_Face" :width "narrow" :tab "signal" :color 217568520 :gain_mode 0 :mute_mode 0 :group 0x7 :auto_input "" :manual_connection 0
+	Chain 0xEA create :strip 0xE9 :tab "chain"
+	JACK_Module 0xEB create :parameter_values "0.000000:1.000000" :is_default 1 :chain 0xEA :active 1
+	AUX_Module 0xF5 create :parameter_values "-70.000000" :is_default 0 :chain 0xEA :active 1 :number 0
+	AUX_Module 0xF7 create :parameter_values "-70.000000" :is_default 0 :chain 0xEA :active 1 :number 1
+	AUX_Module 0xF8 create :parameter_values "-70.000000" :is_default 0 :chain 0xEA :active 1 :number 2
+	AUX_Module 0xFC create :parameter_values "-70.000000" :is_default 0 :chain 0xEA :active 1 :number 3
+	Gain_Module 0xEC create :parameter_values "0.000000:0.000000:0.000000" :is_default 1 :chain 0xEA :active 1
+	Meter_Module 0xED create :is_default 1 :chain 0xEA :active 1
+	JACK_Module 0xEE create :parameter_values "1.000000:0.000000" :is_default 1 :chain 0xEA :active 1
+	Mixer_Strip 0xEF create :name "Extra_Butt" :width "narrow" :tab "signal" :color 66201757 :gain_mode 0 :mute_mode 0 :group 0x7 :auto_input "" :manual_connection 0
+	Chain 0xF0 create :strip 0xEF :tab "chain"
+	JACK_Module 0xF1 create :parameter_values "0.000000:1.000000" :is_default 1 :chain 0xF0 :active 1
+	AUX_Module 0xF9 create :parameter_values "-70.000000" :is_default 0 :chain 0xF0 :active 1 :number 0
+	AUX_Module 0xFA create :parameter_values "-70.000000" :is_default 0 :chain 0xF0 :active 1 :number 1
+	AUX_Module 0xFB create :parameter_values "-70.000000" :is_default 0 :chain 0xF0 :active 1 :number 2
+	AUX_Module 0xFD create :parameter_values "-70.000000" :is_default 0 :chain 0xF0 :active 1 :number 3
+	Gain_Module 0xF2 create :parameter_values "0.000000:0.000000:0.000000" :is_default 1 :chain 0xF0 :active 1
+	Meter_Module 0xF3 create :is_default 1 :chain 0xF0 :active 1
+	JACK_Module 0xF4 create :parameter_values "1.000000:0.000000" :is_default 1 :chain 0xF0 :active 1
 }

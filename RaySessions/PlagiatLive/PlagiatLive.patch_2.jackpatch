@@ -1447,11 +1447,13 @@ sooperlooper:loop9_out_1                 |> Non-Mixer-XT.Outputs (Outputs):Vocal
 sooperlooper:loop9_out_1                 |> ecasound:in_39
 sooperlooper:loop9_out_1                 |> ecasound:in_40
 system:capture_1                         |> Non-Mixer-XT.Inputs (Inputs):Bass/in-1
-system:capture_10                        |> Non-Mixer-XT.Inputs (Inputs):VocalsKeschB/in-1
-system:capture_11                        |> Non-Mixer-XT.Inputs (Inputs):Feat/in-1
+system:capture_10                        |> Non-Mixer-XT.Inputs (Inputs):Extra_Face/in-1
+system:capture_16                        |> Non-Mixer-XT.Inputs (Inputs):Extra_Butt/in-1
 system:capture_2                         |> Non-Mixer-XT.Inputs (Inputs):VocalsKesch/in-1
-system:capture_3                         |> Non-Mixer-XT.Inputs (Inputs):VocalsNano/in-1
-system:capture_4                         |> Non-Mixer-XT.Inputs (Inputs):Kick/in-1
-system:capture_6                         |> Non-Mixer-XT.Inputs (Inputs):OH-L/in-1
-system:capture_7                         |> Non-Mixer-XT.Inputs (Inputs):OH-R/in-1
-system:capture_9                         |> Non-Mixer-XT.Inputs (Inputs):Bass/in-1
+system:capture_3                         |> Non-Mixer-XT.Inputs (Inputs):Kick/in-1
+system:capture_4                         |> Non-Mixer-XT.Inputs (Inputs):Snare/in-1
+system:capture_5                         |> Non-Mixer-XT.Inputs (Inputs):OH-L/in-1
+system:capture_6                         |> Non-Mixer-XT.Inputs (Inputs):OH-R/in-1
+system:capture_7                         |> Non-Mixer-XT.Inputs (Inputs):VocalsNano/in-1
+system:capture_8                         |> Non-Mixer-XT.Inputs (Inputs):Feat/in-1
+system:capture_9                         |> Non-Mixer-XT.Inputs (Inputs):VocalsKeschB/in-1
