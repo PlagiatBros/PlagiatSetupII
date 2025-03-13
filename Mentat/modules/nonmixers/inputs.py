@@ -27,3 +27,48 @@ class Inputs(NonMixer):
             [('VocalsKesch', 'Mute'), ('VocalsKeschB', 'Mute')],                                                   # params
             getter, setter
         )
+
+        extra_dict = {
+            'A': 'Kick',
+            'B': 'Snare',
+            'C': 'VocalsNano',
+            'D': 'Feat',
+        }
+
+
+        def extraface_getter(a,b,c,d):
+            if 0 in [a,b,c,d]:
+                index = [a,b,c,d].index(0)
+                return list(extra_dict.values())[index]
+            else:
+                return 'None'
+
+        def extraface_setter(extra):
+            for aux in extra_dict:
+                self.set('ExtraFace', f'Aux-{aux}', 'Gain', 0 if extra == extra_dict[aux] else -70)
+
+        self.add_meta_parameter(
+            'extraface',
+            [('ExtraFace', f'Aux-{x}', 'Gain') for x in 'ABCD'],
+            extraface_getter,
+            extraface_setter,
+        )
+
+
+        def extrabutt_getter(a,b,c,d):
+            if 0 in [a,b,c,d]:
+                index = [a,b,c,d].index(0)
+                return list(extra_dict.values())[index]
+            else:
+                return 'None'
+
+        def extrabutt_setter(extra):
+            for aux in extra_dict:
+                self.set('ExtraButt', f'Aux-{aux}', 'Gain', 0 if extra == extra_dict[aux] else -70)
+
+        self.add_meta_parameter(
+            'extrabutt',
+            [('ExtraButt', f'Aux-{x}', 'Gain') for x in 'ABCD'],
+            extrabutt_getter,
+            extrabutt_setter,
+        )
