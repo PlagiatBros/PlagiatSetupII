@@ -100,14 +100,14 @@ Non-Mixer-XT.Drums (Main):Snare/out-1    |> ecasound:in_25
 Non-Mixer-XT.Drums (Main):Snare/out-1    |> ecasound:in_26
 Non-Mixer-XT.Inputs (Inputs):Bass/aux-A/out-1 |> gxtuner:in_0
 Non-Mixer-XT.Inputs (Inputs):Bass/out-1  |> sooperlooper:loop0_in_1
-Non-Mixer-XT.Inputs (Inputs):Extra_Butt/aux-A/out-1 |> Non-Mixer-XT.Inputs (Inputs):Kick/in-1
-Non-Mixer-XT.Inputs (Inputs):Extra_Butt/aux-B/out-1 |> Non-Mixer-XT.Inputs (Inputs):Snare/in-1
-Non-Mixer-XT.Inputs (Inputs):Extra_Butt/aux-C/out-1 |> Non-Mixer-XT.Inputs (Inputs):VocalsNano/in-1
-Non-Mixer-XT.Inputs (Inputs):Extra_Butt/aux-D/out-1 |> Non-Mixer-XT.Inputs (Inputs):Feat/in-1
-Non-Mixer-XT.Inputs (Inputs):Extra_Face/aux-A/out-1 |> Non-Mixer-XT.Inputs (Inputs):Kick/in-1
-Non-Mixer-XT.Inputs (Inputs):Extra_Face/aux-B/out-1 |> Non-Mixer-XT.Inputs (Inputs):Snare/in-1
-Non-Mixer-XT.Inputs (Inputs):Extra_Face/aux-C/out-1 |> Non-Mixer-XT.Inputs (Inputs):VocalsNano/in-1
-Non-Mixer-XT.Inputs (Inputs):Extra_Face/aux-D/out-1 |> Non-Mixer-XT.Inputs (Inputs):Feat/in-1
+Non-Mixer-XT.Inputs (Inputs):ExtraButt/aux-A/out-1 |> Non-Mixer-XT.Inputs (Inputs):Kick/in-1
+Non-Mixer-XT.Inputs (Inputs):ExtraButt/aux-B/out-1 |> Non-Mixer-XT.Inputs (Inputs):Snare/in-1
+Non-Mixer-XT.Inputs (Inputs):ExtraButt/aux-C/out-1 |> Non-Mixer-XT.Inputs (Inputs):VocalsNano/in-1
+Non-Mixer-XT.Inputs (Inputs):ExtraButt/aux-D/out-1 |> Non-Mixer-XT.Inputs (Inputs):Feat/in-1
+Non-Mixer-XT.Inputs (Inputs):ExtraFace/aux-A/out-1 |> Non-Mixer-XT.Inputs (Inputs):Kick/in-1
+Non-Mixer-XT.Inputs (Inputs):ExtraFace/aux-B/out-1 |> Non-Mixer-XT.Inputs (Inputs):Snare/in-1
+Non-Mixer-XT.Inputs (Inputs):ExtraFace/aux-C/out-1 |> Non-Mixer-XT.Inputs (Inputs):VocalsNano/in-1
+Non-Mixer-XT.Inputs (Inputs):ExtraFace/aux-D/out-1 |> Non-Mixer-XT.Inputs (Inputs):Feat/in-1
 Non-Mixer-XT.Inputs (Inputs):Feat/out-1  |> sooperlooper:loop8_in_1
 Non-Mixer-XT.Inputs (Inputs):Kick/out-1  |> Non-Mixer-XT.Drums (Main):Kick/in-1
 Non-Mixer-XT.Inputs (Inputs):OH-L/out-1  |> Non-Mixer-XT.Drums (Main):OH-L/in-1
@@ -1455,8 +1455,8 @@ sooperlooper:loop9_out_1                 |> Non-Mixer-XT.Outputs (Outputs):Vocal
 sooperlooper:loop9_out_1                 |> ecasound:in_39
 sooperlooper:loop9_out_1                 |> ecasound:in_40
 system:capture_1                         |> Non-Mixer-XT.Inputs (Inputs):Bass/in-1
-system:capture_10                        |> Non-Mixer-XT.Inputs (Inputs):Extra_Face/in-1
-system:capture_16                        |> Non-Mixer-XT.Inputs (Inputs):Extra_Butt/in-1
+system:capture_10                        |> Non-Mixer-XT.Inputs (Inputs):ExtraFace/in-1
+system:capture_16                        |> Non-Mixer-XT.Inputs (Inputs):ExtraButt/in-1
 system:capture_2                         |> Non-Mixer-XT.Inputs (Inputs):VocalsKesch/in-1
 system:capture_3                         |> Non-Mixer-XT.Inputs (Inputs):Kick/in-1
 system:capture_4                         |> Non-Mixer-XT.Inputs (Inputs):Snare/in-1
