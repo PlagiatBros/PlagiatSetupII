@@ -107,7 +107,7 @@ class LickMe(RouteBase):
             self.wait(6*4, 'beat'),
             self.wait(2, 'beat'),
             self.wait(1.2, 'beat'),
-            prodSampler.send('/instrument/play', 's:BX_arpegeSitar'),
+            prodSampler.send('/instrument/play', 's:Plagiat/LickMe/BX_arpegeSitar'),
             self.wait_next_cycle(),
             self.wait(1, 'beat'),
             looper.record(0),

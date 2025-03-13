@@ -7,3 +7,4 @@ session.slsess_loop_*.wav
 session.slsess.bak
 *.pyc
 OpenStageControl/non-mixers.json
+OpenStageControl/ray-session.json

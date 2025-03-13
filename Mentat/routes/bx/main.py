@@ -755,7 +755,8 @@ class BX(Video, Light, RouteBase):
 
         # Séquences
         self.start_scene('sequences/bx_whatif', lambda: [
-            prodSampler.send('/instrument/play', 's:Bx_WhatIf'),
+            prodSampler.send('/instrument/play', 's:Plagiat/BX/Bx_WhatIf'),
+            prodSampler.send('/instrument/play', 's:Plagiat/LickMe/BX_zurnaTheme_note12'),
             self.wait(4, 'beat'), #bar 1
             self.wait(4, 'beat'), #bar 2
             self.wait(4, 'beat'), #bar 3
@@ -857,7 +858,7 @@ class BX(Video, Light, RouteBase):
         # Séquences (Mentat)
         self.start_scene('sequences/bx_heeee', lambda: [
             self.wait(2.6, 'beat'),
-            prodSampler.send('/instrument/play', 's:Bx_Heee'),
+            prodSampler.send('/instrument/play', 's:Plagiat/BX/Bx_Heee'),
         ])
         self.start_scene('sequences/bx_asusual', lambda: [
             self.wait_next_cycle(),
