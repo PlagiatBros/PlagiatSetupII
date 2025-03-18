@@ -182,7 +182,9 @@
                 "freq": "@{eq_freq_high}",
                 "on": "@{eq_on_high}"
               }
-            ]
+            ],
+            "logScaleX": false,
+            "logScaleY": false
           },
           {
             "type": "fader",
@@ -303,8 +305,7 @@
             "bypass": true,
             "onCreate": "locals.ids = [\n  'eq_freq_low', 'eq_gain_low',\n  'eq_freq_1', 'eq_gain_1',\n  'eq_freq_2', 'eq_gain_2',\n  'eq_freq_3', 'eq_gain_3',\n  'eq_freq_4', 'eq_gain_4',\n  'eq_freq_high', 'eq_gain_high'\n]",
             "onValue": "for (var i in locals.ids) {\n  if (get(locals.ids[i]) != value[i]) {\n    set(locals.ids[i], value[i])\n  }\n} ",
-            "onTouch": "if (event.handle === undefined) {\n  setVar(this, 'touched', event.type == 'start')\n} else {\n  setVar('eq_active_q', 'band', -1)\n  set('eq_active_q', get('eq_q_' + event.handle))\n  setVar('eq_active_q', 'band', event.handle)\n}",
-            "pointsAttr": []
+            "onTouch": "if (event.handle === undefined) {\n  setVar(this, 'touched', event.type == 'start')\n} else {\n  setVar('eq_active_q', 'band', -1)\n  set('eq_active_q', get('eq_q_' + event.handle))\n  setVar('eq_active_q', 'band', event.handle)\n}"
           }
         ],
         "tabs": []
@@ -760,7 +761,7 @@
                     "sensitivity": 0.25,
                     "steps": "",
                     "origin": 0,
-                    "onTouch": ""
+                    "onTouch": "console.log(getProp(this,'address'))"
                   },
                   {
                     "type": "input",

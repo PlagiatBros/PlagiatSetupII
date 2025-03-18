@@ -446,9 +446,9 @@
         "decimals": 2,
         "target": "",
         "ignoreDefaults": false,
-        "bypass": false,
+        "bypass": true,
         "onCreate": "",
-        "onValue": "",
+        "onValue": "setTimeout(()=>{\n  send('/OpenStageControl/call', 'display_modal_regie', get('fx_id'), value)\n})",
         "widgets": [
           {
             "type": "panel",
@@ -579,10 +579,10 @@
                     "ignoreDefaults": false,
                     "bypass": true,
                     "onCreate": "",
-                    "onValue": "var [mixer, strip, plugin] = get('fx_id').split('/')\n\n\nswitch (value) {\n  case 'Copy':\n    storage.setItem(plugin + '/clipboard', stateGet('comp'))\n    break\n  case 'Paste':\n    stateSet(storage.getItem(plugin + '/clipboard') || {})\n    break\n  case 'Load':\n    send(`/${mixer}/call`, 'load_fx_state', strip, plugin, 'remote_mix')\n    break\n  case 'Reset':\n    send(`/${mixer}/call`, 'load_fx_state',  strip, plugin, 'default_mix')\n    break\n}\n\nset(this, '', {script:false})",
+                    "onValue": "var [mixer, strip, plugin] = get('fx_id').split('/')\n  \nswitch (value) {\n  case 'Copy':\n    storage.setItem(plugin + '/clipboard', stateGet('comp'))\n    break\n  case 'Paste':\n    stateSet(storage.getItem(plugin + '/clipboard') || {})\n    break\n  case 'Load':\n    send(`/${mixer}/call`, 'load_fx_state', strip, plugin, 'remote_mix')\n    break\n  case 'Reset':\n    send(`/${mixer}/call`, 'load_fx_state',  strip, plugin, 'default_mix')\n    break\n}\n\nset(this, '', {script:false})",
                     "size": [
-                      100,
-                      150
+                      150,
+                      200
                     ],
                     "ignoreTabs": false,
                     "icon": false,
@@ -916,9 +916,9 @@
         "decimals": 2,
         "target": "",
         "ignoreDefaults": false,
-        "bypass": false,
+        "bypass": true,
         "onCreate": "",
-        "onValue": "",
+        "onValue": "setTimeout(()=>{\n  send('/OpenStageControl/call', 'display_modal_regie', get('fx_id'), value)\n})",
         "widgets": [
           {
             "type": "panel",
@@ -1053,8 +1053,8 @@
                     "onCreate": "",
                     "onValue": "var [mixer, strip, plugin] = get('fx_id').split('/')\n\n\nswitch (value) {\n  case 'Copy':\n    storage.setItem(plugin + '/clipboard', stateGet('eq'))\n    break\n  case 'Paste':\n    stateSet(storage.getItem(plugin + '/clipboard') || {})\n    break\n  case 'Load':\n    send(`/${mixer}/call`, 'load_fx_state', strip, plugin, 'remote_mix')\n    break\n  case 'Reset':\n    send(`/${mixer}/call`, 'load_fx_state',  strip, plugin, 'default_mix')\n    break\n}\n\nset(this, '', {script:false})",
                     "size": [
-                      100,
-                      150
+                      150,
+                      200
                     ],
                     "ignoreTabs": false,
                     "icon": false,
@@ -1581,7 +1581,7 @@
                         "ignoreDefaults": false,
                         "bypass": true,
                         "onCreate": "",
-                        "onValue": "toolbar(4)\ntoolbar(6)"
+                        "onValue": "toolbar(4)"
                       }
                     ],
                     "tabs": []
@@ -2148,7 +2148,6 @@
             "lock": false,
             "id": "svg_1",
             "visible": true,
-            "interaction": true,
             "comments": "",
             "width": "auto",
             "height": "auto",
@@ -2165,7 +2164,6 @@
             "padding": "auto",
             "html": "",
             "css": "svg {\n  top: 8rem;\n  left: 50%;\n  fill:rgba(30,34,40,1);\n  margin-left:-12rem;\n}\n\n:host {\n    transform: scaleY(-1.25) scaleX(1.25);\n    min-width: 40rem!important;\n    z-index:0;\n}",
-            "svg": "<path d=\"m12 5.362 2.475-3.026c3.101.169 5.989.908 8.619 2.115l-.147-.061c-.828 1.078-1.92 1.915-3.18 2.42l-.051.018c-.146-1.439-1.154-1.79-4.354-1.79l-3.361 18.962-3.381-18.966c-3.18 0-4.188.354-4.335 1.792-1.31-.519-2.401-1.352-3.216-2.409l-.013-.017c2.481-1.148 5.369-1.889 8.409-2.057l.061-.003 2.475 3.022zm0-3.9c.107-.002.233-.002.359-.002 3.967 0 7.738.84 11.144 2.352l-.175-.069c.237-.394.463-.853.65-1.331l.022-.063c-3.551-1.463-7.671-2.323-11.99-2.348h-.01c-4.328.024-8.449.884-12.218 2.428l.218-.079c.224.555.449 1.015.703 1.458l-.031-.058c3.238-1.448 7.017-2.291 10.994-2.291.118 0 .235.001.352.002h-.018z\"/>",
             "value": "",
             "default": "",
             "linkId": "",
@@ -2173,7 +2171,9 @@
             "preArgs": "",
             "target": "",
             "onCreate": "",
-            "onValue": ""
+            "onValue": "",
+            "interaction": true,
+            "svg": "<path d=\"m12 5.362 2.475-3.026c3.101.169 5.989.908 8.619 2.115l-.147-.061c-.828 1.078-1.92 1.915-3.18 2.42l-.051.018c-.146-1.439-1.154-1.79-4.354-1.79l-3.361 18.962-3.381-18.966c-3.18 0-4.188.354-4.335 1.792-1.31-.519-2.401-1.352-3.216-2.409l-.013-.017c2.481-1.148 5.369-1.889 8.409-2.057l.061-.003 2.475 3.022zm0-3.9c.107-.002.233-.002.359-.002 3.967 0 7.738.84 11.144 2.352l-.175-.069c.237-.394.463-.853.65-1.331l.022-.063c-3.551-1.463-7.671-2.323-11.99-2.348h-.01c-4.328.024-8.449.884-12.218 2.428l.218-.079c.224.555.449 1.015.703 1.458l-.031-.058c3.238-1.448 7.017-2.291 10.994-2.291.118 0 .235.001.352.002h-.018z\"/>"
           },
           {
             "type": "panel",
@@ -2182,7 +2182,6 @@
             "lock": false,
             "id": "route_panel",
             "visible": true,
-            "interaction": true,
             "comments": "",
             "width": 290,
             "height": "auto",
@@ -2199,6 +2198,17 @@
             "padding": "auto",
             "html": "",
             "css": "class: carved",
+            "value": "",
+            "default": "",
+            "linkId": "",
+            "address": "auto",
+            "preArgs": "",
+            "decimals": 2,
+            "target": "",
+            "bypass": false,
+            "onCreate": "",
+            "onValue": "",
+            "interaction": true,
             "colorBg": "auto",
             "layout": "horizontal",
             "justify": "start",
@@ -2209,18 +2219,8 @@
             "tabsPosition": "top",
             "variables": "@{parent.variables}",
             "traversing": false,
-            "value": "",
-            "default": "",
-            "linkId": "",
-            "address": "auto",
-            "preArgs": "",
             "typeTags": "",
-            "decimals": 2,
-            "target": "",
             "ignoreDefaults": false,
-            "bypass": false,
-            "onCreate": "",
-            "onValue": "",
             "widgets": [
               {
                 "type": "button",
@@ -2245,8 +2245,6 @@
                 "padding": "auto",
                 "html": "",
                 "css": "",
-                "vertical": false,
-                "wrap": false,
                 "value": "",
                 "default": "",
                 "linkId": "",
@@ -2257,6 +2255,8 @@
                 "bypass": false,
                 "onCreate": "",
                 "onValue": "",
+                "vertical": false,
+                "wrap": false,
                 "interaction": false,
                 "colorTextOn": "auto",
                 "label": "NOW PLAYING",
@@ -2293,7 +2293,6 @@
                 "css": "font-weight: bold;\nfont-size: 12rem;\nmargin-top:1rem\n",
                 "vertical": false,
                 "wrap": false,
-                "align": "center",
                 "value": "",
                 "default": "",
                 "linkId": "",
@@ -2303,7 +2302,8 @@
                 "target": "",
                 "bypass": false,
                 "onCreate": "",
-                "onValue": ""
+                "onValue": "",
+                "align": "center"
               }
             ],
             "tabs": []
@@ -2465,7 +2465,7 @@
         "alphaFillOn": "auto",
         "lineWidth": "auto",
         "borderRadius": "auto",
-        "padding": 4,
+        "padding": 2,
         "html": "",
         "css": "class: mixer;\n#{@{header_lock} ? 'class: locked;' : ''}",
         "colorBg": "auto",
@@ -2551,7 +2551,7 @@
             "visible": true,
             "interaction": true,
             "comments": "",
-            "width": 140,
+            "width": 142,
             "height": "auto",
             "expand": false,
             "colorText": "auto",
@@ -3240,7 +3240,9 @@
                                 "freq": "@{eq_freq_high_@{parent.variables.name}}",
                                 "on": "@{eq_on_high_@{parent.variables.name}}"
                               }
-                            ]
+                            ],
+                            "logScaleX": false,
+                            "logScaleY": false
                           }
                         ],
                         "tabs": []
@@ -3523,7 +3525,7 @@
                           "max": 1
                         },
                         "logScale": false,
-                        "sensitivity": 1,
+                        "sensitivity": 0.1,
                         "steps": 41,
                         "origin": 0,
                         "onTouch": "",
@@ -3663,7 +3665,6 @@
                         "pointSize": 20,
                         "ephemeral": false,
                         "pips": true,
-                        "label": "",
                         "snap": false,
                         "spring": false,
                         "rangeX": {
@@ -4060,7 +4061,7 @@
                             "origin": "auto",
                             "value": "",
                             "default": "",
-                            "linkId": "",
+                            "linkId": "gain_@{parent.variables.name}",
                             "address": "@{mixer_address}/@{parent.variables.name}",
                             "preArgs": "Gain",
                             "typeTags": "",
@@ -4122,7 +4123,7 @@
                             "sensitivity": 1,
                             "steps": "",
                             "origin": "auto",
-                            "value": "JS{\n\nvar level = @{prefader_level_@{parent.variables.name}}\nif (@{pfl_@{parent.variables.name}} === 0) {\n  if (@{gain_@{parent.variables.name}} === -70 ||  @{mute_@{parent.variables.name}}) {\n    level = -70\n  } else {\n    level += @{gain_@{parent.variables.name}}\n  }\n}\nreturn level\n\n}",
+                            "value": "JS{\n\nvar level = @{prefader_level_@{parent.variables.name}}\nif (@{pfl_@{parent.variables.name}} === 0 && level > -70) {\n  if (@{gain_@{parent.variables.name}} === -70 ||  @{mute_@{parent.variables.name}}) {\n    level = -70\n  } else {\n    level += @{gain_@{parent.variables.name}}\n  }\n}\nreturn level\n\n}",
                             "default": "",
                             "linkId": "",
                             "address": "auto",
