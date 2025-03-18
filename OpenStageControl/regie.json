@@ -103,7 +103,7 @@
         "decimals": 2,
         "target": "",
         "ignoreDefaults": false,
-        "bypass": true,
+        "bypass": false,
         "onCreate": "",
         "onValue": ""
       },
@@ -446,7 +446,7 @@
         "decimals": 2,
         "target": "",
         "ignoreDefaults": false,
-        "bypass": true,
+        "bypass": false,
         "onCreate": "",
         "onValue": "",
         "widgets": [
@@ -916,7 +916,7 @@
         "decimals": 2,
         "target": "",
         "ignoreDefaults": false,
-        "bypass": true,
+        "bypass": false,
         "onCreate": "",
         "onValue": "",
         "widgets": [
@@ -1634,46 +1634,16 @@
                     "onValue": "",
                     "widgets": [
                       {
-                        "type": "variable",
-                        "lock": false,
-                        "id": "persistence_script",
-                        "comments": "",
-                        "value": "",
-                        "default": "",
-                        "linkId": "",
-                        "address": "auto",
-                        "preArgs": "",
-                        "typeTags": "",
-                        "decimals": 2,
-                        "target": "",
-                        "ignoreDefaults": false,
-                        "bypass": false,
-                        "onCreate": "if (getProp(this, 'id') == 'persistence_script') return\nsetTimeout(()=>{\n  \nset(this,storage.getItem(getProp(this,'id')))\n})",
-                        "onValue": "if (getProp(this, 'id') == 'persistence_script') return\nstorage.setItem(getProp(this,'id'), value)"
-                      },
-                      {
                         "type": "button",
-                        "lock": false,
-                        "id": "setting_mutes",
-                        "comments": "",
-                        "value": "",
-                        "default": "",
-                        "linkId": "",
-                        "address": "auto",
-                        "preArgs": "",
-                        "typeTags": "",
-                        "decimals": 2,
-                        "target": "",
-                        "ignoreDefaults": false,
-                        "bypass": true,
-                        "onCreate": "@{persistence_script.onCreate}",
-                        "onValue": "@{persistence_script.onValue}",
                         "top": 70,
                         "left": 110,
+                        "lock": false,
+                        "id": "setting_mutes",
                         "visible": true,
                         "interaction": true,
+                        "comments": "",
                         "width": "auto",
-                        "height": 60,
+                        "height": "auto",
                         "expand": false,
                         "colorText": "auto",
                         "colorWidget": "auto",
@@ -1695,9 +1665,6 @@
                         "off": 0,
                         "mode": "toggle",
                         "doubleTap": false,
-<<<<<<< HEAD
-                        "decoupled": false
-=======
                         "decoupled": false,
                         "value": "",
                         "default": 1,
@@ -1867,7 +1834,6 @@
                         "bypass": true,
                         "onCreate": "@{persistence_script.onCreate}",
                         "onValue": "@{persistence_script.onValue}"
->>>>>>> 6d41ba48dfe29d4443452f580a30a1ce1d9c6fe7
                       }
                     ],
                     "tabs": []
@@ -3392,26 +3358,12 @@
                         "colorFill": "auto",
                         "alphaStroke": "auto",
                         "alphaFillOff": "auto",
-                        "alphaFillOn": 0.3,
+                        "alphaFillOn": "auto",
                         "lineWidth": 0,
                         "borderRadius": "auto",
-<<<<<<< HEAD
-                        "padding": -3,
-                        "html": "",
-                        "css": "",
-                        "value": "",
-                        "default": "",
-                        "linkId": "",
-                        "address": "auto",
-                        "preArgs": "",
-                        "target": "",
-                        "onCreate": "",
-                        "onValue": "",
-=======
                         "padding": 0,
                         "html": "<div class=\"axis\"></div>",
                         "css": ":host {\n  opacity: #{OSC{/Outputs/@{parent.variables.name}/ACE%20Compressor} ? 1 :  0.35};\n}\ncanvas {\n  margin: 4rem 30rem;\n}\n.axis {\n  position: absolute;\n  top:4rem;left:30rem;bottom:4rem;right:30rem;\n  opacity: 0.5;\n  border-color:var(--color-widget);\n}\n.axis:before {\n  position:absolute;\n  content: \"\";\n  top: calc(14.28% + 3rem);\n  left:0; right: 0;\n  border-top: 1rem dashed var(--color-widget);;\n}\n.axis:after {\n  position:absolute;\n  content: \"\";\n  right: calc(14.28% + 1rem);\n  top:0; bottom: 0;\n  border-left: 1rem dashed var(--color-widget);;\n}\n",
->>>>>>> 6d41ba48dfe29d4443452f580a30a1ce1d9c6fe7
                         "dots": false,
                         "bars": false,
                         "pips": false,
@@ -3423,55 +3375,6 @@
                           "min": -60,
                           "max": 10
                         },
-<<<<<<< HEAD
-                        "origin": 0,
-                        "filters": [
-                          {
-                            "type": "lowshelf",
-                            "gain": "@{eq_gain_low_@{parent.variables.name}}",
-                            "q": 0.5,
-                            "freq": "@{eq_freq_low_@{parent.variables.name}}",
-                            "on": "@{eq_on_low_@{parent.variables.name}}"
-                          },
-                          {
-                            "type": "peak",
-                            "gain": "@{eq_gain_1_@{parent.variables.name}}",
-                            "q": "#{1/@{eq_q_1_@{parent.variables.name}}}",
-                            "freq": "@{eq_freq_1_@{parent.variables.name}}",
-                            "on": "@{eq_on_1_@{parent.variables.name}}"
-                          },
-                          {
-                            "type": "peak",
-                            "gain": "@{eq_gain_2_@{parent.variables.name}}",
-                            "q": "#{1/@{eq_q_2_@{parent.variables.name}}}",
-                            "freq": "@{eq_freq_2_@{parent.variables.name}}",
-                            "on": "@{eq_on_2_@{parent.variables.name}}"
-                          },
-                          {
-                            "type": "peak",
-                            "gain": "@{eq_gain_3_@{parent.variables.name}}",
-                            "q": "#{1/@{eq_q_3_@{parent.variables.name}}}",
-                            "freq": "@{eq_freq_3_@{parent.variables.name}}",
-                            "on": "@{eq_on_3_@{parent.variables.name}}"
-                          },
-                          {
-                            "type": "peak",
-                            "gain": "@{eq_gain_4_@{parent.variables.name}}",
-                            "q": "#{1/@{eq_q_4_@{parent.variables.name}}}",
-                            "freq": "@{eq_freq_4_@{parent.variables.name}}",
-                            "on": "@{eq_on_4_@{parent.variables.name}}"
-                          },
-                          {
-                            "type": "highshelf",
-                            "gain": "@{eq_gain_high_@{parent.variables.name}}",
-                            "q": 0.5,
-                            "freq": "@{eq_freq_high_@{parent.variables.name}}",
-                            "on": "@{eq_on_high_@{parent.variables.name}}"
-                          }
-                        ],
-                        "logScaleX": false,
-                        "logScaleY": false
-=======
                         "logScaleX": false,
                         "logScaleY": false,
                         "origin": false,
@@ -3519,7 +3422,6 @@
                         "bypass": false,
                         "onCreate": "",
                         "onValue": ""
->>>>>>> 6d41ba48dfe29d4443452f580a30a1ce1d9c6fe7
                       }
                     ],
                     "tabs": []
