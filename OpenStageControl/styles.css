@@ -1,3 +1,7 @@
+#osc-container {
+    background: black!important
+}
+
 .root-container {
     --color-bg-backup: var(--color-background);
     --strip-bg: #2a2f37;

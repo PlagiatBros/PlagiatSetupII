@@ -166,6 +166,7 @@
                 "padding": -1,
                 "html": "<div class=\"pips\">\nJS{\n  var h = ''\n  for (var i=0;i<7;i++) {\n    var g = i*10 - 60,\n        p = i/7*100\n    h += `<div class=\"v ${g==0?'strong':''}\" style=\"left:${p}%\"></div>`\n    h += `<div class=\"h ${g==0?'strong':''}\" style=\"top:${100 - p}%\"></div>`\n\n  }\n  return h\n}\n\n</div>",
                 "css": ".pips {\n  position:absolute;\n  top:0;left:0;right:0;bottom:0;\n  pointer-events:none;\n  margin:var(--widget-spacing);\n}\n.pips .v {\n  position:absolute;\n  height:100%;\n  border-left:1rem solid grey;\n  opacity:0.25;\n  padding-left:3rem;\n  align-items: end;\n  display:flex;\n  line-height: 20rem;\n}\n.pips .v:first-child,\n.pips .v:first-child + .h {\n  border:none;\n}\n.pips .h {\n  position:absolute;\n  width:100%;\n  border-top:1rem solid grey;\n  opacity:0.25;\n  padding-left:3rem;\n  align-items: end;\n  display:flex;\n  line-height: 20rem;\n}\n.pips .strong {\n  opacity: 0.75;\n}\n",
+                "pips": false,
                 "value": "[\n  [ -60, -60 ],\n  [ @{comp_threshold}, @{comp_threshold} ],\n  [ 10, #{(1/@{comp_ratio}) * (10 - @{comp_threshold}) + @{comp_threshold}}]\n]",
                 "default": "",
                 "linkId": "",
@@ -174,9 +175,9 @@
                 "target": "",
                 "onCreate": "",
                 "onValue": "",
+                "origin": true,
                 "dots": false,
                 "bars": false,
-                "pips": false,
                 "rangeX": {
                   "min": -60,
                   "max": 10
@@ -186,15 +187,121 @@
                   "max": 10
                 },
                 "logScaleX": false,
-                "logScaleY": false,
-                "origin": true
+                "logScaleY": false
+              },
+              {
+                "type": "plot",
+                "top": 0,
+                "left": 0,
+                "lock": false,
+                "id": "comp_input_graph",
+                "visible": true,
+                "comments": "",
+                "width": "100%",
+                "height": "100%",
+                "expand": true,
+                "colorText": "auto",
+                "colorWidget": "transparent",
+                "colorStroke": "auto",
+                "colorFill": "var(--color-accent)",
+                "alphaStroke": 0,
+                "alphaFillOff": 0,
+                "alphaFillOn": "auto",
+                "lineWidth": 1,
+                "borderRadius": "auto",
+                "padding": -1,
+                "html": "",
+                "css": "",
+                "pips": false,
+                "value": "[\n  [ -60, -60 ],\n  [ @{comp_threshold}, @{comp_threshold} ],\n  [@{comp_meter_in}, #{@{comp_meter_in} - @{comp_meter_gr} } ],\n  [@{comp_meter_in}, -60]\n]",
+                "default": "",
+                "linkId": "",
+                "address": "auto",
+                "preArgs": "",
+                "target": "",
+                "onCreate": "",
+                "onValue": "",
+                "origin": true,
+                "dots": false,
+                "bars": false,
+                "rangeX": {
+                  "min": -60,
+                  "max": 10
+                },
+                "rangeY": {
+                  "min": -60,
+                  "max": 10
+                },
+                "logScaleX": false,
+                "logScaleY": false
+              },
+              {
+                "type": "fader",
+                "top": 0,
+                "left": 0,
+                "lock": false,
+                "id": "comp_thresh_x",
+                "visible": true,
+                "interaction": true,
+                "comments": "",
+                "width": "100%",
+                "height": "100%",
+                "expand": false,
+                "colorText": "auto",
+                "colorWidget": "auto",
+                "colorStroke": "auto",
+                "colorFill": "auto",
+                "alphaStroke": "auto",
+                "alphaFillOff": 0,
+                "alphaFillOn": 0,
+                "lineWidth": "auto",
+                "borderRadius": "auto",
+                "padding": "auto",
+                "html": "",
+                "css": "opacity: 0.5",
+                "pips": false,
+                "snap": false,
+                "spring": false,
+                "doubleTap": false,
+                "sensitivity": 1,
+                "value": "@{comp_threshold}",
+                "default": "",
+                "linkId": "",
+                "address": "auto",
+                "preArgs": "",
+                "typeTags": "",
+                "decimals": 2,
+                "target": "",
+                "ignoreDefaults": false,
+                "bypass": true,
+                "onCreate": "",
+                "onValue": "",
+                "onTouch": "",
+                "design": "compact",
+                "knobSize": "auto",
+                "colorKnob": "auto",
+                "horizontal": true,
+                "dashed": false,
+                "gradient": [],
+                "touchZone": "all",
+                "range": {
+                  "min": -60,
+                  "max": 10
+                },
+                "logScale": false,
+                "steps": "",
+                "origin": "auto"
               },
               {
                 "type": "xy",
                 "top": 0,
                 "left": 0,
                 "lock": false,
-                "id": "xy_1",
+<<<<<<< HEAD
+                "id": "comp_pad",
+=======
+                "id": "comp_xy",
+>>>>>>> 6d41ba48dfe29d4443452f580a30a1ce1d9c6fe7
                 "visible": true,
                 "interaction": true,
                 "comments": "",
@@ -213,14 +320,13 @@
                 "padding": 0,
                 "html": "",
                 "css": "cursor: crosshair",
-                "pointSize": 0,
-                "ephemeral": false,
                 "pips": false,
                 "snap": false,
                 "spring": false,
+<<<<<<< HEAD
                 "rangeX": {
                   "min": -60,
-                  "max": 0
+                  "max": 10
                 },
                 "rangeY": {
                   "min": 20,
@@ -229,9 +335,11 @@
                 "logScaleX": false,
                 "logScaleY": -1,
                 "axisLock": "",
+=======
+>>>>>>> 6d41ba48dfe29d4443452f580a30a1ce1d9c6fe7
                 "doubleTap": false,
                 "sensitivity": 1,
-                "value": "",
+                "value": "[@{comp_threshold}, @{comp_ratio}]",
                 "default": "",
                 "linkId": "",
                 "address": "auto",
@@ -243,7 +351,21 @@
                 "bypass": false,
                 "onCreate": "",
                 "onValue": "set('comp_threshold', value[0])\nset('comp_ratio', value[1])",
-                "onTouch": ""
+                "onTouch": "",
+                "pointSize": 0,
+                "ephemeral": false,
+                "rangeX": {
+                  "min": -60,
+                  "max": 10
+                },
+                "rangeY": {
+                  "min": 20,
+                  "max": 1
+                },
+                "logScaleX": false,
+                "logScaleY": -1,
+                "axisLock": "",
+                "label": ""
               }
             ],
             "tabs": []
@@ -395,7 +517,7 @@
                     "lock": false,
                     "id": "comp_meter_in",
                     "visible": true,
-                    "interaction": true,
+                    "interaction": false,
                     "comments": "",
                     "width": 20,
                     "height": "auto",

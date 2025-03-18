@@ -1512,6 +1512,7 @@
                     "bypass": true,
                     "onCreate": "setVar(this, 'pitch', 0)",
                     "onValue": "setVar(this, 'pitch', getVar(this, 'pitch') + 1)\nset('pitch_fader_*', 1 * Math.pow(2, getVar(this, 'pitch')/12))\n",
+                    "borderRadius": "auto",
                     "colorTextOn": "auto",
                     "label": "^plus 1",
                     "vertical": false,
@@ -1520,7 +1521,6 @@
                     "off": 0,
                     "mode": "momentary",
                     "doubleTap": false,
-                    "borderRadius": "auto",
                     "decoupled": false
                   },
                   {
@@ -1558,6 +1558,7 @@
                     "bypass": false,
                     "onCreate": "",
                     "onValue": "",
+                    "borderRadius": "auto",
                     "colorBg": "auto",
                     "layout": "horizontal",
                     "justify": "start",
@@ -1650,7 +1651,7 @@
                         "alphaFillOn": 0.5,
                         "lineWidth": 0,
                         "padding": 0,
-                        "html": "<div class=\"label\">Bass</div>\n<div class=\"dbg\">@{this}</div>",
+                        "html": "<div class=\"label\">Bass</div>",
                         "css": ".dbg {\n\n  position:absolute;width:100%;text-align: center;\n}",
                         "design": "compact",
                         "knobSize": 2,
@@ -1814,7 +1815,6 @@
                       }
                     ],
                     "tabs": [],
-                    "borderRadius": "auto",
                     "tabsPosition": "top"
                   },
                   {
@@ -5466,7 +5466,7 @@
                         "preArgs": "",
                         "decimals": 2,
                         "target": "",
-                        "onCreate": "setInterval(()=>{\n  var d = new Date()\n  set(this,d.getUTCHours()+2 + ':' + String(d.getUTCMinutes()).padStart(2,'0'))\n},1000)",
+                        "onCreate": "setInterval(()=>{\n  var d = new Date(),\n      h = d.getHours().toLocaleString().padStart(2,\"0\"),\n      m = d.getMinutes().toLocaleString().padStart(2,\"0\")\n  set(this, `${h}:${m}`)\n},1000)",
                         "onValue": "",
                         "borderRadius": "auto",
                         "bypass": false
